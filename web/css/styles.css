@@ -1535,17 +1535,41 @@ img {
 
 @media (max-width: 640px) {
     .home-album-track {
-        grid-template-columns: 28px 1fr;
-        grid-template-rows: auto auto;
+        grid-template-columns: 28px minmax(0, 1fr) auto auto auto;
+        grid-template-areas:
+            "num title play lyric share"
+            ". meta meta meta meta";
+        gap: var(--space-sm);
+    }
+    .home-album-track-num {
+        grid-area: num;
+    }
+    .home-album-track-title {
+        grid-area: title;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .home-album-track-meta {
-        grid-column: 2;
+        grid-area: meta;
+    }
+    .home-album-track-play {
+        grid-area: play;
+    }
+    .home-album-track-lyric {
+        grid-area: lyric;
+    }
+    .home-album-track-share {
+        grid-area: share;
     }
     .home-album-track-play,
     .home-album-track-lyric,
     .home-album-track-share {
-        grid-column: 1 / -1;
-        justify-self: start;
+        grid-column: auto;
+        justify-self: end;
+        padding: 4px 8px;
+        white-space: nowrap;
     }
 }
 

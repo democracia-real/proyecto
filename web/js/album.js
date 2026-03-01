@@ -93,9 +93,10 @@
     }
 
     // --- Switch album ---
-    function switchAlbum(albumId) {
+    function switchAlbum(albumId, autoPlayFirstTrack) {
         currentAlbumId = albumId;
         currentTrackIdx = 0;
+        player.pause();
 
         tabsEl.querySelectorAll('.home-album-tab').forEach(function(b) {
             b.classList.toggle('home-album-tab-active', b.getAttribute('data-album-id') === albumId);
@@ -115,7 +116,7 @@
         ensureAlbumData(albumId).finally(function() {
             if (currentAlbumId !== albumId) return;
             bindTrackEvents();
-            setTrack(0, false);
+            setTrack(0, autoPlayFirstTrack === true);
             if (!getTracks().length && nowEl) nowEl.textContent = 'No hay pistas disponibles';
         });
     }
@@ -256,7 +257,7 @@
     tabsEl.querySelectorAll('.home-album-tab').forEach(function(btn) {
         btn.addEventListener('click', function() {
             var id = btn.getAttribute('data-album-id');
-            if (id && id !== currentAlbumId) switchAlbum(id);
+            if (id && id !== currentAlbumId) switchAlbum(id, true);
         });
     });
 
@@ -265,15 +266,27 @@
     ensureAlbumData('01');
 
     // --- Deep link: #album-02-1 ---
-    var hash = window.location.hash;
-    var m = hash && hash.match(/^#album-(\d{2})-(\d+)$/);
-    if (m) {
-        switchAlbum(m[1]);
+    function applyAlbumHash(hash) {
+        var m = hash && hash.match(/^#album-(\d{2})-(\d+)$/);
+        if (!m) return;
+
+        var albumId = m[1];
         var n = parseInt(m[2], 10);
+        var albumSection = document.getElementById('album');
+        if (albumSection) albumSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        switchAlbum(albumId, false);
         if (n >= 1) {
-            ensureAlbumData(m[1]).finally(function() {
-                if (currentAlbumId === m[1]) setTrack(n - 1, false);
+            ensureAlbumData(albumId).finally(function() {
+                if (currentAlbumId === albumId) setTrack(n - 1, true);
+            });
+        } else {
+            ensureAlbumData(albumId).finally(function() {
+                if (currentAlbumId === albumId) setTrack(0, true);
             });
         }
     }
+
+    applyAlbumHash(window.location.hash);
+    window.addEventListener('hashchange', function() { applyAlbumHash(window.location.hash); });
 })();
