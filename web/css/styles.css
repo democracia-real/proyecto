@@ -1535,11 +1535,12 @@ img {
 
 @media (max-width: 640px) {
     .home-album-track {
-        grid-template-columns: 28px minmax(0, 1fr) auto auto auto;
+        grid-template-columns: 24px minmax(0, 1fr) auto auto auto;
         grid-template-areas:
             "num title play lyric share"
             ". meta meta meta meta";
         gap: var(--space-sm);
+        padding: var(--space-md);
     }
     .home-album-track-num {
         grid-area: num;
@@ -1568,7 +1569,9 @@ img {
     .home-album-track-share {
         grid-column: auto;
         justify-self: end;
-        padding: 4px 8px;
+        padding: 4px 7px;
+        font-size: 0.75rem;
+        line-height: 1.1;
         white-space: nowrap;
     }
 }

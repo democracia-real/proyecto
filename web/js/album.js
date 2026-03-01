@@ -225,7 +225,7 @@
             wa.href = 'https://wa.me/?text=' + encodeURIComponent(full);
             x.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
             cp.onclick = function() {
-                navigator.clipboard.writeText(full).then(function() {
+                navigator.clipboard.writeText(url).then(function() {
                     cp.textContent = '¡Copiado!';
                     setTimeout(function() { cp.textContent = 'Copiar enlace'; }, 1500);
                 });
