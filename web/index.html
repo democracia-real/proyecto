@@ -439,6 +439,7 @@
             <div class="home-album-tabs" id="albumTabs">
                 <button type="button" class="home-album-tab home-album-tab-active" data-album-id="01">01. Diagnóstico</button>
                 <button type="button" class="home-album-tab" data-album-id="02">02. Problemas Estructurales</button>
+                <button type="button" class="home-album-tab" data-album-id="08">08. Investigación Abierta</button>
             </div>
             <div class="home-album-player-wrap">
                 <p class="home-album-now" id="albumNow">1. El Dueño del Bolígrafo</p>
@@ -491,24 +492,8 @@
                     <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
                 </li>
             </ul>
-            <ul class="home-album-tracklist" data-album-id="02" id="albumTracklist-02" style="display:none">
-                <li class="home-album-track" data-src="/audio/02-problemas_estructurales/01-EL%20EMBUDO%20DEL%20SUELO.mp3">
-                    <span class="home-album-track-num">1</span>
-                    <span class="home-album-track-title">El Embudo del Suelo</span>
-                    <span class="home-album-track-meta">Vivienda y Suelo</span>
-                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
-                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
-                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
-                </li>
-                <li class="home-album-track" data-src="/audio/02-problemas_estructurales/02-LA%20CUOTA%20DEL%20AIRE.mp3">
-                    <span class="home-album-track-num">2</span>
-                    <span class="home-album-track-title">La Cuota del Aire</span>
-                    <span class="home-album-track-meta">Energía</span>
-                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
-                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
-                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
-                </li>
-            </ul>
+            <ul class="home-album-tracklist" data-album-id="02" id="albumTracklist-02" data-sync-json="true" style="display:none"></ul>
+            <ul class="home-album-tracklist" data-album-id="08" id="albumTracklist-08" data-sync-json="true" style="display:none"></ul>
             <div id="albumShareDropdown" class="home-album-share-dropdown" aria-hidden="true">
                 <a href="#" id="albumShareWa" target="_blank" rel="noopener" class="home-album-share-option">WhatsApp</a>
                 <a href="#" id="albumShareX" target="_blank" rel="noopener" class="home-album-share-option">X (Twitter)</a>
@@ -619,6 +604,6 @@
     <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/chat.js"></script>
-    <script src="js/album.js?v=20260201c"></script>
+    <script src="js/album.js?v=20260201e"></script>
 </body>
 </html>

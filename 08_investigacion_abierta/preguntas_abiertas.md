@@ -143,6 +143,17 @@ Vinculadas al diagnóstico del [módulo 02](../02_problemas_estructurales/README
 | 13.3 | ¿Cuál es la tasa real de reincidencia en hurto multirreincidente antes de que el delincuente pise la cárcel? (Reforma CP, falta de juzgados.) | Alta | Pendiente |
 | 13.4 | ¿Qué capacidad de almacenamiento (baterías/hidrógeno) necesita España para no perder/regalar excedente renovable mientras el ciudadano paga gas caro? | Alta | Pendiente |
 
+## Categoría 8B: Agenda de Promoción 08 -> 02 -> 03
+
+*Temas detectados como estratégicos, en fase de investigación abierta antes de consolidarlos como diagnóstico (módulo 02) y, después, propuesta operativa (módulo 03).*
+
+| # | Pregunta | Prioridad | Estado |
+|---|----------|-----------|--------|
+| 13.5 | ¿Qué dependencias críticas tiene España en energía, semiconductores, medicamentos, defensa y nube? ¿Qué plan de soberanía estratégica minimiza riesgo de interrupción? | Alta | En evaluación (08) |
+| 13.6 | ¿Qué paquete mínimo de conciliación y apoyo a la crianza elevaría natalidad sin generar gasto ineficiente? | Alta | En evaluación (08) |
+| 13.7 | ¿Qué marco de deuda y presupuesto intergeneracional evita trasladar coste estructural a jóvenes y no nacidos? | Alta | En evaluación (08) |
+| 13.8 | ¿Qué reducción neta de carga normativa (one in, two out) mejora productividad y unidad de mercado sin perder garantías? | Alta | En evaluación (08) |
+
 ## Categoría: Comunicación, Participación e Identificación
 
 *Objetivo: no ser un partido típico y aburrido; atraer, enganchar e informar de forma entretenida. Ver [participacion_e_informacion_entretenida.md](participacion_e_informacion_entretenida.md).*
@@ -170,6 +181,7 @@ Vinculadas al diagnóstico del [módulo 02](../02_problemas_estructurales/README
 | 15.8 | ¿Puede España convertir su liderazgo en energía renovable en una ventaja competitiva industrial (hidrógeno verde, almacenamiento, reindustrialización)? ¿Qué barreras hay? | Media | Pendiente |
 | 15.9 | ¿Qué impacto tendrá la IA en el empleo en España a 10-15 años? ¿Qué sectores son más vulnerables y cómo se preparan otros países? | Alta | Pendiente |
 | 15.10 | ¿Cuánto talento emigrado podría recuperar España con qué condiciones? ¿Existen programas de "retorno de talento" exitosos en otros países? | Media | Pendiente |
+| 15.11 | ¿Qué combinación de demografía, productividad IA y rediseño fiscal permitiría sostener pensiones/servicios sin depender solo del crecimiento poblacional? | Alta | Pendiente |
 
 ---
 

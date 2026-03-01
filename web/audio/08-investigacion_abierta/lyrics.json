@@ -1,0 +1,15 @@
+{
+  "album": "Investigación Abierta",
+  "module": "08",
+  "audioPath": "/audio/08-investigacion_abierta/",
+  "tracks": [
+    {
+      "id": "01",
+      "title": "Código y Cuna",
+      "theme": "Demografía y Automatización",
+      "style": "Synth-Pop 80s / New Wave",
+      "audioFile": "CÓDIGO Y CUNA.mp3",
+      "lyrics": "(Verso Uno)\nDicen las tablas que el país se vacía,\nque faltan manos para la economía.\nQue la pirámide se invierte y se cae,\ny que el sistema ya no se distrae.\nPero en la nube un algoritmo despierta,\nabriendo de golpe una nueva puerta.\n¿Para qué brazos si el silicio trabaja?\n¿Para qué proles si la máquina encaja?\n\n(Estribillo)\n¡Es código y cuna, un nuevo equilibrio!\nSaliendo por fin de este viejo delirio.\nSi la IA produce lo que el hombre soñó,\nel peso del mundo ya se transformó.\nNo cuentes cabezas, cuenta la eficiencia,\nque el futuro no es gente, es pura inteligencia.\n\n(Verso Dos)\nProductividad que ya no tiene cara,\nuna riqueza que el bit nos depara.\nEl impuesto al robot, la renta del dato,\nrompiendo por fin el antiguo contrato.\nYa no hace falta una masa infinita,\nsi la tecnología el esfuerzo limita.\nInvestigación abierta para entender,\nque menos humanos... no es perder el poder.\n\n(Puente)\n(Sonido sintético ascendente)\n¿Y si la escasez fuera solo un recuerdo?\n¿Y si la abundancia fuera el acuerdo?\nNo es natalidad, es una transición,\nde la fuerza bruta a la computación.\n\n(Estribillo)\n¡Es código y cuna, un nuevo equilibrio!\nSaliendo por fin de este viejo delirio.\nSi la IA produce lo que el hombre soñó,\nel peso del mundo ya se transformó.\nNo cuentes cabezas, cuenta la eficiencia,\nque el futuro no es gente, es pura inteligencia.\n\n(Outro)\nSistema actualizado.\nParadigma borrado.\nEl futuro es hoy...\nY no necesita permiso."
+    }
+  ]
+}

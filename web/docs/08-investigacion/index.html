@@ -110,6 +110,11 @@
                     <li>Democracia líquida en la práctica</li>
                 </ul>
 
+                <h3>Demografía y automatización</h3>
+                <ul>
+                    <li><a href="/docs/viewer.html?doc=08_investigacion_abierta/demografia_automatizacion_y_estado_del_bienestar.md"><strong>Demografía, automatización y bienestar</strong></a> — ¿más población o más productividad para sostener el sistema?</li>
+                </ul>
+
                 <h2>Preguntas prioritarias</h2>
 
                 <p>Ver <a href="/docs/viewer.html?doc=08_investigacion_abierta/preguntas_abiertas.md">listado completo de preguntas abiertas</a>.</p>
@@ -182,6 +187,24 @@
                 <blockquote>
                     Preferimos admitir "no lo sabemos" a afirmar sin evidencia.
                 </blockquote>
+
+                <h2 id="album" class="album-section">Álbum de Investigación Abierta</h2>
+                <p class="album-intro">
+                    Canciones de investigación y debate estratégico del módulo 08.
+                    Haz clic en una pista para reproducirla o en "Ver letra" para abrirla.
+                </p>
+
+                <div class="docs-album" data-album-json="/audio/08-investigacion_abierta/lyrics.json">
+                    <div class="home-album-player-wrap">
+                        <p class="home-album-now">Cargando…</p>
+                        <audio class="docs-album-player" controls preload="metadata"></audio>
+                        <div class="home-album-nav">
+                            <button type="button" class="home-album-btn docs-album-prev" aria-label="Anterior">← Anterior</button>
+                            <button type="button" class="home-album-btn docs-album-next" aria-label="Siguiente">Siguiente →</button>
+                        </div>
+                    </div>
+                    <ul class="home-album-tracklist docs-album-tracklist"></ul>
+                </div>
             </div>
 
             <nav class="docs-nav-footer">
@@ -198,7 +221,18 @@
     </div>
 
     <button class="docs-sidebar-toggle" aria-label="Mostrar menú" onclick="document.getElementById('docsSidebar').classList.toggle('active')">☰</button>
+    <div id="lyricModal" class="lyric-modal" role="dialog" aria-modal="true" aria-labelledby="lyricModalTitle" aria-hidden="true">
+        <div class="lyric-modal-backdrop"></div>
+        <div class="lyric-modal-box">
+            <div class="lyric-modal-header">
+                <h2 id="lyricModalTitle" class="lyric-modal-title"></h2>
+                <button type="button" class="lyric-modal-close" aria-label="Cerrar">&times;</button>
+            </div>
+            <div class="lyric-modal-body"></div>
+        </div>
+    </div>
     <script src="../../js/main.js"></script>
     <script src="../../js/docs-nav.js"></script>
+    <script src="../../js/docs-album.js"></script>
 </body>
 </html>

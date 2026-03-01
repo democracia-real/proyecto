@@ -16,15 +16,20 @@ Este módulo documenta los **problemas estructurales** del sistema político-adm
 | Documento | Problema Principal |
 |-----------|-------------------|
 | [corrupcion_e_impunidad.md](corrupcion_e_impunidad.md) | Corrupción sistémica y falta de consecuencias |
+| [justicia_lenta_y_analogica.md](justicia_lenta_y_analogica.md) | Lentitud judicial, baja digitalización y coste institucional |
 | [burocracia_y_eficiencia.md](burocracia_y_eficiencia.md) | Exceso de trámites e ineficiencia administrativa |
 | [puertas_giratorias.md](puertas_giratorias.md) | Intercambio entre política y sector privado |
 | [funcionariado.md](funcionariado.md) | Productividad y métricas en el empleo público |
 | [vivienda.md](vivienda.md) | Crisis de acceso a la vivienda |
+| [despoblacion_rural_y_equilibrio_territorial.md](despoblacion_rural_y_equilibrio_territorial.md) | Vaciamiento rural, servicios y cohesión territorial |
 | [autonomos_y_emprendimiento.md](autonomos_y_emprendimiento.md) | Frenos al emprendimiento |
+| [turismo_vs_industria.md](turismo_vs_industria.md) | Dependencia turística y necesidad de diversificación productiva |
 | [fondos_europeos.md](fondos_europeos.md) | Despilfarro e ineficiencia en proyectos UE |
 | [sistema_pensiones.md](sistema_pensiones.md) | Insostenibilidad del sistema de reparto |
 | [sanidad.md](sanidad.md) | Fragmentación y listas de espera |
+| [salud_mental_y_soledad_no_deseada.md](salud_mental_y_soledad_no_deseada.md) | Saturación asistencial, ansiedad y aislamiento social |
 | [educacion.md](educacion.md) | Inestabilidad legislativa y resultados |
+| [innovacion_y_ciencia_fuga_de_cerebros.md](innovacion_y_ciencia_fuga_de_cerebros.md) | Fuga de talento y baja transferencia a economía real |
 | [energia.md](energia.md) | Precios, oligopolio, dependencia y mix (solar, eólica, nuclear) |
 | [compra_publica_producto_nacional.md](compra_publica_producto_nacional.md) | Favorecer producto nacional en compra pública cuando haya equivalencia |
 | [seguridad_ciudadana_e_impunidad.md](seguridad_ciudadana_e_impunidad.md) | Ciberdelitos, hurtos, ocupación, fraude en prestaciones |

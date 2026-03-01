@@ -43,6 +43,8 @@
 | **Rendición de cuentas en catástrofes** — Nueva sección en `corrupcion_e_impunidad.md` con patrón de impunidad (DANA, La Palma, COVID, Santiago), mecanismos de mando único automático y comisión independiente | ✅ |
 | **Team Mirai y partidos IA** — Añadidos en `tematicas_emergentes_y_modelos_programaticos.md`: Team Mirai (Japón, 11 escaños), Shinsei no Michi, relevancia para nuestro proyecto | ✅ |
 | **Web actualizada** — Nuevo documento de inmigración añadido a navegación (`docs-nav.js`) y labels (`viewer.js`) | ✅ |
+| **Temas parciales cumplimentados (módulo 02)** — Nuevos documentos: `despoblacion_rural_y_equilibrio_territorial.md`, `salud_mental_y_soledad_no_deseada.md`, `innovacion_y_ciencia_fuga_de_cerebros.md`, `turismo_vs_industria.md`, `justicia_lenta_y_analogica.md` + navegación y README actualizados | ✅ |
+| **Agenda 08 actualizada** — Se añaden líneas de investigación en `preguntas_abiertas.md` y `tematicas_emergentes_y_modelos_programaticos.md` para soberanía estratégica, natalidad/conciliación, justicia intergeneracional y simplificación normativa | ✅ |
 
 ### Infraestructura Web: Hecha
 
@@ -101,6 +103,10 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 | Transición energética como ventaja competitiva | Media-Alta | Buena (`energia.md`) |
 | Empleo post-IA | Media | Inicial (`tematicas_emergentes.md`) |
 | Proyección internacional (Hispanidad) | Media | Inexistente — por crear |
+| Soberanía estratégica y resiliencia | Alta | En evaluación (`preguntas_abiertas.md` 13.5) |
+| Natalidad y conciliación | Alta | En evaluación (`preguntas_abiertas.md` 13.6) |
+| Justicia intergeneracional y deuda | Alta | En evaluación (`preguntas_abiertas.md` 13.7) |
+| Simplificación normativa y unidad de mercado | Alta | En evaluación (`preguntas_abiertas.md` 13.8) |
 
 ---
 
@@ -128,6 +134,9 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 - [x] Actualizar sidebars web de los 8 módulos con todos los documentos
 - [x] Líneas estratégicas Dalio — estructura y preguntas definidas en `vision_estrategica_largo_plazo.md`
 - [ ] Investigar con datos reales las 7 líneas estratégicas (requiere Deep Research)
+- [ ] pensar que mas temas puedes ser relevantes importantes.
+- [ ] crear podcast de cada sección?
+- [ ] quizás debería de hacer un lanzamiento con una canción con todo? que estilo seria el mas rompedor?
 
 ### Fase 3: Constitución Legal
 - [ ] Verificar nombre en Registro de Partidos
@@ -200,7 +209,7 @@ npx serve web -p 3000
 
 ## Acciones Sugeridas para Próxima Sesión
 
-1. **Re-indexar** — Ejecutar script para que el chatbot tenga los nuevos documentos (inmigración, auditoría fondos, catástrofes, Team Mirai).
-2. **Investigar un tema pendiente** — Elegir un documento de módulos 03-08 con [PENDIENTE] y rellenarlo con Deep Research.
+1. **Re-indexar** — Ejecutar script para que el chatbot tenga los nuevos documentos de módulo 02 y agenda 08.
+2. **Promoción 08 -> 02 -> 03** — Investigar con Deep Research los temas 13.5–13.8 y decidir cuáles suben a diagnóstico y cuáles a propuestas.
 3. **Derechos digitales** — Crear documento-eje que unifique privacidad, neutralidad de red, acceso universal y alfabetización digital (vacío identificado en temáticas emergentes).
 4. **Legal** — Comprobar "Democracia Real" en Registro de Partidos.

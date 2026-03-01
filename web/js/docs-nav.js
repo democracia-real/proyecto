@@ -29,6 +29,7 @@
             matchDoc: '02_problemas_estructurales/',
             children: [
                 { title: 'Corrupci\u00f3n e Impunidad', href: '/docs/viewer.html?doc=02_problemas_estructurales/corrupcion_e_impunidad.md' },
+                { title: 'Justicia Lenta y Anal\u00f3gica', href: '/docs/viewer.html?doc=02_problemas_estructurales/justicia_lenta_y_analogica.md' },
                 { title: 'Puertas Giratorias', href: '/docs/viewer.html?doc=02_problemas_estructurales/puertas_giratorias.md' },
                 { title: 'Coste Pol\u00edtico Vitalicio', href: '/docs/viewer.html?doc=02_problemas_estructurales/coste_politico_vitalicio.md' },
                 { title: 'Burocracia y Eficiencia', href: '/docs/viewer.html?doc=02_problemas_estructurales/burocracia_y_eficiencia.md' },
@@ -38,12 +39,16 @@
                 { title: 'Aut\u00f3nomos', href: '/docs/viewer.html?doc=02_problemas_estructurales/autonomos_y_emprendimiento.md' },
                 { title: 'Justicia Fiscal', href: '/docs/viewer.html?doc=02_problemas_estructurales/justicia_fiscal_autonomos.md' },
                 { title: 'Compra P\u00fablica Nacional', href: '/docs/viewer.html?doc=02_problemas_estructurales/compra_publica_producto_nacional.md' },
+                { title: 'Turismo vs Industria', href: '/docs/viewer.html?doc=02_problemas_estructurales/turismo_vs_industria.md' },
                 { title: 'Sanidad', href: '/docs/viewer.html?doc=02_problemas_estructurales/sanidad.md' },
+                { title: 'Salud Mental y Soledad', href: '/docs/viewer.html?doc=02_problemas_estructurales/salud_mental_y_soledad_no_deseada.md' },
                 { title: 'Educaci\u00f3n', href: '/docs/viewer.html?doc=02_problemas_estructurales/educacion.md' },
+                { title: 'Innovaci\u00f3n y Ciencia', href: '/docs/viewer.html?doc=02_problemas_estructurales/innovacion_y_ciencia_fuga_de_cerebros.md' },
                 { title: 'Pensiones', href: '/docs/viewer.html?doc=02_problemas_estructurales/sistema_pensiones.md' },
                 { title: 'Seguridad Ciudadana', href: '/docs/viewer.html?doc=02_problemas_estructurales/seguridad_ciudadana_e_impunidad.md' },
                 { title: 'Vivienda', href: '/docs/viewer.html?doc=02_problemas_estructurales/vivienda.md' },
                 { title: 'Vivienda y Suelo', href: '/docs/viewer.html?doc=02_problemas_estructurales/vivienda_y_suelo.md' },
+                { title: 'Despoblaci\u00f3n Rural', href: '/docs/viewer.html?doc=02_problemas_estructurales/despoblacion_rural_y_equilibrio_territorial.md' },
                 { title: 'Energ\u00eda', href: '/docs/viewer.html?doc=02_problemas_estructurales/energia.md' },
                 { title: 'Zonas Bajas Emisiones', href: '/docs/viewer.html?doc=02_problemas_estructurales/zonas_bajas_emisiones.md' },
                 { title: 'Inmigraci\u00f3n e Integraci\u00f3n', href: '/docs/viewer.html?doc=02_problemas_estructurales/inmigracion_e_integracion.md' },
@@ -138,9 +143,11 @@
                 { title: 'Colaboradores', href: '/docs/viewer.html?doc=08_investigacion_abierta/colaboradores.md' },
                 { title: 'Tem\u00e1ticas Emergentes', href: '/docs/viewer.html?doc=08_investigacion_abierta/tematicas_emergentes_y_modelos_programaticos.md' },
                 { title: 'Visi\u00f3n Estrat\u00e9gica', href: '/docs/viewer.html?doc=08_investigacion_abierta/vision_estrategica_largo_plazo.md' },
+                { title: 'Demograf\u00eda y Automatizaci\u00f3n', href: '/docs/viewer.html?doc=08_investigacion_abierta/demografia_automatizacion_y_estado_del_bienestar.md' },
                 { title: 'Mensaje Juventud', href: '/docs/viewer.html?doc=08_investigacion_abierta/mensaje_inclusivo_juventud.md' },
                 { title: 'Metodolog\u00eda IA', href: '/docs/viewer.html?doc=08_investigacion_abierta/metodologia_ia.md' },
-                { title: 'Participaci\u00f3n Entretenida', href: '/docs/viewer.html?doc=08_investigacion_abierta/participacion_e_informacion_entretenida.md' }
+                { title: 'Participaci\u00f3n Entretenida', href: '/docs/viewer.html?doc=08_investigacion_abierta/participacion_e_informacion_entretenida.md' },
+                { title: '\u00c1lbum Investigaci\u00f3n Abierta', href: '/docs/08-investigacion/#album' }
             ]
         }
     ];

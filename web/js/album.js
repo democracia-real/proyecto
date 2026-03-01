@@ -19,12 +19,13 @@
     var allLists = document.querySelectorAll('.home-album-tracklist[data-album-id]');
     if (!allLists.length) return;
 
-    var DOCS_URLS = { '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album' };
-    var LYRICS_URLS = { '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json' };
+    var DOCS_URLS = { '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album', '08': '/docs/08-investigacion/#album' };
+    var LYRICS_URLS = { '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json', '08': '/audio/08-investigacion_abierta/lyrics.json' };
 
     var currentAlbumId = '01';
     var currentTrackIdx = 0;
     var lyricsCache = {};
+    var loadPromises = {};
 
     function getActiveList() {
         return document.querySelector('.home-album-tracklist[data-album-id="' + currentAlbumId + '"]');
@@ -33,6 +34,62 @@
     function getTracks() {
         var list = getActiveList();
         return list ? Array.from(list.querySelectorAll('.home-album-track')) : [];
+    }
+
+    function buildTrackItem(track, index, audioPath) {
+        var li = document.createElement('li');
+        li.className = 'home-album-track';
+        if (audioPath && track.audioFile) {
+            li.setAttribute('data-src', audioPath + encodeURIComponent(track.audioFile));
+        }
+
+        var meta = [];
+        if (track.theme) meta.push(track.theme);
+        if (track.style && track.style !== '—') meta.push(track.style);
+
+        li.innerHTML =
+            '<span class="home-album-track-num">' + (index + 1) + '</span>' +
+            '<span class="home-album-track-title">' + (track.title || '') + '</span>' +
+            '<span class="home-album-track-meta">' + meta.join(' · ') + '</span>' +
+            '<button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>' +
+            '<button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>' +
+            '<button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>';
+
+        return li;
+    }
+
+    function hydrateTracklistFromJson(albumId, data) {
+        var list = document.querySelector('.home-album-tracklist[data-album-id="' + albumId + '"]');
+        if (!list || list.getAttribute('data-sync-json') !== 'true') return;
+        if (!data || !Array.isArray(data.tracks) || !data.tracks.length) return;
+
+        list.innerHTML = '';
+        data.tracks.forEach(function(track, index) {
+            list.appendChild(buildTrackItem(track, index, data.audioPath || ''));
+        });
+        list.setAttribute('data-json-ready', 'true');
+    }
+
+    function ensureAlbumData(albumId) {
+        if (lyricsCache[albumId]) return Promise.resolve(lyricsCache[albumId]);
+        if (loadPromises[albumId]) return loadPromises[albumId];
+
+        var jsonUrl = LYRICS_URLS[albumId];
+        if (!jsonUrl) return Promise.resolve(null);
+
+        loadPromises[albumId] = fetch(jsonUrl)
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(data) {
+                if (data && data.tracks) {
+                    lyricsCache[albumId] = data;
+                    hydrateTracklistFromJson(albumId, data);
+                    return data;
+                }
+                return null;
+            })
+            .catch(function() { return null; });
+
+        return loadPromises[albumId];
     }
 
     // --- Switch album ---
@@ -54,9 +111,13 @@
             docsLinkEl.innerHTML = '<a href="' + DOCS_URLS[albumId] + '">Ver álbum completo y letras en Documentación →</a>';
         }
 
-        bindTrackEvents();
-        setTrack(0, false);
-        loadLyrics(albumId);
+        if (nowEl) nowEl.textContent = 'Cargando pistas…';
+        ensureAlbumData(albumId).finally(function() {
+            if (currentAlbumId !== albumId) return;
+            bindTrackEvents();
+            setTrack(0, false);
+            if (!getTracks().length && nowEl) nowEl.textContent = 'No hay pistas disponibles';
+        });
     }
 
     // --- Set track ---
@@ -104,15 +165,6 @@
             var shareBtn = li.querySelector('.home-album-track-share');
             if (shareBtn) shareBtn.addEventListener('click', function(e) { e.stopPropagation(); openShare(i, shareBtn); });
         });
-    }
-
-    // --- Load lyrics from JSON (optional enrichment) ---
-    function loadLyrics(albumId) {
-        if (lyricsCache[albumId] || !LYRICS_URLS[albumId]) return;
-        fetch(LYRICS_URLS[albumId])
-            .then(function(r) { return r.ok ? r.json() : null; })
-            .then(function(data) { if (data && data.tracks) lyricsCache[albumId] = data; })
-            .catch(function() {});
     }
 
     // --- Lyrics modal ---
@@ -208,9 +260,9 @@
         });
     });
 
-    // --- Init: bind events on album 01, load its lyrics ---
+    // --- Init: bind events on album 01 and preload lyrics ---
     bindTrackEvents();
-    loadLyrics('01');
+    ensureAlbumData('01');
 
     // --- Deep link: #album-02-1 ---
     var hash = window.location.hash;
@@ -218,6 +270,10 @@
     if (m) {
         switchAlbum(m[1]);
         var n = parseInt(m[2], 10);
-        if (n >= 1) setTrack(n - 1, false);
+        if (n >= 1) {
+            ensureAlbumData(m[1]).finally(function() {
+                if (currentAlbumId === m[1]) setTrack(n - 1, false);
+            });
+        }
     }
 })();
