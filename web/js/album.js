@@ -19,8 +19,8 @@
     var allLists = document.querySelectorAll('.home-album-tracklist[data-album-id]');
     if (!allLists.length) return;
 
-    var DOCS_URLS = { '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album', '08': '/docs/08-investigacion/#album' };
-    var LYRICS_URLS = { '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json', '08': '/audio/08-investigacion_abierta/lyrics.json' };
+    var DOCS_URLS = { '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album', '05': '/docs/05-ia/', '08': '/docs/08-investigacion/#album' };
+    var LYRICS_URLS = { '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json', '05': '/audio/05-uso_de_ia_y_automatizacion/lyrics.json', '08': '/audio/08-investigacion_abierta/lyrics.json' };
 
     var currentAlbumId = '01';
     var currentTrackIdx = 0;
