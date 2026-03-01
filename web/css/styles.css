@@ -1305,6 +1305,16 @@ img {
     color: var(--accent);
 }
 
+.home-album-tab[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.home-album-tab[disabled]:hover {
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
 .home-album-loading {
     padding: var(--space-lg);
     text-align: center;
