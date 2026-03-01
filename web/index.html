@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Proyecto Democracia Real - Transparencia, Eficiencia y Tecnología para España</title>
+    <meta name="description" content="Proyecto abierto y colaborativo para transformar el sistema político español. Transparencia radical, decisiones basadas en datos, IA como herramienta de supervisión. Sin ideología, con soluciones.">
+    <meta name="keywords" content="democracia, transparencia, política española, reforma política, inteligencia artificial, participación ciudadana, anticorrupción, eficiencia administrativa">
+    <meta name="author" content="Proyecto Democracia Real">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://democraciareal.es/">
+    
+    <!-- hreflang para i18n (ES, CA, EU, GL, EN) -->
+    <link rel="alternate" hreflang="es" href="https://democraciareal.es/">
+    <link rel="alternate" hreflang="ca" href="https://democraciareal.es/">
+    <link rel="alternate" hreflang="eu" href="https://democraciareal.es/">
+    <link rel="alternate" hreflang="gl" href="https://democraciareal.es/">
+    <link rel="alternate" hreflang="en" href="https://democraciareal.es/">
+    <link rel="alternate" hreflang="x-default" href="https://democraciareal.es/">
+    
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://democraciareal.es/">
+    <meta property="og:title" content="Proyecto Democracia Real - Únete al cambio">
+    <meta property="og:description" content="En lugar de quejarte y discutir, únete al cambio. Transparencia, datos y tecnología para construir el futuro todos juntos.">
+    <meta property="og:image" content="https://democraciareal.es/images/og-image.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Proyecto Democracia Real">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://democraciareal.es/">
+    <meta name="twitter:title" content="Proyecto Democracia Real - Únete al cambio">
+    <meta name="twitter:description" content="Transparencia, datos y tecnología para construir el futuro todos juntos. La verdadera democracia.">
+    <meta name="twitter:image" content="https://democraciareal.es/images/og-image.png">
+    
+    <!-- GEO: Structured Data para IA/Búsquedas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Proyecto Democracia Real",
+      "alternateName": "Democracia Real",
+      "url": "https://democraciareal.es",
+      "logo": "https://democraciareal.es/images/logo.png",
+      "description": "Proyecto abierto para transformar el sistema político español con transparencia, eficiencia y uso responsable de la inteligencia artificial.",
+      "foundingDate": "2026",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "knowsAbout": [
+        "Reforma política",
+        "Transparencia gubernamental",
+        "Inteligencia artificial en gobernanza",
+        "Participación ciudadana",
+        "Anticorrupción",
+        "Democracia líquida"
+      ],
+      "sameAs": [
+        "https://github.com/democracia-real/web"
+      ]
+    }
+    </script>
+    
+    <!-- GEO: WebSite schema para búsquedas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Proyecto Democracia Real",
+      "url": "https://democraciareal.es",
+      "description": "Documentación y propuestas para una democracia real en España",
+      "inLanguage": ["es", "ca", "eu", "gl", "en"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://democraciareal.es/docs/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- GEO: FAQ Schema para preguntas comunes -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Proyecto Democracia Real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un proyecto abierto y colaborativo para documentar los problemas estructurales del sistema político español y proponer soluciones basadas en transparencia, datos y tecnología, incluyendo el uso responsable de inteligencia artificial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es un partido político de izquierdas o derechas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No nos posicionamos ideológicamente. Analizamos problemas estructurales y operativos del sistema, no cuestiones ideológicas. Buscamos eficiencia, transparencia y rendición de cuentas, independientemente de la ideología."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué papel tiene la inteligencia artificial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La IA actúa como herramienta de supervisión y eficiencia: auditoría del gasto público, detección de patrones de corrupción, síntesis de propuestas ciudadanas. Siempre supervisada por humanos, nunca como decisor autónomo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo participar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El proyecto es abierto. Puedes contribuir en GitHub con investigación, documentación, propuestas o revisiones. Todo el código y contenido es público y auditable."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Tema y colores -->
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="msapplication-TileColor" content="#0a0a0a">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación semántica -->
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+        <div class="nav-container">
+            <a href="/" class="nav-logo" aria-label="Proyecto Democracia Real - Inicio">
+                <span class="logo-icon" aria-hidden="true">◆</span>
+                <span class="logo-text">Democracia Real</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li><a href="#problema" data-i18n="nav.problem">El Problema</a></li>
+                <li><a href="#propuesta" data-i18n="nav.proposal">Propuesta</a></li>
+                <li><a href="#pilares" data-i18n="nav.pillars">Pilares</a></li>
+                <li><a href="#album">Álbum</a></li>
+                <li><a href="/docs/" data-i18n="nav.docs">Documentación</a></li>
+                <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+                <li><a href="https://github.com/democracia-real/web" class="nav-link-github" target="_blank" rel="noopener">GitHub</a></li>
+                <li class="nav-lang">
+                    <div class="lang-selector">
+                        <button class="lang-current" aria-label="Cambiar idioma">ES</button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option active" data-lang="es">Español</button>
+                            <button class="lang-option" data-lang="ca">Català <span class="lang-soon">*</span></button>
+                            <button class="lang-option" data-lang="eu">Euskara <span class="lang-soon">*</span></button>
+                            <button class="lang-option" data-lang="gl">Galego <span class="lang-soon">*</span></button>
+                            <button class="lang-option" data-lang="en">English <span class="lang-soon">*</span></button>
+                            <p class="lang-note">* Traducción en preparación</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-label" data-i18n="hero.label">Proyecto abierto y colaborativo</p>
+            <h1 class="hero-title">
+                <span data-i18n="hero.title_1">En lugar de quejarte y discutir,</span><br>
+                <span class="highlight" data-i18n="hero.title_2">únete al cambio.</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+                Transparencia, datos y tecnología para construir el futuro todos juntos.
+                La verdadera democracia.
+            </p>
+            <div class="hero-cta">
+                <a href="/docs/" class="btn btn-primary" data-i18n="hero.cta_primary">Explorar documentación</a>
+                <a href="#propuesta" class="btn btn-secondary" data-i18n="hero.cta_secondary">Cómo funciona</a>
+            </div>
+            <p class="hero-note" data-i18n="hero.note">No somos una ideología. Somos una infraestructura para la ciudadanía.</p>
+        </div>
+    </header>
+
+    <!-- Problema -->
+    <section id="problema" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Diagnóstico</span>
+                <h2 class="section-title">El sistema tiene bugs</h2>
+                <p class="section-subtitle">
+                    No es un problema de izquierda o derecha. Es un problema de arquitectura.
+                </p>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">◇</div>
+                    <h3>Listas cerradas</h3>
+                    <p>Los ciudadanos no eligen representantes. Ratifican listas elaboradas por cúpulas de partido.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">◇</div>
+                    <h3>Sin separación de poderes</h3>
+                    <p>Quien gobierna controla a quien le juzga. El CGPJ es un reparto de cuotas.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">◇</div>
+                    <h3>Puertas giratorias</h3>
+                    <p>Políticos pasan a empresas que regulaban. El regulador se convierte en regulado.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">◇</div>
+                    <h3>Visión a 4 años</h3>
+                    <p>Cada gobierno deshace lo anterior. Imposible planificar a largo plazo.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">◇</div>
+                    <h3>Burocracia kafkiana</h3>
+                    <p>Tramitaciones que duran años. Sistemas que no se comunican entre sí.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">◇</div>
+                    <h3>Impunidad estructural</h3>
+                    <p>Destrucción de pruebas sin consecuencias. WhatsApps borrados, casos archivados.</p>
+                </div>
+            </div>
+
+            <div class="data-dashboard">
+                <div class="data-group">
+                    <h3 class="data-group-title"><span class="data-group-icon">&#9758;</span> Tu representación</h3>
+                    <div class="data-group-grid">
+                        <div class="data-card">
+                            <span class="data-value" data-count="0" data-suffix=" de 350">0 de 350</span>
+                            <span class="data-label">diputados los eliges tú — votas la lista del jefe del partido</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="85" data-suffix="%">85%</span>
+                            <span class="data-label">de las leyes se aprueban por decreto, sin debate real</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="12" data-suffix=" de 12">12 de 12</span>
+                            <span class="data-label">vocales del CGPJ elegidos por cuotas de partidos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-group">
+                    <h3 class="data-group-title"><span class="data-group-icon">&#9733;</span> Tu dinero</h3>
+                    <div class="data-group-grid">
+                        <div class="data-card">
+                            <span class="data-value" data-count="50000" data-suffix=" M€">50.000 M€</span>
+                            <span class="data-label">al año se pierde por corrupción — más que el presupuesto de Sanidad</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="31000" data-suffix=" €">31.000 €</span>
+                            <span class="data-label">debe cada español en deuda pública — sin haber firmado nada</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="14" data-suffix=" €/m²">14 €/m²</span>
+                            <span class="data-label">de alquiler medio — máximo histórico, generación sin independizarse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-group">
+                    <h3 class="data-group-title"><span class="data-group-icon">&#9888;</span> Tu futuro</h3>
+                    <div class="data-group-grid">
+                        <div class="data-card">
+                            <span class="data-value" data-count="26.6" data-suffix="%" data-decimals="1">26,6%</span>
+                            <span class="data-label">de los jóvenes no encuentran trabajo — el doble que en Europa</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="87000" data-suffix="">87.000</span>
+                            <span class="data-label">titulados se van de España cada año — fuga de cerebros</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="9" data-suffix=" leyes">9 leyes</span>
+                            <span class="data-label">de educación en 40 años — ninguna duró lo suficiente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-group">
+                    <h3 class="data-group-title"><span class="data-group-icon">&#10007;</span> Tu confianza</h3>
+                    <div class="data-group-grid">
+                        <div class="data-card">
+                            <span class="data-value" data-count="21" data-suffix="%">21%</span>
+                            <span class="data-label">de confianza en las instituciones — la más baja de Europa occidental</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="43" data-suffix="%">43%</span>
+                            <span class="data-label">de abstención media — casi la mitad de España ya no vota</span>
+                        </div>
+                        <div class="data-card">
+                            <span class="data-value" data-count="3.4" data-suffix=" / 10" data-decimals="1">3,4 / 10</span>
+                            <span class="data-label">nota a los políticos según el CIS — suspenso histórico</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="data-dashboard-cta">
+                    Estos no son opiniones. Son datos públicos. <a href="/docs/radiografia.html">Ver radiografía completa con fuentes →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propuesta -->
+    <section id="propuesta" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">La solución</span>
+                <h2 class="section-title">De la discusión a la decisión</h2>
+                <p class="section-subtitle">
+                    Somos como una startup que viene a arreglar un sistema operativo antiguo<br>
+                    lleno de bugs y malware.
+                </p>
+            </div>
+
+            <div class="reforms-table">
+                <div class="reform-row">
+                    <div class="reform-name">Separación de poderes real</div>
+                    <div class="reform-desc">Que quien gobierna no controle a quien le juzga</div>
+                </div>
+                <div class="reform-row">
+                    <div class="reform-name">Representación uninominal</div>
+                    <div class="reform-desc">Diputados elegidos por distritos, responsables ante sus votantes</div>
+                </div>
+                <div class="reform-row">
+                    <div class="reform-name">Facultad revocatoria</div>
+                    <div class="reform-desc">Poder revocar representantes que incumplen</div>
+                </div>
+                <div class="reform-row">
+                    <div class="reform-name">Evaluación de políticas</div>
+                    <div class="reform-desc">Medir resultados, no solo intenciones</div>
+                </div>
+                <div class="reform-row">
+                    <div class="reform-name">IA como auditor</div>
+                    <div class="reform-desc">Supervisión continua del gasto público y contratación</div>
+                </div>
+            </div>
+
+            <div class="neutrality-note">
+                <h4>Sobre monarquía/república</h4>
+                <p>
+                    Este proyecto <strong>no se posiciona sobre la forma de Estado</strong>. 
+                    El debate es legítimo, pero secundario respecto a los problemas estructurales.
+                    Nuestro foco: eficiencia, transparencia y democracia real.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares -->
+    <section id="pilares" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Diferencial</span>
+                <h2 class="section-title">Pilares tecnológicos</h2>
+                <p class="section-subtitle">
+                    No hacemos promesas. Construimos sistemas.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <h3>Transparencia por diseño</h3>
+                    <ul class="pillar-list">
+                        <li><code>código abierto</code> — todo el software es público</li>
+                        <li><code>versionado</code> — presupuestos trazables como commits</li>
+                        <li><code>auditoría</code> — IA + humana, continua</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">02</div>
+                    <h3>Decisión basada en evidencia</h3>
+                    <ul class="pillar-list">
+                        <li>¿Qué <strong>problema</strong> resuelve?</li>
+                        <li>¿Qué <strong>datos</strong> lo justifican?</li>
+                        <li>¿Qué <strong>coste</strong> tiene?</li>
+                        <li>¿Qué <strong>impacto</strong> real genera?</li>
+                    </ul>
+                    <p class="pillar-note">Sin esto, no se implementa.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <h3>Colaboración ciudadana</h3>
+                    <ul class="pillar-list">
+                        <li><code>propuestas</code> — cualquiera puede proponer</li>
+                        <li><code>revisión</code> — la comunidad valida</li>
+                        <li><code>pilotos</code> — probar antes de escalar</li>
+                    </ul>
+                    <p class="pillar-note">No votas personas. Validas soluciones.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">04</div>
+                    <h3>IA supervisada</h3>
+                    <ul class="pillar-list">
+                        <li>Detección de ineficiencias</li>
+                        <li>Simulación de escenarios</li>
+                        <li>Alertas de corrupción</li>
+                        <li>Síntesis de propuestas ciudadanas</li>
+                    </ul>
+                    <p class="pillar-note">La IA no manda. Asiste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Álbum (único reproductor, tabs por módulo, pistas dinámicas) -->
+    <section id="album" class="section section-alt home-album">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Escucha el proyecto</span>
+                <h2 class="section-title">Álbum</h2>
+                <p class="section-subtitle">
+                    Una canción por tema. Selecciona un módulo para ver sus pistas.
+                </p>
+            </div>
+            <div class="home-album-tabs" id="albumTabs">
+                <button type="button" class="home-album-tab home-album-tab-active" data-album-id="01">01. Diagnóstico</button>
+                <button type="button" class="home-album-tab" data-album-id="02">02. Problemas Estructurales</button>
+            </div>
+            <div class="home-album-player-wrap">
+                <p class="home-album-now" id="albumNow">1. El Dueño del Bolígrafo</p>
+                <audio id="albumPlayer" controls preload="metadata" src="/audio/01-diagnostico/01-el-dueño-del-boligrafo.mp3"></audio>
+                <div class="home-album-nav">
+                    <button type="button" class="home-album-btn" id="albumPrev" aria-label="Anterior">← Anterior</button>
+                    <button type="button" class="home-album-btn" id="albumNext" aria-label="Siguiente">Siguiente →</button>
+                    <button type="button" class="home-album-btn home-album-btn-share" id="albumPlayerShare" aria-label="Compartir esta canción">Compartir</button>
+                </div>
+            </div>
+            <ul class="home-album-tracklist home-album-tracklist-active" data-album-id="01" id="albumTracklist">
+                <li class="home-album-track home-album-track-current" data-src="/audio/01-diagnostico/01-el-dueño-del-boligrafo.mp3">
+                    <span class="home-album-track-num">1</span>
+                    <span class="home-album-track-title">El Dueño del Bolígrafo</span>
+                    <span class="home-album-track-meta">Partitocracia · Punk-Rock / Ska</span>
+                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
+                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
+                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
+                </li>
+                <li class="home-album-track" data-src="/audio/01-diagnostico/02-el-juez-de-guardia.mp3">
+                    <span class="home-album-track-num">2</span>
+                    <span class="home-album-track-title">El Juez de Guardia</span>
+                    <span class="home-album-track-meta">Separación de Poderes · Blues / Rock</span>
+                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
+                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
+                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
+                </li>
+                <li class="home-album-track" data-src="/audio/01-diagnostico/03-mi-diputado-no-existe.mp3">
+                    <span class="home-album-track-num">3</span>
+                    <span class="home-album-track-title">Mi Diputado No Existe</span>
+                    <span class="home-album-track-meta">Sistema Electoral · Pop-Indie</span>
+                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
+                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
+                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
+                </li>
+                <li class="home-album-track" data-src="/audio/01-diagnostico/04-fuera-de-aqui.mp3">
+                    <span class="home-album-track-num">4</span>
+                    <span class="home-album-track-title">Fuera de Aquí</span>
+                    <span class="home-album-track-meta">Comparativa Internacional · Synth-Wave</span>
+                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
+                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
+                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
+                </li>
+                <li class="home-album-track" data-src="/audio/01-diagnostico/05-el-diagnostico.mp3">
+                    <span class="home-album-track-num">5</span>
+                    <span class="home-album-track-title">El Diagnóstico</span>
+                    <span class="home-album-track-meta">Síntesis · Rap / Hip-Hop</span>
+                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
+                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
+                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
+                </li>
+            </ul>
+            <ul class="home-album-tracklist" data-album-id="02" id="albumTracklist-02" style="display:none">
+                <li class="home-album-track" data-src="/audio/02-problemas_estructurales/01-EL%20EMBUDO%20DEL%20SUELO.mp3">
+                    <span class="home-album-track-num">1</span>
+                    <span class="home-album-track-title">El Embudo del Suelo</span>
+                    <span class="home-album-track-meta">Vivienda y Suelo</span>
+                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
+                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
+                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
+                </li>
+                <li class="home-album-track" data-src="/audio/02-problemas_estructurales/02-LA%20CUOTA%20DEL%20AIRE.mp3">
+                    <span class="home-album-track-num">2</span>
+                    <span class="home-album-track-title">La Cuota del Aire</span>
+                    <span class="home-album-track-meta">Energía</span>
+                    <button type="button" class="home-album-track-play" aria-label="Reproducir">▶</button>
+                    <button type="button" class="home-album-track-lyric" aria-label="Ver letra">Ver letra</button>
+                    <button type="button" class="home-album-track-share" aria-label="Compartir">Compartir</button>
+                </li>
+            </ul>
+            <div id="albumShareDropdown" class="home-album-share-dropdown" aria-hidden="true">
+                <a href="#" id="albumShareWa" target="_blank" rel="noopener" class="home-album-share-option">WhatsApp</a>
+                <a href="#" id="albumShareX" target="_blank" rel="noopener" class="home-album-share-option">X (Twitter)</a>
+                <button type="button" id="albumShareCopy" class="home-album-share-option">Copiar enlace</button>
+            </div>
+            <p class="home-album-docs-link" id="albumDocsLink"><a href="/docs/01-diagnostico/#album">Ver álbum completo y letras en Documentación →</a></p>
+        </div>
+    </section>
+
+    <!-- Popup letras -->
+    <div id="lyricModal" class="lyric-modal" role="dialog" aria-modal="true" aria-labelledby="lyricModalTitle" aria-hidden="true">
+        <div class="lyric-modal-backdrop" id="lyricModalBackdrop"></div>
+        <div class="lyric-modal-box">
+            <div class="lyric-modal-header">
+                <h2 id="lyricModalTitle" class="lyric-modal-title"></h2>
+                <button type="button" class="lyric-modal-close" id="lyricModalClose" aria-label="Cerrar">&times;</button>
+            </div>
+            <div class="lyric-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="section section-cta">
+        <div class="container">
+            <h2>¿Compartes el diagnóstico?</h2>
+            <p>Este proyecto es abierto. Explora la documentación, propón mejoras, o únete al desarrollo.</p>
+            <div class="cta-buttons">
+                <a href="#album" class="btn btn-primary">Escuchar álbum</a>
+                <a href="/docs/" class="btn btn-secondary">Ver documentación completa</a>
+                <a href="https://github.com/democracia-real/web" class="btn btn-secondary" target="_blank" rel="noopener">Contribuir en GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes -->
+    <section class="section section-who">
+        <div class="container">
+            <h3>A quién buscamos</h3>
+            <div class="who-grid">
+                <div class="who-item">Técnicos cansados de ineficiencia</div>
+                <div class="who-item">Emprendedores ahogados por burocracia</div>
+                <div class="who-item">Científicos que valoran la evidencia</div>
+                <div class="who-item">Funcionarios frustrados por el sistema</div>
+                <div class="who-item">Jóvenes desencantados con la política</div>
+                <div class="who-item">Abstencionistas que creen que "da igual"</div>
+            </div>
+            <p class="who-cta">Si piensas que el sistema tiene bugs, únete a arreglarlo.</p>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section section-contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Contacto</span>
+                <h2 class="section-title">¿Cómo participar?</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card contact-main">
+                    <h3>GitHub</h3>
+                    <p>El centro de todo el proyecto. Aquí puedes:</p>
+                    <ul>
+                        <li>Ver todo el código y documentación</li>
+                        <li>Abrir <strong>Issues</strong> para propuestas o errores</li>
+                        <li>Participar en <strong>Discussions</strong> para debates</li>
+                        <li>Enviar <strong>Pull Requests</strong> con mejoras</li>
+                    </ul>
+                    <a href="https://github.com/democracia-real/web" class="btn btn-primary" target="_blank" rel="noopener">Ir al repositorio</a>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>Redes sociales</h3>
+                    <p class="contact-soon">Próximamente</p>
+                    <p>Estamos preparando presencia en redes para amplificar el mensaje. Por ahora, el foco está en construir una base documental sólida.</p>
+                    <div class="social-placeholders">
+                        <span class="social-placeholder" title="Próximamente">X</span>
+                        <span class="social-placeholder" title="Próximamente">YT</span>
+                        <span class="social-placeholder" title="Próximamente">TG</span>
+                        <span class="social-placeholder" title="Próximamente">LI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">◆</span>
+                    <span>Democracia Real</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/docs/">Documentación</a>
+                    <a href="https://github.com/democracia-real/web" target="_blank" rel="noopener">GitHub</a>
+                    <a href="/docs/contributing.html">Contribuir</a>
+                </div>
+                <div class="footer-license">
+                    <p>Licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+                    <p class="footer-quote">"España es mejor de lo que pensamos."</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/album.js?v=20260201c"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/**
+ * Sidebar unificado para toda la documentación.
+ * Fuente única de verdad: editar aquí actualiza TODOS los sidebars.
+ */
+(function () {
+    'use strict';
+
+    var DOCS_NAV = [
+        { title: 'Inicio', href: '/docs/' },
+        { title: '\u25C6 Radiograf\u00eda de Espa\u00f1a', href: '/docs/radiografia.html', highlight: true },
+        {
+            title: '01. Diagn\u00f3stico del Sistema',
+            href: '/docs/01-diagnostico/',
+            matchPath: '/docs/01-diagnostico',
+            matchDoc: '01_diagnostico_del_sistema/',
+            children: [
+                { title: 'Partitocracia', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/partitocracia.md' },
+                { title: 'Separaci\u00f3n de Poderes', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/separacion_poderes.md' },
+                { title: 'Sistema Electoral', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/sistema_electoral.md' },
+                { title: 'Comparativa Internacional', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/comparativa_internacional.md' },
+                { title: 'Indicadores de Potencia Nacional', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/indicadores_potencia_nacional.md' },
+                { title: '\u00c1lbum de Diagn\u00f3stico', href: '/docs/01-diagnostico/#album' }
+            ]
+        },
+        {
+            title: '02. Problemas Estructurales',
+            href: '/docs/02-problemas/',
+            matchPath: '/docs/02-problemas',
+            matchDoc: '02_problemas_estructurales/',
+            children: [
+                { title: 'Corrupci\u00f3n e Impunidad', href: '/docs/viewer.html?doc=02_problemas_estructurales/corrupcion_e_impunidad.md' },
+                { title: 'Burocracia y Eficiencia', href: '/docs/viewer.html?doc=02_problemas_estructurales/burocracia_y_eficiencia.md' },
+                { title: 'Puertas Giratorias', href: '/docs/viewer.html?doc=02_problemas_estructurales/puertas_giratorias.md' },
+                { title: 'Funcionariado', href: '/docs/viewer.html?doc=02_problemas_estructurales/funcionariado.md' },
+                { title: 'Vivienda', href: '/docs/viewer.html?doc=02_problemas_estructurales/vivienda.md' },
+                { title: 'Vivienda y Suelo', href: '/docs/viewer.html?doc=02_problemas_estructurales/vivienda_y_suelo.md' },
+                { title: 'Aut\u00f3nomos', href: '/docs/viewer.html?doc=02_problemas_estructurales/autonomos_y_emprendimiento.md' },
+                { title: 'Justicia Fiscal', href: '/docs/viewer.html?doc=02_problemas_estructurales/justicia_fiscal_autonomos.md' },
+                { title: 'Fondos Europeos', href: '/docs/viewer.html?doc=02_problemas_estructurales/fondos_europeos.md' },
+                { title: 'Auditor\u00eda Fondos', href: '/docs/viewer.html?doc=02_problemas_estructurales/auditoria_fondos_europeos.md' },
+                { title: 'Pensiones', href: '/docs/viewer.html?doc=02_problemas_estructurales/sistema_pensiones.md' },
+                { title: 'Sanidad', href: '/docs/viewer.html?doc=02_problemas_estructurales/sanidad.md' },
+                { title: 'Educaci\u00f3n', href: '/docs/viewer.html?doc=02_problemas_estructurales/educacion.md' },
+                { title: 'Energ\u00eda', href: '/docs/viewer.html?doc=02_problemas_estructurales/energia.md' },
+                { title: 'Seguridad Ciudadana', href: '/docs/viewer.html?doc=02_problemas_estructurales/seguridad_ciudadana_e_impunidad.md' },
+                { title: 'Compra P\u00fablica Nacional', href: '/docs/viewer.html?doc=02_problemas_estructurales/compra_publica_producto_nacional.md' },
+                { title: 'Zonas Bajas Emisiones', href: '/docs/viewer.html?doc=02_problemas_estructurales/zonas_bajas_emisiones.md' },
+                { title: 'Prioridad Gasto P\u00fablico', href: '/docs/viewer.html?doc=02_problemas_estructurales/prioridad_gasto_publico.md' },
+                { title: 'Mapa Puertas Giratorias', href: '/docs/viewer.html?doc=02_problemas_estructurales/mapa_puertas_giratorias.md' },
+                { title: 'Coste Pol\u00edtico Vitalicio', href: '/docs/viewer.html?doc=02_problemas_estructurales/coste_politico_vitalicio.md' },
+                { title: 'Inmigraci\u00f3n e Integraci\u00f3n', href: '/docs/viewer.html?doc=02_problemas_estructurales/inmigracion_e_integracion.md' },
+                { title: '\u00c1lbum Problemas Estructurales', href: '/docs/02-problemas/#album' }
+            ]
+        },
+        {
+            title: '03. Propuestas Institucionales',
+            href: '/docs/03-propuestas/',
+            matchPath: '/docs/03-propuestas',
+            matchDoc: '03_propuestas_institucionales/',
+            children: [
+                { title: 'Reforma Electoral', href: '/docs/viewer.html?doc=03_propuestas_institucionales/reforma_electoral.md' },
+                { title: 'Reforma Judicial', href: '/docs/viewer.html?doc=03_propuestas_institucionales/reforma_judicial.md' },
+                { title: 'Reforma Administrativa', href: '/docs/viewer.html?doc=03_propuestas_institucionales/reforma_administrativa.md' },
+                { title: 'Reforma Fiscal', href: '/docs/viewer.html?doc=03_propuestas_institucionales/reforma_fiscal.md' },
+                { title: 'Disciplina Fiscal y Deuda', href: '/docs/viewer.html?doc=03_propuestas_institucionales/disciplina_fiscal_y_deuda.md' },
+                { title: 'Planificaci\u00f3n Largo Plazo', href: '/docs/viewer.html?doc=03_propuestas_institucionales/planificacion_largo_plazo.md' },
+                { title: 'Reforma de Pensiones', href: '/docs/viewer.html?doc=03_propuestas_institucionales/reforma_pensiones.md' },
+                { title: 'Ley Anti Decretos-Ley', href: '/docs/viewer.html?doc=03_propuestas_institucionales/ley_anti_decretos.md' },
+                { title: 'Reforma Funcionariado', href: '/docs/viewer.html?doc=03_propuestas_institucionales/reforma_funcionariado_eficiente.md' },
+                { title: 'Independencia Digital Justicia', href: '/docs/viewer.html?doc=03_propuestas_institucionales/independencia_digital_justicia.md' },
+                { title: 'Plantilla de Redacci\u00f3n', href: '/docs/viewer.html?doc=03_propuestas_institucionales/plantilla_redaccion_propuestas.md' }
+            ]
+        },
+        {
+            title: '04. Modelo Organizativo',
+            href: '/docs/04-organizacion/',
+            matchPath: '/docs/04-organizacion',
+            matchDoc: '04_modelo_organizativo_partido/',
+            children: [
+                { title: 'Gobernanza, Consenso y Afiliaci\u00f3n', href: '/docs/viewer.html?doc=04_modelo_organizativo_partido/gobernanza_consenso_afiliacion.md' },
+                { title: 'C\u00f3digo \u00c9tico', href: '/docs/viewer.html?doc=04_modelo_organizativo_partido/codigo_etico.md' },
+                { title: 'Estatutos Base', href: '/docs/viewer.html?doc=04_modelo_organizativo_partido/estatutos_base.md' },
+                { title: 'Democracia Interna', href: '/docs/viewer.html?doc=04_modelo_organizativo_partido/democracia_interna.md' },
+                { title: 'Estructura Territorial', href: '/docs/viewer.html?doc=04_modelo_organizativo_partido/estructura_territorial.md' }
+            ]
+        },
+        {
+            title: '05. IA y Automatizaci\u00f3n',
+            href: '/docs/05-ia/',
+            matchPath: '/docs/05-ia',
+            matchDoc: '05_uso_de_ia_y_automatizacion/',
+            children: [
+                { title: 'Auditor\u00eda Algor\u00edtmica', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/auditoria_algoritmica.md' },
+                { title: 'Democracia L\u00edquida', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/democracia_liquida.md' },
+                { title: 'Participaci\u00f3n Ciudadana', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/participacion_ciudadana.md' },
+                { title: 'Soberan\u00eda IA Europa', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/soberania_ia_europa.md' },
+                { title: 'Blockchain', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/blockchain_casos_uso.md' },
+                { title: 'IA en Presupuestos', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/ia_supervisada_presupuestos.md' },
+                { title: 'Automatizaci\u00f3n Burocr\u00e1tica', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/automatizacion_burocratica.md' },
+                { title: '\u00c9tica y Supervisi\u00f3n', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/etica_y_supervision_humana.md' },
+                { title: 'Integridad Digital', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/integridad_digital.md' },
+                { title: 'Supervisores Humanos', href: '/docs/viewer.html?doc=05_uso_de_ia_y_automatizacion/supervisores_humanos.md' }
+            ]
+        },
+        {
+            title: '06. Hoja de Ruta Legal',
+            href: '/docs/06-legal/',
+            matchPath: '/docs/06-legal',
+            matchDoc: '06_hoja_de_ruta_legal/',
+            children: [
+                { title: 'Requisitos de Inscripci\u00f3n', href: '/docs/viewer.html?doc=06_hoja_de_ruta_legal/requisitos_inscripcion.md' },
+                { title: 'Timeline de Constituci\u00f3n', href: '/docs/viewer.html?doc=06_hoja_de_ruta_legal/timeline_constitucion.md' },
+                { title: 'Ley Org\u00e1nica 6/2002', href: '/docs/viewer.html?doc=06_hoja_de_ruta_legal/ley_organica_6_2002.md' },
+                { title: 'Financiaci\u00f3n de Partidos', href: '/docs/viewer.html?doc=06_hoja_de_ruta_legal/financiacion_partidos.md' }
+            ]
+        },
+        {
+            title: '07. Web y Transparencia',
+            href: '/docs/07-web/',
+            matchPath: '/docs/07-web',
+            matchDoc: '07_web_publica_y_transparencia/',
+            children: [
+                { title: 'Arquitectura Web', href: '/docs/viewer.html?doc=07_web_publica_y_transparencia/arquitectura_web.md' },
+                { title: 'Portal de Transparencia', href: '/docs/viewer.html?doc=07_web_publica_y_transparencia/portal_transparencia.md' },
+                { title: 'Participaci\u00f3n Online', href: '/docs/viewer.html?doc=07_web_publica_y_transparencia/participacion_online.md' },
+                { title: 'Especificaciones T\u00e9cnicas', href: '/docs/viewer.html?doc=07_web_publica_y_transparencia/especificaciones_tecnicas.md' }
+            ]
+        },
+        {
+            title: '08. Investigaci\u00f3n Abierta',
+            href: '/docs/08-investigacion/',
+            matchPath: '/docs/08-investigacion',
+            matchDoc: '08_investigacion_abierta/',
+            children: [
+                { title: 'Preguntas Abiertas', href: '/docs/viewer.html?doc=08_investigacion_abierta/preguntas_abiertas.md' },
+                { title: 'Metodolog\u00eda', href: '/docs/viewer.html?doc=08_investigacion_abierta/metodologia_investigacion.md' },
+                { title: 'Fuentes de Datos', href: '/docs/viewer.html?doc=08_investigacion_abierta/fuentes_datos.md' },
+                { title: 'Colaboradores', href: '/docs/viewer.html?doc=08_investigacion_abierta/colaboradores.md' },
+                { title: 'Tem\u00e1ticas Emergentes', href: '/docs/viewer.html?doc=08_investigacion_abierta/tematicas_emergentes_y_modelos_programaticos.md' },
+                { title: 'Visi\u00f3n Estrat\u00e9gica', href: '/docs/viewer.html?doc=08_investigacion_abierta/vision_estrategica_largo_plazo.md' },
+                { title: 'Mensaje Juventud', href: '/docs/viewer.html?doc=08_investigacion_abierta/mensaje_inclusivo_juventud.md' },
+                { title: 'Metodolog\u00eda IA', href: '/docs/viewer.html?doc=08_investigacion_abierta/metodologia_ia.md' },
+                { title: 'Participaci\u00f3n Entretenida', href: '/docs/viewer.html?doc=08_investigacion_abierta/participacion_e_informacion_entretenida.md' }
+            ]
+        }
+    ];
+
+    function getDocParam() {
+        var match = window.location.search.match(/[?&]doc=([^&]+)/);
+        return match ? decodeURIComponent(match[1]) : '';
+    }
+
+    function isActive(item) {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var full = path + search;
+
+        if (item.href === '/docs/' && (path === '/docs/' || path === '/docs/index.html')) {
+            return !search;
+        }
+
+        if (item.href.indexOf('viewer.html?doc=') !== -1) {
+            return full.indexOf(item.href.split('?')[1]) !== -1;
+        }
+
+        if (item.matchPath && path.indexOf(item.matchPath) === 0) {
+            return true;
+        }
+
+        if (path === item.href || path === item.href.replace(/\/$/, '/index.html')) {
+            return true;
+        }
+
+        if (item.href.indexOf('#') !== -1 && path + (window.location.hash || '') === item.href) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function isModuleActive(item) {
+        var path = window.location.pathname;
+        var docParam = getDocParam();
+
+        if (item.matchPath && path.indexOf(item.matchPath) === 0) {
+            return true;
+        }
+
+        if (item.matchDoc && docParam && docParam.indexOf(item.matchDoc) === 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function renderSidebar() {
+        var container = document.getElementById('docsSidebar');
+        if (!container) return;
+
+        var html = '<p class="docs-sidebar-title">Documentaci\u00f3n</p>';
+        html += '<nav class="docs-nav">';
+
+        DOCS_NAV.forEach(function (item) {
+            var active = isActive(item);
+            var moduleActive = item.children && isModuleActive(item);
+            var cls = 'docs-nav-item';
+
+            if (item.children) cls += ' section';
+            if (active || moduleActive) cls += ' active';
+
+            var style = '';
+            if (item.highlight) {
+                style = ' style="color: var(--accent); font-weight: 600;"';
+            }
+
+            html += '<a href="' + item.href + '" class="' + cls + '"' + style + '>' + item.title + '</a>';
+
+            if (item.children && moduleActive) {
+                item.children.forEach(function (child) {
+                    var childActive = isActive(child);
+                    var childCls = 'docs-nav-item';
+                    if (childActive) childCls += ' active';
+                    html += '<a href="' + child.href + '" class="' + childCls + '">' + child.title + '</a>';
+                });
+            }
+        });
+
+        html += '</nav>';
+        html += '<p class="docs-sidebar-title">Contribuir</p>';
+        html += '<nav class="docs-nav">';
+        html += '<a href="https://github.com/democracia-real/web" class="docs-nav-item" target="_blank">GitHub</a>';
+        html += '</nav>';
+
+        container.innerHTML = html;
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderSidebar);
+    } else {
+        renderSidebar();
+    }
+})();

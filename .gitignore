@@ -1,0 +1,60 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos personales/privados
+Personal.md
+PRIVADO/
+privado/
+notas-personales/
+*.private.*
+
+# Credenciales y secretos
+.env
+.env.local
+*.pem
+*.key
+credentials.json
+secrets.json
+local.settings.json
+
+# Carpeta scripts (herramientas locales, no subir)
+scripts/
+
+# Azure Function App (se despliega por separado)
+function-app/
+
+# Logs
+*.log
+logs/
+function-logs/
+function-logs-new/
+function-logs.zip
+
+# Dependencias (si se añaden en el futuro)
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+.cache/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/

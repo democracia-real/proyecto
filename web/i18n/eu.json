@@ -1,0 +1,30 @@
+{
+  "lang": "eu",
+  "lang_name": "Euskara",
+  "available": false,
+  "coming_soon": "Itzulpena prestatzen",
+  "meta": {
+    "title": "Demokrazia Erreala - Gardentasuna eta Eraginkortasuna",
+    "description": "Proiektu irekia Espainiako sistema politikoa gardentasunarekin, datuekin eta teknologiarekin eraldatzeko"
+  },
+  "nav": {
+    "problem": "Arazoa",
+    "proposal": "Proposamena",
+    "pillars": "Pilareak",
+    "docs": "Dokumentazioa",
+    "contact": "Kontaktua"
+  },
+  "hero": {
+    "label": "Proiektu ireki eta kolaboratiboa",
+    "title_1": "Kexatu eta eztabaidatu ordez,",
+    "title_2": "batu aldaketara.",
+    "subtitle": "Gardentasuna, datuak eta teknologia etorkizuna denon artean eraikitzeko. Benetako demokrazia.",
+    "cta_primary": "Dokumentazioa esploratu",
+    "cta_secondary": "Nola dabil",
+    "note": "Ez gara ideologia bat. Herritarrentzako azpiegitura gara."
+  },
+  "language_selector": {
+    "current": "EU",
+    "choose": "Hizkuntza"
+  }
+}

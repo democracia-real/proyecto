@@ -1,0 +1,30 @@
+{
+  "lang": "gl",
+  "lang_name": "Galego",
+  "available": false,
+  "coming_soon": "Tradución en preparación",
+  "meta": {
+    "title": "Democracia Real - Transparencia e Eficiencia",
+    "description": "Proxecto aberto para transformar o sistema político español con transparencia, datos e tecnoloxía"
+  },
+  "nav": {
+    "problem": "O Problema",
+    "proposal": "Proposta",
+    "pillars": "Piares",
+    "docs": "Documentación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "label": "Proxecto aberto e colaborativo",
+    "title_1": "En lugar de queixarte e discutir,",
+    "title_2": "únete ao cambio.",
+    "subtitle": "Transparencia, datos e tecnoloxía para construír o futuro todos xuntos. A verdadeira democracia.",
+    "cta_primary": "Explorar documentación",
+    "cta_secondary": "Como funciona",
+    "note": "Non somos unha ideoloxía. Somos unha infraestrutura para a cidadanía."
+  },
+  "language_selector": {
+    "current": "GL",
+    "choose": "Idioma"
+  }
+}

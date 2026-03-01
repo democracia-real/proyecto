@@ -1,0 +1,143 @@
+{
+  "lang": "es",
+  "lang_name": "Español",
+  "meta": {
+    "title": "Democracia Real - Transparencia y Eficiencia",
+    "description": "Proyecto abierto para transformar el sistema político español con transparencia, datos y tecnología"
+  },
+  "nav": {
+    "problem": "El Problema",
+    "proposal": "Propuesta",
+    "pillars": "Pilares",
+    "docs": "Documentación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "label": "Proyecto abierto y colaborativo",
+    "title_1": "En lugar de quejarte y discutir,",
+    "title_2": "únete al cambio.",
+    "subtitle": "Transparencia, datos y tecnología para construir el futuro todos juntos. La verdadera democracia.",
+    "cta_primary": "Explorar documentación",
+    "cta_secondary": "Cómo funciona",
+    "note": "No somos una ideología. Somos una infraestructura para la ciudadanía."
+  },
+  "problem": {
+    "label": "Diagnóstico",
+    "title": "El sistema tiene bugs",
+    "subtitle": "No es un problema de izquierda o derecha. Es un problema de arquitectura.",
+    "cards": {
+      "lists": {
+        "title": "Listas cerradas",
+        "desc": "Los ciudadanos no eligen representantes. Ratifican listas elaboradas por cúpulas de partido."
+      },
+      "powers": {
+        "title": "Sin separación de poderes",
+        "desc": "Quien gobierna controla a quien le juzga. El CGPJ es un reparto de cuotas."
+      },
+      "doors": {
+        "title": "Puertas giratorias",
+        "desc": "Políticos pasan a empresas que regulaban. El regulador se convierte en regulado."
+      },
+      "vision": {
+        "title": "Visión a 4 años",
+        "desc": "Cada gobierno deshace lo anterior. Imposible planificar a largo plazo."
+      },
+      "bureaucracy": {
+        "title": "Burocracia kafkiana",
+        "desc": "Tramitaciones que duran años. Sistemas que no se comunican entre sí."
+      },
+      "impunity": {
+        "title": "Impunidad estructural",
+        "desc": "Destrucción de pruebas sin consecuencias. WhatsApps borrados, casos archivados."
+      }
+    },
+    "data": {
+      "decrees": { "value": "85%", "label": "legislación por decreto-ley" },
+      "days": { "value": "12", "label": "días para abrir empresa en España vs 3 en Estonia" },
+      "corruption": { "value": "4-5%", "label": "del PIB perdido por corrupción (estimación)" }
+    }
+  },
+  "proposal": {
+    "label": "La solución",
+    "title": "De la discusión a la decisión",
+    "subtitle": "Somos como una startup que viene a arreglar un sistema operativo antiguo lleno de bugs y malware.",
+    "reforms": {
+      "powers": { "name": "Separación de poderes real", "desc": "Que quien gobierna no controle a quien le juzga" },
+      "uninominal": { "name": "Representación uninominal", "desc": "Diputados elegidos por distritos, responsables ante sus votantes" },
+      "revocation": { "name": "Facultad revocatoria", "desc": "Poder revocar representantes que incumplen" },
+      "evaluation": { "name": "Evaluación de políticas", "desc": "Medir resultados, no solo intenciones" },
+      "ai": { "name": "IA como auditor", "desc": "Supervisión continua del gasto público y contratación" }
+    },
+    "neutrality": {
+      "title": "Sobre monarquía/república",
+      "text": "Este proyecto <strong>no se posiciona sobre la forma de Estado</strong>. El debate es legítimo, pero secundario respecto a los problemas estructurales. Nuestro foco: eficiencia, transparencia y democracia real."
+    }
+  },
+  "pillars": {
+    "label": "Diferencial",
+    "title": "Pilares tecnológicos",
+    "subtitle": "No hacemos promesas. Construimos sistemas.",
+    "p1": {
+      "title": "Transparencia por diseño",
+      "items": ["código abierto — todo el software es público", "versionado — presupuestos trazables como commits", "auditoría — IA + humana, continua"]
+    },
+    "p2": {
+      "title": "Decisión basada en evidencia",
+      "items": ["¿Qué problema resuelve?", "¿Qué datos lo justifican?", "¿Qué coste tiene?", "¿Qué impacto real genera?"],
+      "note": "Sin esto, no se implementa."
+    },
+    "p3": {
+      "title": "Colaboración ciudadana",
+      "items": ["propuestas — cualquiera puede proponer", "revisión — la comunidad valida", "pilotos — probar antes de escalar"],
+      "note": "No votas personas. Validas soluciones."
+    },
+    "p4": {
+      "title": "IA supervisada",
+      "items": ["Detección de ineficiencias", "Simulación de escenarios", "Alertas de corrupción", "Síntesis de propuestas ciudadanas"],
+      "note": "La IA no manda. Asiste."
+    }
+  },
+  "cta": {
+    "title": "¿Compartes el diagnóstico?",
+    "subtitle": "Este proyecto es abierto. Explora la documentación, propón mejoras, o únete al desarrollo.",
+    "primary": "Ver documentación completa",
+    "secondary": "Contribuir en GitHub"
+  },
+  "who": {
+    "title": "A quién buscamos",
+    "items": [
+      "Técnicos cansados de ineficiencia",
+      "Emprendedores ahogados por burocracia",
+      "Científicos que valoran la evidencia",
+      "Funcionarios frustrados por el sistema",
+      "Jóvenes desencantados con la política",
+      "Abstencionistas que creen que \"da igual\""
+    ],
+    "cta": "Si piensas que el sistema tiene bugs, únete a arreglarlo."
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "¿Cómo participar?",
+    "github": {
+      "title": "GitHub",
+      "desc": "El centro de todo el proyecto. Aquí puedes:",
+      "items": ["Ver todo el código y documentación", "Abrir Issues para propuestas o errores", "Participar en Discussions para debates", "Enviar Pull Requests con mejoras"],
+      "cta": "Ir al repositorio"
+    },
+    "social": {
+      "title": "Redes sociales",
+      "soon": "Próximamente",
+      "desc": "Estamos preparando presencia en redes para amplificar el mensaje. Por ahora, el foco está en construir una base documental sólida."
+    }
+  },
+  "footer": {
+    "docs": "Documentación",
+    "contribute": "Contribuir",
+    "license": "Licencia",
+    "quote": "\"España es mejor de lo que pensamos.\""
+  },
+  "language_selector": {
+    "current": "ES",
+    "choose": "Idioma"
+  }
+}

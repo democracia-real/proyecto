@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentación - Proyecto Democracia Real">
+    <title>Documento - Democracia Real</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo"><span class="logo-icon">◆</span><span class="logo-text">Democracia Real</span></a>
+            <button class="nav-toggle" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="/#problema">El Problema</a></li>
+                <li><a href="/#propuesta">Propuesta</a></li>
+                <li><a href="/#pilares">Pilares</a></li>
+                <li><a href="/docs/" class="active">Documentación</a></li>
+                <li><a href="https://github.com/democracia-real/web" class="nav-link-github" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <!-- Sidebar (generado por docs-nav.js) -->
+        <aside class="docs-sidebar" id="docsSidebar"></aside>
+
+        <main class="docs-content">
+            <div class="docs-breadcrumb" id="breadcrumb">
+                <a href="/docs/">Docs</a>
+                <span>/</span>
+                <span id="breadcrumbModule">...</span>
+                <span>/</span>
+                <span id="breadcrumbDoc">...</span>
+            </div>
+
+            <div class="docs-header" id="docHeader">
+                <h1 class="docs-title" id="docTitle">Cargando...</h1>
+                <p class="docs-description" id="docDescription"></p>
+            </div>
+
+            <div class="docs-body" id="docBody">
+                <p>Cargando documento...</p>
+            </div>
+
+            <div id="docMeta" style="margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: 1px solid var(--border);">
+                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                    <a id="githubLink" href="#" target="_blank" rel="noopener" style="color: var(--accent);">Ver en GitHub</a>
+                    · <a id="editLink" href="#" target="_blank" rel="noopener" style="color: var(--accent);">Editar este documento</a>
+                </p>
+            </div>
+
+            <nav class="docs-nav-footer" id="navFooter">
+            </nav>
+        </main>
+    </div>
+
+    <button class="docs-sidebar-toggle" aria-label="Mostrar menú" onclick="document.getElementById('docsSidebar').classList.toggle('active')">☰</button>
+    <script src="../js/main.js"></script>
+    <script src="../js/docs-nav.js"></script>
+    <script src="../js/viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "lang": "en",
+  "lang_name": "English",
+  "available": false,
+  "coming_soon": "Translation in progress",
+  "meta": {
+    "title": "Real Democracy - Transparency and Efficiency",
+    "description": "Open project to transform the Spanish political system with transparency, data and technology"
+  },
+  "nav": {
+    "problem": "The Problem",
+    "proposal": "Proposal",
+    "pillars": "Pillars",
+    "docs": "Documentation",
+    "contact": "Contact"
+  },
+  "hero": {
+    "label": "Open and collaborative project",
+    "title_1": "Instead of complaining and arguing,",
+    "title_2": "join the change.",
+    "subtitle": "Transparency, data and technology to build the future together. True democracy.",
+    "cta_primary": "Explore documentation",
+    "cta_secondary": "How it works",
+    "note": "We are not an ideology. We are infrastructure for citizens."
+  },
+  "language_selector": {
+    "current": "EN",
+    "choose": "Language"
+  }
+}

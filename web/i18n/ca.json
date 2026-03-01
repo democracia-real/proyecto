@@ -1,0 +1,30 @@
+{
+  "lang": "ca",
+  "lang_name": "Català",
+  "available": false,
+  "coming_soon": "Traducció en preparació",
+  "meta": {
+    "title": "Democràcia Real - Transparència i Eficiència",
+    "description": "Projecte obert per transformar el sistema polític espanyol amb transparència, dades i tecnologia"
+  },
+  "nav": {
+    "problem": "El Problema",
+    "proposal": "Proposta",
+    "pillars": "Pilars",
+    "docs": "Documentació",
+    "contact": "Contacte"
+  },
+  "hero": {
+    "label": "Projecte obert i col·laboratiu",
+    "title_1": "En lloc de queixar-te i discutir,",
+    "title_2": "uneix-te al canvi.",
+    "subtitle": "Transparència, dades i tecnologia per construir el futur tots junts. La veritable democràcia.",
+    "cta_primary": "Explorar documentació",
+    "cta_secondary": "Com funciona",
+    "note": "No som una ideologia. Som una infraestructura per a la ciutadania."
+  },
+  "language_selector": {
+    "current": "CA",
+    "choose": "Idioma"
+  }
+}

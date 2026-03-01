@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Radiografía de España en datos: los números que definen el estado real del sistema político, económico y social español. Fuentes públicas y verificables.">
+    <title>Radiografía de España - Democracia Real</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .rx-intro { max-width: 750px; margin: 0 auto var(--space-3xl); color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem; }
+        .rx-intro strong { color: var(--text-primary); }
+        .rx-section { margin-bottom: var(--space-4xl); }
+        .rx-section-title { font-size: 1.15rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: var(--space-xl); display: flex; align-items: center; gap: var(--space-sm); border-bottom: 1px solid var(--border); padding-bottom: var(--space-sm); }
+        .rx-section-icon { color: var(--accent); font-size: 1.3rem; }
+        .rx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); }
+        .rx-card { background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: var(--space-xl); transition: box-shadow var(--transition-normal); }
+        .rx-card:hover { box-shadow: 0 0 20px var(--accent-glow); }
+        .rx-card-value { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1.1; margin-bottom: var(--space-xs); }
+        .rx-card-label { font-size: 0.95rem; color: var(--text-primary); font-weight: 500; margin-bottom: var(--space-sm); }
+        .rx-card-context { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: var(--space-sm); }
+        .rx-card-source { font-size: 0.75rem; color: var(--text-muted); }
+        .rx-card-source a { color: var(--accent-dim); text-decoration: none; }
+        .rx-card-source a:hover { text-decoration: underline; }
+        .rx-card-compare { display: flex; gap: var(--space-md); margin-top: var(--space-sm); flex-wrap: wrap; }
+        .rx-compare-tag { font-size: 0.75rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 2px 8px; color: var(--text-muted); }
+        .rx-verdict { max-width: 750px; margin: var(--space-3xl) auto 0; text-align: center; padding: var(--space-xl); background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 12px; }
+        .rx-verdict h2 { font-size: 1.3rem; color: var(--text-primary); margin-bottom: var(--space-md); }
+        .rx-verdict p { color: var(--text-secondary); line-height: 1.7; }
+        .rx-verdict strong { color: var(--accent); }
+        .rx-cta { text-align: center; margin-top: var(--space-2xl); }
+        .rx-cta a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .rx-cta a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .rx-grid { grid-template-columns: 1fr; } .rx-card-value { font-size: 1.6rem; } }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">&#9670;</span>
+                <span class="logo-text">Democracia Real</span>
+            </a>
+            <button class="nav-toggle" aria-label="Men&uacute;" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/#problema">El Problema</a></li>
+                <li><a href="/#propuesta">Propuesta</a></li>
+                <li><a href="/#pilares">Pilares</a></li>
+                <li><a href="/docs/">Documentaci&oacute;n</a></li>
+                <li><a href="https://github.com/democracia-real/web" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <!-- Sidebar (generado por docs-nav.js) -->
+        <aside class="docs-sidebar" id="docsSidebar"></aside>
+
+        <main class="docs-content">
+
+        <div class="docs-breadcrumb">
+            <a href="/docs/">Documentaci&oacute;n</a> &rsaquo; Radiograf&iacute;a de Espa&ntilde;a
+        </div>
+
+        <div class="docs-header" style="text-align: center; margin-bottom: var(--space-3xl);">
+            <h1 class="docs-title" style="font-size: 2.2rem;">Radiograf&iacute;a de Espa&ntilde;a</h1>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: var(--space-md);">Los n&uacute;meros que definen el estado real del pa&iacute;s. Sin opini&oacute;n. Sin ideolog&iacute;a. Solo datos p&uacute;blicos.</p>
+        </div>
+
+        <div class="rx-intro">
+            <p>Esta p&aacute;gina re&uacute;ne los datos m&aacute;s relevantes sobre el sistema pol&iacute;tico, econ&oacute;mico y social espa&ntilde;ol. Cada cifra incluye su <strong>fuente verificable</strong> y, cuando es posible, una <strong>comparativa europea</strong> para poner los n&uacute;meros en contexto. No se trata de alarmar, sino de informar. Si los datos te indignan, el problema no son los datos.</p>
+        </div>
+
+        <!-- REPRESENTACI&Oacute;N -->
+        <div class="rx-section">
+            <h2 class="rx-section-title"><span class="rx-section-icon">&#9758;</span> Representaci&oacute;n pol&iacute;tica</h2>
+            <div class="rx-grid">
+                <div class="rx-card">
+                    <div class="rx-card-value">0 de 350</div>
+                    <div class="rx-card-label">Diputados elegidos directamente por los ciudadanos</div>
+                    <div class="rx-card-context">En Espa&ntilde;a votas una lista cerrada que elabora la c&uacute;pula del partido. No eliges a tu representante individual. En pa&iacute;ses como Alemania o Reino Unido, al menos la mitad de los esca&ntilde;os se eligen por distrito uninominal.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Alemania: 50% uninominal</span>
+                        <span class="rx-compare-tag">UK: 100% uninominal</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.congreso.es/cem/regelectoral" target="_blank" rel="noopener">Ley Org&aacute;nica del R&eacute;gimen Electoral (LOREG)</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">~85%</div>
+                    <div class="rx-card-label">Legislaci&oacute;n aprobada por decreto-ley</div>
+                    <div class="rx-card-context">El Gobierno legisla por la puerta de atr&aacute;s. El Parlamento se limita a convalidar o rechazar en bloque, sin capacidad real de enmienda. La Constituci&oacute;n (art. 86) reserva el decreto-ley para "extraordinaria y urgente necesidad", pero se ha normalizado como v&iacute;a ordinaria.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.congreso.es" target="_blank" rel="noopener">Congreso de los Diputados, estad&iacute;sticas legislativas</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">12 de 12</div>
+                    <div class="rx-card-label">Vocales del CGPJ elegidos por cuotas de partidos</div>
+                    <div class="rx-card-context">Todos los vocales del &oacute;rgano que gobierna a los jueces son elegidos por acuerdo entre partidos pol&iacute;ticos. La Constituci&oacute;n preve&iacute;a que los jueces eligieran a sus representantes, pero una ley org&aacute;nica de 1985 transfiri&oacute; esa competencia al Parlamento.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Italia: elecci&oacute;n por jueces</span>
+                        <span class="rx-compare-tag">Francia: mixto</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.poderjudicial.es" target="_blank" rel="noopener">CGPJ</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">43%</div>
+                    <div class="rx-card-label">Abstenci&oacute;n media en elecciones generales</div>
+                    <div class="rx-card-context">Casi la mitad de los espa&ntilde;oles con derecho a voto no lo ejerce. No es apat&iacute;a: las encuestas muestran que la principal raz&oacute;n es la percepci&oacute;n de que "da igual a qui&eacute;n votes".</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">B&eacute;lgica: 11% (voto obligatorio)</span>
+                        <span class="rx-compare-tag">Suecia: 13%</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">9 leyes</div>
+                    <div class="rx-card-label">De educaci&oacute;n en 40 a&ntilde;os de democracia</div>
+                    <div class="rx-card-context">Cada gobierno deroga la ley educativa anterior y crea la suya. Ninguna ha durado lo suficiente para medir sus resultados. Mientras tanto, Finlandia lleva una reforma continua basada en consenso desde 1970.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Finlandia: evoluci&oacute;n continua</span>
+                        <span class="rx-compare-tag">Estonia: consenso bipartidista</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.educacionyfp.gob.es" target="_blank" rel="noopener">Ministerio de Educaci&oacute;n</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DINERO -->
+        <div class="rx-section">
+            <h2 class="rx-section-title"><span class="rx-section-icon">&#9733;</span> Dinero p&uacute;blico</h2>
+            <div class="rx-grid">
+                <div class="rx-card">
+                    <div class="rx-card-value">50.000 M&euro;</div>
+                    <div class="rx-card-label">Coste anual estimado de la corrupci&oacute;n</div>
+                    <div class="rx-card-context">Entre el 4% y el 5% del PIB se pierde por corrupci&oacute;n seg&uacute;n estimaciones del Tribunal de Cuentas y la Comisi&oacute;n Europea. Es m&aacute;s que el presupuesto anual de Sanidad (~48.000M&euro;). Espa&ntilde;a ocupa el puesto 35 en el &iacute;ndice de percepci&oacute;n de corrupci&oacute;n.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Espa&ntilde;a CPI: 60/100</span>
+                        <span class="rx-compare-tag">Dinamarca CPI: 90/100</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.transparency.org/cpi" target="_blank" rel="noopener">Transparency International CPI 2024</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">31.000 &euro;</div>
+                    <div class="rx-card-label">Deuda p&uacute;blica por cada espa&ntilde;ol</div>
+                    <div class="rx-card-context">La deuda total supera el 104% del PIB (~1,6 billones de euros). Cada ciudadano &mdash;incluidos beb&eacute;s&mdash; debe m&aacute;s de 31.000&euro; sin haber firmado nada. El coste de intereses (2,4% del PIB) consume m&aacute;s que todo el presupuesto de I+D multiplicado por tres.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 82% PIB</span>
+                        <span class="rx-compare-tag">Estonia: 19% PIB</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.bde.es" target="_blank" rel="noopener">Banco de Espa&ntilde;a</a>, <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">14 &euro;/m&sup2;</div>
+                    <div class="rx-card-label">Alquiler medio nacional &mdash; m&aacute;ximo hist&oacute;rico</div>
+                    <div class="rx-card-context">El precio del alquiler ha alcanzado su m&aacute;ximo hist&oacute;rico en 2025. En ciudades como Madrid o Barcelona supera los 18&euro;/m&sup2;. Una generaci&oacute;n entera no puede independizarse. El salario medio no ha crecido al mismo ritmo desde 2008.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/" target="_blank" rel="noopener">Idealista / INE</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">38,3%</div>
+                    <div class="rx-card-label">Presi&oacute;n fiscal (% del PIB)</div>
+                    <div class="rx-card-context">Espa&ntilde;a recauda menos que la media europea (41,2%) pero la presi&oacute;n se percibe como asfixiante porque el gasto es ineficiente. Pagamos impuestos de pa&iacute;s n&oacute;rdico sin recibir servicios de pa&iacute;s n&oacute;rdico.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Dinamarca: 46,5%</span>
+                        <span class="rx-compare-tag">Irlanda: 22,7%</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FUTURO -->
+        <div class="rx-section">
+            <h2 class="rx-section-title"><span class="rx-section-icon">&#9888;</span> Futuro y talento</h2>
+            <div class="rx-grid">
+                <div class="rx-card">
+                    <div class="rx-card-value">26,6%</div>
+                    <div class="rx-card-label">Desempleo juvenil (&lt; 25 a&ntilde;os)</div>
+                    <div class="rx-card-context">M&aacute;s de uno de cada cuatro j&oacute;venes espa&ntilde;oles no encuentra trabajo. Es casi el doble de la media europea (14,5%) y la segunda tasa m&aacute;s alta de la UE. Toda una generaci&oacute;n sin proyecto vital estable.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 14,5%</span>
+                        <span class="rx-compare-tag">Alemania: 5,2%</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat LFS 2024</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">87.000</div>
+                    <div class="rx-card-label">Titulados que emigran cada a&ntilde;o</div>
+                    <div class="rx-card-context">Espa&ntilde;a forma talento y lo regala. Los investigadores espa&ntilde;oles cobran un 33% menos que la media europea (~32.000&euro; vs ~48.000&euro;). El pa&iacute;s pierde cada a&ntilde;o el equivalente a varias promociones universitarias completas.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Salario investigador ES: 32k&euro;</span>
+                        <span class="rx-compare-tag">Media UE: 48k&euro;</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.ine.es" target="_blank" rel="noopener">INE / Padr&oacute;n exterior</a>, <a href="https://www.nature.com" target="_blank" rel="noopener">Nature Salary Survey</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">1,44%</div>
+                    <div class="rx-card-label">Inversi&oacute;n en I+D (% del PIB)</div>
+                    <div class="rx-card-context">Espa&ntilde;a invierte en innovaci&oacute;n casi la mitad que la media europea (2,23%) y menos de la mitad que los l&iacute;deres (Suecia 3,73%). Solo el 8,5% de las empresas espa&ntilde;olas hacen I+D. Sin innovaci&oacute;n, competimos en servicios de bajo valor.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 2,23%</span>
+                        <span class="rx-compare-tag">Suecia: 3,73%</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">473</div>
+                    <div class="rx-card-label">Puntuaci&oacute;n PISA en matem&aacute;ticas</div>
+                    <div class="rx-card-context">Por debajo de la media de la UE (474) y a 102 puntos de Estonia (575), l&iacute;der europeo. El abandono escolar temprano (13,7%) es el m&aacute;s alto de Europa occidental. El sistema produce cantidad, pero no calidad.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Estonia: 575</span>
+                        <span class="rx-compare-tag">Abandono ES: 13,7% vs UE 9,6%</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.oecd.org/pisa/" target="_blank" rel="noopener">OCDE PISA 2022</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFIANZA -->
+        <div class="rx-section">
+            <h2 class="rx-section-title"><span class="rx-section-icon">&#10007;</span> Confianza institucional</h2>
+            <div class="rx-grid">
+                <div class="rx-card">
+                    <div class="rx-card-value">21%</div>
+                    <div class="rx-card-label">Confianza en las instituciones pol&iacute;ticas</div>
+                    <div class="rx-card-context">La m&aacute;s baja de Europa occidental. Menos de 1 de cada 4 espa&ntilde;oles conf&iacute;a en sus instituciones. En Finlandia es el 65%. Cuando los ciudadanos no conf&iacute;an en el sistema, dejan de participar o buscan soluciones populistas.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 34%</span>
+                        <span class="rx-compare-tag">Finlandia: 65%</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://europa.eu/eurobarometer/" target="_blank" rel="noopener">Eurobar&oacute;metro</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">3,4 / 10</div>
+                    <div class="rx-card-label">Nota a los pol&iacute;ticos seg&uacute;n el CIS</div>
+                    <div class="rx-card-context">Suspenso hist&oacute;rico. Los ciudadanos sit&uacute;an a la clase pol&iacute;tica como uno de los principales problemas del pa&iacute;s, por delante incluso del paro en muchos bar&oacute;metros. La percepci&oacute;n es que los pol&iacute;ticos trabajan para s&iacute; mismos, no para la gente.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.cis.es" target="_blank" rel="noopener">CIS &mdash; Bar&oacute;metro mensual</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">33%</div>
+                    <div class="rx-card-label">Independencia judicial percibida</div>
+                    <div class="rx-card-context">Solo un tercio de los espa&ntilde;oles percibe la justicia como independiente. La media europea es del 52%. Los procesos civiles duran de media 238 d&iacute;as (vs 180 en la UE). Justicia lenta + politizada = impunidad.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 52%</span>
+                        <span class="rx-compare-tag">Finlandia: 85%</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/upholding-rule-law/eu-justice-scoreboard_en" target="_blank" rel="noopener">EU Justice Scoreboard</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">60 / 100</div>
+                    <div class="rx-card-label">&Iacute;ndice de Percepci&oacute;n de Corrupci&oacute;n</div>
+                    <div class="rx-card-context">Espa&ntilde;a puntúa 60 sobre 100 en el CPI de Transparency International, por debajo de la media UE (64) y a 30 puntos de Dinamarca (90). La tendencia de la &uacute;ltima d&eacute;cada es de estancamiento: no mejora.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 64</span>
+                        <span class="rx-compare-tag">Dinamarca: 90</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.transparency.org/cpi" target="_blank" rel="noopener">Transparency International CPI 2024</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTIVOS DESAPROVECHADOS -->
+        <div class="rx-section">
+            <h2 class="rx-section-title"><span class="rx-section-icon">&#9670;</span> Activos desaprovechados</h2>
+            <div class="rx-grid">
+                <div class="rx-card">
+                    <div class="rx-card-value">500 M+</div>
+                    <div class="rx-card-label">Hablantes nativos de espa&ntilde;ol en el mundo</div>
+                    <div class="rx-card-context">Segundo idioma nativo m&aacute;s hablado del mundo. Un activo geoecon&oacute;mico enorme que no se traduce en una estrategia de proyecci&oacute;n internacional comparable a la del ingl&eacute;s o el mandar&iacute;n.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.cervantes.es" target="_blank" rel="noopener">Instituto Cervantes</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">95%</div>
+                    <div class="rx-card-label">Hogares con cobertura de fibra &oacute;ptica</div>
+                    <div class="rx-card-context">Espa&ntilde;a es l&iacute;der europeo en infraestructura de fibra (media UE: 56%). Tambi&eacute;n tiene la mayor red de alta velocidad ferroviaria de la UE (4.108 km). Infraestructura excelente, pero baja productividad sobre ella.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 56%</span>
+                        <span class="rx-compare-tag">AVE: 4.108 km (1&ordm; UE)</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://digital-strategy.ec.europa.eu/en/policies/desi" target="_blank" rel="noopener">DESI 2024</a></div>
+                </div>
+                <div class="rx-card">
+                    <div class="rx-card-value">50,3%</div>
+                    <div class="rx-card-label">Electricidad generada con renovables</div>
+                    <div class="rx-card-context">M&aacute;s de la mitad de la electricidad espa&ntilde;ola viene de fuentes renovables (media UE: 44,7%). Sin embargo, el precio industrial de la electricidad (128 &euro;/MWh) sigue por encima de la media europea (118) por carga regulatoria y fiscal.</div>
+                    <div class="rx-card-compare">
+                        <span class="rx-compare-tag">Media UE: 44,7%</span>
+                        <span class="rx-compare-tag">Precio industria: 128 vs 118 &euro;/MWh</span>
+                    </div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.ree.es" target="_blank" rel="noopener">REE</a>, <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VEREDICTO -->
+        <div class="rx-verdict">
+            <h2>El problema no es de recursos. Es de sistema operativo.</h2>
+            <p>Espa&ntilde;a tiene <strong>infraestructura de primer nivel</strong>, <strong>un idioma global</strong>, <strong>talento formado</strong> y <strong>energ&iacute;a renovable</strong>. Pero tiene un sistema pol&iacute;tico que expulsa talento, desincentiva la innovaci&oacute;n, acumula deuda y no rinde cuentas. Los datos no mienten: el problema es estructural, no ideol&oacute;gico. Y lo estructural se puede arreglar.</p>
+        </div>
+
+        <div class="rx-cta">
+            <p><a href="/docs/viewer.html?doc=01_diagnostico_del_sistema/indicadores_potencia_nacional.md">Ver an&aacute;lisis completo: Indicadores de Potencia Nacional &rarr;</a></p>
+            <p style="margin-top: var(--space-sm);"><a href="/docs/">Volver a documentaci&oacute;n &rarr;</a></p>
+        </div>
+
+        </main>
+    </div>
+
+    <button class="docs-sidebar-toggle" aria-label="Mostrar men&uacute;" onclick="document.getElementById('docsSidebar').classList.toggle('active')">&#9776;</button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">&#9670;</span>
+                    <span>Democracia Real</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/docs/">Documentaci&oacute;n</a>
+                    <a href="https://github.com/democracia-real/web" target="_blank" rel="noopener">GitHub</a>
+                </div>
+                <div class="footer-license">
+                    <p>Licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/docs-nav.js"></script>
+</body>
+</html>

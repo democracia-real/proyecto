@@ -1,0 +1,11 @@
+# Proyecto Democracia Real
+# https://democraciareal.es (o tu dominio)
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://democraciareal.es/sitemap.xml
+
+# Crawl-delay opcional (evita sobrecarga)
+Crawl-delay: 1
