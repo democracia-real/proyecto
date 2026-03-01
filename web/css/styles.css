@@ -1433,8 +1433,14 @@ img {
     border: 1px solid var(--border);
     border-radius: 4px;
     color: var(--text-secondary);
-    cursor: pointer;
+    cursor: pointer !important;
     transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.home-album-track button,
+.home-album-track button:hover,
+.home-album-track button:focus-visible {
+    cursor: pointer !important;
 }
 
 .home-album-track-play:hover,
