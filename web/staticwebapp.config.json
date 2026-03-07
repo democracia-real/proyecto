@@ -62,12 +62,6 @@
       }
     },
     {
-      "route": "/docs/*",
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate"
-      }
-    },
-    {
       "route": "/js/*",
       "headers": {
         "Cache-Control": "public, max-age=0, must-revalidate"
@@ -86,6 +80,12 @@
     {
       "route": "/docs/radiografia",
       "rewrite": "/docs/radiografia.html"
+    },
+    {
+      "route": "/docs/*",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
     },
     {
       "route": "/sitemap.xml",
