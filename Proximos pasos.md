@@ -136,25 +136,31 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 - [ ] Investigar con datos reales las 7 líneas estratégicas (requiere Deep Research)
 - [ ] pensar que mas temas puedes ser relevantes importantes.
 - [ ] crear imágenes de cada sección (mirar el apuntes.txt), y una imagen por album
+  - [x] Portada álbum 00 creada: `web/imagenes/portadas/albums/00-manifiesto_sonoro.png` (1024x1024)
+  - [ ] Crear portadas de álbum 01-08 en `web/imagenes/portadas/albums/`
 - [ ] crear video para cada canción
 - [ ] crear podcast de cada sección?
 - [ ] quizás debería de hacer un lanzamiento con una canción con todo? que estilo seria el mas rompedor?
 - [ ] cumplir WCAG 2.1
-- [ ] Mejorar reproductor: 
+- [ ] Mejorar reproductor (home + docs)
+- [ ] repasar lo de funcionarios, porque no se puede generalizar hay mucha gente buena, hay buenos y malos como en todas las profesiones. pero por ejemplo, a mi pocos médicos o profesores etc me han marcado para bien. 
+- [] rehacer las primeras canciones
+
 Fase 1 (rápida, segura): mejorar el actual
-Carátula por módulo/canción + barra de progreso más visible.
-Estado “Now playing” con animación sutil (ondas o glow).
-Botones más compactos en móvil y feedback de toque claro.
-Fase 2 (diferencial visual): “reproductor narrativo”
-Fondo reactivo al módulo (paleta y textura por álbum).
-Mini visualizador animado (no invasivo) sincronizado con audio.
-Transiciones suaves al cambiar de bloque (crossfade visual).
-Fase 3 (rompedor): modo “showcase”
-Pantalla full-width tipo streaming, con letras en overlay karaoke-lite.
-Deep link por canción + autoplay contextual + compartir con preview visual.
-“Escena” distinta por módulo (02 más crudo, 08 más futurista, etc.).
-Mi recomendación: ir a una mezcla de Fase 1 + parte de Fase 2 ya, porque te da identidad sin arriesgar rendimiento ni usabilidad.
-Si quieres, te propongo en el siguiente paso un diseño concreto (estructura, animaciones CSS ligeras y cambios exactos de HTML/CSS/JS) y te lo implemento directo.
+- [x] Mostrar carátula por módulo/canción usando `web/imagenes/portadas/albums/` (home)
+- [x] Barra de progreso más visible (color, grosor y estado de carga) (home)
+- [x] Estado "Now playing" con animación sutil (ondas o glow) (home)
+- [x] Botones más compactos en móvil + feedback táctil claro (home)
+
+Fase 2 (diferencial visual): "reproductor narrativo"
+- [x] Fondo reactivo al módulo (paleta y textura por álbum) (home)
+- [x] Mini visualizador animado (no invasivo) sincronizado con audio (home)
+- [x] Transiciones suaves al cambiar de bloque (crossfade visual) (home)
+
+Fase 3 (rompedor): modo "showcase"
+- [ ] Pantalla full-width tipo streaming con letras en overlay karaoke-lite
+- [ ] Deep link por canción + autoplay contextual + compartir con preview visual
+- [ ] Escena distinta por módulo (02 más crudo, 08 más futurista, etc.)
 
 ### Fase 3: Constitución Legal
 - [ ] Verificar nombre en Registro de Partidos
@@ -169,6 +175,14 @@ Si quieres, te propongo en el siguiente paso un diseño concreto (estructura, an
 - [ ] Vídeos cortos divulgativos
 - [ ] Canciones del álbum como contenido viral
 - [ ] Crear contenido multimedia como imagenes representativas de cada tema.
+
+### Fase 4.1: Guía de Lanzamiento (álbum sampler)
+- [ ] Redactar guía breve de tono y narrativa: "Ni facha, ni progre: datos, diseño y acción"
+- [ ] Definir kit base: portada oficial, 3 hooks de 15-20s y CTA único a web/streaming
+- [ ] Spotify/Apple Music: usar carátula oficial cuadrada del álbum sampler
+- [ ] Instagram/TikTok: usar fondo visual para reels (hook "Deep Drop" y "La Próxima Ola")
+- [ ] YouTube: vídeo "Full Album" (6 pistas seguidas) con portada fija y capítulos por track
+- [ ] Preparar 5 copies cortos reutilizables (teaser, estreno, clip, directo, cierre)
 
 ### Fase 5: Lanzamiento Público
 - [ ] Afiliación abierta

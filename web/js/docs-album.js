@@ -96,7 +96,7 @@
             if (currentIdx + 1 < items.length) setTrack(currentIdx + 1);
         });
         player.addEventListener('error', function() {
-            if (nowEl) nowEl.textContent = 'Próximamente — selecciona otra pista';
+            if (nowEl) nowEl.textContent = 'No se pudo reproducir esta pista. Prueba con otra.';
         });
         if (btnPrev) btnPrev.addEventListener('click', function() {
             if (currentIdx <= 0) { player.currentTime = 0; player.play().catch(function() {}); return; }
