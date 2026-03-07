@@ -1,0 +1,47 @@
+{
+  "album": "Modelo Organizativo del Partido",
+  "module": "04",
+  "audioPath": "/audio/04-modelo_organizativo_partido/",
+  "tracks": [
+    {
+      "id": "01",
+      "title": "Código Abierto (Democracia Líquida)",
+      "theme": "Democracia Interna · Gobernanza por Consenso y Afiliación",
+      "style": "Indie-Electronic / Alt-Pop (estilo Phoenix o Metric). Ritmo ágil, sintetizadores brillantes y una batería muy orgánica. Transmite energía, claridad y optimismo tecnológico.",
+      "audioFile": "01-CÓDIGO ABIERTO (DEMOCRACIA LÍQUIDA).mp3",
+      "lyrics": "No busques al jefe en el último piso,\naquí el poder no pide permiso.\nNo es un carné, es una llave digital,\npara que tu voz sea una onda real.\nSi no tienes tiempo, delega tu fe,\nen alguien que sepa, que cuide el porqué.\nPero si mañana cambias de opinión,\nrecuperas tu voto, retomas el control.\n\nEs código abierto, democracia real,\nun flujo constante, un pulso vital.\nLíquida y pura, sin muros ni sedes,\nla red nos une, el dato nos mueve.\nYa no hay \"dedazos\", ni listas de ayer,\ntú tienes el mando, tú tienes el ser.\n\nSi hay un conflicto, lanzamos un \"fork\",\ndos caminos abiertos, mejor que un rencor.\nEl consenso es la meta, la duda es el motor,\nbuscando la idea que brille mejor.\nNo somos soldados de un viejo emblema,\nsomos los nodos de un nuevo sistema.\nTransparente el gasto, pública la intención,\nla meritocracia es nuestra constitución.\n\nEs código abierto, democracia real,\nun flujo constante, un pulso vital.\nLíquida y pura, sin muros ni sedes,\nla red nos une, el dato nos mueve.\n\nSin cúpulas.\nSin sombras.\nVoto a voto.\nPulso a pulso."
+    },
+    {
+      "id": "02",
+      "title": "Ejemplaridad",
+      "theme": "Código Ético · Dimisión sin condena · Fin de privilegios (codigo_etico.md)",
+      "style": "Funk-Rock elegante y serio. Bajo con mucho groove, metales puntuales y un ritmo constante que invita a caminar con la frente alta.",
+      "audioFile": "02-EJEMPLARIDAD.mp3",
+      "lyrics": "La confianza no es un cheque en blanco que firmar,\nes un cristal que si se empaña no se puede usar.\nNo esperaremos la sentencia ni el banquillo,\nsi hay una sombra, entregas el anillo.\nAquí la vara mide igual al que está arriba,\nla ética es la fuerza que nos mantiene con vida.\nDimitir no es derrota, es un acto de honor,\ndevolverle al ciudadano su valor de elector.\n\nNo quiero coche oficial, ni quiero aforamiento,\nquiero que mi palabra sigan llevando el viento.\nServicio público, no privilegio privado,\nla transparencia es el aire que hemos respirado.\nSi te equivocas, lo dices; si fallas, te vas,\naquí no hay muros donde te puedas ocultar.\n\nEs ejemplaridad, el código en la piel,\nser para el pueblo como el agua al papel.\nSin privilegios, sin trucos, sin red,\nbebiendo todos de la misma sed.\nUn cargo es un encargo, no una posesión,\nla honestidad es nuestra única ambición.\n\nNo es moralismo, es pura responsabilidad,\nel precio que pagamos por nuestra libertad.\nReconocer el error antes que la evidencia,\nlimpiar la casa para tener conciencia.\nTratar con dignidad al que piensa distinto,\nromper las paredes de este laberinto.\nEjemplaridad, paso a paso, día a día,\ndevolverle a la política su antigua maestría.\n\nEs ejemplaridad, el código en la piel,\nser para el pueblo como el agua al papel.\nSin privilegios, sin trucos, sin red,\nbebiendo todos de la misma sed.\n\nDimitir es ganar.\nCumplir es liderar.\nLa palabra es la ley.\nEl servicio es el rey."
+    },
+    {
+      "id": "03",
+      "title": "Nodos",
+      "theme": "Estructura Territorial · Digital-first · Nodos Locales (estructura_territorial.md)",
+      "style": "Lo-Fi Hip Hop / Chillhop. Ritmo lento (BPM 85), ambiente relajado, teclado Rhodes y un bajo profundo pero suave.",
+      "audioFile": "03-NODOS.mp3",
+      "lyrics": "Tres personas en un pueblo, una idea en la ciudad,\nno hace falta un edificio para hablar con la verdad.\nLa sede está en la nube, el encuentro en el sofá,\ndonde un nodo se levanta, la red se extenderá.\nSin barones, sin fronteras, sin despachos de cristal,\nla estructura es horizontal, el pulso es digital.\nDa igual si estás en la sierra o frente al mar azul,\ntu propuesta brilla fuerte bajo la misma luz.\n\nSomos nodos en el mapa, puntos de una conexión,\nautonomía local con una sola visión.\nDigital por nacimiento, humano por elección,\ntejiendo la política sin centralización.\n\nSi el municipio es pequeño, el nodo es su voz,\nla fibra nos acerca, el mensaje es veloz.\nParticipar en pijama o en la plaza al sol,\nrecuperar el barrio, retomar el control.\nLo que se decide abajo llega arriba sin filtrar,\nporque en este sistema nadie puede bloquear.\nEscalable y ligero, sin peso que cargar,\nun partido que se mueve como el aire en el lugar.\n\nSomos nodos en el mapa, puntos de una conexión,\nautonomía local con una sola visión.\nDigital por nacimiento, humano por elección,\ntejiendo la política sin centralización.\n\nPlano pero coordinado.\nDe la pantalla a la calle.\nNodos vivos.\nRed total."
+    },
+    {
+      "id": "04",
+      "title": "Meritocracia",
+      "theme": "Fin del amiguismo · Selección por competencia · Límites de mandato (estatutos_base.md · democracia_interna.md)",
+      "style": "Electro-Swing (estilo Caravan Palace o Parov Stelar). Elegante, con saxofones rápidos, un piano saltarín y un beat electrónico muy marcado.",
+      "audioFile": "04-MERITOCRACIA.mp3",
+      "lyrics": "Bienvenido al salón donde el nombre no es la llave,\naquí no importa quién te trajo ni cuánto tu padre sabe.\nCuelga el apellido en el perchero de la entrada,\nla alfombra roja solo se pisa con la mente preparada.\nNo buscamos lealtades de pasillo y de favor,\nbuscamos al que sabe, al que pone el corazón.\nSe acabó el \"dedazo\", el abrazo y la inercia,\naquí solo gobierna la santa meritocracia.\n\n¡Es el swing del talento, el baile del saber!\nSi eres el mejor, tú vas a tener el poder.\nSin tronos de por vida, sin sillas con motor,\nel mandato tiene fecha, se acaba tu función.\nDos turnos y a la calle, vuelve a tu profesión,\nque la política es servicio, no una jubilación.\n\n¿Vienes con medallas de un pasado de cartón?\nAquí pasas la prueba de la evaluación.\nKPIs en la solapa, resultados en la mesa,\nla competencia es nuestra única promesa.\nNadie es imprescindible, nadie es el mesías,\nla luz de la estructura se renueva cada día.\nSi el nodo te elige es por tu capacidad,\nno por lamer el plato de la autoridad.\n\n¡Es el swing del talento, el baile del saber!\nSi eres el mejor, tú vas a tener el poder.\nSin tronos de por vida, sin sillas con motor,\nel mandato tiene fecha, se acaba tu función.\n\nPaso al que sabe.\nFuera el \"amiguete\".\nEl talento manda.\n¡El reloj no se detiene!"
+    },
+    {
+      "id": "05",
+      "title": "La Factura",
+      "theme": "Transparencia radical · Cuentas abiertas · Control del gasto en tiempo real (gobernanza_consenso_afiliacion.md · estatutos_base.md)",
+      "style": "Minimalist Techno (estilo Boris Brejcha o Richie Hawtin). Frío, rítmico, hipnótico y extremadamente preciso.",
+      "audioFile": "05-LA FACTURA.mp3",
+      "lyrics": "Clic. Entrada.\nClic. Salida.\nEl dato no miente, la red lo valida.\nNo hay cajas de sombra, no hay sobres de ayer,\nel flujo del euro se empieza a ver.\nUn dashboard de vidrio, un mapa de luz,\ndonde cada céntimo carga su cruz.\nSi compras un folio, si pagas un tren,\nla web lo publica para que lo vean bien.\n\nEs la factura, total claridad,\nel fin del secreto, la honestidad.\nPunto por punto, línea por línea,\nla ética pública se vuelve divina.\n\n(Drop con bajo profundo y seco)\n\nCuentas abiertas, bolsillo de cristal,\nauditoría eterna, control digital.\nEl afiliado vigila el motor,\nno hace falta un juez, solo un monitor.\n¿A dónde va el fondo? ¿Quién lo autorizó?\nLa respuesta es un código que ya se grabó.\nInmutable el rastro, trazable el ayer,\nasí es como el pueblo recupera el poder.\n\nCero latencia.\nCero ficción.\nToda la data.\nSin dilución.\n\nEs la factura, total claridad,\nel fin del secreto, la honestidad.\nPunto por punto, línea por línea,\nla ética pública se vuelve divina."
+    }
+  ]
+}
