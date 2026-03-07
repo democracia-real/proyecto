@@ -282,13 +282,13 @@
             '<div class="docs-mini-player-main">' +
                 '<p class="docs-mini-player-album">' + album.title + '</p>' +
                 '<p class="docs-mini-player-track" id="docsMiniTrack">Cargando pistas…</p>' +
-                '<div class="docs-mini-player-controls">' +
-                    '<button type="button" class="docs-mini-btn" id="docsMiniPrev" aria-label="Anterior">⏮</button>' +
-                    '<button type="button" class="docs-mini-btn docs-mini-btn-primary" id="docsMiniPlay" aria-label="Reproducir o pausar">▶</button>' +
-                    '<button type="button" class="docs-mini-btn" id="docsMiniNext" aria-label="Siguiente">⏭</button>' +
-                    '<input type="range" id="docsMiniProgress" min="0" max="100" value="0" aria-label="Progreso">' +
-                    '<span class="docs-mini-time" id="docsMiniTime">0:00 / 0:00</span>' +
-                '</div>' +
+            '</div>' +
+            '<div class="docs-mini-player-controls">' +
+                '<button type="button" class="docs-mini-btn" id="docsMiniPrev" aria-label="Anterior">⏮</button>' +
+                '<button type="button" class="docs-mini-btn docs-mini-btn-primary" id="docsMiniPlay" aria-label="Reproducir o pausar">▶</button>' +
+                '<button type="button" class="docs-mini-btn" id="docsMiniNext" aria-label="Siguiente">⏭</button>' +
+                '<input type="range" id="docsMiniProgress" min="0" max="100" value="0" aria-label="Progreso">' +
+                '<span class="docs-mini-time" id="docsMiniTime">0:00 / 0:00</span>' +
             '</div>' +
             '<audio id="docsMiniAudio" preload="metadata"></audio>';
 

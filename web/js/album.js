@@ -34,6 +34,8 @@
     var DOCS_URLS = { '00': '/#album', '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album', '03': '/docs/03-propuestas/', '04': '/docs/04-organizacion/', '05': '/docs/05-ia/', '06': '/docs/06-legal/', '07': '/docs/07-web/', '08': '/docs/08-investigacion/#album' };
     var LYRICS_URLS = { '00': '/audio/00-manifiesto_sonoro/lyrics.json', '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json', '03': '/audio/03-propuestas_institucionales/lyrics.json', '04': '/audio/04-modelo_organizativo_partido/lyrics.json', '05': '/audio/05-uso_de_ia_y_automatizacion/lyrics.json', '06': '/audio/06-hoja_de_ruta_legal/lyrics.json', '07': '/audio/07-web_publica_y_transparencia/lyrics.json', '08': '/audio/08-investigacion_abierta/lyrics.json' };
     var ALBUM_SLUGS = { '00': '00-manifiesto_sonoro', '01': '01-diagnostico', '02': '02-problemas_estructurales', '03': '03-propuestas_institucionales', '04': '04-modelo_organizativo_partido', '05': '05-uso_de_ia_y_automatizacion', '06': '06-hoja_de_ruta_legal', '07': '07-web_publica_y_transparencia', '08': '08-investigacion_abierta' };
+    // Activar solo cuando existan archivos en /imagenes/portadas/tracks/{album}-{n}.png
+    var ENABLE_TRACK_COVERS = false;
 
     var currentAlbumId = '00';
     var currentTrackIdx = 0;
@@ -130,6 +132,7 @@
     }
 
     function getTrackCoverUrl(albumId, trackIndex) {
+        if (!ENABLE_TRACK_COVERS) return '';
         var slug = ALBUM_SLUGS[albumId];
         if (!slug) return '';
         return '/imagenes/portadas/tracks/' + slug + '-' + String(trackIndex + 1).padStart(2, '0') + '.png';
