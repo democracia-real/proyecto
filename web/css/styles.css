@@ -1609,14 +1609,15 @@ img {
 }
 
 .home-album-progress-row {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: var(--space-xs);
 }
 
 .home-album-progress {
+    flex: 1 1 auto;
+    min-width: 0;
     position: relative;
     height: 8px;
     border-radius: 999px;
@@ -1653,7 +1654,13 @@ img {
 }
 
 .home-album-time-current {
+    min-width: 36px;
     text-align: left;
+}
+
+.home-album-time-total {
+    min-width: 36px;
+    text-align: right;
 }
 
 .home-album-nav {
@@ -1924,7 +1931,7 @@ img {
         gap: 10px;
     }
     .home-album-cover-wrap {
-        width: 96px;
+        width: 128px;
         margin: 0 auto;
     }
     .home-album-now-wrap {
@@ -2023,7 +2030,6 @@ img {
         font-size: 0.82rem;
     }
     .home-album-progress-row {
-        grid-template-columns: auto minmax(0, 1fr) auto;
         gap: 6px;
     }
 }
@@ -2051,11 +2057,18 @@ img {
         min-width: 60px;
         max-width: 76px;
     }
+    .home-album-cover-wrap {
+        width: 118px;
+    }
     .home-album-progress-row {
-        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 5px;
     }
     .home-album-time {
         font-size: 0.72rem;
+    }
+    .home-album-time-current,
+    .home-album-time-total {
+        min-width: 30px;
     }
 }
 
