@@ -53,6 +53,42 @@
         return list ? Array.from(list.querySelectorAll('.home-album-track')) : [];
     }
 
+    function getAlbumIdsInOrder() {
+        return Array.from(tabsEl.querySelectorAll('.home-album-tab[data-album-id]'))
+            .map(function(btn) { return btn.getAttribute('data-album-id'); })
+            .filter(Boolean);
+    }
+
+    function getNextAlbumId(albumId) {
+        var ordered = getAlbumIdsInOrder();
+        var currentPos = ordered.indexOf(albumId);
+        if (currentPos === -1 || currentPos >= ordered.length - 1) return null;
+        return ordered[currentPos + 1];
+    }
+
+    function playFirstTrackFromNextAlbum(fromAlbumId) {
+        var startAlbumId = fromAlbumId;
+        var nextAlbumId = getNextAlbumId(startAlbumId);
+
+        function tryNextAlbum(albumId) {
+            if (!albumId) return;
+            ensureAlbumData(albumId).finally(function() {
+                // Si el usuario cambió de álbum durante la carga, no forzar salto automático.
+                if (currentAlbumId !== startAlbumId) return;
+
+                var list = document.querySelector('.home-album-tracklist[data-album-id="' + albumId + '"]');
+                var tracksCount = list ? list.querySelectorAll('.home-album-track').length : 0;
+                if (tracksCount > 0) {
+                    switchAlbum(albumId, true);
+                    return;
+                }
+                tryNextAlbum(getNextAlbumId(albumId));
+            });
+        }
+
+        tryNextAlbum(nextAlbumId);
+    }
+
     function trackWord(n) {
         return n === 1 ? 'canción' : 'canciones';
     }
@@ -348,7 +384,11 @@
     player.addEventListener('ended', function() {
         setNowState('Finalizada', false);
         var tracks = getTracks();
-        if (currentTrackIdx + 1 < tracks.length) setTrack(currentTrackIdx + 1);
+        if (currentTrackIdx + 1 < tracks.length) {
+            setTrack(currentTrackIdx + 1);
+            return;
+        }
+        playFirstTrackFromNextAlbum(currentAlbumId);
     });
     player.addEventListener('error', function() {
         setNowState('Error de reproducción', false);
@@ -360,7 +400,11 @@
     });
     if (btnNext) btnNext.addEventListener('click', function() {
         var tracks = getTracks();
-        if (currentTrackIdx + 1 < tracks.length) setTrack(currentTrackIdx + 1);
+        if (currentTrackIdx + 1 < tracks.length) {
+            setTrack(currentTrackIdx + 1);
+            return;
+        }
+        playFirstTrackFromNextAlbum(currentAlbumId);
     });
     if (playPauseBtn) playPauseBtn.addEventListener('click', function() {
         if (!player.src) return;
@@ -538,8 +582,8 @@
 
         var albumId = m[1];
         var n = parseInt(m[2], 10);
-        var albumSection = document.getElementById('album');
-        if (albumSection) albumSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var focusTarget = playerWrapEl || document.getElementById('album');
+        if (focusTarget) focusTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
         switchAlbum(albumId, false);
         if (n >= 1) {

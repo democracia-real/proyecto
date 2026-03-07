@@ -202,6 +202,21 @@ Fase 3 (rompedor): modo "showcase"
 | **Cloudflare** | DNS democraciareal.es | ✅ Activo |
 | **GitHub** | democracia-real/web | ✅ Activo |
 
+### Escalado audio/podcast (Azure Blob + CDN)
+
+- [ ] Decisión técnica: mantener `web/audio/` solo para demos cortas y mover álbumes/podcast completos a Blob Storage
+- [ ] Crear cuenta de Storage + contenedor `audio-public` (acceso público de solo lectura)
+- [ ] Definir estructura en Blob: `audio/albums/<modulo>/` y `audio/podcast/<modulo>/`
+- [ ] Subir primer episodio piloto de podcast (30+ MB) y validar streaming/progressive download
+- [ ] Añadir CDN/Front Door delante del Blob para caché global y menor latencia
+- [ ] Configurar dominio de medios (ej. `media.democraciareal.es`) con HTTPS
+- [ ] Actualizar `lyrics.json` y futuro `podcast/index.json` para usar URLs absolutas del dominio de medios
+- [ ] Mantener fallback local en desarrollo (`localhost`) y remota en producción
+- [ ] Revisar `Cache-Control` recomendado:
+  - `audio/*`: `public, max-age=31536000, immutable`
+  - `*.json` de catálogo: `public, max-age=300, must-revalidate`
+- [ ] Medir coste mensual real (almacenamiento + transferencia CDN) tras 2 semanas de uso
+
 ---
 
 ## Comandos Útiles
