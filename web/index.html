@@ -466,21 +466,25 @@
                         </div>
                         <audio id="albumPlayer" preload="metadata"></audio>
                         <div class="home-album-progress-row">
+                            <span class="home-album-time home-album-time-current" id="albumTimeCurrent">0:00</span>
                             <div class="home-album-progress" id="albumProgress" role="slider" aria-label="Progreso de reproducción" tabindex="0">
                                 <span class="home-album-progress-buffer" id="albumProgressBuffer"></span>
                                 <span class="home-album-progress-fill" id="albumProgressFill"></span>
                             </div>
+                            <span class="home-album-time home-album-time-total" id="albumTimeTotal">0:00</span>
                         </div>
-                        <div class="home-album-controls">
-                            <button type="button" class="home-album-ctrl-btn" id="albumPrev" aria-label="Pista anterior">⏮</button>
-                            <button type="button" class="home-album-ctrl-btn home-album-ctrl-btn-primary" id="albumPlayPause" aria-label="Reproducir o pausar">▶</button>
-                            <button type="button" class="home-album-ctrl-btn" id="albumNext" aria-label="Pista siguiente">⏭</button>
-                            <button type="button" class="home-album-ctrl-btn" id="albumMute" aria-label="Silenciar o activar sonido">🔊</button>
-                            <input type="range" id="albumVolume" class="home-album-volume" min="0" max="1" step="0.01" value="1" aria-label="Volumen">
-                        </div>
-                        <div class="home-album-meta-row">
-                            <p class="home-album-time" id="albumTime">0:00 / 0:00</p>
-                            <button type="button" class="home-album-btn home-album-btn-share" id="albumPlayerShare" aria-label="Compartir esta canción">🔗 Compartir</button>
+                        <div class="home-album-actions-row">
+                            <div class="home-album-controls">
+                                <button type="button" class="home-album-ctrl-btn" id="albumPrev" aria-label="Pista anterior">⏮</button>
+                                <button type="button" class="home-album-ctrl-btn home-album-ctrl-btn-primary" id="albumPlayPause" aria-label="Reproducir o pausar">▶</button>
+                                <button type="button" class="home-album-ctrl-btn" id="albumNext" aria-label="Pista siguiente">⏭</button>
+                                <button type="button" class="home-album-ctrl-btn" id="albumMute" aria-label="Silenciar o activar sonido">🔊</button>
+                                <input type="range" id="albumVolume" class="home-album-volume" min="0" max="1" step="0.01" value="1" aria-label="Volumen">
+                            </div>
+                            <div class="home-album-meta-actions">
+                                <button type="button" class="home-album-btn" id="albumPlayerLyric" aria-label="Ver letra de la canción actual">📝 Ver letra</button>
+                                <button type="button" class="home-album-btn home-album-btn-share" id="albumPlayerShare" aria-label="Compartir esta canción">🔗 Compartir</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -645,6 +649,6 @@
     <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/chat.js"></script>
-    <script src="js/album.js?v=20260201q"></script>
+    <script src="js/album.js?v=20260201s"></script>
 </body>
 </html>

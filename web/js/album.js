@@ -20,11 +20,13 @@
     var progressFillEl = document.getElementById('albumProgressFill');
     var progressBufferEl = document.getElementById('albumProgressBuffer');
     var progressEl = document.getElementById('albumProgress');
-    var timeEl = document.getElementById('albumTime');
+    var timeCurrentEl = document.getElementById('albumTimeCurrent');
+    var timeTotalEl = document.getElementById('albumTimeTotal');
     var albumActiveInfoEl = document.getElementById('albumActiveInfo');
     var playPauseBtn = document.getElementById('albumPlayPause');
     var muteBtn = document.getElementById('albumMute');
     var volumeInput = document.getElementById('albumVolume');
+    var playerLyricBtn = document.getElementById('albumPlayerLyric');
 
     if (!player || !tabsEl) return;
 
@@ -208,7 +210,8 @@
             progressEl.setAttribute('aria-valuemax', String(Math.max(1, Math.floor(duration))));
             progressEl.setAttribute('aria-valuenow', String(Math.floor(current)));
         }
-        if (timeEl) timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
+        if (timeCurrentEl) timeCurrentEl.textContent = formatTime(current);
+        if (timeTotalEl) timeTotalEl.textContent = formatTime(duration);
     }
 
     function setPlayPauseLabel() {
@@ -490,6 +493,12 @@
     }
 
     var playerShareBtn = document.getElementById('albumPlayerShare');
+    if (playerLyricBtn) {
+        playerLyricBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            showLyric(currentTrackIdx >= 0 ? currentTrackIdx : 0);
+        });
+    }
     if (playerShareBtn) {
         playerShareBtn.addEventListener('click', function(e) {
             e.stopPropagation();
