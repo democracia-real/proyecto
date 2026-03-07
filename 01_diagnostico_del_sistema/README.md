@@ -13,7 +13,6 @@ Este módulo analiza el estado actual del sistema político español desde una p
 | [sistema_electoral.md](sistema_electoral.md) | Deficiencias del sistema electoral actual |
 | [comparativa_internacional.md](comparativa_internacional.md) | España vs otros modelos democráticos |
 | [indicadores_potencia_nacional.md](indicadores_potencia_nacional.md) | Dashboard de salud nacional: 8 métricas para medir dónde está España en el ciclo histórico (Dalio) |
-| [album_diagnostico.md](album_diagnostico.md) | Álbum de Diagnóstico: una canción por documento (setlist y letras) |
 
 ## Nota sobre Monarquía/República
 

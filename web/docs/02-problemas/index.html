@@ -193,22 +193,6 @@
                     Ver <a href="/docs/08-investigacion/">módulo de investigación</a> para preguntas abiertas.
                 </blockquote>
 
-                <h2 id="album" class="album-section">Álbum Problemas Estructurales</h2>
-                <p class="album-intro">
-                    Canciones del módulo 02. Haz clic en una pista para reproducirla, o en "Ver letra" para ver la letra.
-                </p>
-
-                <div class="docs-album" data-album-json="/audio/02-problemas_estructurales/lyrics.json">
-                    <div class="home-album-player-wrap">
-                        <p class="home-album-now">Cargando…</p>
-                        <audio class="docs-album-player" controls preload="metadata"></audio>
-                        <div class="home-album-nav">
-                            <button type="button" class="home-album-btn docs-album-prev" aria-label="Anterior">← Anterior</button>
-                            <button type="button" class="home-album-btn docs-album-next" aria-label="Siguiente">Siguiente →</button>
-                        </div>
-                    </div>
-                    <ul class="home-album-tracklist docs-album-tracklist"></ul>
-                </div>
             </div>
 
             <nav class="docs-nav-footer">
@@ -226,19 +210,7 @@
 
     <button class="docs-sidebar-toggle" aria-label="Mostrar menú" onclick="document.getElementById('docsSidebar').classList.toggle('active')">☰</button>
 
-    <div id="lyricModal" class="lyric-modal" role="dialog" aria-modal="true" aria-labelledby="lyricModalTitle" aria-hidden="true">
-        <div class="lyric-modal-backdrop"></div>
-        <div class="lyric-modal-box">
-            <div class="lyric-modal-header">
-                <h2 id="lyricModalTitle" class="lyric-modal-title"></h2>
-                <button type="button" class="lyric-modal-close" aria-label="Cerrar">&times;</button>
-            </div>
-            <div class="lyric-modal-body"></div>
-        </div>
-    </div>
-
     <script src="../../js/main.js"></script>
     <script src="../../js/docs-nav.js"></script>
-    <script src="../../js/docs-album.js"></script>
 </body>
 </html>

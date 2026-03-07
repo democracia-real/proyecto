@@ -18,8 +18,7 @@
                 { title: 'Separaci\u00f3n de Poderes', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/separacion_poderes.md' },
                 { title: 'Sistema Electoral', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/sistema_electoral.md' },
                 { title: 'Comparativa Internacional', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/comparativa_internacional.md' },
-                { title: 'Indicadores de Potencia Nacional', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/indicadores_potencia_nacional.md' },
-                { title: '\u00c1lbum de Diagn\u00f3stico', href: '/docs/01-diagnostico/#album' }
+                { title: 'Indicadores de Potencia Nacional', href: '/docs/viewer.html?doc=01_diagnostico_del_sistema/indicadores_potencia_nacional.md' }
             ]
         },
         {
@@ -53,8 +52,7 @@
                 { title: 'Zonas Bajas Emisiones', href: '/docs/viewer.html?doc=02_problemas_estructurales/zonas_bajas_emisiones.md' },
                 { title: 'Inmigraci\u00f3n e Integraci\u00f3n', href: '/docs/viewer.html?doc=02_problemas_estructurales/inmigracion_e_integracion.md' },
                 { title: 'Anexo · Auditor\u00eda Fondos', href: '/docs/viewer.html?doc=02_problemas_estructurales/auditoria_fondos_europeos.md' },
-                { title: 'Anexo · Mapa Puertas Giratorias', href: '/docs/viewer.html?doc=02_problemas_estructurales/mapa_puertas_giratorias.md' },
-                { title: '\u00c1lbum Problemas Estructurales', href: '/docs/02-problemas/#album' }
+                { title: 'Anexo · Mapa Puertas Giratorias', href: '/docs/viewer.html?doc=02_problemas_estructurales/mapa_puertas_giratorias.md' }
             ]
         },
         {
