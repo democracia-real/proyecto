@@ -241,9 +241,166 @@
         container.innerHTML = html;
     }
 
+    function detectModuleId() {
+        var path = window.location.pathname;
+        var pathMatch = path.match(/\/docs\/(0[1-8])-[^/]+\/?/);
+        if (pathMatch) return pathMatch[1];
+
+        if (path.indexOf('/docs/viewer.html') === 0) {
+            var doc = getDocParam();
+            var docMatch = doc.match(/^(0[1-8])_/);
+            if (docMatch) return docMatch[1];
+        }
+
+        return null;
+    }
+
+    function initDocsMiniPlayer() {
+        var moduleId = detectModuleId();
+        if (!moduleId) return;
+        if (document.getElementById('docsMiniPlayer')) return;
+
+        var ALBUMS = {
+            '01': { title: '01. Diagnóstico', slug: '01-diagnostico', json: '/audio/01-diagnostico/lyrics.json' },
+            '02': { title: '02. Problemas Estructurales', slug: '02-problemas_estructurales', json: '/audio/02-problemas_estructurales/lyrics.json' },
+            '03': { title: '03. Propuestas Institucionales', slug: '03-propuestas_institucionales', json: '/audio/03-propuestas_institucionales/lyrics.json' },
+            '04': { title: '04. Organización', slug: '04-modelo_organizativo_partido', json: '/audio/04-modelo_organizativo_partido/lyrics.json' },
+            '05': { title: '05. IA y Automatización', slug: '05-uso_de_ia_y_automatizacion', json: '/audio/05-uso_de_ia_y_automatizacion/lyrics.json' },
+            '06': { title: '06. Hoja de Ruta Legal', slug: '06-hoja_de_ruta_legal', json: '/audio/06-hoja_de_ruta_legal/lyrics.json' },
+            '07': { title: '07. Web y Transparencia', slug: '07-web_publica_y_transparencia', json: '/audio/07-web_publica_y_transparencia/lyrics.json' },
+            '08': { title: '08. Investigación Abierta', slug: '08-investigacion_abierta', json: '/audio/08-investigacion_abierta/lyrics.json' }
+        };
+
+        var album = ALBUMS[moduleId];
+        if (!album) return;
+
+        var mini = document.createElement('div');
+        mini.id = 'docsMiniPlayer';
+        mini.className = 'docs-mini-player';
+        mini.innerHTML =
+            '<img class="docs-mini-player-cover" src="/imagenes/portadas/albums/' + album.slug + '.png" alt="Portada ' + album.title + '">' +
+            '<div class="docs-mini-player-main">' +
+                '<p class="docs-mini-player-album">' + album.title + '</p>' +
+                '<p class="docs-mini-player-track" id="docsMiniTrack">Cargando pistas…</p>' +
+                '<div class="docs-mini-player-controls">' +
+                    '<button type="button" class="docs-mini-btn" id="docsMiniPrev" aria-label="Anterior">⏮</button>' +
+                    '<button type="button" class="docs-mini-btn docs-mini-btn-primary" id="docsMiniPlay" aria-label="Reproducir o pausar">▶</button>' +
+                    '<button type="button" class="docs-mini-btn" id="docsMiniNext" aria-label="Siguiente">⏭</button>' +
+                    '<input type="range" id="docsMiniProgress" min="0" max="100" value="0" aria-label="Progreso">' +
+                    '<span class="docs-mini-time" id="docsMiniTime">0:00 / 0:00</span>' +
+                '</div>' +
+            '</div>' +
+            '<audio id="docsMiniAudio" preload="metadata"></audio>';
+
+        var navEl = document.querySelector('.nav');
+        if (navEl && navEl.parentNode) {
+            navEl.parentNode.insertBefore(mini, navEl.nextSibling);
+        } else {
+            document.body.insertBefore(mini, document.body.firstChild);
+        }
+        document.body.classList.add('has-docs-mini-player');
+
+        var trackEl = document.getElementById('docsMiniTrack');
+        var prevBtn = document.getElementById('docsMiniPrev');
+        var playBtn = document.getElementById('docsMiniPlay');
+        var nextBtn = document.getElementById('docsMiniNext');
+        var progressEl = document.getElementById('docsMiniProgress');
+        var timeEl = document.getElementById('docsMiniTime');
+        var audio = document.getElementById('docsMiniAudio');
+
+        var tracks = [];
+        var currentIdx = 0;
+        var audioPath = '';
+
+        function formatTime(seconds) {
+            if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
+            var mins = Math.floor(seconds / 60);
+            var secs = Math.floor(seconds % 60);
+            return mins + ':' + String(secs).padStart(2, '0');
+        }
+
+        function updateTimeUi() {
+            var current = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+            var duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+            var pct = duration > 0 ? (current / duration) * 100 : 0;
+            progressEl.value = String(Math.max(0, Math.min(100, pct)));
+            timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
+        }
+
+        function setPlayLabel() {
+            playBtn.textContent = audio.paused ? '▶' : '⏸';
+        }
+
+        function setTrack(index, autoPlay) {
+            if (!tracks.length || index < 0 || index >= tracks.length) return;
+            currentIdx = index;
+            var t = tracks[index];
+            if (trackEl) trackEl.textContent = (index + 1) + '. ' + (t.title || 'Pista');
+            if (t.audioFile) {
+                audio.src = audioPath + encodeURIComponent(t.audioFile);
+                if (autoPlay === true) audio.play().catch(function() {});
+            }
+            updateTimeUi();
+            setPlayLabel();
+        }
+
+        fetch(album.json)
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(data) {
+                if (!data || !Array.isArray(data.tracks) || !data.tracks.length) {
+                    trackEl.textContent = 'No hay pistas disponibles';
+                    return;
+                }
+                tracks = data.tracks;
+                audioPath = data.audioPath || '';
+                setTrack(0, false);
+            })
+            .catch(function() {
+                trackEl.textContent = 'Error al cargar álbum';
+            });
+
+        prevBtn.addEventListener('click', function() {
+            if (!tracks.length) return;
+            if (currentIdx > 0) setTrack(currentIdx - 1, true);
+            else { audio.currentTime = 0; audio.play().catch(function() {}); }
+        });
+
+        playBtn.addEventListener('click', function() {
+            if (!audio.src && tracks.length) setTrack(currentIdx, false);
+            if (!audio.src) return;
+            if (audio.paused) audio.play().catch(function() {});
+            else audio.pause();
+        });
+
+        nextBtn.addEventListener('click', function() {
+            if (!tracks.length) return;
+            if (currentIdx + 1 < tracks.length) setTrack(currentIdx + 1, true);
+        });
+
+        progressEl.addEventListener('input', function() {
+            var duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+            if (!duration) return;
+            audio.currentTime = (parseFloat(progressEl.value) / 100) * duration;
+        });
+
+        audio.addEventListener('timeupdate', updateTimeUi);
+        audio.addEventListener('loadedmetadata', updateTimeUi);
+        audio.addEventListener('durationchange', updateTimeUi);
+        audio.addEventListener('play', setPlayLabel);
+        audio.addEventListener('pause', setPlayLabel);
+        audio.addEventListener('ended', function() {
+            if (currentIdx + 1 < tracks.length) setTrack(currentIdx + 1, true);
+            else setPlayLabel();
+        });
+    }
+
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', renderSidebar);
+        document.addEventListener('DOMContentLoaded', function() {
+            renderSidebar();
+            initDocsMiniPlayer();
+        });
     } else {
         renderSidebar();
+        initDocsMiniPlayer();
     }
 })();
