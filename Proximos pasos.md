@@ -140,6 +140,21 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 - [ ] crear podcast de cada sección?
 - [ ] quizás debería de hacer un lanzamiento con una canción con todo? que estilo seria el mas rompedor?
 - [ ] cumplir WCAG 2.1
+- [ ] Mejorar reproductor: 
+Fase 1 (rápida, segura): mejorar el actual
+Carátula por módulo/canción + barra de progreso más visible.
+Estado “Now playing” con animación sutil (ondas o glow).
+Botones más compactos en móvil y feedback de toque claro.
+Fase 2 (diferencial visual): “reproductor narrativo”
+Fondo reactivo al módulo (paleta y textura por álbum).
+Mini visualizador animado (no invasivo) sincronizado con audio.
+Transiciones suaves al cambiar de bloque (crossfade visual).
+Fase 3 (rompedor): modo “showcase”
+Pantalla full-width tipo streaming, con letras en overlay karaoke-lite.
+Deep link por canción + autoplay contextual + compartir con preview visual.
+“Escena” distinta por módulo (02 más crudo, 08 más futurista, etc.).
+Mi recomendación: ir a una mezcla de Fase 1 + parte de Fase 2 ya, porque te da identidad sin arriesgar rendimiento ni usabilidad.
+Si quieres, te propongo en el siguiente paso un diseño concreto (estructura, animaciones CSS ligeras y cambios exactos de HTML/CSS/JS) y te lo implemento directo.
 
 ### Fase 3: Constitución Legal
 - [ ] Verificar nombre en Registro de Partidos

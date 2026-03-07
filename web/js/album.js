@@ -19,8 +19,8 @@
     var allLists = document.querySelectorAll('.home-album-tracklist[data-album-id]');
     if (!allLists.length) return;
 
-    var DOCS_URLS = { '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album', '03': '/docs/03-propuestas/', '04': '/docs/04-organizacion/', '05': '/docs/05-ia/', '06': '/docs/06-legal/', '07': '/docs/07-web/', '08': '/docs/08-investigacion/#album' };
-    var LYRICS_URLS = { '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json', '03': '/audio/03-propuestas_institucionales/lyrics.json', '04': '/audio/04-modelo_organizativo_partido/lyrics.json', '05': '/audio/05-uso_de_ia_y_automatizacion/lyrics.json', '06': '/audio/06-hoja_de_ruta_legal/lyrics.json', '07': '/audio/07-web_publica_y_transparencia/lyrics.json', '08': '/audio/08-investigacion_abierta/lyrics.json' };
+    var DOCS_URLS = { '00': '/#album', '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album', '03': '/docs/03-propuestas/', '04': '/docs/04-organizacion/', '05': '/docs/05-ia/', '06': '/docs/06-legal/', '07': '/docs/07-web/', '08': '/docs/08-investigacion/#album' };
+    var LYRICS_URLS = { '00': '/audio/00-manifiesto_sonoro/lyrics.json', '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json', '03': '/audio/03-propuestas_institucionales/lyrics.json', '04': '/audio/04-modelo_organizativo_partido/lyrics.json', '05': '/audio/05-uso_de_ia_y_automatizacion/lyrics.json', '06': '/audio/06-hoja_de_ruta_legal/lyrics.json', '07': '/audio/07-web_publica_y_transparencia/lyrics.json', '08': '/audio/08-investigacion_abierta/lyrics.json' };
 
     var currentAlbumId = '01';
     var currentTrackIdx = 0;
