@@ -37,7 +37,6 @@
     var progressBufferEl = document.getElementById('podcastProgressBuffer');
     var timeCurrentEl = document.getElementById('podcastTimeCurrent');
     var timeTotalEl = document.getElementById('podcastTimeTotal');
-    var timeTotalEl = document.getElementById('podcastTimeTotal');
     var shareDropdown = document.getElementById('podcastShareDropdown');
     var shareWaEl = document.getElementById('podcastShareWa');
     var shareXEl = document.getElementById('podcastShareX');
@@ -50,6 +49,8 @@
     var audioPath = '';
     var SPEEDS = [1, 1.5, 2];
     var speedIdx = 0;
+    var pendingSeekRatio = null;
+    var suppressClickUntil = 0;
 
     function formatTime(seconds) {
         if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
@@ -180,11 +181,12 @@
                 '<button type="button" class="home-podcast-item-share" aria-label="Compartir episodio">Compartir</button>';
 
             li.addEventListener('click', function(e) {
-                if (!e.target.closest('button')) setCurrent(index, true);
+                if (!e.target.closest('button')) { scrollPodcastPlayerIntoView(); setCurrent(index, true); }
             });
             li.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
+                    scrollPodcastPlayerIntoView();
                     setCurrent(index, true);
                 }
             });
@@ -192,6 +194,7 @@
             if (btn) {
                 btn.addEventListener('click', function(e) {
                     e.stopPropagation();
+                    scrollPodcastPlayerIntoView();
                     setCurrent(index, true);
                 });
             }
@@ -207,6 +210,12 @@
         setCurrent(0, false);
     }
 
+
+    function scrollPodcastPlayerIntoView() {
+        if (!playerWrapEl) return;
+        playerWrapEl.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+    }
+
     function applyPodcastHash(hash) {
         var match = hash && hash.match(/^#podcast-(\d{2})$/);
         if (!match || !episodes.length) return;
@@ -220,11 +229,26 @@
     }
 
     function seek(clientX) {
-        if (!progressEl || !Number.isFinite(player.duration) || player.duration <= 0) return;
+        if (!progressEl) return;
         var rect = progressEl.getBoundingClientRect();
+        if (!rect.width) return;
         var ratio = (clientX - rect.left) / rect.width;
         ratio = Math.max(0, Math.min(1, ratio));
+
+        if (!Number.isFinite(player.duration) || player.duration <= 0) {
+            pendingSeekRatio = ratio;
+            return;
+        }
+
         player.currentTime = player.duration * ratio;
+        updatePlayerUi();
+    }
+
+    function applyPendingSeekIfReady() {
+        if (pendingSeekRatio == null) return;
+        if (!Number.isFinite(player.duration) || player.duration <= 0) return;
+        player.currentTime = player.duration * pendingSeekRatio;
+        pendingSeekRatio = null;
         updatePlayerUi();
     }
 
@@ -301,8 +325,15 @@
             var x = getSeekClientX(e);
             if (x != null) seek(x);
         }
-        progressEl.addEventListener('click', handleSeek);
-        progressEl.addEventListener('touchend', handleSeek);
+        progressEl.addEventListener('click', function(e) {
+            if (Date.now() < suppressClickUntil) return;
+            handleSeek(e);
+        });
+        progressEl.addEventListener('touchend', function(e) {
+            suppressClickUntil = Date.now() + 450;
+            handleSeek(e);
+            e.preventDefault();
+        }, { passive: false });
         progressEl.addEventListener('keydown', function(e) {
             if (!Number.isFinite(player.duration) || player.duration <= 0) return;
             var step = e.shiftKey ? 10 : 5;
@@ -324,8 +355,8 @@
     }
 
     player.addEventListener('timeupdate', updatePlayerUi);
-    player.addEventListener('loadedmetadata', updatePlayerUi);
-    player.addEventListener('durationchange', updatePlayerUi);
+    player.addEventListener('loadedmetadata', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
+    player.addEventListener('durationchange', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('play', function() {
         if (nowStateEl) nowStateEl.textContent = 'Reproduciendo';
         if (playerWrapEl) playerWrapEl.classList.add('is-playing');

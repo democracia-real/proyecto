@@ -46,6 +46,8 @@
     var loadPromises = {};
     var pendingAutoplayUnlock = false;
     var autoplayUnlockBound = false;
+    var pendingSeekRatio = null;
+    var suppressClickUntil = 0;
 
     function getActiveList() {
         return document.querySelector('.home-album-tracklist[data-album-id="' + currentAlbumId + '"]');
@@ -296,12 +298,27 @@
 
     function seekToClientX(clientX) {
         if (!progressEl) return;
-        var duration = Number.isFinite(player.duration) ? player.duration : 0;
-        if (!duration) return;
         var rect = progressEl.getBoundingClientRect();
+        if (!rect.width) return;
         var ratio = (clientX - rect.left) / rect.width;
         ratio = Math.min(1, Math.max(0, ratio));
+
+        var duration = Number.isFinite(player.duration) ? player.duration : 0;
+        if (!duration) {
+            pendingSeekRatio = ratio;
+            return;
+        }
+
         player.currentTime = ratio * duration;
+        updateProgressUi();
+    }
+
+    function applyPendingSeekIfReady() {
+        if (pendingSeekRatio == null) return;
+        var duration = Number.isFinite(player.duration) ? player.duration : 0;
+        if (!duration) return;
+        player.currentTime = duration * pendingSeekRatio;
+        pendingSeekRatio = null;
         updateProgressUi();
     }
 
@@ -453,9 +470,9 @@
         setNowState('Cargando…', false);
     });
     player.addEventListener('timeupdate', updateProgressUi);
-    player.addEventListener('durationchange', updateProgressUi);
+    player.addEventListener('durationchange', function() { updateProgressUi(); applyPendingSeekIfReady(); });
     player.addEventListener('progress', updateProgressUi);
-    player.addEventListener('loadedmetadata', updateProgressUi);
+    player.addEventListener('loadedmetadata', function() { updateProgressUi(); applyPendingSeekIfReady(); });
     player.addEventListener('volumechange', function() {
         if (volumeInput) volumeInput.value = String(player.muted ? 0 : player.volume);
         setMuteLabel();
@@ -515,11 +532,14 @@
 
     if (progressEl) {
         progressEl.addEventListener('click', function(e) {
+            if (Date.now() < suppressClickUntil) return;
             seekToClientX(getEventClientX(e));
         });
         progressEl.addEventListener('touchend', function(e) {
+            suppressClickUntil = Date.now() + 450;
             if (e.changedTouches && e.changedTouches.length) seekToClientX(e.changedTouches[0].clientX);
-        });
+            e.preventDefault();
+        }, { passive: false });
         progressEl.addEventListener('keydown', function(e) {
             if (!Number.isFinite(player.duration) || player.duration <= 0) return;
             var step = e.shiftKey ? 10 : 5;
@@ -540,21 +560,27 @@
         });
     }
 
+    function scrollAlbumPlayerIntoView() {
+        if (!playerWrapEl) return;
+        playerWrapEl.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+    }
+
     // --- Bind click events on tracks ---
     function bindTrackEvents() {
         var tracks = getTracks();
         tracks.forEach(function(li, i) {
             if (li.dataset.bound) return;
             li.dataset.bound = '1';
-            li.addEventListener('click', function(e) { if (!e.target.closest('button')) setTrack(i); });
+            li.addEventListener('click', function(e) { if (!e.target.closest('button')) { scrollAlbumPlayerIntoView(); setTrack(i); } });
             li.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
+                    scrollAlbumPlayerIntoView();
                     setTrack(i);
                 }
             });
             var playBtn = li.querySelector('.home-album-track-play');
-            if (playBtn) playBtn.addEventListener('click', function(e) { e.stopPropagation(); setTrack(i); });
+            if (playBtn) playBtn.addEventListener('click', function(e) { e.stopPropagation(); scrollAlbumPlayerIntoView(); setTrack(i); });
             var lyricBtn = li.querySelector('.home-album-track-lyric');
             if (lyricBtn) lyricBtn.addEventListener('click', function(e) { e.stopPropagation(); showLyric(i); });
             var shareBtn = li.querySelector('.home-album-track-share');
