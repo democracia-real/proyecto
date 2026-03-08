@@ -1689,7 +1689,7 @@ input:focus-visible,
     background: var(--bg-tertiary);
     overflow: hidden;
     cursor: pointer;
-    touch-action: manipulation;
+    touch-action: none;
 }
 
 .home-album-progress-buffer,
@@ -1969,8 +1969,25 @@ input:focus-visible,
 /* ==========================================================================
    Podcast (página principal)
    ========================================================================== */
+.home-podcast {
+    position: relative;
+    overflow: hidden;
+}
+
 .home-podcast .section-header {
     margin-bottom: var(--space-xl);
+}
+
+.home-podcast.is-playing::after {
+    content: "";
+    position: absolute;
+    inset: -10% -5%;
+    background:
+        radial-gradient(circle at 20% 70%, rgba(59, 130, 246, 0.18), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(52, 211, 153, 0.2), transparent 45%);
+    opacity: 0;
+    pointer-events: none;
+    animation: albumBeatPulse 500ms ease-in-out infinite;
 }
 
 .home-podcast-player-wrap {

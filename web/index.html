@@ -535,13 +535,20 @@
                 </p>
             </div>
 
-            <div class="home-podcast-player-wrap">
-                <div class="home-podcast-player-top">
-                    <div class="home-podcast-cover-wrap">
-                        <img id="podcastCover" class="home-podcast-cover" src="/imagenes/portadas/albums/01-diagnostico.png" alt="Portada del podcast" loading="lazy">
+            <div class="home-album-player-wrap" id="podcastPlayerWrap">
+                <div class="home-album-player-top">
+                    <div class="home-album-cover-wrap">
+                        <img id="podcastCover" class="home-album-cover" src="/imagenes/portadas/albums/01-diagnostico.png" alt="Portada del podcast" loading="lazy">
                     </div>
-                    <div class="home-podcast-player-main">
-                        <p class="home-podcast-now" id="podcastNow" aria-live="polite">Cargando episodios…</p>
+                    <div class="home-album-player-main">
+                        <div class="home-album-now-wrap">
+                            <p class="home-album-now" id="podcastNow" aria-live="polite">Cargando episodios…</p>
+                            <span class="home-album-now-state" id="podcastNowState" role="status" aria-live="polite">Pausado</span>
+                            <div class="home-album-visualizer" aria-hidden="true">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <audio id="podcastPlayer" preload="metadata"></audio>
                         <div class="home-album-progress-row">
                             <span class="home-album-time home-album-time-current" id="podcastTimeCurrent">0:00</span>
                             <div class="home-album-progress" id="podcastProgress" role="slider" aria-label="Progreso del podcast" tabindex="0">
@@ -550,14 +557,17 @@
                             </div>
                             <span class="home-album-time home-album-time-total" id="podcastTimeTotal">0:00</span>
                         </div>
-                        <div class="home-podcast-controls">
-                            <button type="button" class="home-podcast-btn" id="podcastPrev" aria-label="Episodio anterior">⏮</button>
-                            <button type="button" class="home-podcast-btn home-podcast-btn-primary" id="podcastPlayPause" aria-label="Reproducir o pausar">▶</button>
-                            <button type="button" class="home-podcast-btn" id="podcastNext" aria-label="Episodio siguiente">⏭</button>
-                            <button type="button" class="home-podcast-speed-btn" id="podcastSpeed" aria-label="Velocidad de reproducción" title="Velocidad: 1x">1×</button>
-                            <button type="button" class="home-podcast-share-btn" id="podcastShare" aria-label="Compartir episodio actual">🔗 Compartir</button>
+                        <div class="home-album-actions-row">
+                            <div class="home-album-controls">
+                                <button type="button" class="home-album-ctrl-btn" id="podcastPrev" aria-label="Episodio anterior">⏮</button>
+                                <button type="button" class="home-album-ctrl-btn home-album-ctrl-btn-primary" id="podcastPlayPause" aria-label="Reproducir o pausar">▶</button>
+                                <button type="button" class="home-album-ctrl-btn" id="podcastNext" aria-label="Episodio siguiente">⏭</button>
+                                <button type="button" class="home-album-ctrl-btn" id="podcastSpeed" aria-label="Velocidad de reproducción" title="Velocidad: 1x">1×</button>
+                            </div>
+                            <div class="home-album-meta-actions">
+                                <button type="button" class="home-album-btn home-album-btn-share" id="podcastShare" aria-label="Compartir episodio actual">🔗 Compartir</button>
+                            </div>
                         </div>
-                        <audio id="podcastPlayer" preload="metadata"></audio>
                     </div>
                 </div>
             </div>

@@ -514,12 +514,22 @@
     }
 
     if (progressEl) {
-        progressEl.addEventListener('click', function(e) {
+        function handleSeek(e) {
             seekToClientX(getEventClientX(e));
-        });
-        progressEl.addEventListener('touchend', function(e) {
-            if (e.changedTouches && e.changedTouches.length) seekToClientX(e.changedTouches[0].clientX);
-        });
+        }
+        function onPointerDown(e) {
+            if (e.button !== 0 && e.pointerType === 'mouse') return;
+            progressEl.setPointerCapture(e.pointerId);
+            handleSeek(e);
+        }
+        function onPointerUp(e) {
+            try { progressEl.releasePointerCapture(e.pointerId); } catch (err) {}
+            handleSeek(e);
+        }
+        progressEl.addEventListener('click', handleSeek);
+        progressEl.addEventListener('touchend', handleSeek);
+        progressEl.addEventListener('pointerdown', onPointerDown);
+        progressEl.addEventListener('pointerup', onPointerUp);
         progressEl.addEventListener('keydown', function(e) {
             if (!Number.isFinite(player.duration) || player.duration <= 0) return;
             var step = e.shiftKey ? 10 : 5;

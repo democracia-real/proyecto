@@ -23,7 +23,9 @@
     var section = document.getElementById('podcast');
     var listEl = document.getElementById('podcastList');
     var player = document.getElementById('podcastPlayer');
+    var playerWrapEl = document.getElementById('podcastPlayerWrap');
     var nowEl = document.getElementById('podcastNow');
+    var nowStateEl = document.getElementById('podcastNowState');
     var coverEl = document.getElementById('podcastCover');
     var playPauseBtn = document.getElementById('podcastPlayPause');
     var prevBtn = document.getElementById('podcastPrev');
@@ -130,6 +132,9 @@
         if (timeCurrentEl) timeCurrentEl.textContent = formatTime(current);
         if (timeTotalEl) timeTotalEl.textContent = formatTime(duration);
         if (playPauseBtn) playPauseBtn.textContent = player.paused ? '▶' : '⏸';
+        if (nowStateEl) nowStateEl.textContent = player.paused ? 'Pausado' : 'Reproduciendo';
+        if (playerWrapEl) playerWrapEl.classList.toggle('is-playing', !player.paused);
+        if (section) section.classList.toggle('is-playing', !player.paused);
     }
 
     function setCurrent(index, autoPlay) {
@@ -284,13 +289,30 @@
         });
     }
 
+    function getSeekClientX(e) {
+        if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
+        if (e.touches && e.touches.length) return e.touches[0].clientX;
+        return e.clientX;
+    }
+
     if (progressEl) {
         function handleSeek(e) {
-            var x = e.changedTouches && e.changedTouches.length ? e.changedTouches[0].clientX : (e.touches && e.touches.length ? e.touches[0].clientX : e.clientX);
+            var x = getSeekClientX(e);
             if (x != null) seek(x);
+        }
+        function onPointerDown(e) {
+            if (e.button !== 0 && e.pointerType === 'mouse') return;
+            progressEl.setPointerCapture(e.pointerId);
+            handleSeek(e);
+        }
+        function onPointerUp(e) {
+            try { progressEl.releasePointerCapture(e.pointerId); } catch (err) {}
+            handleSeek(e);
         }
         progressEl.addEventListener('click', handleSeek);
         progressEl.addEventListener('touchend', handleSeek);
+        progressEl.addEventListener('pointerdown', onPointerDown);
+        progressEl.addEventListener('pointerup', onPointerUp);
         progressEl.addEventListener('keydown', function(e) {
             if (!Number.isFinite(player.duration) || player.duration <= 0) return;
             var step = e.shiftKey ? 10 : 5;
@@ -314,8 +336,26 @@
     player.addEventListener('timeupdate', updatePlayerUi);
     player.addEventListener('loadedmetadata', updatePlayerUi);
     player.addEventListener('durationchange', updatePlayerUi);
-    player.addEventListener('play', updatePlayerUi);
-    player.addEventListener('pause', updatePlayerUi);
+    player.addEventListener('play', function() {
+        if (nowStateEl) nowStateEl.textContent = 'Reproduciendo';
+        if (playerWrapEl) playerWrapEl.classList.add('is-playing');
+        if (section) section.classList.add('is-playing');
+        updatePlayerUi();
+    });
+    player.addEventListener('pause', function() {
+        if (nowStateEl) nowStateEl.textContent = 'Pausado';
+        if (playerWrapEl) playerWrapEl.classList.remove('is-playing');
+        if (section) section.classList.remove('is-playing');
+        updatePlayerUi();
+    });
+    player.addEventListener('waiting', function() {
+        if (nowStateEl) nowStateEl.textContent = 'Cargando…';
+    });
+    player.addEventListener('error', function() {
+        if (nowStateEl) nowStateEl.textContent = 'Error de reproducción';
+        if (playerWrapEl) playerWrapEl.classList.remove('is-playing');
+        if (section) section.classList.remove('is-playing');
+    });
     player.addEventListener('ended', function() {
         if (currentIdx + 1 < episodes.length) setCurrent(currentIdx + 1, true);
         else updatePlayerUi();
