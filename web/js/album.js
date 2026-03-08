@@ -711,7 +711,10 @@
         addRippleEffect(btn);
         btn.addEventListener('click', function() {
             var id = btn.getAttribute('data-album-id');
-            if (id && id !== currentAlbumId) switchAlbum(id, true);
+            if (id && id !== currentAlbumId) {
+                scrollAlbumPlayerIntoView();
+                switchAlbum(id, true);
+            }
         });
         btn.addEventListener('keydown', function(e) {
             var orderedTabs = Array.from(tabsEl.querySelectorAll('.home-album-tab[data-album-id]'));
@@ -726,7 +729,10 @@
             e.preventDefault();
             target.focus();
             var targetId = target.getAttribute('data-album-id');
-            if (targetId && targetId !== currentAlbumId) switchAlbum(targetId, true);
+            if (targetId && targetId !== currentAlbumId) {
+                scrollAlbumPlayerIntoView();
+                switchAlbum(targetId, true);
+            }
         });
     });
 
