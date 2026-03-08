@@ -292,7 +292,7 @@ img {
     transition: var(--transition-fast);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .nav-toggle {
         display: flex;
     }

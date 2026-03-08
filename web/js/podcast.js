@@ -72,7 +72,7 @@
         var ep = episodes[index];
         var src = getEpisodeSrc(ep);
         if (src) player.src = src;
-        if (nowEl) nowEl.textContent = (index + 1) + '. ' + (ep.title || 'Episodio');
+        if (nowEl) nowEl.textContent = ep.title || 'Episodio';
         if (coverEl) {
             coverEl.src = getEpisodeCover(ep);
             coverEl.alt = 'Portada de ' + (ep.title || 'podcast');
