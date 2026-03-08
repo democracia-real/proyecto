@@ -203,7 +203,7 @@
         if (!container) return;
 
         var html = '<p class="docs-sidebar-title">Documentaci\u00f3n</p>';
-        html += '<nav class="docs-nav">';
+        html += '<nav class="docs-nav" aria-label="Navegación de documentación">';
 
         DOCS_NAV.forEach(function (item) {
             var active = isActive(item);
@@ -218,21 +218,21 @@
                 style = ' style="color: var(--accent); font-weight: 600;"';
             }
 
-            html += '<a href="' + item.href + '" class="' + cls + '"' + style + '>' + item.title + '</a>';
+            html += '<a href="' + item.href + '" class="' + cls + '"' + style + (active || moduleActive ? ' aria-current="page"' : '') + '>' + item.title + '</a>';
 
             if (item.children && moduleActive) {
                 item.children.forEach(function (child) {
                     var childActive = isActive(child);
                     var childCls = 'docs-nav-item';
                     if (childActive) childCls += ' active';
-                    html += '<a href="' + child.href + '" class="' + childCls + '">' + child.title + '</a>';
+                    html += '<a href="' + child.href + '" class="' + childCls + '"' + (childActive ? ' aria-current="page"' : '') + '>' + child.title + '</a>';
                 });
             }
         });
 
         html += '</nav>';
         html += '<p class="docs-sidebar-title">Contribuir</p>';
-        html += '<nav class="docs-nav">';
+        html += '<nav class="docs-nav" aria-label="Enlaces de contribución">';
         var contributingActive = window.location.pathname.indexOf('/docs/viewer.html') === 0 &&
             window.location.search.indexOf('doc=CONTRIBUTING.md') !== -1;
         html += '<a href="/docs/viewer.html?doc=CONTRIBUTING.md" class="docs-nav-item' + (contributingActive ? ' active' : '') + '">Guía de contribución</a>';
@@ -240,6 +240,7 @@
         html += '</nav>';
 
         container.innerHTML = html;
+        container.setAttribute('aria-label', 'Sidebar de documentación');
     }
 
     function detectModuleId() {
@@ -312,6 +313,7 @@
         var tracks = [];
         var currentIdx = 0;
         var audioPath = '';
+        if (trackEl) trackEl.setAttribute('aria-live', 'polite');
 
         function formatTime(seconds) {
             if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
@@ -325,6 +327,7 @@
             var duration = Number.isFinite(audio.duration) ? audio.duration : 0;
             var pct = duration > 0 ? (current / duration) * 100 : 0;
             progressEl.value = String(Math.max(0, Math.min(100, pct)));
+            progressEl.setAttribute('aria-valuetext', formatTime(current) + ' de ' + formatTime(duration));
             timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
         }
 
@@ -395,13 +398,51 @@
         });
     }
 
+    function initDocsSidebarToggle() {
+        var toggleBtn = document.querySelector('.docs-sidebar-toggle');
+        var sidebar = document.getElementById('docsSidebar');
+        if (!toggleBtn || !sidebar) return;
+        toggleBtn.onclick = null;
+        toggleBtn.setAttribute('aria-controls', 'docsSidebar');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+
+        function closeSidebar() {
+            sidebar.classList.remove('active');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        function openSidebar() {
+            sidebar.classList.add('active');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+            if (!sidebar.hasAttribute('tabindex')) sidebar.setAttribute('tabindex', '-1');
+            sidebar.focus();
+        }
+
+        toggleBtn.addEventListener('click', function() {
+            if (sidebar.classList.contains('active')) closeSidebar();
+            else openSidebar();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeSidebar();
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!sidebar.classList.contains('active')) return;
+            if (sidebar.contains(e.target) || toggleBtn.contains(e.target)) return;
+            closeSidebar();
+        });
+    }
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
             renderSidebar();
             initDocsMiniPlayer();
+            initDocsSidebarToggle();
         });
     } else {
         renderSidebar();
         initDocsMiniPlayer();
+        initDocsSidebarToggle();
     }
 })();

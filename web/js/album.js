@@ -6,6 +6,7 @@
  */
 (function() {
     'use strict';
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var player = document.getElementById('albumPlayer');
     var nowEl = document.getElementById('albumNow');
@@ -106,6 +107,8 @@
     function buildTrackItem(track, index, audioPath) {
         var li = document.createElement('li');
         li.className = 'home-album-track';
+        li.tabIndex = 0;
+        li.setAttribute('aria-label', 'Seleccionar pista ' + (track.title || String(index + 1)));
         if (audioPath && track.audioFile) {
             li.setAttribute('data-src', audioPath + encodeURIComponent(track.audioFile));
         }
@@ -361,13 +364,17 @@
         updateAlbumTheme(albumId);
 
         tabsEl.querySelectorAll('.home-album-tab').forEach(function(b) {
-            b.classList.toggle('home-album-tab-active', b.getAttribute('data-album-id') === albumId);
+            var isActiveTab = b.getAttribute('data-album-id') === albumId;
+            b.classList.toggle('home-album-tab-active', isActiveTab);
+            b.setAttribute('aria-selected', isActiveTab ? 'true' : 'false');
+            b.setAttribute('tabindex', isActiveTab ? '0' : '-1');
         });
 
         allLists.forEach(function(ul) {
             var isActive = ul.getAttribute('data-album-id') === albumId;
             ul.style.display = isActive ? '' : 'none';
             ul.classList.toggle('home-album-tracklist-active', isActive);
+            ul.setAttribute('aria-hidden', isActive ? 'false' : 'true');
         });
 
         if (docsLinkEl && DOCS_URLS[albumId]) {
@@ -503,6 +510,12 @@
             if (li.dataset.bound) return;
             li.dataset.bound = '1';
             li.addEventListener('click', function(e) { if (!e.target.closest('button')) setTrack(i); });
+            li.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setTrack(i);
+                }
+            });
             var playBtn = li.querySelector('.home-album-track-play');
             if (playBtn) playBtn.addEventListener('click', function(e) { e.stopPropagation(); setTrack(i); });
             var lyricBtn = li.querySelector('.home-album-track-lyric');
@@ -534,6 +547,7 @@
 
         if (titleEl) titleEl.textContent = title;
         if (bodyEl) bodyEl.textContent = lyrics;
+        modal.dataset.lastFocusId = document.activeElement && document.activeElement.id ? document.activeElement.id : '';
         modal.setAttribute('aria-hidden', 'false');
         modal.classList.add('lyric-modal-open');
         document.body.style.overflow = 'hidden';
@@ -548,6 +562,11 @@
             modal.setAttribute('aria-hidden', 'true');
             modal.classList.remove('lyric-modal-open');
             document.body.style.overflow = '';
+            var lastFocusId = modal.dataset.lastFocusId;
+            if (lastFocusId) {
+                var last = document.getElementById(lastFocusId);
+                if (last) last.focus();
+            }
         }
         var closeBtn = modal.querySelector('.lyric-modal-close');
         var backdrop = modal.querySelector('.lyric-modal-backdrop');
@@ -606,6 +625,28 @@
     var shareDD = document.getElementById('albumShareDropdown');
     if (shareDD) shareDD.addEventListener('click', function(e) { e.stopPropagation(); });
 
+    function setupTabsAccessibility() {
+        tabsEl.setAttribute('role', 'tablist');
+        tabsEl.setAttribute('aria-label', 'Selección de álbum');
+        tabsEl.querySelectorAll('.home-album-tab').forEach(function(btn) {
+            var albumId = btn.getAttribute('data-album-id');
+            var panelId = 'albumTracklist-' + albumId;
+            btn.id = 'album-tab-' + albumId;
+            btn.setAttribute('role', 'tab');
+            btn.setAttribute('aria-controls', panelId);
+            var isActive = btn.classList.contains('home-album-tab-active');
+            btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            btn.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+        allLists.forEach(function(list) {
+            var albumId = list.getAttribute('data-album-id');
+            list.setAttribute('role', 'tabpanel');
+            list.setAttribute('aria-labelledby', 'album-tab-' + albumId);
+            var isActive = list.classList.contains('home-album-tracklist-active');
+            list.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+    }
+
     // --- Tab click handlers ---
     tabsEl.querySelectorAll('.home-album-tab').forEach(function(btn) {
         addRippleEffect(btn);
@@ -613,10 +654,26 @@
             var id = btn.getAttribute('data-album-id');
             if (id && id !== currentAlbumId) switchAlbum(id, true);
         });
+        btn.addEventListener('keydown', function(e) {
+            var orderedTabs = Array.from(tabsEl.querySelectorAll('.home-album-tab[data-album-id]'));
+            var idx = orderedTabs.indexOf(btn);
+            if (idx < 0) return;
+            var target = null;
+            if (e.key === 'ArrowRight') target = orderedTabs[(idx + 1) % orderedTabs.length];
+            if (e.key === 'ArrowLeft') target = orderedTabs[(idx - 1 + orderedTabs.length) % orderedTabs.length];
+            if (e.key === 'Home') target = orderedTabs[0];
+            if (e.key === 'End') target = orderedTabs[orderedTabs.length - 1];
+            if (!target) return;
+            e.preventDefault();
+            target.focus();
+            var targetId = target.getAttribute('data-album-id');
+            if (targetId && targetId !== currentAlbumId) switchAlbum(targetId, true);
+        });
     });
 
     // --- Init ---
     bindTrackEvents();
+    setupTabsAccessibility();
     switchAlbum('00', false);
     updateAlbumTheme(currentAlbumId);
     updateProgressUi();
@@ -633,7 +690,7 @@
         var albumId = m[1];
         var n = parseInt(m[2], 10);
         var focusTarget = playerWrapEl || document.getElementById('album');
-        if (focusTarget) focusTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (focusTarget) focusTarget.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
 
         switchAlbum(albumId, false);
         if (n >= 1) {

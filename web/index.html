@@ -142,6 +142,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
     <!-- Navegación semántica -->
     <nav class="nav" role="navigation" aria-label="Navegación principal">
         <div class="nav-container">
@@ -180,6 +181,7 @@
         </div>
     </nav>
 
+    <main id="main-content" tabindex="-1">
     <!-- Hero -->
     <header class="hero">
         <div class="hero-content">
@@ -459,8 +461,8 @@
                     </div>
                     <div class="home-album-player-main">
                         <div class="home-album-now-wrap">
-                            <p class="home-album-now" id="albumNow">Cargando pistas…</p>
-                            <span class="home-album-now-state" id="albumNowState">Pausado</span>
+                            <p class="home-album-now" id="albumNow" aria-live="polite">Cargando pistas…</p>
+                            <span class="home-album-now-state" id="albumNowState" role="status" aria-live="polite">Pausado</span>
                             <div class="home-album-visualizer" aria-hidden="true">
                                 <span></span><span></span><span></span><span></span><span></span>
                             </div>
@@ -525,7 +527,7 @@
                         <img id="podcastCover" class="home-podcast-cover" src="/imagenes/portadas/albums/01-diagnostico.png" alt="Portada del podcast" loading="lazy">
                     </div>
                     <div class="home-podcast-player-main">
-                        <p class="home-podcast-now" id="podcastNow">Cargando episodios…</p>
+                        <p class="home-podcast-now" id="podcastNow" aria-live="polite">Cargando episodios…</p>
                         <div class="home-podcast-progress" id="podcastProgress" role="slider" aria-label="Progreso del podcast" tabindex="0">
                             <span class="home-podcast-progress-fill" id="podcastProgressFill"></span>
                         </div>
@@ -626,6 +628,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

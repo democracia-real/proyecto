@@ -4,6 +4,7 @@
  */
 (function() {
     'use strict';
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var PODCAST_INDEX_URL = '/audio/podcast/index.json';
     var COVER_BY_MODULE = {
@@ -108,6 +109,12 @@
         var duration = Number.isFinite(player.duration) ? player.duration : 0;
         var pct = duration > 0 ? (current / duration) * 100 : 0;
         if (progressFillEl) progressFillEl.style.width = pct + '%';
+        if (progressEl) {
+            progressEl.setAttribute('aria-valuemin', '0');
+            progressEl.setAttribute('aria-valuemax', String(Math.max(1, Math.floor(duration))));
+            progressEl.setAttribute('aria-valuenow', String(Math.floor(current)));
+            progressEl.setAttribute('aria-valuetext', formatTime(current) + ' de ' + formatTime(duration));
+        }
         if (timeEl) timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
         if (playPauseBtn) playPauseBtn.textContent = player.paused ? '▶' : '⏸';
     }
@@ -144,6 +151,8 @@
         episodes.forEach(function(ep, index) {
             var li = document.createElement('li');
             li.className = 'home-podcast-item';
+            li.tabIndex = 0;
+            li.setAttribute('aria-label', 'Seleccionar episodio ' + (ep.title || String(index + 1)));
             li.innerHTML =
                 '<button type="button" class="home-podcast-item-play" aria-label="Reproducir episodio">▶</button>' +
                 '<span class="home-podcast-item-title">' + (ep.title || ('Episodio ' + (index + 1))) + '</span>' +
@@ -152,6 +161,12 @@
 
             li.addEventListener('click', function(e) {
                 if (!e.target.closest('button')) setCurrent(index, true);
+            });
+            li.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setCurrent(index, true);
+                }
             });
             var btn = li.querySelector('.home-podcast-item-play');
             if (btn) {
@@ -180,7 +195,7 @@
             return getEpisodeId(ep, idx) === episodeId;
         });
         if (targetIdx < 0) return;
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        section.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
         setCurrent(targetIdx, false);
     }
 
@@ -248,6 +263,24 @@
     if (progressEl) {
         progressEl.addEventListener('click', function(e) {
             seek(e.clientX);
+        });
+        progressEl.addEventListener('keydown', function(e) {
+            if (!Number.isFinite(player.duration) || player.duration <= 0) return;
+            var step = e.shiftKey ? 10 : 5;
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                player.currentTime = Math.max(0, player.currentTime - step);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                player.currentTime = Math.min(player.duration, player.currentTime + step);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                player.currentTime = 0;
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                player.currentTime = player.duration;
+            }
+            updatePlayerUi();
         });
     }
 

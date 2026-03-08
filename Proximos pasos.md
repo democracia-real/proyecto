@@ -137,8 +137,8 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 - [ ] pensar que mas temas puedes ser relevantes importantes.
 - [ ] crear imágenes de cada sección (mirar el apuntes.txt), y una imagen por album
 - [ ] crear video para cada canción
-- [ ] crear podcast de cada sección?
-- [ ] cumplir WCAG 2.1
+- [x] crear podcast de cada sección?
+- [x] cumplir WCAG 2.1 (home + docs): skip link, landmarks, foco visible, navegación teclado, sliders accesibles, respeto `prefers-reduced-motion`
 - [ ] falta poner estilo musical en algunos temas
 
 Fase 1 (rápida, segura): mejorar el actual

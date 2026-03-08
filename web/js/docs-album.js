@@ -32,6 +32,7 @@
 
         var currentIdx = -1;
         var lyricsData = null;
+        if (nowEl) nowEl.setAttribute('aria-live', 'polite');
 
         fetch(jsonUrl)
             .then(function(r) { return r.ok ? r.json() : null; })
@@ -52,6 +53,8 @@
             data.tracks.forEach(function(track, i) {
                 var li = document.createElement('li');
                 li.className = 'home-album-track';
+                li.tabIndex = 0;
+                li.setAttribute('aria-label', 'Seleccionar pista ' + (track.title || String(i + 1)));
                 var audioFile = track.audioFile || '';
                 var src = audioFile ? (data.audioPath + encodeURIComponent(audioFile)) : '';
                 li.setAttribute('data-src', src);
@@ -70,6 +73,12 @@
                 tracklistEl.appendChild(li);
 
                 li.addEventListener('click', function(e) { if (!e.target.closest('button')) setTrack(i); });
+                li.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setTrack(i);
+                    }
+                });
                 li.querySelector('.home-album-track-play').addEventListener('click', function(e) { e.stopPropagation(); setTrack(i); });
                 li.querySelector('.home-album-track-lyric').addEventListener('click', function(e) {
                     e.stopPropagation();
@@ -114,6 +123,7 @@
             var bodyEl = modal.querySelector('.lyric-modal-body');
             if (titleEl) titleEl.textContent = (i + 1).toString().padStart(2, '0') + ' — ' + (track.title || '');
             if (bodyEl) bodyEl.textContent = (track.lyrics) ? track.lyrics : '(Letra pendiente)';
+            modal.dataset.lastFocusId = document.activeElement && document.activeElement.id ? document.activeElement.id : '';
             modal.setAttribute('aria-hidden', 'false');
             modal.classList.add('lyric-modal-open');
             document.body.style.overflow = 'hidden';
@@ -128,6 +138,11 @@
                 modal.setAttribute('aria-hidden', 'true');
                 modal.classList.remove('lyric-modal-open');
                 document.body.style.overflow = '';
+                var lastFocusId = modal.dataset.lastFocusId;
+                if (lastFocusId) {
+                    var last = document.getElementById(lastFocusId);
+                    if (last) last.focus();
+                }
             }
             var closeBtn = modal.querySelector('.lyric-modal-close');
             var backdrop = modal.querySelector('.lyric-modal-backdrop');
