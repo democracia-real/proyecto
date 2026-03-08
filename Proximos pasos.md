@@ -135,7 +135,7 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 - [x] Líneas estratégicas Dalio — estructura y preguntas definidas en `vision_estrategica_largo_plazo.md`
 - [ ] Investigar con datos reales las 7 líneas estratégicas (requiere Deep Research)
 - [ ] pensar que mas temas puedes ser relevantes importantes.
-- [ ] crear imágenes de cada sección (mirar el apuntes.txt), y una imagen por album
+- [ ] crear imágenes de cada sección (mirar el apuntes.txt)
 - [ ] crear video para cada canción
 - [x] crear podcast de cada sección?
 - [x] cumplir WCAG 2.1 (home + docs): skip link, landmarks, foco visible, navegación teclado, sliders accesibles, respeto `prefers-reduced-motion`
