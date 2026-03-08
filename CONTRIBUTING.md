@@ -82,8 +82,9 @@ Lista de fuentes utilizadas
 ```
 
 ### Convenciones de Nombrado
-- Archivos en `snake_case.md`
-- Carpetas en `snake_case/`
+- Archivos en minúsculas y con guiones bajos: `snake_case.md` (ejemplo: `reforma_electoral.md`)
+- Carpetas en minúsculas y con guiones bajos: `snake_case/` (ejemplo: `03_propuestas_institucionales/`)
+- Evitar espacios, acentos, mayúsculas y caracteres especiales en nombres de archivos/carpetas
 - Sin acentos ni caracteres especiales en nombres de archivo
 
 ## Proceso de Contribución

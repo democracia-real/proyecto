@@ -1,7 +1,7 @@
 {
   "album": "Uso de IA y Automatización",
   "module": "05",
-  "audioPath": "/audio/05-uso_de_ia_y_automatizacion/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/05-uso_de_ia_y_automatizacion/",
   "tracks": [
     {
       "id": "01",

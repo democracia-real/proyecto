@@ -1,7 +1,7 @@
 {
   "album": "Modelo Organizativo del Partido",
   "module": "04",
-  "audioPath": "/audio/04-modelo_organizativo_partido/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/04-modelo_organizativo_partido/",
   "tracks": [
     {
       "id": "01",

@@ -1,7 +1,7 @@
 {
   "album": "Propuestas Institucionales",
   "module": "03",
-  "audioPath": "/audio/03-propuestas_institucionales/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/03-propuestas_institucionales/",
   "tracks": [
     {
       "id": "01",

@@ -1,0 +1,42 @@
+{
+  "title": "Podcast Democracia Real",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/podcast/",
+  "episodes": [
+    {
+      "id": "01",
+      "module": "01",
+      "title": "01. Diagnóstico",
+      "audioFile": "01-diagnostico.m4a"
+    },
+    {
+      "id": "02",
+      "module": "02",
+      "title": "02. Problemas Estructurales",
+      "audioFile": "02-problemas_estructurales.m4a"
+    },
+    {
+      "id": "03",
+      "module": "03",
+      "title": "03. Propuestas Institucionales",
+      "audioFile": "03-propuestas_institucionales.m4a"
+    },
+    {
+      "id": "04",
+      "module": "04",
+      "title": "04. Modelo Organizativo del Partido",
+      "audioFile": "04-modelo_organizativo_partido.m4a"
+    },
+    {
+      "id": "05",
+      "module": "05",
+      "title": "05. Uso de IA y Automatización",
+      "audioFile": "05-uso_de_ia_y_automatizacion.m4a"
+    },
+    {
+      "id": "06",
+      "module": "06",
+      "title": "06. Hoja de Ruta Legal",
+      "audioFile": "06-hoja_de_ruta_legal.m4a"
+    }
+  ]
+}

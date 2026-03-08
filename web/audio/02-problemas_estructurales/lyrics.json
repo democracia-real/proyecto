@@ -1,7 +1,7 @@
 {
   "album": "Problemas Estructurales",
   "module": "02",
-  "audioPath": "/audio/02-problemas_estructurales/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/02-problemas_estructurales/",
   "tracks": [
     {
       "id": "01",

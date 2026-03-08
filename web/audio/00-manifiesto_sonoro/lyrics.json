@@ -1,7 +1,7 @@
 {
   "album": "DEMOCRACIA REAL (El Manifiesto Sonoro)",
   "module": "00",
-  "audioPath": "/audio/00-manifiesto_sonoro/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/00-manifiesto_sonoro/",
   "tracks": [
     {
       "id": "01",

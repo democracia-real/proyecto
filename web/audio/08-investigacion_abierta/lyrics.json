@@ -1,7 +1,7 @@
 {
   "album": "Investigación Abierta",
   "module": "08",
-  "audioPath": "/audio/08-investigacion_abierta/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/08-investigacion_abierta/",
   "tracks": [
     {
       "id": "01",

@@ -136,15 +136,9 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 - [ ] Investigar con datos reales las 7 líneas estratégicas (requiere Deep Research)
 - [ ] pensar que mas temas puedes ser relevantes importantes.
 - [ ] crear imágenes de cada sección (mirar el apuntes.txt), y una imagen por album
-  - [x] Portada álbum 00 creada: `web/imagenes/portadas/albums/00-manifiesto_sonoro.png` (1024x1024)
-  - [ ] Crear portadas de álbum 01-08 en `web/imagenes/portadas/albums/`
 - [ ] crear video para cada canción
 - [ ] crear podcast de cada sección?
-- [ ] quizás debería de hacer un lanzamiento con una canción con todo? que estilo seria el mas rompedor?
 - [ ] cumplir WCAG 2.1
-- [ ] Mejorar reproductor (home + docs)
-- [ ] repasar lo de funcionarios, porque no se puede generalizar hay mucha gente buena, hay buenos y malos como en todas las profesiones. pero por ejemplo, a mi pocos médicos o profesores etc me han marcado para bien. 
-- [ ] rehacer las primeras canciones
 - [ ] falta poner estilo musical en algunos temas
 
 Fase 1 (rápida, segura): mejorar el actual
@@ -205,18 +199,21 @@ Fase 3 (rompedor): modo "showcase"
 
 ### Escalado audio/podcast (Azure Blob + CDN)
 
-- [ ] Decisión técnica: mantener `web/audio/` solo para demos cortas y mover álbumes/podcast completos a Blob Storage
-- [ ] Crear cuenta de Storage + contenedor `audio-public` (acceso público de solo lectura)
-- [ ] Definir estructura en Blob: `audio/albums/<modulo>/` y `audio/podcast/<modulo>/`
-- [ ] Subir primer episodio piloto de podcast (30+ MB) y validar streaming/progressive download
-- [ ] Añadir CDN/Front Door delante del Blob para caché global y menor latencia
-- [ ] Configurar dominio de medios (ej. `media.democraciareal.es`) con HTTPS
-- [ ] Actualizar `lyrics.json` y futuro `podcast/index.json` para usar URLs absolutas del dominio de medios
-- [ ] Mantener fallback local en desarrollo (`localhost`) y remota en producción
-- [ ] Revisar `Cache-Control` recomendado:
+- [ ] FASE 1 (ahora): mantener `web/audio/` solo para demos cortas y mover álbumes/podcast completos a Blob Storage
+- [x] FASE 1: crear cuenta de Storage + contenedor `audio-public` (acceso público de solo lectura)
+- [x] FASE 1: definir estructura en Blob: `audio-public/albums/<modulo>/` y `audio-public/podcast/<modulo>/`
+- [ ] FASE 1: subir podcasts (5 actuales y después 8) y validar streaming/progressive download
+- [ ] FASE 1: configurar dominio de medios (ej. `media.democraciareal.es`) con HTTPS
+- [x] FASE 1: actualizar `lyrics.json` para usar URLs absolutas del dominio de medios
+- [x] FASE 1: crear `podcast/index.json` con URLs absolutas a Blob
+- [x] FASE 1: decisión de arquitectura: sin fallback local/remoto (usar Blob como origen único de audio)
+- [ ] FASE 1: revisar `Cache-Control` recomendado:
   - `audio/*`: `public, max-age=31536000, immutable`
   - `*.json` de catálogo: `public, max-age=300, must-revalidate`
-- [ ] Medir coste mensual real (almacenamiento + transferencia CDN) tras 2 semanas de uso
+- [ ] FASE 2 (después): instrumentar medición real de latencia/TTFB (Application Insights independiente + RUM en frontend)
+- [ ] FASE 2: definir umbral GO/NO-GO para CDN/Front Door con datos reales (latencia p95, tráfico internacional, GB/mes)
+- [ ] FASE 2: añadir CDN/Front Door solo si compensa en rendimiento/coste
+- [ ] FASE 2: medir coste mensual real (Blob + posible CDN) tras 2 semanas
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "album": "Hoja de Ruta Legal",
   "module": "06",
-  "audioPath": "/audio/06-hoja_de_ruta_legal/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/06-hoja_de_ruta_legal/",
   "tracks": [
     {
       "id": "01",

@@ -1,7 +1,7 @@
 {
   "album": "Álbum de Diagnóstico",
   "module": "01",
-  "audioPath": "/audio/01-diagnostico/",
+  "audioPath": "https://democraciarealmedia.blob.core.windows.net/audio-public/albums/01-diagnostico/",
   "tracks": [
     {
       "id": "01",
