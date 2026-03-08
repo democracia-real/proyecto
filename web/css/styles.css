@@ -726,11 +726,11 @@ input:focus-visible,
     border-radius: 0 8px 8px 0;
 }
 
-.neutrality-note h4 {
+.neutrality-note h3 {
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: var(--space-sm);
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
 .neutrality-note p {
@@ -839,10 +839,10 @@ input:focus-visible,
     text-align: center;
 }
 
-.section-who h3 {
+.section-who h2 {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: var(--space-xl);
@@ -917,7 +917,7 @@ input:focus-visible,
 
 .footer-license p {
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
 .footer-license a {
@@ -1035,7 +1035,7 @@ input:focus-visible,
     border-radius: 8px;
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     cursor: default;
 }
 
@@ -2164,7 +2164,7 @@ input:focus-visible,
 
 .home-podcast-item-module {
     font-size: 0.82rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
 .home-podcast-empty {

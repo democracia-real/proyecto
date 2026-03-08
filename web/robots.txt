@@ -7,5 +7,6 @@ Allow: /
 # Sitemap
 Sitemap: https://democraciareal.es/sitemap.xml
 
-# Crawl-delay opcional (evita sobrecarga)
-Crawl-delay: 1
+# Nota:
+# Solo usar directivas estándar de robots.txt.
+# Ejemplo NO válido: "Content-Signal: ..."

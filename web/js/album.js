@@ -366,7 +366,7 @@
         tabsEl.querySelectorAll('.home-album-tab').forEach(function(b) {
             var isActiveTab = b.getAttribute('data-album-id') === albumId;
             b.classList.toggle('home-album-tab-active', isActiveTab);
-            b.setAttribute('aria-selected', isActiveTab ? 'true' : 'false');
+            b.setAttribute('aria-pressed', isActiveTab ? 'true' : 'false');
             b.setAttribute('tabindex', isActiveTab ? '0' : '-1');
         });
 
@@ -626,22 +626,15 @@
     if (shareDD) shareDD.addEventListener('click', function(e) { e.stopPropagation(); });
 
     function setupTabsAccessibility() {
-        tabsEl.setAttribute('role', 'tablist');
         tabsEl.setAttribute('aria-label', 'Selección de álbum');
         tabsEl.querySelectorAll('.home-album-tab').forEach(function(btn) {
             var albumId = btn.getAttribute('data-album-id');
-            var panelId = 'albumTracklist-' + albumId;
             btn.id = 'album-tab-' + albumId;
-            btn.setAttribute('role', 'tab');
-            btn.setAttribute('aria-controls', panelId);
             var isActive = btn.classList.contains('home-album-tab-active');
-            btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
             btn.setAttribute('tabindex', isActive ? '0' : '-1');
         });
         allLists.forEach(function(list) {
-            var albumId = list.getAttribute('data-album-id');
-            list.setAttribute('role', 'tabpanel');
-            list.setAttribute('aria-labelledby', 'album-tab-' + albumId);
             var isActive = list.classList.contains('home-album-tracklist-active');
             list.setAttribute('aria-hidden', isActive ? 'false' : 'true');
         });
