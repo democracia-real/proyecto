@@ -27,9 +27,14 @@
     var playPauseBtn = document.getElementById('podcastPlayPause');
     var prevBtn = document.getElementById('podcastPrev');
     var nextBtn = document.getElementById('podcastNext');
+    var shareBtn = document.getElementById('podcastShare');
     var progressEl = document.getElementById('podcastProgress');
     var progressFillEl = document.getElementById('podcastProgressFill');
     var timeEl = document.getElementById('podcastTime');
+    var shareDropdown = document.getElementById('podcastShareDropdown');
+    var shareWaEl = document.getElementById('podcastShareWa');
+    var shareXEl = document.getElementById('podcastShareX');
+    var shareCopyEl = document.getElementById('podcastShareCopy');
 
     if (!section || !listEl || !player) return;
 
@@ -55,6 +60,47 @@
         if (!episode) return DEFAULT_COVER;
         if (episode.cover) return episode.cover;
         return COVER_BY_MODULE[episode.module] || DEFAULT_COVER;
+    }
+
+    function getEpisodeId(episode, index) {
+        if (!episode) return String(index + 1).padStart(2, '0');
+        return String(episode.id || String(index + 1).padStart(2, '0')).padStart(2, '0');
+    }
+
+    function buildEpisodeUrl(index) {
+        if (!episodes[index]) return window.location.href;
+        return window.location.origin + window.location.pathname + '#podcast-' + getEpisodeId(episodes[index], index);
+    }
+
+    function openShare(index, anchorEl) {
+        if (index < 0 || index >= episodes.length) return;
+        var episode = episodes[index];
+        var title = episode.title || ('Episodio ' + (index + 1));
+        var url = buildEpisodeUrl(index);
+        var text = 'Escucha "' + title + '" — Podcast Democracia Real';
+        var full = text + ' ' + url;
+
+        if (navigator.share) {
+            navigator.share({ title: text, text: text, url: url }).catch(function() {});
+            return;
+        }
+
+        if (shareDropdown && shareWaEl && shareXEl && shareCopyEl && anchorEl) {
+            shareWaEl.href = 'https://wa.me/?text=' + encodeURIComponent(full);
+            shareXEl.href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+            shareCopyEl.onclick = function() {
+                navigator.clipboard.writeText(url).then(function() {
+                    shareCopyEl.textContent = '¡Copiado!';
+                    setTimeout(function() { shareCopyEl.textContent = 'Copiar enlace'; }, 1500);
+                });
+            };
+            var rect = anchorEl.getBoundingClientRect();
+            shareDropdown.style.position = 'fixed';
+            shareDropdown.style.top = (rect.bottom + 6) + 'px';
+            shareDropdown.style.left = Math.max(8, rect.left) + 'px';
+            shareDropdown.setAttribute('aria-hidden', 'false');
+            shareDropdown.classList.add('home-album-share-dropdown-open');
+        }
     }
 
     function updatePlayerUi() {
@@ -101,7 +147,8 @@
             li.innerHTML =
                 '<button type="button" class="home-podcast-item-play" aria-label="Reproducir episodio">▶</button>' +
                 '<span class="home-podcast-item-title">' + (ep.title || ('Episodio ' + (index + 1))) + '</span>' +
-                '<span class="home-podcast-item-module">Módulo ' + (ep.module || '--') + '</span>';
+                '<span class="home-podcast-item-module">Módulo ' + (ep.module || '--') + '</span>' +
+                '<button type="button" class="home-podcast-item-share" aria-label="Compartir episodio">Compartir</button>';
 
             li.addEventListener('click', function(e) {
                 if (!e.target.closest('button')) setCurrent(index, true);
@@ -113,9 +160,28 @@
                     setCurrent(index, true);
                 });
             }
+            var shareItemBtn = li.querySelector('.home-podcast-item-share');
+            if (shareItemBtn) {
+                shareItemBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openShare(index, shareItemBtn);
+                });
+            }
             listEl.appendChild(li);
         });
         setCurrent(0, false);
+    }
+
+    function applyPodcastHash(hash) {
+        var match = hash && hash.match(/^#podcast-(\d{2})$/);
+        if (!match || !episodes.length) return;
+        var episodeId = match[1];
+        var targetIdx = episodes.findIndex(function(ep, idx) {
+            return getEpisodeId(ep, idx) === episodeId;
+        });
+        if (targetIdx < 0) return;
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setCurrent(targetIdx, false);
     }
 
     function seek(clientX) {
@@ -137,6 +203,7 @@
             audioPath = data.audioPath || '';
             episodes = data.episodes;
             renderEpisodes();
+            if (window.location.hash) applyPodcastHash(window.location.hash);
         })
         .catch(function() {
             if (nowEl) nowEl.textContent = 'Error al cargar el podcast.';
@@ -170,6 +237,13 @@
             if (currentIdx + 1 < episodes.length) setCurrent(currentIdx + 1, true);
         });
     }
+    if (shareBtn) {
+        shareBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (!episodes.length) return;
+            openShare(currentIdx >= 0 ? currentIdx : 0, shareBtn);
+        });
+    }
 
     if (progressEl) {
         progressEl.addEventListener('click', function(e) {
@@ -185,5 +259,20 @@
     player.addEventListener('ended', function() {
         if (currentIdx + 1 < episodes.length) setCurrent(currentIdx + 1, true);
         else updatePlayerUi();
+    });
+
+    document.addEventListener('click', function() {
+        if (shareDropdown) {
+            shareDropdown.setAttribute('aria-hidden', 'true');
+            shareDropdown.classList.remove('home-album-share-dropdown-open');
+        }
+    });
+    if (shareDropdown) {
+        shareDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+    window.addEventListener('hashchange', function() {
+        applyPodcastHash(window.location.hash);
     });
 })();

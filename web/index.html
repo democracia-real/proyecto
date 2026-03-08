@@ -534,6 +534,7 @@
                             <button type="button" class="home-podcast-btn home-podcast-btn-primary" id="podcastPlayPause" aria-label="Reproducir o pausar">▶</button>
                             <button type="button" class="home-podcast-btn" id="podcastNext" aria-label="Episodio siguiente">⏭</button>
                             <span class="home-podcast-time" id="podcastTime">0:00 / 0:00</span>
+                            <button type="button" class="home-podcast-share-btn" id="podcastShare" aria-label="Compartir episodio actual">🔗 Compartir</button>
                         </div>
                         <audio id="podcastPlayer" preload="metadata"></audio>
                     </div>
@@ -541,6 +542,11 @@
             </div>
 
             <ul class="home-podcast-list" id="podcastList"></ul>
+            <div id="podcastShareDropdown" class="home-album-share-dropdown" aria-hidden="true">
+                <a href="#" id="podcastShareWa" target="_blank" rel="noopener" class="home-album-share-option">WhatsApp</a>
+                <a href="#" id="podcastShareX" target="_blank" rel="noopener" class="home-album-share-option">X (Twitter)</a>
+                <button type="button" id="podcastShareCopy" class="home-album-share-option">Copiar enlace</button>
+            </div>
         </div>
     </section>
 
