@@ -43,6 +43,12 @@
       "module": "07",
       "title": "07. Web Pública y Transparencia",
       "audioFile": "07_web_publica_y_transparencia.m4a"
+    },
+    {
+      "id": "08",
+      "module": "08",
+      "title": "08. Investigación Abierta",
+      "audioFile": "08-investigacion_abierta.m4a"
     }
   ]
 }
