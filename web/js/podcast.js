@@ -33,6 +33,8 @@
     var shareBtn = document.getElementById('podcastShare');
     var speedBtn = document.getElementById('podcastSpeed');
     var progressEl = document.getElementById('podcastProgress');
+    var progressFillEl = document.getElementById('podcastProgressFill');
+    var progressBufferEl = document.getElementById('podcastProgressBuffer');
     var timeCurrentEl = document.getElementById('podcastTimeCurrent');
     var timeTotalEl = document.getElementById('podcastTimeTotal');
     var timeTotalEl = document.getElementById('podcastTimeTotal');
@@ -48,7 +50,6 @@
     var audioPath = '';
     var SPEEDS = [1, 1.5, 2];
     var speedIdx = 0;
-    var isSeeking = false;
 
     function formatTime(seconds) {
         if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
@@ -115,7 +116,20 @@
         var current = Number.isFinite(player.currentTime) ? player.currentTime : 0;
         var duration = Number.isFinite(player.duration) ? player.duration : 0;
         var pct = duration > 0 ? (current / duration) * 100 : 0;
-        if (progressEl && !isSeeking) progressEl.value = pct;
+        if (progressFillEl) progressFillEl.style.width = pct + '%';
+        if (progressBufferEl) {
+            var buf = 0;
+            if (player.buffered && player.buffered.length > 0 && duration > 0) {
+                buf = (player.buffered.end(player.buffered.length - 1) / duration) * 100;
+            }
+            progressBufferEl.style.width = buf + '%';
+        }
+        if (progressEl) {
+            progressEl.setAttribute('aria-valuemin', '0');
+            progressEl.setAttribute('aria-valuemax', String(Math.max(1, Math.floor(duration))));
+            progressEl.setAttribute('aria-valuenow', String(Math.floor(current)));
+            progressEl.setAttribute('aria-valuetext', formatTime(current) + ' de ' + formatTime(duration));
+        }
         if (timeCurrentEl) timeCurrentEl.textContent = formatTime(current);
         if (timeTotalEl) timeTotalEl.textContent = formatTime(duration);
         if (playPauseBtn) playPauseBtn.textContent = player.paused ? '▶' : '⏸';
@@ -205,6 +219,15 @@
         setCurrent(targetIdx, false);
     }
 
+    function seek(clientX) {
+        if (!progressEl || !Number.isFinite(player.duration) || player.duration <= 0) return;
+        var rect = progressEl.getBoundingClientRect();
+        var ratio = (clientX - rect.left) / rect.width;
+        ratio = Math.max(0, Math.min(1, ratio));
+        player.currentTime = player.duration * ratio;
+        updatePlayerUi();
+    }
+
     fetch(PODCAST_INDEX_URL)
         .then(function(r) { return r.ok ? r.json() : null; })
         .then(function(data) {
@@ -267,39 +290,36 @@
         });
     }
 
+    function getSeekClientX(e) {
+        if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
+        if (e.touches && e.touches.length) return e.touches[0].clientX;
+        return e.clientX;
+    }
+
     if (progressEl) {
-        function doSeek() {
-            var duration = Number.isFinite(player.duration) ? player.duration : 0;
-            if (duration <= 0) return;
-            var pct = parseFloat(progressEl.value) || 0;
-            pct = Math.max(0, Math.min(100, pct));
-            player.currentTime = (pct / 100) * duration;
+        function handleSeek(e) {
+            var x = getSeekClientX(e);
+            if (x != null) seek(x);
         }
-        progressEl.addEventListener('input', function() {
-            isSeeking = true;
-            if (timeCurrentEl) {
-                var duration = Number.isFinite(player.duration) ? player.duration : 0;
-                if (duration > 0) {
-                    var pct = parseFloat(progressEl.value) || 0;
-                    timeCurrentEl.textContent = formatTime((pct / 100) * duration);
-                }
+        progressEl.addEventListener('click', handleSeek);
+        progressEl.addEventListener('touchend', handleSeek);
+        progressEl.addEventListener('keydown', function(e) {
+            if (!Number.isFinite(player.duration) || player.duration <= 0) return;
+            var step = e.shiftKey ? 10 : 5;
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                player.currentTime = Math.max(0, player.currentTime - step);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                player.currentTime = Math.min(player.duration, player.currentTime + step);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                player.currentTime = 0;
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                player.currentTime = player.duration;
             }
-        });
-        progressEl.addEventListener('change', function(e) {
-            e.stopPropagation();
-            doSeek();
-            isSeeking = false;
             updatePlayerUi();
-        });
-        progressEl.addEventListener('pointerdown', function(e) { e.stopPropagation(); });
-        progressEl.addEventListener('pointerup', function(e) {
-            e.stopPropagation();
-            isSeeking = false;
-        });
-        progressEl.addEventListener('touchstart', function(e) { e.stopPropagation(); }, { passive: true });
-        progressEl.addEventListener('touchend', function(e) {
-            e.stopPropagation();
-            isSeeking = false;
         });
     }
 
