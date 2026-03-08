@@ -18,13 +18,27 @@
         '08_investigacion_abierta': { num: '08', short: 'Investigación', path: '08-investigacion', title: 'Investigación Abierta' }
     };
 
+    var ROOT_DOCS = {
+        'CONTRIBUTING.md': {
+            label: 'Guía de Contribución',
+            section: 'Contribuir',
+            description: 'Proyecto abierto y colaborativo',
+            githubPath: 'CONTRIBUTING.md'
+        },
+        'README.md': {
+            label: 'README del Proyecto',
+            section: 'Documentación general',
+            description: 'Visión general y estructura del proyecto',
+            githubPath: 'README.md'
+        }
+    };
+
     var DOC_LABELS = {
         'partitocracia.md': 'Partitocracia',
         'separacion_poderes.md': 'Separación de Poderes',
         'sistema_electoral.md': 'Sistema Electoral',
         'comparativa_internacional.md': 'Comparativa Internacional',
         'indicadores_potencia_nacional.md': 'Indicadores de Potencia Nacional',
-        'album_diagnostico.md': 'Álbum de Diagnóstico',
         'corrupcion_e_impunidad.md': 'Corrupción e Impunidad',
         'burocracia_y_eficiencia.md': 'Burocracia y Eficiencia',
         'puertas_giratorias.md': 'Puertas Giratorias',
@@ -99,6 +113,16 @@
     }
 
     function parseDocPath(docPath) {
+        if (ROOT_DOCS[docPath]) {
+            var rootDoc = ROOT_DOCS[docPath];
+            return {
+                type: 'root',
+                filename: docPath,
+                label: rootDoc.label,
+                rootDoc: rootDoc
+            };
+        }
+
         var parts = docPath.split('/');
         if (parts.length < 2) return null;
         var moduleFolder = parts[0];
@@ -133,6 +157,9 @@
                 var resolved = path.replace('../', '');
                 return 'href="/docs/viewer.html?doc=' + resolved + '.md"';
             }
+            if (!moduleFolder) {
+                return 'href="/docs/viewer.html?doc=' + path + '.md"';
+            }
             return 'href="/docs/viewer.html?doc=' + moduleFolder + '/' + path + '.md"';
         });
     }
@@ -145,11 +172,16 @@
         document.title = (title || info.label) + ' - Democracia Real';
 
         var desc = document.getElementById('docDescription');
-        desc.textContent = info.module.num + '. ' + info.module.title;
-
-        document.getElementById('breadcrumbModule').innerHTML =
-            '<a href="/docs/' + info.module.path + '/">' + info.module.num + '. ' + info.module.short + '</a>';
-        document.getElementById('breadcrumbDoc').textContent = info.label;
+        if (info.type === 'root') {
+            desc.textContent = info.rootDoc.description;
+            document.getElementById('breadcrumbModule').innerHTML = '<a href="/docs/">' + info.rootDoc.section + '</a>';
+            document.getElementById('breadcrumbDoc').textContent = info.label;
+        } else {
+            desc.textContent = info.module.num + '. ' + info.module.title;
+            document.getElementById('breadcrumbModule').innerHTML =
+                '<a href="/docs/' + info.module.path + '/">' + info.module.num + '. ' + info.module.short + '</a>';
+            document.getElementById('breadcrumbDoc').textContent = info.label;
+        }
 
         if (typeof marked !== 'undefined') {
             marked.setOptions({
@@ -164,14 +196,24 @@
         }
 
         var ghBase = 'https://github.com/democracia-real/web/blob/main/';
-        document.getElementById('githubLink').href = ghBase + info.moduleFolder + '/' + info.filename;
-        document.getElementById('editLink').href = ghBase + info.moduleFolder + '/' + info.filename + '?plain=1';
+        var githubPath = info.type === 'root'
+            ? info.rootDoc.githubPath
+            : info.moduleFolder + '/' + info.filename;
+        document.getElementById('githubLink').href = ghBase + githubPath;
+        document.getElementById('editLink').href = ghBase + githubPath + '?plain=1';
 
         var footer = document.getElementById('navFooter');
-        footer.innerHTML =
-            '<a href="/docs/' + info.module.path + '/" class="docs-nav-link">' +
-            '<span class="docs-nav-link-label">Volver a</span>' +
-            '<span class="docs-nav-link-title">← ' + info.module.num + '. ' + info.module.short + '</span></a>';
+        if (info.type === 'root') {
+            footer.innerHTML =
+                '<a href="/docs/" class="docs-nav-link">' +
+                '<span class="docs-nav-link-label">Volver a</span>' +
+                '<span class="docs-nav-link-title">← Documentación</span></a>';
+        } else {
+            footer.innerHTML =
+                '<a href="/docs/' + info.module.path + '/" class="docs-nav-link">' +
+                '<span class="docs-nav-link-label">Volver a</span>' +
+                '<span class="docs-nav-link-title">← ' + info.module.num + '. ' + info.module.short + '</span></a>';
+        }
 
     }
 

@@ -144,7 +144,8 @@ Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategic
 - [ ] cumplir WCAG 2.1
 - [ ] Mejorar reproductor (home + docs)
 - [ ] repasar lo de funcionarios, porque no se puede generalizar hay mucha gente buena, hay buenos y malos como en todas las profesiones. pero por ejemplo, a mi pocos médicos o profesores etc me han marcado para bien. 
-- [] rehacer las primeras canciones
+- [ ] rehacer las primeras canciones
+- [ ] falta poner estilo musical en algunos temas
 
 Fase 1 (rápida, segura): mejorar el actual
 - [x] Mostrar carátula por módulo/canción usando `web/imagenes/portadas/albums/` (home)

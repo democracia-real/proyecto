@@ -191,7 +191,6 @@ politica/
 │   ├── sistema_electoral.md
 │   ├── comparativa_internacional.md
 │   ├── indicadores_potencia_nacional.md  # Dashboard de salud nacional (8 métricas de Dalio)
-│   └── album_diagnostico.md              # Álbum musical del diagnóstico
 │
 ├── 02_problemas_estructurales/            # Catálogo de problemas
 │   ├── README.md
