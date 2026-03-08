@@ -32,7 +32,9 @@
     var speedBtn = document.getElementById('podcastSpeed');
     var progressEl = document.getElementById('podcastProgress');
     var progressFillEl = document.getElementById('podcastProgressFill');
-    var timeEl = document.getElementById('podcastTime');
+    var progressBufferEl = document.getElementById('podcastProgressBuffer');
+    var timeCurrentEl = document.getElementById('podcastTimeCurrent');
+    var timeTotalEl = document.getElementById('podcastTimeTotal');
     var shareDropdown = document.getElementById('podcastShareDropdown');
     var shareWaEl = document.getElementById('podcastShareWa');
     var shareXEl = document.getElementById('podcastShareX');
@@ -112,13 +114,21 @@
         var duration = Number.isFinite(player.duration) ? player.duration : 0;
         var pct = duration > 0 ? (current / duration) * 100 : 0;
         if (progressFillEl) progressFillEl.style.width = pct + '%';
+        if (progressBufferEl) {
+            var buf = 0;
+            if (player.buffered && player.buffered.length > 0 && duration > 0) {
+                buf = (player.buffered.end(player.buffered.length - 1) / duration) * 100;
+            }
+            progressBufferEl.style.width = buf + '%';
+        }
         if (progressEl) {
             progressEl.setAttribute('aria-valuemin', '0');
             progressEl.setAttribute('aria-valuemax', String(Math.max(1, Math.floor(duration))));
             progressEl.setAttribute('aria-valuenow', String(Math.floor(current)));
             progressEl.setAttribute('aria-valuetext', formatTime(current) + ' de ' + formatTime(duration));
         }
-        if (timeEl) timeEl.textContent = formatTime(current) + ' / ' + formatTime(duration);
+        if (timeCurrentEl) timeCurrentEl.textContent = formatTime(current);
+        if (timeTotalEl) timeTotalEl.textContent = formatTime(duration);
         if (playPauseBtn) playPauseBtn.textContent = player.paused ? '▶' : '⏸';
     }
 

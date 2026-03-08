@@ -542,14 +542,18 @@
                     </div>
                     <div class="home-podcast-player-main">
                         <p class="home-podcast-now" id="podcastNow" aria-live="polite">Cargando episodios…</p>
-                        <div class="home-podcast-progress" id="podcastProgress" role="slider" aria-label="Progreso del podcast" tabindex="0">
-                            <span class="home-podcast-progress-fill" id="podcastProgressFill"></span>
+                        <div class="home-album-progress-row">
+                            <span class="home-album-time home-album-time-current" id="podcastTimeCurrent">0:00</span>
+                            <div class="home-album-progress" id="podcastProgress" role="slider" aria-label="Progreso del podcast" tabindex="0">
+                                <span class="home-album-progress-buffer" id="podcastProgressBuffer"></span>
+                                <span class="home-album-progress-fill" id="podcastProgressFill"></span>
+                            </div>
+                            <span class="home-album-time home-album-time-total" id="podcastTimeTotal">0:00</span>
                         </div>
                         <div class="home-podcast-controls">
                             <button type="button" class="home-podcast-btn" id="podcastPrev" aria-label="Episodio anterior">⏮</button>
                             <button type="button" class="home-podcast-btn home-podcast-btn-primary" id="podcastPlayPause" aria-label="Reproducir o pausar">▶</button>
                             <button type="button" class="home-podcast-btn" id="podcastNext" aria-label="Episodio siguiente">⏭</button>
-                            <span class="home-podcast-time" id="podcastTime">0:00 / 0:00</span>
                             <button type="button" class="home-podcast-speed-btn" id="podcastSpeed" aria-label="Velocidad de reproducción" title="Velocidad: 1x">1×</button>
                             <button type="button" class="home-podcast-share-btn" id="podcastShare" aria-label="Compartir episodio actual">🔗 Compartir</button>
                         </div>
