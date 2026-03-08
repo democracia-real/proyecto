@@ -69,6 +69,20 @@
         return ordered[currentPos + 1];
     }
 
+    function getPrevAlbumId(albumId) {
+        var ordered = getAlbumIdsInOrder();
+        var currentPos = ordered.indexOf(albumId);
+        if (currentPos <= 0) return null;
+        return ordered[currentPos - 1];
+    }
+
+    function playLastTrackFromPrevAlbum(fromAlbumId) {
+        var prevAlbumId = getPrevAlbumId(fromAlbumId);
+        if (!prevAlbumId) return false;
+        switchAlbum(prevAlbumId, true, -1);
+        return true;
+    }
+
     function playFirstTrackFromNextAlbum(fromAlbumId) {
         var startAlbumId = fromAlbumId;
         var nextAlbumId = getNextAlbumId(startAlbumId);
@@ -356,7 +370,7 @@
     }
 
     // --- Switch album ---
-    function switchAlbum(albumId, autoPlayFirstTrack) {
+    function switchAlbum(albumId, autoPlayFirstTrack, initialTrackIndex) {
         if (playerWrapEl) playerWrapEl.classList.add('is-switching');
         currentAlbumId = albumId;
         currentTrackIdx = 0;
@@ -386,7 +400,9 @@
             if (currentAlbumId !== albumId) return;
             bindTrackEvents();
             updateAlbumActiveInfo(albumId);
-            setTrack(0, autoPlayFirstTrack === true);
+            var tracks = getTracks();
+            var idx = (initialTrackIndex === -1 && tracks.length > 0) ? tracks.length - 1 : 0;
+            setTrack(idx, autoPlayFirstTrack === true);
             if (!getTracks().length && nowEl) nowEl.textContent = 'No hay pistas disponibles';
             if (playerWrapEl) {
                 setTimeout(function() { playerWrapEl.classList.remove('is-switching'); }, 200);
@@ -452,8 +468,13 @@
         if (nowEl) nowEl.textContent = 'No se pudo reproducir esta pista. Prueba con otra.';
     });
     if (btnPrev) btnPrev.addEventListener('click', function() {
-        if (currentTrackIdx <= 0) { player.currentTime = 0; tryPlayWithAutoplayFallback(); return; }
-        setTrack(currentTrackIdx - 1);
+        if (currentTrackIdx > 0) {
+            setTrack(currentTrackIdx - 1);
+            return;
+        }
+        if (playLastTrackFromPrevAlbum(currentAlbumId)) return;
+        player.currentTime = 0;
+        tryPlayWithAutoplayFallback();
     });
     if (btnNext) btnNext.addEventListener('click', function() {
         var tracks = getTracks();
@@ -479,9 +500,18 @@
         player.muted = player.volume === 0;
         setMuteLabel();
     });
+    function getEventClientX(e) {
+        if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
+        if (e.touches && e.touches.length) return e.touches[0].clientX;
+        return e.clientX;
+    }
+
     if (progressEl) {
         progressEl.addEventListener('click', function(e) {
-            seekToClientX(e.clientX);
+            seekToClientX(getEventClientX(e));
+        });
+        progressEl.addEventListener('touchend', function(e) {
+            if (e.changedTouches && e.changedTouches.length) seekToClientX(e.changedTouches[0].clientX);
         });
         progressEl.addEventListener('keydown', function(e) {
             if (!Number.isFinite(player.duration) || player.duration <= 0) return;

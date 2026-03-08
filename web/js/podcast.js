@@ -274,9 +274,18 @@
         });
     }
 
+    function getSeekClientX(e) {
+        if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
+        if (e.touches && e.touches.length) return e.touches[0].clientX;
+        return e.clientX;
+    }
+
     if (progressEl) {
         progressEl.addEventListener('click', function(e) {
-            seek(e.clientX);
+            seek(getSeekClientX(e));
+        });
+        progressEl.addEventListener('touchend', function(e) {
+            if (e.changedTouches && e.changedTouches.length) seek(e.changedTouches[0].clientX);
         });
         progressEl.addEventListener('keydown', function(e) {
             if (!Number.isFinite(player.duration) || player.duration <= 0) return;
