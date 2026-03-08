@@ -29,6 +29,7 @@
     var prevBtn = document.getElementById('podcastPrev');
     var nextBtn = document.getElementById('podcastNext');
     var shareBtn = document.getElementById('podcastShare');
+    var speedBtn = document.getElementById('podcastSpeed');
     var progressEl = document.getElementById('podcastProgress');
     var progressFillEl = document.getElementById('podcastProgressFill');
     var timeEl = document.getElementById('podcastTime');
@@ -42,6 +43,8 @@
     var episodes = [];
     var currentIdx = -1;
     var audioPath = '';
+    var SPEEDS = [1, 1.5, 2];
+    var speedIdx = 0;
 
     function formatTime(seconds) {
         if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
@@ -136,6 +139,7 @@
             node.classList.toggle('home-podcast-item-active', nodeIdx === index);
         });
 
+        player.playbackRate = SPEEDS[speedIdx];
         updatePlayerUi();
         if (autoPlay === true && src) {
             player.play().catch(function() {});
@@ -252,6 +256,16 @@
             if (currentIdx + 1 < episodes.length) setCurrent(currentIdx + 1, true);
         });
     }
+    if (speedBtn) {
+        speedBtn.addEventListener('click', function() {
+            speedIdx = (speedIdx + 1) % SPEEDS.length;
+            var rate = SPEEDS[speedIdx];
+            player.playbackRate = rate;
+            speedBtn.textContent = rate + '×';
+            speedBtn.setAttribute('title', 'Velocidad: ' + rate + 'x');
+        });
+    }
+
     if (shareBtn) {
         shareBtn.addEventListener('click', function(e) {
             e.stopPropagation();

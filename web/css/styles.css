@@ -2081,6 +2081,24 @@ input:focus-visible,
     text-align: right;
 }
 
+.home-podcast-speed-btn {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text-muted);
+    cursor: pointer;
+    min-width: 32px;
+    transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.home-podcast-speed-btn:hover {
+    color: var(--text-secondary);
+    border-color: var(--border-light);
+}
+
 .home-podcast-share-btn {
     padding: 7px 10px;
     font-size: 0.85rem;
