@@ -37,6 +37,12 @@
       "module": "06",
       "title": "06. Hoja de Ruta Legal",
       "audioFile": "06-hoja_de_ruta_legal.m4a"
+    },
+    {
+      "id": "07",
+      "module": "07",
+      "title": "07. Web Pública y Transparencia",
+      "audioFile": "07_web_publica_y_transparencia.m4a"
     }
   ]
 }
