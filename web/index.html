@@ -551,10 +551,7 @@
                         <audio id="podcastPlayer" preload="metadata"></audio>
                         <div class="home-album-progress-row">
                             <span class="home-album-time home-album-time-current" id="podcastTimeCurrent">0:00</span>
-                            <div class="home-album-progress" id="podcastProgress" role="slider" aria-label="Progreso del podcast" tabindex="0">
-                                <span class="home-album-progress-buffer" id="podcastProgressBuffer"></span>
-                                <span class="home-album-progress-fill" id="podcastProgressFill"></span>
-                            </div>
+                            <input type="range" id="podcastProgress" class="podcast-progress-range" min="0" max="100" value="0" step="0.1" aria-label="Progreso del podcast">
                             <span class="home-album-time home-album-time-total" id="podcastTimeTotal">0:00</span>
                         </div>
                         <div class="home-album-actions-row">

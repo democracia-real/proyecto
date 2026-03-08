@@ -1680,6 +1680,14 @@ input:focus-visible,
     margin-bottom: var(--space-xs);
 }
 
+.podcast-progress-range {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 8px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
 .home-album-progress {
     flex: 1 1 auto;
     min-width: 0;
