@@ -234,22 +234,40 @@
         if (!rect.width) return;
         var ratio = (clientX - rect.left) / rect.width;
         ratio = Math.max(0, Math.min(1, ratio));
+        trySeekToRatio(ratio);
+    }
 
-        if (!Number.isFinite(player.duration) || player.duration <= 0) {
-            pendingSeekRatio = ratio;
-            return;
+    function canSeekToTime(targetTime) {
+        if (!Number.isFinite(targetTime) || targetTime < 0) return false;
+        if (!player.seekable || player.seekable.length === 0) return false;
+        for (var i = 0; i < player.seekable.length; i++) {
+            var start = player.seekable.start(i);
+            var end = player.seekable.end(i);
+            if (targetTime >= start && targetTime <= end) return true;
         }
+        return false;
+    }
 
-        player.currentTime = player.duration * ratio;
+    function trySeekToRatio(ratio) {
+        var duration = Number.isFinite(player.duration) ? player.duration : 0;
+        if (duration <= 0) {
+            pendingSeekRatio = ratio;
+            return false;
+        }
+        var targetTime = duration * ratio;
+        if (!canSeekToTime(targetTime)) {
+            pendingSeekRatio = ratio;
+            return false;
+        }
+        player.currentTime = targetTime;
+        pendingSeekRatio = null;
         updatePlayerUi();
+        return true;
     }
 
     function applyPendingSeekIfReady() {
         if (pendingSeekRatio == null) return;
-        if (!Number.isFinite(player.duration) || player.duration <= 0) return;
-        player.currentTime = player.duration * pendingSeekRatio;
-        pendingSeekRatio = null;
-        updatePlayerUi();
+        trySeekToRatio(pendingSeekRatio);
     }
 
     fetch(PODCAST_INDEX_URL)
@@ -357,6 +375,9 @@
     player.addEventListener('timeupdate', updatePlayerUi);
     player.addEventListener('loadedmetadata', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('durationchange', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
+    player.addEventListener('progress', applyPendingSeekIfReady);
+    player.addEventListener('canplay', applyPendingSeekIfReady);
+    player.addEventListener('canplaythrough', applyPendingSeekIfReady);
     player.addEventListener('play', function() {
         if (nowStateEl) nowStateEl.textContent = 'Reproduciendo';
         if (playerWrapEl) playerWrapEl.classList.add('is-playing');

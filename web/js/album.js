@@ -302,24 +302,40 @@
         if (!rect.width) return;
         var ratio = (clientX - rect.left) / rect.width;
         ratio = Math.min(1, Math.max(0, ratio));
+        trySeekToRatio(ratio);
+    }
 
+    function canSeekToTime(targetTime) {
+        if (!Number.isFinite(targetTime) || targetTime < 0) return false;
+        if (!player.seekable || player.seekable.length === 0) return false;
+        for (var i = 0; i < player.seekable.length; i++) {
+            var start = player.seekable.start(i);
+            var end = player.seekable.end(i);
+            if (targetTime >= start && targetTime <= end) return true;
+        }
+        return false;
+    }
+
+    function trySeekToRatio(ratio) {
         var duration = Number.isFinite(player.duration) ? player.duration : 0;
         if (!duration) {
             pendingSeekRatio = ratio;
-            return;
+            return false;
         }
-
-        player.currentTime = ratio * duration;
+        var targetTime = duration * ratio;
+        if (!canSeekToTime(targetTime)) {
+            pendingSeekRatio = ratio;
+            return false;
+        }
+        player.currentTime = targetTime;
+        pendingSeekRatio = null;
         updateProgressUi();
+        return true;
     }
 
     function applyPendingSeekIfReady() {
         if (pendingSeekRatio == null) return;
-        var duration = Number.isFinite(player.duration) ? player.duration : 0;
-        if (!duration) return;
-        player.currentTime = duration * pendingSeekRatio;
-        pendingSeekRatio = null;
-        updateProgressUi();
+        trySeekToRatio(pendingSeekRatio);
     }
 
     function detachAutoplayUnlockListeners() {
@@ -473,6 +489,9 @@
     player.addEventListener('durationchange', function() { updateProgressUi(); applyPendingSeekIfReady(); });
     player.addEventListener('progress', updateProgressUi);
     player.addEventListener('loadedmetadata', function() { updateProgressUi(); applyPendingSeekIfReady(); });
+    player.addEventListener('progress', applyPendingSeekIfReady);
+    player.addEventListener('canplay', applyPendingSeekIfReady);
+    player.addEventListener('canplaythrough', applyPendingSeekIfReady);
     player.addEventListener('volumechange', function() {
         if (volumeInput) volumeInput.value = String(player.muted ? 0 : player.volume);
         setMuteLabel();
