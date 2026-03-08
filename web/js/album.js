@@ -305,29 +305,13 @@
         trySeekToRatio(ratio);
     }
 
-    function canSeekToTime(targetTime) {
-        if (!Number.isFinite(targetTime) || targetTime < 0) return false;
-        if (!player.seekable || player.seekable.length === 0) return false;
-        for (var i = 0; i < player.seekable.length; i++) {
-            var start = player.seekable.start(i);
-            var end = player.seekable.end(i);
-            if (targetTime >= start && targetTime <= end) return true;
-        }
-        return false;
-    }
-
     function trySeekToRatio(ratio) {
         var duration = Number.isFinite(player.duration) ? player.duration : 0;
         if (!duration) {
             pendingSeekRatio = ratio;
             return false;
         }
-        var targetTime = duration * ratio;
-        if (!canSeekToTime(targetTime)) {
-            pendingSeekRatio = ratio;
-            return false;
-        }
-        player.currentTime = targetTime;
+        player.currentTime = duration * ratio;
         pendingSeekRatio = null;
         updateProgressUi();
         return true;
