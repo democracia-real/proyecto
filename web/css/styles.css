@@ -2024,6 +2024,7 @@ input:focus-visible,
     background: var(--bg-tertiary);
     overflow: hidden;
     cursor: pointer;
+    touch-action: manipulation;
 }
 
 .home-podcast-progress-fill {
@@ -2033,6 +2034,7 @@ input:focus-visible,
     bottom: 0;
     width: 0;
     background: linear-gradient(90deg, #3b82f6, #34d399);
+    pointer-events: none;
 }
 
 .home-podcast-controls {

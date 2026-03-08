@@ -274,19 +274,13 @@
         });
     }
 
-    function getSeekClientX(e) {
-        if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
-        if (e.touches && e.touches.length) return e.touches[0].clientX;
-        return e.clientX;
-    }
-
     if (progressEl) {
-        progressEl.addEventListener('click', function(e) {
-            seek(getSeekClientX(e));
-        });
-        progressEl.addEventListener('touchend', function(e) {
-            if (e.changedTouches && e.changedTouches.length) seek(e.changedTouches[0].clientX);
-        });
+        function handleSeek(e) {
+            var x = e.changedTouches && e.changedTouches.length ? e.changedTouches[0].clientX : (e.touches && e.touches.length ? e.touches[0].clientX : e.clientX);
+            if (x != null) seek(x);
+        }
+        progressEl.addEventListener('click', handleSeek);
+        progressEl.addEventListener('touchend', handleSeek);
         progressEl.addEventListener('keydown', function(e) {
             if (!Number.isFinite(player.duration) || player.duration <= 0) return;
             var step = e.shiftKey ? 10 : 5;

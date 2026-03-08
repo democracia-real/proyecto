@@ -79,7 +79,12 @@
     function playLastTrackFromPrevAlbum(fromAlbumId) {
         var prevAlbumId = getPrevAlbumId(fromAlbumId);
         if (!prevAlbumId) return false;
-        switchAlbum(prevAlbumId, true, -1);
+        ensureAlbumData(prevAlbumId).then(function() {
+            var list = document.querySelector('.home-album-tracklist[data-album-id="' + prevAlbumId + '"]');
+            var tracks = list ? list.querySelectorAll('.home-album-track') : [];
+            var lastIdx = tracks.length > 0 ? tracks.length - 1 : 0;
+            switchAlbum(prevAlbumId, true, lastIdx);
+        });
         return true;
     }
 
@@ -401,7 +406,9 @@
             bindTrackEvents();
             updateAlbumActiveInfo(albumId);
             var tracks = getTracks();
-            var idx = (initialTrackIndex === -1 && tracks.length > 0) ? tracks.length - 1 : 0;
+            var idx = (typeof initialTrackIndex === 'number' && initialTrackIndex >= 0)
+                ? Math.min(initialTrackIndex, Math.max(0, tracks.length - 1))
+                : 0;
             setTrack(idx, autoPlayFirstTrack === true);
             if (!getTracks().length && nowEl) nowEl.textContent = 'No hay pistas disponibles';
             if (playerWrapEl) {
