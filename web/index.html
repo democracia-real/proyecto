@@ -464,11 +464,12 @@
                 <button type="button" class="home-album-tab" data-album-id="07">07. Web y Transparencia</button>
                 <button type="button" class="home-album-tab" data-album-id="08">08. Investigación Abierta</button>
             </div>
-            <div class="home-album-context" id="albumContext">
-                <p class="home-album-active" id="albumActiveInfo">Álbum activo: 00. Manifiesto Sonoro · 0 canciones</p>
-                <p class="home-album-hint">Arriba eliges álbum, aquí reproduces, y debajo ves las canciones del álbum seleccionado.</p>
-            </div>
+
             <div class="home-album-player-wrap">
+                <div class="home-album-player-header">
+                    <p class="home-album-active" id="albumActiveInfo">Álbum activo: 00. Manifiesto Sonoro · 0 canciones</p>
+                    <button type="button" class="home-album-btn" id="albumSelectBtn" aria-label="Seleccionar otro álbum">Seleccionar álbum</button>
+                </div>
                 <div class="home-album-player-top">
                     <div class="home-album-cover-wrap">
                         <img id="albumCover" class="home-album-cover" src="/imagenes/portadas/albums/00-manifiesto_sonoro.png" alt="Portada del álbum 00 Manifiesto Sonoro" loading="lazy">
@@ -520,6 +521,16 @@
                 <a href="#" id="albumShareX" target="_blank" rel="noopener" class="home-album-share-option">X (Twitter)</a>
                 <button type="button" id="albumShareCopy" class="home-album-share-option">Copiar enlace</button>
             </div>
+            <div id="albumSelectorModal" class="album-selector-modal" role="dialog" aria-modal="true" aria-labelledby="albumSelectorTitle" aria-hidden="true">
+                <div class="album-selector-backdrop" id="albumSelectorBackdrop"></div>
+                <div class="album-selector-box">
+                    <div class="album-selector-header">
+                        <h3 id="albumSelectorTitle" class="album-selector-title">Selecciona un álbum</h3>
+                        <button type="button" class="album-selector-close" id="albumSelectorClose" aria-label="Cerrar selector de álbum">&times;</button>
+                    </div>
+                    <div class="album-selector-body" id="albumSelectorList"></div>
+                </div>
+            </div>
             <p class="home-album-docs-link" id="albumDocsLink"><a href="/#album">Ver álbum completo y letras en Documentación →</a></p>
         </div>
     </section>
@@ -536,6 +547,10 @@
             </div>
 
             <div class="home-album-player-wrap" id="podcastPlayerWrap">
+                <div class="home-album-player-header">
+                    <p class="home-album-active" id="podcastActiveInfo">Episodio activo: Cargando…</p>
+                    <button type="button" class="home-album-btn" id="podcastSelectBtn" aria-label="Seleccionar episodio">Seleccionar episodio</button>
+                </div>
                 <div class="home-album-player-top">
                     <div class="home-album-cover-wrap">
                         <img id="podcastCover" class="home-album-cover" src="/imagenes/portadas/albums/01-diagnostico.png" alt="Portada del podcast" loading="lazy">
@@ -577,6 +592,16 @@
                 <a href="#" id="podcastShareWa" target="_blank" rel="noopener" class="home-album-share-option">WhatsApp</a>
                 <a href="#" id="podcastShareX" target="_blank" rel="noopener" class="home-album-share-option">X (Twitter)</a>
                 <button type="button" id="podcastShareCopy" class="home-album-share-option">Copiar enlace</button>
+            </div>
+            <div id="podcastSelectorModal" class="album-selector-modal" role="dialog" aria-modal="true" aria-labelledby="podcastSelectorTitle" aria-hidden="true">
+                <div class="album-selector-backdrop" id="podcastSelectorBackdrop"></div>
+                <div class="album-selector-box">
+                    <div class="album-selector-header">
+                        <h3 id="podcastSelectorTitle" class="album-selector-title">Selecciona un episodio</h3>
+                        <button type="button" class="album-selector-close" id="podcastSelectorClose" aria-label="Cerrar selector de episodios">&times;</button>
+                    </div>
+                    <div class="album-selector-body" id="podcastSelectorList"></div>
+                </div>
             </div>
         </div>
     </section>

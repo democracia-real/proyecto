@@ -28,6 +28,11 @@
     var muteBtn = document.getElementById('albumMute');
     var volumeInput = document.getElementById('albumVolume');
     var playerLyricBtn = document.getElementById('albumPlayerLyric');
+    var albumSelectBtn = document.getElementById('albumSelectBtn');
+    var albumSelectorModal = document.getElementById('albumSelectorModal');
+    var albumSelectorList = document.getElementById('albumSelectorList');
+    var albumSelectorCloseBtn = document.getElementById('albumSelectorClose');
+    var albumSelectorBackdrop = document.getElementById('albumSelectorBackdrop');
 
     if (!player || !tabsEl) return;
 
@@ -44,6 +49,7 @@
     var currentTrackIdx = 0;
     var lyricsCache = {};
     var loadPromises = {};
+    var albumCountPromises = {};
     var pendingAutoplayUnlock = false;
     var autoplayUnlockBound = false;
     var pendingSeekRatio = null;
@@ -117,12 +123,108 @@
         return n === 1 ? 'canción' : 'canciones';
     }
 
+    function getTrackCountForAlbum(albumId) {
+        var list = document.querySelector('.home-album-tracklist[data-album-id="' + albumId + '"]');
+        if (!list) return 0;
+        return list.querySelectorAll('.home-album-track').length;
+    }
+
     function updateAlbumActiveInfo(albumId) {
         if (!albumActiveInfoEl) return;
         var tab = tabsEl.querySelector('.home-album-tab[data-album-id="' + albumId + '"]');
         var albumLabel = tab ? tab.textContent.trim() : ('Álbum ' + albumId);
         var count = getTracks().length;
         albumActiveInfoEl.textContent = 'Álbum activo: ' + albumLabel + ' · ' + count + ' ' + trackWord(count);
+    }
+
+    function refreshAlbumSelectorActive() {
+        if (!albumSelectorList) return;
+        albumSelectorList.querySelectorAll('.album-selector-item[data-album-id]').forEach(function(btn) {
+            var isActive = btn.getAttribute('data-album-id') === currentAlbumId;
+            btn.classList.toggle('album-selector-item-active', isActive);
+            var stateEl = btn.querySelector('.album-selector-item-state');
+            if (stateEl) stateEl.textContent = isActive ? 'Activo' : '';
+        });
+    }
+
+    function refreshAlbumSelectorCounts() {
+        if (!albumSelectorList) return;
+        albumSelectorList.querySelectorAll('.album-selector-item[data-album-id]').forEach(function(btn) {
+            var albumId = btn.getAttribute('data-album-id');
+            var countEl = btn.querySelector('.album-selector-item-count');
+            if (!countEl || !albumId) return;
+            var count = getTrackCountForAlbum(albumId);
+            if (count > 0) {
+                countEl.textContent = count + ' ' + trackWord(count);
+                return;
+            }
+            if (lyricsCache[albumId] && Array.isArray(lyricsCache[albumId].tracks)) {
+                var cachedCount = lyricsCache[albumId].tracks.length;
+                countEl.textContent = cachedCount + ' ' + trackWord(cachedCount);
+                return;
+            }
+            countEl.textContent = '...';
+            if (!albumCountPromises[albumId]) {
+                albumCountPromises[albumId] = ensureAlbumData(albumId).then(function(data) {
+                    var resolvedCount = 0;
+                    if (data && Array.isArray(data.tracks)) {
+                        resolvedCount = data.tracks.length;
+                    } else {
+                        resolvedCount = getTrackCountForAlbum(albumId);
+                    }
+                    var row = albumSelectorList.querySelector('.album-selector-item[data-album-id="' + albumId + '"]');
+                    var rowCountEl = row ? row.querySelector('.album-selector-item-count') : null;
+                    if (rowCountEl) rowCountEl.textContent = resolvedCount + ' ' + trackWord(resolvedCount);
+                    return resolvedCount;
+                }).catch(function() {
+                    var row = albumSelectorList.querySelector('.album-selector-item[data-album-id="' + albumId + '"]');
+                    var rowCountEl = row ? row.querySelector('.album-selector-item-count') : null;
+                    if (rowCountEl) rowCountEl.textContent = 'N/D';
+                    return 0;
+                });
+            }
+        });
+    }
+
+    function closeAlbumSelector() {
+        if (!albumSelectorModal) return;
+        albumSelectorModal.setAttribute('aria-hidden', 'true');
+        albumSelectorModal.classList.remove('album-selector-modal-open');
+        document.body.style.overflow = '';
+        if (albumSelectBtn) albumSelectBtn.focus();
+    }
+
+    function openAlbumSelector() {
+        if (!albumSelectorModal || !albumSelectorList) return;
+        refreshAlbumSelectorActive();
+        albumSelectorModal.setAttribute('aria-hidden', 'false');
+        albumSelectorModal.classList.add('album-selector-modal-open');
+        document.body.style.overflow = 'hidden';
+        var firstBtn = albumSelectorList.querySelector('.album-selector-item-active') || albumSelectorList.querySelector('.album-selector-item');
+        if (firstBtn) firstBtn.focus();
+    }
+
+    function buildAlbumSelector() {
+        if (!albumSelectorList) return;
+        var tabs = Array.from(tabsEl.querySelectorAll('.home-album-tab[data-album-id]'));
+        albumSelectorList.innerHTML = '';
+        tabs.forEach(function(tabBtn) {
+            var albumId = tabBtn.getAttribute('data-album-id');
+            var label = tabBtn.textContent.trim();
+            var itemBtn = document.createElement('button');
+            itemBtn.type = 'button';
+            itemBtn.className = 'album-selector-item';
+            itemBtn.setAttribute('data-album-id', albumId);
+            itemBtn.setAttribute('aria-label', 'Cambiar a ' + label);
+            itemBtn.innerHTML = '<span>' + label + '</span><span class="album-selector-item-meta"><span class="album-selector-item-count">0 canciones</span><span class="album-selector-item-state"></span></span>';
+            itemBtn.addEventListener('click', function() {
+                closeAlbumSelector();
+                if (albumId && albumId !== currentAlbumId) switchAlbum(albumId, true);
+            });
+            albumSelectorList.appendChild(itemBtn);
+        });
+        refreshAlbumSelectorCounts();
+        refreshAlbumSelectorActive();
     }
 
     function buildTrackItem(track, index, audioPath) {
@@ -422,6 +524,8 @@
             if (currentAlbumId !== albumId) return;
             bindTrackEvents();
             updateAlbumActiveInfo(albumId);
+            refreshAlbumSelectorActive();
+            refreshAlbumSelectorCounts();
             var tracks = getTracks();
             var idx = (typeof initialTrackIndex === 'number' && initialTrackIndex >= 0)
                 ? Math.min(initialTrackIndex, Math.max(0, tracks.length - 1))
@@ -684,6 +788,17 @@
             openShare(currentTrackIdx >= 0 ? currentTrackIdx : 0, playerShareBtn);
         });
     }
+    if (albumSelectBtn) albumSelectBtn.addEventListener('click', openAlbumSelector);
+    if (albumSelectorCloseBtn) albumSelectorCloseBtn.addEventListener('click', closeAlbumSelector);
+    if (albumSelectorBackdrop) albumSelectorBackdrop.addEventListener('click', closeAlbumSelector);
+    if (albumSelectorModal) {
+        albumSelectorModal.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeAlbumSelector();
+            }
+        });
+    }
     document.addEventListener('click', function() {
         var dd = document.getElementById('albumShareDropdown');
         if (dd) { dd.setAttribute('aria-hidden', 'true'); dd.classList.remove('home-album-share-dropdown-open'); }
@@ -737,6 +852,7 @@
     });
 
     // --- Init ---
+    buildAlbumSelector();
     bindTrackEvents();
     setupTabsAccessibility();
     switchAlbum('00', false);
