@@ -1983,7 +1983,7 @@ input:focus-visible,
 .album-selector-modal {
     position: fixed;
     inset: 0;
-    z-index: 1100;
+    z-index: 10001;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2055,6 +2055,9 @@ input:focus-visible,
 .album-selector-body {
     overflow-y: auto;
     padding: var(--space-md);
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
 }
 
 .album-selector-item {
@@ -2372,9 +2375,14 @@ input:focus-visible,
     }
     .home-album-player-header .home-album-btn {
         width: 100%;
+        min-height: 44px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        border-color: var(--accent);
+        background: var(--accent-glow);
     }
     .home-album-cover-wrap {
-        width: min(52vw, 170px);
+        width: min(72vw, 230px);
         margin: 0 auto;
     }
     .home-album-now-wrap {
@@ -2480,7 +2488,7 @@ input:focus-visible,
         gap: 10px;
     }
     .home-podcast-cover-wrap {
-        width: min(52vw, 170px);
+        width: min(72vw, 230px);
         margin: 0 auto;
     }
     .home-podcast-controls {
@@ -2542,7 +2550,10 @@ input:focus-visible,
         max-width: 76px;
     }
     .home-album-cover-wrap {
-        width: min(62vw, 150px);
+        width: min(78vw, 250px);
+    }
+    .home-podcast-cover-wrap {
+        width: min(78vw, 250px);
     }
     .home-album-progress-row {
         gap: 5px;

@@ -185,6 +185,13 @@
         refreshPodcastSelectorActive();
     }
 
+    function mountPodcastSelectorModalToBody() {
+        if (!podcastSelectorModal) return;
+        if (podcastSelectorModal.parentElement !== document.body) {
+            document.body.appendChild(podcastSelectorModal);
+        }
+    }
+
     function updatePlayerUi() {
         var current = Number.isFinite(player.currentTime) ? player.currentTime : 0;
         var duration = Number.isFinite(player.duration) ? player.duration : 0;
@@ -360,6 +367,8 @@
         .catch(function() {
             if (nowEl) nowEl.textContent = 'Error al cargar el podcast.';
         });
+
+    mountPodcastSelectorModalToBody();
 
     if (playPauseBtn) {
         playPauseBtn.addEventListener('click', function() {

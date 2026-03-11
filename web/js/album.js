@@ -227,6 +227,13 @@
         refreshAlbumSelectorActive();
     }
 
+    function mountAlbumSelectorModalToBody() {
+        if (!albumSelectorModal) return;
+        if (albumSelectorModal.parentElement !== document.body) {
+            document.body.appendChild(albumSelectorModal);
+        }
+    }
+
     function buildTrackItem(track, index, audioPath) {
         var li = document.createElement('li');
         li.className = 'home-album-track';
@@ -852,6 +859,7 @@
     });
 
     // --- Init ---
+    mountAlbumSelectorModalToBody();
     buildAlbumSelector();
     bindTrackEvents();
     setupTabsAccessibility();
