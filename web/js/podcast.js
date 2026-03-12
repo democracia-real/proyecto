@@ -57,6 +57,7 @@
     var speedIdx = 0;
     var pendingSeekRatio = null;
     var suppressClickUntil = 0;
+    var lastTouchSeekAt = 0;
 
     function formatTime(seconds) {
         if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
@@ -319,6 +320,7 @@
         var rect = progressEl.getBoundingClientRect();
         if (!rect.width) return;
         var ratio = (clientX - rect.left) / rect.width;
+        if (!Number.isFinite(ratio)) return;
         ratio = Math.max(0, Math.min(1, ratio));
         trySeekToRatio(ratio);
     }
@@ -331,12 +333,7 @@
         }
         var targetTime = duration * ratio;
         pendingSeekRatio = null;
-        if (typeof player.fastSeek === 'function') {
-            try { player.fastSeek(targetTime); }
-            catch (err) { player.currentTime = targetTime; }
-        } else {
-            player.currentTime = targetTime;
-        }
+        player.currentTime = targetTime;
         updatePlayerUi();
         return true;
     }
@@ -443,10 +440,13 @@
             if (x != null) seek(x);
         }
         progressEl.addEventListener('click', function(e) {
+            // Chrome móvil puede disparar un click sintético tras touchend.
+            if (Date.now() - lastTouchSeekAt < 900) return;
             if (Date.now() < suppressClickUntil) return;
             handleSeek(e);
         });
         progressEl.addEventListener('touchend', function(e) {
+            lastTouchSeekAt = Date.now();
             suppressClickUntil = Date.now() + 450;
             handleSeek(e);
             e.preventDefault();
