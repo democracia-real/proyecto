@@ -500,6 +500,7 @@
                                 <input type="range" id="albumVolume" class="home-album-volume" min="0" max="1" step="0.01" value="1" aria-label="Volumen">
                             </div>
                             <div class="home-album-meta-actions">
+                                <button type="button" class="home-album-btn home-album-btn-tracks" id="albumTrackSelectorBtn" aria-label="Seleccionar canción del álbum actual">Seleccionar canción</button>
                                 <button type="button" class="home-album-btn" id="albumPlayerLyric" aria-label="Ver letra de la canción actual">📝 Ver letra</button>
                                 <button type="button" class="home-album-btn home-album-btn-share" id="albumPlayerShare" aria-label="Compartir esta canción">🔗 Compartir</button>
                             </div>
@@ -531,7 +532,16 @@
                     <div class="album-selector-body" id="albumSelectorList"></div>
                 </div>
             </div>
-            <p class="home-album-docs-link" id="albumDocsLink"><a href="/#album">Ver álbum completo y letras en Documentación →</a></p>
+            <div id="albumTrackSelectorModal" class="album-selector-modal" role="dialog" aria-modal="true" aria-labelledby="albumTrackSelectorTitle" aria-hidden="true">
+                <div class="album-selector-backdrop" id="albumTrackSelectorBackdrop"></div>
+                <div class="album-selector-box">
+                    <div class="album-selector-header">
+                        <h3 id="albumTrackSelectorTitle" class="album-selector-title">Canciones del álbum</h3>
+                        <button type="button" class="album-selector-close" id="albumTrackSelectorClose" aria-label="Cerrar selector de canciones">&times;</button>
+                    </div>
+                    <div class="album-selector-body" id="albumTrackSelectorList"></div>
+                </div>
+            </div>
         </div>
     </section>
 

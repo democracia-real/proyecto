@@ -11,7 +11,6 @@
     var player = document.getElementById('albumPlayer');
     var nowEl = document.getElementById('albumNow');
     var tabsEl = document.getElementById('albumTabs');
-    var docsLinkEl = document.getElementById('albumDocsLink');
     var btnPrev = document.getElementById('albumPrev');
     var btnNext = document.getElementById('albumNext');
     var albumSectionEl = document.getElementById('album');
@@ -33,13 +32,17 @@
     var albumSelectorList = document.getElementById('albumSelectorList');
     var albumSelectorCloseBtn = document.getElementById('albumSelectorClose');
     var albumSelectorBackdrop = document.getElementById('albumSelectorBackdrop');
+    var albumTrackSelectorBtn = document.getElementById('albumTrackSelectorBtn');
+    var albumTrackSelectorModal = document.getElementById('albumTrackSelectorModal');
+    var albumTrackSelectorList = document.getElementById('albumTrackSelectorList');
+    var albumTrackSelectorCloseBtn = document.getElementById('albumTrackSelectorClose');
+    var albumTrackSelectorBackdrop = document.getElementById('albumTrackSelectorBackdrop');
 
     if (!player || !tabsEl) return;
 
     var allLists = document.querySelectorAll('.home-album-tracklist[data-album-id]');
     if (!allLists.length) return;
 
-    var DOCS_URLS = { '00': '/#album', '01': '/docs/01-diagnostico/#album', '02': '/docs/02-problemas/#album', '03': '/docs/03-propuestas/', '04': '/docs/04-organizacion/', '05': '/docs/05-ia/', '06': '/docs/06-legal/', '07': '/docs/07-web/', '08': '/docs/08-investigacion/#album' };
     var LYRICS_URLS = { '00': '/audio/00-manifiesto_sonoro/lyrics.json', '01': '/audio/01-diagnostico/lyrics.json', '02': '/audio/02-problemas_estructurales/lyrics.json', '03': '/audio/03-propuestas_institucionales/lyrics.json', '04': '/audio/04-modelo_organizativo_partido/lyrics.json', '05': '/audio/05-uso_de_ia_y_automatizacion/lyrics.json', '06': '/audio/06-hoja_de_ruta_legal/lyrics.json', '07': '/audio/07-web_publica_y_transparencia/lyrics.json', '08': '/audio/08-investigacion_abierta/lyrics.json' };
     var ALBUM_SLUGS = { '00': '00-manifiesto_sonoro', '01': '01-diagnostico', '02': '02-problemas_estructurales', '03': '03-propuestas_institucionales', '04': '04-modelo_organizativo_partido', '05': '05-uso_de_ia_y_automatizacion', '06': '06-hoja_de_ruta_legal', '07': '07-web_publica_y_transparencia', '08': '08-investigacion_abierta' };
     // Activar solo cuando existan archivos en /imagenes/portadas/tracks/{album}-{n}.png
@@ -227,10 +230,74 @@
         refreshAlbumSelectorActive();
     }
 
+    function refreshTrackSelectorActive() {
+        if (!albumTrackSelectorList) return;
+        albumTrackSelectorList.querySelectorAll('.album-track-selector-item[data-track-index]').forEach(function(btn) {
+            var idx = parseInt(btn.getAttribute('data-track-index') || '-1', 10);
+            btn.classList.toggle('album-track-selector-item-active', idx === currentTrackIdx);
+        });
+    }
+
+    function buildTrackSelector() {
+        if (!albumTrackSelectorList) return;
+        var tracks = getTracks();
+        albumTrackSelectorList.innerHTML = '';
+        if (!tracks.length) {
+            albumTrackSelectorList.innerHTML = '<p class="home-album-loading">No hay canciones disponibles.</p>';
+            return;
+        }
+        tracks.forEach(function(trackEl, idx) {
+            var titleEl = trackEl.querySelector('.home-album-track-title');
+            var metaEl = trackEl.querySelector('.home-album-track-meta');
+            var title = titleEl ? titleEl.textContent.trim() : ('Canción ' + (idx + 1));
+            var meta = metaEl ? metaEl.textContent.trim() : '';
+            var itemBtn = document.createElement('button');
+            itemBtn.type = 'button';
+            itemBtn.className = 'album-track-selector-item';
+            itemBtn.setAttribute('data-track-index', String(idx));
+            itemBtn.setAttribute('aria-label', 'Seleccionar canción ' + title);
+            itemBtn.innerHTML =
+                '<span class="album-track-selector-num">' + (idx + 1) + '</span>' +
+                '<span class="album-track-selector-title">' + title + '</span>' +
+                '<span class="album-track-selector-meta">' + meta + '</span>';
+            itemBtn.addEventListener('click', function() {
+                closeTrackSelector();
+                setTrack(idx, true);
+            });
+            albumTrackSelectorList.appendChild(itemBtn);
+        });
+        refreshTrackSelectorActive();
+    }
+
+    function closeTrackSelector() {
+        if (!albumTrackSelectorModal) return;
+        albumTrackSelectorModal.setAttribute('aria-hidden', 'true');
+        albumTrackSelectorModal.classList.remove('album-selector-modal-open');
+        document.body.style.overflow = '';
+        if (albumTrackSelectorBtn) albumTrackSelectorBtn.focus();
+    }
+
+    function openTrackSelector() {
+        if (!albumTrackSelectorModal || !albumTrackSelectorList) return;
+        buildTrackSelector();
+        albumTrackSelectorModal.setAttribute('aria-hidden', 'false');
+        albumTrackSelectorModal.classList.add('album-selector-modal-open');
+        document.body.style.overflow = 'hidden';
+        var activeBtn = albumTrackSelectorList.querySelector('.album-track-selector-item-active') || albumTrackSelectorList.querySelector('.album-track-selector-item');
+        if (activeBtn) activeBtn.focus();
+    }
+
     function mountAlbumSelectorModalToBody() {
         if (!albumSelectorModal) return;
         if (albumSelectorModal.parentElement !== document.body) {
             document.body.appendChild(albumSelectorModal);
+        }
+    }
+
+    function mountTrackSelectorModalToBody() {
+        if (!albumTrackSelectorModal) return;
+        if (albumTrackSelectorModal.parentElement !== document.body) {
+            document.body.appendChild(albumTrackSelectorModal);
         }
     }
 
@@ -522,10 +589,6 @@
             ul.setAttribute('aria-hidden', isActive ? 'false' : 'true');
         });
 
-        if (docsLinkEl && DOCS_URLS[albumId]) {
-            docsLinkEl.innerHTML = '<a href="' + DOCS_URLS[albumId] + '">Ver álbum completo y letras en Documentación →</a>';
-        }
-
         if (nowEl) nowEl.textContent = 'Cargando pistas…';
         ensureAlbumData(albumId).finally(function() {
             if (currentAlbumId !== albumId) return;
@@ -533,6 +596,7 @@
             updateAlbumActiveInfo(albumId);
             refreshAlbumSelectorActive();
             refreshAlbumSelectorCounts();
+            buildTrackSelector();
             var tracks = getTracks();
             var idx = (typeof initialTrackIndex === 'number' && initialTrackIndex >= 0)
                 ? Math.min(initialTrackIndex, Math.max(0, tracks.length - 1))
@@ -559,6 +623,7 @@
         tracks.forEach(function(el, j) { el.classList.toggle('home-album-track-current', j === index); });
         updateCover(index, trackTitle);
         applyBeatForTrack(index);
+        refreshTrackSelectorActive();
         updateProgressUi();
         setPlayPauseLabel();
         if (autoPlay !== false && src) tryPlayWithAutoplayFallback();
@@ -795,6 +860,17 @@
             openShare(currentTrackIdx >= 0 ? currentTrackIdx : 0, playerShareBtn);
         });
     }
+    if (albumTrackSelectorBtn) albumTrackSelectorBtn.addEventListener('click', openTrackSelector);
+    if (albumTrackSelectorCloseBtn) albumTrackSelectorCloseBtn.addEventListener('click', closeTrackSelector);
+    if (albumTrackSelectorBackdrop) albumTrackSelectorBackdrop.addEventListener('click', closeTrackSelector);
+    if (albumTrackSelectorModal) {
+        albumTrackSelectorModal.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeTrackSelector();
+            }
+        });
+    }
     if (albumSelectBtn) albumSelectBtn.addEventListener('click', openAlbumSelector);
     if (albumSelectorCloseBtn) albumSelectorCloseBtn.addEventListener('click', closeAlbumSelector);
     if (albumSelectorBackdrop) albumSelectorBackdrop.addEventListener('click', closeAlbumSelector);
@@ -860,7 +936,9 @@
 
     // --- Init ---
     mountAlbumSelectorModalToBody();
+    mountTrackSelectorModalToBody();
     buildAlbumSelector();
+    buildTrackSelector();
     bindTrackEvents();
     setupTabsAccessibility();
     switchAlbum('00', false);
