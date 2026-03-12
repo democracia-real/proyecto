@@ -210,6 +210,9 @@ Fase 3 (rompedor): modo "showcase"
 - [ ] FASE 1: revisar `Cache-Control` recomendado:
   - `audio/*`: `public, max-age=31536000, immutable`
   - `*.json` de catálogo: `public, max-age=300, must-revalidate`
+- [ ] FASE 1: validar seek tipo Spotify/YouTube en Blob:
+  - confirmar `Range` -> respuesta `206 Partial Content` en archivos de audio
+  - revisar codificación de audio para "fast start" (metadatos al inicio: MP3 VBR header / M4A moov atom)
 - [ ] FASE 2 (después): instrumentar medición real de latencia/TTFB (Application Insights independiente + RUM en frontend)
 - [ ] FASE 2: definir umbral GO/NO-GO para CDN/Front Door con datos reales (latencia p95, tráfico internacional, GB/mes)
 - [ ] FASE 2: añadir CDN/Front Door solo si compensa en rendimiento/coste
