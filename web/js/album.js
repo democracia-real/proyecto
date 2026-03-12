@@ -487,23 +487,26 @@
             pendingSeekRatio = ratio;
             return false;
         }
-        var targetTime = clampToBufferedRange(duration * ratio, duration);
+        var targetTime = duration * ratio;
+        if (!canSeekToTime(targetTime)) {
+            pendingSeekRatio = ratio;
+            return false;
+        }
         player.currentTime = targetTime;
         pendingSeekRatio = null;
         updateProgressUi();
         return true;
     }
 
-    function clampToBufferedRange(targetTime, duration) {
-        if (!Number.isFinite(targetTime)) return 0;
-        var safeTarget = Math.max(0, Math.min(duration, targetTime));
-        if (!player.buffered || player.buffered.length === 0) return safeTarget;
-        var bufferedStart = player.buffered.start(0);
-        var bufferedEnd = player.buffered.end(player.buffered.length - 1);
-        if (!Number.isFinite(bufferedStart) || !Number.isFinite(bufferedEnd) || bufferedEnd < bufferedStart) {
-            return safeTarget;
+    function canSeekToTime(targetTime) {
+        if (!Number.isFinite(targetTime) || targetTime < 0) return false;
+        if (!player.seekable || player.seekable.length === 0) return false;
+        for (var i = 0; i < player.seekable.length; i++) {
+            var start = player.seekable.start(i);
+            var end = player.seekable.end(i);
+            if (targetTime >= start && targetTime <= end) return true;
         }
-        return Math.max(bufferedStart, Math.min(bufferedEnd, safeTarget));
+        return false;
     }
 
     function applyPendingSeekIfReady() {

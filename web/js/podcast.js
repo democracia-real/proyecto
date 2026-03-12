@@ -56,6 +56,8 @@
     var SPEEDS = [1, 1.5, 2];
     var speedIdx = 0;
     var pendingSeekRatio = null;
+    var seekInFlight = false;
+    var resumeAfterSeek = false;
     var suppressClickUntil = 0;
     var lastTouchSeekAt = 0;
 
@@ -332,23 +334,20 @@
             return false;
         }
         var targetTime = duration * ratio;
-        targetTime = clampToBufferedRange(targetTime, duration);
+        if (player.seekable && player.seekable.length > 0) {
+            var seekableStart = player.seekable.start(0);
+            var seekableEnd = player.seekable.end(player.seekable.length - 1);
+            if (Number.isFinite(seekableStart) && Number.isFinite(seekableEnd) && seekableEnd >= seekableStart) {
+                targetTime = Math.min(seekableEnd, Math.max(seekableStart, targetTime));
+            }
+        }
         pendingSeekRatio = null;
+        seekInFlight = true;
+        resumeAfterSeek = !player.paused;
+        if (resumeAfterSeek) player.pause();
         player.currentTime = targetTime;
         updatePlayerUi();
         return true;
-    }
-
-    function clampToBufferedRange(targetTime, duration) {
-        if (!Number.isFinite(targetTime)) return 0;
-        var safeTarget = Math.max(0, Math.min(duration, targetTime));
-        if (!player.buffered || player.buffered.length === 0) return safeTarget;
-        var bufferedStart = player.buffered.start(0);
-        var bufferedEnd = player.buffered.end(player.buffered.length - 1);
-        if (!Number.isFinite(bufferedStart) || !Number.isFinite(bufferedEnd) || bufferedEnd < bufferedStart) {
-            return safeTarget;
-        }
-        return Math.max(bufferedStart, Math.min(bufferedEnd, safeTarget));
     }
 
     function applyPendingSeekIfReady() {
@@ -485,6 +484,19 @@
     }
 
     player.addEventListener('timeupdate', updatePlayerUi);
+    player.addEventListener('seeking', function() {
+        seekInFlight = true;
+    });
+    player.addEventListener('seeked', function() {
+        seekInFlight = false;
+        updatePlayerUi();
+        if (resumeAfterSeek) {
+            resumeAfterSeek = false;
+            player.play().catch(function() {});
+            return;
+        }
+        resumeAfterSeek = false;
+    });
     player.addEventListener('loadedmetadata', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('durationchange', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('progress', applyPendingSeekIfReady);
@@ -503,6 +515,7 @@
         updatePlayerUi();
     });
     player.addEventListener('waiting', function() {
+        if (seekInFlight) return;
         if (nowStateEl) nowStateEl.textContent = 'Cargando…';
     });
     player.addEventListener('error', function() {
