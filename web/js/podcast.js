@@ -6,7 +6,7 @@
     'use strict';
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    var PODCAST_INDEX_URL = '/audio/podcast/index.json?v=20260312mp3';
+    var PODCAST_INDEX_URL = '/audio/podcast/index.json?v=20260313hls';
     var COVER_BY_MODULE = {
         '00': '/imagenes/portadas/albums/00-manifiesto_sonoro.png',
         '01': '/imagenes/portadas/albums/01-diagnostico.png',
@@ -53,6 +53,7 @@
     var episodes = [];
     var currentIdx = -1;
     var audioPath = '';
+    var hlsInstance = null;
     var SPEEDS = [1, 1.5, 2];
     var speedIdx = 0;
     var pendingSeekRatio = null;
@@ -73,6 +74,61 @@
         if (episode.audioUrl) return episode.audioUrl;
         if (!episode.audioFile) return '';
         return (audioPath || '') + encodeURIComponent(episode.audioFile);
+    }
+
+    function getEpisodeHlsUrl(episode) {
+        if (!episode) return '';
+        return episode.hlsUrl || '';
+    }
+
+    function destroyHlsInstance() {
+        if (!hlsInstance) return;
+        try { hlsInstance.destroy(); } catch (err) {}
+        hlsInstance = null;
+    }
+
+    function loadEpisodeSource(ep, autoPlay) {
+        var hlsUrl = getEpisodeHlsUrl(ep);
+        var fallbackSrc = getEpisodeSrc(ep);
+        destroyHlsInstance();
+
+        if (hlsUrl && window.Hls && typeof window.Hls.isSupported === 'function' && window.Hls.isSupported()) {
+            hlsInstance = new window.Hls({
+                enableWorker: true,
+                lowLatencyMode: false,
+                backBufferLength: 30
+            });
+            hlsInstance.attachMedia(player);
+            hlsInstance.on(window.Hls.Events.MEDIA_ATTACHED, function() {
+                hlsInstance.loadSource(hlsUrl);
+            });
+            hlsInstance.on(window.Hls.Events.MANIFEST_PARSED, function() {
+                if (autoPlay) player.play().catch(function() {});
+            });
+            hlsInstance.on(window.Hls.Events.ERROR, function(_event, data) {
+                if (!data || !data.fatal) return;
+                destroyHlsInstance();
+                if (fallbackSrc) {
+                    player.src = fallbackSrc;
+                    player.load();
+                    if (autoPlay) player.play().catch(function() {});
+                }
+            });
+            return;
+        }
+
+        if (hlsUrl && player.canPlayType('application/vnd.apple.mpegurl')) {
+            player.src = hlsUrl;
+            player.load();
+            if (autoPlay) player.play().catch(function() {});
+            return;
+        }
+
+        if (fallbackSrc) {
+            player.src = fallbackSrc;
+            player.load();
+            if (autoPlay) player.play().catch(function() {});
+        }
     }
 
     function getEpisodeCover(episode) {
@@ -225,12 +281,7 @@
         if (!episodes.length || index < 0 || index >= episodes.length) return;
         currentIdx = index;
         var ep = episodes[index];
-        var src = getEpisodeSrc(ep);
-        if (src) {
-            player.src = src;
-            // Forzar carga temprana de metadata para habilitar seek en M4A largos.
-            player.load();
-        }
+        loadEpisodeSource(ep, autoPlay === true);
         if (nowEl) nowEl.textContent = ep.title || 'Episodio';
         if (coverEl) {
             coverEl.src = getEpisodeCover(ep);
@@ -246,9 +297,6 @@
 
         player.playbackRate = SPEEDS[speedIdx];
         updatePlayerUi();
-        if (autoPlay === true && src) {
-            player.play().catch(function() {});
-        }
     }
 
     function renderEpisodes() {
@@ -539,6 +587,7 @@
             e.stopPropagation();
         });
     }
+    window.addEventListener('beforeunload', destroyHlsInstance);
     window.addEventListener('hashchange', function() {
         applyPodcastHash(window.location.hash);
     });
