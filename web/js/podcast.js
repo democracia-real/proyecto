@@ -81,6 +81,10 @@
         return episode.hlsUrl || '';
     }
 
+    function shouldForceMp3Fallback() {
+        return false;
+    }
+
     function destroyHlsInstance() {
         if (!hlsInstance) return;
         try { hlsInstance.destroy(); } catch (err) {}
@@ -92,7 +96,7 @@
         var fallbackSrc = getEpisodeSrc(ep);
         destroyHlsInstance();
 
-        if (hlsUrl && window.Hls && typeof window.Hls.isSupported === 'function' && window.Hls.isSupported()) {
+        if (!shouldForceMp3Fallback() && hlsUrl && window.Hls && typeof window.Hls.isSupported === 'function' && window.Hls.isSupported()) {
             hlsInstance = new window.Hls({
                 enableWorker: true,
                 lowLatencyMode: false,
