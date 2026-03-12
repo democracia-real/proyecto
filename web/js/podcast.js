@@ -56,6 +56,8 @@
     var SPEEDS = [1, 1.5, 2];
     var speedIdx = 0;
     var pendingSeekRatio = null;
+    var seekInFlight = false;
+    var resumeAfterSeek = false;
     var suppressClickUntil = 0;
     var lastTouchSeekAt = 0;
 
@@ -340,6 +342,9 @@
             }
         }
         pendingSeekRatio = null;
+        seekInFlight = true;
+        resumeAfterSeek = !player.paused;
+        if (resumeAfterSeek) player.pause();
         player.currentTime = targetTime;
         updatePlayerUi();
         return true;
@@ -479,6 +484,19 @@
     }
 
     player.addEventListener('timeupdate', updatePlayerUi);
+    player.addEventListener('seeking', function() {
+        seekInFlight = true;
+    });
+    player.addEventListener('seeked', function() {
+        seekInFlight = false;
+        updatePlayerUi();
+        if (resumeAfterSeek) {
+            resumeAfterSeek = false;
+            player.play().catch(function() {});
+            return;
+        }
+        resumeAfterSeek = false;
+    });
     player.addEventListener('loadedmetadata', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('durationchange', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('progress', applyPendingSeekIfReady);
@@ -497,6 +515,7 @@
         updatePlayerUi();
     });
     player.addEventListener('waiting', function() {
+        if (seekInFlight) return;
         if (nowStateEl) nowStateEl.textContent = 'Cargando…';
     });
     player.addEventListener('error', function() {
