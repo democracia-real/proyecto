@@ -56,8 +56,6 @@
     var SPEEDS = [1, 1.5, 2];
     var speedIdx = 0;
     var pendingSeekRatio = null;
-    var pendingSeekVerifyTimer = null;
-    var pendingSeekRetryCount = 0;
     var suppressClickUntil = 0;
 
     function formatTime(seconds) {
@@ -332,48 +330,22 @@
             return false;
         }
         var targetTime = duration * ratio;
-        pendingSeekRatio = ratio;
-        pendingSeekRetryCount = 0;
-        player.currentTime = targetTime;
+        pendingSeekRatio = null;
+        if (typeof player.fastSeek === 'function') {
+            try { player.fastSeek(targetTime); }
+            catch (err) { player.currentTime = targetTime; }
+        } else {
+            player.currentTime = targetTime;
+        }
         updatePlayerUi();
-        schedulePendingSeekVerification();
         return true;
     }
 
     function applyPendingSeekIfReady() {
         if (pendingSeekRatio == null) return;
-        trySeekToRatio(pendingSeekRatio);
-    }
-
-    function clearPendingSeekVerification() {
-        if (pendingSeekVerifyTimer) {
-            clearTimeout(pendingSeekVerifyTimer);
-            pendingSeekVerifyTimer = null;
-        }
-    }
-
-    function schedulePendingSeekVerification() {
-        clearPendingSeekVerification();
-        pendingSeekVerifyTimer = setTimeout(verifyPendingSeekApplied, 180);
-    }
-
-    function verifyPendingSeekApplied() {
-        pendingSeekVerifyTimer = null;
-        if (pendingSeekRatio == null) return;
-        var duration = Number.isFinite(player.duration) ? player.duration : 0;
-        if (duration <= 0) return;
-        var targetTime = duration * pendingSeekRatio;
-        var current = Number.isFinite(player.currentTime) ? player.currentTime : 0;
-        if (Math.abs(current - targetTime) <= 1.25) {
-            pendingSeekRatio = null;
-            pendingSeekRetryCount = 0;
-            updatePlayerUi();
-            return;
-        }
-        if (pendingSeekRetryCount >= 8) return;
-        pendingSeekRetryCount += 1;
-        player.currentTime = targetTime;
-        schedulePendingSeekVerification();
+        var ratio = pendingSeekRatio;
+        pendingSeekRatio = null;
+        trySeekToRatio(ratio);
     }
 
     fetch(PODCAST_INDEX_URL)
@@ -500,17 +472,6 @@
     }
 
     player.addEventListener('timeupdate', updatePlayerUi);
-    player.addEventListener('seeked', function() {
-        pendingSeekRetryCount = 0;
-        if (pendingSeekRatio == null) return;
-        var duration = Number.isFinite(player.duration) ? player.duration : 0;
-        if (duration <= 0) return;
-        var targetTime = duration * pendingSeekRatio;
-        if (Math.abs(player.currentTime - targetTime) <= 1.25) {
-            pendingSeekRatio = null;
-            clearPendingSeekVerification();
-        }
-    });
     player.addEventListener('loadedmetadata', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('durationchange', function() { updatePlayerUi(); applyPendingSeekIfReady(); });
     player.addEventListener('progress', applyPendingSeekIfReady);
