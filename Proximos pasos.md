@@ -213,6 +213,12 @@ Fase 3 (rompedor): modo "showcase"
 - [ ] FASE 1: validar seek tipo Spotify/YouTube en Blob:
   - confirmar `Range` -> respuesta `206 Partial Content` en archivos de audio
   - revisar codificación de audio para "fast start" (metadatos al inicio: MP3 VBR header / M4A moov atom)
+- [ ] FASE 1: estrategia HLS (podcast) por compatibilidad de navegador:
+  - mantener HLS activo en Firefox (desktop/móvil) y Chrome desktop (donde ya funciona)
+  - aplicar fallback a MP3 en Chrome móvil hasta cerrar causa raíz de reproducción/seek
+  - migrar HLS a fMP4 (CMAF: `init.mp4` + segmentos `.m4s`) con calma, evitando TS en móvil
+  - revalidar HLS fMP4 en Chrome móvil con 1 episodio piloto antes de extender a todos
+  - criterio de salida: mismo comportamiento de seek en Chrome móvil sin errores durante 3 días de pruebas
 - [ ] FASE 2 (después): instrumentar medición real de latencia/TTFB (Application Insights independiente + RUM en frontend)
 - [ ] FASE 2: definir umbral GO/NO-GO para CDN/Front Door con datos reales (latencia p95, tráfico internacional, GB/mes)
 - [ ] FASE 2: añadir CDN/Front Door solo si compensa en rendimiento/coste

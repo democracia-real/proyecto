@@ -82,7 +82,12 @@
     }
 
     function shouldForceMp3Fallback() {
-        return false;
+        var ua = navigator.userAgent || '';
+        var isAndroid = /Android/i.test(ua);
+        var isChromeMobile = /Chrome\/\d+/i.test(ua) && /Mobile/i.test(ua);
+        var isOtherChromium = /EdgA\/|OPR\/|SamsungBrowser\//i.test(ua);
+        // Fallback temporal: HLS falla en Chrome móvil.
+        return isAndroid && isChromeMobile && !isOtherChromium;
     }
 
     function destroyHlsInstance() {
