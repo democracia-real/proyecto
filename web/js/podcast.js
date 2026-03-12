@@ -332,6 +332,13 @@
             return false;
         }
         var targetTime = duration * ratio;
+        if (player.seekable && player.seekable.length > 0) {
+            var seekableStart = player.seekable.start(0);
+            var seekableEnd = player.seekable.end(player.seekable.length - 1);
+            if (Number.isFinite(seekableStart) && Number.isFinite(seekableEnd) && seekableEnd >= seekableStart) {
+                targetTime = Math.min(seekableEnd, Math.max(seekableStart, targetTime));
+            }
+        }
         pendingSeekRatio = null;
         player.currentTime = targetTime;
         updatePlayerUi();
