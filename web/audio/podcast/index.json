@@ -6,49 +6,49 @@
       "id": "01",
       "module": "01",
       "title": "01. Diagnóstico",
-      "audioFile": "01-diagnostico.m4a"
+      "audioFile": "01-diagnostico.mp3"
     },
     {
       "id": "02",
       "module": "02",
       "title": "02. Problemas Estructurales",
-      "audioFile": "02-problemas_estructurales.m4a"
+      "audioFile": "02-problemas_estructurales.mp3"
     },
     {
       "id": "03",
       "module": "03",
       "title": "03. Propuestas Institucionales",
-      "audioFile": "03-propuestas_institucionales.m4a"
+      "audioFile": "03-propuestas_institucionales.mp3"
     },
     {
       "id": "04",
       "module": "04",
       "title": "04. Modelo Organizativo del Partido",
-      "audioFile": "04-modelo_organizativo_partido.m4a"
+      "audioFile": "04-modelo_organizativo_partido.mp3"
     },
     {
       "id": "05",
       "module": "05",
       "title": "05. Uso de IA y Automatización",
-      "audioFile": "05-uso_de_ia_y_automatizacion.m4a"
+      "audioFile": "05-uso_de_ia_y_automatizacion.mp3"
     },
     {
       "id": "06",
       "module": "06",
       "title": "06. Hoja de Ruta Legal",
-      "audioFile": "06-hoja_de_ruta_legal.m4a"
+      "audioFile": "06-hoja_de_ruta_legal.mp3"
     },
     {
       "id": "07",
       "module": "07",
       "title": "07. Web Pública y Transparencia",
-      "audioFile": "07_web_publica_y_transparencia.m4a"
+      "audioFile": "07_web_publica_y_transparencia.mp3"
     },
     {
       "id": "08",
       "module": "08",
       "title": "08. Investigación Abierta",
-      "audioFile": "08-investigacion_abierta.m4a"
+      "audioFile": "08-investigacion_abierta.mp3"
     }
   ]
 }

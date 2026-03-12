@@ -6,7 +6,7 @@
     'use strict';
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    var PODCAST_INDEX_URL = '/audio/podcast/index.json';
+    var PODCAST_INDEX_URL = '/audio/podcast/index.json?v=20260312mp3';
     var COVER_BY_MODULE = {
         '00': '/imagenes/portadas/albums/00-manifiesto_sonoro.png',
         '01': '/imagenes/portadas/albums/01-diagnostico.png',
