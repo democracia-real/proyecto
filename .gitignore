@@ -58,3 +58,4 @@ __pycache__/
 *.pyo
 .venv/
 venv/
+video_intro/

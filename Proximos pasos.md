@@ -170,6 +170,11 @@ Fase 3 (rompedor): modo "showcase"
 - [ ] Vídeos cortos divulgativos
 - [ ] Canciones del álbum como contenido viral
 - [ ] Crear contenido multimedia como imagenes representativas de cada tema.
+- [ ] **Vídeo de introducción animado** (5-10 min, estilo Kurzgesagt/EconómiosCon IA):
+  - tono: directo, datos reales, ni facha ni progre, optimista sobre el cambio
+  - herramientas candidatas: Kling 3.0, Hailuo (Minimax), Runway Gen-4, Sora
+  - flujo recomendado: guion → storyboard → generación escena a escena → montaje + voz IA → música del álbum
+  - subir a YouTube como "tráiler oficial del proyecto" + recortar clips de 30-60s para redes
 
 ### Fase 4.1: Guía de Lanzamiento (álbum sampler)
 - [ ] Redactar guía breve de tono y narrativa: "Ni facha, ni progre: datos, diseño y acción"
