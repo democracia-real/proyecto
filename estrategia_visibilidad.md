@@ -65,7 +65,7 @@ El único algoritmo que amplifica contenido nuevo sin audiencia previa. Un víde
 
 ## Orden de ejecución — El lunes
 
-1. Crear cuentas: Twitter/X, Reddit, Instagram, TikTok — mismo día
+1. Cuentas creadas: Twitter/X e Instagram. Pendientes: Reddit y TikTok.
 2. **9:00** — Publicar en r/spain
 3. **10:00** — Responder a 5 tuits de políticos con datos
 4. **11:00** — Enviar email a Rubén Gisbert
