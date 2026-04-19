@@ -1,274 +1,125 @@
 # Próximos Pasos del Proyecto
 
-*Última actualización: 1 de febrero 2026*
-
-## Resumen de Estado Actual
-
-### Completado ✅
-
-| Área | Estado | Notas |
-|------|--------|-------|
-| **Documentación base** | ✅ | 8 módulos con 80+ documentos |
-| **Web estática (SWA)** | ✅ | Desplegada en democraciareal.es |
-| **Dominio personalizado** | ✅ | democraciareal.es (DNS en Cloudflare) |
-| **Chatbot IA** | ✅ | Azure Function + Foundry Agent funcionando |
-| **Indexación RAG** | ✅ | Documentos indexados en Azure AI Search |
-| **i18n básico** | ✅ | ES, CA, EU, GL, EN (landing page) |
-| **SEO básico** | ✅ | robots.txt, sitemap.xml, meta tags |
-| **Álbum de Diagnóstico** | ✅ | 5 canciones con letras, reproductor web, compartir |
-| **Filosofía "Diagnóstico + Principios + Mecanismo"** | ✅ | Todos los documentos revisados y alineados |
-| **Documentos pendientes creados** | ✅ | 20+ documentos esqueleto con contenido base |
-| **Datos reales módulo 02** | ✅ | Educación, sanidad, energía, seguridad, vivienda, inmigración, fondos europeos con datos verificados |
-| **Gobernanza y consenso** | ✅ | Afiliados, donaciones, forks, democracia líquida |
-| **Visión estratégica (Dalio)** | ✅ | Dashboard indicadores, disciplina fiscal, líneas de investigación |
-
-### Sesión anterior ✅
-
-| Acción | Estado |
-|--------|--------|
-| **Contrapesos democráticos** — Sección en `gobernanza_consenso_afiliacion.md` con 5 mecanismos (delegación experta, visión/ejecución, academia ciudadanía, simulador IA, presupuesto intergeneracional) | ✅ |
-| **Informe de impacto IA** — Añadido en `planificacion_largo_plazo.md` como requisito previo a votaciones | ✅ |
-| **Academia de Ciudadanía** — Añadida en `participacion_ciudadana.md` como contexto técnico antes de votar | ✅ |
-| **Visor Markdown universal** — `viewer.html` + `viewer.js` que renderiza cualquier `.md` del repo sin duplicar contenido | ✅ |
-| **Actualización web docs** — 8 módulos con todos los documentos listados en sidebar, links al viewer | ✅ |
-| **CSP actualizado** — Permite `marked.js` (CDN) y `raw.githubusercontent.com` para cargar `.md` | ✅ |
-| **Limpieza** — Eliminadas 69 subpáginas HTML stub (ya no necesarias gracias al viewer) | ✅ |
-
-### Sesión actual ✅
-
-| Acción | Estado |
-|--------|--------|
-| **Auditoría Fondos Europeos** — Nuevo documento `auditoria_fondos_europeos.md` con diagnóstico completo, indicadores de opacidad y mecanismo propuesto | ✅ |
-| **Inmigración e Integración** — Nuevo documento `inmigracion_e_integracion.md` con datos demográficos, ausencia de modelo, comparativa internacional (Canadá, Alemania, Dinamarca) y mecanismo (Consejo independiente) | ✅ |
-| **Rendición de cuentas en catástrofes** — Nueva sección en `corrupcion_e_impunidad.md` con patrón de impunidad (DANA, La Palma, COVID, Santiago), mecanismos de mando único automático y comisión independiente | ✅ |
-| **Team Mirai y partidos IA** — Añadidos en `tematicas_emergentes_y_modelos_programaticos.md`: Team Mirai (Japón, 11 escaños), Shinsei no Michi, relevancia para nuestro proyecto | ✅ |
-| **Web actualizada** — Nuevo documento de inmigración añadido a navegación (`docs-nav.js`) y labels (`viewer.js`) | ✅ |
-| **Temas parciales cumplimentados (módulo 02)** — Nuevos documentos: `despoblacion_rural_y_equilibrio_territorial.md`, `salud_mental_y_soledad_no_deseada.md`, `innovacion_y_ciencia_fuga_de_cerebros.md`, `turismo_vs_industria.md`, `justicia_lenta_y_analogica.md` + navegación y README actualizados | ✅ |
-| **Agenda 08 actualizada** — Se añaden líneas de investigación en `preguntas_abiertas.md` y `tematicas_emergentes_y_modelos_programaticos.md` para soberanía estratégica, natalidad/conciliación, justicia intergeneracional y simplificación normativa | ✅ |
-
-### Infraestructura Web: Hecha
-
-- **DNS/SSL**: No volver a tocar. Cloudflare + HTTPS forzado y redirecciones limpias operativos.
-- **robots.txt y sitemap.xml**: Configurados; Google rastreando.
+*Última actualización: 13 marzo 2026*
 
 ---
 
-## Siguiente Paso Inmediato
+## Estado Actual — Todo lo que está hecho ✅
 
-### 1. Contrapesos democráticos: reforzar el modelo de gobernanza
-
-La pregunta "¿no se corre el riesgo de que el pueblo no sepa gestionar a largo plazo?" ya tiene respuesta parcial en el repo (paneles de expertos, evaluación de impacto, planificación a largo plazo), pero conviene consolidarla en un solo lugar. Tareas:
-
-| Tarea | Dónde | Qué hacer |
-|-------|-------|-----------|
-| **Delegación por expertiz** | `gobernanza_consenso_afiliacion.md` | Ya existe la sección de "delegación revocable". Reforzar con el concepto de democracia líquida donde el ciudadano puede delegar en un experto y recuperar su voto en cualquier momento. |
-| **Impacto a largo plazo** | `planificacion_largo_plazo.md` | Ya existe. Añadir que la IA debe publicar informe de impacto a 5/10/20 años **antes** de cualquier votación popular sobre temas estructurales. |
-| **Separación visión/ejecución** | `gobernanza_consenso_afiliacion.md` | Clarificar: el pueblo elige la **dirección** ("queremos soberanía energética"), los expertos diseñan la **ejecución** (qué mix, qué almacenamiento). |
-| **Presupuesto intergeneracional** | `disciplina_fiscal_y_deuda.md` | Ya creado con la "factura intergeneracional". Reforzar que es un contrapeso contra el populismo de deuda. |
-
-**Qué modelo usar**: Cursor (este asistente) — son ediciones en documentos existentes.
-
-### 2. Investigación profunda: rellenar [PENDIENTE] restantes
-
-Los módulos 03-08 todavía tienen campos `[PENDIENTE]` en muchos documentos. Priorizar:
-
-| Prioridad | Documentos | Tipo de datos |
-|-----------|-----------|---------------|
-| **Alta** | `reforma_administrativa.md`, `reforma_fiscal.md` | Datos de eficiencia, comparativa UE |
-| **Alta** | `estatutos_base.md`, `democracia_interna.md` | Contenido legal, modelos de partidos |
-| **Media** | `soberania_ia_europa.md` | Datos de dependencia tecnológica |
-| **Media** | `portal_transparencia.md`, `participacion_online.md` | Especificaciones técnicas |
-| **Baja** | `colaboradores.md`, `fuentes_datos.md` | Catálogos de referencia |
-
-**Qué modelo usar**: **Gemini con Deep Research** o **ChatGPT 5.2 con Investigación avanzada** para datos y fuentes reales. Cursor para integrarlos en los documentos.
-
-### 3. Comprobar nombre en Registro de Partidos (legal)
-
-**Antes de constituir**: Verificar en el **Registro de Partidos Políticos del Ministerio del Interior** si el nombre "Democracia Real" (o la variante que vayas a usar) está ya registrado.
-
-**Qué modelo usar**: **Gemini con Deep Research** para buscar en fuentes oficiales.
+| Área | Notas |
+|------|-------|
+| Documentación base | 8 módulos, 80+ documentos |
+| Web desplegada | democraciareal.es (Azure SWA + Cloudflare) |
+| Chatbot IA | Azure Function + Foundry Agent |
+| Álbum de diagnóstico | 5 canciones con reproductor web |
+| Visor Markdown universal | viewer.html — sin duplicar contenido |
+| SEO básico | robots.txt, sitemap.xml, meta tags |
+| i18n básico | ES, CA, EU, GL, EN |
+| Cloudflare Analytics | Activado — sin cookies, sin banner |
+| **Vídeo corto 30s** | Publicado en YouTube ✅ |
+| **Vídeo largo ~9min** | Producido, pendiente subir ✅ |
+| YouTube — banner y descripción del canal | Hecho ✅ |
 
 ---
 
-## Líneas de Investigación Estratégica (nuevas, de Dalio)
+## PLAN DE VISIBILIDAD — Este fin de semana
 
-Estas líneas están documentadas en `08_investigacion_abierta/vision_estrategica_largo_plazo.md`:
+### PRIORIDAD 1 — Publicar el vídeo largo (mañana sábado)
 
-| Línea | Urgencia | Documentación actual |
-|-------|----------|---------------------|
-| Soberanía tecnológica (IA, semiconductores) | Alta | Parcial (`soberania_ia_europa.md`) |
-| Educación como motor de ascenso | Alta | Parcial (`educacion.md`) |
-| Riesgo demográfico | Alta | Buena (`sistema_pensiones.md`, `inmigracion_e_integracion.md`) |
-| Cohesión social / prevención populismo | Alta | Parcial (varios docs, `inmigracion_e_integracion.md`) |
-| Transición energética como ventaja competitiva | Media-Alta | Buena (`energia.md`) |
-| Empleo post-IA | Media | Inicial (`tematicas_emergentes.md`) |
-| Proyección internacional (Hispanidad) | Media | Inexistente — por crear |
-| Soberanía estratégica y resiliencia | Alta | En evaluación (`preguntas_abiertas.md` 13.5) |
-| Natalidad y conciliación | Alta | En evaluación (`preguntas_abiertas.md` 13.6) |
-| Justicia intergeneracional y deuda | Alta | En evaluación (`preguntas_abiertas.md` 13.7) |
-| Simplificación normativa y unidad de mercado | Alta | En evaluación (`preguntas_abiertas.md` 13.8) |
+- [ ] Subir `largo.mp4` a YouTube
+- [ ] Título: `Por qué España no funciona (y cómo arreglarlo) | DemocraciaReal`
+- [ ] Descripción con timecodes (ajustar tiempos exactos al exportar)
+- [ ] Etiquetas: `España, política española, reforma política, democracia, sistema electoral, vivienda España, paro juvenil, DemocraciaReal, reforma institucional, España 2025`
+- [ ] Miniatura generada (prompt listo)
+- [ ] Fijar en YouTube Studio → Personalización → Diseño → Vídeo destacado
 
 ---
 
-## Fases del Proyecto
+### PRIORIDAD 2 — Activar redes sociales (este fin de semana)
 
-### Fase 1: Documentación Base ✅
-- [x] Definir visión y principios
-- [x] Estructurar repositorio (8 módulos, 80+ documentos)
-- [x] Diagnóstico del sistema político (módulo 01)
-- [x] Problemas estructurales con datos (módulo 02)
-- [x] Reformas institucionales base (módulo 03)
-- [x] Modelo organizativo (módulo 04)
-- [x] IA y automatización (módulo 05)
-- [x] Web con álbum de diagnóstico
-- [x] Dashboard de indicadores de potencia nacional (Dalio)
-- [x] Disciplina fiscal y deuda pública
-- [x] Visión estratégica a largo plazo
+- [ ] **Twitter/X** — Crear perfil @DemocraciaRealEs (o similar disponible)
+  - Bio: *"Las reglas del juego, rediseñadas. Datos, sin ideología. democraciareal.es"*
+  - Primer tuit: enlace al vídeo largo con el dato del `3,4`
+- [ ] **Instagram** — Perfil con clips del vídeo corto como Reels
+- [ ] Añadir links de YouTube y redes a la web (`index.html`)
 
-### Fase 2: Profundización (ACTUAL)
-- [x] Datos reales en módulo 01 (diagnóstico)
-- [x] Datos reales en módulo 02 (problemas estructurales — parcial)
-- [ ] Completar [PENDIENTE] en módulos 03-08
-- [x] Reforzar contrapesos democráticos en gobernanza
-- [x] Visor Markdown universal en la web (viewer.html, sin duplicar contenido)
-- [x] Actualizar sidebars web de los 8 módulos con todos los documentos
-- [x] Líneas estratégicas Dalio — estructura y preguntas definidas en `vision_estrategica_largo_plazo.md`
-- [ ] Investigar con datos reales las 7 líneas estratégicas (requiere Deep Research)
-- [ ] pensar que mas temas puedes ser relevantes importantes.
-- [ ] crear imágenes de cada sección (mirar el apuntes.txt)
-- [ ] crear video para cada canción
-- [x] crear podcast de cada sección?
-- [x] cumplir WCAG 2.1 (home + docs): skip link, landmarks, foco visible, navegación teclado, sliders accesibles, respeto `prefers-reduced-motion`
-- [ ] falta poner estilo musical en algunos temas
+---
 
-Fase 1 (rápida, segura): mejorar el actual
-- [x] Mostrar carátula por módulo/canción usando `web/imagenes/portadas/albums/` (home)
-- [x] Barra de progreso más visible (color, grosor y estado de carga) (home)
-- [x] Estado "Now playing" con animación sutil (ondas o glow) (home)
-- [x] Botones más compactos en móvil + feedback táctil claro (home)
+### PRIORIDAD 3 — Contactos estratégicos (próxima semana)
 
-Fase 2 (diferencial visual): "reproductor narrativo"
-- [x] Fondo reactivo al módulo (paleta y textura por álbum) (home)
-- [x] Mini visualizador animado (no invasivo) sincronizado con audio (home)
-- [x] Transiciones suaves al cambiar de bloque (crossfade visual) (home)
+**Rubén Gisbert**
+- [ ] Buscar contacto (Twitter/email público)
+- [ ] Mensaje corto: diagnóstico del proyecto + enlace vídeo largo
+- [ ] Objetivo: mención, colaboración o simplemente feedback
 
-Fase 3 (rompedor): modo "showcase"
-- [ ] Pantalla full-width tipo streaming con letras en overlay karaoke-lite
-- [ ] Deep link por canción + autoplay contextual + compartir con preview visual
-- [ ] Escena distinta por módulo (02 más crudo, 08 más futurista, etc.)
+**Democracia Real Ya (200k seguidores inactivos)**
+- [ ] Tuit mencionando @democraciarealya: *"El 15M tenía el diagnóstico correcto. Aquí está la propuesta técnica concreta. [enlace]"*
+- [ ] Explorar si hay alguien activo detrás que quiera retomar
 
-### Fase 3: Constitución Legal
-- [ ] Verificar nombre en Registro de Partidos
+**democraciareal.com**
+- [ ] Contactar por email (info@democraciareal.com)
+- [ ] Propuesta: tienen base legal, nosotros tenemos contenido y visión
+
+---
+
+### PRIORIDAD 4 — Contenido recurrente (a partir de la semana que viene)
+
+- [ ] Hilo de Twitter por cada dato impactante del vídeo:
+  - `83,7% del sueldo para alquilar`
+  - `El voto en Soria vale 6 veces más que en Madrid`
+  - `8 leyes educativas, casi 1 por cambio de gobierno`
+- [ ] Clip de 30s (el vídeo corto) como Reel en Instagram y Short en YouTube
+- [ ] Publicar el vídeo corto también en Twitter/X
+
+---
+
+## Pendiente técnico (no urgente)
+
+| Tarea | Prioridad |
+|-------|-----------|
+| Completar `[PENDIENTE]` en módulos 03-08 | Media |
+| Re-indexar documentos nuevos en Azure AI Search | Media |
+| Subir podcasts a Azure Blob + configurar `media.democraciareal.es` | Media |
+| Modo karaoke-lite en el reproductor (Fase 3 visual) | Baja |
+| Investigar con Deep Research líneas estratégicas Dalio (soberanía IA, demografía, etc.) | Baja |
+| Verificar nombre "Democracia Real" en Registro de Partidos | Antes de constituir |
+| Imágenes representativas por sección | Baja |
+
+---
+
+## Pendiente legal (Fase 3 — no urgente hasta tener masa crítica)
+
+- [ ] Verificar nombre en Registro de Partidos Políticos (Ministerio del Interior)
 - [ ] Reunir promotores (mínimo 3)
 - [ ] Redactar estatutos definitivos (LO 6/2002)
-- [ ] Acta notarial
-- [ ] Inscripción
-
-### Fase 4: Comunicación
-- [ ] Crear perfiles en redes sociales (X, Telegram, YouTube)
-- [ ] Primeros hilos explicativos
-- [ ] Vídeos cortos divulgativos
-- [ ] Canciones del álbum como contenido viral
-- [ ] Crear contenido multimedia como imagenes representativas de cada tema.
-- [ ] **Vídeo de introducción animado** (5-10 min, estilo Kurzgesagt/EconómiosCon IA):
-  - tono: directo, datos reales, ni facha ni progre, optimista sobre el cambio
-  - herramientas candidatas: Kling 3.0, Hailuo (Minimax), Runway Gen-4, Sora
-  - flujo recomendado: guion → storyboard → generación escena a escena → montaje + voz IA → música del álbum
-  - subir a YouTube como "tráiler oficial del proyecto" + recortar clips de 30-60s para redes
-
-### Fase 4.1: Guía de Lanzamiento (álbum sampler)
-- [ ] Redactar guía breve de tono y narrativa: "Ni facha, ni progre: datos, diseño y acción"
-- [ ] Definir kit base: portada oficial, 3 hooks de 15-20s y CTA único a web/streaming
-- [ ] Spotify/Apple Music: usar carátula oficial cuadrada del álbum sampler
-- [ ] Instagram/TikTok: usar fondo visual para reels (hook "Deep Drop" y "La Próxima Ola")
-- [ ] YouTube: vídeo "Full Album" (6 pistas seguidas) con portada fija y capítulos por track
-- [ ] Preparar 5 copies cortos reutilizables (teaser, estreno, clip, directo, cierre)
-
-### Fase 5: Lanzamiento Público
-- [ ] Afiliación abierta
-- [ ] Expansión territorial
-- [ ] Procesos electorales
+- [ ] Acta notarial e inscripción
 
 ---
 
-## Infraestructura Técnica
+## Infraestructura activa
 
 | Servicio | Recurso | Estado |
 |----------|---------|--------|
-| **Azure SWA** | witty-pebble... | ✅ Activo |
-| **Azure Function** | democracia-chat-function | ✅ Activo |
-| **Azure AI Foundry** | agentedemocracia | ✅ Activo |
-| **Azure AI Search** | democracia-docs | ✅ Activo |
-| **Cloudflare** | DNS democraciareal.es | ✅ Activo |
-| **GitHub** | democracia-real/web | ✅ Activo |
-
-### Escalado audio/podcast (Azure Blob + CDN)
-
-- [ ] FASE 1 (ahora): mantener `web/audio/` solo para demos cortas y mover álbumes/podcast completos a Blob Storage
-- [x] FASE 1: crear cuenta de Storage + contenedor `audio-public` (acceso público de solo lectura)
-- [x] FASE 1: definir estructura en Blob: `audio-public/albums/<modulo>/` y `audio-public/podcast/<modulo>/`
-- [ ] FASE 1: subir podcasts (5 actuales y después 8) y validar streaming/progressive download
-- [ ] FASE 1: configurar dominio de medios (ej. `media.democraciareal.es`) con HTTPS
-- [x] FASE 1: actualizar `lyrics.json` para usar URLs absolutas del dominio de medios
-- [x] FASE 1: crear `podcast/index.json` con URLs absolutas a Blob
-- [x] FASE 1: decisión de arquitectura: sin fallback local/remoto (usar Blob como origen único de audio)
-- [ ] FASE 1: revisar `Cache-Control` recomendado:
-  - `audio/*`: `public, max-age=31536000, immutable`
-  - `*.json` de catálogo: `public, max-age=300, must-revalidate`
-- [ ] FASE 1: validar seek tipo Spotify/YouTube en Blob:
-  - confirmar `Range` -> respuesta `206 Partial Content` en archivos de audio
-  - revisar codificación de audio para "fast start" (metadatos al inicio: MP3 VBR header / M4A moov atom)
-- [ ] FASE 1: estrategia HLS (podcast) por compatibilidad de navegador:
-  - mantener HLS activo en Firefox (desktop/móvil) y Chrome desktop (donde ya funciona)
-  - aplicar fallback a MP3 en Chrome móvil hasta cerrar causa raíz de reproducción/seek
-  - migrar HLS a fMP4 (CMAF: `init.mp4` + segmentos `.m4s`) con calma, evitando TS en móvil
-  - revalidar HLS fMP4 en Chrome móvil con 1 episodio piloto antes de extender a todos
-  - criterio de salida: mismo comportamiento de seek en Chrome móvil sin errores durante 3 días de pruebas
-- [ ] FASE 2 (después): instrumentar medición real de latencia/TTFB (Application Insights independiente + RUM en frontend)
-- [ ] FASE 2: definir umbral GO/NO-GO para CDN/Front Door con datos reales (latencia p95, tráfico internacional, GB/mes)
-- [ ] FASE 2: añadir CDN/Front Door solo si compensa en rendimiento/coste
-- [ ] FASE 2: medir coste mensual real (Blob + posible CDN) tras 2 semanas
+| Azure SWA | witty-pebble... | ✅ |
+| Azure Function | democracia-chat-function | ✅ |
+| Azure AI Foundry | agentedemocracia | ✅ |
+| Azure AI Search | democracia-docs | ✅ |
+| Cloudflare | DNS democraciareal.es | ✅ |
+| GitHub | democracia-real/web | ✅ |
 
 ---
 
-## Comandos Útiles
+## Comandos útiles
 
-### Re-indexar documentos (tras añadir/modificar .md)
 ```bash
+# Re-indexar documentos
 cd scripts
-/c/Users/javie/AppData/Local/Programs/Python/Python312/python.exe index_to_azure_search.py
-
 python index_to_azure_search.py
-```
 
-### Desplegar Azure Function (tras modificar function-app/)
-```bash
+# Desplegar Azure Function
 cd function-app
 func azure functionapp publish democracia-chat-function
-```
 
-
-### Lanzar en local 
-```bash
+# Lanzar en local
 npx serve web -p 3000
 ```
-
----
-
-## Qué Modelo Usar para Cada Tarea
-
-| Tarea | Modelo recomendado | Por qué |
-|-------|--------------------|--------|
-| **Investigación profunda** (datos, fuentes, comparativas) | **Gemini con Deep Research** o **ChatGPT 5.2 con Investigación avanzada** | Buscan en la web, contrastan fuentes, datos actualizados |
-| **Comprobar nombre en Registro de Partidos** | **Gemini Deep Research** | Búsqueda en fuentes oficiales |
-| **Tareas técnicas** (código, configuración, edición de docs) | **Cursor** | Cambios en repo sin necesidad de búsqueda externa |
-| **Estrategia y redacción** (textos, estructura) | **ChatGPT 5.2 thinking** o **Cursor** | Razonamiento paso a paso |
-
----
-
-## Acciones Sugeridas para Próxima Sesión
-
-1. **Re-indexar** — Ejecutar script para que el chatbot tenga los nuevos documentos de módulo 02 y agenda 08.
-2. **Promoción 08 -> 02 -> 03** — Investigar con Deep Research los temas 13.5–13.8 y decidir cuáles suben a diagnóstico y cuáles a propuestas.
-3. **Derechos digitales** — Crear documento-eje que unifique privacidad, neutralidad de red, acceso universal y alfabetización digital (vacío identificado en temáticas emergentes).
-4. **Legal** — Comprobar "Democracia Real" en Registro de Partidos.
