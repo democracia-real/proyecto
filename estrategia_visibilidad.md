@@ -71,6 +71,11 @@ El único algoritmo que amplifica contenido nuevo sin audiencia previa. Un víde
 4. **11:00** — Enviar email a Rubén Gisbert
 5. **Durante la semana** — Enviar a periodistas el ángulo de GitHub
 
+Material listo para ejecutar: [`lanzamiento_lunes/`](lanzamiento_lunes/)
+
+Vídeo largo: https://youtu.be/om-2aiG4bLo  
+Vídeo corto: https://youtu.be/TFFVpeAYftg
+
 ---
 
 ## Textos listos para cada canal
@@ -100,7 +105,7 @@ El único algoritmo que amplifica contenido nuevo sin audiencia previa. Un víde
 > No es mala suerte. Es un sistema diseñado hace 50 años que nadie ha actualizado.
 >
 > Diagnóstico completo 👇
-> [enlace al vídeo largo]
+> https://youtu.be/om-2aiG4bLo
 
 ---
 

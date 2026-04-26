@@ -17,20 +17,17 @@
 | i18n básico | ES, CA, EU, GL, EN |
 | Cloudflare Analytics | Activado — sin cookies, sin banner |
 | **Vídeo corto 30s** | Publicado en YouTube ✅ |
-| **Vídeo largo ~9min** | Producido, pendiente subir ✅ |
+| **Vídeo largo ~9min** | Publicado en YouTube ✅ https://youtu.be/om-2aiG4bLo |
 | YouTube — banner y descripción del canal | Hecho ✅ |
 
 ---
 
 ## PLAN DE VISIBILIDAD — Este fin de semana
 
-### PRIORIDAD 1 — Publicar el vídeo largo (mañana sábado)
+### PRIORIDAD 1 — Publicar el vídeo largo ✅
 
-- [ ] Subir `largo.mp4` a YouTube
-- [ ] Título: `Por qué España no funciona (y cómo arreglarlo) | DemocraciaReal`
-- [ ] Descripción con timecodes (ajustar tiempos exactos al exportar)
-- [ ] Etiquetas: `España, política española, reforma política, democracia, sistema electoral, vivienda España, paro juvenil, DemocraciaReal, reforma institucional, España 2025`
-- [ ] Miniatura generada (prompt listo)
+- [x] Subir `largo.mp4` a YouTube: https://youtu.be/om-2aiG4bLo
+- [x] Vídeo corto publicado: https://youtu.be/TFFVpeAYftg
 - [ ] Fijar en YouTube Studio → Personalización → Diseño → Vídeo destacado
 
 ---
