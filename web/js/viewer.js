@@ -5,7 +5,7 @@
 (function () {
     'use strict';
 
-    var GITHUB_RAW = 'https://raw.githubusercontent.com/democracia-real/web/main/';
+    var GITHUB_RAW = 'https://raw.githubusercontent.com/democracia-real/proyecto/main/';
 
     var MODULES = {
         '01_diagnostico_del_sistema': { num: '01', short: 'Diagnóstico', path: '01-diagnostico', title: 'Diagnóstico del Sistema' },
@@ -195,7 +195,7 @@
             document.getElementById('docBody').innerHTML = '<pre>' + body + '</pre>';
         }
 
-        var ghBase = 'https://github.com/democracia-real/web/blob/main/';
+        var ghBase = 'https://github.com/democracia-real/proyecto/blob/main/';
         var githubPath = info.type === 'root'
             ? info.rootDoc.githubPath
             : info.moduleFolder + '/' + info.filename;

@@ -102,7 +102,7 @@
 | Azure AI Foundry | agentedemocracia | ✅ |
 | Azure AI Search | democracia-docs | ✅ |
 | Cloudflare | DNS democraciareal.es | ✅ |
-| GitHub | democracia-real/web | ✅ |
+| GitHub | democracia-real/proyecto | ✅ |
 
 ---
 

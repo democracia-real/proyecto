@@ -236,7 +236,7 @@
         var contributingActive = window.location.pathname.indexOf('/docs/viewer.html') === 0 &&
             window.location.search.indexOf('doc=CONTRIBUTING.md') !== -1;
         html += '<a href="/docs/viewer.html?doc=CONTRIBUTING.md" class="docs-nav-item' + (contributingActive ? ' active' : '') + '">Guía de contribución</a>';
-        html += '<a href="https://github.com/democracia-real/web" class="docs-nav-item" target="_blank">GitHub</a>';
+        html += '<a href="https://github.com/democracia-real/proyecto" class="docs-nav-item" target="_blank">GitHub</a>';
         html += '</nav>';
 
         container.innerHTML = html;
