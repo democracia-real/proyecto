@@ -22,6 +22,8 @@ Cuando Ayuso, Yolanda Díaz, Feijóo, Abascal o cualquier político con millones
 
 **Por qué funciona:** Un solo reply que se haga viral vale más que 1.000 tuits propios.
 
+Guía de **tono y estructura** de tuits: [`internal/estilo_mensajes_redes.md`](internal/estilo_mensajes_redes.md) — evitar que todo suene a “hay que evaluar y medir” sin gancho ciudadano.
+
 ---
 
 ### 2. Youtubers y podcasters del nicho

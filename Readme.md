@@ -1,8 +1,8 @@
 # 🇪🇸 Proyecto Democracia Real
 
-> **En lugar de quejarte y discutir como los políticos, únete al cambio: con transparencia y construyendo el futuro todos juntos. La verdadera democracia.**
+> **No se trata de ganar otro ciclo electoral. Se trata de construir un país que funcione mejor para la ciudadanía: vivienda posible, servicios públicos sostenibles, oportunidades para jóvenes y reglas pensadas a largo plazo.**
 
-Repositorio público para la documentación, investigación y creación de un nuevo partido político en España orientado a la eficiencia, transparencia, colaboración y uso responsable de la Inteligencia Artificial.
+Repositorio público para la documentación, investigación y creación de un nuevo partido político en España orientado a ciudadanía, futuro común, colaboración, responsabilidad pública y uso responsable de la Inteligencia Artificial.
 
 **No somos una ideología. Somos una infraestructura para la ciudadanía.**
 
@@ -28,17 +28,19 @@ Repositorio público para la documentación, investigación y creación de un nu
 
 ## 🎯 Visión General
 
-Este proyecto nace de la convicción de que **España necesita una transformación profunda de su sistema político**. No se trata de un cambio ideológico entre izquierda y derecha, sino de una **reforma estructural** que devuelva la soberanía a los ciudadanos y establezca mecanismos reales de rendición de cuentas.
+Este proyecto nace de la convicción de que **España necesita pensar menos en el titular de la semana y más en el país que deja a sus ciudadanos dentro de 10, 20 y 30 años**. No se trata de un cambio ideológico entre izquierda y derecha, sino de una reforma que devuelva capacidad real de decisión a la ciudadanía y ponga las instituciones al servicio de una vida mejor.
 
 ### Objetivo Principal
 
 Diseñar, documentar e implementar la creación de un **nuevo partido político** orientado a:
 
+- ✅ **Ciudadanía primero**: vivienda, trabajo, salud, educación, seguridad y tiempo de vida
+- ✅ **Futuro común** para jóvenes, familias, mayores y quienes aún no pueden votar
 - ✅ **Eficiencia** en la gestión pública
 - ✅ **Colaboración** transversal por encima de ideologías
 - ✅ **Visión a largo plazo** que trascienda ciclos electorales
 - ✅ **Uso responsable de IA** como herramienta de supervisión y transparencia
-- ✅ **Reducción** de corrupción, burocracia y clientelismo
+- ✅ **Reducción** de corrupción, burocracia y clientelismo cuando impiden vivir y emprender mejor
 
 ---
 
@@ -80,7 +82,7 @@ El sistema político español presenta síntomas claros de una **partitocracia**
 
 ### De la Discusión a la Decisión
 
-En un mundo de ruido, aportamos **datos**. Menos debates circulares, más resolución de problemas mediante análisis transparente y consenso técnico.
+En un mundo de ruido, aportamos **datos**, pero el objetivo no es medir por medir: es que la gente viva mejor, que los servicios respondan, que los jóvenes tengan futuro y que las decisiones públicas no dependan del calendario electoral.
 
 ### Cómo Funciona: Diagnóstico + Principios + Mecanismo
 
@@ -88,9 +90,9 @@ A diferencia de los partidos tradicionales, **no presentamos un programa cerrado
 
 | Capa | Qué hacemos | Qué NO hacemos |
 |------|-------------|-----------------|
-| **Diagnóstico** | Documentar los problemas con datos verificables y fuentes públicas | Inventar datos ni exagerar para ganar votos |
+| **Diagnóstico** | Documentar los problemas con datos verificables y consecuencias reales para la ciudadanía | Inventar datos ni exagerar para ganar votos |
 | **Principios** | Declarar los criterios irrenunciables (transparencia, mérito, largo plazo, evidencia) | Imponer una ideología ni posicionarnos en el eje izquierda-derecha |
-| **Mecanismo** | Proponer *cómo* se deben tomar las decisiones (paneles de expertos independientes, evaluación, participación ciudadana) | Dictar *qué* decisión tomar — eso lo deciden los expertos dentro del mecanismo |
+| **Mecanismo** | Proponer *cómo* se deben tomar las decisiones para que sean estables, comprensibles y orientadas al interés general | Dictar *qué* decisión tomar — eso debe decidirse con evidencia, participación y responsabilidad pública |
 
 **Ejemplo:** En energía, no decimos "nuclear sí" o "nuclear no". Diagnosticamos los cuellos de botella (almacenamiento, red, oligopolio), declaramos principios (soberanía, competencia, estabilidad normativa) y proponemos un Comité de Expertos Multidisciplinar independiente que decida el mix con datos y horizonte de 30 años.
 

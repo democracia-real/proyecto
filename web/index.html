@@ -136,7 +136,7 @@
     <link rel="manifest" href="/manifest.json">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css?v=20260426a">
+    <link rel="stylesheet" href="css/styles.css?v=20260916a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -670,121 +670,24 @@
         <div class="container">
             <div class="mass-grid">
                 <div class="mass-copy">
-                    <span class="section-label">Masa crítica</span>
+                    <span class="section-label">Enterarte</span>
                     <h2 id="massTitle" class="section-title">Esto solo tiene sentido si hay gente detrás.</h2>
                     <p class="section-subtitle mass-subtitle">
-                        No pedimos dinero. Medimos si hay personas suficientes para revisar, difundir y construir una reforma institucional abierta.
+                        No pedimos dinero. Déjanos un email y te avisamos cuando haya novedades. Sin compromiso.
                     </p>
-
-                    <div class="mass-thermometer" aria-label="Progreso hacia el objetivo inicial de personas interesadas">
-                        <div class="mass-meter-head">
-                            <span>Objetivo inicial</span>
-                            <strong><span id="interestTotal">0</span> / <span id="interestTarget">1.000</span></strong>
-                        </div>
-                        <div class="mass-meter-track">
-                            <div class="mass-meter-fill" id="interestMeter" style="width: 0%"></div>
-                            <div class="mass-meter-glow"></div>
-                        </div>
-                        <div class="mass-meter-foot">
-                            <span id="interestProgress">0%</span>
-                            <span>para abrir la siguiente fase</span>
-                        </div>
-                    </div>
-
-                    <div class="mass-signals" aria-label="Señales de participación">
-                        <div class="mass-signal">
-                            <span class="mass-signal-value" id="interestTopProvince">--</span>
-                            <span class="mass-signal-label">provincia más activa</span>
-                        </div>
-                        <div class="mass-signal">
-                            <span class="mass-signal-value" id="interestTopHelp">--</span>
-                            <span class="mass-signal-label">tipo de ayuda dominante</span>
-                        </div>
-                    </div>
                 </div>
 
                 <form class="mass-form" id="interestForm" novalidate>
                     <div class="mass-form-header">
-                        <p class="mass-form-kicker">Apúntate a la lista</p>
-                        <h3>Ser de los primeros importa.</h3>
-                        <p>Si llegamos a 1.000 personas interesadas, abrimos la siguiente fase públicamente.</p>
+                        <p class="mass-form-kicker">Apúntate para enterarte</p>
+                        <h3>Solo el email.</h3>
+                        <p>Te escribimos si el proyecto avanza. Puedes darte de baja cuando quieras.</p>
                     </div>
 
                     <label class="mass-field">
                         <span>Email</span>
                         <input type="email" name="email" autocomplete="email" placeholder="tu@email.com" required>
                     </label>
-
-                    <label class="mass-field">
-                        <span>Provincia</span>
-                        <select name="province" required>
-                            <option value="">Selecciona una provincia</option>
-                            <option>A Coruña</option>
-                            <option>Álava</option>
-                            <option>Albacete</option>
-                            <option>Alicante</option>
-                            <option>Almería</option>
-                            <option>Asturias</option>
-                            <option>Ávila</option>
-                            <option>Badajoz</option>
-                            <option>Barcelona</option>
-                            <option>Bizkaia</option>
-                            <option>Burgos</option>
-                            <option>Cáceres</option>
-                            <option>Cádiz</option>
-                            <option>Cantabria</option>
-                            <option>Castellón</option>
-                            <option>Ceuta</option>
-                            <option>Ciudad Real</option>
-                            <option>Córdoba</option>
-                            <option>Cuenca</option>
-                            <option>Gipuzkoa</option>
-                            <option>Girona</option>
-                            <option>Granada</option>
-                            <option>Guadalajara</option>
-                            <option>Huelva</option>
-                            <option>Huesca</option>
-                            <option>Illes Balears</option>
-                            <option>Jaén</option>
-                            <option>La Rioja</option>
-                            <option>Las Palmas</option>
-                            <option>León</option>
-                            <option>Lleida</option>
-                            <option>Lugo</option>
-                            <option>Madrid</option>
-                            <option>Málaga</option>
-                            <option>Melilla</option>
-                            <option>Murcia</option>
-                            <option>Navarra</option>
-                            <option>Ourense</option>
-                            <option>Palencia</option>
-                            <option>Pontevedra</option>
-                            <option>Salamanca</option>
-                            <option>Santa Cruz de Tenerife</option>
-                            <option>Segovia</option>
-                            <option>Sevilla</option>
-                            <option>Soria</option>
-                            <option>Tarragona</option>
-                            <option>Teruel</option>
-                            <option>Toledo</option>
-                            <option>Valencia</option>
-                            <option>Valladolid</option>
-                            <option>Zamora</option>
-                            <option>Zaragoza</option>
-                            <option>Exterior / extranjero</option>
-                            <option>Prefiero no decirlo</option>
-                        </select>
-                    </label>
-
-                    <fieldset class="mass-help">
-                        <legend>¿Cómo quieres ayudar?</legend>
-                        <label><input type="radio" name="helpType" value="difusion" required> Difundir</label>
-                        <label><input type="radio" name="helpType" value="revision"> Revisar propuestas</label>
-                        <label><input type="radio" name="helpType" value="legal"> Legal</label>
-                        <label><input type="radio" name="helpType" value="organizacion"> Organización</label>
-                        <label><input type="radio" name="helpType" value="seguir_avances"> Solo seguir avances</label>
-                        <label><input type="radio" name="helpType" value="otro"> Otro</label>
-                    </fieldset>
 
                     <label class="mass-consent">
                         <input type="checkbox" name="consent" required>
@@ -796,7 +699,7 @@
                         <input type="text" name="website" autocomplete="off" tabindex="-1">
                     </label>
 
-                    <button type="submit" class="btn btn-primary mass-submit">Apuntarme a la lista</button>
+                    <button type="submit" class="btn btn-primary mass-submit">Avisadme</button>
                     <p class="mass-status" id="interestStatus" role="status" aria-live="polite"></p>
                     <p class="mass-legal">
                         Responsable: proyecto DemocraciaReal. Finalidad: gestionar la lista de personas interesadas y enviar actualizaciones. Puedes pedir baja escribiendo al contacto indicado en privacidad.
@@ -856,7 +759,7 @@
             <div class="privacy-modal-body">
                 <h2 id="privacyModalTitle">Qué hacemos con tus datos</h2>
                 <p>
-                    Recogemos solo lo mínimo para gestionar la lista de personas interesadas: email, provincia, tipo de ayuda y fecha de alta.
+                    Recogemos solo lo mínimo: email y fecha de alta. Provincia o tipo de ayuda, solo si algún día los indicas.
                 </p>
                 <p>
                     Finalidad: enviarte actualizaciones del proyecto y medir de forma agregada si existe masa crítica suficiente para abrir la siguiente fase.
@@ -900,7 +803,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=20260916a"></script>
     <script src="js/i18n.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/album.js?v=20260312a"></script>

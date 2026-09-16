@@ -196,58 +196,12 @@
     }
 
     // ==========================================================================
-    // Masa crítica: termómetro + formulario
+    // Lista de emails: formulario mínimo
     // ==========================================================================
 
     var interestForm = document.getElementById('interestForm');
     var interestStatus = document.getElementById('interestStatus');
-    var interestTotal = document.getElementById('interestTotal');
-    var interestTarget = document.getElementById('interestTarget');
-    var interestProgress = document.getElementById('interestProgress');
-    var interestMeter = document.getElementById('interestMeter');
-    var interestTopProvince = document.getElementById('interestTopProvince');
-    var interestTopHelp = document.getElementById('interestTopHelp');
     var API_BASE = 'https://democracia-chat-function.azurewebsites.net/api';
-
-    var helpTypeLabels = {
-        difusion: 'Difusión',
-        revision: 'Revisión',
-        legal: 'Legal',
-        organizacion: 'Organización',
-        seguir_avances: 'Seguir avances',
-        otro: 'Otro'
-    };
-
-    function formatNumber(value) {
-        return Number(value || 0).toLocaleString('es-ES');
-    }
-
-    function getTopKey(map) {
-        var entries = Object.keys(map || {}).map(function(key) {
-            return { key: key, value: map[key] };
-        });
-        entries.sort(function(a, b) { return b.value - a.value; });
-        return entries.length ? entries[0].key : '--';
-    }
-
-    function updateInterestUi(stats) {
-        if (!interestTotal || !interestTarget || !interestProgress || !interestMeter) return;
-
-        var total = Number(stats.total || 0);
-        var target = Number(stats.target || 1000);
-        var progress = Math.min(100, target > 0 ? (total / target) * 100 : 0);
-
-        interestTotal.textContent = formatNumber(total);
-        interestTarget.textContent = formatNumber(target);
-        interestProgress.textContent = progress.toFixed(progress >= 10 ? 0 : 1).replace('.', ',') + '%';
-        interestMeter.style.width = Math.max(0.8, progress) + '%';
-
-        var topProvince = getTopKey(stats.byProvince || {});
-        var topHelp = getTopKey(stats.byHelpType || {});
-
-        if (interestTopProvince) interestTopProvince.textContent = topProvince;
-        if (interestTopHelp) interestTopHelp.textContent = helpTypeLabels[topHelp] || topHelp;
-    }
 
     function setInterestStatus(message, type) {
         if (!interestStatus) return;
@@ -255,23 +209,7 @@
         interestStatus.className = 'mass-status' + (type ? ' ' + type : '');
     }
 
-    function loadInterestStats() {
-        if (!interestMeter) return;
-
-        fetch(API_BASE + '/interest-stats', {
-            method: 'GET',
-            headers: { 'Accept': 'application/json' }
-        })
-            .then(function(response) { return response.json(); })
-            .then(updateInterestUi)
-            .catch(function() {
-                // La sección funciona aunque las stats no estén disponibles.
-            });
-    }
-
     if (interestForm) {
-        loadInterestStats();
-
         interestForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -279,15 +217,13 @@
             var data = new FormData(interestForm);
             var payload = {
                 email: data.get('email'),
-                province: data.get('province'),
-                helpType: data.get('helpType'),
                 consent: data.get('consent') === 'on',
                 website: data.get('website'),
                 source: 'home'
             };
 
-            if (!payload.email || !payload.province || !payload.helpType || !payload.consent) {
-                setInterestStatus('Completa email, provincia, tipo de ayuda y consentimiento.', 'error');
+            if (!payload.email || !payload.consent) {
+                setInterestStatus('Necesitamos el email y el consentimiento.', 'error');
                 return;
             }
 
@@ -312,11 +248,10 @@
                     });
                 })
                 .then(function(body) {
-                    updateInterestUi(body);
                     if (body.alreadyRegistered) {
-                        setInterestStatus('Ya estabas en la lista. Hemos actualizado el contador.', 'success');
+                        setInterestStatus('Ya estabas en la lista. Te seguiremos avisando.', 'success');
                     } else {
-                        setInterestStatus('Listo. Eres la persona nº ' + formatNumber(body.total) + ' en apuntarte.', 'success');
+                        setInterestStatus('Listo. Te avisamos cuando haya novedades.', 'success');
                     }
                     interestForm.reset();
                 })
@@ -326,7 +261,7 @@
                 .finally(function() {
                     if (submit) {
                         submit.disabled = false;
-                        submit.textContent = 'Apuntarme a la lista';
+                        submit.textContent = 'Avisadme';
                     }
                 });
         });

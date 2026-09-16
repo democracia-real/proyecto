@@ -520,7 +520,7 @@ input:focus-visible,
 
 .mass-subtitle {
     max-width: 650px;
-    margin-bottom: var(--space-xl);
+    margin-bottom: 0;
 }
 
 .mass-thermometer {
