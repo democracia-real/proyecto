@@ -103,6 +103,7 @@ Regla añadida al agente `red-team`: si la pieza contiene una cifra que no está
 
 ## Después del 29N (diciembre-enero)
 
+- [ ] **«Qué propone cada partido y cómo lo haríamos nosotros»** (ver [Ideas.md](Ideas.md), sección 12): antes del 29N solo las capas «qué dice» y «qué se puede comprobar», que salen del Promesómetro. La capa de diseño propio (borrador con IA, con etiqueta) llega en diciembre como piloto con un solo tema, vivienda.
 - [ ] **Web como auditor y espacio colaborativo** (ver [Ideas.md](Ideas.md), sección 11): zona «Consecuencias» (fichas de medida, con el método publicado antes) en diciembre, y zona «Propuestas» en GitHub Discussions en enero, con reglas de moderación escritas. Antes, las zonas «Reglas» y «Vigilar» (productos activos del plan 29N).
 - [ ] Seguimiento de compromisos de los electos desde la sesión constitutiva (23 dic).
 - [ ] **Decidir la identidad en enero** con datos: métricas, contactos, lista de espera y si alguien quiere sumarse.

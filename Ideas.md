@@ -307,3 +307,59 @@ Es lo más potente y lo más peligroso: atribuir un efecto a una decisión es el
 - **Sesgo percibido.** La zona 3 es la más expuesta a «sois de X». Defensa: método y plantilla publicados antes, misma vara y réplica previa.
 - **Legal.** Honor y rectificación en la zona 3. Responsabilidad por contenido de terceros en la 4 (LSSI). Durante la campaña, que nada de esto parezca pedir el voto. Entra en la consulta legal pendiente.
 - **Responsable identificable.** Cuanto más participación, más urgente un responsable con nombre o una asociación.
+
+---
+
+## 12. «Qué propone cada partido y cómo lo haríamos nosotros»
+
+*Añadido el 11 oct. Idea del autor, desarrollada aquí. No aprobada.*
+
+### Por qué es buena
+
+Es un gancho muy claro y encaja con lo que ya hay: el Promesómetro extrae las propuestas de cada partido y los módulos 02 y 03 ya contienen diagnósticos y reformas. Falta la tercera pieza, la comparación.
+
+### Dos tensiones que hay que resolver antes
+
+1. **Contradice el principio «mecanismo, no contenido».** El README dice que no dictamos qué decidir, solo cómo decidir. Una contrapropuesta a cada medida de cada partido es tomar posición, y si coincide más con un partido que con otro, parecerá campaña. Además, durante la campaña la Ley Electoral (LOREG) y la regla de no pedir el voto hacen esto delicado.
+2. **Lo escaso es validar, no generar.** La IA produce una contrapropuesta en segundos, pero con cifras de coste, plazos y efectos que pueden estar mal. Es el mismo error de esta semana, ahora en forma de propuesta.
+
+### Cómo hacerlo sin romper nada: tres capas
+
+Cada tema se presenta en tres capas, siempre en este orden y con distinto estado de confianza:
+
+| Capa | Qué muestra | Confianza |
+|------|-------------|-----------|
+| **1. Lo que dice cada partido** | Cita literal, página y enlace al programa. Sin adjetivos | Alta: se comprueba contra el PDF |
+| **2. Qué se puede comprobar** | ¿Trae coste, financiación, plazo, responsable e indicador? ¿Es competencia de quien lo propone? ¿Qué dice la evidencia oficial disponible? | Media: cada dato pasa por el registro de cifras |
+| **3. Un diseño posible, no «la solución»** | Cómo se podría diseñar de forma medible: piloto, indicador, plazo, coste estimado, cláusula de revisión. Con etiqueta visible: **«Borrador generado con IA, sin validar, abierto a crítica»** | Baja, y se dice |
+
+La capa 3 es donde se mantiene el principio: en vez de decir «nuclear sí» o «alquiler con tope sí», describe el mecanismo para decidir y medir. Se puede decir *«cómo se podría comprobar si funciona»* aunque no se diga *«qué hay que hacer»*.
+
+### Por tema, no por partido
+
+En vez de «propuestas del PP» y «propuestas del PSOE», organizarlo por tema: **vivienda, pensiones, justicia, energía...** En cada tema, una tabla con todos los partidos en filas y las tres capas. Es más neutral, porque la comparación es la misma para todos y no parece un ataque ni un apoyo, y es más útil para quien quiere informarse.
+
+### Condiciones
+
+- **El mismo formato para todos, incluidos nosotros.** Nuestra propia propuesta se evalúa en la capa 2 como las demás. Si el estándar dice «sin coste no hay propuesta», lo cumplimos primero.
+- **Nada de la capa 3 sale sin revisión humana**, y cada cifra de coste o efecto va al registro con fuente. Una estimación sin fuente se publica como «sin estimar», no como número.
+- **Una sola contrapropuesta por tema, abierta a variantes.** Cualquiera puede proponer otro diseño por la zona 4 (sección 11), y se muestran todos con el mismo formato. Así no parece una «línea oficial».
+- **Medir el sesgo.** Registro de equilibrio: ¿nuestro diseño se parece más a las propuestas de un partido que a las de otro? Si sí, se dice y se explica.
+- **Consulta legal** antes de publicar, junto con la de la matriz y la de consecuencias.
+
+### Cuándo
+
+| Cuándo | Qué |
+|--------|-----|
+| Hasta el 29N | Solo las capas 1 y 2, que ya salen del Promesómetro: qué dice cada partido y si es auditable. Sin capa 3 durante la campaña |
+| Diciembre | Piloto con **un** tema (vivienda es el candidato: ya hay documentos, datos y debate) y los partidos con grupo. 3-4 propuestas por partido con las tres capas |
+| Enero | Valorar si se amplía, según el feedback y si alguien revisa conmigo |
+
+### Riesgos
+
+| Riesgo | Respuesta |
+|--------|-----------|
+| «Sois un partido disfrazado» | Capa 3 con etiqueta de borrador, mecanismo en vez de posición, variantes abiertas y registro de equilibrio |
+| La IA inventa costes o efectos | Registro de cifras obligatorio, «sin estimar» cuando no hay fuente, revisión humana de toda la capa 3 |
+| Una persona no puede revisar tanto | Un solo tema al principio. Es mejor un tema bien hecho que diez dudosos |
+| Un partido reclama por la capa 1 o 2 | Cita literal, réplica previa de 7 días, igual que en la matriz |
