@@ -103,6 +103,7 @@ Regla añadida al agente `red-team`: si la pieza contiene una cifra que no está
 
 ## Después del 29N (diciembre-enero)
 
+- [ ] **Web como auditor y espacio colaborativo** (ver [Ideas.md](Ideas.md), sección 11): zona «Consecuencias» (fichas de medida, con el método publicado antes) en diciembre, y zona «Propuestas» en GitHub Discussions en enero, con reglas de moderación escritas. Antes, las zonas «Reglas» y «Vigilar» (productos activos del plan 29N).
 - [ ] Seguimiento de compromisos de los electos desde la sesión constitutiva (23 dic).
 - [ ] **Decidir la identidad en enero** con datos: métricas, contactos, lista de espera y si alguien quiere sumarse.
 - [ ] Si se decide, constituir una asociación (más barata y rápida que un partido) para tener personalidad jurídica.

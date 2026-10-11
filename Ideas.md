@@ -230,3 +230,80 @@ Es más honesto y más difícil de atacar, y convierte la crítica en el argumen
 | Alertas de corrupción que señalen a personas | Falsos positivos y presunción de inocencia. Solo patrones sobre contratos y normas, nunca nombres |
 | Presentador IA diario | Mucho trabajo y poca credibilidad sin una cara humana detrás. Si se hace, siempre etiquetado |
 | Programa completo de gobierno | No es el papel de un estándar. Sí, propuestas con coste en vivienda y territorio |
+
+---
+
+## 11. democraciareal.es como auditor y espacio colaborativo
+
+*Añadido el 11 oct. Idea del autor, desarrollada aquí. No aprobada.*
+
+### Cuatro zonas
+
+| Zona | Qué responde | Contenido | Estado |
+|------|--------------|-----------|--------|
+| **1. Reglas** | ¿Qué dice cada partido de sí mismo? | La matriz «Las reglas del juego, partido a partido» (sección 3) | Es el producto 4 del plan 29N |
+| **2. Vigilar** | ¿Qué hacen? | Decretómetro, votaciones, promesas y su estado. Todo con fuente primaria y misma vara para todos | Productos 2 y 3 del plan 29N, como semilla |
+| **3. Consecuencias** | ¿Qué pasó tras decidir, o tras no decidir? | Fichas de medida (ver abajo) | Después del 29N |
+| **4. Propuestas** | ¿Qué propone la gente? | Espacio colaborativo (ver abajo) | Después del 29N, empezando por GitHub |
+
+Las zonas 1 y 2 ya están en el plan. Lo nuevo son la 3 y la 4, y son las que más riesgo tienen.
+
+### Zona 3: consecuencias de medidas tomadas y no tomadas
+
+Es lo más potente y lo más peligroso: atribuir un efecto a una decisión es el terreno donde más se miente en política.
+
+**Ficha de medida**, con campos fijos:
+
+1. Qué se decidió o se dejó de decidir, quién y cuándo, con enlace al BOE, la votación o el documento.
+2. Qué objetivo declaró la medida.
+3. Indicador oficial elegido **antes** de mirar el resultado, y su valor antes y después, con fuente.
+4. Qué más pasó en ese periodo (otras medidas, contexto económico).
+5. Conclusión con una escala honesta: *se cumplió el objetivo · no se cumplió · no se puede saber · demasiado pronto*. Nunca «esta medida causó X» salvo que haya evidencia que lo sostenga (estudio, evaluación oficial).
+
+**Medidas no tomadas**, empezando por casos con plazo objetivo y comprobable. Ejemplo ya verificado: la LO 3/2024 mandó al CGPJ proponer en seis meses un nuevo sistema de elección de vocales. En febrero de 2025 el CGPJ no logró mayoría de tres quintos y remitió dos propuestas distintas. Hay un mandato legal, un plazo y un resultado, sin opinión de por medio.
+
+**Casos de arranque con datos ya reunidos:** los decretos de vivienda derogados el 2 de octubre y los 11 derogados en la XV legislatura (qué pasó con lo que regulaban tras la derogación).
+
+**Reglas del método, publicadas antes que ningún resultado:**
+- Misma plantilla para Gobierno central, autonomías y oposición donde gobierne.
+- El indicador se fija y se publica antes de medir. Si no, es elegir la cifra que gusta.
+- Cada ficha pasa por el registro de cifras y su verificación.
+- Réplica previa al afectado, igual que en la matriz.
+- Fichas sobre medidas, no sobre personas.
+
+### Zona 4: espacio colaborativo
+
+**Empezar sin construir nada.** El repo ya tiene Issues, Discussions y la plantilla [`plantilla_redaccion_propuestas.md`](03_propuestas_institucionales/plantilla_redaccion_propuestas.md). Una plataforma propia (Decidim, Consul) tiene sentido solo cuando haya gente que la use, y trae moderación, RGPD y responsabilidad por contenido ajeno.
+
+**Cada propuesta, con los mismos campos que pide el pilar 2:** problema, datos con fuente, coste, impacto esperado y cómo se mediría. Una propuesta sin esos campos queda como «idea», no como «propuesta».
+
+**Dos tipos de aportación:**
+- *Propuestas de reforma*: entran en los módulos 03 y 04 por pull request, con revisión pública.
+- *Correcciones y datos*: un error, una fuente mejor, un estatuto nuevo. Son lo más útil y lo más barato de moderar. Reciben crédito visible.
+
+**Lo que no haría al principio:**
+
+| No | Por qué |
+|----|---------|
+| Votos o «apoyos» a propuestas | Sin verificación de identidad se manipulan con cuentas falsas, y una persona no puede detectarlo. Un ranking manipulado sería peor que no tenerlo |
+| Comentarios abiertos sin moderar | Una persona no modera ni la mitad. Spam, insultos y acusaciones sobre personas reales caen bajo tu responsabilidad |
+| Lista de «las mejores propuestas» | Parecería que el proyecto adopta posiciones. El README dice «mecanismo, no contenido» |
+| Que la gente señale corrupción de personas concretas | Falsos positivos y presunción de inocencia |
+
+**Reglas de moderación escritas desde el primer día:** qué se admite, qué se borra y por qué, y un registro público de lo borrado. Lo mismo que se exige a los partidos.
+
+### Orden realista
+
+| Cuándo | Qué |
+|--------|-----|
+| Hasta el 10 nov | Zonas 1 y 2 con los productos ya planificados. Reorganizar la web con esas dos entradas |
+| Diciembre | Plantilla de ficha de medida y 3-5 fichas de prueba (CGPJ, decretos de vivienda...). Publicar el método primero |
+| Enero | Abrir la zona 4 en GitHub Discussions con la plantilla y las reglas de moderación. Medir si alguien participa antes de construir nada |
+| Después | Plataforma propia solo si hay uso real y alguien más que modere |
+
+### Riesgos específicos
+
+- **Dispersión.** Cuatro zonas son un proyecto de varias personas. Con una, la 3 y la 4 no deben empezar antes de que las dos primeras estén publicadas y verificadas.
+- **Sesgo percibido.** La zona 3 es la más expuesta a «sois de X». Defensa: método y plantilla publicados antes, misma vara y réplica previa.
+- **Legal.** Honor y rectificación en la zona 3. Responsabilidad por contenido de terceros en la 4 (LSSI). Durante la campaña, que nada de esto parezca pedir el voto. Entra en la consulta legal pendiente.
+- **Responsable identificable.** Cuanto más participación, más urgente un responsable con nombre o una asociación.
