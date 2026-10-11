@@ -4,7 +4,9 @@
 
 Este módulo desarrolla la propuesta central y diferenciadora del proyecto: el uso de la **Inteligencia Artificial como herramienta de supervisión, transparencia y eficiencia** en la gestión pública, siempre bajo control humano.
 
-> *"La IA no tiene intereses, no es corrupta, pero debe estar supervisada."*
+> *"La IA no decide y no es neutral. Por eso la obligamos a dejar rastro: cada dato con su fuente, su fecha y quién lo comprobó."*
+>
+> Los modelos los entrena una empresa con unos datos concretos y los configura quien los opera, y se equivocan con seguridad. El valor de la IA no está en que sea imparcial, sino en que permite leer y comparar a escala, siempre que cada resultado se pueda comprobar.
 
 ## Documentos de este Módulo
 

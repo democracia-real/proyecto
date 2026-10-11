@@ -49,9 +49,12 @@ El artículo 86 CE permite al Gobierno dictar decretos-leyes en casos de "extrao
 - No hay debate real sobre el contenido
 - La urgencia rara vez está justificada
 
-**Datos (XIV Legislatura):**
-- Se aprobaron **65 Reales Decretos-Leyes** frente a **83 leyes ordinarias**.
-- La tendencia desde la XII legislatura es que el peso del decreto-ley (ejecutivo) **supere a menudo** la capacidad legislativa del Parlamento.
+**Datos (consultados el 11 oct 2026):**
+- **XIV Legislatura (2019-2023):** 97 reales decretos-ley de 216 normas con rango de ley (45%). Fuente: estadísticas del Congreso, recogidas por Electomanía y El Día.
+- **XV Legislatura (2023-2026):** más de la mitad de las normas con rango de ley. Las fuentes difieren según se cuenten los decretos promulgados (58-60, según el BOE) o solo los convalidados (44-45). En la XV el Congreso derogó 11, frente a 1 en la XIV.
+- **Por presidente:** unos 16 decretos-ley al año con Aznar y con Rajoy, 14 con Zapatero, 10 con González y 24 con Sánchez.
+- La cifra de "~85%" que usaba antes este proyecto no tenía fuente y se ha retirado.
+- **Pendiente:** recuento propio sobre el BOE (leyes, leyes orgánicas y decretos-ley por año).
 
 ### 3. Control Político del Poder Judicial
 
@@ -66,7 +69,7 @@ El **Consejo General del Poder Judicial (CGPJ)** es el órgano de gobierno de lo
 **Consecuencias del control político:**
 
 1. **Nombramientos discrecionales**: Presidentes de Audiencias, TSJ y TS designados con criterios de afinidad política
-2. **Bloqueo institucional**: El CGPJ lleva años sin renovarse por disputas partidistas
+2. **Bloqueo institucional**: El CGPJ estuvo más de cinco años sin renovarse (2018-2024) por disputas partidistas. Se renovó en julio de 2024 con una lista pactada por PP y PSOE (10 y 10), y la propuesta de nuevo sistema de elección que encargó la LO 3/2024 no logró consenso en el propio CGPJ (febrero de 2025)
 3. **Pérdida de independencia percibida**: Los ciudadanos dudan de la imparcialidad judicial
 4. **Puertas giratorias**: Jueces que pasan a la política y viceversa
 

@@ -2,13 +2,15 @@
 
 > **No se trata de ganar otro ciclo electoral. Se trata de construir un país que funcione mejor para la ciudadanía: vivienda posible, servicios públicos sostenibles, oportunidades para jóvenes y reglas pensadas a largo plazo.**
 
-Repositorio público para la documentación, investigación y creación de un nuevo partido político en España orientado a ciudadanía, futuro común, colaboración, responsabilidad pública y uso responsable de la Inteligencia Artificial.
+Repositorio público de un **estándar abierto de reglas para la vida pública** y de un **observatorio** que mide a todos los partidos con la misma vara, empezando por nosotros. Orientado a ciudadanía, futuro común, colaboración, responsabilidad pública y uso responsable de la Inteligencia Artificial. Si algún día hay partido, nacerá adoptando este estándar.
 
 **No somos una ideología. Somos una infraestructura para la ciudadanía.**
 
 [![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow)]()
 [![Licencia](https://img.shields.io/badge/Licencia-CC%20BY--SA%204.0-blue)]()
 [![Contribuciones](https://img.shields.io/badge/Contribuciones-Bienvenidas-green)]()
+
+> **Estado real (octubre 2026).** Hoy este proyecto lo sostiene una persona. Los documentos se redactan con ayuda de IA y no todas las cifras están verificadas todavía. En octubre de 2026 una revisión encontró cinco datos erróneos, ya corregidos (ver la fe de erratas en la [Radiografía](https://democraciareal.es/docs/radiografia.html)). A partir de ahora, ninguna cifra entra en la web sin fuente primaria, fecha de consulta y estado de verificación. No nos presentamos a las elecciones del 29 de noviembre. Plan actual: [Próximos pasos](Proximos%20pasos.md) · Ideas en discusión: [Ideas.md](Ideas.md).
 
 ---
 
@@ -32,7 +34,7 @@ Este proyecto nace de la convicción de que **España necesita pensar menos en e
 
 ### Objetivo Principal
 
-Diseñar, documentar e implementar la creación de un **nuevo partido político** orientado a:
+Definir, documentar y aplicar un **estándar abierto** (reglas internas, código ético y criterios de auditoría) que cualquier partido pueda adoptar, y un **observatorio** que evalúe a todos con esas reglas y con fuentes públicas. Crear un partido es una opción posterior, no el punto de partida. El estándar está orientado a:
 
 - ✅ **Ciudadanía primero**: vivienda, trabajo, salud, educación, seguridad y tiempo de vida
 - ✅ **Futuro común** para jóvenes, familias, mayores y quienes aún no pueden votar
@@ -163,7 +165,7 @@ Cada política debe responder a:
 
 ### Pilar 4: IA Supervisada como Herramienta Pública
 
-> *"La IA no tiene intereses, no es corrupta, pero debe estar supervisada."*
+> *"La IA no decide y no es neutral. Por eso la obligamos a dejar rastro: cada dato con su fuente, su fecha y quién lo comprobó."*
 
 | Aplicación | Función |
 |------------|---------|
@@ -376,31 +378,35 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para instrucciones detalladas.
 - [x] IA y automatización: casos de uso (módulo 05)
 - [x] Sitio web público con álbum de diagnóstico (web/)
 - [ ] Profundizar investigación con datos verificados en cada tema
+- [x] Registro de cifras con fuente, fecha y estado de verificación ([`web/data/cifras.json`](web/data/cifras.json)), comprobado en cada push por [`scripts/check_cifras.py`](scripts/check_cifras.py)
+- [ ] Verificar todas las cifras de la web contra su fuente primaria
 - [x] Completar campos [PENDIENTE] en documentos existentes
 
-### Fase 2: Constitución Legal
-- [ ] Verificar nombre en Registro de Partidos Políticos
-- [ ] Reunir promotores iniciales (mínimo 3)
-- [ ] Redactar estatutos definitivos conforme a LO 6/2002 (ver `estatutos_base.md`)
-- [ ] Formalizar acta fundacional ante notario
-- [ ] Inscripción en Registro de Partidos Políticos
+### Fase 2: Estándar y Observatorio (octubre 2026 - enero 2027)
+- [ ] Matriz «Las reglas del juego, partido a partido»: estatutos y códigos éticos de todos los partidos con grupo, con Democracia Real en la primera fila (ver [Ideas.md](Ideas.md))
+- [ ] Concretar las «X» pendientes de nuestro propio código ético (tope salarial, años sin puertas giratorias, aportación)
+- [ ] Seguimiento de compromisos de la legislatura que salga del 29N
+- [ ] Responsable identificable y, si procede, asociación (LO 1/2002) como forma legal mínima
 
 ### Fase 3: Desarrollo Tecnológico
 - [x] Portal web público (democraciareal.es)
-- [ ] Plataforma de participación interna
-- [ ] Sistema de democracia líquida
+- [ ] Verificación con agentes y revisión humana visible en cada dato
 - [ ] Herramientas de auditoría IA
 - [ ] Portal de transparencia
+- [ ] Plataforma de participación (piloto pequeño y auditado antes de democracia líquida o voto electrónico)
 
-### Fase 4: Expansión y Afiliación
-- [ ] Captación meritocrática de colaboradores
-- [ ] Implantación territorial (nodos locales)
+### Fase 4: Expansión
+- [ ] Colaboradores y revisores
+- [ ] Partidos u organizaciones que adopten el estándar
 - [ ] Campañas de concienciación y difusión
 
-### Fase 5: Presencia Institucional
+### Fase 5 (opcional): Partido político
+Solo si se decide con datos (métricas, colaboradores, apoyos) a partir de enero de 2027:
+- [ ] Verificar nombre en Registro de Partidos Políticos
+- [ ] Reunir promotores iniciales (mínimo 3)
+- [ ] Redactar estatutos definitivos conforme a LO 6/2002 a partir del estándar (ver `estatutos_base.md`)
+- [ ] Formalizar acta fundacional ante notario e inscripción
 - [ ] Participación en procesos electorales
-- [ ] Promoción de reformas estructurales
-- [ ] Demostrar que otra forma de hacer política es posible
 
 ---
 
@@ -453,4 +459,4 @@ Bajo las condiciones de:
 
 ---
 
-**Última actualización**: Febrero 2026
+**Última actualización**: Octubre 2026

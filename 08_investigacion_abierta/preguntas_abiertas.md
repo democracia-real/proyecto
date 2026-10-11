@@ -11,7 +11,7 @@ Este documento lista las **preguntas de investigación** que necesitamos respond
 | # | Pregunta | Prioridad | Estado |
 |---|----------|-----------|--------|
 | 1.1 | ¿Cuántos diputados han votado en contra de su grupo parlamentario en las últimas 5 legislaturas? | Alta | Pendiente |
-| 1.2 | ¿Qué porcentaje de leyes se aprueban por decreto-ley vs. procedimiento ordinario? | Alta | Pendiente |
+| 1.2 | ¿Qué porcentaje de leyes se aprueban por decreto-ley vs. procedimiento ordinario? | Alta | Parcial: ~45-55% (2019-2026), con fuentes secundarias. Falta recuento propio sobre el BOE |
 | 1.3 | ¿Cuál es el perfil medio de un diputado español? (formación, experiencia previa, años en política) | Media | Pendiente |
 | 1.4 | ¿Cuántas proposiciones de ley de la oposición se aprueban vs. proyectos del gobierno? | Media | Pendiente |
 | 1.5 | ¿Qué porcentaje de iniciativas legislativas populares llegan a debatirse? | Media | Pendiente |

@@ -52,7 +52,7 @@
       }
     },
     "data": {
-      "decrees": { "value": "85%", "label": "legislación por decreto-ley" },
+      "decrees": { "value": "~50%", "label": "de las normas con rango de ley, por decreto-ley (2019-2026)" },
       "days": { "value": "12", "label": "días para abrir empresa en España vs 3 en Estonia" },
       "corruption": { "value": "4-5%", "label": "del PIB perdido por corrupción (estimación)" }
     }

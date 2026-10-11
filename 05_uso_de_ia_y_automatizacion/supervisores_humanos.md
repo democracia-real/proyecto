@@ -6,7 +6,7 @@
 
 Este documento desarrolla los **roles, mecanismos y criterios** para garantizar que los sistemas de IA en gobernanza estén bajo control humano efectivo.
 
-> *"La IA no tiene intereses, no es corrupta, pero debe estar supervisada."* — Readme del proyecto
+> *"La IA no decide y no es neutral. Por eso la obligamos a dejar rastro: cada dato con su fuente, su fecha y quién lo comprobó."* — Readme del proyecto
 
 ## Principio Fundamental
 

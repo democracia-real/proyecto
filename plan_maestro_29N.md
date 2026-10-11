@@ -2,6 +2,8 @@
 
 *Creado: 6 octubre 2026 · Elecciones generales: domingo 29 de noviembre de 2026*
 
+> **Actualización 11 oct.** Una revisión encontró cinco cifras erróneas en la web, ya corregidas. Desde hoy, ninguna pieza de campaña usa una cifra que no esté verificada, y el `red-team` la marca en rojo. Se propone recortar productos y añadir la matriz «Las reglas del juego, partido a partido». Ver [Proximos pasos.md](Proximos%20pasos.md) e [Ideas.md](Ideas.md).
+
 ---
 
 ## La idea en una frase

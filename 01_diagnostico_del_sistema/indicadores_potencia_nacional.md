@@ -108,7 +108,7 @@ Los países con instituciones fuertes e independientes sobreviven a las crisis. 
 
 | Indicador | España | Media UE | Mejor UE | Fuente |
 |-----------|--------|----------|----------|--------|
-| Índice de Percepción de Corrupción (0-100) | 60 | 64 | 90 (Dinamarca) | Transparency Int. CPI 2024 |
+| Índice de Percepción de Corrupción (0-100) | 55 | 62 | 89 (Dinamarca) | Transparency Int. IPC 2025 (10 feb 2026) |
 | Independencia judicial percibida (% alto/muy alto) | 33% | 52% | 85% (Finlandia) | EU Justice Scoreboard |
 | Duración media procesos civiles (días) | 238 | 180 | 87 (Lituania) | CEPEJ |
 | Gobierno digital (índice DESI) | 0,68 | 0,62 | 0,85 (Estonia) | DESI 2024 |

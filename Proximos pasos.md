@@ -1,95 +1,144 @@
 # Próximos Pasos del Proyecto
 
-*Última actualización: 13 marzo 2026*
+*Última actualización: 11 octubre 2026*
 
 ---
 
-## Estado Actual — Todo lo que está hecho ✅
+## Dónde estamos
 
-| Área | Notas |
-|------|-------|
-| Documentación base | 8 módulos, 80+ documentos |
-| Web desplegada | democraciareal.es (Azure SWA + Cloudflare) |
-| Chatbot IA | Azure Function + Foundry Agent |
-| Álbum de diagnóstico | 5 canciones con reproductor web |
-| Visor Markdown universal | viewer.html — sin duplicar contenido |
-| SEO básico | robots.txt, sitemap.xml, meta tags |
-| i18n básico | ES, CA, EU, GL, EN |
-| Cloudflare Analytics | Activado — sin cookies, sin banner |
-| **Vídeo corto 30s** | Publicado en YouTube ✅ |
-| **Vídeo largo ~9min** | Publicado en YouTube ✅ https://youtu.be/om-2aiG4bLo |
-| YouTube — banner y descripción del canal | Hecho ✅ |
+- **Elecciones generales el 29 de noviembre.** No nos presentamos. El plan de campaña está en [plan_maestro_29N.md](plan_maestro_29N.md): usar la campaña para que la gente descubra el proyecto.
+- **Una auditoría externa encontró datos mal en la web.** Al comparar Democracia Real con democracia21 ([informe](Democracia%20Real%20y%20democracia21%20comparación,%20lagunas%20y%20mejoras.md)) salieron tres cifras erróneas. Al revisarlas aparecieron dos más. Las cinco están corregidas.
+- **La lección.** Los documentos se generaron con IA y nadie verificó las cifras contra la fuente. Generar es barato y verificar es lo escaso. Por eso la verificación pasa a ser el producto: es lo que nos diferencia y lo que demuestra para qué sirve la IA.
+- **El proyecto lo sostiene una persona.** Hay que decirlo en la web. Es transparencia, no debilidad.
 
 ---
 
-## PLAN DE VISIBILIDAD — Este fin de semana
+## Decisiones
 
-### PRIORIDAD 1 — Publicar el vídeo largo ✅
-
-- [x] Subir `largo.mp4` a YouTube: https://youtu.be/om-2aiG4bLo
-- [x] Vídeo corto publicado: https://youtu.be/TFFVpeAYftg
-- [ ] Fijar en YouTube Studio → Personalización → Diseño → Vídeo destacado
-
----
-
-### PRIORIDAD 2 — Activar redes sociales (este fin de semana)
-
-- [ ] **Twitter/X** — Crear perfil @DemocraciaRealEs (o similar disponible)
-  - Bio: *"Las reglas del juego, rediseñadas. Datos, sin ideología. democraciareal.es"*
-  - Primer tuit: enlace al vídeo largo con el dato del `3,4`
-- [ ] **Instagram** — Perfil con clips del vídeo corto como Reels
-- [ ] Añadir links de YouTube y redes a la web (`index.html`)
+| Decisión | Estado |
+|----------|--------|
+| No presentarse el 29N | Tomada |
+| Nada se publica sin aprobación humana | Tomada |
+| Ninguna cifra sin fuente primaria, fecha de consulta y estado de verificación | Tomada hoy |
+| **Qué es Democracia Real** | Tomada (11 oct): estándar abierto y observatorio. El partido queda como opción, a decidir con datos a partir de enero. Aplicado en el README, la portada y el módulo 04 |
+| Mensaje sobre la IA | Tomado (11 oct): *"La IA no decide y no es neutral. Por eso la obligamos a dejar rastro"*. Sustituye a "La IA no tiene intereses" |
+| Constituir una asociación para tener un responsable legal de datos y una cuenta | Pendiente. Ver [Ideas.md](Ideas.md) |
+| Cómo se llama todo esto frente a "Democracia 21" y "Democracia Real Ya" | Pendiente |
 
 ---
 
-### PRIORIDAD 3 — Contactos estratégicos (próxima semana)
+## Semana 1 (11-18 oct): integridad de datos — PRIORIDAD 0
 
-**Rubén Gisbert**
-- [ ] Buscar contacto (Twitter/email público)
-- [ ] Mensaje corto: diagnóstico del proyecto + enlace vídeo largo
-- [ ] Objetivo: mención, colaboración o simplemente feedback
+Sin esto no tiene sentido nada de lo demás. En campaña, un dato mal publicado nos hunde.
 
-**Democracia Real Ya (200k seguidores inactivos)**
-- [ ] Tuit mencionando @democraciarealya: *"El 15M tenía el diagnóstico correcto. Aquí está la propuesta técnica concreta. [enlace]"*
-- [ ] Explorar si hay alguien activo detrás que quiera retomar
+### Hecho hoy
 
-**democraciareal.com**
-- [ ] Contactar por email (info@democraciareal.com)
-- [ ] Propuesta: tienen base legal, nosotros tenemos contenido y visión
+| Cifra | Antes | Ahora | Fuente |
+|-------|-------|-------|--------|
+| Legislación por decreto-ley | ~85% (sin fuente) | ~50% de las normas con rango de ley (2019-2026). XIV: 97 de 216 | Congreso y BOE, recuentos de Electomanía (2 oct 2026) y El Día (9 oct 2026) |
+| Índice de Percepción de la Corrupción | 60/100 "CPI 2024", puesto 35 | 55/100, puesto 49 de 182, 17 de 27 en la UE (IPC 2025). Media UE 62, Dinamarca 89 | Transparency International, 10 feb 2026 |
+| Vocales del CGPJ | "12 de 12" | 20 de 20, todos elegidos por Congreso y Senado | LOPJ, LO 3/2024 |
+| Abstención media en generales | 43% | 28% (1977-2023), con máximos del 33-34% en 2016, 2019 y 2023 | Ministerio del Interior |
+| Decretos-ley de la XIV legislatura | 65 frente a 83 leyes | 97 de 216 normas (65 era la XII) | Estadísticas del Congreso |
+
+Ficheros tocados: `web/index.html`, `web/docs/radiografia.html`, `web/docs/01-diagnostico/index.html`, `web/docs/03-propuestas/index.html`, `web/i18n/es.json`, `01_diagnostico_del_sistema/` (README, separacion_poderes, indicadores_potencia_nacional), `03_propuestas_institucionales/ley_anti_decretos.md`, `08_investigacion_abierta/preguntas_abiertas.md`.
+
+La Radiografía tiene ahora un aviso de revisión con la fe de erratas.
+
+### Pendiente esta semana
+
+- [ ] **Publicar las correcciones** (`git push`). La web no cambia hasta entonces.
+- [ ] **Inventario de cifras.** Revisar todas las cifras de la portada, la Radiografía y los documentos que se usan en redes. Las que ya se ven sospechosas:
+
+| Cifra | Dónde | Duda |
+|-------|-------|------|
+| 50.000 M€ / 4-5% del PIB en corrupción, "según Tribunal de Cuentas y Comisión Europea" | Portada, Radiografía, diagnóstico | No se encuentra ese estudio. Probablemente mezcla el sobrecoste de la contratación pública de la CNMC (2015) con otros estudios. Hay que buscar el original |
+| 9 leyes de educación | Radiografía, diagnóstico web | El README del módulo 01 dice 8. Unificar y explicar el criterio (¿cuenta la LGE de 1970?) |
+| "Soria vale 6 veces Madrid" | Redes, sistema_electoral.md | Ya marcada en el plan 29N. Recalcular con los datos de 2023 |
+| 83,7% del sueldo para alquilar | Redes, vídeo | Falta fuente, año y colectivo exacto (¿jóvenes? ¿salario medio?) |
+| 31.000 € de deuda por español, 104% del PIB | Portada, Radiografía | Actualizar con el último dato del Banco de España |
+| 12 días para abrir empresa frente a 3 en Estonia | Portada, i18n | Fuente "Doing Business", que el Banco Mundial dejó de publicar en 2021 |
+| 3,4 sobre 10 a los políticos según el CIS | Portada, vídeo | Localizar el barómetro exacto y la pregunta |
+| Resto de tarjetas de la Radiografía (tasas, I+D, PISA, fibra, renovables...) | Radiografía | Sin verificar |
+
+- [ ] **No usar en redes ni en el plan 29N ninguna cifra que no esté verificada.** Esto bloquea también los hilos previstos con "83,7%", "Soria 6x" y "8 leyes educativas" hasta que estén comprobados.
+- [x] **Aviso en los documentos.** `viewer.html` muestra en todos los .md que son borradores con ayuda de IA y enlaza al registro de cifras.
+- [x] **Sección "Quién hay detrás"** en la portada: una persona, sin partido ni candidatura, textos con IA, cómo se verifica y cómo se corrige.
+- [ ] **RGPD antes de captar emails.** El plan 29N usa la lista de espera como KPI. La política de privacidad debe nombrar a un responsable identificable (una persona o una asociación) y explicar que apuntarse a un proyecto político puede revelar opiniones políticas. Mejor resolverlo antes de que crezca la lista.
 
 ---
 
-### PRIORIDAD 4 — Contenido recurrente (a partir de la semana que viene)
+## Semanas 2-3 (19 oct-1 nov): sistema de verificación v1
 
-- [ ] Hilo de Twitter por cada dato impactante del vídeo:
-  - `83,7% del sueldo para alquilar`
-  - `El voto en Soria vale 6 veces más que en Madrid`
-  - `8 leyes educativas, casi 1 por cambio de gobierno`
-- [ ] Clip de 30s (el vídeo corto) como Reel en Instagram y Short en YouTube
-- [ ] Publicar el vídeo corto también en Twitter/X
+El objetivo es que una cifra sin verificar no pueda llegar a la web. Diseño completo en [Ideas.md](Ideas.md).
+
+- [x] **Registro de cifras** [`web/data/cifras.json`](web/data/cifras.json): 6 cifras (5 verificadas por IA con fuente descargada y 1 pendiente, el coste de la corrupción). Cada una con fuente, fragmento literal, fecha de consulta, estado, fecha de revisión y los ficheros donde aparece.
+- [ ] **Firmar la revisión humana** de las 5 cifras verificadas: leer la fuente y rellenar `revision_humana` con tu nombre o alias. Hasta entonces la web lo indica.
+- [x] **La Radiografía lee del registro.** Cada tarjeta muestra "Verificada con fuente" o "Pendiente de verificar", y arriba hay un contador (hoy, 4 de 20).
+- [ ] La portada, igual que la Radiografía.
+- [x] **Script** [`scripts/check_cifras.py`](scripts/check_cifras.py): falla si una cifra verificada no tiene fuente o fragmento, o si el texto de la web no coincide con el registro (alguien cambió el número sin pasar por él). Avisa de enlaces caídos, revisiones vencidas y firmas humanas pendientes.
+- [x] **GitHub Action** [`verificar-cifras.yml`](.github/workflows/verificar-cifras.yml) que lo ejecuta en cada push y pull request.
+- [ ] Añadir al registro, una a una, el resto de cifras de la portada y la Radiografía a medida que se verifiquen.
+- [ ] **Agentes.** Un extractor saca las afirmaciones. Un verificador descarga la fuente en esa ejecución y devuelve valor, enlace y fragmento, sin responder de memoria. Un segundo verificador, con otro modelo y sin ver el resultado del primero, repite la comprobación. Si no coinciden, pasa a revisión humana.
+- [ ] **Revisión humana con firma.** El humano revisa las discrepancias, las cifras de titular y una muestra al azar. Su nombre o alias y la fecha quedan en el commit.
+- [ ] **Página pública de erratas**, enlazada desde el pie de la web.
 
 ---
+
+## Campaña 29N: qué mantener y qué recortar
+
+El [plan maestro](plan_maestro_29N.md) tiene 13 cosas que construir, y para una persona es demasiado. Propuesta de prioridad:
+
+| Prioridad | Producto | Por qué |
+|-----------|----------|---------|
+| 1 | **Lo que vale tu voto** (13 oct) | Es aritmética comprobable. Pasa por el registro de cifras antes de publicar |
+| 2 | **Las reglas del juego, partido a partido** (nuevo, antes del 13 nov) | Matriz de partidos por estándares de integridad, con la cláusula exacta de cada estatuto. Solo usa documentos públicos, aplica la misma vara a todos y empieza por evaluarnos a nosotros. Ver [Ideas.md](Ideas.md) |
+| 3 | **Decretómetro** | Aprovecha los datos verificados hoy. Se critica el mecanismo, no el contenido de cada decreto |
+| 4 | **Promesómetro reducido** | 20-30 compromisos por partido con grupo propio, no todas las promesas. Antes, ver qué hacen ya Civio, Newtral y Maldita |
+| Aplazar | Presentador IA, verificación de debates en directo, 52 notas de prensa local, fichas "Tu lista" | Mucho trabajo y mucho riesgo de error con una sola persona. Retomar si sobra tiempo |
+
+Regla añadida al agente `red-team`: si la pieza contiene una cifra que no está en el registro como verificada, sale en rojo.
+
+---
+
+## Después del 29N (diciembre-enero)
+
+- [ ] Seguimiento de compromisos de los electos desde la sesión constitutiva (23 dic).
+- [ ] **Decidir la identidad en enero** con datos: métricas, contactos, lista de espera y si alguien quiere sumarse.
+- [ ] Si se decide, constituir una asociación (más barata y rápida que un partido) para tener personalidad jurídica.
+- [ ] **Concretar las "X" del código ético propio**: tope salarial (X veces el SMI), años sin puertas giratorias (el README dice 5) y porcentaje de aportación. Mientras estén en blanco, en nuestra propia matriz salimos "sin concretar".
+- [ ] Separar en los estatutos base la representación legal (que la ley exige) del poder de decisión: cargos con poder acotado, rotación y límite de mandatos, y decisiones en manos de los afiliados.
+- [ ] Licencia de software (AGPL o similar) para el código, y mantener CC BY-SA para los textos.
+- [ ] `GOVERNANCE.md`: quién fusiona cambios, cómo se resuelven desacuerdos y cómo se corrige un dato.
+- [ ] Propuestas completas, con coste, de vivienda y modelo territorial.
+- [ ] Verificar el nombre en el Registro de Partidos (no esperar a la constitución legal).
+
+---
+
+## Pendiente de la etapa anterior (visibilidad)
+
+- [ ] Fijar el vídeo largo como destacado en YouTube Studio.
+- [ ] Perfiles en X e Instagram y enlaces en `index.html` (parte ya cubierta por el plan 29N).
+- [ ] Contactos (Rubén Gisbert, Democracia Real Ya, democraciareal.com). Antes de escribir a nadie, que las cifras que vean estén verificadas.
+- [ ] Hilos con datos del vídeo: **bloqueados** hasta verificar cada cifra.
 
 ## Pendiente técnico (no urgente)
 
 | Tarea | Prioridad |
 |-------|-----------|
+| Re-indexar en Azure AI Search los documentos corregidos (el chat sigue usando las cifras viejas) | **Alta**, tras el push |
 | Completar `[PENDIENTE]` en módulos 03-08 | Media |
-| Re-indexar documentos nuevos en Azure AI Search | Media |
-| Subir podcasts a Azure Blob + configurar `media.democraciareal.es` | Media |
-| Modo karaoke-lite en el reproductor (Fase 3 visual) | Baja |
-| Investigar con Deep Research líneas estratégicas Dalio (soberanía IA, demografía, etc.) | Baja |
-| Verificar nombre "Democracia Real" en Registro de Partidos | Antes de constituir |
+| Subir podcasts a Azure Blob y configurar `media.democraciareal.es` | Media |
+| Revisar letras del álbum con cifras antiguas ("65 veces", "puesto 46") | Baja: son obras grabadas; basta una nota en la web |
+| Modo karaoke-lite en el reproductor | Baja |
 | Imágenes representativas por sección | Baja |
 
----
+## Pendiente legal
 
-## Pendiente legal (Fase 3 — no urgente hasta tener masa crítica)
-
-- [ ] Verificar nombre en Registro de Partidos Políticos (Ministerio del Interior)
-- [ ] Reunir promotores (mínimo 3)
-- [ ] Redactar estatutos definitivos (LO 6/2002)
-- [ ] Acta notarial e inscripción
+- [ ] Consulta a la Junta Electoral o a un abogado electoral antes del 13 nov (ver plan 29N).
+- [ ] Consulta sobre el riesgo de vulnerar el derecho al honor al evaluar a partidos y cargos, antes de publicar la matriz.
+- [ ] Responsable de datos identificable (ver semana 1).
+- [ ] Fase de partido (solo si se decide en enero): promotores, estatutos definitivos (LO 6/2002), acta notarial e inscripción.
 
 ---
 

@@ -108,7 +108,7 @@ El sistema premia:
 ### Desafección Política
 - **Confianza en políticos (CIS, 2025)**: La confianza media en la clase política se sitúa en **3,4 sobre 10**. El **43%** de la población muestra grados intensos de desconfianza en el Congreso.
 - **Abstención electoral**: Ha pasado de un **22,2%** en las primeras elecciones de 1977 a picos de casi **33%** en las repeticiones electorales de 2019, reflejando una desafección creciente.
-- **Corrupción (Transparencia Internacional, 2024)**: España bajó 4 puntos en el Índice de Percepción de la Corrupción, situándose en el **puesto 46 del mundo** y el **18 de la UE-27**.
+- **Corrupción (Transparency International, IPC 2025)**: España obtiene **55/100**, en el **puesto 49 de 182** y el **17 de la UE-27**. La serie baja: 60 en 2022 y 2023, 56 en 2024 y 55 en 2025. La media de la UE es 62.
 
 ### Eficiencia Comparada
 - **Doing Business**: España ocupa el **puesto 30** a nivel mundial en facilidad para hacer negocios.
@@ -119,7 +119,7 @@ El sistema premia:
 
 | Pregunta | Respuesta / Dato |
 |----------|------------------|
-| ¿Decretos-ley vs leyes ordinarias? | En la **XIV Legislatura** se aprobaron **65 Reales Decretos-Leyes** frente a **83 leyes ordinarias**. La tendencia desde la XII legislatura es que el peso del decreto-ley (ejecutivo) supere a menudo la capacidad legislativa del Parlamento. |
+| ¿Decretos-ley vs leyes ordinarias? | En la **XIV Legislatura** fueron **97 reales decretos-ley de 216 normas con rango de ley (45%)**, y en la XV, más de la mitad. Detalle y fuentes en [separacion_poderes.md](separacion_poderes.md). |
 | ¿Diputados disidentes? | La **disciplina de voto es casi del 100%**. Las votaciones contra el grupo son anecdóticas y suelen castigarse con multas (de 200 € a 600 €) o la expulsión de listas futuras. |
 | ¿Perfil medio del diputado? | En la XIV Legislatura, el **77%** tenía licenciatura o grado, el **22%** máster y un **13%** doctorado. La mayoría proviene de la propia estructura de partidos o la administración pública, con **escasa presencia** de perfiles de ingeniería o empresa privada. |
 | ¿Políticas revertidas? | Ejemplo claro: **Educación**. España ha tenido **8 leyes educativas** en democracia (LGE, LOECE, LODE, LOGSE, LOCE, LOE, LOMCE, LOMLOE), casi una por cada cambio de signo en el gobierno. |

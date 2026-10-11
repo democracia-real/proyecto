@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "descripcion": "Registro de cifras de Democracia Real. Cada cifra publicada debe estar aquí con su fuente primaria, el fragmento donde aparece, la fecha de consulta y su estado. Lo comprueba scripts/check_cifras.py en cada push.",
+  "estados": ["verificado", "pendiente", "discutido", "obsoleto"],
+  "cifras": [
+    {
+      "id": "decretos-ley-proporcion",
+      "afirmacion": "Alrededor de la mitad de las normas con rango de ley aprobadas entre 2019 y 2026 fueron reales decretos-ley",
+      "valor": "~50%",
+      "periodo": "XIV y XV legislaturas (2019-2026)",
+      "fuente": "Congreso de los Diputados (estadísticas por legislatura) y BOE, recuentos de Electomanía y El Día",
+      "url": "https://electomania.es/radiografia-del-decreto-ley-en-espana-747-aprobados-16-rechazados-13-en-el-ultimo-gobierno/",
+      "fragmento": "La legislatura con más reales decretos-leyes es la XIV (2019-2023), con 97 [...] La XV, en curso, acumula 58 hasta el 29 de septiembre de 2026",
+      "calculo": "XIV: 97 de 216 (45%). XV: 44 de 79 según El Día (solo convalidados) o 60 de 93 según Electomanía y el BOE. Agregado 2019-2026: entre 48% y 51%",
+      "consultado": "2026-10-11",
+      "estado": "verificado",
+      "nota": "Dos fuentes secundarias coinciden en el orden de magnitud. Falta un recuento propio sobre el BOE.",
+      "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-01-15",
+      "texto_en": {
+        "web/index.html": "data-count=\"1\" data-suffix=\" de 2\"",
+        "web/docs/radiografia.html": "~50%",
+        "web/docs/01-diagnostico/index.html": "1 de cada 2",
+        "web/docs/03-propuestas/index.html": "~50% (2019-2026)",
+        "web/i18n/es.json": "~50%"
+      }
+    },
+    {
+      "id": "decretos-ley-xiv",
+      "afirmacion": "En la XIV legislatura se aprobaron 97 reales decretos-ley de 216 normas con rango de ley",
+      "valor": "97 de 216",
+      "periodo": "XIV legislatura (2019-2023)",
+      "fuente": "Estadísticas del Congreso de los Diputados, recogidas por Electomanía y El Día",
+      "url": "https://electomania.es/radiografia-del-decreto-ley-en-espana-747-aprobados-16-rechazados-13-en-el-ultimo-gobierno/",
+      "fragmento": "La legislatura con más reales decretos-leyes es la XIV (2019-2023), con 97",
+      "consultado": "2026-10-11",
+      "estado": "verificado",
+      "nota": "El total de 216 normas procede de El Día (9 oct 2026). Pendiente de contrastar con la estadística del Congreso.",
+      "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-01-15",
+      "texto_en": {
+        "web/docs/radiografia.html": "97 de 216",
+        "01_diagnostico_del_sistema/separacion_poderes.md": "97 reales decretos-ley de 216",
+        "01_diagnostico_del_sistema/README.md": "97 reales decretos-ley de 216"
+      }
+    },
+    {
+      "id": "cgpj-eleccion",
+      "afirmacion": "Los 20 vocales del CGPJ los eligen el Congreso y el Senado, 10 cada cámara, por mayoría de tres quintos",
+      "valor": "20 de 20",
+      "periodo": "Desde la LOPJ de 1985; vigente tras la LO 3/2024",
+      "fuente": "Ley Orgánica 6/1985 del Poder Judicial y Ley Orgánica 3/2024",
+      "url": "https://www.boe.es/boe/dias/2024/08/05/pdfs/BOE-A-2024-16127.pdf",
+      "fragmento": "La actual Ley Orgánica del Poder Judicial establece que los 20 vocales que integran el CGPJ son nombrados por las Cortes Generales. Cada una de las cámaras elige a la mitad de los vocales por una mayoría de tres quintos (RTVE, 5 feb 2025)",
+      "consultado": "2026-10-11",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-01-15",
+      "texto_en": {
+        "web/index.html": "data-count=\"20\" data-suffix=\" de 20\"",
+        "web/docs/radiografia.html": "20 de 20",
+        "web/docs/01-diagnostico/index.html": "20 de 20"
+      }
+    },
+    {
+      "id": "abstencion-media",
+      "afirmacion": "La abstención media en las elecciones generales de 1977 a 2023 es del 28%",
+      "valor": "28%",
+      "periodo": "16 elecciones generales, 1977-2023",
+      "fuente": "Ministerio del Interior, resultados oficiales (serie de Dato Electoral)",
+      "url": "https://datoelectoral.es/participacion",
+      "fragmento": "23 de julio de 2023 | 37.469.458 | 24.952.447 | 66,6 % | 33,4 %",
+      "calculo": "Media simple de la abstención de las 16 convocatorias: 28,1%",
+      "consultado": "2026-10-11",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "nota": "Revisar tras las elecciones del 29 de noviembre de 2026.",
+      "texto_en": {
+        "web/index.html": "data-count=\"28\" data-suffix=\"%\"",
+        "web/docs/radiografia.html": "28%",
+        "web/docs/01-diagnostico/index.html": "<strong>28%</strong>"
+      }
+    },
+    {
+      "id": "ipc-espana",
+      "afirmacion": "España obtiene 55/100 en el Índice de Percepción de la Corrupción 2025, puesto 49 de 182 y 17 de 27 en la UE. Media UE 62, Dinamarca 89",
+      "valor": 55,
+      "unidad": "puntos sobre 100",
+      "periodo": "IPC 2025 (publicado el 10 feb 2026)",
+      "fuente": "Transparency International",
+      "url": "https://transparencia.org.es/actualidad/indice-de-percepcion-de-la-corrupcion-2025/",
+      "fragmento": "siendo su puntuación de 55/100. Esta calificación sitúa a España en la posición 49/182",
+      "consultado": "2026-10-11",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-02-15",
+      "nota": "Transparency publica cada febrero. Actualizar con el IPC 2026.",
+      "texto_en": {
+        "web/docs/radiografia.html": "55 / 100",
+        "web/docs/03-propuestas/index.html": "55/100 (2025)",
+        "01_diagnostico_del_sistema/README.md": "**55/100**",
+        "01_diagnostico_del_sistema/indicadores_potencia_nacional.md": "| 55 | 62 | 89 (Dinamarca)"
+      }
+    },
+    {
+      "id": "coste-corrupcion",
+      "afirmacion": "La corrupción cuesta entre el 4% y el 5% del PIB (unos 50.000 M€ al año), según el Tribunal de Cuentas y la Comisión Europea",
+      "valor": "50.000 M€",
+      "fuente": "Sin localizar",
+      "url": null,
+      "fragmento": null,
+      "consultado": "2026-10-11",
+      "estado": "pendiente",
+      "nota": "No se encuentra el estudio citado. Posible confusión con la estimación de la CNMC (2015) del sobrecoste de la contratación pública sin competencia. No usar en redes hasta resolverlo.",
+      "verificado_por": [],
+      "revision_humana": null,
+      "revisar_en": "2026-10-25",
+      "texto_en": {
+        "web/docs/radiografia.html": "50.000 M&euro;"
+      }
+    }
+  ]
+}

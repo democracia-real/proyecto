@@ -6,7 +6,8 @@
 
 ## El Problema
 
-- En España un **porcentaje muy alto** de la legislación se aprueba por **decreto-ley** (el dato concreto está en diagnóstico).
+- En España cerca de **la mitad de las normas con rango de ley** son **decretos-ley**: 97 de 216 en la XIV Legislatura (45%) y más de la mitad en la XV. Datos y fuentes en [separacion_poderes.md](../01_diagnostico_del_sistema/separacion_poderes.md).
+- El Congreso solo puede convalidar o derogar el texto entero, sin enmiendas. En la XV Legislatura derogó 11, varios de ellos decretos "ómnibus" que mezclaban materias (pensiones, transporte, medidas fiscales).
 - Permite al Gobierno legislar sin el filtro del Parlamento y luego convalidar en corto plazo.
 - Se usa para temas que no son urgencias objetivas, erosionando la separación de poderes y el debate.
 
@@ -27,4 +28,4 @@
 
 ---
 
-*Documento en desarrollo. Requiere datos de % legislación por decreto-ley.*
+*Documento en desarrollo. Pendiente: recuento propio sobre el BOE (decretos-ley frente a leyes por año).*

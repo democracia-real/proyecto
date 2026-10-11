@@ -2,7 +2,7 @@
 
 ## Resumen Ejecutivo
 
-Este módulo define la **estructura y funcionamiento interno** del nuevo partido político, diseñado para ser coherente con los principios que propugna: democracia interna real, transparencia radical, meritocracia y uso de tecnología.
+Este módulo define la **estructura y funcionamiento interno** que propone el estándar: lo puede adoptar cualquier partido y sería la base de Democracia Real si algún día se constituye como partido. Está diseñado para ser coherente con los principios que propugna: democracia interna real, transparencia radical, meritocracia y uso de tecnología.
 
 > *"No podemos pedir a otros lo que no practicamos internamente."*
 
