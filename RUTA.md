@@ -45,6 +45,7 @@ Hasta enero hay un solo objetivo: **demostrar con cuatro productos y un sistema 
 - [ ] **Responsable en la política de privacidad** (tu nombre o el de una asociación), antes de que crezca la lista de email
 - [ ] Revisar qué hacen ya Civio, Newtral y Maldita y fijar el criterio de selección del Promesómetro
 - [ ] Descargar estatutos y códigos éticos de todos los partidos (18 oct)
+- [ ] **Primer lote de 3 clips cortos** de canciones sin cifras (ver [Contenido corto](#contenido-corto-shorts-tiktok-reels)), y repetir cada semana
 
 ### Fase 2 · 18 oct-1 nov — Matriz
 
@@ -103,6 +104,32 @@ Hasta enero hay un solo objetivo: **demostrar con cuatro productos y un sistema 
 
 Hasta que haya un producto publicado, **no se escribe a nadie**: la primera impresión no se repite.
 
+### Contenido corto: Shorts, TikTok, Reels
+
+Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el proyecto, y **empieza ya**, porque el alcance se construye en semanas y la campaña dura siete. Pero es una **tarea de fondo**, no un proyecto: se hace por lotes, sin competir con los cuatro productos.
+
+**Material:** 62 canciones con vídeo ya exportado en `youtube_exports/`.
+
+**Regla que condiciona todo:** 52 de las 62 letras contienen cifras (algunas ya corregidas esta semana, como «65 veces» o «puesto 46»). Un clip difunde esa cifra, así que:
+
+1. **Primero, las 10 canciones sin cifras:** *El Rastro del Bit, Dinero de Papel, Cerebros de Embalaje, Autor Desconocido, Código Abierto (Democracia Líquida), Ejemplaridad, Nodos, Meritocracia, La Factura* y *Código y Cuna* (módulo 08).
+2. **De las demás, solo el trozo sin números**, normalmente un estribillo. Si un clip lleva una cifra, tiene que estar en el [registro](web/data/cifras.json) como verificada.
+3. **Revisar la letra del clip** antes de publicar: que no nombre a un partido ni pida el voto.
+
+**Formato:**
+- Vertical 9:16, 20-45 segundos, el estribillo o la mejor imagen.
+- Una frase en pantalla que funcione sin sonido (la primera, el gancho).
+- Descripción: *«Música y letra generadas con IA. Texto revisado por una persona.»* Activar la etiqueta de contenido sintético de cada plataforma. Es una línea roja del plan, y el reglamento europeo de IA lo exige desde agosto de 2026.
+- Enlace en la biografía a la web o al vídeo largo. Ni «vota» ni «no votes».
+
+**Ritmo:** un lote semanal (por ejemplo, el domingo) de unos 3 clips, y se publica uno cada dos o tres días en YouTube Shorts, TikTok e Instagram Reels a la vez. Mejor poco y constante que veinte clips de golpe.
+
+**Más adelante,** cada producto da su propio clip: una celda de la matriz, un decreto en el Decretómetro, un dato provincial. Eso sí lleva cifras verificadas.
+
+**Cómo saber si sirve:** a las cuatro semanas, qué clips tuvieron más visualizaciones, seguidores nuevos y visitas a la web (Cloudflare). Se repite lo que funciona y se deja lo demás.
+
+**Pendiente:** abrir cuenta de TikTok (la única que falta) y confirmar si las canciones se pueden publicar tal cual según las condiciones de la herramienta con que se generaron.
+
 ---
 
 ## Qué te toca a ti (solo tú puedes)
@@ -113,6 +140,7 @@ Hasta que haya un producto publicado, **no se escribe a nadie**: la primera impr
 | Firmar las 5 cifras del registro | Antes del 13 oct |
 | Nombre o asociación como responsable de datos | Antes de seguir captando emails |
 | Revisar todas las celdas de la matriz | 1 nov |
+| Abrir TikTok y confirmar que puedes publicar las canciones | Esta semana |
 | Consulta con un abogado | Antes del 6 nov |
 | Decidir qué es Democracia Real | Enero |
 
