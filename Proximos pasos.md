@@ -87,7 +87,7 @@ El objetivo es que una cifra sin verificar no pueda llegar a la web. Diseño com
 
 ## Campaña 29N: qué mantener y qué recortar
 
-El [plan maestro](plan_maestro_29N.md) tiene 13 cosas que construir, y para una persona es demasiado. Propuesta de prioridad:
+**Decidido el 11 oct:** cuatro productos activos y el resto aplazado. El [plan maestro](plan_maestro_29N.md) ya está actualizado con fechas, agentes y cadencia.
 
 | Prioridad | Producto | Por qué |
 |-----------|----------|---------|
