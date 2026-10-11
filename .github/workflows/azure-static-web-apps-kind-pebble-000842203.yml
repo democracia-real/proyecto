@@ -23,7 +23,7 @@ jobs:
           submodules: true
           lfs: false
       - name: Comprobar registro de cifras
-        run: python3 scripts/check_cifras.py
+        run: python3 .github/checks/check_cifras.py
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token

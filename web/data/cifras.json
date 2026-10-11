@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "descripcion": "Registro de cifras de Democracia Real. Cada cifra publicada debe estar aquí con su fuente primaria, el fragmento donde aparece, la fecha de consulta y su estado. Lo comprueba scripts/check_cifras.py en cada push.",
+  "descripcion": "Registro de cifras de Democracia Real. Cada cifra publicada debe estar aquí con su fuente primaria, el fragmento donde aparece, la fecha de consulta y su estado. Lo comprueba .github/checks/check_cifras.py en cada push.",
   "estados": ["verificado", "pendiente", "discutido", "obsoleto"],
   "cifras": [
     {

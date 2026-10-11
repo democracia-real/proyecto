@@ -78,7 +78,7 @@ El objetivo es que una cifra sin verificar no pueda llegar a la web. Diseño com
 - [ ] **Firmar la revisión humana** de las 5 cifras verificadas: leer la fuente y rellenar `revision_humana` con tu nombre o alias. Hasta entonces la web lo indica.
 - [x] **La Radiografía lee del registro.** Cada tarjeta muestra "Verificada con fuente" o "Pendiente de verificar", y arriba hay un contador (hoy, 4 de 20).
 - [ ] La portada, igual que la Radiografía.
-- [x] **Script** [`scripts/check_cifras.py`](scripts/check_cifras.py): falla si una cifra verificada no tiene fuente o fragmento, o si el texto de la web no coincide con el registro (alguien cambió el número sin pasar por él). Avisa de enlaces caídos, revisiones vencidas y firmas humanas pendientes.
+- [x] **Script** [`.github/checks/check_cifras.py`](.github/checks/check_cifras.py): falla si una cifra verificada no tiene fuente o fragmento, o si el texto de la web no coincide con el registro (alguien cambió el número sin pasar por él). Avisa de enlaces caídos, revisiones vencidas y firmas humanas pendientes.
 - [x] **GitHub Action** [`verificar-cifras.yml`](.github/workflows/verificar-cifras.yml) que lo ejecuta en cada push y pull request.
 - [ ] Añadir al registro, una a una, el resto de cifras de la portada y la Radiografía a medida que se verifiquen.
 - [ ] **Agentes.** Un extractor saca las afirmaciones. Un verificador descarga la fuente en esa ejecución y devuelve valor, enlace y fragmento, sin responder de memoria. Un segundo verificador, con otro modelo y sin ver el resultado del primero, repite la comprobación. Si no coinciden, pasa a revisión humana.

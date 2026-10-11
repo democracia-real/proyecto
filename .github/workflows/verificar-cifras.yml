@@ -17,4 +17,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Comprobar registro de cifras
-        run: python scripts/check_cifras.py --online
+        run: python .github/checks/check_cifras.py --online

@@ -378,7 +378,7 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para instrucciones detalladas.
 - [x] IA y automatización: casos de uso (módulo 05)
 - [x] Sitio web público con álbum de diagnóstico (web/)
 - [ ] Profundizar investigación con datos verificados en cada tema
-- [x] Registro de cifras con fuente, fecha y estado de verificación ([`web/data/cifras.json`](web/data/cifras.json)), comprobado en cada push por [`scripts/check_cifras.py`](scripts/check_cifras.py)
+- [x] Registro de cifras con fuente, fecha y estado de verificación ([`web/data/cifras.json`](web/data/cifras.json)), comprobado en cada push por [`.github/checks/check_cifras.py`](.github/checks/check_cifras.py)
 - [ ] Verificar todas las cifras de la web contra su fuente primaria
 - [x] Completar campos [PENDIENTE] en documentos existentes
 
