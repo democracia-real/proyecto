@@ -2,6 +2,13 @@
 
 *Creado: 13 marzo 2026*
 
+> **⚠ Parcialmente obsoleto (11 oct 2026). Leer antes [`RUTA.md`](RUTA.md).** Este documento es anterior a la corrección de cifras y al cambio a «estándar abierto y observatorio». **No usar tal cual los textos de más abajo:**
+> - contienen cifras sin verificar (83,7%, Soria 6x, 8 leyes educativas, 87.000 titulados, 26,6% de paro juvenil, 3,4 del CIS);
+> - presentan el proyecto como «el primer partido con el programa en GitHub», y ya no es un partido;
+> - el email a periodistas afirma que «publica las nóminas de sus cargos» y que «no acepta donaciones...», y hoy no existe nada de eso.
+>
+> Las tácticas de canales (replies, creadores, Reddit, GitHub) siguen siendo válidas; los textos hay que reescribirlos con cifras del [registro](web/data/cifras.json) cuando haya un producto publicado.
+
 Elecciones del 29 de noviembre de 2026: [`plan_maestro_29N.md`](plan_maestro_29N.md).
 
 ---

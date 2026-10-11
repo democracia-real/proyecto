@@ -2,6 +2,8 @@
 
 *Última actualización: 11 octubre 2026*
 
+> **¿Qué hago hoy?** Mira [`RUTA.md`](RUTA.md). Este documento es la lista larga de pendientes; la ruta y las prioridades están allí.
+
 ---
 
 ## Dónde estamos

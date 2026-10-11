@@ -2,6 +2,8 @@
 
 *Creado: 6 octubre 2026 · Elecciones generales: domingo 29 de noviembre de 2026*
 
+> **Orden y prioridades: [`RUTA.md`](RUTA.md).** Este documento es el detalle de la campaña.
+>
 > **Actualización 11 oct.** Una revisión encontró cinco cifras erróneas en la web, ya corregidas. Desde hoy, ninguna pieza de campaña usa una cifra que no esté en el [registro de cifras](web/data/cifras.json) como verificada.
 >
 > **Decisión 11 oct: cuatro productos, no trece.** Una persona no puede construir y revisar 13 cosas sin cometer errores. Se quedan:

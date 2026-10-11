@@ -10,7 +10,7 @@ Repositorio público de un **estándar abierto de reglas para la vida pública**
 [![Licencia](https://img.shields.io/badge/Licencia-CC%20BY--SA%204.0-blue)]()
 [![Contribuciones](https://img.shields.io/badge/Contribuciones-Bienvenidas-green)]()
 
-> **Estado real (octubre 2026).** Hoy este proyecto lo sostiene una persona. Los documentos se redactan con ayuda de IA y no todas las cifras están verificadas todavía. En octubre de 2026 una revisión encontró cinco datos erróneos, ya corregidos (ver la fe de erratas en la [Radiografía](https://democraciareal.es/docs/radiografia.html)). A partir de ahora, ninguna cifra entra en la web sin fuente primaria, fecha de consulta y estado de verificación. No nos presentamos a las elecciones del 29 de noviembre. Plan actual: [Próximos pasos](Proximos%20pasos.md) · Ideas en discusión: [Ideas.md](Ideas.md).
+> **Estado real (octubre 2026).** Hoy este proyecto lo sostiene una persona. Los documentos se redactan con ayuda de IA y no todas las cifras están verificadas todavía. En octubre de 2026 una revisión encontró cinco datos erróneos, ya corregidos (ver la fe de erratas en la [Radiografía](https://democraciareal.es/docs/radiografia.html)). A partir de ahora, ninguna cifra entra en la web sin fuente primaria, fecha de consulta y estado de verificación. No nos presentamos a las elecciones del 29 de noviembre. Ruta y prioridades: [RUTA.md](RUTA.md) · Pendientes: [Próximos pasos](Proximos%20pasos.md) · Ideas en discusión: [Ideas.md](Ideas.md).
 
 ---
 
