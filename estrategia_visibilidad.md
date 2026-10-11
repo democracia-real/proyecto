@@ -2,6 +2,8 @@
 
 *Creado: 13 marzo 2026*
 
+Elecciones del 29 de noviembre de 2026: [`plan_maestro_29N.md`](plan_maestro_29N.md).
+
 ---
 
 ## El problema de distribución

@@ -65,4 +65,8 @@ La IA no es solo un tema de productividad: es **estratégico**. Innovar en IA pa
 
 ---
 
+**Marco geopolítico e IA360:** [`soberania_productiva_eeuu_china.md`](../08_investigacion_abierta/soberania_productiva_eeuu_china.md).
+
+---
+
 *Documento vinculado a [README](README.md) del módulo 05 y a propuestas de industria y digitalización.*

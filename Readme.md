@@ -274,6 +274,7 @@ politica/
 │   ├── colaboradores.md
 │   ├── tematicas_emergentes_y_modelos_programaticos.md
 │   ├── vision_estrategica_largo_plazo.md  # Líneas de investigación a largo plazo (Dalio)
+│   ├── soberania_productiva_eeuu_china.md # EEUU–China, IA360, industria propia
 │   ├── mensaje_inclusivo_juventud.md
 │   ├── metodologia_ia.md
 │   └── participacion_e_informacion_entretenida.md

@@ -57,7 +57,7 @@ Según el [Dashboard de Indicadores de Potencia Nacional](../01_diagnostico_del_
 | Infraestructura cloud | ¿Cuánta infraestructura crítica española depende de AWS, Azure, Google Cloud? |
 | Riesgo de "apagón" | Si un conflicto geopolítico cortara el acceso a tecnología de EEUU/China, ¿qué capacidad tendría España de funcionar de forma autónoma? |
 
-**Documentos relacionados:** [`soberania_ia_europa.md`](../05_uso_de_ia_y_automatizacion/soberania_ia_europa.md)
+**Documentos relacionados:** [`soberania_ia_europa.md`](../05_uso_de_ia_y_automatizacion/soberania_ia_europa.md), [`soberania_productiva_eeuu_china.md`](soberania_productiva_eeuu_china.md)
 
 **Precedentes históricos (Dalio):** Holanda perdió su hegemonía cuando Reino Unido copió y superó su tecnología naval. EEUU tomó el relevo tecnológico de UK tras la WWII. **El que deja de inventar, deja de liderar.**
 
