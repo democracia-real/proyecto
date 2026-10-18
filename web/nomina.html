@@ -18,18 +18,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Layout standalone ancho completo (1240px) sin sidebar de docs */
         .app-shell {
             max-width: 1240px;
             margin: 0 auto;
             padding: calc(64px + 2.5rem) 1.5rem 5rem;
         }
 
-        /* Hero compacto y potente */
+        /* Hero */
         .app-hero {
             text-align: center;
             max-width: 880px;
-            margin: 0 auto 2.25rem;
+            margin: 0 auto 2rem;
         }
         .app-eyebrow {
             display: inline-flex;
@@ -44,7 +43,7 @@
             border: 1px solid rgba(16, 185, 129, 0.3);
             padding: 5px 14px;
             border-radius: 999px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.9rem;
         }
         .app-eyebrow-dot {
             width: 7px;
@@ -54,19 +53,19 @@
             box-shadow: 0 0 8px var(--accent);
         }
         .app-title {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 4vw, 2.85rem);
             font-weight: 800;
             letter-spacing: -0.03em;
             line-height: 1.12;
             color: var(--text-primary);
-            margin-bottom: 0.9rem;
+            margin-bottom: 0.8rem;
         }
         .app-title .accent {
             color: var(--accent);
         }
         .app-lead {
             color: var(--text-secondary);
-            font-size: 1.06rem;
+            font-size: 1.04rem;
             line-height: 1.65;
             max-width: 760px;
             margin: 0 auto;
@@ -75,40 +74,50 @@
             color: var(--text-primary);
         }
 
-        /* Barra de mando (Controles en 3 columnas limpias) */
+        /* Barra de mando (Controles en 3 columnas limpias sin solaparse) */
         .command-bar {
-            background: linear-gradient(180deg, #16181d 0%, #111317 100%);
+            background: #14161a;
             border: 1px solid #282c34;
             border-radius: 16px;
             padding: 1.5rem 1.75rem;
             margin-bottom: 2.25rem;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
         }
         .command-grid {
             display: grid;
-            grid-template-columns: 1.15fr 1.35fr 1fr;
-            gap: 1.75rem;
+            grid-template-columns: 1.1fr 1.35fr 1.05fr;
+            gap: 1.5rem;
             align-items: start;
         }
         .ctrl-group {
             display: flex;
             flex-direction: column;
         }
-        .ctrl-label {
+        .ctrl-label-row {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #9ca3af;
+            justify-content: space-between;
+            gap: 8px;
             margin-bottom: 0.55rem;
+            min-height: 24px;
         }
-        .ctrl-label-num {
-            color: var(--accent);
-            font-family: var(--font-mono);
+        .ctrl-label-title {
+            font-size: 0.8rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #d1d5db;
+            white-space: nowrap;
+        }
+        .ctrl-badge {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 2px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
         }
         .salary-input-wrap {
             position: relative;
@@ -122,21 +131,20 @@
             border-radius: 10px;
             color: var(--text-primary);
             font-family: var(--font-mono);
-            font-size: 1.35rem;
+            font-size: 1.3rem;
             font-weight: 700;
             padding: 10px 56px 10px 14px;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: border-color 0.2s;
         }
         .salary-input:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
         }
         .salary-suffix {
             position: absolute;
             right: 14px;
             font-family: var(--font-mono);
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--text-muted);
             pointer-events: none;
         }
@@ -151,7 +159,7 @@
             border: 1px solid #262930;
             color: #9ca3af;
             font-family: var(--font-mono);
-            font-size: 0.74rem;
+            font-size: 0.73rem;
             padding: 4px 10px;
             border-radius: 6px;
             cursor: pointer;
@@ -174,9 +182,9 @@
             border-radius: 10px;
             color: var(--text-primary);
             font-family: var(--font-sans);
-            font-size: 0.95rem;
+            font-size: 0.93rem;
             font-weight: 500;
-            padding: 13px 14px;
+            padding: 12px 14px;
             cursor: pointer;
             transition: border-color 0.2s;
         }
@@ -188,7 +196,7 @@
             font-size: 0.78rem;
             color: #8b949e;
             margin-top: 8px;
-            line-height: 1.4;
+            line-height: 1.45;
         }
         .ctrl-subnote strong {
             color: #e5e7eb;
@@ -197,7 +205,7 @@
             background: #0b0c0e;
             border: 1px solid #2e3440;
             border-radius: 10px;
-            padding: 12px 14px;
+            padding: 11px 14px;
         }
         .screen-range {
             width: 100%;
@@ -214,7 +222,7 @@
             margin-top: 6px;
         }
 
-        /* Grid principal de 2 actos en paralelo o bloques amplios */
+        /* Bloques de sección */
         .act-block {
             margin-bottom: 3rem;
         }
@@ -224,7 +232,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 12px;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
         .act-title-group {
             display: flex;
@@ -233,7 +241,7 @@
         }
         .act-step {
             font-family: var(--font-mono);
-            font-size: 0.75rem;
+            font-size: 0.74rem;
             font-weight: 700;
             text-transform: uppercase;
             padding: 4px 10px;
@@ -248,14 +256,14 @@
             border-color: rgba(239, 68, 68, 0.35);
         }
         .act-title {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 700;
             color: var(--text-primary);
             letter-spacing: -0.02em;
         }
         .act-source-pill {
             font-family: var(--font-mono);
-            font-size: 0.74rem;
+            font-size: 0.73rem;
             color: #8b949e;
             background: #14161a;
             border: 1px solid #262930;
@@ -273,8 +281,8 @@
         .kpi-box {
             background: #131519;
             border: 1px solid #242830;
-            border-radius: 14px;
-            padding: 1.25rem 1.35rem;
+            border-radius: 12px;
+            padding: 1.2rem 1.3rem;
             position: relative;
             overflow: hidden;
         }
@@ -292,19 +300,19 @@
         .kpi-box--red::before { background: #ef4444; }
 
         .kpi-label {
-            font-size: 0.76rem;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.05em;
             color: #9ca3af;
-            margin-bottom: 0.45rem;
+            margin-bottom: 0.4rem;
         }
         .kpi-num {
             font-family: var(--font-mono);
-            font-size: 1.95rem;
+            font-size: 1.85rem;
             font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 0.45rem;
+            margin-bottom: 0.4rem;
             letter-spacing: -0.03em;
         }
         .kpi-box--blue .kpi-num { color: #38bdf8; }
@@ -312,7 +320,7 @@
         .kpi-box--amber .kpi-num { color: #f59e0b; }
         .kpi-box--red .kpi-num { color: #f87171; }
         .kpi-caption {
-            font-size: 0.8rem;
+            font-size: 0.79rem;
             color: #8b949e;
             line-height: 1.4;
         }
@@ -321,8 +329,8 @@
         .split-visualizer {
             background: #131519;
             border: 1px solid #242830;
-            border-radius: 14px;
-            padding: 1.5rem;
+            border-radius: 12px;
+            padding: 1.35rem 1.5rem;
         }
         .split-top-row {
             display: flex;
@@ -330,10 +338,10 @@
             align-items: baseline;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 0.85rem;
+            margin-bottom: 0.8rem;
         }
         .split-top-title {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--text-primary);
         }
@@ -341,12 +349,12 @@
             display: flex;
             gap: 1.25rem;
             font-family: var(--font-mono);
-            font-size: 0.84rem;
+            font-size: 0.82rem;
         }
         .split-track {
             display: flex;
-            height: 36px;
-            border-radius: 10px;
+            height: 34px;
+            border-radius: 8px;
             overflow: hidden;
             background: #0b0c0e;
             border: 1px solid #262930;
@@ -359,13 +367,13 @@
             align-items: center;
             justify-content: center;
             font-family: var(--font-mono);
-            font-size: 0.73rem;
+            font-size: 0.72rem;
             font-weight: 700;
             color: #090a0c;
             transition: width 0.3s ease;
             overflow: hidden;
             white-space: nowrap;
-            border-radius: 6px;
+            border-radius: 5px;
         }
         .split-seg--ssemp { background: #fb923c; }
         .split-seg--sstrab { background: #facc15; }
@@ -377,7 +385,7 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 10px;
-            margin-top: 1rem;
+            margin-top: 0.9rem;
         }
         .split-leg-card {
             background: #0d0f12;
@@ -389,7 +397,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.74rem;
+            font-size: 0.73rem;
             color: #9ca3af;
             margin-bottom: 3px;
         }
@@ -401,101 +409,131 @@
         }
         .split-leg-val {
             font-family: var(--font-mono);
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 700;
             color: var(--text-primary);
         }
 
-        /* Parte 2: Choque IA - 2 paneles visuales lado a lado */
-        .ia-grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.25rem;
+        /* =====================================================================
+           PARTE 2 (ESTILO CANVAS CAPTURA 2: 3 TARJETAS + 2 GRÁFICOS SVG)
+           ===================================================================== */
+        .canvas-ia-intro {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.6;
             margin-bottom: 1.25rem;
         }
-        .ia-panel {
-            background: #131519;
-            border: 1px solid #242830;
-            border-radius: 14px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .ia-panel-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 1.2rem;
-        }
-        .ia-panel-title {
-            font-size: 1.05rem;
-            font-weight: 700;
+        .canvas-ia-intro strong {
             color: var(--text-primary);
-            margin-bottom: 4px;
-        }
-        .ia-panel-sub {
-            font-size: 0.82rem;
-            color: #8b949e;
-            line-height: 1.45;
-        }
-        .ia-badge-ratio {
-            font-family: var(--font-mono);
-            font-size: 0.82rem;
-            font-weight: 700;
-            padding: 5px 10px;
-            border-radius: 8px;
-            background: rgba(239, 68, 68, 0.14);
-            color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            white-space: nowrap;
         }
 
-        /* Barras horizontales limpias */
-        .hbar-list {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
+        .canvas-cards-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.25rem;
         }
-        .hbar-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .hbar-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.83rem;
-            color: #d1d5db;
-        }
-        .hbar-meta-val {
-            font-family: var(--font-mono);
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-        .hbar-bg {
-            height: 12px;
-            background: #0b0c0e;
-            border: 1px solid #22262e;
-            border-radius: 999px;
+        .c-card {
+            background: #141414;
+            border: 1px solid #262626;
+            border-radius: 10px;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        .hbar-bar {
-            height: 100%;
+        .c-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 10px 14px;
+            border-bottom: 1px solid #222222;
+            background: #181818;
+        }
+        .c-card-title {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+        .c-pill {
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: #a3a3a3;
+            background: #242424;
+            border: 1px solid #333333;
+            padding: 2px 8px;
             border-radius: 999px;
-            transition: width 0.35s ease;
+            white-space: nowrap;
         }
-        .ia-panel-foot {
-            margin-top: 1.25rem;
-            padding-top: 0.9rem;
-            border-top: 1px solid #20242c;
-            font-size: 0.8rem;
-            color: #9ca3af;
+        .c-card-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+        .c-stat-big {
+            font-family: var(--font-mono);
+            font-size: 1.65rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+        .c-stat-big--danger { color: #ef4444; }
+        .c-stat-big--warning { color: #f59e0b; }
+        .c-stat-label {
+            font-size: 0.82rem;
+            color: #d4d4d4;
+            line-height: 1.4;
+        }
+        .c-stat-note {
+            font-size: 0.78rem;
+            color: #8c8c8c;
             line-height: 1.5;
+            margin-top: auto;
+            padding-top: 6px;
         }
-        .ia-panel-foot strong {
-            color: var(--text-primary);
+        .c-stat-note strong {
+            color: #e5e5e5;
+        }
+
+        /* 2 Gráficos SVG (Columnas Verticales + Líneas 2026-2030) */
+        .canvas-charts-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .chart-svg-wrap {
+            width: 100%;
+            padding: 6px 4px 2px;
+        }
+        .chart-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            overflow: visible;
+        }
+        .chart-legend-row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #202020;
+            font-size: 0.78rem;
+            color: #a3a3a3;
+        }
+        .chart-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chart-legend-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            flex-shrink: 0;
         }
 
         /* Tabla de recibo de impuestos + impacto IA */
@@ -643,7 +681,6 @@
             text-align: center;
         }
 
-        /* Fuentes pie */
         .methodology-box {
             margin-top: 3rem;
             padding-top: 1.5rem;
@@ -663,7 +700,8 @@
         @media (max-width: 1024px) {
             .command-grid { grid-template-columns: 1fr; gap: 1.25rem; }
             .kpi-row-4 { grid-template-columns: repeat(2, 1fr); }
-            .ia-grid-2 { grid-template-columns: 1fr; }
+            .canvas-cards-3 { grid-template-columns: 1fr; }
+            .canvas-charts-2 { grid-template-columns: 1fr; }
             .split-legend { grid-template-columns: repeat(2, 1fr); }
             .bisturi-banner { grid-template-columns: 1fr; }
         }
@@ -675,7 +713,6 @@
     </style>
 </head>
 <body>
-    <!-- Misma barra de navegación limpia de la portada -->
     <nav class="nav" role="navigation" aria-label="Navegaci&oacute;n principal">
         <div class="nav-container">
             <a href="/" class="nav-logo">
@@ -697,7 +734,6 @@
     </nav>
 
     <main class="app-shell">
-        <!-- CABECERA -->
         <header class="app-hero">
             <div class="app-eyebrow">
                 <span class="app-eyebrow-dot"></span>
@@ -714,10 +750,10 @@
             <div class="command-grid">
                 <!-- Control 1 -->
                 <div class="ctrl-group">
-                    <label class="ctrl-label" for="salaryInput">
-                        <span>1. Sueldo bruto anual</span>
-                        <span class="ctrl-label-num" id="grossMonthlyHint">2.333 &euro;/mes (12 pagas)</span>
-                    </label>
+                    <div class="ctrl-label-row">
+                        <label class="ctrl-label-title" for="salaryInput">1. Sueldo bruto anual</label>
+                        <span class="ctrl-badge" id="grossMonthlyHint">2.333 &euro;/mes</span>
+                    </div>
                     <div class="salary-input-wrap">
                         <input type="number" id="salaryInput" class="salary-input" value="28000" min="12000" max="250000" step="500">
                         <span class="salary-suffix">&euro;/a&ntilde;o</span>
@@ -732,10 +768,10 @@
 
                 <!-- Control 2 -->
                 <div class="ctrl-group">
-                    <label class="ctrl-label" for="sectorSelect">
-                        <span>2. Tu sector o profesi&oacute;n</span>
-                        <span class="ctrl-label-num" id="sectorBadgeYear">Hito IA: Finales 2028</span>
-                    </label>
+                    <div class="ctrl-label-row">
+                        <label class="ctrl-label-title" for="sectorSelect">2. Tu sector o profesi&oacute;n</label>
+                        <span class="ctrl-badge" id="sectorBadgeYear">Hito IA: Finales 2028</span>
+                    </div>
                     <select id="sectorSelect" class="sector-select">
                         <option value="admin_finanzas" selected>Administraci&oacute;n, Contabilidad, Banca, Seguros y Gesti&oacute;n</option>
                         <option value="software_it">Programaci&oacute;n, Software, Datos e Ingenier&iacute;a IT</option>
@@ -752,27 +788,30 @@
 
                 <!-- Control 3 -->
                 <div class="ctrl-group">
-                    <label class="ctrl-label" for="screenSlider">
-                        <span>3. Trabajo en pantalla / datos</span>
-                        <span class="ctrl-label-num" id="screenValLabel">85% de tu jornada</span>
-                    </label>
+                    <div class="ctrl-label-row">
+                        <label class="ctrl-label-title" for="screenSlider">3. Trabajo en pantalla</label>
+                        <span class="ctrl-badge" id="screenValLabel">80% de tu jornada</span>
+                    </div>
                     <div class="slider-box">
-                        <input type="range" id="screenSlider" class="screen-range" min="10" max="100" step="5" value="85">
+                        <input type="range" id="screenSlider" class="screen-range" min="10" max="100" step="5" value="80">
                         <div class="slider-ticks">
                             <span>10% (F&iacute;sico)</span>
                             <span>50% (Mixto)</span>
                             <span>100% (Pantalla)</span>
                         </div>
                     </div>
+                    <p class="ctrl-subnote" id="liveRiskPreview">
+                        Exposici&oacute;n IA en 2028: <strong style="color:#f59e0b;">68% de tus tareas</strong> (25.146 &euro;/a&ntilde;o de coste laboral automatizable).
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- ACTO 1: LA FACTURA OCULTA DE TU NÓMINA HOY -->
+        <!-- PARTE 1: LA FACTURA OCULTA DE TU NÓMINA HOY -->
         <section class="act-block">
             <div class="act-header">
                 <div class="act-title-group">
-                    <span class="act-step">Acto 1 &middot; Hoy (2026)</span>
+                    <span class="act-step">Parte 1 &middot; Hoy (2026)</span>
                     <h2 class="act-title">La factura oculta de tu n&oacute;mina: lo que produces vs. lo que te llega</h2>
                 </div>
                 <span class="act-source-pill">AEAT &middot; Tesorer&iacute;a Seguridad Social &middot; IGAE</span>
@@ -795,9 +834,9 @@
                     <div class="kpi-caption">SS Empresa + SS Trabajador + IRPF + IVA estimado en consumo</div>
                 </div>
                 <div class="kpi-box kpi-box--red">
-                    <div class="kpi-label">Cu&ntilde;a fiscal total</div>
+                    <div class="kpi-label">Cu&ntilde;a fiscal + Tareas IA 2028</div>
                     <div class="kpi-num" id="kpiCunaPct">49,3%</div>
-                    <div class="kpi-caption" id="kpiDiaLiberacion">Equivale a trabajar 5,9 meses al a&ntilde;o &iacute;ntegros para el Estado</div>
+                    <div class="kpi-caption" id="kpiDiaLiberacion">Trabajas 5,9 meses para el Estado &middot; 68% automatizable en 2028</div>
                 </div>
             </div>
 
@@ -841,90 +880,106 @@
             </div>
         </section>
 
-        <!-- ACTO 2: EL CHOQUE CON LA IA (2027-2029) -->
+        <!-- PARTE 2: EL CHOQUE 2027-2029 (CON LAS 3 TARJETAS + 2 GRÁFICOS DE LA CAPTURA) -->
         <section class="act-block">
             <div class="act-header">
                 <div class="act-title-group">
-                    <span class="act-step act-step--danger">Acto 2 &middot; 2027-2029</span>
-                    <h2 class="act-title">El choque con la IA: cuando las m&aacute;quinas trabajen y no coticen</h2>
+                    <span class="act-step act-step--danger">Parte 2 &middot; 2027-2029</span>
+                    <h2 class="act-title">El Choque 2027-2029 &mdash; Tu N&oacute;mina frente al Tsunami de la IA</h2>
                 </div>
-                <span class="act-source-pill">AI Futures Project (Jul 2026) &middot; Plan IA360</span>
+                <span class="act-source-pill">Datos: AI Futures Project (Q1/Jul 2026) &middot; Plan IA360</span>
             </div>
 
-            <div class="ia-grid-2">
-                <!-- Panel Izquierdo: Comparativa de Coste y Agujero Fiscal -->
-                <div class="ia-panel">
-                    <div>
-                        <div class="ia-panel-head">
-                            <div>
-                                <div class="ia-panel-title">1. Por qu&eacute; tu empresa mirar&aacute; a la IA</div>
-                                <div class="ia-panel-sub">Coste anual de tu puesto frente a una licencia de Agente IA trabajando 24/7</div>
-                            </div>
-                            <span class="ia-badge-ratio" id="kpiRatioCoste">123x m&aacute;s caro</span>
-                        </div>
-                        <div class="hbar-list">
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>Coste total empresa por tu puesto</span><span class="hbar-meta-val" id="hbCosteEmp">36.980 &euro;/a&ntilde;o</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" style="width: 100%; background: #38bdf8;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>Impuestos + SS que generas al Estado</span><span class="hbar-meta-val" id="hbImpuestos">18.216 &euro;/a&ntilde;o</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" id="hbFillImp" style="width: 49%; background: #f59e0b;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>De los cuales van directo a pagar Pensiones</span><span class="hbar-meta-val" id="hbPensiones">5.683 &euro;/a&ntilde;o</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" id="hbFillPens" style="width: 15.4%; background: #a855f7;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>Licencia anual Agente IA (API aut&oacute;noma)</span><span class="hbar-meta-val" id="hbCosteIa">300 &euro;/a&ntilde;o</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" style="width: 2.5%; background: #ef4444;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>Cotizaci&oacute;n a la Seguridad Social del Agente IA</span><span class="hbar-meta-val" style="color:#f87171;">0 &euro;/a&ntilde;o</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" style="width: 0%; background: #ef4444;"></div></div>
-                            </div>
-                        </div>
+            <p class="canvas-ia-intro" id="iaIntroDynamic">
+                Tu empresa hoy paga <strong>36.980 &euro; al a&ntilde;o</strong> por tu puesto, y el Estado vive de los <strong>18.216 &euro;</strong> en impuestos que generas. Mira lo que ocurre cuando cruzamos tu sector y tu % de pantalla con el calendario de los creadores de la IA:
+            </p>
+
+            <!-- LAS 3 TARJETAS DE IMPACTO -->
+            <div class="canvas-cards-3">
+                <div class="c-card">
+                    <div class="c-card-header">
+                        <span class="c-card-title">1. Tu Empresa: Humano vs. Agente IA</span>
+                        <span class="c-pill">Brecha de coste</span>
                     </div>
-                    <div class="ia-panel-foot" id="iaFootFiscal">
-                        Anthropic multiplic&oacute; por 65 sus ingresos anualizados en 19 meses (de 1.000 M$ a &gt;65.000 M$ en jul 2026) porque las empresas ya sustituyen tareas cognitivas por c&oacute;mputo. Si tu puesto se automatiza, la caja p&uacute;blica pierde <strong>18.216 &euro;/a&ntilde;o</strong>.
+                    <div class="c-card-body">
+                        <div class="c-stat-big c-stat-big--danger" id="card1Big">36.980 &euro; vs. 300 &euro;</div>
+                        <div class="c-stat-label" id="card1Label">Tu puesto cuesta 123 veces m&aacute;s al a&ntilde;o que una licencia de IA avanzada</div>
+                        <div class="c-stat-note">
+                            Anthropic ha pasado de 1.000 M$ a m&aacute;s de 65.000 M$ de ingresos anualizados en 19 meses (Reuters/Bloomberg, jul 2026) porque las empresas ya est&aacute;n cambiando horas de oficina por c&oacute;mputo.
+                        </div>
                     </div>
                 </div>
 
-                <!-- Panel Derecho: Reloj de los laboratorios vs Reloj del BOE -->
-                <div class="ia-panel">
-                    <div>
-                        <div class="ia-panel-head">
-                            <div>
-                                <div class="ia-panel-title">2. El reloj de los laboratorios vs. el reloj del BOE</div>
-                                <div class="ia-panel-sub">% de tareas de tu puesto ejecutables por agentes aut&oacute;nomos (2026-2029)</div>
-                            </div>
-                            <span class="ia-badge-ratio" id="kpiCurvaIa">40% &rarr; 70% &rarr; 85%</span>
+                <div class="c-card">
+                    <div class="c-card-header">
+                        <span class="c-card-title">2. Tareas de tu puesto automatizables</span>
+                        <span class="c-pill">2027 &rarr; 2029</span>
+                    </div>
+                    <div class="c-card-body">
+                        <div class="c-stat-big c-stat-big--warning" id="card2Big">38% &rarr; 68% &rarr; 83%</div>
+                        <div class="c-stat-label">Progresi&oacute;n de tareas de tu puesto que un agente IA ejecuta solo (2027 / 2028 / 2029)</div>
+                        <div class="c-stat-note" id="card2Note">
+                            Conciliaci&oacute;n de facturas, informes financieros, atenci&oacute;n al cliente, auditor&iacute;a documental y tramitaci&oacute;n de expedientes sin intervenci&oacute;n humana.
                         </div>
-                        <div class="hbar-list">
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>2026 (Hoy): Tareas de tu puesto asistidas por IA</span><span class="hbar-meta-val" id="hbIa2026">23%</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" id="hbFill2026" style="width: 23%; background: #facc15;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>2027: Agentes que operan software, correo y hojas de c&aacute;lculo</span><span class="hbar-meta-val" id="hbIa2027">40%</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" id="hbFill2027" style="width: 40%; background: #fb923c;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>2028: Hito «Automated Coder» (Mediana Kokotajlo Q1 2026)</span><span class="hbar-meta-val" id="hbIa2028">70%</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" id="hbFill2028" style="width: 70%; background: #f87171;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>2029: Mediana de Superinteligencia / Trabajo de oficina completo</span><span class="hbar-meta-val" id="hbIa2029">85%</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" id="hbFill2029" style="width: 85%; background: #ef4444;"></div></div>
-                            </div>
-                            <div class="hbar-item">
-                                <div class="hbar-meta"><span>Espa&ntilde;a hoy: Empresas &ge;10 empleados que usan IA (INE)</span><span class="hbar-meta-val" style="color:#38bdf8;">21,1%</span></div>
-                                <div class="hbar-bg"><div class="hbar-bar" style="width: 21.1%; background: #38bdf8;"></div></div>
+                    </div>
+                </div>
+
+                <div class="c-card">
+                    <div class="c-card-header">
+                        <span class="c-card-title">3. El agujero para el Estado y las Pensiones</span>
+                        <span class="c-pill">Agujero fiscal</span>
+                    </div>
+                    <div class="c-card-body">
+                        <div class="c-stat-big c-stat-big--danger" id="card3Big">-18.216 &euro; / a&ntilde;o</div>
+                        <div class="c-stat-label" id="card3Label">Lo que pierde la caja p&uacute;blica (incluidos 5.683 &euro; de pensiones) si una IA reemplaza tu puesto</div>
+                        <div class="c-stat-note" id="card3Note">
+                            Tu puesto paga hoy el 28% de una pensi&oacute;n media espa&ntilde;ola. Un servidor de IA en Virginia o Dubl&iacute;n cotiza <strong>0 &euro;</strong> a la Seguridad Social espa&ntilde;ola.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOS 2 GRÁFICOS SVG (GRÁFICO 1 COLUMNAS + GRÁFICO 2 LÍNEAS CON UMBRAL 50%) -->
+            <div class="canvas-charts-2">
+                <!-- Gráfico 1: Columnas verticales -->
+                <div class="c-card">
+                    <div class="c-card-header">
+                        <span class="c-card-title">Gr&aacute;fico 1: Lo que cuesta tu puesto vs. lo que recauda el Estado vs. Agente IA</span>
+                        <span class="c-pill">En Euros anuales</span>
+                    </div>
+                    <div class="c-card-body">
+                        <div class="chart-svg-wrap">
+                            <svg id="barChartSvg" class="chart-svg" viewBox="0 0 500 230" role="img" aria-label="Gráfico de barras comparando coste empresa, impuestos, sueldo neto y coste de IA"></svg>
+                        </div>
+                        <div class="chart-legend-row">
+                            <div class="chart-legend-item">
+                                <span class="chart-legend-dot" style="background:#f59e0b;"></span>
+                                <span id="barChartFootText">Coste en tareas automatizables en 2028: <strong style="color:#f59e0b;">25.146 &euro;/a&ntilde;o</strong> frente a <strong>300 &euro;/a&ntilde;o</strong> de licencia IA.</span>
                             </div>
                         </div>
                     </div>
-                    <div class="ia-panel-foot">
-                        <strong>Desfase pol&iacute;tico:</strong> Espa&ntilde;a es <strong>23.&ordf; del mundo en talento especializado en IA</strong> (Plan IA360, sep 2026) y la gigafactor&iacute;a p&uacute;blica anunciada para 2028 depende de una convocatoria europea (EuroHPC) que ni siquiera se resuelve hasta 2027.
+                </div>
+
+                <!-- Gráfico 2: Líneas 2026-2030 con umbral 50% -->
+                <div class="c-card">
+                    <div class="c-card-header">
+                        <span class="c-card-title">Gr&aacute;fico 2: El reloj de los laboratorios vs. el reloj de los pol&iacute;ticos (2026-2030)</span>
+                        <span class="c-pill">% de tareas de tu puesto</span>
+                    </div>
+                    <div class="c-card-body">
+                        <div class="chart-svg-wrap">
+                            <svg id="lineChartSvg" class="chart-svg" viewBox="0 0 500 215" role="img" aria-label="Gráfico de líneas comparando automatización de tu puesto frente al objetivo del Plan IA360"></svg>
+                        </div>
+                        <div class="chart-legend-row">
+                            <div class="chart-legend-item">
+                                <span class="chart-legend-dot" style="background:#ef4444;"></span>
+                                <span>% de tu trabajo ejecutable por IA aut&oacute;noma (seg&uacute;n tu sector y % de pantalla)</span>
+                            </div>
+                            <div class="chart-legend-item">
+                                <span class="chart-legend-dot" style="background:#5b9bd5;"></span>
+                                <span>% de empresas espa&ntilde;olas usando IA (Objetivo oficial Plan IA360: 21% hoy &rarr; 55% en 2030)</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -945,8 +1000,8 @@
                                 <th>Partida de gasto p&uacute;blico</th>
                                 <th class="num">Pagas al a&ntilde;o</th>
                                 <th class="num">Pagas al mes</th>
+                                <th class="num">En riesgo 2028 (IA)</th>
                                 <th class="num">Peso</th>
-                                <th>Qui&eacute;n lo gestiona</th>
                                 <th>Qu&eacute; ocurre en 2027-2029 si la IA reemplaza n&oacute;minas</th>
                             </tr>
                         </thead>
@@ -960,7 +1015,7 @@
                 <div>
                     <div class="bisturi-title">La pregunta que ning&uacute;n partido quiere responder en campa&ntilde;a</div>
                     <p class="bisturi-text" id="calloutDynamicText">
-                        Con un sueldo de contrato de <strong>28.000 &euro;</strong>, tu puesto le cuesta <strong>36.980 &euro;</strong> a tu empresa y sostiene <strong>18.216 &euro;</strong> al a&ntilde;o en impuestos. En <strong>2028</strong> un agente aut&oacute;nomo podr&aacute; ejecutar el <strong>70%</strong> de esas tareas por <strong>300 &euro; al a&ntilde;o</strong> sin cotizar un euro. &iquest;Qu&eacute; partido tiene un plan para esto el 29N?
+                        Con un sueldo de contrato de <strong>28.000 &euro;</strong>, tu puesto le cuesta <strong>36.980 &euro;</strong> a tu empresa y sostiene <strong>18.216 &euro;</strong> al a&ntilde;o en impuestos. En <strong>2028</strong> un agente aut&oacute;nomo podr&aacute; ejecutar el <strong>68%</strong> de esas tareas por <strong>300 &euro; al a&ntilde;o</strong> sin cotizar un euro. &iquest;Qu&eacute; partido tiene un plan para esto el 29N?
                     </p>
                 </div>
                 <div class="bisturi-actions">
@@ -1003,84 +1058,90 @@
 
         var JOB_SECTORS = {
             software_it: {
-                cognitiveSharePct: 92,
-                auto2027Pct: 45,
-                auto2028Pct: 78,
-                auto2029Pct: 90,
+                defaultScreenPct: 95,
+                base2027: 45,
+                base2028: 78,
+                base2029: 90,
                 badgeYear: 'Hito IA: Mediados 2028',
                 aiMonthlyEur: 35,
-                bottleneck: '<strong>Tareas críticas:</strong> programación, pruebas, análisis de datos y mantenimiento de sistemas (primer oficio fechado al 100% para mediados de 2028).'
+                bottleneck: 'Los propios laboratorios usan IA para escribir y depurar código autónomamente 24/7. Es el primer oficio que Kokotajlo fecha como 100% automatizable a mediados de 2028.'
             },
             admin_finanzas: {
-                cognitiveSharePct: 85,
-                auto2027Pct: 40,
-                auto2028Pct: 70,
-                auto2029Pct: 85,
+                defaultScreenPct: 80,
+                base2027: 40,
+                base2028: 70,
+                base2029: 85,
                 badgeYear: 'Hito IA: Finales 2028',
                 aiMonthlyEur: 25,
-                bottleneck: '<strong>Tareas críticas:</strong> conciliación de facturas, informes financieros, atención al cliente, auditoría documental y gestión de expedientes.'
+                bottleneck: 'Conciliación de facturas, informes financieros, atención al cliente, auditoría documental y tramitación de expedientes sin intervención humana.'
             },
             juridico_consultoria: {
-                cognitiveSharePct: 82,
-                auto2027Pct: 35,
-                auto2028Pct: 64,
-                auto2029Pct: 80,
+                defaultScreenPct: 80,
+                base2027: 35,
+                base2028: 64,
+                base2029: 80,
                 badgeYear: 'Hito IA: 2028 - 2029',
                 aiMonthlyEur: 40,
-                bottleneck: '<strong>Tareas críticas:</strong> redacción de contratos, recursos, jurisprudencia, fiscalidad y auditoría. Un socio con agentes sustituye a equipos juniors.'
+                bottleneck: 'Redacción de contratos, recursos, jurisprudencia y auditoría legal. Un socio con agentes de IA sustituye a equipos enteros de juniors.'
             },
             marketing_diseno: {
-                cognitiveSharePct: 88,
-                auto2027Pct: 50,
-                auto2028Pct: 75,
-                auto2029Pct: 88,
+                defaultScreenPct: 90,
+                base2027: 50,
+                base2028: 75,
+                base2029: 88,
                 badgeYear: 'Hito IA: 2027 - 2028',
                 aiMonthlyEur: 30,
-                bottleneck: '<strong>Tareas críticas:</strong> generación de vídeo, diseño, copys, traducción y campañas multicanal a una fracción del coste de agencia.'
+                bottleneck: 'Generación de vídeo, audio, campañas multilingües y diseño interfaz ya ocurren hoy a una fracción del coste y tiempo de una agencia tradicional.'
             },
             funcion_publica: {
-                cognitiveSharePct: 84,
-                auto2027Pct: 38,
-                auto2028Pct: 68,
-                auto2029Pct: 84,
-                badgeYear: 'Técnicamente 2028 (Protegido por ley)',
+                defaultScreenPct: 85,
+                base2027: 38,
+                base2028: 68,
+                base2029: 84,
+                badgeYear: 'Hito: 2028 (Protegido por ley)',
                 aiMonthlyEur: 20,
-                bottleneck: '<strong>Tareas críticas:</strong> validación de requisitos, licencias y expedientes que hoy tardan 6 meses y un sistema autónomo resuelve en segundos.'
+                bottleneck: 'El puesto no desaparece por estatuto funcionarial, pero un trámite que hoy tarda 6 meses una IA lo resuelve y audita en 4 segundos.'
             },
             educacion_sanidad: {
-                cognitiveSharePct: 55,
-                auto2027Pct: 18,
-                auto2028Pct: 32,
-                auto2029Pct: 45,
+                defaultScreenPct: 45,
+                base2027: 22,
+                base2028: 38,
+                base2029: 52,
                 badgeYear: 'Hito IA: 2030+ (Presencial)',
                 aiMonthlyEur: 25,
-                bottleneck: '<strong>Tareas críticas:</strong> triaje, informes clínicos, diagnóstico por imagen y tutoría se automatizan; el cuidado humano presencial se mantiene.'
+                bottleneck: 'El triaje, diagnóstico por imagen y tutoría personalizada se automatizan, pero el contacto físico y la responsabilidad legal frenan la sustitución directa.'
             },
             oficios_logistica: {
-                cognitiveSharePct: 20,
-                auto2027Pct: 8,
-                auto2028Pct: 15,
-                auto2029Pct: 24,
-                badgeYear: 'Hito IA: 2032+ (Robótica física)',
+                defaultScreenPct: 20,
+                base2027: 12,
+                base2028: 22,
+                base2029: 34,
+                badgeYear: 'Hito IA: 2032+ (Robótica)',
                 aiMonthlyEur: 180,
-                bottleneck: '<strong>Tareas críticas:</strong> fontanería, electricidad, obra o industria física están mucho más protegidos hasta que abarate la robótica humanoide.'
+                bottleneck: 'Paradójicamente, un fontanero, electricista o enfermero está mucho más protegido hasta que los robots físicos bajen de coste que un titulado de oficina.'
             }
         };
 
         var COFOG_SHARES = [
-            { name: 'Pensiones y prestaciones edad avanzada', sharePct: 31.2, color: '#38bdf8', admin: 'Seguridad Social (Estado)', iaImpact: 'Peligro crítico: se paga con cotizaciones de nóminas humanas; la IA cotiza 0 €' },
-            { name: 'Sanidad pública (Hospitales, primaria, farmacia)', sharePct: 14.8, color: '#10b981', admin: 'Comunidades Autónomas (92%)', iaImpact: 'La IA puede reducir listas de espera y burocracia médica si se integra' },
-            { name: 'Subvenciones sectoriales, transporte e I+D', sharePct: 10.9, color: '#fb923c', admin: 'Estado / Fondos UE / CCAA', iaImpact: 'Solo 719 M€ públicos para la Gigafactoría IA (condicionada a EuroHPC)' },
-            { name: 'Desempleo, familia, vivienda y exclusión', sharePct: 9.8, color: '#a855f7', admin: 'SEPE / Estado / CCAA', iaImpact: 'El gasto en paro se dispararía si se destruye empleo de oficina en 2028-2029' },
-            { name: 'Educación (Infantil a Universidad y becas)', sharePct: 9.7, color: '#facc15', admin: 'Comunidades Autónomas (88%)', iaImpact: 'España es 23.ª del mundo en talento especializado en IA (Plan IA360)' },
-            { name: 'Servicios generales, órganos políticos y estructura', sharePct: 8.6, color: '#9ca3af', admin: 'Estado, CCAA y 8.132 Ayuntamientos', iaImpact: 'Administración analógica duplicada que la IA podría automatizar hoy' },
-            { name: 'Seguridad ciudadana, justicia y defensa', sharePct: 6.8, color: '#f472b6', admin: 'Estado y CCAA', iaImpact: 'Procesos civiles a 238 días de media por falta de digitalización judicial' },
-            { name: 'Intereses de la deuda pública', sharePct: 5.4, color: '#ef4444', admin: 'Estado (Tesoro Público)', iaImpact: 'Rígida (~39.000 M€/año): hay que pagarla trabajen humanos o máquinas' },
-            { name: 'Cultura, deporte y medios públicos', sharePct: 2.8, color: '#60a5fa', admin: 'Ayuntamientos (61%), CCAA (22%), Estado (17%)', iaImpact: '7.815,9 M€/año en cultura sin evaluación unificada de resultados' }
+            { name: 'Pensiones y prestaciones edad avanzada', sharePct: 31.2, color: '#38bdf8', iaImpact: 'Peligro crítico: se paga 100% con cotizaciones de nóminas humanas; la IA cotiza 0 €' },
+            { name: 'Sanidad pública (Hospitales, primaria, farmacia)', sharePct: 14.8, color: '#10b981', iaImpact: 'La IA puede reducir listas de espera y burocracia médica un 30%' },
+            { name: 'Subvenciones sectoriales, transporte e I+D', sharePct: 10.9, color: '#fb923c', iaImpact: 'Solo 719 M€ públicos para la Gigafactoría IA (si la UE aprueba la candidatura)' },
+            { name: 'Desempleo, familia, vivienda y exclusión', sharePct: 9.8, color: '#a855f7', iaImpact: 'Se dispararía si se destruye empleo de oficina entre 2028 y 2030' },
+            { name: 'Educación (Infantil a Universidad y becas)', sharePct: 9.7, color: '#facc15', iaImpact: 'España está en el puesto 23 del mundo en talento especializado en IA' },
+            { name: 'Servicios generales, órganos políticos y estructura', sharePct: 8.6, color: '#9ca3af', iaImpact: 'Burocracia analógica que la IA podría automatizar hoy mismo' },
+            { name: 'Seguridad ciudadana, justicia y defensa', sharePct: 6.8, color: '#f472b6', iaImpact: 'Justicia a 238 días de media por falta de digitalización real' },
+            { name: 'Intereses de la deuda pública', sharePct: 5.4, color: '#ef4444', iaImpact: 'Rígida (~39.000 M€/año): hay que pagarla a los bonistas trabajen humanos o máquinas' },
+            { name: 'Cultura, deporte y medios públicos', sharePct: 2.8, color: '#60a5fa', iaImpact: '7.815,9 M€/año en cultura sin evaluación unificada de retorno' }
         ];
 
         function fmtEur(n) {
             return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' \u20AC';
+        }
+
+        function fmtShortK(n) {
+            if (n === 0) return '0 \u20AC';
+            if (n < 1000) return Math.round(n) + ' \u20AC';
+            return Math.round(n / 1000) + 'K \u20AC';
         }
 
         function calcPayroll(grossAnnual) {
@@ -1126,6 +1187,114 @@
             };
         }
 
+        // Renderiza Gráfico 1 (Columnas verticales igual que en la captura del Canvas)
+        function renderBarChartSvg(values) {
+            var svg = document.getElementById('barChartSvg');
+            var maxVal = Math.max(40000, values[0] * 1.12);
+            var chartLeft = 58;
+            var chartRight = 485;
+            var chartTop = 24;
+            var chartBottom = 188;
+            var chartH = chartBottom - chartTop;
+            var chartW = chartRight - chartLeft;
+
+            var labels = ['Coste empresa', 'Impuestos', 'Tu sueldo neto', 'Agente IA', 'Cotización IA'];
+            var colors = ['#1b8a6b', '#5b9bd5', '#5c6bc0', '#d9822b', '#ef4444'];
+
+            var html = '';
+            // Líneas de guía horizontales (0, 50%, 100%)
+            var ticks = [0, Math.round(maxVal / 2000) * 1000, Math.round(maxVal / 1000) * 1000];
+            for (var t = 0; t < ticks.length; t++) {
+                var val = ticks[t];
+                var y = chartBottom - (val / ticks[2]) * chartH;
+                html += '<line x1="' + chartLeft + '" y1="' + y + '" x2="' + chartRight + '" y2="' + y + '" stroke="#242424" stroke-width="1" />';
+                html += '<text x="' + (chartLeft - 8) + '" y="' + (y + 4) + '" text-anchor="end" fill="#8c8c8c" font-family="JetBrains Mono, monospace" font-size="11">' + fmtShortK(val) + '</text>';
+            }
+
+            var colSlot = chartW / values.length;
+            var barW = 46;
+
+            for (var i = 0; i < values.length; i++) {
+                var v = values[i];
+                var h = Math.max(v > 0 ? 3 : 0, (v / ticks[2]) * chartH);
+                var x = chartLeft + i * colSlot + (colSlot - barW) / 2;
+                var yBar = chartBottom - h;
+
+                if (h > 0) {
+                    html += '<rect x="' + x + '" y="' + yBar + '" width="' + barW + '" height="' + h + '" rx="3" fill="' + colors[i] + '" />';
+                }
+                html += '<text x="' + (x + barW / 2) + '" y="' + (yBar - 7) + '" text-anchor="middle" fill="#f0f0f0" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11.5">' + fmtShortK(v) + '</text>';
+                html += '<text x="' + (x + barW / 2) + '" y="' + (chartBottom + 20) + '" text-anchor="middle" fill="#a0a0a0" font-family="Inter, sans-serif" font-size="11">' + labels[i] + '</text>';
+            }
+
+            svg.innerHTML = html;
+        }
+
+        // Renderiza Gráfico 2 (Líneas 2026-2030 con umbral 50% igual que en la captura del Canvas)
+        function renderLineChartSvg(userSeries, spainSeries) {
+            var svg = document.getElementById('lineChartSvg');
+            var chartLeft = 48;
+            var chartRight = 478;
+            var chartTop = 20;
+            var chartBottom = 175;
+            var chartH = chartBottom - chartTop;
+            var chartW = chartRight - chartLeft;
+            var years = ['2026 (Hoy)', '2027', '2028 (Coder IA)', '2029 (ASI)', '2030'];
+
+            var html = '';
+            // Ejes 0%, 50%, 100%
+            var yTicks = [0, 50, 100];
+            for (var t = 0; t < yTicks.length; t++) {
+                var pct = yTicks[t];
+                var y = chartBottom - (pct / 100) * chartH;
+                html += '<line x1="' + chartLeft + '" y1="' + y + '" x2="' + chartRight + '" y2="' + y + '" stroke="#242424" stroke-width="1" />';
+                html += '<text x="' + (chartLeft - 8) + '" y="' + (y + 4) + '" text-anchor="end" fill="#8c8c8c" font-family="JetBrains Mono, monospace" font-size="11">' + pct + '%</text>';
+            }
+
+            // Línea de referencia 50% (Umbral crítico de sustitución de plantilla)
+            var y50 = chartBottom - 0.5 * chartH;
+            html += '<line x1="' + chartLeft + '" y1="' + y50 + '" x2="' + chartRight + '" y2="' + y50 + '" stroke="#d9822b" stroke-width="1.3" stroke-dasharray="4 4" />';
+            html += '<text x="' + (chartRight - 6) + '" y="' + (y50 - 7) + '" text-anchor="end" fill="#f59e0b" font-family="Inter, sans-serif" font-weight="600" font-size="11">Umbral crítico de sustitución de plantilla (50%)</text>';
+
+            function buildPoints(arr) {
+                var pts = [];
+                for (var i = 0; i < arr.length; i++) {
+                    var px = chartLeft + (i / (arr.length - 1)) * chartW;
+                    var py = chartBottom - (arr[i] / 100) * chartH;
+                    pts.push({ x: px, y: py, val: arr[i] });
+                }
+                return pts;
+            }
+
+            var ptsSpain = buildPoints(spainSeries);
+            var ptsUser = buildPoints(userSeries);
+
+            function polylineStr(pts) {
+                return pts.map(function (p) { return p.x.toFixed(1) + ',' + p.y.toFixed(1); }).join(' ');
+            }
+
+            // Serie azul (Plan IA360 España)
+            html += '<polyline fill="none" stroke="#5b9bd5" stroke-width="2.2" points="' + polylineStr(ptsSpain) + '" />';
+            for (var s = 0; s < ptsSpain.length; s++) {
+                html += '<circle cx="' + ptsSpain[s].x + '" cy="' + ptsSpain[s].y + '" r="3.5" fill="#5b9bd5" />';
+            }
+
+            // Serie roja (Tu puesto de trabajo)
+            html += '<polyline fill="none" stroke="#e05252" stroke-width="2.6" points="' + polylineStr(ptsUser) + '" />';
+            for (var u = 0; u < ptsUser.length; u++) {
+                html += '<circle cx="' + ptsUser[u].x + '" cy="' + ptsUser[u].y + '" r="4" fill="#e05252" />';
+                html += '<text x="' + ptsUser[u].x + '" y="' + (ptsUser[u].y - 9) + '" text-anchor="middle" fill="#f87171" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11">' + ptsUser[u].val + '%</text>';
+            }
+
+            // Etiquetas años X
+            for (var k = 0; k < years.length; k++) {
+                var xPos = chartLeft + (k / (years.length - 1)) * chartW;
+                html += '<text x="' + xPos + '" y="' + (chartBottom + 20) + '" text-anchor="middle" fill="#a0a0a0" font-family="Inter, sans-serif" font-size="11">' + years[k] + '</text>';
+            }
+
+            svg.innerHTML = html;
+        }
+
         var salaryInput = document.getElementById('salaryInput');
         var sectorSelect = document.getElementById('sectorSelect');
         var screenSlider = document.getElementById('screenSlider');
@@ -1137,12 +1306,30 @@
             var p = calcPayroll(gross);
             var secKey = sectorSelect.value;
             var sec = JOB_SECTORS[secKey] || JOB_SECTORS.admin_finanzas;
-            var screenPct = parseInt(screenSlider.value, 10) || sec.cognitiveSharePct;
+            var screenPct = parseInt(screenSlider.value, 10) || 80;
 
-            document.getElementById('grossMonthlyHint').textContent = fmtEur(p.grossAnnual / 12) + '/mes (12 pagas)';
+            // Fórmula combinada: tanto el Sector (#2) como el % de Pantalla (#3) cambian SIEMPRE los números
+            // 60% peso de la naturaleza del sector + 40% peso de la intensidad de pantalla elegida por el usuario
+            var screenFactor = 0.35 + 0.65 * (screenPct / 85);
+            var e27 = Math.min(95, Math.max(5, Math.round(sec.base2027 * screenFactor)));
+            var e28 = Math.min(96, Math.max(8, Math.round(sec.base2028 * screenFactor)));
+            var e29 = Math.min(98, Math.max(12, Math.round(sec.base2029 * screenFactor)));
+            var e26 = Math.max(6, Math.round(e27 * 0.55));
+            var e30 = Math.min(99, e29 + 4);
+
+            var aiAnnualEur = sec.aiMonthlyEur * 12;
+            var ratio = Math.round(p.totalCostEmployer / aiAnnualEur);
+            var pensionCut = Math.round((p.totalStateTake * 31.2) / 100);
+            var pensionShareOfAvg = Math.round((pensionCut / 20300) * 100);
+            var automatableCost2028 = Math.round((p.totalCostEmployer * e28) / 100);
+
+            // Cabecera controles
+            document.getElementById('grossMonthlyHint').textContent = fmtEur(p.grossAnnual / 12) + '/mes';
             document.getElementById('sectorBadgeYear').textContent = sec.badgeYear;
-            document.getElementById('sectorHint').innerHTML = sec.bottleneck;
+            document.getElementById('sectorHint').innerHTML = '<strong>En tu sector:</strong> ' + sec.bottleneck;
             screenValLabel.textContent = screenPct + '% de tu jornada';
+            document.getElementById('liveRiskPreview').innerHTML =
+                'Exposición IA en 2028: <strong style="color:#f59e0b;">' + e28 + '% de tus tareas</strong> (<strong>' + fmtEur(automatableCost2028) + '/año</strong> de coste laboral automatizable).';
 
             // KPIs Parte 1
             document.getElementById('kpiCosteEmpresa').textContent = fmtEur(p.totalCostEmployer);
@@ -1153,9 +1340,9 @@
             document.getElementById('kpiCunaPct').textContent = p.taxWedgePct.toFixed(1).replace('.', ',') + '%';
 
             var monthsForState = Math.round((p.taxWedgePct / 100) * 12 * 10) / 10;
-            document.getElementById('kpiDiaLiberacion').textContent = 'Equivale a trabajar ' + monthsForState.toString().replace('.', ',') + ' meses al año íntegros para el Estado';
+            document.getElementById('kpiDiaLiberacion').textContent = 'Trabajas ' + monthsForState.toString().replace('.', ',') + ' meses para el Estado · ' + e28 + '% automatizable en 2028';
 
-            // Barra apilada
+            // Barra apilada Parte 1
             var freePct = (100 - p.taxWedgePct).toFixed(1).replace('.', ',');
             var statePct = p.taxWedgePct.toFixed(1).replace('.', ',');
             document.getElementById('barLabelLibre').textContent = fmtEur(p.realDisposable) + ' (' + freePct + '%)';
@@ -1190,40 +1377,28 @@
             document.getElementById('legIva').textContent = fmtEur(p.estimatedIva);
             document.getElementById('legNeto').textContent = fmtEur(p.realDisposable);
 
-            // Parte 2: IA
-            var scale = screenPct / Math.max(1, sec.cognitiveSharePct);
-            var e27 = Math.min(95, Math.round(sec.auto2027Pct * scale));
-            var e28 = Math.min(96, Math.round(sec.auto2028Pct * scale));
-            var e29 = Math.min(98, Math.round(sec.auto2029Pct * scale));
-            var e26 = Math.max(8, Math.round(e27 * 0.58));
+            // Parte 2: Las 3 tarjetas (Captura 2)
+            document.getElementById('iaIntroDynamic').innerHTML =
+                'Tu empresa hoy paga <strong>' + fmtEur(p.totalCostEmployer) + ' al año</strong> por tu puesto, y el Estado vive de los <strong>' + fmtEur(p.totalStateTake) + '</strong> en impuestos que generas. Mira lo que ocurre cuando cruzamos tus números con el calendario de los creadores de la IA:';
 
-            var aiAnnualEur = sec.aiMonthlyEur * 12;
-            var ratio = Math.round(p.totalCostEmployer / aiAnnualEur);
-            var pensionCut = Math.round((p.totalStateTake * 31.2) / 100);
+            document.getElementById('card1Big').textContent = fmtEur(p.totalCostEmployer) + ' vs. ' + fmtEur(aiAnnualEur);
+            document.getElementById('card1Label').textContent = 'Tu puesto cuesta ' + ratio + ' veces más al año que una licencia de IA avanzada';
 
-            document.getElementById('kpiRatioCoste').textContent = ratio + 'x más caro';
-            document.getElementById('kpiCurvaIa').textContent = e27 + '% \u2192 ' + e28 + '% \u2192 ' + e29 + '%';
+            document.getElementById('card2Big').textContent = e27 + '% \u2192 ' + e28 + '% \u2192 ' + e29 + '%';
+            document.getElementById('card2Note').textContent = sec.bottleneck;
 
-            document.getElementById('hbCosteEmp').textContent = fmtEur(p.totalCostEmployer) + '/año';
-            document.getElementById('hbImpuestos').textContent = fmtEur(p.totalStateTake) + '/año';
-            document.getElementById('hbFillImp').style.width = ((p.totalStateTake / p.totalCostEmployer) * 100).toFixed(1) + '%';
-            document.getElementById('hbPensiones').textContent = fmtEur(pensionCut) + '/año';
-            document.getElementById('hbFillPens').style.width = ((pensionCut / p.totalCostEmployer) * 100).toFixed(1) + '%';
-            document.getElementById('hbCosteIa').textContent = fmtEur(aiAnnualEur) + '/año';
+            document.getElementById('card3Big').textContent = '-' + fmtEur(p.totalStateTake) + ' / año';
+            document.getElementById('card3Label').textContent = 'Lo que pierde la caja pública (incluidos ' + fmtEur(pensionCut) + ' de pensiones) si una IA reemplaza tu puesto';
+            document.getElementById('card3Note').innerHTML = 'Tu puesto paga hoy el <strong>' + pensionShareOfAvg + '%</strong> de una pensión media española. Un servidor de IA en Virginia o Dublín cotiza <strong>0 €</strong> a la Seguridad Social española.';
 
-            document.getElementById('iaFootFiscal').innerHTML =
-                'Anthropic multiplicó por 65 sus ingresos anualizados en 19 meses (de 1.000 M$ a &gt;65.000 M$ en jul 2026) porque las empresas ya sustituyen horas de oficina por cómputo. Si tu puesto se automatiza, la caja pública pierde <strong>' + fmtEur(p.totalStateTake) + '/año</strong> (incluidos <strong>' + fmtEur(pensionCut) + '</strong> de pensiones).';
+            // Renderizar los 2 gráficos SVG de la captura 2
+            renderBarChartSvg([p.totalCostEmployer, p.totalStateTake, p.netAnnual, aiAnnualEur, 0]);
+            document.getElementById('barChartFootText').innerHTML =
+                'Valor de tareas de tu puesto automatizables en 2028 (' + e28 + '%): <strong style="color:#f59e0b;">' + fmtEur(automatableCost2028) + '/año</strong> frente a <strong>' + fmtEur(aiAnnualEur) + '/año</strong> de licencia IA.';
 
-            document.getElementById('hbIa2026').textContent = e26 + '%';
-            document.getElementById('hbFill2026').style.width = e26 + '%';
-            document.getElementById('hbIa2027').textContent = e27 + '%';
-            document.getElementById('hbFill2027').style.width = e27 + '%';
-            document.getElementById('hbIa2028').textContent = e28 + '%';
-            document.getElementById('hbFill2028').style.width = e28 + '%';
-            document.getElementById('hbIa2029').textContent = e29 + '%';
-            document.getElementById('hbFill2029').style.width = e29 + '%';
+            renderLineChartSvg([e26, e27, e28, e29, e30], [21, 29, 38, 46, 55]);
 
-            // Tabla COFOG
+            // Tabla COFOG (también reacciona a la IA mostrando cuánto de esa recaudación está en riesgo en 2028)
             document.getElementById('tableTotalTaxLabel').textContent = fmtEur(p.totalStateTake);
             var tbody = document.getElementById('cofogTableBody');
             var rowsHtml = '';
@@ -1231,13 +1406,14 @@
                 var item = COFOG_SHARES[i];
                 var annual = (p.totalStateTake * item.sharePct) / 100;
                 var monthly = annual / 12;
+                var risk2028 = (annual * e28) / 100;
                 var barW = Math.min(100, Math.round(item.sharePct * 3));
                 rowsHtml += '<tr>' +
                     '<td><div class="part-name"><span class="part-dot" style="background:' + item.color + ';"></span><span>' + item.name + '</span></div></td>' +
                     '<td class="num"><strong style="color:var(--text-primary);">' + fmtEur(annual) + '</strong></td>' +
                     '<td class="num">' + fmtEur(monthly) + '</td>' +
+                    '<td class="num" style="color:#f87171;">-' + fmtEur(risk2028) + '</td>' +
                     '<td class="num"><span class="mini-pct-bar"><span class="mini-pct-fill" style="width:' + barW + '%;background:' + item.color + ';"></span></span>' + item.sharePct.toFixed(1).replace('.', ',') + '%</td>' +
-                    '<td style="color: #8b949e; font-size: 0.82rem;">' + item.admin + '</td>' +
                     '<td style="font-size: 0.83rem;">' + item.iaImpact + '</td>' +
                     '</tr>';
             }
@@ -1267,10 +1443,6 @@
         });
 
         sectorSelect.addEventListener('change', function () {
-            var sec = JOB_SECTORS[sectorSelect.value];
-            if (sec) {
-                screenSlider.value = sec.cognitiveSharePct;
-            }
             updateSimulation();
         });
 
@@ -1280,9 +1452,9 @@
             var gross = parseInt(salaryInput.value, 10) || 28000;
             var p = calcPayroll(gross);
             var sec = JOB_SECTORS[sectorSelect.value] || JOB_SECTORS.admin_finanzas;
-            var screenPct = parseInt(screenSlider.value, 10) || sec.cognitiveSharePct;
-            var scale = screenPct / Math.max(1, sec.cognitiveSharePct);
-            var e28 = Math.min(96, Math.round(sec.auto2028Pct * scale));
+            var screenPct = parseInt(screenSlider.value, 10) || 80;
+            var screenFactor = 0.35 + 0.65 * (screenPct / 85);
+            var e28 = Math.min(96, Math.max(8, Math.round(sec.base2028 * screenFactor)));
             var aiAnnualEur = sec.aiMonthlyEur * 12;
 
             var shareText = 'Con un sueldo bruto de ' + fmtEur(p.grossAnnual) + ', mi trabajo cuesta en realidad ' + fmtEur(p.totalCostEmployer) + ' a la empresa y el Estado se lleva ' + fmtEur(p.totalStateTake) + ' (' + p.taxWedgePct.toFixed(1).replace('.', ',') + '%). En 2028 una IA hará el ' + e28 + '% de estas tareas por ' + fmtEur(aiAnnualEur) + '/año cotizando 0 € a las pensiones. Calcula el tuyo en: https://democraciareal.es/nomina';
