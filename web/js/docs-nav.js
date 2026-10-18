@@ -7,6 +7,7 @@
 
     var DOCS_NAV = [
         { title: 'Inicio', href: '/docs/' },
+        { title: '\u25C6 Tu N\u00f3mina Hoy vs. IA 2028', href: '/docs/nomina.html', highlight: true },
         { title: '\u25C6 Radiograf\u00eda de Espa\u00f1a', href: '/docs/radiografia.html', highlight: true },
         {
             title: '01. Diagn\u00f3stico del Sistema',

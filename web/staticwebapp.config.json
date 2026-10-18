@@ -82,6 +82,14 @@
       "rewrite": "/docs/radiografia.html"
     },
     {
+      "route": "/nomina",
+      "rewrite": "/docs/nomina.html"
+    },
+    {
+      "route": "/docs/nomina",
+      "rewrite": "/docs/nomina.html"
+    },
+    {
       "route": "/docs/*",
       "headers": {
         "Cache-Control": "no-cache, no-store, must-revalidate"
