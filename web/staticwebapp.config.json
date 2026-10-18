@@ -83,11 +83,12 @@
     },
     {
       "route": "/nomina",
-      "rewrite": "/docs/nomina.html"
+      "rewrite": "/nomina.html"
     },
     {
-      "route": "/docs/nomina",
-      "rewrite": "/docs/nomina.html"
+      "route": "/docs/nomina.html",
+      "redirect": "/nomina",
+      "statusCode": 301
     },
     {
       "route": "/docs/*",
