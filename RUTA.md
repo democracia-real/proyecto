@@ -31,12 +31,12 @@ Hasta enero hay un solo objetivo: **demostrar con cuatro productos y un sistema 
 
 ## La ruta, por fases
 
-### Fase 0 · 11-13 oct — Cimientos
+### Fase 0 · 11-18 oct — Cimientos
 
-- [ ] `git push` (hay dos commits locales) y reindexar el chat: `python scripts/index_to_azure_search.py`
-- [ ] **Firmar la revisión humana** de las 5 cifras del registro (leer la fuente, poner tu nombre o alias)
+- [x] `git push` y reindexar el chat: `python scripts/index_to_azure_search.py`
+- [x] **Firmar la revisión humana** de las 5 cifras del registro (leer la fuente, poner tu nombre o alias)
 - [ ] Publicar **Lo que vale tu voto**
-- [ ] Regla del registro de cifras en el `red-team` (`function-app/shared/editorial-prompts.js`)
+- [x] Regla del registro de cifras en el `red-team` (`function-app/shared/editorial-prompts.js`)
 
 ### Fase 1 · 13-18 oct — Datos y base de la matriz
 
@@ -123,6 +123,8 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 - Enlace en la biografía a la web o al vídeo largo. Ni «vota» ni «no votes».
 
 **Ritmo:** un lote semanal (por ejemplo, el domingo) de unos 3 clips, y se publica uno cada dos o tres días en YouTube Shorts, TikTok e Instagram Reels a la vez. Mejor poco y constante que veinte clips de golpe.
+
+**Tema semanal:** además de los clips, un tema por semana con vídeo corto propio. Cada tema tiene carpeta en [`enseñar/`](enseñar/README.md) (borrador, `verificacion.md`, guion). Antes de grabar, [`GUIA_VIDEOS.md`](enseñar/GUIA_VIDEOS.md): hacer pensar, sin politizar. Primer tema: [`futuroIA/`](enseñar/futuroIA/).
 
 **Más adelante,** cada producto da su propio clip: una celda de la matriz, un decreto en el Decretómetro, un dato provincial. Eso sí lleva cifras verificadas.
 

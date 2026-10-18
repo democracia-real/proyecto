@@ -16,7 +16,7 @@
       "estado": "verificado",
       "nota": "Dos fuentes secundarias coinciden en el orden de magnitud. Falta un recuento propio sobre el BOE.",
       "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
-      "revision_humana": null,
+      "revision_humana": "fjlogrono (2026-10-18)",
       "revisar_en": "2027-01-15",
       "texto_en": {
         "web/index.html": "data-count=\"1\" data-suffix=\" de 2\"",
@@ -38,7 +38,7 @@
       "estado": "verificado",
       "nota": "El total de 216 normas procede de El Día (9 oct 2026). Pendiente de contrastar con la estadística del Congreso.",
       "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
-      "revision_humana": null,
+      "revision_humana": "fjlogrono (2026-10-18)",
       "revisar_en": "2027-01-15",
       "texto_en": {
         "web/docs/radiografia.html": "97 de 216",
@@ -57,7 +57,7 @@
       "consultado": "2026-10-11",
       "estado": "verificado",
       "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
-      "revision_humana": null,
+      "revision_humana": "fjlogrono (2026-10-18)",
       "revisar_en": "2027-01-15",
       "texto_en": {
         "web/index.html": "data-count=\"20\" data-suffix=\" de 20\"",
@@ -77,7 +77,7 @@
       "consultado": "2026-10-11",
       "estado": "verificado",
       "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
-      "revision_humana": null,
+      "revision_humana": "fjlogrono (2026-10-18)",
       "revisar_en": "2026-12-15",
       "nota": "Revisar tras las elecciones del 29 de noviembre de 2026.",
       "texto_en": {
@@ -98,7 +98,7 @@
       "consultado": "2026-10-11",
       "estado": "verificado",
       "verificado_por": ["ia:claude (Cursor), con fuente descargada"],
-      "revision_humana": null,
+      "revision_humana": "fjlogrono (2026-10-18)",
       "revisar_en": "2027-02-15",
       "nota": "Transparency publica cada febrero. Actualizar con el IPC 2026.",
       "texto_en": {
