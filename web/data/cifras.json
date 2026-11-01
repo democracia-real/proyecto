@@ -573,7 +573,7 @@
       "calculo": "24.688.087 / 350 = 70.537,4",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)", "ia:claude-sonnet-5-5, verificación independiente contra el PDF del BOE sin ver el cálculo (2026-11-01): coincide (Total estatal y 24.688.087 / 350). Detalle en data/voto-2023/VERIFICACION.md"],
       "revision_humana": null,
       "revisar_en": "2026-12-15",
       "texto_en": {
@@ -592,7 +592,7 @@
       "calculo": "Teruel 75.913 / 3 = 25.304,3; Madrid 3.608.673 / 37 = 97.531,7; Madrid / Teruel = 3,85. Las 52 ordenadas en web/data/voto-2023.csv",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)", "ia:claude-sonnet-5-5, verificación independiente contra el PDF del BOE sin ver el cálculo (2026-11-01): coinciden los votos válidos y escaños de Teruel y Madrid. Detalle en data/voto-2023/VERIFICACION.md"],
       "revision_humana": null,
       "revisar_en": "2026-12-15",
       "texto_en": {
@@ -612,7 +612,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "No son «votos perdidos» en sentido estricto: cuentan para la barrera del 3%, la financiación y como expresión política. Lo que no hicieron es elegir a nadie en su provincia.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)", "ia:claude-sonnet-5-5, verificación independiente contra el PDF del BOE sin ver el cálculo (2026-11-01): coincide; suma propia de las 52 provincias desde el PDF = 1.930.424. Detalle en data/voto-2023/VERIFICACION.md"],
       "revision_humana": null,
       "revisar_en": "2026-12-15",
       "texto_en": {
@@ -632,7 +632,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Sustituye a «Soria vale casi 6 veces Madrid» de sistema_electoral.md, que comparaba los votos de las dos candidaturas elegidas en Soria (14.966 y 18.895) con los votos por escaño de todo Madrid. El cociente D'Hondt del último escaño da 6,11 (91.448,9 / 14.966), pero depende de cómo se repartan los votos entre candidaturas y no mide el peso del voto.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)", "ia:claude-sonnet-5-5, verificación independiente contra el PDF del BOE sin ver el cálculo (2026-11-01): coinciden Soria y Madrid y el cociente 3,84. Detalle en data/voto-2023/VERIFICACION.md"],
       "revision_humana": null,
       "revisar_en": "2026-12-15",
       "texto_en": {
@@ -653,7 +653,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "En 2023 la barrera del 3% no cambió ningún escaño: sin ella el reparto habría sido el mismo.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)", "ia:claude-sonnet-5-5, verificación independiente contra el PDF del BOE sin ver el cálculo (2026-11-01): reparto recalculado a mano en 5 de 52 circunscripciones (Soria, Teruel, Madrid, Barcelona, Ceuta): coincide. Detalle en data/voto-2023/VERIFICACION.md"],
       "revision_humana": null,
       "revisar_en": "2026-12-15",
       "texto_en": {
@@ -672,7 +672,7 @@
       "calculo": "Anexo del RD 806/2026 frente al del RD 400/2023 (Cádiz 9, Madrid 37), circunscripción a circunscripción en data/voto-2023/calcular.py: solo cambian esas dos",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)", "ia:claude-sonnet-5-5, verificación independiente sin ver el cálculo (2026-11-01): los anexos de los RD 400/2023 y 806/2026 suman 350 y solo difieren en Madrid (37 a 38) y Cádiz (9 a 8); las copias guardadas son idénticas a las páginas del BOE. Detalle en data/voto-2023/VERIFICACION.md"],
       "revision_humana": null,
       "revisar_en": "2026-12-15",
       "texto_en": {

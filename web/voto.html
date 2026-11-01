@@ -164,8 +164,8 @@
         </header>
 
         <div class="vt-notice">
-            <strong>C&aacute;lculo hecho con IA</strong> (Claude) a partir de los ficheros oficiales del Ministerio del Interior y del BOE, con un <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/calcular.py" target="_blank" rel="noopener">script</a> que cualquiera puede ejecutar. <strong>Lo revisa una persona</strong> contra el dato oficial antes de darlo por bueno.<br>
-            <span class="vt-review" id="vtReview">Revisi&oacute;n humana: pendiente</span>
+            <strong>Lo ha hecho y comprobado una IA, no una persona.</strong> Una IA (Claude Opus) hizo el c&aacute;lculo con los ficheros oficiales del Ministerio del Interior y del BOE, con un <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/calcular.py" target="_blank" rel="noopener">script</a> que cualquiera puede ejecutar. Otra IA (Claude Sonnet) lo <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/VERIFICACION.md" target="_blank" rel="noopener">comprob&oacute;</a> leyendo el PDF oficial del BOE sin ver ese c&aacute;lculo, y coincide. Si encuentras un error, <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener">abre un issue</a>: lo corregimos y lo decimos.<br>
+            <span class="vt-review" id="vtReview">C&aacute;lculo: IA &middot; Verificaci&oacute;n independiente: otra IA &middot; Revisi&oacute;n humana: no hecha</span>
         </div>
 
         <!-- ESPAÑA -->
@@ -310,7 +310,7 @@
                 <a href="/data/voto-2023.json">Todo en JSON<small>Con definiciones y fuentes</small></a>
                 <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/METODOLOGIA.md" target="_blank" rel="noopener">Metodolog&iacute;a<small>Qu&eacute; mide cada cifra y sus l&iacute;mites</small></a>
                 <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/calcular.py" target="_blank" rel="noopener">El script<small>Python, sin dependencias: rep&iacute;telo</small></a>
-                <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/REVISION_HUMANA.md" target="_blank" rel="noopener">Revisi&oacute;n humana<small>5 provincias contra el BOE, a mano</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/VERIFICACION.md" target="_blank" rel="noopener">Verificaci&oacute;n independiente<small>5 provincias contra el BOE, por una segunda IA</small></a>
                 <a href="https://infoelectoral.interior.gob.es/estaticos/docxl/PROV_02_202307_1.zip" target="_blank" rel="noopener">Fuente: Ministerio del Interior<small>Excel oficial por circunscripci&oacute;n</small></a>
                 <a href="https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf" target="_blank" rel="noopener">Fuente: Junta Electoral Central<small>Resultados en el BOE, 1 sep 2023</small></a>
             </div>
@@ -570,7 +570,10 @@
                     if (c && c.estado === 'verificado') {
                         badge.className += ' is-verified';
                         var fecha = new Date(c.consultado).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
-                        badge.textContent = 'Verificada con fuente · ' + fecha + (c.revision_humana ? ' · revisada por ' + c.revision_humana : ' · revisión humana pendiente');
+                        var segunda = (c.verificado_por || []).some(function (v) { return v.indexOf('verificación independiente') >= 0; });
+                        badge.textContent = 'Verificada con fuente · ' + fecha +
+                            (c.revision_humana ? ' · revisada por ' + c.revision_humana
+                                : segunda ? ' · comprobada por una segunda IA' : ' · sin segunda comprobación');
                         if (c.revision_humana) firmas.push(c.revision_humana);
                     } else {
                         badge.textContent = 'Pendiente de verificar';
@@ -579,7 +582,7 @@
                 });
                 var total = document.querySelectorAll('[data-cifra]').length;
                 if (firmas.length === total) {
-                    $('vtReview').textContent = 'Revisado por ' + firmas[0];
+                    $('vtReview').textContent = 'Cálculo: IA · Verificación independiente: otra IA · Revisado también por ' + firmas[0];
                     $('vtReview').className += ' is-done';
                 }
             })

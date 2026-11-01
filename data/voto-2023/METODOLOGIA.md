@@ -2,7 +2,7 @@
 
 *Datos: elecciones al Congreso del 23 de julio de 2023 · Cálculo: 1 de noviembre de 2026 · Página: [democraciareal.es/voto](https://democraciareal.es/voto)*
 
-> **Cálculo hecho con IA** (Claude, en Claude Code) con un script que cualquiera puede ejecutar. **Revisión humana: pendiente.** Hasta que una persona firme la revisión en el [registro de cifras](../../web/data/cifras.json), las cifras llevan esa etiqueta en la web.
+> **Hecho y comprobado por IA, no por una persona.** Cálculo: Claude Opus 5.5 (Claude Code), con un script que cualquiera puede ejecutar. Verificación independiente: Claude Sonnet 5.5, que leyó el PDF oficial del BOE sin ver el cálculo ([`VERIFICACION.md`](VERIFICACION.md)). Revisión humana: no hecha. El [registro de cifras](../../web/data/cifras.json) dice quién verificó cada cifra.
 
 ## La pregunta
 
@@ -50,6 +50,7 @@ El script es [`calcular.py`](calcular.py). Solo usa la biblioteca estándar de P
 - El reparto recalculado **reproduce los 350 escaños oficiales en las 52 circunscripciones**.
 - El Excel del Ministerio **coincide cifra a cifra** con la publicación de la JEC en el BOE, con el RD 400/2023 y con el RD 1037/2022.
 - El script se probó también al revés: con un solo voto cambiado en Soria, o con 10 habitantes de más, se para; y con la fórmula de Sainte-Laguë en vez de D'Hondt no reproduce los escaños.
+- **Una segunda IA** (otro modelo, sin acceso al script) leyó el PDF del BOE y comprobó 5 circunscripciones (Soria, Teruel, Madrid, Barcelona y Ceuta), las cifras nacionales y la suma de votos sin escaño de las 52. Todo coincide: ver [`VERIFICACION.md`](VERIFICACION.md).
 - Observación: en 2023 **la barrera del 3% no cambió ningún escaño**. Sin ella, el reparto habría sido el mismo (campo `escanos_que_cambiaria_sin_barrera`).
 
 ## Qué mide cada cifra
@@ -118,8 +119,8 @@ python -I data/voto-2023/calcular.py          # recalcula y escribe el dataset
 python -I data/voto-2023/calcular.py --check  # comprueba que el dataset publicado está al día
 ```
 
-## Revisión humana
+## Quién lo ha comprobado
 
-Una persona compara 5 circunscripciones con el dato oficial: ver [`REVISION_HUMANA.md`](REVISION_HUMANA.md). Cuando lo haga, firma `revision_humana` en las cifras `voto-2023-*` del [registro](../../web/data/cifras.json).
+Dos IA independientes, como se detalla en [`VERIFICACION.md`](VERIFICACION.md). Ninguna persona ha revisado las cifras. Si una persona lo hace, firma `revision_humana` en las cifras `voto-2023-*` del [registro](../../web/data/cifras.json), y la página lo mostrará.
 
 Si encuentras un error, [abre un issue](https://github.com/democracia-real/proyecto/issues).
