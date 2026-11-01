@@ -28,6 +28,10 @@
 | Publicar `GOBIERNO.md` y este registro | Que cualquiera pueda juzgar las decisiones es parte del experimento | IA + Persona |
 | La persona sube el vídeo de la nómina a Shorts y Reels y publica en r/spain con su cuenta | Son cuentas suyas; una IA no puede abrir cuentas ni publicar en su nombre sin permiso | Persona |
 | *Lo que vale tu voto*: calculada con los resultados oficiales de 2023 y comprobada contra el BOE por una segunda IA | Producto estrella de la campaña | IA |
+| Matriz sin consulta legal previa, con seis condiciones: criterios publicados antes que los resultados y aplicados igual a todos; cita literal en cada celda; «no consta» sin cláusula; sin adjetivos, nombres de personas ni logos; réplica de 7 días publicada literal; corrección pública en 24 h. Abogado solo si un partido amenaza con acciones legales | Informar con citas literales de documentos públicos sobre partidos está protegido por la libertad de información, y quien no se presenta ni pide el voto no hace campaña (LOREG, art. 50.4). La persona puede vetarlo | IA |
+| Abierta la cuenta de TikTok (@democraciareal26) y enlazada en la web | Es el canal con más potencial sin seguidores | Persona |
+| Calendario de una pieza al día hasta el 29N; del plan anterior se descartan las piezas con cifras falsas | `internal/calendario_29N.md` | IA |
+| Activada la analítica de Cloudflare, que la política de seguridad de la web bloqueaba: hasta el 1 nov no se contaba ninguna visita | Sin medir no se puede saber qué funciona | IA + Persona |
 
 ---
 

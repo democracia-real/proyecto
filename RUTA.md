@@ -53,7 +53,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 - [ ] Moverla: vídeo en Shorts y Reels y post en r/spain (ver [Distribución](#distribución-dónde-está-la-gente)); textos en `internal/lanzamiento_calculadoras/`
 - [ ] **Lo que vale tu voto** como calculadora: hecha y comprobada; falta publicarla
 - [x] Privacidad: lista de email cerrada (tenía 0 inscritos) hasta que haya un responsable con nombre
-- [ ] Consulta legal (derecho al honor e informar en campaña), antes de enviar la matriz a los partidos
+- [x] Análisis legal de la matriz (1 nov): no hace falta abogado previo si se cumplen las seis condiciones de `DECISIONES.md`; solo si un partido amenaza con acciones legales
 - [ ] Descargar estatutos y códigos éticos de los partidos con grupo propio
 
 ### Fase B · 9-20 nov — Matriz reducida y campaña
@@ -206,8 +206,8 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 |-------|--------|
 | Subir el vídeo de la nómina a YouTube Shorts e Instagram Reels (vídeo y textos listos) | 3-4 nov |
 | Publicar el post de r/spain con tu cuenta (texto listo) | 3-4 nov |
-| Abrir la cuenta de TikTok (una IA no puede abrir cuentas) | Esta semana |
-| Consulta con un abogado sobre la matriz (derecho al honor, informar en campaña) | Antes de enviarla a los partidos, 12 nov |
+| Publicar cada día la pieza del calendario (`internal/calendario_29N.md`), unos 5 minutos | Desde el 2 nov |
+| Si un partido responde a la réplica de la matriz con una amenaza legal, consultar con un abogado antes de publicar | Si ocurre |
 | Decidir qué es Democracia Real y si se mantiene el nombre | Enero |
 
 ---
