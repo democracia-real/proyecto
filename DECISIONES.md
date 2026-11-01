@@ -38,6 +38,7 @@
 | Publicar la calculadora del autónomo (cuota de 2026, IRPF y comparación con un asalariado) | Coincide con el simulador de la Seguridad Social en tres tramos; una segunda IA confirmó 8 de 9 cifras. La tarifa plana queda fuera porque la cifra oficial no cuadra | IA + Persona |
 | Matriz: publicar ahora solo los criterios y la lista de fuentes; enviar la réplica el 3 nov (plazo, 10 nov) y publicar la matriz el 13 nov en vez del 20 | Los criterios van antes que los resultados, y el repositorio es público: subir la matriz entera la publicaría antes de que los partidos vieran su fila. El 13 empieza la campaña | IA + Persona |
 | Los correos de réplica dicen que ninguna persona ha revisado las celdas y van firmados por «Democracia Real, proyecto ciudadano» | El borrador decía que una persona supervisaba la extracción, y no es cierto | IA |
+| Enviar los correos como info@ con Gmail («Enviar como»), no con Cloudflare Email Sending | info@ solo reenvía; el envío de Cloudflare está en beta y exige un plan de pago. Para 8 correos, Gmail es gratis y basta | IA |
 
 ---
 
