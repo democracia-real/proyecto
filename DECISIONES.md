@@ -39,6 +39,9 @@
 | Matriz: publicar ahora solo los criterios y la lista de fuentes; enviar la réplica el 3 nov (plazo, 10 nov) y publicar la matriz el 13 nov en vez del 20 | Los criterios van antes que los resultados, y el repositorio es público: subir la matriz entera la publicaría antes de que los partidos vieran su fila. El 13 empieza la campaña | IA + Persona |
 | Los correos de réplica dicen que ninguna persona ha revisado las celdas y van firmados por «Democracia Real, proyecto ciudadano» | El borrador decía que una persona supervisaba la extracción, y no es cierto | IA |
 | Enviar los correos como info@ con Gmail («Enviar como»), no con Cloudflare Email Sending | info@ solo reenvía; el envío de Cloudflare está en beta y exige un plan de pago. Para 8 correos, Gmail es gratis y basta | IA |
+| Enviados los 8 correos de réplica el 1 nov (20:48-20:54), uno por partido, desde la cuenta del proyecto («Democracia Real»), con plazo hasta el 10 nov. Cada texto se comprobó con su huella SHA-256 antes de enviarlo | Ya estaban listos y la persona dio el visto bueno; salir antes da más días de plazo | IA + Persona |
+| En el correo a Junts, la etiqueta «salvo "lawfare"» pasa a «la Executiva puede declararla improcedente» | La palabra no aparecía en la cita y sonaba a opinión. Antes de publicar el 13, revisar la misma etiqueta en los datos de la matriz | IA |
+| El correo del proyecto vive en democraciareal26@gmail.com: info@ reenvía ahí | Separa lo del proyecto del correo personal de la persona responsable | Persona |
 
 ---
 

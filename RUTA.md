@@ -56,7 +56,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 - [x] Privacidad: lista de email cerrada (tenía 0 inscritos) hasta que haya un responsable con nombre
 - [x] Análisis legal de la matriz (1 nov): no hace falta abogado previo si se cumplen las seis condiciones de `DECISIONES.md`; solo si un partido amenaza con acciones legales
 - [x] Descargar estatutos y códigos éticos, construir la matriz y publicar sus criterios (1 nov)
-- [ ] **Martes 3 nov:** enviar a cada partido su fila (8 correos listos en `internal/reglas/replica/`); plazo hasta el 10
+- [x] Enviar a cada partido su fila: 8 correos enviados el 1 nov; plazo hasta el 10
 
 ### Fase B · 9-20 nov — Matriz y campaña
 
@@ -209,7 +209,6 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 |-------|--------|
 | Subir el vídeo de la nómina a YouTube Shorts e Instagram Reels (vídeo y textos listos) | 3-4 nov |
 | Publicar el post de r/spain con tu cuenta (texto listo) | 3-4 nov |
-| Enviar los 8 correos de réplica desde info@democraciareal.es (listos en `internal/reglas/replica/`) | Martes 3 nov |
 | Publicar cada día la pieza del calendario (`internal/calendario_29N.md`), unos 5 minutos | Desde el 2 nov |
 | Si un partido responde a la réplica de la matriz con una amenaza legal, consultar con un abogado antes de publicar | Si ocurre |
 | Decidir qué es Democracia Real y si se mantiene el nombre | Enero |
