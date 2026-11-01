@@ -16,6 +16,7 @@ IMAGENES = {
     "nomina.png": ("¿Cuánto cuesta de verdad\ntu nómina?", "Lo que paga tu empresa, lo que te llega y adónde va cada euro.", "CALCULADORA", ACCENT),
     "ia-empleo.png": ("¿Y si una IA hiciera\nparte de tu trabajo?", "Un escenario con tu sueldo y tu sector. No es una predicción.", "SIMULADOR", "#ef4444"),
     "pensiones.png": ("Pensiones:\nlos números antes del 29N", "Cuánto aportas, quién vota por edades, quién tiene el patrimonio.", "CALCULADORA", "#f59e0b"),
+    "autonomo.png": ("¿Cuánto paga de verdad\nun autónomo?","Tu cuota de 2026, tu IRPF y lo que te queda. Con la fuente de cada cifra.", "CALCULADORA", "#fb923c"),
     "voto.png": ("¿Cuánto vale tu voto\nen tu provincia?", "Votos por escaño y votos que no eligieron a nadie. Datos de 2023.", "CALCULADORA", "#38bdf8"),
 }
 

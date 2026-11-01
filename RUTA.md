@@ -36,9 +36,10 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 |---|----------|-------|--------|
 | 1 | **Calculadora de la nómina** | Publicada el 1 nov | Cifras con dos comprobaciones de IA. Falta moverla (vídeo, Reddit) |
 | 2 | **Lo que vale tu voto** (calculadora por provincia) | 8 nov, antes de la campaña | Hecha y comprobada contra el BOE el 1 nov, en su rama. Falta publicarla |
-| 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 20 nov | Por empezar. Necesita la consulta legal y 7 días de réplica |
+| 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 13 nov | Hecha el 1 nov con dos lecturas de IA. Criterios publicados; réplica a los partidos hasta el 10 nov |
 | 4 | **Calculadora de pensiones** | Publicada el 1 nov | Reescrita sin el enfoque generacional; cifras con dos comprobaciones |
 | 5 | **Simulador de IA y empleo** | Publicado el 1 nov | Rehecho como escenario, no como predicción |
+| 6 | **Calculadora del autónomo** | Publicada el 1 nov | Cuota de 2026, IRPF y comparación con un asalariado; coincide con el simulador de la Seguridad Social |
 | — | Decretómetro | Diciembre | Aplazado. Como mucho, una pieza sobre la convalidación de los decretos de vivienda |
 | — | Promesómetro | 30 nov, solo electos | Aplazado. Sin tiempo para revisar 20-30 fichas por partido en campaña |
 
@@ -54,13 +55,14 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 - [ ] **Lo que vale tu voto** como calculadora: hecha y comprobada; falta publicarla
 - [x] Privacidad: lista de email cerrada (tenía 0 inscritos) hasta que haya un responsable con nombre
 - [x] Análisis legal de la matriz (1 nov): no hace falta abogado previo si se cumplen las seis condiciones de `DECISIONES.md`; solo si un partido amenaza con acciones legales
-- [ ] Descargar estatutos y códigos éticos de los partidos con grupo propio
+- [x] Descargar estatutos y códigos éticos, construir la matriz y publicar sus criterios (1 nov)
+- [ ] **Martes 3 nov:** enviar a cada partido su fila (8 correos listos en `internal/reglas/replica/`); plazo hasta el 10
 
-### Fase B · 9-20 nov — Matriz reducida y campaña
+### Fase B · 9-20 nov — Matriz y campaña
 
-- [ ] Extraer y revisar las 6 cláusulas por partido. Sin cita literal, «no consta»
-- [ ] Enviar a cada partido su fila con 7 días para responder (antes del 13 nov)
-- [ ] **20 nov: publicar la matriz**
+- [x] Extraer las 6 cláusulas por partido con dos lecturas independientes. Sin cita literal, «no consta»
+- [ ] 11-12 nov: incorporar las respuestas literales y corregir lo que señalen
+- [ ] **13 nov: publicar la matriz**, el día que empieza la campaña, y escribir a periodistas de datos
 - [ ] Desde el 13 nov, una pieza al día: un resultado de la calculadora de una provincia, una celda de la matriz
 
 ### Fase C · 21-29 nov — Cierre de campaña
@@ -207,6 +209,7 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 |-------|--------|
 | Subir el vídeo de la nómina a YouTube Shorts e Instagram Reels (vídeo y textos listos) | 3-4 nov |
 | Publicar el post de r/spain con tu cuenta (texto listo) | 3-4 nov |
+| Enviar los 8 correos de réplica desde info@democraciareal.es (listos en `internal/reglas/replica/`) | Martes 3 nov |
 | Publicar cada día la pieza del calendario (`internal/calendario_29N.md`), unos 5 minutos | Desde el 2 nov |
 | Si un partido responde a la réplica de la matriz con una amenaza legal, consultar con un abogado antes de publicar | Si ocurre |
 | Decidir qué es Democracia Real y si se mantiene el nombre | Enero |

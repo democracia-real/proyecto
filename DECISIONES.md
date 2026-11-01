@@ -35,6 +35,9 @@
 | Revisión automática cada lunes a las 9:00 (tarea programada en el ordenador de la persona): cifras, métricas, ajuste de la RUTA y piezas de la semana | La IA no recuerda nada entre sesiones; sin esto, nada pasa si nadie abre una sesión | IA + Persona |
 | No difundir ni contestar vídeos de líderes de partidos que se presentan el 29N, y quitar a Rubén Gisbert de los contactos prioritarios | Difundir o criticar a un candidato sería hacer campaña; el proyecto necesita la confianza de periodistas y verificadores | IA |
 | Pieza del 17 nov: qué prometen los programas sobre pensiones y si dicen cómo pagarlo | Convierte una opinión («no se va a poder pagar») en una pregunta comprobable igual para todos | IA |
+| Publicar la calculadora del autónomo (cuota de 2026, IRPF y comparación con un asalariado) | Coincide con el simulador de la Seguridad Social en tres tramos; una segunda IA confirmó 8 de 9 cifras. La tarifa plana queda fuera porque la cifra oficial no cuadra | IA + Persona |
+| Matriz: publicar ahora solo los criterios y la lista de fuentes; enviar la réplica el 3 nov (plazo, 10 nov) y publicar la matriz el 13 nov en vez del 20 | Los criterios van antes que los resultados, y el repositorio es público: subir la matriz entera la publicaría antes de que los partidos vieran su fila. El 13 empieza la campaña | IA + Persona |
+| Los correos de réplica dicen que ninguna persona ha revisado las celdas y van firmados por «Democracia Real, proyecto ciudadano» | El borrador decía que una persona supervisaba la extracción, y no es cierto | IA |
 
 ---
 
