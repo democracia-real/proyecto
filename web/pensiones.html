@@ -558,7 +558,7 @@
                         </div>
                         <div class="chart-legend-item">
                             <span class="chart-legend-dot" style="background:#a855f7;"></span>
-                            <span>Afiliados por cada pensionista (una persona puede cobrar dos pensiones): 2,3 hoy y <strong>1,5 en 2050</strong>, seg&uacute;n la proyecci&oacute;n de la Comisi&oacute;n Europea</span>
+                            <span>Cotizantes por cada pensionista (una persona puede cobrar dos pensiones): unos 2,3 hoy y <strong>1,5 en 2050</strong>, seg&uacute;n la proyecci&oacute;n de la Comisi&oacute;n Europea</span>
                         </div>
                     </div>
                 </div>
@@ -594,7 +594,7 @@
             <div>
                 <div class="bisturi-title">No es nietos contra abuelos: es aritm&eacute;tica</div>
                 <p class="bisturi-text" id="shareBannerText">
-                    Quien cotiz&oacute; tiene derecho a su pensi&oacute;n. La pregunta es c&oacute;mo se paga cuando, seg&uacute;n la Comisi&oacute;n Europea, habr&aacute; 1,5 afiliados por pensionista en 2050. Busca qu&eacute; propone cada partido para pagarlo.
+                    Quien cotiz&oacute; tiene derecho a su pensi&oacute;n. La pregunta es c&oacute;mo se paga cuando, seg&uacute;n la Comisi&oacute;n Europea, habr&aacute; 1,5 cotizantes por pensionista en 2050. Busca qu&eacute; propone cada partido para pagarlo.
                 </p>
             </div>
             <button type="button" class="btn-share-wa" id="shareResultBtn">Copiar datos para WhatsApp</button>
@@ -658,7 +658,7 @@
             // Electores: INE, censo 2026 (tabla 9). Riqueza: EFF 2024, cálculo propio
             var groups = [
                 { label: 'Menos de 35', votePct: 20.8, wealthPct: 2.0, highlight: userAge < 35 },
-                { label: 'De 35 a 64', votePct: 50.9, wealthPct: 56.9, highlight: userAge >= 35 && userAge < 65 },
+                { label: 'De 35 a 64', votePct: 50.8, wealthPct: 56.9, highlight: userAge >= 35 && userAge < 65 },
                 { label: '65 o más', votePct: 28.3, wealthPct: 41.1, highlight: userAge >= 65 }
             ];
 
@@ -716,7 +716,7 @@
                 { year: 1995, ratio: 2.1 },
                 { year: 2026, ratio: 2.1 }
             ];
-            // Afiliados por pensionista: dato de hoy y proyección de la Comisión Europea
+            // Cotizantes por pensionista: dato de hoy y proyección de la Comisión Europea
             var perPensioner = [
                 { year: 2026, ratio: 2.3 },
                 { year: 2040, ratio: 1.8 },
@@ -807,7 +807,7 @@
                 '<td>Lo que aportas al año equivale al ' + f.pensionShareOfAvg + '% de una pensión media (1.376 €/mes en 14 pagas).</td>' +
                 '</tr>' +
                 '<tr>' +
-                '<td><strong>A intereses de la deuda (5,5%)</strong></td>' +
+                '<td><strong>A la deuda pública (5,5%)</strong></td>' +
                 '<td class="num" style="color:#f87171;">' + fmtEur(f.toInterest) + '</td>' +
                 '<td class="num" style="color:#f87171;"><strong>' + fmtEur(f.toInterest * f.yearsLeft) + '</strong></td>' +
                 '<td>La deuda pública era de 1,75 billones de euros en agosto de 2026 (99,7% del PIB): unos ' + fmtEur(DEBT_PER_PERSON) + ' por habitante.</td>' +

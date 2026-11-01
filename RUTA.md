@@ -25,7 +25,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 ## Tres reglas
 
 1. **Sin cifra verificada, no se publica.** Una cifra es verificada si está en [`web/data/cifras.json`](web/data/cifras.json). Una previsión o un supuesto se puede publicar, pero etiquetado como tal y con su fuente.
-2. **Nada sale sin que una persona lo apruebe.**
+2. **Lo que sale fuera de la web lo aprueba una persona.** En la web propia, la IA publica lo que pasa dos comprobaciones independientes y el check, y lo dice. Reglas completas en [`GOBIERNO.md`](GOBIERNO.md).
 3. **Máximo tres tareas abiertas a la vez.** Si entra una nueva, sale otra.
 
 ---
@@ -34,11 +34,11 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 
 | # | Producto | Fecha | Estado |
 |---|----------|-------|--------|
-| 1 | **Calculadora de la nómina** | Ya | Cifras verificadas el 1 nov. Falta tu firma en el registro y publicar |
-| 2 | **Lo que vale tu voto** (calculadora por provincia) | 8 nov, antes de la campaña | Por construir. Es aritmética sobre datos oficiales de 2023 |
+| 1 | **Calculadora de la nómina** | Publicada el 1 nov | Cifras con dos comprobaciones de IA. Falta moverla (vídeo, Reddit) |
+| 2 | **Lo que vale tu voto** (calculadora por provincia) | 8 nov, antes de la campaña | Hecha y comprobada contra el BOE el 1 nov, en su rama. Falta publicarla |
 | 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 20 nov | Por empezar. Necesita la consulta legal y 7 días de réplica |
-| 4 | **Calculadora de pensiones** | Tras tu revisión | Reescrita el 1 nov sin el enfoque generacional; cifras en el registro |
-| 5 | **Simulador de IA y empleo** | Tras tu revisión | Rehecho como escenario, no como predicción |
+| 4 | **Calculadora de pensiones** | Publicada el 1 nov | Reescrita sin el enfoque generacional; cifras con dos comprobaciones |
+| 5 | **Simulador de IA y empleo** | Publicado el 1 nov | Rehecho como escenario, no como predicción |
 | — | Decretómetro | Diciembre | Aplazado. Como mucho, una pieza sobre la convalidación de los decretos de vivienda |
 | — | Promesómetro | 30 nov, solo electos | Aplazado. Sin tiempo para revisar 20-30 fichas por partido en campaña |
 
@@ -48,10 +48,11 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 
 ### Fase A · 1-8 nov — Publicar lo que ya hay y construir el producto estrella
 
-- [ ] **Firmar** las cifras nuevas del registro (`revision_humana`) y hacer `git push`
-- [ ] Publicar la calculadora de la nómina y moverla (ver [Distribución](#distribución-dónde-está-la-gente))
-- [ ] **Lo que vale tu voto** como calculadora: elige tu provincia, cuánto vale tu voto frente a otras y cuántos votos no eligieron a nadie en 2023
-- [ ] **Responsable en la política de privacidad** (tu nombre o el de una asociación): la lista de email ya está abierta
+- [x] Segunda comprobación independiente de las cifras nuevas (sustituye a la firma humana, que no se inventa) y `git push`
+- [x] Publicar la calculadora de la nómina
+- [ ] Moverla: vídeo en Shorts y Reels y post en r/spain (ver [Distribución](#distribución-dónde-está-la-gente)); textos en `internal/lanzamiento_calculadoras/`
+- [ ] **Lo que vale tu voto** como calculadora: hecha y comprobada; falta publicarla
+- [x] Privacidad: lista de email cerrada (tenía 0 inscritos) hasta que haya un responsable con nombre
 - [ ] Consulta legal (derecho al honor e informar en campaña), antes de enviar la matriz a los partidos
 - [ ] Descargar estatutos y códigos éticos de los partidos con grupo propio
 
@@ -184,7 +185,7 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 **Formato:**
 - Vertical 9:16, 20-45 segundos, el estribillo o la mejor imagen.
 - Una frase en pantalla que funcione sin sonido (la primera, el gancho).
-- Descripción: *«Música y letra generadas con IA. Texto revisado por una persona.»* Activar la etiqueta de contenido sintético de cada plataforma. Es una línea roja del plan, y el reglamento europeo de IA lo exige desde agosto de 2026.
+- Descripción: *«Música, letra y vídeo hechos con IA.»* Activar la etiqueta de contenido sintético de cada plataforma. Es una línea roja del plan, y el reglamento europeo de IA lo exige desde agosto de 2026.
 - Enlace en la biografía a la web o al vídeo largo. Ni «vota» ni «no votes».
 
 **Ritmo:** un lote semanal (por ejemplo, el domingo) de unos 3 clips, y se publica uno cada dos o tres días en YouTube Shorts, TikTok e Instagram Reels a la vez. Mejor poco y constante que veinte clips de golpe.
@@ -203,12 +204,10 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 
 | Tarea | Cuándo |
 |-------|--------|
-| Firmar las cifras nuevas del registro (`revision_humana`) y hacer `git push` | 2-3 nov |
-| Revisar y aprobar las calculadoras de pensiones e IA antes de enlazarlas | 2-3 nov |
-| Nombre o asociación como responsable de datos | Ya: la lista de email está abierta |
-| Consulta con un abogado | Antes de enviar la matriz (8 nov) |
-| Abrir TikTok y grabar el primer vídeo de la calculadora | Esta semana |
-| Revisar todas las celdas de la matriz | 12 nov |
+| Subir el vídeo de la nómina a YouTube Shorts e Instagram Reels (vídeo y textos listos) | 3-4 nov |
+| Publicar el post de r/spain con tu cuenta (texto listo) | 3-4 nov |
+| Abrir la cuenta de TikTok (una IA no puede abrir cuentas) | Esta semana |
+| Consulta con un abogado sobre la matriz (derecho al honor, informar en campaña) | Antes de enviarla a los partidos, 12 nov |
 | Decidir qué es Democracia Real y si se mantiene el nombre | Enero |
 
 ---
@@ -218,6 +217,8 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 | Documento | Para qué | Cuándo mirarlo |
 |-----------|----------|----------------|
 | **RUTA.md** (este) | Qué hacer y en qué orden | Cada día |
+| [`GOBIERNO.md`](GOBIERNO.md) | Qué decide la IA, qué aprueba la persona y cómo se mide | Antes de decidir algo nuevo |
+| [`DECISIONES.md`](DECISIONES.md) | Registro de cada decisión y métricas semanales | Cada lunes |
 | [`plan_maestro_29N.md`](plan_maestro_29N.md) | Detalle de los productos, agentes y cadencia de campaña | Al construir un producto |
 | [`Proximos pasos.md`](Proximos%20pasos.md) | Lista larga de pendientes y cifras sospechosas | Para elegir la siguiente tarea |
 | [`Ideas.md`](Ideas.md) | Ideas con su análisis (matriz, verificación, consecuencias, contrapropuestas) | Al decidir qué construir después |

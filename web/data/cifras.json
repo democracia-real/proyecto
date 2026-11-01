@@ -15,7 +15,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "El texto de la tarjeta («votas la lista del jefe del partido») es una interpretación: las listas las aprueba cada partido según sus estatutos. En el Senado sí se vota a personas.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-11-01",
       "texto_en": {
@@ -155,8 +155,8 @@
       "calculo": "1.750.000 M€ / 49.801.559 habitantes = 35.140 €",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "Dato mensual de avance, revisable. Población: «se situó en 49.801.559 habitantes a 1 de julio de 2026» (https://www.ine.es/dyngs/Prensa/ECP2T26.htm). Se dice «por habitante», no «por español». Sustituye a «31.000 € por español».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "Dato mensual de avance, revisable. Población: «se situó en 49.801.559 habitantes a 1 de julio de 2026» (https://www.ine.es/dyngs/Prensa/ECP2T26.htm). Se dice «por habitante», no «por español». Sustituye a «31.000 € por español». Divide la deuda de agosto entre la población de julio.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2026-12-31",
       "texto_en": {
@@ -167,24 +167,25 @@
     },
     {
       "id": "intereses-deuda",
-      "afirmacion": "En 2024 las Administraciones Públicas pagaron 39.644 M€ en intereses de la deuda, el 5,5% de todo el gasto público",
-      "valor": "39.644 M€",
+      "afirmacion": "En 2024 las Administraciones Públicas pagaron 38.793 M€ en intereses de la deuda, el 5,4% de todo el gasto público",
+      "valor": "38.793 M€",
       "periodo": "2024 (provisional)",
       "fuente": "IGAE, clasificación funcional del gasto de las AAPP 2020-2024, y Eurostat (gov_10a_exp)",
       "url": "https://www.igae.pap.hacienda.gob.es/sitios/igae/es-ES/Contabilidad/ContabilidadNacional/Publicaciones/Documents/AAPP_A/Funcional%202020-2024.pdf",
-      "fragmento": "01.7 Operaciones de deuda pública … 39.644",
-      "calculo": "39.644 / 725.001 M€ de gasto total = 5,5%",
+      "fragmento": "desde los 25.127 millones hasta los 38.793 millones",
+      "calculo": "38.793 / 725.001 M€ de gasto total = 5,35%",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera", "ia:claude (Claude Code), valor corregido y comprobado en la fuente tras la segunda comprobación"],
       "revision_humana": null,
       "revisar_en": "2027-04-30",
       "texto_en": {
-        "web/index.html": "data-count=\"39644\"",
-        "web/docs/radiografia.html": "39.644 M&euro;",
+        "web/index.html": "data-count=\"38793\"",
+        "web/docs/radiografia.html": "38.793 M&euro;",
         "web/js/nomina-modelo.js": "gastoIntereses: 0.055",
         "web/nomina.html": "sharePct: 5.5"
-      }
+      },
+      "nota": "La función COFOG 01.7, «operaciones de deuda pública», suma 39.644 M€ (5,5% del gasto) porque incluye otros gastos de la deuda; es la que usan las calculadoras para el reparto. Corregido el 1 nov 2026 tras la segunda comprobación: antes decía 39.644 M€ de intereses."
     },
     {
       "id": "gasto-pensiones",
@@ -198,7 +199,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Las calculadoras reparten lo que pagas como el gasto total: es una convención, no el destino real de cada euro. La IGAE da 206.130 M€ en pensiones en 2024 (28,4% del gasto) porque incluye las de incapacidad. El resto de filas de la tabla de la nómina salen de la misma consulta.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-04-30",
       "texto_en": {
@@ -220,7 +221,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "La EPA del tercer trimestre de 2026 da 23,3% (INE, tabla 65334). Se comparan datos de una sola fuente. Sustituye a «26,6%, el doble que en Europa».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2026-12-15",
       "texto_en": {
@@ -239,8 +240,8 @@
       "calculo": "22.437.553 afiliados (sep 2026) / 10.565.782 pensiones (oct 2026) = 2,12; / 9,6 millones de pensionistas = 2,34",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "Afiliados: «son 22.437.553 afiliados en la serie original» (La Moncloa, 2 oct 2026). Pensiones: «ha abonado 10.565.782 pensiones a cerca de 9,6 millones de personas» (Seguridad Social, 27 oct 2026). Proyección: Ageing Report 2024, tabla II.1.84, cotizantes por pensionista (1,81 en 2040 y 1,46 en 2050). Son dos medidas distintas y se dibujan por separado. Sustituye a «4,5 en 1980 y 1,3 en 2050».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "Afiliados: «son 22.437.553 afiliados en la serie original» (La Moncloa, 2 oct 2026). Pensiones: «ha abonado 10.565.782 pensiones a cerca de 9,6 millones de personas» (Seguridad Social, 27 oct 2026). Proyección: Ageing Report 2024, tabla II.1.84, cotizantes por pensionista (1,81 en 2040 y 1,46 en 2050). Son dos medidas distintas y se dibujan por separado. Sustituye a «4,5 en 1980 y 1,3 en 2050». Mezcla afiliados de septiembre y pensiones de octubre. La serie de la Comisión Europea mide cotizantes, no afiliados (2,34 en 2025).",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-01-31",
       "texto_en": {
@@ -250,7 +251,7 @@
     },
     {
       "id": "leyes-educacion",
-      "afirmacion": "Desde 1980 se han aprobado 8 leyes orgánicas generales de educación: LOECE, LODE, LOGSE, LOPEG, LOCE, LOE, LOMCE y LOMLOE",
+      "afirmacion": "Desde 1980 se han aprobado 8 leyes orgánicas de educación: LOECE, LODE, LOGSE, LOPEG, LOCE, LOE, LOMCE y LOMLOE",
       "valor": "8",
       "periodo": "1980-2020",
       "fuente": "BOE, textos de las leyes orgánicas de educación",
@@ -259,8 +260,8 @@
       "calculo": "LO 5/1980, LO 8/1985, LO 1/1990, LO 9/1995, LO 10/2002, LO 2/2006, LO 8/2013 y LO 3/2020. Son 9 si se cuenta la Ley General de Educación de 1970, que no es orgánica",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "La LOMCE y la LOMLOE modifican la LOE en vez de sustituirla, y la LODE de 1985 sigue en vigor, así que «ninguna duró» no es correcto. Sustituye a «9 leyes en 40 años».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "La LOMCE y la LOMLOE modifican la LOE en vez de sustituirla, y la LODE de 1985 sigue en vigor, así que «ninguna duró» no es correcto. Sustituye a «9 leyes en 40 años». No se llaman «generales»: la LOECE, la LODE y la LOPEG regulan partes del sistema.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-11-01",
       "texto_en": {
@@ -278,8 +279,8 @@
       "fragmento": "Spain 37% 43% 41% 43% 44% 48% 34% 37% 18% 21%",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "Leído de una copia del PDF oficial (mismo DOI) porque oecd.org devolvía 403: comprobar en la fuente al revisar. Gobierno 43% (OCDE 40%) y Parlamento 37% (OCDE 37%). No es la más baja de Europa: Francia y Grecia, 15%. Sustituye a «21% de confianza en las instituciones, la más baja de Europa occidental».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "La segunda comprobación lo leyó en el PDF oficial de oecd.org. Datos de la encuesta de 2025. Gobierno 43% (OCDE 40%) y Parlamento 37% (OCDE 37%). No es la más baja de Europa: Francia y Grecia, 15%. Sustituye a «21% de confianza en las instituciones, la más baja de Europa occidental».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-06-30",
       "texto_en": {
@@ -298,7 +299,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Es un máximo y mide la falta de competencia, no la corrupción. No existe una cifra oficial del coste de la corrupción en España.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-11-01",
       "texto_en": {
@@ -316,7 +317,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "España: «Spain (from 37.2% to 38.1%)». Máximo, Francia (46,0%); mínimo, Irlanda (22,7%), con el PIB inflado por las multinacionales.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-10-31",
       "texto_en": {
@@ -334,7 +335,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "La media de la UE (2,26%) es una estimación de Eurostat. Se quita «solo el 8,5% de las empresas hacen I+D», que no tenía fuente.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2026-11-30",
       "texto_en": {
@@ -352,8 +353,8 @@
       "calculo": "Grado 8.793 + licenciatura 8.297 + máster 3.832 + doctorado 1.743 = 22.665",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "El fragmento es el nombre de una de las cuatro series sumadas. Sustituye a «87.000 titulados al año», sin fuente: la prensa lo atribuye a un total 2007-2017 del CEPS.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "El fragmento es el nombre de una de las cuatro series sumadas. Sustituye a «87.000 titulados al año», sin fuente: la prensa lo atribuye a un total 2007-2017 del CEPS. Son movimientos de salida, no personas únicas. No incluye la FP superior (3.669).",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-06-30",
       "texto_en": {
@@ -370,8 +371,8 @@
       "fragmento": "40% of the general population and 46% of companies perceive",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "Finlandia: «85% of the general population and of companies» (SWD(2026) 926). Duración en primera instancia de los asuntos civiles y mercantiles: «decreased slightly from 444 days in 2023 to 423 days in 2024». Sustituye a «33% frente al 52% de la UE», que mezclaba indicadores y años.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "Finlandia: «85% of the general population and of companies» (SWD(2026) 926). Duración en primera instancia de los asuntos civiles y mercantiles: «decreased slightly from 444 days in 2023 to 423 days in 2024». Sustituye a «33% frente al 52% de la UE», que mezclaba indicadores y años. El dato de Finlandia está en otro documento: https://data.consilium.europa.eu/doc/document/ST-11674-2026-ADD-27/en/pdf",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-07-31",
       "texto_en": {
@@ -389,7 +390,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Alta velocidad: «high-speed network in Spain increased from 1 244 km to 3 192 km» (Eurostat, Statistics Explained, líneas de 250 km/h o más, 2024). Se quitan «líder europeo», sin clasificación que lo respalde, y los 4.108 km.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-06-30",
       "texto_en": {
@@ -407,7 +408,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Precios: consumo de 2.000 a 19.999 MWh, sin IVA ni impuestos recuperables (UE 0,1559 €/kWh, España 0,1177). Antes decíamos que la industria pagaba más que la media de la UE: era al revés. REE da un 55,5% de generación renovable en 2025, que mide otra cosa.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-03-31",
       "texto_en": {
@@ -424,8 +425,8 @@
       "fragmento": "5.101,20 euros, con efectos 1 de enero 2026",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "MEI: «En el año 2026, será de 0,90 puntos porcentuales, de los que el 0,75 corresponderá a la empresa y el 0,15 al trabajador». Contingencias comunes: «Comunes 23,60 4,70 28,30». Los contratos temporales pagan un 6,70% de desempleo; no se modela la cotización de solidaridad.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "MEI: «En el año 2026, será de 0,90 puntos porcentuales, de los que el 0,75 corresponderá a la empresa y el 0,15 al trabajador». Contingencias comunes: «Comunes 23,60 4,70 28,30». Los contratos temporales pagan un 6,70% de desempleo; no se modela la cotización de solidaridad. El 1,50% de accidentes de trabajo es la tarifa de «personal en trabajos exclusivos de oficina» (0,80 + 0,70).",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-01-31",
       "texto_en": {
@@ -444,7 +445,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Columnas: cuña total, IRPF, cotización del trabajador y de la empresa. La OCDE no incluye el IVA. Con el salario medio del INE (29.540 €), la calculadora da 41,5%. Sustituye a la «cuña fiscal total» del 49,3%, que incluía un IVA estimado sin fuente.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-04-30",
       "texto_en": {
@@ -462,7 +463,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Mediano y medio: INE, https://www.ine.es/dyngs/Prensa/EAES2024.pdf. El salario más frecuente (modal) fue de 16.520,18 €.",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-02-28",
       "texto_en": {
@@ -480,7 +481,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "El Plan IA360 (20 sep 2026) parte del 21,1% de 2025 y fija el 55% para 2030: «del 21,1% al 55% de empresas con IA en 2030».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-10-31",
       "texto_en": {
@@ -498,7 +499,7 @@
       "calculo": "1.376,14 € x 14 pagas = 19.266 €/año",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-01-31",
       "texto_en": {
@@ -508,7 +509,7 @@
     },
     {
       "id": "electores-por-edad",
-      "afirmacion": "De los 35.958.711 electores residentes en España para el 29N, el 20,8% tiene de 18 a 34 años, el 50,9% de 35 a 64 y el 28,3% 65 o más",
+      "afirmacion": "De los 35.958.711 electores residentes en España para el 29N, el 20,8% tiene de 18 a 34 años, el 50,8% de 35 a 64 y el 28,3% 65 o más",
       "valor": "28,3% vs. 20,8%",
       "periodo": "Censo de las elecciones generales de 2026",
       "fuente": "INE, Oficina del Censo Electoral, censo de consulta de las generales de 2026, tabla 9",
@@ -517,8 +518,8 @@
       "calculo": "18-34: 7.491.796; 35-64: 18.284.761; 65 o más: 10.182.154; total 35.958.711. 65+ / 18-34 = 1,36",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "Los 2.769.645 electores del extranjero no vienen por edad. Sustituye a «el 40% del censo» y a «los mayores duplican en votos a los jóvenes».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "Los 2.769.645 electores del extranjero no vienen por edad. Sustituye a «el 40% del censo» y a «los mayores duplican en votos a los jóvenes». Corregido el 1 nov 2026 tras la segunda comprobación: el tramo de 35 a 64 es el 50,85%, no el 50,9%.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera", "ia:claude (Claude Code), valor corregido y comprobado en la fuente tras la segunda comprobación"],
       "revision_humana": null,
       "revisar_en": "2026-12-31",
       "texto_en": {
@@ -536,8 +537,8 @@
       "calculo": "% de hogares x riqueza media del tramo / 344,7 (media total): menos de 35, 2,04%; 35-64, 56,85%; 65 o más, 41,12%",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "nota": "Cálculo propio. La EFF agrupa por la edad de la persona de referencia del hogar, no por personas, y no tiene tramo de 60 o más. Sustituye a «más del 53% para los mayores de 60».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "nota": "Cálculo propio. La EFF agrupa por la edad de la persona de referencia del hogar, no por personas, y no tiene tramo de 60 o más. Sustituye a «más del 53% para los mayores de 60». La segunda comprobación rehízo el cálculo con los mismos cuadros y da el mismo resultado.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2028-04-30",
       "texto_en": {
@@ -555,7 +556,7 @@
       "consultado": "2026-11-01",
       "estado": "verificado",
       "nota": "Incluye Seguridad Social y clases pasivas. Es un estudio de una fundación privada; Fedea, con otra definición, da 61.342 M€ de transferencias corrientes del Estado en 2025. Sustituye a «~50.000 M€ de déficit contributivo».",
-      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada", "ia:claude-sonnet (Claude Code), segunda comprobación independiente sin ver la primera"],
       "revision_humana": null,
       "revisar_en": "2027-06-30",
       "texto_en": {

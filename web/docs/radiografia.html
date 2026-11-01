@@ -130,7 +130,7 @@
                 </div>
                 <div class="rx-card" data-cifra="leyes-educacion">
                     <div class="rx-card-value">8 leyes</div>
-                    <div class="rx-card-label">Leyes org&aacute;nicas generales de educaci&oacute;n desde 1980</div>
+                    <div class="rx-card-label">Leyes org&aacute;nicas de educaci&oacute;n desde 1980</div>
                     <div class="rx-card-context">LOECE (1980), LODE (1985), LOGSE (1990), LOPEG (1995), LOCE (2002), LOE (2006), LOMCE (2013) y LOMLOE (2020): una cada cinco a&ntilde;os de media. Algunas modifican la anterior en vez de sustituirla, y la LODE sigue en vigor. Si se cuenta la Ley General de Educaci&oacute;n de 1970, son nueve.</div>
                     <div class="rx-card-compare">
                         <span class="rx-compare-tag">Media: una cada 5 a&ntilde;os</span>
@@ -157,10 +157,10 @@
                 <div class="rx-card" data-cifra="deuda-por-habitante">
                     <div class="rx-card-value">35.100 &euro;</div>
                     <div class="rx-card-label">Deuda p&uacute;blica por habitante</div>
-                    <div class="rx-card-context">La deuda de las administraciones era de 1,75 billones de euros en agosto de 2026, el 99,7% del PIB. Repartida entre 49,8 millones de habitantes, unos 35.100 &euro; por persona. En 2024 los intereses costaron 39.644 M&euro;, el 5,5% de todo el gasto p&uacute;blico.</div>
+                    <div class="rx-card-context">La deuda de las administraciones era de 1,75 billones de euros en agosto de 2026, el 99,7% del PIB. Repartida entre 49,8 millones de habitantes, unos 35.100 &euro; por persona. En 2024 los intereses costaron 38.793 M&euro;, el 5,4% de todo el gasto p&uacute;blico.</div>
                     <div class="rx-card-compare">
                         <span class="rx-compare-tag">Deuda: 99,7% del PIB</span>
-                        <span class="rx-compare-tag">Intereses 2024: 39.644 M&euro;</span>
+                        <span class="rx-compare-tag">Intereses 2024: 38.793 M&euro;</span>
                     </div>
                     <div class="rx-card-source">Fuente: <a href="https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/NotasInformativas/26/presbe2026-97.pdf" target="_blank" rel="noopener">Banco de Espa&ntilde;a</a> (21 oct 2026), <a href="https://www.ine.es/dyngs/Prensa/ECP2T26.htm" target="_blank" rel="noopener">INE</a> e <a href="https://www.igae.pap.hacienda.gob.es/sitios/igae/es-ES/Contabilidad/ContabilidadNacional/Publicaciones/Documents/AAPP_A/Funcional%202020-2024.pdf" target="_blank" rel="noopener">IGAE</a>. Consultado el 1 nov 2026.</div>
                 </div>
@@ -198,8 +198,8 @@
                 </div>
                 <div class="rx-card" data-cifra="emigracion-titulados">
                     <div class="rx-card-value">22.665</div>
-                    <div class="rx-card-label">Espa&ntilde;oles con t&iacute;tulo universitario que emigraron en 2021</div>
-                    <div class="rx-card-context">Mayores de 25 a&ntilde;os: 8.793 con grado, 8.297 con licenciatura, 3.832 con m&aacute;ster y 1.743 con doctorado. Es el &uacute;ltimo a&ntilde;o con este detalle. Antes mostr&aacute;bamos &laquo;87.000 al a&ntilde;o&raquo;, que no ten&iacute;a fuente.</div>
+                    <div class="rx-card-label">Salidas al extranjero de espa&ntilde;oles con t&iacute;tulo universitario (2021)</div>
+                    <div class="rx-card-context">Mayores de 25 a&ntilde;os: 8.793 con grado, 8.297 con licenciatura, 3.832 con m&aacute;ster y 1.743 con doctorado. Son salidas, no personas &uacute;nicas, y es el &uacute;ltimo a&ntilde;o con este detalle. Antes mostr&aacute;bamos &laquo;87.000 al a&ntilde;o&raquo;, que no ten&iacute;a fuente.</div>
                     <div class="rx-card-source">Fuente: <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=49978" target="_blank" rel="noopener">INE, Estad&iacute;stica de Migraciones</a>. Consultado el 1 nov 2026.</div>
                 </div>
                 <div class="rx-card" data-cifra="id-pib">
@@ -230,7 +230,7 @@
             <div class="rx-grid">
                 <div class="rx-card" data-cifra="confianza-partidos">
                     <div class="rx-card-value">21%</div>
-                    <div class="rx-card-label">Conf&iacute;a en los partidos pol&iacute;ticos</div>
+                    <div class="rx-card-label">Conf&iacute;a en los partidos pol&iacute;ticos (2025)</div>
                     <div class="rx-card-context">La media de la OCDE es el 26%. En el Gobierno conf&iacute;a el 43% y en el Parlamento el 37%, en la media de la OCDE. No es la m&aacute;s baja de Europa, como dec&iacute;amos antes: Francia y Grecia est&aacute;n en el 15%.</div>
                     <div class="rx-card-compare">
                         <span class="rx-compare-tag">Media OCDE: 26%</span>
@@ -345,7 +345,9 @@
                     verificadas++;
                     badge.className += ' is-verified';
                     var fecha = new Date(c.consultado).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
-                    badge.textContent = 'Verificada con fuente · ' + fecha + (c.revision_humana ? ' · revisada por ' + c.revision_humana : ' · revisión humana pendiente');
+                    var quien = c.revision_humana ? ' · revisada por ' + c.revision_humana
+                        : ((c.verificado_por || []).length >= 2 ? ' · dos comprobaciones de IA independientes, sin revisión humana' : ' · revisión humana pendiente');
+                    badge.textContent = 'Verificada con fuente · ' + fecha + quien;
                 } else {
                     badge.textContent = 'Pendiente de verificar';
                 }

@@ -92,7 +92,7 @@ Esto no es opcional. Es lo que nos diferencia de la propaganda y lo que nos prot
 | Microsegmentar con datos personales | Lo prohíbe el Reglamento UE 2024/900. Tampoco lo necesitamos. |
 | Una cifra sin fuente primaria enlazable | Regla de siempre. En campaña, un error nos hunde. |
 | Nombres de víctimas o de particulares | Regla de siempre (caso Maricarmen). |
-| Publicar algo que no haya aprobado un humano | Es el corazón del proyecto: [etica_y_supervision_humana.md](05_uso_de_ia_y_automatizacion/etica_y_supervision_humana.md). |
+| Publicar fuera de la web algo que no haya aprobado una persona, o firmar en su nombre algo que no ha revisado | Desde el 1 nov la IA gestiona el proyecto; las reglas están en [GOBIERNO.md](GOBIERNO.md). |
 
 **Consulta legal antes del 13 de noviembre:** confirmar con un abogado electoral, o por escrito a la Junta Electoral Central, que la actividad de un proyecto no candidato (información, verificación, comparativa de programas) no se considera campaña. Guardar la respuesta en `06_hoja_de_ruta_legal/`.
 
@@ -221,7 +221,7 @@ Sustituye al checklist de reglas. Detalle completo en [Ideas.md](Ideas.md), secc
 
 ## Los agentes
 
-Todo borrador llega por Telegram. Nada se publica sin el visto bueno de una persona.
+Todo borrador llega por Telegram. Nada se publica fuera de la web sin el visto bueno de una persona ([GOBIERNO.md](GOBIERNO.md)).
 
 | Agente | Estado | Entrada | Salida | Cadencia | Puerta humana |
 |--------|--------|---------|--------|----------|---------------|
