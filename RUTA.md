@@ -150,6 +150,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 | Contactar creadores y periodistas **cuando exista un producto publicado** | Los textos de lanzamiento con cifras sin verificar (83,7%, Soria 6x, 8 leyes, 87.000...) |
 | Un post en Reddit, reescrito | La afirmación «publica las nóminas de sus cargos» (hoy no hay cargos ni nóminas) |
 | | Esperar a tener «el» producto para escribir a nadie (1 nov): basta una calculadora con todas sus cifras en el registro |
+| | Rubén Gisbert como contacto prioritario (1 nov): postura política muy marcada y enfrentado con periodistas y verificadores, que son a quienes el proyecto necesita convencer |
 
 **Ángulo nuevo** para prensa y creadores: *«Un proyecto ciudadano compara las reglas internas de todos los partidos, cláusula a cláusula y empezando por las suyas, y publica cómo verifica cada dato.»*
 

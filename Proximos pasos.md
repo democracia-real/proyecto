@@ -123,7 +123,7 @@ Regla añadida al agente `red-team`: si la pieza contiene una cifra que no está
 
 - [ ] Fijar el vídeo largo como destacado en YouTube Studio.
 - [ ] Perfiles en X e Instagram y enlaces en `index.html` (parte ya cubierta por el plan 29N).
-- [ ] Contactos (Rubén Gisbert, Democracia Real Ya, democraciareal.com). Antes de escribir a nadie, que las cifras que vean estén verificadas.
+- [ ] Contactos: periodistas de datos y verificadores primero (ver `RUTA.md`); después, Democracia Real Ya y democraciareal.com. Rubén Gisbert, retirado de la lista (1 nov, motivo en la RUTA).
 - [ ] Hilos con datos del vídeo: **bloqueados** hasta verificar cada cifra.
 
 ## Pendiente técnico (no urgente)
