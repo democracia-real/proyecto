@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <bloque id="a57" tipo="precepto" titulo="Artículo 57">
+      <version id_norma="BOE-A-2006-20764" fecha_publicacion="20061129" fecha_vigencia="20070101">
+        <p class="articulo">Artículo 57. Mínimo del contribuyente.</p>
+        <p class="parrafo">1. El mínimo del contribuyente será, con carácter general, de 5.050 euros anuales.</p>
+        <p class="parrafo">2. Cuando el contribuyente tenga una edad superior a 65 años, el mínimo se aumentará en 900 euros anuales. Si la edad es superior a 75 años, el mínimo se aumentará adicionalmente en 1.100 euros anuales.</p>
+      </version>
+      <version id_norma="BOE-A-2007-22295" fecha_publicacion="20071227" fecha_vigencia="20080116">
+        <p class="articulo">Artículo 57. Mínimo del contribuyente.</p>
+        <p class="parrafo">1. El mínimo del contribuyente será, con carácter general, de 5.151 euros anuales.</p>
+        <p class="parrafo">2. Cuando el contribuyente tenga una edad superior a 65 años, el mínimo se aumentará en 918 euros anuales. Si la edad es superior a 75 años, el mínimo se aumentará adicionalmente en 1.122 euros anuales.</p>
+        <blockquote>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2008 por el art. 66.1 de la Ley 51/2007, de 28 de diciembre. <a class="refPost">Ref. BOE-A-2007-22295</a>
+</p>
+        </blockquote>
+      </version>
+      <version id_norma="BOE-A-2008-20744" fecha_publicacion="20081224" fecha_vigencia="20090113">
+        <p class="articulo">Artículo 57. Mínimo del contribuyente.</p>
+        <p class="parrafo">1. El mínimo del contribuyente será, con carácter general, de 5.151 euros anuales.</p>
+        <p class="parrafo">2. Cuando el contribuyente tenga una edad superior a 65 años, el mínimo se aumentará en 918 euros anuales. Si la edad es superior a 75 años, el mínimo se aumentará adicionalmente en 1.122 euros anuales.</p>
+        <blockquote>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2009 por el art. 66.1 de la Ley 2/2008, de 23 de diciembre.<ins><a class="refPost">Ref. BOE-A-2008-20744</a></ins>
+</p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2008 por el art. 66.1 de la Ley 51/2007, de 28 de diciembre. <a class="refPost">Ref. BOE-A-2007-22295</a>
+</p>
+        </blockquote>
+      </version>
+      <version id_norma="BOE-A-2009-20765" fecha_publicacion="20091224" fecha_vigencia="20100113">
+        <p class="articulo">Artículo 57. Mínimo del contribuyente.</p>
+        <p class="parrafo">1. El mínimo del contribuyente será, con carácter general, de 5.151 euros anuales.</p>
+        <p class="parrafo">2. Cuando el contribuyente tenga una edad superior a 65 años, el mínimo se aumentará en 918 euros anuales. Si la edad es superior a 75 años, el mínimo se aumentará adicionalmente en 1.122 euros anuales.</p>
+        <blockquote>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2010 por el art. 67.1 de la Ley 26/2009, de 23 de diciembre. <a class="refPost">Ref. BOE-A-2009-20765</a>
+</p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2009 por el art. 66.1 de la Ley 2/2008, de 23 de diciembre.<ins><a class="refPost">Ref. BOE-A-2008-20744</a></ins>
+</p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2008 por el art. 66.1 de la Ley 51/2007, de 28 de diciembre. <a class="refPost">Ref. BOE-A-2007-22295</a>
+</p>
+        </blockquote>
+      </version>
+      <version id_norma="BOE-A-2010-19703" fecha_publicacion="20101223" fecha_vigencia="20110112">
+        <p class="articulo">Artículo 57. Mínimo del contribuyente.</p>
+        <p class="parrafo">1. El mínimo del contribuyente será, con carácter general, de 5.151 euros anuales.</p>
+        <p class="parrafo">2. Cuando el contribuyente tenga una edad superior a 65 años, el mínimo se aumentará en 918 euros anuales. Si la edad es superior a 75 años, el mínimo se aumentará adicionalmente en 1.122 euros anuales.</p>
+        <blockquote>
+          <p class="nota_pie">Se modifica, con efectos desde 1 de enero de 2011, por el art. 61.1 de la Ley 39/2010, de 22 de diciembre. <a class="refPost">Ref. BOE-A-2010-19703</a>.</p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2010 por el art. 67.1 de la Ley 26/2009, de 23 de diciembre. <a class="refPost">Ref. BOE-A-2009-20765</a></p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2009 por el art. 66.1 de la Ley 2/2008, de 23 de diciembre.<ins><a class="refPost">Ref. BOE-A-2008-20744</a></ins></p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2008 por el art. 66.1 de la Ley 51/2007, de 28 de diciembre. <a class="refPost">Ref. BOE-A-2007-22295</a></p>
+        </blockquote>
+      </version>
+      <version id_norma="BOE-A-2014-12327" fecha_publicacion="20141128" fecha_vigencia="20150101">
+        <p class="articulo">Artículo 57. Mínimo del contribuyente.</p>
+        <p class="parrafo">1. El mínimo del contribuyente será, con carácter general, de 5.550 euros anuales.</p>
+        <p class="parrafo">2. Cuando el contribuyente tenga una edad superior a 65 años, el mínimo se aumentará en 1.150 euros anuales. Si la edad es superior a 75 años, el mínimo se aumentará adicionalmente en 1.400 euros anuales.</p>
+        <blockquote>
+          <p class="nota_pie">Se modifica por el art. 1.33 de la Ley 26/2014, de 27 de noviembre. <a class="refPost">Ref. BOE-A-2014-12327</a>.</p>
+          <p class="nota_pie">Se modifica, con efectos desde 1 de enero de 2011, por el art. 61.1 de la Ley 39/2010, de 22 de diciembre. <a class="refPost">Ref. BOE-A-2010-19703</a>.</p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2010 por el art. 67.1 de la Ley 26/2009, de 23 de diciembre. <a class="refPost">Ref. BOE-A-2009-20765</a></p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2009 por el art. 66.1 de la Ley 2/2008, de 23 de diciembre.<ins><a class="refPost">Ref. BOE-A-2008-20744</a></ins></p>
+          <p class="nota_pie">Se modifica, con vigencia exclusiva para el ejercicio 2008 por el art. 66.1 de la Ley 51/2007, de 28 de diciembre. <a class="refPost">Ref. BOE-A-2007-22295</a></p>
+        </blockquote>
+      </version>
+    </bloque>
+  </data>
+</response>

@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sin publicar: quitar este noindex cuando se enlace la página -->
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Introduce lo que ganas al mes como autónomo (ingresos menos gastos) y descubre tu cuota de autónomos de 2026, el IRPF que te tocaría, lo que te queda y cómo quedaría un asalariado que costara lo mismo a su empresa. Con las fuentes de cada cifra.">
+    <title>Lo que paga un autónomo — Calculadora | Democracia Real</title>
+    <link rel="canonical" href="https://democraciareal.es/autonomo">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://democraciareal.es/autonomo">
+    <meta property="og:title" content="¿Cuánto paga de verdad un autónomo?">
+    <meta property="og:description" content="Mete lo que ganas: tu cuota de 2026, tu IRPF, lo que te queda y la comparación con un asalariado que cueste lo mismo. Con las fuentes de cada cifra.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/styles.css?v=20260916a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .app-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(64px + 2.5rem) 1.5rem 5rem;
+        }
+        .app-switch-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1.75rem;
+            flex-wrap: wrap;
+        }
+        .switch-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            border: 1px solid #282c34;
+            background: #121418;
+            color: #9ca3af;
+            transition: all 0.15s ease;
+        }
+        .switch-tab:hover {
+            border-color: #4b5563;
+            color: var(--text-primary);
+        }
+        .switch-tab.is-active {
+            background: rgba(16, 185, 129, 0.12);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .app-hero {
+            text-align: center;
+            max-width: 840px;
+            margin: 0 auto 1.5rem;
+        }
+        .app-title {
+            font-size: clamp(1.95rem, 3.8vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.12;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+        .app-title .accent {
+            color: var(--accent);
+        }
+        .app-lead {
+            color: var(--text-secondary);
+            font-size: 1.04rem;
+            line-height: 1.65;
+            max-width: 740px;
+            margin: 0 auto;
+        }
+        .app-lead strong {
+            color: var(--text-primary);
+        }
+
+        /* Aviso de quién lo ha hecho */
+        .ai-notice {
+            max-width: 840px;
+            margin: 0 auto 2rem;
+            background: #131519;
+            border: 1px solid #282c34;
+            border-left: 3px solid var(--accent);
+            border-radius: 10px;
+            padding: 0.9rem 1.1rem;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            line-height: 1.55;
+        }
+        .ai-notice a {
+            color: var(--accent);
+        }
+        .ai-review {
+            display: block;
+            margin-top: 0.4rem;
+            font-family: var(--font-mono);
+            font-size: 0.74rem;
+            color: #8b949e;
+        }
+
+        /* Panel único de entrada */
+        .salary-bar {
+            background: #14161a;
+            border: 1px solid #282c34;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.25rem;
+            display: grid;
+            grid-template-columns: 1.1fr 1.4fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .ctrl-label-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 0.55rem;
+        }
+        .ctrl-label-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #d1d5db;
+        }
+        .ctrl-badge {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 3px 10px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        .ctrl-help {
+            font-size: 0.78rem;
+            color: #8b949e;
+            margin-top: 0.5rem;
+            line-height: 1.45;
+        }
+        .salary-input-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .salary-input {
+            width: 100%;
+            background: #0b0c0e;
+            border: 1px solid #2e3440;
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 10px 70px 10px 16px;
+            transition: border-color 0.2s;
+        }
+        .salary-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .salary-suffix {
+            position: absolute;
+            right: 16px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+        .salary-slider {
+            width: 100%;
+            accent-color: var(--accent);
+            cursor: pointer;
+            height: 6px;
+            margin-bottom: 10px;
+        }
+        .preset-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .preset-pill {
+            background: #0b0c0e;
+            border: 1px solid #262930;
+            color: #9ca3af;
+            font-family: var(--font-mono);
+            font-size: 0.76rem;
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .preset-pill:hover {
+            border-color: #4b5563;
+            color: var(--text-primary);
+        }
+        .preset-pill.is-active {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(16, 185, 129, 0.12);
+            font-weight: 600;
+        }
+
+        /* 4 KPIs */
+        .kpi-row-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .kpi-box {
+            background: #131519;
+            border: 1px solid #242830;
+            border-radius: 12px;
+            padding: 1.25rem 1.35rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .kpi-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+        .kpi-box--blue::before { background: #38bdf8; }
+        .kpi-box--green::before { background: #10b981; }
+        .kpi-box--amber::before { background: #f59e0b; }
+        .kpi-box--red::before { background: #ef4444; }
+        .kpi-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #9ca3af;
+            margin-bottom: 0.4rem;
+        }
+        .kpi-num {
+            font-family: var(--font-mono);
+            font-size: 1.9rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.03em;
+        }
+        .kpi-box--blue .kpi-num { color: #38bdf8; }
+        .kpi-box--green .kpi-num { color: #10b981; }
+        .kpi-box--amber .kpi-num { color: #f59e0b; }
+        .kpi-box--red .kpi-num { color: #f87171; }
+        .kpi-caption {
+            font-size: 0.8rem;
+            color: #8b949e;
+            line-height: 1.4;
+        }
+
+        /* Barra de desglose */
+        .split-visualizer {
+            background: #131519;
+            border: 1px solid #242830;
+            border-radius: 12px;
+            padding: 1.35rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .split-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+        }
+        .split-top-title {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .split-top-stats {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+        }
+        .split-track {
+            display: flex;
+            height: 36px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0b0c0e;
+            border: 1px solid #262930;
+            gap: 2px;
+            padding: 2px;
+        }
+        .split-seg {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-size: 0.73rem;
+            font-weight: 700;
+            color: #090a0c;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            white-space: nowrap;
+            border-radius: 5px;
+        }
+        .split-seg--cuota { background: #fb923c; }
+        .split-seg--irpf { background: #f87171; }
+        .split-seg--neto { background: #10b981; }
+        .split-legend {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 0.9rem;
+        }
+        .split-leg-card {
+            background: #0d0f12;
+            border: 1px solid #1f232b;
+            border-radius: 8px;
+            padding: 8px 10px;
+        }
+        .split-leg-head {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.73rem;
+            color: #9ca3af;
+            margin-bottom: 3px;
+        }
+        .split-swatch {
+            width: 9px;
+            height: 9px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+        .split-leg-val {
+            font-family: var(--font-mono);
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* 2 gráficos */
+        .contrast-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .c-card {
+            background: #141414;
+            border: 1px solid #262626;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .c-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 11px 16px;
+            border-bottom: 1px solid #222222;
+            background: #181818;
+        }
+        .c-card-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+        .c-pill {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: #a3a3a3;
+            background: #242424;
+            border: 1px solid #333333;
+            padding: 2px 8px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .c-card-body {
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+        .c-card-note {
+            font-size: 0.78rem;
+            color: #8b949e;
+            line-height: 1.45;
+            margin: 0;
+        }
+        .chart-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .chart-legend {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.76rem;
+            color: #a0a0a0;
+        }
+        .chart-legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Tablas */
+        .receipt-card {
+            background: #131519;
+            border: 1px solid #242830;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 1.5rem;
+        }
+        .receipt-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #242830;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .receipt-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .receipt-sub {
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+        .receipt-table-wrap {
+            overflow-x: auto;
+        }
+        .receipt-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+        .receipt-table th {
+            background: #0e1014;
+            color: #8b949e;
+            font-size: 0.73rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 11px 16px;
+            text-align: left;
+            border-bottom: 1px solid #242830;
+        }
+        .receipt-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #1c2026;
+            color: #d1d5db;
+            vertical-align: middle;
+        }
+        .receipt-table tr:last-child td {
+            border-bottom: none;
+        }
+        .receipt-table th.num, .receipt-table td.num {
+            text-align: right;
+            font-family: var(--font-mono);
+            white-space: nowrap;
+        }
+        .receipt-table tr.is-current td {
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--text-primary);
+        }
+        .receipt-table tr.is-current td:first-child {
+            box-shadow: inset 3px 0 0 var(--accent);
+        }
+        .part-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .part-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Contexto */
+        .context-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .context-card {
+            background: #131519;
+            border: 1px solid #242830;
+            border-radius: 12px;
+            padding: 1.15rem 1.25rem;
+        }
+        .context-num {
+            font-family: var(--font-mono);
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.35rem;
+        }
+        .context-text {
+            font-size: 0.84rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+        .context-source {
+            font-size: 0.74rem;
+            color: #8b949e;
+            line-height: 1.45;
+        }
+        .context-source a {
+            color: var(--accent);
+        }
+        .section-kicker {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #8b949e;
+            margin: 2.25rem 0 0.25rem;
+            letter-spacing: 0.04em;
+        }
+
+        /* Compartir + puente a la nómina */
+        .bisturi-banner {
+            margin-top: 1.75rem;
+            background: #131519;
+            border: 1px solid #282c34;
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .btn-share-wa {
+            background: var(--accent);
+            color: #042f1e;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.15s ease;
+        }
+        .btn-share-wa:hover {
+            opacity: 0.92;
+        }
+        .next-tool-bridge {
+            margin-top: 1.5rem;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(19, 21, 25, 0.96) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: 16px;
+            padding: 1.6rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .btn-next {
+            display: inline-block;
+            background: #38bdf8;
+            color: #04202e;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: opacity 0.15s ease;
+        }
+        .btn-next:hover {
+            opacity: 0.92;
+        }
+
+        .methodology-box {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #22262e;
+            font-size: 0.8rem;
+            color: #8b949e;
+            line-height: 1.65;
+        }
+        .methodology-box p {
+            margin: 0 0 0.7rem;
+        }
+        .methodology-box a {
+            color: var(--accent);
+        }
+
+        @media (max-width: 1024px) {
+            .salary-bar { grid-template-columns: 1fr; gap: 1.25rem; }
+            .kpi-row-4 { grid-template-columns: repeat(2, 1fr); }
+            .contrast-grid-2 { grid-template-columns: 1fr; }
+            .context-grid { grid-template-columns: 1fr; }
+            .bisturi-banner, .next-tool-bridge { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .salary-bar { padding: 1.25rem; }
+            .kpi-row-4 { grid-template-columns: 1fr; }
+            .split-legend { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" role="navigation" aria-label="Navegaci&oacute;n principal">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24">
+                <span class="logo-text">Democracia Real</span>
+            </a>
+            <button class="nav-toggle" aria-label="Men&uacute;" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/#problema">El Problema</a></li>
+                <li><a href="/nomina.html">1. Tu n&oacute;mina</a></li>
+                <li><a href="/ia-empleo.html">2. IA y empleo</a></li>
+                <li><a href="/docs/radiografia.html">Radiograf&iacute;a</a></li>
+                <li><a href="/docs/">Documentaci&oacute;n</a></li>
+                <li><a href="/#masa-critica">Ap&uacute;ntate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="app-shell">
+        <div class="app-switch-tabs">
+            <a href="/nomina.html" class="switch-tab">1. Lo que cuesta tu n&oacute;mina</a>
+            <a href="/ia-empleo.html" class="switch-tab">2. Tu trabajo y la IA (escenario)</a>
+            <a href="/pensiones.html" class="switch-tab">3. Pensiones: los n&uacute;meros</a>
+            <a href="/voto" class="switch-tab">4. Lo que vale tu voto</a>
+            <a href="/autonomo" class="switch-tab is-active">5. Lo que paga un aut&oacute;nomo</a>
+        </div>
+
+        <header class="app-hero">
+            <h1 class="app-title">Lo que paga de verdad <span class="accent">un aut&oacute;nomo</span></h1>
+            <p class="app-lead">
+                Mete lo que ganas al mes, <strong>ingresos menos gastos</strong>: ver&aacute;s tu cuota de aut&oacute;nomos de 2026, el IRPF que te tocar&iacute;a, <strong>lo que te queda</strong> y c&oacute;mo quedar&iacute;a un asalariado cuyo puesto costara lo mismo a su empresa. Mismas reglas para todos, con la fuente de cada cifra.
+            </p>
+        </header>
+
+        <div class="ai-notice">
+            <strong>Lo ha hecho y comprobado una IA, no una persona.</strong> Una IA (Claude Opus) hizo el c&aacute;lculo con la tabla oficial de la Seguridad Social y la Ley del IRPF, y lo contrast&oacute; con el simulador de la Seguridad Social y con ejemplos de la Agencia Tributaria. Otra IA (Claude Sonnet) busc&oacute; cada cifra y calcul&oacute; tres casos sin ver ese c&aacute;lculo, y coincide. Si encuentras un error, <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener">abre un issue</a>: lo corregimos y lo decimos.
+            <span class="ai-review">C&aacute;lculo: IA &middot; Verificaci&oacute;n independiente: otra IA &middot; Revisi&oacute;n humana: no hecha</span>
+        </div>
+
+        <!-- ÚNICO CONTROL: RENDIMIENTO NETO MENSUAL -->
+        <section class="salary-bar" aria-label="Introduce lo que ganas al mes">
+            <div>
+                <div class="ctrl-label-row">
+                    <label class="ctrl-label-title" for="rendInput">Lo que ganas al mes</label>
+                    <span class="ctrl-badge" id="rendAnualHint">18.000 &euro;/a&ntilde;o</span>
+                </div>
+                <div class="salary-input-wrap">
+                    <input type="number" id="rendInput" class="salary-input" value="1500" min="0" max="50000" step="50" inputmode="numeric">
+                    <span class="salary-suffix">&euro;/mes</span>
+                </div>
+                <p class="ctrl-help">Lo que facturas sin IVA menos los gastos de tu actividad (material, local, gestor&iacute;a, seguros...), <strong>sin restar la cuota de aut&oacute;nomos</strong>, que la calcula la herramienta. Media del a&ntilde;o.</p>
+            </div>
+
+            <div>
+                <input type="range" id="rendSlider" class="salary-slider" min="300" max="8000" step="50" value="1500" aria-label="Deslizador de lo que ganas al mes">
+                <div class="preset-pills" id="rendPresets">
+                    <button type="button" class="preset-pill" data-val="700">700 &euro;</button>
+                    <button type="button" class="preset-pill" data-val="1000">1.000 &euro;</button>
+                    <button type="button" class="preset-pill is-active" data-val="1500">1.500 &euro;</button>
+                    <button type="button" class="preset-pill" data-val="2000">2.000 &euro;</button>
+                    <button type="button" class="preset-pill" data-val="3000">3.000 &euro;</button>
+                    <button type="button" class="preset-pill" data-val="5000">5.000 &euro;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 KPIs -->
+        <div class="kpi-row-4">
+            <div class="kpi-box kpi-box--blue" data-cifra="cuota-autonomos-2026">
+                <div class="kpi-label">Tu cuota de aut&oacute;nomos</div>
+                <div class="kpi-num" id="kpiCuota">302,65 &euro;</div>
+                <div class="kpi-caption" id="kpiCuotaDesc">Al mes. Tramo 2 de la tabla general: cotizas por 960,78 &euro;, la base m&iacute;nima de tu tramo</div>
+            </div>
+            <div class="kpi-box kpi-box--red" data-cifra="irpf-dificil-justificacion">
+                <div class="kpi-label">IRPF (estimado)</div>
+                <div class="kpi-num" id="kpiIrpf">1.599 &euro;</div>
+                <div class="kpi-caption">Al a&ntilde;o, en la declaraci&oacute;n de la renta. Las retenciones de tus facturas y los pagos trimestrales son adelantos de este importe</div>
+            </div>
+            <div class="kpi-box kpi-box--green">
+                <div class="kpi-label">Te queda</div>
+                <div class="kpi-num" id="kpiQueda">12.769 &euro;</div>
+                <div class="kpi-caption" id="kpiQuedaDesc">Al a&ntilde;o: 1.064 &euro;/mes</div>
+            </div>
+            <div class="kpi-box kpi-box--amber">
+                <div class="kpi-label">Cuota + IRPF</div>
+                <div class="kpi-num" id="kpiPct">29,1%</div>
+                <div class="kpi-caption" id="kpiPctDesc">De lo que ganas. Un asalariado cuyo puesto costara lo mismo: 41,3%</div>
+            </div>
+        </div>
+
+        <!-- BARRA APILADA -->
+        <div class="split-visualizer">
+            <div class="split-top-row">
+                <span class="split-top-title">Reparto de los <strong id="totalLabel">18.000 &euro;</strong> que ganas al a&ntilde;o</span>
+                <div class="split-top-stats">
+                    <span>Te queda: <strong id="barLabelQueda" style="color: #10b981;">12.769 &euro;</strong></span>
+                    <span>Cuota + IRPF: <strong id="barLabelEstado" style="color: #f59e0b;">5.231 &euro;</strong></span>
+                </div>
+            </div>
+            <div class="split-track">
+                <div class="split-seg split-seg--cuota" id="segCuota" style="width: 20.2%;">20%</div>
+                <div class="split-seg split-seg--irpf" id="segIrpf" style="width: 8.9%;">9%</div>
+                <div class="split-seg split-seg--neto" id="segNeto" style="width: 70.9%;">71% Te queda</div>
+            </div>
+            <div class="split-legend">
+                <div class="split-leg-card">
+                    <div class="split-leg-head"><span class="split-swatch" style="background:#fb923c;"></span>Cuota de aut&oacute;nomos</div>
+                    <div class="split-leg-val" id="legCuota">3.632 &euro;</div>
+                </div>
+                <div class="split-leg-card">
+                    <div class="split-leg-head"><span class="split-swatch" style="background:#f87171;"></span>IRPF (estimado)</div>
+                    <div class="split-leg-val" id="legIrpf">1.599 &euro;</div>
+                </div>
+                <div class="split-leg-card">
+                    <div class="split-leg-head"><span class="split-swatch" style="background:#10b981;"></span>Te queda</div>
+                    <div class="split-leg-val" id="legQueda">12.769 &euro;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 GRÁFICOS -->
+        <div class="contrast-grid-2">
+            <div class="c-card">
+                <div class="c-card-header">
+                    <span class="c-card-title">Gr&aacute;fico 1: T&uacute; y un asalariado cuyo puesto cueste lo mismo</span>
+                    <span class="c-pill">Euros al a&ntilde;o</span>
+                </div>
+                <div class="c-card-body">
+                    <svg id="compareSvg" class="chart-svg" viewBox="0 0 500 215" role="img" aria-label="Gráfico que compara lo que le queda, lo que paga a la Seguridad Social y el IRPF de un autónomo y de un asalariado que cueste lo mismo"></svg>
+                    <div class="chart-legend">
+                        <span><span class="split-swatch" style="background:#fb923c;"></span>Aut&oacute;nomo (base m&iacute;nima)</span>
+                        <span><span class="split-swatch" style="background:#6366f1;"></span>Asalariado indefinido</span>
+                    </div>
+                    <p class="c-card-note" id="compareNote">Mismo dinero de partida: lo que paga el cliente por tu trabajo, descontados los gastos, y lo que paga la empresa por el puesto, cotizaci&oacute;n incluida.</p>
+                </div>
+            </div>
+
+            <div class="c-card">
+                <div class="c-card-header">
+                    <span class="c-card-title">Gr&aacute;fico 2: Lo que se va a la Seguridad Social, seg&uacute;n lo que ganas</span>
+                    <span class="c-pill">% de lo que generas</span>
+                </div>
+                <div class="c-card-body">
+                    <svg id="ssLineSvg" class="chart-svg" viewBox="0 0 500 215" role="img" aria-label="Gráfico de la cuota mínima de autónomos y de las cotizaciones de un asalariado en porcentaje de lo que se genera, según los ingresos mensuales"></svg>
+                    <div class="chart-legend">
+                        <span><span class="split-swatch" style="background:#fb923c;"></span>Aut&oacute;nomo: cuota m&iacute;nima de su tramo</span>
+                        <span><span class="split-swatch" style="background:#6366f1;"></span>Asalariado: cotizaci&oacute;n de empresa y trabajador</span>
+                    </div>
+                    <p class="c-card-note">Con poco rendimiento, la cuota m&iacute;nima pesa mucho m&aacute;s. Con m&aacute;s, pesa menos que la cotizaci&oacute;n de un asalariado, pero porque se cotiza por una base m&aacute;s baja: la pensi&oacute;n, la baja y el cese de actividad se calculan sobre esa base.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLA: AUTÓNOMO FRENTE A ASALARIADO -->
+        <div class="receipt-card">
+            <div class="receipt-header">
+                <div>
+                    <div class="receipt-title">Aut&oacute;nomo frente a asalariado, con el mismo coste</div>
+                    <div class="receipt-sub" id="compareSub">El asalariado tiene un contrato indefinido de oficina y un sueldo bruto de 13.621 &euro; al a&ntilde;o</div>
+                </div>
+                <span class="c-pill">2026</span>
+            </div>
+            <div class="receipt-table-wrap">
+                <table class="receipt-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th class="num">Aut&oacute;nomo</th>
+                            <th class="num">Asalariado</th>
+                            <th class="num">Diferencia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="compareTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- TABLA OFICIAL DE TRAMOS -->
+        <div class="receipt-card" data-cifra="rendimiento-computable-reta">
+            <div class="receipt-header">
+                <div>
+                    <div class="receipt-title">La tabla oficial de 2026: en qu&eacute; tramo est&aacute;s</div>
+                    <div class="receipt-sub" id="tramoSub">Tu rendimiento computable es de 1.339 &euro;/mes: lo que ganas, menos la cuota y los gastos de dif&iacute;cil justificaci&oacute;n del IRPF, m&aacute;s la cuota, y menos un 7% de gastos gen&eacute;ricos</div>
+                </div>
+                <span class="c-pill">Seguridad Social</span>
+            </div>
+            <div class="receipt-table-wrap">
+                <table class="receipt-table">
+                    <thead>
+                        <tr>
+                            <th>Tramo</th>
+                            <th>Rendimiento computable al mes</th>
+                            <th class="num">Base m&iacute;nima</th>
+                            <th class="num">Cuota m&iacute;nima</th>
+                            <th class="num">Base m&aacute;xima</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tramosTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- CONTEXTO -->
+        <div class="section-kicker">Contexto &middot; datos oficiales</div>
+        <div class="context-grid">
+            <div class="context-card" data-cifra="empresas-sin-asalariados">
+                <div class="context-num">54,4%</div>
+                <div class="context-text">de las empresas activas no ten&iacute;a ning&uacute;n asalariado a 1 de enero de 2025, y el 95,1% ten&iacute;a menos de 10.</div>
+                <div class="context-source"><a href="https://www.ine.es/dyngs/Prensa/DIRCE2025.pdf" target="_blank" rel="noopener">INE, Directorio Central de Empresas</a>. Cuenta empresas, no aut&oacute;nomos.</div>
+            </div>
+            <div class="context-card" data-cifra="dias-constituir-sociedad">
+                <div class="context-num">10 a 22 d&iacute;as</div>
+                <div class="context-text">tarda constituir una sociedad limitada, seg&uacute;n la ciudad: 10 en Barcelona y Badajoz, 22 en Pamplona. Sobre todo por lo que tarda cada registro mercantil.</div>
+                <div class="context-source">Banco Mundial, <a href="https://openknowledge.worldbank.org/server/api/core/bitstreams/82722706-bd00-4eed-a209-f0717ef37b97/content" target="_blank" rel="noopener">Subnational Business Ready 2025: Espa&ntilde;a</a> (17 ciudades). Darse de alta como aut&oacute;nomo es otro tr&aacute;mite, que ese informe no mide.</div>
+            </div>
+            <div class="context-card" data-cifra="ia-por-tamano-empresa">
+                <div class="context-num">21,4%</div>
+                <div class="context-text">de las empresas de menos de 10 empleados con conexi&oacute;n a Internet us&oacute; inteligencia artificial en el primer trimestre de 2026, frente al 33,6% de las de 10 o m&aacute;s.</div>
+                <div class="context-source"><a href="https://ine.es/dyngs/Prensa/ETICCE20251T2026.pdf" target="_blank" rel="noopener">INE, uso de TIC y comercio electr&oacute;nico en las empresas</a>. Es un dato de uso, no una previsi&oacute;n sobre el empleo.</div>
+            </div>
+        </div>
+
+        <!-- COMPARTIR -->
+        <div class="bisturi-banner">
+            <div>
+                <div style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Comparte lo que paga un aut&oacute;nomo</div>
+                <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0;" id="sharePreviewText">
+                    Con 1.500 &euro;/mes de ingresos menos gastos, un aut&oacute;nomo paga 302,65 &euro;/mes de cuota y unos 1.599 &euro; de IRPF al a&ntilde;o: le quedan 12.769 &euro;.
+                </p>
+            </div>
+            <button type="button" class="btn-share-wa" id="shareResultBtn">Copiar mi resultado para WhatsApp</button>
+        </div>
+
+        <!-- PUENTE A LA NÓMINA -->
+        <div class="next-tool-bridge">
+            <div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: #38bdf8; margin-bottom: 4px;">La otra cara</div>
+                <h2 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">&iquest;Y si fueras asalariado?</h2>
+                <p style="font-size: 0.9rem; color: #cbd5e1; margin: 0; line-height: 1.55;" id="bridgeText">
+                    Un puesto que cueste lo mismo a la empresa tendr&iacute;a un sueldo bruto de <strong>13.621 &euro;</strong>. En la calculadora de la n&oacute;mina ves qu&eacute; paga la empresa, qu&eacute; te llega y ad&oacute;nde va cada euro.
+                </p>
+            </div>
+            <a href="/nomina.html" id="bridgeBtn" class="btn-next">Ver esa n&oacute;mina &rarr;</a>
+        </div>
+
+        <div class="methodology-box">
+            <p><strong>C&oacute;mo se calcula (consultado el 1 nov 2026).</strong> Para una persona en estimaci&oacute;n directa simplificada, sin hijos, sin otras rentas, que no depende de un solo cliente, que no est&aacute; en su primer a&ntilde;o y que cotiza por la base m&iacute;nima de su tramo. Las cifras son anuales y redondeadas al euro, salvo la cuota.</p>
+            <p><strong>Cuota.</strong> <a href="https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537" target="_blank" rel="noopener">Tabla de tramos y bases de 2026 de la Seguridad Social</a> y tipo del 31,50% (contingencias comunes 28,30, profesionales 1,30, cese de actividad 0,90, formaci&oacute;n profesional 0,10 y MEI 0,90). El tramo lo decide el rendimiento computable de la <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724" target="_blank" rel="noopener">Ley General de la Seguridad Social</a> (art. 308): el rendimiento neto del IRPF m&aacute;s la propia cuota, menos un 7% de gastos gen&eacute;ricos. No incluye la tarifa plana del primer a&ntilde;o: no hemos encontrado en el BOE la norma que fija su importe para 2026 y la cifra que publica la <a href="https://portal.seg-social.gob.es/wps/portal/importass/importass/Colectivos/Trabajo+Autonomo/guia" target="_blank" rel="noopener">gu&iacute;a de Importass</a> no cuadra con su propia explicaci&oacute;n, as&iacute; que no la usamos (detalle en el registro).</p>
+            <p><strong>IRPF.</strong> <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764" target="_blank" rel="noopener">Ley del IRPF</a> y su <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820" target="_blank" rel="noopener">reglamento</a>: la cuota es un gasto deducible; provisiones y gastos de dif&iacute;cil justificaci&oacute;n, el 5% del rendimiento neto con un m&aacute;ximo de 2.000 &euro; (en 2026 solo cambia en Ceuta); reducci&oacute;n de hasta 1.620 &euro; si las rentas no llegan a 12.000 &euro; (art. 32.2.3.&ordm;); m&iacute;nimo personal de 5.550 &euro; y escala estatal duplicada como aproximaci&oacute;n de la auton&oacute;mica, igual que en la <a href="/nomina.html">calculadora de la n&oacute;mina</a>. No incluye la reducci&oacute;n para quien trabaja para un solo cliente (art. 32.2.1.&ordm;), la del 20% al empezar la actividad (art. 32.3), las deducciones de cada comunidad ni el r&eacute;gimen de m&oacute;dulos. En el Pa&iacute;s Vasco y Navarra el IRPF es foral y no se calcula as&iacute; (la cuota de aut&oacute;nomos s&iacute; es la misma). El IVA no cuenta: lo cobras al cliente y lo ingresas.</p>
+            <p><strong>Comparaci&oacute;n.</strong> El asalariado tiene un contrato indefinido de oficina con el <a href="https://github.com/democracia-real/proyecto/blob/main/web/js/nomina-modelo.js" target="_blank" rel="noopener">modelo de la n&oacute;mina</a>, y su puesto cuesta a la empresa (sueldo bruto m&aacute;s cotizaci&oacute;n empresarial) lo mismo que t&uacute; ganas sin restar la cuota. No compara vacaciones pagadas, paro ni bajas, solo la base sobre la que se calculan.</p>
+            <p><strong>Contraste con casos oficiales</strong> (<a href="https://github.com/democracia-real/proyecto/blob/main/data/autonomo-2026/VERIFICACION.md" target="_blank" rel="noopener">detalle</a> y <a href="https://github.com/democracia-real/proyecto/blob/main/data/autonomo-2026/contraste.js" target="_blank" rel="noopener">script</a>). El <a href="https://portal.seg-social.gob.es/wps/portal/importass/importass/tramites/simuladorRETAPublico" target="_blank" rel="noopener">simulador de la Seguridad Social</a> da las mismas cuotas en los tres tramos probados (205,88, 360,29 y 545,59 &euro;/mes). Los dos ejemplos de la revista de la Seguridad Social caen en el mismo tramo. En el caso pr&aacute;ctico de estimaci&oacute;n directa simplificada del manual de la Renta 2025 de la Agencia Tributaria, el rendimiento neto coincide (58.100 &euro;). En su ejemplo de cuotas &iacute;ntegras, la parte estatal coincide al c&eacute;ntimo (2.140,50 &euro;); con la escala de Arag&oacute;n la cuota total ser&iacute;a 45,86 &euro; m&aacute;s baja que con la aproximaci&oacute;n.</p>
+            <p>Cada cifra est&aacute; en el <a href="https://github.com/democracia-real/proyecto/blob/main/web/data/cifras.json" target="_blank" rel="noopener">registro p&uacute;blico</a>; el modelo, en <a href="https://github.com/democracia-real/proyecto/blob/main/web/js/autonomo-modelo.js" target="_blank" rel="noopener">autonomo-modelo.js</a>.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24">
+                    <span>Democracia Real</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Inicio</a>
+                    <a href="/nomina.html">Tu n&oacute;mina</a>
+                    <a href="/docs/radiografia.html">Radiograf&iacute;a</a>
+                    <a href="/docs/">Documentaci&oacute;n</a>
+                </div>
+                <div class="footer-license">
+                    <p>Licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/nomina-modelo.js"></script>
+    <script src="/js/autonomo-modelo.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        var Modelo = window.AutonomoModelo;
+        var Nomina = window.NominaModelo.parametros;
+        // SMI de 2026 en 14 pagas (BOE), para avisar si el sueldo equivalente no llega
+        var SMI_ANUAL = 17094;
+
+        function miles(entero) {
+            return entero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        }
+        function fmtEur(n) {
+            return miles(Math.round(n)) + ' €';
+        }
+        function fmtEur2(n) {
+            var partes = (Math.round(n * 100) / 100).toFixed(2).split('.');
+            return miles(partes[0]) + ',' + partes[1] + ' €';
+        }
+        function fmtPct(x) {
+            return x.toFixed(1).replace('.', ',') + '%';
+        }
+        function fmtShortK(n) {
+            if (n === 0) return '0 €';
+            if (n < 1000) return Math.round(n) + ' €';
+            return (Math.round(n / 100) / 10).toString().replace('.', ',') + 'K €';
+        }
+        function nombreTramo(t) {
+            return 'tramo ' + t.n + ' de la tabla ' + t.tabla;
+        }
+        function motivoSinComparar(r) {
+            return r.asalariadoFuera === 'alto'
+                ? 'el sueldo de un asalariado cuyo puesto costara lo mismo pasaría de 300.000 € brutos, el límite del modelo de la nómina'
+                : 'un asalariado cuyo puesto costara lo mismo cobraría menos de 12.000 € brutos al año, por debajo del salario mínimo a jornada completa';
+        }
+
+        // Cotización de empresa y trabajador sobre lo que cuesta el puesto (modelo de la nómina)
+        function pctSsAsalariado(coste) {
+            var bruto = coste / (1 + Nomina.ssEmpresa);
+            if (bruto > Nomina.baseMaxima) bruto = coste - Nomina.baseMaxima * Nomina.ssEmpresa;
+            return Math.min(bruto, Nomina.baseMaxima) * (Nomina.ssEmpresa + Nomina.ssTrabajador) / coste * 100;
+        }
+
+        function renderCompareSvg(r) {
+            var svg = document.getElementById('compareSvg');
+            var cats = ['Te queda', 'Seguridad Social', 'IRPF'];
+            var aut = [r.queda, r.cuotaAnual, r.irpf];
+            var asal = r.asalariado ? [r.asalariado.neto, r.asalariado.seguridadSocial, r.asalariado.irpf] : null;
+            var maxVal = Math.max.apply(null, aut.concat(asal || []).concat([1])) * 1.15;
+            var left = 58, right = 485, top = 22, bottom = 178;
+            var h = bottom - top;
+            var topTick = Math.ceil(maxVal / 1000) * 1000;
+            var ticks = [0, Math.round(topTick / 2), topTick];
+            var html = '';
+            for (var t = 0; t < ticks.length; t++) {
+                var y = bottom - (ticks[t] / topTick) * h;
+                html += '<line x1="' + left + '" y1="' + y + '" x2="' + right + '" y2="' + y + '" stroke="#242424" stroke-width="1" />';
+                html += '<text x="' + (left - 8) + '" y="' + (y + 4) + '" text-anchor="end" fill="#8c8c8c" font-family="JetBrains Mono, monospace" font-size="10.5">' + fmtShortK(ticks[t]) + '</text>';
+            }
+            var slot = (right - left) / cats.length;
+            var barW = asal ? 40 : 52;
+            for (var i = 0; i < cats.length; i++) {
+                var series = asal ? [[aut[i], '#fb923c'], [asal[i], '#6366f1']] : [[aut[i], '#fb923c']];
+                var groupW = series.length * barW + (series.length - 1) * 6;
+                var x0 = left + i * slot + (slot - groupW) / 2;
+                for (var s = 0; s < series.length; s++) {
+                    var v = Math.max(0, series[s][0]);
+                    var bh = Math.max(3, (v / topTick) * h);
+                    var x = x0 + s * (barW + 6);
+                    html += '<rect x="' + x + '" y="' + (bottom - bh) + '" width="' + barW + '" height="' + bh + '" rx="4" fill="' + series[s][1] + '" />';
+                    html += '<text x="' + (x + barW / 2) + '" y="' + (bottom - bh - 7) + '" text-anchor="middle" fill="#f0f0f0" font-family="JetBrains Mono, monospace" font-weight="700" font-size="10">' + fmtShortK(series[s][0]) + '</text>';
+                }
+                html += '<text x="' + (left + i * slot + slot / 2) + '" y="' + (bottom + 20) + '" text-anchor="middle" fill="#a0a0a0" font-family="Inter, sans-serif" font-size="11">' + cats[i] + '</text>';
+            }
+            svg.innerHTML = html;
+        }
+
+        function renderSsLineSvg(actual) {
+            var svg = document.getElementById('ssLineSvg');
+            var desde = 500, hasta = 8000, paso = 50;
+            var left = 44, right = 485, top = 16, bottom = 178;
+            var aut = [], asal = [], maxPct = 0;
+            for (var x = desde; x <= hasta; x += paso) {
+                var pa = Modelo.calcular(x).pctCuota;
+                var ps = pctSsAsalariado(x * 12);
+                aut.push([x, pa]);
+                asal.push([x, ps]);
+                maxPct = Math.max(maxPct, pa, ps);
+            }
+            var yMax = Math.ceil(maxPct / 10) * 10;
+            function px(x) { return left + (x - desde) / (hasta - desde) * (right - left); }
+            function py(p) { return bottom - p / yMax * (bottom - top); }
+            var html = '';
+            for (var g = 0; g <= yMax; g += 10) {
+                html += '<line x1="' + left + '" y1="' + py(g) + '" x2="' + right + '" y2="' + py(g) + '" stroke="#242424" stroke-width="1" />';
+                html += '<text x="' + (left - 6) + '" y="' + (py(g) + 4) + '" text-anchor="end" fill="#8c8c8c" font-family="JetBrains Mono, monospace" font-size="10">' + g + '%</text>';
+            }
+            [1000, 2000, 4000, 6000, 8000].forEach(function (m) {
+                html += '<text x="' + px(m) + '" y="' + (bottom + 16) + '" text-anchor="middle" fill="#8c8c8c" font-family="JetBrains Mono, monospace" font-size="10">' + fmtShortK(m) + '</text>';
+            });
+            html += '<text x="' + right + '" y="' + (bottom + 32) + '" text-anchor="end" fill="#8c8c8c" font-family="Inter, sans-serif" font-size="10">Lo que ganas al mes</text>';
+            function linea(puntos, color) {
+                var d = puntos.map(function (p, i) { return (i ? 'L' : 'M') + px(p[0]).toFixed(1) + ' ' + py(p[1]).toFixed(1); }).join(' ');
+                return '<path d="' + d + '" fill="none" stroke="' + color + '" stroke-width="2.2" />';
+            }
+            html += linea(asal, '#6366f1') + linea(aut, '#fb923c');
+            if (actual >= desde && actual <= hasta) {
+                var r = Modelo.calcular(actual);
+                var xa = px(actual);
+                html += '<line x1="' + xa + '" y1="' + top + '" x2="' + xa + '" y2="' + bottom + '" stroke="#4b5563" stroke-dasharray="3 3" />';
+                html += '<circle cx="' + xa + '" cy="' + py(r.pctCuota) + '" r="4.5" fill="#fb923c" stroke="#0b0c0e" stroke-width="1.5" />';
+                html += '<circle cx="' + xa + '" cy="' + py(pctSsAsalariado(actual * 12)) + '" r="4.5" fill="#6366f1" stroke="#0b0c0e" stroke-width="1.5" />';
+                var anchor = xa > (left + right) / 2 ? 'end' : 'start';
+                var dx = anchor === 'end' ? -8 : 8;
+                html += '<text x="' + (xa + dx) + '" y="' + (py(r.pctCuota) - 8) + '" text-anchor="' + anchor + '" fill="#fb923c" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11">T&uacute;: ' + fmtPct(r.pctCuota) + '</text>';
+            }
+            svg.innerHTML = html;
+        }
+
+        function renderTramos(r) {
+            var t = Modelo.parametros.tramos;
+            var html = '';
+            for (var i = 0; i < t.length; i++) {
+                var anterior = i > 0 ? t[i - 1].hasta : 0;
+                var rango;
+                if (i === 0) rango = 'Hasta ' + fmtEur(t[i].hasta);
+                else if (t[i].hasta === Infinity) rango = 'Más de ' + fmtEur(anterior);
+                else if (t[i - 1].sinIncluir) rango = 'De ' + fmtEur2(anterior) + ' a ' + fmtEur(t[i].hasta);
+                else if (t[i].sinIncluir) rango = 'Más de ' + fmtEur(anterior) + ' y menos de ' + fmtEur2(t[i].hasta);
+                else rango = 'Más de ' + fmtEur(anterior) + ' y hasta ' + fmtEur(t[i].hasta);
+                var actual = t[i] === r.tramo;
+                html += '<tr' + (actual ? ' class="is-current"' : '') + '>' +
+                    '<td><div class="part-name">' + (t[i].tabla === 'reducida' ? 'Reducida ' : 'General ') + t[i].n + (actual ? ' &middot; t&uacute;' : '') + '</div></td>' +
+                    '<td>' + rango + '</td>' +
+                    '<td class="num">' + fmtEur2(t[i].baseMin) + '</td>' +
+                    '<td class="num"><strong style="color:var(--text-primary);">' + fmtEur2(Modelo.cuotaMensual(t[i])) + '</strong></td>' +
+                    '<td class="num">' + fmtEur2(t[i].baseMax) + '</td>' +
+                    '</tr>';
+            }
+            document.getElementById('tramosTableBody').innerHTML = html;
+            document.getElementById('tramoSub').textContent = 'Tu rendimiento computable es de ' + fmtEur(Math.max(0, r.computableMensual)) + '/mes: lo que ganas, menos la cuota y los gastos de difícil justificación del IRPF, más la cuota, y menos un 7% de gastos genéricos. La cuota mínima es la base mínima por el 31,50%.';
+        }
+
+        function renderCompareTable(r) {
+            var a = r.asalariado;
+            var filas = [
+                ['Lo que genera el trabajo al año', r.rendimientoAnual, a ? a.coste : null, '#38bdf8', 'Ingresos menos gastos; coste del puesto para la empresa'],
+                ['Seguridad Social', r.cuotaAnual, a ? a.seguridadSocial : null, '#fb923c', 'Cuota de autónomos; cotización de empresa y trabajador'],
+                ['IRPF (estimado)', r.irpf, a ? a.irpf : null, '#f87171', ''],
+                ['Te queda al año', r.queda, a ? a.neto : null, '#10b981', ''],
+                ['Base de cotización al mes', r.baseCotizacion, a ? a.baseMensual : null, '#a855f7', 'De ella salen la pensión, la baja y el paro o cese de actividad']
+            ];
+            var html = '';
+            for (var i = 0; i < filas.length; i++) {
+                var f = filas[i];
+                var esBase = i === filas.length - 1;
+                var fmt = esBase ? fmtEur2 : fmtEur;
+                var diff = f[2] === null ? null : f[1] - f[2];
+                var diffHtml = diff === null || i === 0 ? '' : (diff > 0 ? '+' : '') + fmt(diff);
+                html += '<tr>' +
+                    '<td><div class="part-name"><span class="part-dot" style="background:' + f[3] + ';"></span><span>' + f[0] + '</span></div>' + (f[4] ? '<div style="font-size:0.76rem;color:#8b949e;margin-top:2px;">' + f[4] + '</div>' : '') + '</td>' +
+                    '<td class="num"><strong style="color:var(--text-primary);">' + fmt(f[1]) + '</strong></td>' +
+                    '<td class="num">' + (f[2] === null ? '&mdash;' : fmt(f[2])) + '</td>' +
+                    '<td class="num">' + diffHtml + '</td>' +
+                    '</tr>';
+            }
+            document.getElementById('compareTableBody').innerHTML = html;
+            var sub = document.getElementById('compareSub');
+            if (!a) {
+                sub.textContent = 'Con este rendimiento no se compara: ' + motivoSinComparar(r) + '.';
+            } else {
+                sub.textContent = 'El asalariado tiene un contrato indefinido de oficina y un sueldo bruto de ' + fmtEur(a.bruto) + ' al año' +
+                    (a.bruto < SMI_ANUAL ? ', menos que el salario mínimo a jornada completa: sería una jornada parcial.' : '.');
+            }
+        }
+
+        var input = document.getElementById('rendInput');
+        var slider = document.getElementById('rendSlider');
+        var presets = document.querySelectorAll('.preset-pill');
+
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('rendimiento')) {
+            var desdeUrl = parseInt(params.get('rendimiento'), 10);
+            if (desdeUrl >= 0 && desdeUrl <= 50000) {
+                input.value = desdeUrl;
+                slider.value = Math.min(8000, Math.max(300, desdeUrl));
+            }
+        }
+
+        function leer() {
+            var v = parseInt(input.value, 10);
+            return isNaN(v) ? 1500 : Math.max(0, Math.min(50000, v));
+        }
+
+        function textoCompartir(r, conEnlace) {
+            var texto = 'Con ' + fmtEur(r.rendimientoMensual) + '/mes de ingresos menos gastos, un autónomo paga ' + fmtEur2(r.cuotaMensual) + '/mes de cuota y unos ' + fmtEur(r.irpf) + ' de IRPF al año: le quedan ' + fmtEur(r.queda) + '.';
+            if (r.asalariado) {
+                texto += ' Un asalariado cuyo puesto costara lo mismo se quedaría con ' + fmtEur(r.asalariado.neto) + ', pero cotizaría por una base de ' + fmtEur(r.asalariado.baseMensual) + '/mes y no de ' + fmtEur(r.baseCotizacion) + '.';
+            }
+            if (conEnlace) texto += ' Calcula el tuyo, con las fuentes de cada cifra: https://democraciareal.es/autonomo';
+            return texto;
+        }
+
+        function actualizar() {
+            var r = Modelo.calcular(leer());
+            var a = r.asalariado;
+
+            document.getElementById('rendAnualHint').textContent = fmtEur(r.rendimientoAnual) + '/año';
+            document.getElementById('kpiCuota').textContent = fmtEur2(r.cuotaMensual);
+            document.getElementById('kpiCuotaDesc').textContent = 'Al mes. ' + nombreTramo(r.tramo).replace(/^t/, 'T') + ': cotizas por ' + fmtEur2(r.baseCotizacion) + ', la base mínima de tu tramo';
+            document.getElementById('kpiIrpf').textContent = fmtEur(r.irpf);
+            document.getElementById('kpiQueda').textContent = fmtEur(r.queda);
+            document.getElementById('kpiQuedaDesc').textContent = 'Al año: ' + fmtEur(r.queda / 12) + '/mes' + (r.queda < 0 ? '. La cuota es mayor que lo que ganas' : '');
+            document.getElementById('kpiPct').textContent = r.rendimientoAnual > 0 ? fmtPct(r.pctEstado) : '—';
+            document.getElementById('kpiPctDesc').textContent = a
+                ? 'De lo que ganas. Un asalariado cuyo puesto costara lo mismo: ' + fmtPct((a.seguridadSocial + a.irpf) / a.coste * 100) + ' de lo que cuesta'
+                : 'De lo que ganas. Con este rendimiento no se compara con un asalariado';
+
+            document.getElementById('totalLabel').textContent = fmtEur(r.rendimientoAnual);
+            document.getElementById('barLabelQueda').textContent = fmtEur(r.queda);
+            document.getElementById('barLabelEstado').textContent = fmtEur(r.totalEstado);
+            var total = Math.max(r.rendimientoAnual, r.totalEstado, 1);
+            var wCuota = r.cuotaAnual / total * 100;
+            var wIrpf = r.irpf / total * 100;
+            var wNeto = Math.max(0, r.queda) / total * 100;
+            var segCuota = document.getElementById('segCuota');
+            var segIrpf = document.getElementById('segIrpf');
+            var segNeto = document.getElementById('segNeto');
+            segCuota.style.width = wCuota.toFixed(1) + '%';
+            segCuota.textContent = wCuota >= 4 ? Math.round(wCuota) + '%' : '';
+            segIrpf.style.width = wIrpf.toFixed(1) + '%';
+            segIrpf.textContent = wIrpf >= 4 ? Math.round(wIrpf) + '%' : '';
+            segNeto.style.width = wNeto.toFixed(1) + '%';
+            segNeto.textContent = wNeto >= 12 ? Math.round(wNeto) + '% Te queda' : (wNeto >= 4 ? Math.round(wNeto) + '%' : '');
+            document.getElementById('legCuota').textContent = fmtEur(r.cuotaAnual);
+            document.getElementById('legIrpf').textContent = fmtEur(r.irpf);
+            document.getElementById('legQueda').textContent = fmtEur(r.queda);
+
+            renderCompareSvg(r);
+            document.getElementById('compareNote').textContent = a
+                ? 'Mismo dinero de partida: lo que paga el cliente por tu trabajo, descontados los gastos, y lo que paga la empresa por el puesto, cotización incluida.'
+                : 'Sin asalariado comparable: ' + motivoSinComparar(r) + '.';
+            renderSsLineSvg(r.rendimientoMensual);
+            renderCompareTable(r);
+            renderTramos(r);
+
+            document.getElementById('sharePreviewText').textContent = textoCompartir(r, false);
+            var bridgeText = document.getElementById('bridgeText');
+            var bridgeBtn = document.getElementById('bridgeBtn');
+            if (a && a.bruto <= 250000) {
+                bridgeText.innerHTML = 'Un puesto que cueste lo mismo a la empresa tendría un sueldo bruto de <strong>' + fmtEur(a.bruto) + '</strong>. En la calculadora de la nómina ves qué paga la empresa, qué te llega y adónde va cada euro.';
+                bridgeBtn.href = '/nomina.html?sueldo=' + a.bruto;
+            } else {
+                bridgeText.textContent = 'En la calculadora de la nómina ves qué paga la empresa por un puesto, qué llega al trabajador y adónde va cada euro.';
+                bridgeBtn.href = '/nomina.html';
+            }
+        }
+
+        input.addEventListener('input', function () {
+            var v = leer();
+            slider.value = Math.min(8000, Math.max(300, v));
+            presets.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-val') === String(v)); });
+            actualizar();
+        });
+        slider.addEventListener('input', function () {
+            input.value = slider.value;
+            presets.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-val') === slider.value); });
+            actualizar();
+        });
+        presets.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                input.value = btn.getAttribute('data-val');
+                slider.value = btn.getAttribute('data-val');
+                presets.forEach(function (b) { b.classList.remove('is-active'); });
+                btn.classList.add('is-active');
+                actualizar();
+            });
+        });
+
+        document.getElementById('shareResultBtn').addEventListener('click', function () {
+            var texto = textoCompartir(Modelo.calcular(leer()), true);
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(texto).then(function () {
+                    var btn = document.getElementById('shareResultBtn');
+                    var antes = btn.textContent;
+                    btn.textContent = '¡Copiado al portapapeles!';
+                    setTimeout(function () { btn.textContent = antes; }, 2500);
+                });
+            }
+        });
+
+        actualizar();
+    })();
+    </script>
+</body>
+</html>

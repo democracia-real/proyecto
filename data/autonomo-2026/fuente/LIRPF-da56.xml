@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <bloque id="da-12" tipo="precepto" titulo="Disposición adicional quincuagésima sexta">
+      <version id_norma="BOE-A-2022-22128" fecha_publicacion="20221224" fecha_vigencia="20230101">
+        <p class="articulo">Disposición adicional quincuagésima sexta. Gastos de difícil justificación en estimación directa simplificada durante el período impositivo 2023.</p>
+        <p class="parrafo">1. El porcentaje de deducción para el conjunto de las provisiones deducibles y los gastos de difícil justificación a que se refiere el artículo 30 del Reglamento del Impuesto sobre la Renta de las Personas Físicas será, durante el período impositivo 2023, del 7 por ciento.</p>
+        <p class="parrafo">2. El porcentaje establecido en el apartado 1 anterior podrá ser modificado reglamentariamente.</p>
+        <blockquote>
+          <p class="nota_pie">Se añade por el art. 60.2 de la Ley 31/2022, de 23 de diciembre. <a class="refPost">Ref. BOE-A-2022-22128#a6-2</a></p>
+          <p class="nota_pie_2">Redactado conforme a la corrección de errores publicada en BOE núm. 52, de 2 de marzo de 2023. <a class="refPost">Ref. BOE-A-2023-5478</a></p>
+        </blockquote>
+      </version>
+    </bloque>
+  </data>
+</response>
