@@ -32,6 +32,7 @@
 | Abierta la cuenta de TikTok (@democraciareal26) y enlazada en la web | Es el canal con más potencial sin seguidores | Persona |
 | Calendario de una pieza al día hasta el 29N; del plan anterior se descartan las piezas con cifras falsas | `internal/calendario_29N.md` | IA |
 | Activada la analítica de Cloudflare, que la política de seguridad de la web bloqueaba: hasta el 1 nov no se contaba ninguna visita | Sin medir no se puede saber qué funciona | IA + Persona |
+| Revisión automática cada lunes a las 9:00 (tarea programada en el ordenador de la persona): cifras, métricas, ajuste de la RUTA y piezas de la semana | La IA no recuerda nada entre sesiones; sin esto, nada pasa si nadie abre una sesión | IA + Persona |
 
 ---
 
