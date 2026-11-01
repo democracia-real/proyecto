@@ -80,7 +80,7 @@
 
         <div class="rx-intro">
             <p>Esta p&aacute;gina re&uacute;ne los datos m&aacute;s relevantes sobre el sistema pol&iacute;tico, econ&oacute;mico y social espa&ntilde;ol. Cada cifra incluye su <strong>fuente verificable</strong> y, cuando es posible, una <strong>comparativa europea</strong> para poner los n&uacute;meros en contexto. No se trata de alarmar, sino de informar. Si los datos te indignan, el problema no son los datos.</p>
-            <p style="margin-top: var(--space-lg);"><strong>Revisi&oacute;n en curso (11 oct 2026).</strong> Este proyecto lo sostiene hoy una persona y sus textos se redactan con ayuda de IA. Una revisi&oacute;n encontr&oacute; cuatro cifras mal: el ~85% de legislaci&oacute;n por decreto-ley (no ten&iacute;a fuente; el dato real ronda el 50%), el &Iacute;ndice de Percepci&oacute;n de la Corrupci&oacute;n (mostr&aacute;bamos el 60 de 2022 como si fuera de 2024; hoy es 55), los "12 de 12" vocales del CGPJ (son 20, y a todos los elige el Parlamento) y el 43% de abstenci&oacute;n media (es el 28%). Ya est&aacute;n corregidas. Cada tarjeta indica si su cifra est&aacute; verificada contra la fuente o sigue pendiente. El registro completo, con fuente, fragmento y fecha, es p&uacute;blico en <a href="https://github.com/democracia-real/proyecto/blob/main/web/data/cifras.json" target="_blank" rel="noopener">GitHub</a>. Si encuentras un error, <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener">abre un issue</a>.</p>
+            <p style="margin-top: var(--space-lg);"><strong>Revisi&oacute;n en curso (11 oct 2026).</strong> Este proyecto lo sostiene hoy una persona y sus textos se redactan con ayuda de IA. Una revisi&oacute;n encontr&oacute; cuatro cifras mal: el ~85% de legislaci&oacute;n por decreto-ley (no ten&iacute;a fuente; el dato real ronda el 50%), el &Iacute;ndice de Percepci&oacute;n de la Corrupci&oacute;n (mostr&aacute;bamos el 60 de 2022 como si fuera de 2024; hoy es 55), los "12 de 12" vocales del CGPJ (son 20, y a todos los elige el Parlamento) y el 43% de abstenci&oacute;n media (es el 28%). Ya est&aacute;n corregidas. <strong>Segunda revisi&oacute;n (1 nov 2026):</strong> volvimos a comprobar cada tarjeta contra su fuente. Cambiaron, entre otras, la deuda por habitante (35.100 &euro;, no 31.000), el paro juvenil (22,8%, no 26,6%), la confianza (el 21% es en los partidos, no en las instituciones) y el precio de la electricidad para la industria, que est&aacute; por debajo de la media de la UE y no por encima. El &laquo;coste de la corrupci&oacute;n&raquo; no ten&iacute;a fuente y ahora es el sobrecoste de contrataci&oacute;n que estim&oacute; la CNMC. Quitamos la &laquo;nota del CIS a los pol&iacute;ticos&raquo;, que no existe como tal, y los &laquo;87.000 titulados al a&ntilde;o&raquo;. Cada tarjeta indica si su cifra est&aacute; verificada contra la fuente o sigue pendiente. El registro completo, con fuente, fragmento y fecha, es p&uacute;blico en <a href="https://github.com/democracia-real/proyecto/blob/main/web/data/cifras.json" target="_blank" rel="noopener">GitHub</a>. Si encuentras un error, <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener">abre un issue</a>.</p>
             <p class="rx-counter" id="rxCounter"></p>
         </div>
 
@@ -88,15 +88,15 @@
         <div class="rx-section">
             <h2 class="rx-section-title"><span class="rx-section-icon">&#9758;</span> Representaci&oacute;n pol&iacute;tica</h2>
             <div class="rx-grid">
-                <div class="rx-card">
+                <div class="rx-card" data-cifra="listas-cerradas-congreso">
                     <div class="rx-card-value">0 de 350</div>
-                    <div class="rx-card-label">Diputados elegidos directamente por los ciudadanos</div>
-                    <div class="rx-card-context">En Espa&ntilde;a votas una lista cerrada que elabora la c&uacute;pula del partido. No eliges a tu representante individual. En pa&iacute;ses como Alemania o Reino Unido, al menos la mitad de los esca&ntilde;os se eligen por distrito uninominal.</div>
+                    <div class="rx-card-label">Diputados que puedes elegir por su nombre</div>
+                    <div class="rx-card-context">Votas una lista cerrada y bloqueada: si tachas o reordenas nombres, el voto es nulo (LOREG, art. 96.2). El orden lo decide cada partido seg&uacute;n sus estatutos. En el Senado, en cambio, s&iacute; se vota a personas.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Alemania: 50% uninominal</span>
-                        <span class="rx-compare-tag">UK: 100% uninominal</span>
+                        <span class="rx-compare-tag">Congreso: lista cerrada</span>
+                        <span class="rx-compare-tag">Senado: listas abiertas</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.congreso.es/cem/regelectoral" target="_blank" rel="noopener">Ley Org&aacute;nica del R&eacute;gimen Electoral (LOREG)</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672" target="_blank" rel="noopener">Ley Org&aacute;nica del R&eacute;gimen Electoral General, art. 96.2</a>. Consultado el 1 nov 2026.</div>
                 </div>
                 <div class="rx-card" data-cifra="decretos-ley-proporcion">
                     <div class="rx-card-value">~50%</div>
@@ -128,15 +128,14 @@
                     </div>
                     <div class="rx-card-source">Fuente: <a href="https://infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior, resultados oficiales</a>, serie recogida en <a href="https://datoelectoral.es/participacion" target="_blank" rel="noopener">Dato Electoral</a>. Consultado el 11 oct 2026.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">9 leyes</div>
-                    <div class="rx-card-label">De educaci&oacute;n en 40 a&ntilde;os de democracia</div>
-                    <div class="rx-card-context">Cada gobierno deroga la ley educativa anterior y crea la suya. Ninguna ha durado lo suficiente para medir sus resultados. Mientras tanto, Finlandia lleva una reforma continua basada en consenso desde 1970.</div>
+                <div class="rx-card" data-cifra="leyes-educacion">
+                    <div class="rx-card-value">8 leyes</div>
+                    <div class="rx-card-label">Leyes org&aacute;nicas generales de educaci&oacute;n desde 1980</div>
+                    <div class="rx-card-context">LOECE (1980), LODE (1985), LOGSE (1990), LOPEG (1995), LOCE (2002), LOE (2006), LOMCE (2013) y LOMLOE (2020): una cada cinco a&ntilde;os de media. Algunas modifican la anterior en vez de sustituirla, y la LODE sigue en vigor. Si se cuenta la Ley General de Educaci&oacute;n de 1970, son nueve.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Finlandia: evoluci&oacute;n continua</span>
-                        <span class="rx-compare-tag">Estonia: consenso bipartidista</span>
+                        <span class="rx-compare-tag">Media: una cada 5 a&ntilde;os</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.educacionyfp.gob.es" target="_blank" rel="noopener">Ministerio de Educaci&oacute;n</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899" target="_blank" rel="noopener">BOE, LOE</a> y <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2020-17264" target="_blank" rel="noopener">LOMLOE</a>. Consultado el 1 nov 2026.</div>
                 </div>
             </div>
         </div>
@@ -145,41 +144,41 @@
         <div class="rx-section">
             <h2 class="rx-section-title"><span class="rx-section-icon">&#9733;</span> Dinero p&uacute;blico</h2>
             <div class="rx-grid">
-                <div class="rx-card" data-cifra="coste-corrupcion">
-                    <div class="rx-card-value">50.000 M&euro;</div>
-                    <div class="rx-card-label">Coste anual estimado de la corrupci&oacute;n</div>
-                    <div class="rx-card-context">Entre el 4% y el 5% del PIB se pierde por corrupci&oacute;n seg&uacute;n estimaciones del Tribunal de Cuentas y la Comisi&oacute;n Europea. Es m&aacute;s que el presupuesto anual de Sanidad (~48.000M&euro;). Espa&ntilde;a ocupa el puesto 49 de 182 en el &Iacute;ndice de Percepci&oacute;n de la Corrupci&oacute;n 2025.</div>
+                <div class="rx-card" data-cifra="sobrecoste-contratacion-cnmc">
+                    <div class="rx-card-value">47.500 M&euro;</div>
+                    <div class="rx-card-label">Sobrecoste m&aacute;ximo estimado al a&ntilde;o en contrataci&oacute;n p&uacute;blica sin competencia</div>
+                    <div class="rx-card-context">La CNMC estim&oacute; en 2015 que la falta de competencia pod&iacute;a encarecer la contrataci&oacute;n p&uacute;blica hasta un 4,6% del PIB. No es el coste de la corrupci&oacute;n: no existe una cifra oficial para Espa&ntilde;a. Antes mostr&aacute;bamos &laquo;50.000 M&euro; de corrupci&oacute;n&raquo;, que mezclaba estudios distintos.</div>
                     <div class="rx-card-compare">
                         <span class="rx-compare-tag">Espa&ntilde;a IPC 2025: 55/100</span>
                         <span class="rx-compare-tag">Dinamarca IPC 2025: 89/100</span>
                     </div>
-                    <div class="rx-card-source">Fuente del IPC: <a href="https://transparencia.org.es/actualidad/indice-de-percepcion-de-la-corrupcion-2025/" target="_blank" rel="noopener">Transparency International, IPC 2025</a> (10 feb 2026). Coste de la corrupci&oacute;n: estudio original pendiente de enlazar.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://cnmc.es/file/123729/download" target="_blank" rel="noopener">CNMC, PRO/CNMC/001/15</a> (2015) y <a href="https://transparencia.org.es/actualidad/indice-de-percepcion-de-la-corrupcion-2025/" target="_blank" rel="noopener">Transparency International, IPC 2025</a>. Consultado el 1 nov 2026.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">31.000 &euro;</div>
-                    <div class="rx-card-label">Deuda p&uacute;blica por cada espa&ntilde;ol</div>
-                    <div class="rx-card-context">La deuda total supera el 104% del PIB (~1,6 billones de euros). Cada ciudadano &mdash;incluidos beb&eacute;s&mdash; debe m&aacute;s de 31.000&euro; sin haber firmado nada. El coste de intereses (2,4% del PIB) consume m&aacute;s que todo el presupuesto de I+D multiplicado por tres.</div>
+                <div class="rx-card" data-cifra="deuda-por-habitante">
+                    <div class="rx-card-value">35.100 &euro;</div>
+                    <div class="rx-card-label">Deuda p&uacute;blica por habitante</div>
+                    <div class="rx-card-context">La deuda de las administraciones era de 1,75 billones de euros en agosto de 2026, el 99,7% del PIB. Repartida entre 49,8 millones de habitantes, unos 35.100 &euro; por persona. En 2024 los intereses costaron 39.644 M&euro;, el 5,5% de todo el gasto p&uacute;blico.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Media UE: 82% PIB</span>
-                        <span class="rx-compare-tag">Estonia: 19% PIB</span>
+                        <span class="rx-compare-tag">Deuda: 99,7% del PIB</span>
+                        <span class="rx-compare-tag">Intereses 2024: 39.644 M&euro;</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.bde.es" target="_blank" rel="noopener">Banco de Espa&ntilde;a</a>, <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/NotasInformativas/26/presbe2026-97.pdf" target="_blank" rel="noopener">Banco de Espa&ntilde;a</a> (21 oct 2026), <a href="https://www.ine.es/dyngs/Prensa/ECP2T26.htm" target="_blank" rel="noopener">INE</a> e <a href="https://www.igae.pap.hacienda.gob.es/sitios/igae/es-ES/Contabilidad/ContabilidadNacional/Publicaciones/Documents/AAPP_A/Funcional%202020-2024.pdf" target="_blank" rel="noopener">IGAE</a>. Consultado el 1 nov 2026.</div>
                 </div>
                 <div class="rx-card">
-                    <div class="rx-card-value">14 &euro;/m&sup2;</div>
-                    <div class="rx-card-label">Alquiler medio nacional &mdash; m&aacute;ximo hist&oacute;rico</div>
-                    <div class="rx-card-context">El precio del alquiler ha alcanzado su m&aacute;ximo hist&oacute;rico en 2025. En ciudades como Madrid o Barcelona supera los 18&euro;/m&sup2;. Una generaci&oacute;n entera no puede independizarse. El salario medio no ha crecido al mismo ritmo desde 2008.</div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/" target="_blank" rel="noopener">Idealista / INE</a></div>
+                    <div class="rx-card-value">15 &euro;/m&sup2;</div>
+                    <div class="rx-card-label">Alquiler medio en idealista (agosto de 2026)</div>
+                    <div class="rx-card-context">Seg&uacute;n idealista, 15,1 &euro;/m&sup2; en agosto de 2026, tras un m&aacute;ximo de 15,3 en julio. Fotocasa daba 14,14 en julio y bajando: depende del portal y del m&eacute;todo. Pendiente de comprobar en el informe original.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/" target="_blank" rel="noopener">idealista</a>, recogido por la prensa.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">38,3%</div>
-                    <div class="rx-card-label">Presi&oacute;n fiscal (% del PIB)</div>
-                    <div class="rx-card-context">Espa&ntilde;a recauda menos que la media europea (41,2%) pero la presi&oacute;n se percibe como asfixiante porque el gasto es ineficiente. Pagamos impuestos de pa&iacute;s n&oacute;rdico sin recibir servicios de pa&iacute;s n&oacute;rdico.</div>
+                <div class="rx-card" data-cifra="presion-fiscal">
+                    <div class="rx-card-value">38,1%</div>
+                    <div class="rx-card-label">Impuestos y cotizaciones (% del PIB, 2025)</div>
+                    <div class="rx-card-context">Espa&ntilde;a recauda menos que la media de la UE (40,7%). El m&aacute;ximo est&aacute; en Francia (46,0%) y el m&iacute;nimo en Irlanda (22,7%), cuyo PIB inflan las multinacionales.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Dinamarca: 46,5%</span>
-                        <span class="rx-compare-tag">Irlanda: 22,7%</span>
+                        <span class="rx-compare-tag">Media UE: 40,7%</span>
+                        <span class="rx-compare-tag">Francia: 46,0%</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20261029-3" target="_blank" rel="noopener">Eurostat</a> (29 oct 2026). Consultado el 1 nov 2026.</div>
                 </div>
             </div>
         </div>
@@ -188,45 +187,39 @@
         <div class="rx-section">
             <h2 class="rx-section-title"><span class="rx-section-icon">&#9888;</span> Futuro y talento</h2>
             <div class="rx-grid">
-                <div class="rx-card">
-                    <div class="rx-card-value">26,6%</div>
-                    <div class="rx-card-label">Desempleo juvenil (&lt; 25 a&ntilde;os)</div>
-                    <div class="rx-card-context">M&aacute;s de uno de cada cuatro j&oacute;venes espa&ntilde;oles no encuentra trabajo. Es casi el doble de la media europea (14,5%) y la segunda tasa m&aacute;s alta de la UE. Toda una generaci&oacute;n sin proyecto vital estable.</div>
+                <div class="rx-card" data-cifra="paro-juvenil">
+                    <div class="rx-card-value">22,8%</div>
+                    <div class="rx-card-label">Paro de los menores de 25 a&ntilde;os (septiembre de 2026)</div>
+                    <div class="rx-card-context">Uno de cada cinco j&oacute;venes que busca trabajo no lo encuentra: 1,5 veces la media de la UE (15,5%). La EPA del tercer trimestre da un 23,3%.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Media UE: 14,5%</span>
-                        <span class="rx-compare-tag">Alemania: 5,2%</span>
+                        <span class="rx-compare-tag">Media UE: 15,5%</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat LFS 2024</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-30102026-bp" target="_blank" rel="noopener">Eurostat</a> (30 oct 2026) e <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=65334" target="_blank" rel="noopener">INE, EPA</a>. Consultado el 1 nov 2026.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">87.000</div>
-                    <div class="rx-card-label">Titulados que emigran cada a&ntilde;o</div>
-                    <div class="rx-card-context">Espa&ntilde;a forma talento y lo regala. Los investigadores espa&ntilde;oles cobran un 33% menos que la media europea (~32.000&euro; vs ~48.000&euro;). El pa&iacute;s pierde cada a&ntilde;o el equivalente a varias promociones universitarias completas.</div>
-                    <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Salario investigador ES: 32k&euro;</span>
-                        <span class="rx-compare-tag">Media UE: 48k&euro;</span>
-                    </div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.ine.es" target="_blank" rel="noopener">INE / Padr&oacute;n exterior</a>, <a href="https://www.nature.com" target="_blank" rel="noopener">Nature Salary Survey</a></div>
+                <div class="rx-card" data-cifra="emigracion-titulados">
+                    <div class="rx-card-value">22.665</div>
+                    <div class="rx-card-label">Espa&ntilde;oles con t&iacute;tulo universitario que emigraron en 2021</div>
+                    <div class="rx-card-context">Mayores de 25 a&ntilde;os: 8.793 con grado, 8.297 con licenciatura, 3.832 con m&aacute;ster y 1.743 con doctorado. Es el &uacute;ltimo a&ntilde;o con este detalle. Antes mostr&aacute;bamos &laquo;87.000 al a&ntilde;o&raquo;, que no ten&iacute;a fuente.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.ine.es/jaxiT3/Tabla.htm?t=49978" target="_blank" rel="noopener">INE, Estad&iacute;stica de Migraciones</a>. Consultado el 1 nov 2026.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">1,44%</div>
-                    <div class="rx-card-label">Inversi&oacute;n en I+D (% del PIB)</div>
-                    <div class="rx-card-context">Espa&ntilde;a invierte en innovaci&oacute;n casi la mitad que la media europea (2,23%) y menos de la mitad que los l&iacute;deres (Suecia 3,73%). Solo el 8,5% de las empresas espa&ntilde;olas hacen I+D. Sin innovaci&oacute;n, competimos en servicios de bajo valor.</div>
+                <div class="rx-card" data-cifra="id-pib">
+                    <div class="rx-card-value">1,50%</div>
+                    <div class="rx-card-label">Gasto en I+D (% del PIB, 2024)</div>
+                    <div class="rx-card-context">Unos dos tercios de la media de la UE (2,26%) y menos de la mitad que Suecia (3,53%). En 2024 fueron 23.931 M&euro;.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Media UE: 2,23%</span>
-                        <span class="rx-compare-tag">Suecia: 3,73%</span>
+                        <span class="rx-compare-tag">Media UE: 2,26%</span>
+                        <span class="rx-compare-tag">Suecia: 3,53%</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.ine.es/dyngs/Prensa/IMASD2024.htm" target="_blank" rel="noopener">INE</a> y <a href="https://ec.europa.eu/eurostat/databrowser/view/tsc00001/default/table" target="_blank" rel="noopener">Eurostat</a>. Consultado el 1 nov 2026.</div>
                 </div>
                 <div class="rx-card">
                     <div class="rx-card-value">473</div>
-                    <div class="rx-card-label">Puntuaci&oacute;n PISA en matem&aacute;ticas</div>
-                    <div class="rx-card-context">Por debajo de la media de la UE (474) y a 102 puntos de Estonia (575), l&iacute;der europeo. El abandono escolar temprano (13,7%) es el m&aacute;s alto de Europa occidental. El sistema produce cantidad, pero no calidad.</div>
+                    <div class="rx-card-label">Puntuaci&oacute;n PISA en matem&aacute;ticas (2022)</div>
+                    <div class="rx-card-context">En PISA 2022, sin diferencia significativa con la media de la UE. Ya se public&oacute; PISA 2025 (septiembre de 2026): pendiente de actualizar. Abandono escolar temprano: 12,8% en 2025, frente al 9,1% de la UE.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Estonia: 575</span>
-                        <span class="rx-compare-tag">Abandono ES: 13,7% vs UE 9,6%</span>
+                        <span class="rx-compare-tag">Abandono ES: 12,8% vs UE 9,1%</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.oecd.org/pisa/" target="_blank" rel="noopener">OCDE PISA 2022</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://www.oecd.org/en/about/programmes/pisa.html" target="_blank" rel="noopener">OCDE, PISA</a> y <a href="https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_14/default/table" target="_blank" rel="noopener">Eurostat</a>.</div>
                 </div>
             </div>
         </div>
@@ -235,31 +228,25 @@
         <div class="rx-section">
             <h2 class="rx-section-title"><span class="rx-section-icon">&#10007;</span> Confianza institucional</h2>
             <div class="rx-grid">
-                <div class="rx-card">
+                <div class="rx-card" data-cifra="confianza-partidos">
                     <div class="rx-card-value">21%</div>
-                    <div class="rx-card-label">Confianza en las instituciones pol&iacute;ticas</div>
-                    <div class="rx-card-context">La m&aacute;s baja de Europa occidental. Menos de 1 de cada 4 espa&ntilde;oles conf&iacute;a en sus instituciones. En Finlandia es el 65%. Cuando los ciudadanos no conf&iacute;an en el sistema, dejan de participar o buscan soluciones populistas.</div>
+                    <div class="rx-card-label">Conf&iacute;a en los partidos pol&iacute;ticos</div>
+                    <div class="rx-card-context">La media de la OCDE es el 26%. En el Gobierno conf&iacute;a el 43% y en el Parlamento el 37%, en la media de la OCDE. No es la m&aacute;s baja de Europa, como dec&iacute;amos antes: Francia y Grecia est&aacute;n en el 15%.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Media UE: 34%</span>
-                        <span class="rx-compare-tag">Finlandia: 65%</span>
+                        <span class="rx-compare-tag">Media OCDE: 26%</span>
+                        <span class="rx-compare-tag">Gobierno: 43%</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://europa.eu/eurobarometer/" target="_blank" rel="noopener">Eurobar&oacute;metro</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://doi.org/10.1787/9eb63fec-en" target="_blank" rel="noopener">OCDE, encuesta de confianza 2026</a> (campo: sep-nov 2025). Consultado el 1 nov 2026.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">3,4 / 10</div>
-                    <div class="rx-card-label">Nota a los pol&iacute;ticos seg&uacute;n el CIS</div>
-                    <div class="rx-card-context">Suspenso hist&oacute;rico. Los ciudadanos sit&uacute;an a la clase pol&iacute;tica como uno de los principales problemas del pa&iacute;s, por delante incluso del paro en muchos bar&oacute;metros. La percepci&oacute;n es que los pol&iacute;ticos trabajan para s&iacute; mismos, no para la gente.</div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.cis.es" target="_blank" rel="noopener">CIS &mdash; Bar&oacute;metro mensual</a></div>
-                </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">33%</div>
-                    <div class="rx-card-label">Independencia judicial percibida</div>
-                    <div class="rx-card-context">Solo un tercio de los espa&ntilde;oles percibe la justicia como independiente. La media europea es del 52%. Los procesos civiles duran de media 238 d&iacute;as (vs 180 en la UE). Justicia lenta + politizada = impunidad.</div>
+                <div class="rx-card" data-cifra="independencia-judicial">
+                    <div class="rx-card-value">40%</div>
+                    <div class="rx-card-label">Ve buena o muy buena la independencia judicial (2026)</div>
+                    <div class="rx-card-context">Lo dice el 40% de la poblaci&oacute;n y el 46% de las empresas. En Finlandia, el 85%. Un pleito civil y mercantil tard&oacute; de media 423 d&iacute;as en primera instancia en 2024.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Media UE: 52%</span>
                         <span class="rx-compare-tag">Finlandia: 85%</span>
+                        <span class="rx-compare-tag">Primera instancia: 423 d&iacute;as</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/upholding-rule-law/eu-justice-scoreboard_en" target="_blank" rel="noopener">EU Justice Scoreboard</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://commission.europa.eu/document/download/82ce1391-cde5-49e9-9d1b-3f14f4975eb7_en" target="_blank" rel="noopener">Comisi&oacute;n Europea, Informe sobre el Estado de Derecho 2026</a>. Consultado el 1 nov 2026.</div>
                 </div>
                 <div class="rx-card" data-cifra="ipc-espana">
                     <div class="rx-card-value">55 / 100</div>
@@ -279,30 +266,30 @@
             <h2 class="rx-section-title"><span class="rx-section-icon">&#9670;</span> Activos desaprovechados</h2>
             <div class="rx-grid">
                 <div class="rx-card">
-                    <div class="rx-card-value">500 M+</div>
+                    <div class="rx-card-value">520 M+</div>
                     <div class="rx-card-label">Hablantes nativos de espa&ntilde;ol en el mundo</div>
-                    <div class="rx-card-context">Segundo idioma nativo m&aacute;s hablado del mundo. Un activo geoecon&oacute;mico enorme que no se traduce en una estrategia de proyecci&oacute;n internacional comparable a la del ingl&eacute;s o el mandar&iacute;n.</div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.cervantes.es" target="_blank" rel="noopener">Instituto Cervantes</a></div>
+                    <div class="rx-card-context">Seg&uacute;n el anuario 2026 del Instituto Cervantes recogido por la prensa, m&aacute;s de 520 millones: la tercera lengua materna m&aacute;s hablada, tras el chino y el hindi. Pendiente de comprobar en el anuario original.</div>
+                    <div class="rx-card-source">Fuente: <a href="https://cvc.cervantes.es/lengua/anuario/" target="_blank" rel="noopener">Instituto Cervantes</a>, recogido por la prensa.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">95%</div>
-                    <div class="rx-card-label">Hogares con cobertura de fibra &oacute;ptica</div>
-                    <div class="rx-card-context">Espa&ntilde;a es l&iacute;der europeo en infraestructura de fibra (media UE: 56%). Tambi&eacute;n tiene la mayor red de alta velocidad ferroviaria de la UE (4.108 km). Infraestructura excelente, pero baja productividad sobre ella.</div>
+                <div class="rx-card" data-cifra="fibra-cobertura">
+                    <div class="rx-card-value">96%</div>
+                    <div class="rx-card-label">Poblaci&oacute;n con cobertura de fibra hasta el hogar (2025)</div>
+                    <div class="rx-card-context">Muy por encima de la media de la UE (74%). Espa&ntilde;a tiene tambi&eacute;n la mayor red ferroviaria de alta velocidad de la UE: 3.192 km de l&iacute;neas de 250 km/h o m&aacute;s en 2024.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Media UE: 56%</span>
-                        <span class="rx-compare-tag">AVE: 4.108 km (1&ordm; UE)</span>
+                        <span class="rx-compare-tag">Media UE: 74%</span>
+                        <span class="rx-compare-tag">Alta velocidad: 3.192 km (1.&ordm; UE)</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://digital-strategy.ec.europa.eu/en/policies/desi" target="_blank" rel="noopener">DESI 2024</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/newsroom/dae/redirection/document/128662" target="_blank" rel="noopener">Comisi&oacute;n Europea, D&eacute;cada Digital 2026</a> y <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Characteristics_of_the_railway_network_in_Europe" target="_blank" rel="noopener">Eurostat</a>. Consultado el 1 nov 2026.</div>
                 </div>
-                <div class="rx-card">
-                    <div class="rx-card-value">50,3%</div>
-                    <div class="rx-card-label">Electricidad generada con renovables</div>
-                    <div class="rx-card-context">M&aacute;s de la mitad de la electricidad espa&ntilde;ola viene de fuentes renovables (media UE: 44,7%). Sin embargo, el precio industrial de la electricidad (128 &euro;/MWh) sigue por encima de la media europea (118) por carga regulatoria y fiscal.</div>
+                <div class="rx-card" data-cifra="renovables-electricidad">
+                    <div class="rx-card-value">60,7%</div>
+                    <div class="rx-card-label">Electricidad consumida de origen renovable (2025, provisional)</div>
+                    <div class="rx-card-context">Por encima de la media de la UE (49,9%). Y la industria paga la electricidad m&aacute;s barata que la media europea: 117,7 &euro;/MWh frente a 155,9 en el primer semestre de 2026. Antes dec&iacute;amos lo contrario.</div>
                     <div class="rx-card-compare">
-                        <span class="rx-compare-tag">Media UE: 44,7%</span>
-                        <span class="rx-compare-tag">Precio industria: 128 vs 118 &euro;/MWh</span>
+                        <span class="rx-compare-tag">Media UE: 49,9%</span>
+                        <span class="rx-compare-tag">Industria: 117,7 vs 155,9 &euro;/MWh</span>
                     </div>
-                    <div class="rx-card-source">Fuente: <a href="https://www.ree.es" target="_blank" rel="noopener">REE</a>, <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a></div>
+                    <div class="rx-card-source">Fuente: <a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table" target="_blank" rel="noopener">Eurostat, renovables</a> y <a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table" target="_blank" rel="noopener">precios para empresas</a>. Consultado el 1 nov 2026.</div>
                 </div>
             </div>
         </div>

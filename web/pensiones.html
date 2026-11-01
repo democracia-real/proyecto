@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pensiones con datos oficiales: cuánto aportas con tu sueldo, quién vota por edades, cómo se reparte el patrimonio y cuántos afiliados hay por pensión. INE, Banco de España, Seguridad Social y Comisión Europea.">
+    <title>Pensiones: los números antes del 29N — Calculadora | Democracia Real</title>
+    <link rel="canonical" href="https://democraciareal.es/pensiones">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://democraciareal.es/pensiones">
+    <meta property="og:title" content="Pensiones: los números antes del 29N">
+    <meta property="og:description" content="Cuánto aportas tú, quién vota por edades y quién tiene el patrimonio. Con la fuente de cada cifra.">
+    <meta property="og:image" content="https://democraciareal.es/imagenes/og/pensiones.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/styles.css?v=20260916a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .app-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(64px + 2.5rem) 1.5rem 5rem;
+        }
+        .app-switch-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1.75rem;
+            flex-wrap: wrap;
+        }
+        .switch-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            border: 1px solid #282c34;
+            background: #121418;
+            color: #9ca3af;
+            transition: all 0.15s ease;
+        }
+        .switch-tab:hover {
+            border-color: #4b5563;
+            color: var(--text-primary);
+        }
+        .switch-tab.is-active {
+            background: rgba(245, 158, 11, 0.14);
+            border-color: #f59e0b;
+            color: #fbbf24;
+        }
+
+        .app-hero {
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto 2rem;
+        }
+        .app-title {
+            font-size: clamp(1.95rem, 3.8vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.12;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+        .app-title .amber {
+            color: #fbbf24;
+        }
+        .app-lead {
+            color: var(--text-secondary);
+            font-size: 1.04rem;
+            line-height: 1.65;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .app-lead strong {
+            color: var(--text-primary);
+        }
+
+        /* Barra de mando (Edad + Sueldo bruto) */
+        .command-bar {
+            background: #14161a;
+            border: 1px solid #282c34;
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2rem;
+        }
+        .command-grid-2 {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 1.75rem;
+            align-items: start;
+        }
+        .ctrl-label-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 0.55rem;
+            min-height: 24px;
+        }
+        .ctrl-label-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #d1d5db;
+        }
+        .ctrl-badge {
+            font-family: var(--font-mono);
+            font-size: 0.73rem;
+            font-weight: 600;
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 2px 9px;
+            border-radius: 6px;
+        }
+        .slider-box {
+            background: #0b0c0e;
+            border: 1px solid #2e3440;
+            border-radius: 10px;
+            padding: 11px 14px;
+        }
+        .age-range {
+            width: 100%;
+            accent-color: #f59e0b;
+            cursor: pointer;
+            height: 6px;
+        }
+        .preset-pills {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .preset-pill {
+            background: #0b0c0e;
+            border: 1px solid #262930;
+            color: #9ca3af;
+            font-family: var(--font-mono);
+            font-size: 0.74rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .preset-pill:hover {
+            border-color: #4b5563;
+            color: var(--text-primary);
+        }
+        .preset-pill.is-active {
+            border-color: #f59e0b;
+            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.12);
+            font-weight: 600;
+        }
+        .salary-input {
+            width: 100%;
+            background: #0b0c0e;
+            border: 1px solid #2e3440;
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 1.35rem;
+            font-weight: 700;
+            padding: 10px 14px;
+        }
+        .salary-input:focus {
+            outline: none;
+            border-color: #f59e0b;
+        }
+
+        /* 3 Tarjetas de Impacto */
+        .canvas-cards-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .c-card {
+            background: #141414;
+            border: 1px solid #262626;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .c-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 10px 14px;
+            border-bottom: 1px solid #222222;
+            background: #181818;
+        }
+        .c-card-title {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+        .c-pill {
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: #a3a3a3;
+            background: #242424;
+            border: 1px solid #333333;
+            padding: 2px 8px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .c-card-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+        .c-stat-big {
+            font-family: var(--font-mono);
+            font-size: 1.65rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+        .c-stat-big--amber { color: #fbbf24; }
+        .c-stat-big--danger { color: #ef4444; }
+        .c-stat-big--blue { color: #38bdf8; }
+        .c-stat-label {
+            font-size: 0.82rem;
+            color: #d4d4d4;
+            line-height: 1.4;
+        }
+        .c-stat-note {
+            font-size: 0.78rem;
+            color: #8c8c8c;
+            line-height: 1.5;
+            margin-top: auto;
+            padding-top: 6px;
+        }
+        .c-stat-note strong {
+            color: #e5e5e5;
+        }
+
+        /* 2 Gráficos SVG */
+        .canvas-charts-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .chart-svg-wrap {
+            width: 100%;
+            padding: 6px 4px 2px;
+        }
+        .chart-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            overflow: visible;
+        }
+        .chart-legend-row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #202020;
+            font-size: 0.78rem;
+            color: #a3a3a3;
+        }
+        .chart-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chart-legend-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Tabla generacional */
+        .receipt-card {
+            background: #131519;
+            border: 1px solid #242830;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 1.5rem;
+        }
+        .receipt-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #242830;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .receipt-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .receipt-sub {
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+        .receipt-table-wrap {
+            overflow-x: auto;
+        }
+        .receipt-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+        .receipt-table th {
+            background: #0e1014;
+            color: #8b949e;
+            font-size: 0.73rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 11px 16px;
+            text-align: left;
+            border-bottom: 1px solid #242830;
+        }
+        .receipt-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #1c2026;
+            color: #d1d5db;
+            vertical-align: middle;
+        }
+        .receipt-table tr:last-child td {
+            border-bottom: none;
+        }
+        .receipt-table th.num, .receipt-table td.num {
+            text-align: right;
+            font-family: var(--font-mono);
+            white-space: nowrap;
+        }
+
+        /* Banner compartir */
+        .bisturi-banner {
+            margin-top: 1.75rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(19, 21, 25, 0.96) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .bisturi-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.45rem;
+        }
+        .bisturi-text {
+            font-size: 0.94rem;
+            color: #cbd5e1;
+            line-height: 1.65;
+        }
+        .bisturi-text strong {
+            color: #fbbf24;
+        }
+        .btn-share-wa {
+            background: var(--accent);
+            color: #042f1e;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.15s ease;
+        }
+        .btn-share-wa:hover {
+            opacity: 0.92;
+        }
+
+        .methodology-box {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #22262e;
+            font-size: 0.8rem;
+            color: #8b949e;
+            line-height: 1.65;
+        }
+        .methodology-box a {
+            color: var(--accent);
+        }
+
+        @media (max-width: 1024px) {
+            .command-grid-2 { grid-template-columns: 1fr; gap: 1.25rem; }
+            .canvas-cards-3 { grid-template-columns: 1fr; }
+            .canvas-charts-2 { grid-template-columns: 1fr; }
+            .bisturi-banner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" role="navigation" aria-label="Navegaci&oacute;n principal">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24">
+                <span class="logo-text">Democracia Real</span>
+            </a>
+            <button class="nav-toggle" aria-label="Men&uacute;" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/#problema">El Problema</a></li>
+                <li><a href="/nomina.html">1. Tu n&oacute;mina</a></li>
+                <li><a href="/ia-empleo.html">2. IA y empleo</a></li>
+                <li><a href="/pensiones.html" class="active">3. Pensiones</a></li>
+                <li><a href="/docs/radiografia.html">Radiograf&iacute;a</a></li>
+                <li><a href="/docs/">Documentaci&oacute;n</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="app-shell">
+        <div class="app-switch-tabs">
+            <a href="/nomina.html" id="tabNominaLink" class="switch-tab">1. Lo que cuesta tu n&oacute;mina</a>
+            <a href="/ia-empleo.html" id="tabIaLink" class="switch-tab">2. Tu trabajo y la IA (escenario)</a>
+            <a href="/pensiones.html" class="switch-tab is-active">3. Pensiones: los n&uacute;meros</a>
+        </div>
+
+        <header class="app-hero">
+            <h1 class="app-title">Pensiones: <span class="amber">los n&uacute;meros</span> antes del 29N</h1>
+            <p class="app-lead">
+                Las pensiones son la mayor partida del gasto p&uacute;blico. Introduce tu edad y tu sueldo y mira <strong>cu&aacute;nto aportas, qui&eacute;n vota por edades y c&oacute;mo se reparte el patrimonio</strong>, con datos del INE, el Banco de Espa&ntilde;a, la Seguridad Social y la Comisi&oacute;n Europea.
+            </p>
+        </header>
+
+        <!-- BARRA DE MANDO (EDAD + SUELDO) -->
+        <section class="command-bar" aria-label="Configuraci&oacute;n de edad y sueldo">
+            <div class="command-grid-2">
+                <div>
+                    <div class="ctrl-label-row">
+                        <label class="ctrl-label-title" for="ageSlider">1. Tu edad actual</label>
+                        <span class="ctrl-badge" id="ageBadge">29 a&ntilde;os &middot; Jubilaci&oacute;n ordinaria en 2064 (a los 67)</span>
+                    </div>
+                    <div class="slider-box">
+                        <input type="range" id="ageSlider" class="age-range" min="20" max="66" step="1" value="29">
+                    </div>
+                    <div class="preset-pills" id="agePresets">
+                        <button type="button" class="preset-pill" data-age="24">24 a&ntilde;os</button>
+                        <button type="button" class="preset-pill is-active" data-age="29">29 a&ntilde;os</button>
+                        <button type="button" class="preset-pill" data-age="38">38 a&ntilde;os</button>
+                        <button type="button" class="preset-pill" data-age="52">52 a&ntilde;os</button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ctrl-label-row">
+                        <label class="ctrl-label-title" for="salaryInput">2. Tu sueldo bruto anual (&euro;)</label>
+                        <span class="ctrl-badge" id="pensionContributionBadge">Aportas 4.207 &euro;/a&ntilde;o a pensiones</span>
+                    </div>
+                    <input type="number" id="salaryInput" class="salary-input" value="28000" min="12000" max="250000" step="1000">
+                    <div style="font-size: 0.78rem; color: #8b949e; margin-top: 8px;">
+                        Si lo que pagas en cotizaciones e IRPF se reparte como el gasto p&uacute;blico, <strong>27,7 de cada 100 &euro;</strong> van a vejez y supervivencia. El sistema es de reparto: lo que se cotiza hoy paga las pensiones de hoy y genera tu derecho a una pensi&oacute;n futura.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAS 3 TARJETAS -->
+        <div class="canvas-cards-3">
+            <div class="c-card">
+                <div class="c-card-header">
+                    <span class="c-card-title">1. Qui&eacute;n vota, por edades</span>
+                    <span class="c-pill">INE, censo del 29N</span>
+                </div>
+                <div class="c-card-body">
+                    <div class="c-stat-big c-stat-big--amber">28% vs. 21%</div>
+                    <div class="c-stat-label">de los electores residentes en Espa&ntilde;a tiene 65 a&ntilde;os o m&aacute;s; el 21%, entre 18 y 34</div>
+                    <div class="c-stat-note">
+                        Hay 1,4 electores de 65 o m&aacute;s a&ntilde;os por cada uno de 18 a 34. El grupo m&aacute;s grande, la mitad del censo, est&aacute; entre los 35 y los 64.
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-card">
+                <div class="c-card-header">
+                    <span class="c-card-title">2. Qui&eacute;n tiene el patrimonio</span>
+                    <span class="c-pill">Banco de Espa&ntilde;a, EFF 2024</span>
+                </div>
+                <div class="c-card-body">
+                    <div class="c-stat-big c-stat-big--danger">41% vs. 2%</div>
+                    <div class="c-stat-label">de la riqueza neta est&aacute; en hogares cuya persona de referencia tiene 65 a&ntilde;os o m&aacute;s; el 2%, en los de menos de 35</div>
+                    <div class="c-stat-note">
+                        El 57% est&aacute; en hogares de 35 a 64 a&ntilde;os. C&aacute;lculo propio con los cuadros 1.A y 1.B de la Encuesta Financiera de las Familias.
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-card">
+                <div class="c-card-header">
+                    <span class="c-card-title">3. Lo que aportas hasta los 67</span>
+                    <span class="c-pill">Sistema de reparto</span>
+                </div>
+                <div class="c-card-body">
+                    <div class="c-stat-big c-stat-big--blue" id="card3Big">159.866 &euro;</div>
+                    <div class="c-stat-label" id="card3Label">Parte de tus cotizaciones e IRPF que ir&iacute;a a pensiones en los 38 a&ntilde;os que te faltan hasta 2064, con tu sueldo actual y en euros de hoy</div>
+                    <div class="c-stat-note">
+                        Las cotizaciones no cubren todo el gasto en pensiones contributivas: en 2025 el hueco fue de <strong>56.946 M&euro;</strong> (3,4% del PIB), seg&uacute;n el Instituto Santaluc&iacute;a. Lo cubre el Estado con impuestos y deuda.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOS 2 GRÁFICOS -->
+        <div class="canvas-charts-2">
+            <div class="c-card">
+                <div class="c-card-header">
+                    <span class="c-card-title">Gr&aacute;fico 1: Peso en el censo y patrimonio, por edad</span>
+                    <span class="c-pill">INE + Banco de Espa&ntilde;a</span>
+                </div>
+                <div class="c-card-body">
+                    <div class="chart-svg-wrap">
+                        <svg id="wealthVoteSvg" class="chart-svg" viewBox="0 0 500 225" role="img" aria-label="Gráfico que compara el peso en el censo electoral y la riqueza neta de los menores de 35, de 35 a 64 y de 65 o más años"></svg>
+                    </div>
+                    <div class="chart-legend-row">
+                        <div class="chart-legend-item">
+                            <span class="chart-legend-dot" style="background:#38bdf8;"></span>
+                            <span>% de los electores residentes en Espa&ntilde;a (INE, censo de las generales de 2026)</span>
+                        </div>
+                        <div class="chart-legend-item">
+                            <span class="chart-legend-dot" style="background:#f59e0b;"></span>
+                            <span>% de la riqueza neta de los hogares, seg&uacute;n la edad de la persona de referencia (EFF 2024). No es la misma unidad: personas en un caso, hogares en el otro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c-card">
+                <div class="c-card-header">
+                    <span class="c-card-title">Gr&aacute;fico 2: Afiliados por pensi&oacute;n, 1980-2050</span>
+                    <span class="c-pill">Dato y proyecci&oacute;n</span>
+                </div>
+                <div class="c-card-body">
+                    <div class="chart-svg-wrap">
+                        <svg id="pyramidLineSvg" class="chart-svg" viewBox="0 0 500 225" role="img" aria-label="Gráfico de afiliados por pensión desde 1980 y proyección hasta 2050"></svg>
+                    </div>
+                    <div class="chart-legend-row">
+                        <div class="chart-legend-item">
+                            <span class="chart-legend-dot" style="background:#ef4444;"></span>
+                            <span>Afiliados por cada pensi&oacute;n: <strong>2,7 en 1980</strong>, 2,1 en 1995 y <strong>2,1 hoy</strong> (Banco de Espa&ntilde;a; Seguridad Social)</span>
+                        </div>
+                        <div class="chart-legend-item">
+                            <span class="chart-legend-dot" style="background:#a855f7;"></span>
+                            <span>Afiliados por cada pensionista (una persona puede cobrar dos pensiones): 2,3 hoy y <strong>1,5 en 2050</strong>, seg&uacute;n la proyecci&oacute;n de la Comisi&oacute;n Europea</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLA: TUS NÚMEROS -->
+        <div class="receipt-card">
+            <div class="receipt-header">
+                <div>
+                    <div class="receipt-title">Tus n&uacute;meros (con tu sueldo actual y en euros de hoy)</div>
+                    <div class="receipt-sub">Supone que lo que pagas se reparte como el gasto de todas las administraciones en 2024 (Eurostat)</div>
+                </div>
+                <span class="c-pill">C&aacute;lculo sobre tu sueldo</span>
+            </div>
+            <div class="receipt-table-wrap">
+                <table class="receipt-table">
+                    <thead>
+                        <tr>
+                            <th>Partida</th>
+                            <th class="num">Al a&ntilde;o</th>
+                            <th class="num">Hasta tus 67 a&ntilde;os</th>
+                            <th>Contexto</th>
+                        </tr>
+                    </thead>
+                    <tbody id="paradoxTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- BANNER FINAL DE COMPARTIR -->
+        <div class="bisturi-banner">
+            <div>
+                <div class="bisturi-title">No es nietos contra abuelos: es aritm&eacute;tica</div>
+                <p class="bisturi-text" id="shareBannerText">
+                    Quien cotiz&oacute; tiene derecho a su pensi&oacute;n. La pregunta es c&oacute;mo se paga cuando, seg&uacute;n la Comisi&oacute;n Europea, habr&aacute; 1,5 afiliados por pensionista en 2050. Busca qu&eacute; propone cada partido para pagarlo.
+                </p>
+            </div>
+            <button type="button" class="btn-share-wa" id="shareResultBtn">Copiar datos para WhatsApp</button>
+        </div>
+
+        <div class="methodology-box">
+            <strong>Fuentes (consultadas el 1 nov 2026):</strong>
+            Electores por edad: <a href="https://www.ine.es/oficina_censo/elecgen2026/Elecgral_2026_cc_tab9.xlsx" target="_blank" rel="noopener">INE, censo de las elecciones generales de 2026, tabla 9</a> (35.958.711 electores residentes; los 2.769.645 del extranjero no vienen por edad).
+            Riqueza por edad: <a href="https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/26/Fich/do2610.pdf" target="_blank" rel="noopener">Banco de Espa&ntilde;a, Encuesta Financiera de las Familias 2024</a> (porcentaje de hogares por riqueza media de cada tramo, sobre la media total).
+            Afiliados por pensi&oacute;n: <a href="https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/17/Fich/do1701.pdf" target="_blank" rel="noopener">Banco de Espa&ntilde;a (1980-1995)</a>, <a href="https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/021026-balance-afiliados-septiembre.aspx" target="_blank" rel="noopener">22.437.553 afiliados en septiembre de 2026</a> y <a href="https://revista.seg-social.es/-/la-pension-media-del-sistema-de-la-seguridad-social-alcanza-los-1.376-1-euros-en-octubre-un-4-6-mas-alta-que-hace-un-ano" target="_blank" rel="noopener">10.565.782 pensiones a unos 9,6 millones de personas en octubre de 2026</a>, con una pensi&oacute;n media de 1.376,14 &euro;. Proyecci&oacute;n: <a href="https://economy-finance.ec.europa.eu/system/files/2024-04/ip279_en.pdf" target="_blank" rel="noopener">Comisi&oacute;n Europea, Ageing Report 2024</a>.
+            Hueco contributivo: <a href="https://institutosantalucia.es/wp-content/uploads/2026/06/260618_NP-INSTITUTO-SANTALUCIA-El-sistema-publico-de-pensiones-necesito-56.946-millones-de-euros-del-Estado-para-cubrir-su-componente-contributivo-en-2025.pdf" target="_blank" rel="noopener">Instituto Santaluc&iacute;a, junio de 2026</a> (gasto contributivo menos cotizaciones, Seguridad Social y clases pasivas). Deuda: <a href="https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/NotasInformativas/26/presbe2026-97.pdf" target="_blank" rel="noopener">Banco de Espa&ntilde;a, agosto de 2026</a>. Lo que aportas: el modelo de la <a href="/nomina">calculadora de n&oacute;mina</a>.
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24">
+                    <span>Democracia Real</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Inicio</a>
+                    <a href="/nomina.html">1. Tu n&oacute;mina</a>
+                    <a href="/ia-empleo.html">2. IA y empleo</a>
+                    <a href="/docs/radiografia.html">Radiograf&iacute;a</a>
+                </div>
+                <div class="footer-license">
+                    <p>Licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/nomina-modelo.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        // Pensión media del sistema, octubre de 2026: 1.376,14 € x 14 pagas
+        var AVG_PENSION_YEAR = 19266;
+        // Deuda de las AAPP en agosto de 2026 entre la población a 1 de julio de 2026
+        var DEBT_PER_PERSON = 35100;
+
+        function fmtEur(n) {
+            return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' €';
+        }
+
+        var calcPayroll = window.NominaModelo.calcular;
+
+        function renderWealthVoteSvg(userAge) {
+            var svg = document.getElementById('wealthVoteSvg');
+            var chartLeft = 48;
+            var chartRight = 480;
+            var chartTop = 24;
+            var chartBottom = 182;
+            var chartH = chartBottom - chartTop;
+            var chartW = chartRight - chartLeft;
+
+            // Electores: INE, censo 2026 (tabla 9). Riqueza: EFF 2024, cálculo propio
+            var groups = [
+                { label: 'Menos de 35', votePct: 20.8, wealthPct: 2.0, highlight: userAge < 35 },
+                { label: 'De 35 a 64', votePct: 50.9, wealthPct: 56.9, highlight: userAge >= 35 && userAge < 65 },
+                { label: '65 o más', votePct: 28.3, wealthPct: 41.1, highlight: userAge >= 65 }
+            ];
+
+            var html = '';
+            var yTicks = [0, 30, 60];
+            for (var t = 0; t < yTicks.length; t++) {
+                var val = yTicks[t];
+                var y = chartBottom - (val / 60) * chartH;
+                html += '<line x1="' + chartLeft + '" y1="' + y + '" x2="' + chartRight + '" y2="' + y + '" stroke="#242424" stroke-width="1" />';
+                html += '<text x="' + (chartLeft - 8) + '" y="' + (y + 4) + '" text-anchor="end" fill="#8c8c8c" font-family="JetBrains Mono, monospace" font-size="11">' + val + '%</text>';
+            }
+
+            var slotW = chartW / groups.length;
+            var barW = 34;
+
+            for (var i = 0; i < groups.length; i++) {
+                var g = groups[i];
+                var centerX = chartLeft + i * slotW + slotW / 2;
+
+                if (g.highlight) {
+                    html += '<rect x="' + (centerX - 56) + '" y="' + (chartTop - 8) + '" width="112" height="' + (chartH + 34) + '" rx="6" fill="rgba(245, 158, 11, 0.07)" stroke="rgba(245, 158, 11, 0.3)" />';
+                }
+
+                var hVote = (g.votePct / 60) * chartH;
+                var xVote = centerX - barW - 4;
+                var yVote = chartBottom - hVote;
+                html += '<rect x="' + xVote + '" y="' + yVote + '" width="' + barW + '" height="' + hVote + '" rx="3" fill="#38bdf8" />';
+                html += '<text x="' + (xVote + barW / 2) + '" y="' + (yVote - 6) + '" text-anchor="middle" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11">' + g.votePct.toString().replace('.', ',') + '%</text>';
+
+                var hWealth = Math.max(4, (g.wealthPct / 60) * chartH);
+                var xWealth = centerX + 4;
+                var yWealth = chartBottom - hWealth;
+                html += '<rect x="' + xWealth + '" y="' + yWealth + '" width="' + barW + '" height="' + hWealth + '" rx="3" fill="#f59e0b" />';
+                html += '<text x="' + (xWealth + barW / 2) + '" y="' + (yWealth - 6) + '" text-anchor="middle" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11">' + g.wealthPct.toString().replace('.', ',') + '%</text>';
+
+                html += '<text x="' + centerX + '" y="' + (chartBottom + 20) + '" text-anchor="middle" fill="' + (g.highlight ? '#fbbf24' : '#a0a0a0') + '" font-family="Inter, sans-serif" font-weight="' + (g.highlight ? '700' : '500') + '" font-size="11">' + g.label + (g.highlight ? ' (tú)' : '') + '</text>';
+            }
+
+            svg.innerHTML = html;
+        }
+
+        function renderPyramidLineSvg() {
+            var svg = document.getElementById('pyramidLineSvg');
+            var chartLeft = 48;
+            var chartRight = 470;
+            var chartTop = 24;
+            var chartBottom = 182;
+            var chartH = chartBottom - chartTop;
+            var chartW = chartRight - chartLeft;
+            var maxRatio = 3.0;
+
+            // Dato: afiliados por pensión (Banco de España; Seguridad Social)
+            var perPension = [
+                { year: 1980, ratio: 2.7 },
+                { year: 1995, ratio: 2.1 },
+                { year: 2026, ratio: 2.1 }
+            ];
+            // Afiliados por pensionista: dato de hoy y proyección de la Comisión Europea
+            var perPensioner = [
+                { year: 2026, ratio: 2.3 },
+                { year: 2040, ratio: 1.8 },
+                { year: 2050, ratio: 1.5 }
+            ];
+
+            function px(year) { return chartLeft + ((year - 1980) / (2050 - 1980)) * chartW; }
+            function py(ratio) { return chartBottom - (ratio / maxRatio) * chartH; }
+
+            var html = '';
+            var yTicks = [0, 1.5, 3.0];
+            for (var t = 0; t < yTicks.length; t++) {
+                var y = py(yTicks[t]);
+                html += '<line x1="' + chartLeft + '" y1="' + y + '" x2="' + chartRight + '" y2="' + y + '" stroke="#242424" stroke-width="1" />';
+                html += '<text x="' + (chartLeft - 8) + '" y="' + (y + 4) + '" text-anchor="end" fill="#8c8c8c" font-family="JetBrains Mono, monospace" font-size="11">' + yTicks[t].toFixed(1).replace('.', ',') + '</text>';
+            }
+
+            function drawSeries(points, color, dashed, labelBelow) {
+                var poly = points.map(function (p) { return px(p.year).toFixed(1) + ',' + py(p.ratio).toFixed(1); }).join(' ');
+                html += '<polyline fill="none" stroke="' + color + '" stroke-width="2.6"' + (dashed ? ' stroke-dasharray="6 4"' : '') + ' points="' + poly + '" />';
+                points.forEach(function (p) {
+                    var x = px(p.year);
+                    var y = py(p.ratio);
+                    html += '<circle cx="' + x + '" cy="' + y + '" r="4" fill="' + color + '" />';
+                    html += '<text x="' + x + '" y="' + (labelBelow ? y + 17 : y - 9) + '" text-anchor="middle" fill="' + color + '" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11">' + p.ratio.toFixed(1).replace('.', ',') + '</text>';
+                });
+            }
+
+            drawSeries(perPension, '#ef4444', false, true);
+            drawSeries(perPensioner, '#a855f7', true, false);
+
+            [1980, 1995, 2026, 2040, 2050].forEach(function (year) {
+                html += '<text x="' + px(year) + '" y="' + (chartBottom + 20) + '" text-anchor="middle" fill="#a0a0a0" font-family="Inter, sans-serif" font-size="10.5">' + (year === 2026 ? '2026 (hoy)' : year) + '</text>';
+            });
+
+            svg.innerHTML = html;
+        }
+
+        var ageSlider = document.getElementById('ageSlider');
+        var salaryInput = document.getElementById('salaryInput');
+        var agePresets = document.querySelectorAll('.preset-pill');
+
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('sueldo')) {
+            var fromUrl = parseInt(params.get('sueldo'), 10);
+            if (fromUrl >= 12000 && fromUrl <= 250000) {
+                salaryInput.value = fromUrl;
+            }
+        }
+
+        function figures() {
+            var age = parseInt(ageSlider.value, 10) || 29;
+            var gross = parseInt(salaryInput.value, 10) || 28000;
+            var p = calcPayroll(gross);
+            var yearsLeft = Math.max(1, 67 - age);
+            return {
+                age: age,
+                p: p,
+                yearsLeft: yearsLeft,
+                retireYear: 2026 + yearsLeft,
+                toPensions: p.toPensions,
+                toInterest: p.toDebtInterest,
+                lifetimePensions: p.toPensions * yearsLeft,
+                pensionShareOfAvg: Math.round((p.toPensions / AVG_PENSION_YEAR) * 100)
+            };
+        }
+
+        function updateView() {
+            var f = figures();
+
+            document.getElementById('ageBadge').textContent = f.age + ' años · Jubilación ordinaria en ' + f.retireYear + ' (en ' + f.yearsLeft + ' años)';
+            document.getElementById('pensionContributionBadge').textContent = 'Aportas ' + fmtEur(f.toPensions) + '/año a pensiones';
+
+            document.getElementById('tabNominaLink').href = '/nomina.html?sueldo=' + f.p.grossAnnual;
+            document.getElementById('tabIaLink').href = '/ia-empleo.html?sueldo=' + f.p.grossAnnual;
+
+            document.getElementById('card3Big').textContent = fmtEur(f.lifetimePensions);
+            document.getElementById('card3Label').textContent = 'Parte de tus cotizaciones e IRPF que iría a pensiones en los ' + f.yearsLeft + ' años que te faltan hasta ' + f.retireYear + ', con tu sueldo actual y en euros de hoy';
+
+            renderWealthVoteSvg(f.age);
+            renderPyramidLineSvg();
+
+            document.getElementById('paradoxTableBody').innerHTML =
+                '<tr>' +
+                '<td><strong>A pensiones (27,7% de lo que pagas)</strong></td>' +
+                '<td class="num" style="color:#fbbf24;">' + fmtEur(f.toPensions) + '</td>' +
+                '<td class="num" style="color:#fbbf24;"><strong>' + fmtEur(f.lifetimePensions) + '</strong></td>' +
+                '<td>Lo que aportas al año equivale al ' + f.pensionShareOfAvg + '% de una pensión media (1.376 €/mes en 14 pagas).</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td><strong>A intereses de la deuda (5,5%)</strong></td>' +
+                '<td class="num" style="color:#f87171;">' + fmtEur(f.toInterest) + '</td>' +
+                '<td class="num" style="color:#f87171;"><strong>' + fmtEur(f.toInterest * f.yearsLeft) + '</strong></td>' +
+                '<td>La deuda pública era de 1,75 billones de euros en agosto de 2026 (99,7% del PIB): unos ' + fmtEur(DEBT_PER_PERSON) + ' por habitante.</td>' +
+                '</tr>';
+        }
+
+        ageSlider.addEventListener('input', function () {
+            agePresets.forEach(function (b) {
+                b.classList.toggle('is-active', b.getAttribute('data-age') === ageSlider.value);
+            });
+            updateView();
+        });
+
+        agePresets.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                ageSlider.value = btn.getAttribute('data-age');
+                agePresets.forEach(function (b) { b.classList.remove('is-active'); });
+                btn.classList.add('is-active');
+                updateView();
+            });
+        });
+
+        salaryInput.addEventListener('input', updateView);
+
+        document.getElementById('shareResultBtn').addEventListener('click', function () {
+            var f = figures();
+            var text = 'Tengo ' + f.age + ' años: de lo que pago, unos ' + fmtEur(f.toPensions) + '/año van a pensiones (' + fmtEur(f.lifetimePensions) + ' hasta los 67). Hoy hay 2,1 afiliados por pensión y la Comisión Europea proyecta 1,5 por pensionista en 2050. Los hogares de 65 o más años tienen el 41% de la riqueza; los de menos de 35, el 2%. Datos y fuentes: https://democraciareal.es/pensiones';
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(function () {
+                    var btn = document.getElementById('shareResultBtn');
+                    var old = btn.textContent;
+                    btn.textContent = '¡Copiado al portapapeles!';
+                    setTimeout(function () { btn.textContent = old; }, 2500);
+                });
+            }
+        });
+
+        updateView();
+    })();
+    </script>
+</body>
+</html>

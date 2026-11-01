@@ -86,6 +86,14 @@
       "rewrite": "/nomina.html"
     },
     {
+      "route": "/ia-empleo",
+      "rewrite": "/ia-empleo.html"
+    },
+    {
+      "route": "/pensiones",
+      "rewrite": "/pensiones.html"
+    },
+    {
       "route": "/docs/nomina.html",
       "redirect": "/nomina",
       "statusCode": 301

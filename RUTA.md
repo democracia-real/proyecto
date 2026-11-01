@@ -1,6 +1,18 @@
 # Ruta
 
-*Actualizada: 11 octubre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
+*Actualizada: 1 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
+
+---
+
+## Revisión del 1 de noviembre: dónde estamos
+
+- **Ninguno de los cuatro productos del 11 de octubre está publicado.** En su lugar se hicieron tres calculadoras (nómina, IA y empleo, pensiones), que no estaban en la ruta.
+- **El problema real es que no nos ve nadie:** 2 seguidores en X tras seis meses y 125 publicaciones. Hay contenido de sobra (8 módulos, 62 canciones, vídeo, chat); falta distribución.
+- **La intuición de las calculadoras es buena.** Una herramienta en la que metes tu sueldo o tu provincia y te da tu resultado es lo que más se comparte. Pero una calculadora que se comparte también se comprueba: si una cifra falla, la desmonta un verificador y perdemos lo único que nos distingue.
+- **La regla «hasta que haya un producto publicado, no se escribe a nadie» se convirtió en una trampa:** sin producto y sin contactos, tres semanas en silencio. Cambia: se escribe en cuanto una calculadora tenga todas sus cifras en el registro.
+- La portada mostraba cifras sin verificar, incluido el «50.000 M€ de corrupción» que el propio registro decía no usar. Corregido hoy, y el check ahora falla si vuelve a pasar.
+
+**Decisión:** con 28 días hasta el 29N, las calculadoras pasan a ser **el formato** de los productos, no un proyecto aparte. El producto estrella es *Lo que vale tu voto* hecho calculadora.
 
 ---
 
@@ -8,28 +20,63 @@
 
 Democracia Real es un **estándar abierto y un observatorio**: mide a todos los partidos con la misma vara, empezando por nosotros, y enseña cómo verifica cada dato.
 
-Hasta enero hay un solo objetivo: **demostrar con cuatro productos y un sistema de verificación que el método funciona.** En enero se decide con datos si seguir, y en qué forma (asociación, partido, solo observatorio).
+Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herramientas que pueda usar y comprobar.** En enero se decide con datos si seguir, y en qué forma (asociación, partido, solo observatorio).
 
 ## Tres reglas
 
-1. **Sin cifra verificada, no se publica.** Una cifra es verificada si está en [`web/data/cifras.json`](web/data/cifras.json).
+1. **Sin cifra verificada, no se publica.** Una cifra es verificada si está en [`web/data/cifras.json`](web/data/cifras.json). Una previsión o un supuesto se puede publicar, pero etiquetado como tal y con su fuente.
 2. **Nada sale sin que una persona lo apruebe.**
 3. **Máximo tres tareas abiertas a la vez.** Si entra una nueva, sale otra.
 
 ---
 
-## Los cuatro productos
+## Los productos, revisados el 1 de noviembre
 
-| # | Producto | Fecha | Depende de |
-|---|----------|-------|------------|
-| 1 | **Lo que vale tu voto** | 13 oct (puede deslizarse a 16; nunca sin verificar) | Cifras en el registro |
-| 2 | **Decretómetro** | 15 oct | Recuento propio sobre el BOE |
-| 3 | **Las reglas del juego, partido a partido** (matriz) | 10 nov | Estatutos de todos los partidos |
-| 4 | **Promesómetro reducido** (20-30 compromisos por partido) | desde que salgan los programas, 3-12 nov | Programas electorales |
+| # | Producto | Fecha | Estado |
+|---|----------|-------|--------|
+| 1 | **Calculadora de la nómina** | Ya | Cifras verificadas el 1 nov. Falta tu firma en el registro y publicar |
+| 2 | **Lo que vale tu voto** (calculadora por provincia) | 8 nov, antes de la campaña | Por construir. Es aritmética sobre datos oficiales de 2023 |
+| 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 20 nov | Por empezar. Necesita la consulta legal y 7 días de réplica |
+| 4 | **Calculadora de pensiones** | Tras tu revisión | Reescrita el 1 nov sin el enfoque generacional; cifras en el registro |
+| 5 | **Simulador de IA y empleo** | Tras tu revisión | Rehecho como escenario, no como predicción |
+| — | Decretómetro | Diciembre | Aplazado. Como mucho, una pieza sobre la convalidación de los decretos de vivienda |
+| — | Promesómetro | 30 nov, solo electos | Aplazado. Sin tiempo para revisar 20-30 fichas por partido en campaña |
 
 ---
 
 ## La ruta, por fases
+
+### Fase A · 1-8 nov — Publicar lo que ya hay y construir el producto estrella
+
+- [ ] **Firmar** las cifras nuevas del registro (`revision_humana`) y hacer `git push`
+- [ ] Publicar la calculadora de la nómina y moverla (ver [Distribución](#distribución-dónde-está-la-gente))
+- [ ] **Lo que vale tu voto** como calculadora: elige tu provincia, cuánto vale tu voto frente a otras y cuántos votos no eligieron a nadie en 2023
+- [ ] **Responsable en la política de privacidad** (tu nombre o el de una asociación): la lista de email ya está abierta
+- [ ] Consulta legal (derecho al honor e informar en campaña), antes de enviar la matriz a los partidos
+- [ ] Descargar estatutos y códigos éticos de los partidos con grupo propio
+
+### Fase B · 9-20 nov — Matriz reducida y campaña
+
+- [ ] Extraer y revisar las 6 cláusulas por partido. Sin cita literal, «no consta»
+- [ ] Enviar a cada partido su fila con 7 días para responder (antes del 13 nov)
+- [ ] **20 nov: publicar la matriz**
+- [ ] Desde el 13 nov, una pieza al día: un resultado de la calculadora de una provincia, una celda de la matriz
+
+### Fase C · 21-29 nov — Cierre de campaña
+
+- 24-28 nov: ni encuestas propias ni ajenas · **28 nov: silencio total**
+- 29 nov: con los resultados, actualizar *Lo que vale tu voto* con 2026 (sustituye a «El otro Congreso»)
+
+### Fase D · 30 nov-enero — Después
+
+- 30 nov: compromisos de quienes obtengan escaño (Promesómetro reducido)
+- Diciembre: Decretómetro, fichas de medida, piloto de contrapropuesta con un tema (vivienda)
+- **Enero: decidir** con datos qué es Democracia Real, y si el nombre se mantiene (se confunde con Democracia Real Ya)
+
+---
+
+<details>
+<summary>Ruta anterior (11 oct), conservada como registro</summary>
 
 ### Fase 0 · 11-18 oct — Cimientos
 
@@ -72,17 +119,19 @@ Hasta enero hay un solo objetivo: **demostrar con cuatro productos y un sistema 
 - 23 dic: empieza el seguimiento de los electos
 - **Enero: decidir** con datos (métricas, lista de espera, colaboradores) qué es Democracia Real a partir de ahí
 
+</details>
+
 ---
 
 ## Qué no hacemos
 
 **Nunca** (líneas rojas del [plan 29N](plan_maestro_29N.md)): cuentas falsas, respuestas automáticas, deepfakes, pedir el voto, publicar sondeos del 24 al 28, nombrar a víctimas o particulares, publicar algo sin aprobar.
 
-**Aplazado** (solo si los cuatro productos están publicados y verificados):
+**Aplazado** (solo si los productos 1-3 están publicados y verificados):
 
 | Aplazado | Cuándo se reconsidera |
 |----------|-----------------------|
-| El otro Congreso (primero en la cola, reutiliza Lo que vale tu voto) | Si sobra tiempo antes del 20 nov |
+| El otro Congreso (lo absorbe la actualización de Lo que vale tu voto el 29N) | 29 nov |
 | Disciplina de voto, «Tu lista», verificación de debates | Diciembre |
 | Presentador IA, 52 notas de prensa, programas en el chat | Diciembre o nunca |
 | Zona de consecuencias y espacio colaborativo | Diciembre y enero |
@@ -99,16 +148,32 @@ Hasta enero hay un solo objetivo: **demostrar con cuatro productos y un sistema 
 | Replies con encaje a cuentas con alcance, con el estilo de [`internal/estilo_mensajes_redes.md`](internal/estilo_mensajes_redes.md) | El ángulo «el primer partido con el programa en GitHub»: ya no somos partido |
 | Contactar creadores y periodistas **cuando exista un producto publicado** | Los textos de lanzamiento con cifras sin verificar (83,7%, Soria 6x, 8 leyes, 87.000...) |
 | Un post en Reddit, reescrito | La afirmación «publica las nóminas de sus cargos» (hoy no hay cargos ni nóminas) |
+| | Esperar a tener «el» producto para escribir a nadie (1 nov): basta una calculadora con todas sus cifras en el registro |
 
 **Ángulo nuevo** para prensa y creadores: *«Un proyecto ciudadano compara las reglas internas de todos los partidos, cláusula a cláusula y empezando por las suyas, y publica cómo verifica cada dato.»*
 
-Hasta que haya un producto publicado, **no se escribe a nadie**: la primera impresión no se repite.
+### Distribución: dónde está la gente
+
+Con 2 seguidores, lo que publicamos en nuestras cuentas no lo ve nadie. El alcance hay que pedirlo prestado: sitios donde alguien sin seguidores puede llegar a miles de personas si lo que trae sirve. Una herramienta que la gente usa con sus propios datos es justo eso.
+
+| Canal | Qué llevar | Cómo |
+|-------|------------|------|
+| **TikTok, Shorts, Reels** | Grabación de pantalla de una calculadora con un caso concreto: «Cobro 28.000 €. Esto es lo que cuesto a mi empresa» | El algoritmo reparte por interés, no por seguidores. Es el canal con más potencial partiendo de cero |
+| **Menéame** | Una herramienta por envío, con titular descriptivo y sin adjetivos | Participar también en envíos ajenos: quien solo sube lo suyo acaba marcado como spam |
+| **Reddit** (r/spain, r/SpainEconomics) | Post de texto que explique el método y pida que busquen errores | Leer antes las normas de autopromoción de cada subreddit |
+| **X** | Tu resultado como respuesta a hilos sobre sueldos, impuestos o pensiones, no solo a políticos | El enlace en la respuesta o en la biografía. Los tuits con enlace externo suelen llegar a menos gente |
+| **Prensa local** | *Lo que vale tu voto*: el dato de su provincia | 5-10 correos escritos a mano |
+| **WhatsApp** | El botón «Copiar» de cada calculadora | Ya existe |
+
+**Pagar X Premium:** como prueba, un mes del plan más barato que dé impulso a las respuestas, del 13 al 27 nov. Comparar impresiones de las respuestas, visitas al perfil y clics a la web con las dos semanas anteriores; si no mejora, se cancela. No es la palanca principal: el impulso ayuda a que te lean en una conversación, no a que alguien quiera quedarse.
+
+**Cómo saber si sirve:** cada domingo, visitas por página en Cloudflare, usos de cada calculadora y altas en la lista. Se repite lo que trae gente y se deja lo demás.
 
 ### Contenido corto: Shorts, TikTok, Reels
 
 Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el proyecto, y **empieza ya**, porque el alcance se construye en semanas y la campaña dura siete. Pero es una **tarea de fondo**, no un proyecto: se hace por lotes, sin competir con los cuatro productos.
 
-**Material:** 62 canciones con vídeo ya exportado en `youtube_exports/`.
+**Material:** las calculadoras (grabación de pantalla con un caso concreto, lo primero que hay que probar) y 62 canciones con vídeo ya exportado en `youtube_exports/`.
 
 **Regla que condiciona todo:** 52 de las 62 letras contienen cifras (algunas ya corregidas esta semana, como «65 veces» o «puesto 46»). Un clip difunde esa cifra, así que:
 
@@ -138,13 +203,13 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 
 | Tarea | Cuándo |
 |-------|--------|
-| `git push` y reindexar el chat | Hoy |
-| Firmar las 5 cifras del registro | Antes del 13 oct |
-| Nombre o asociación como responsable de datos | Antes de seguir captando emails |
-| Revisar todas las celdas de la matriz | 1 nov |
-| Abrir TikTok y confirmar que puedes publicar las canciones | Esta semana |
-| Consulta con un abogado | Antes del 6 nov |
-| Decidir qué es Democracia Real | Enero |
+| Firmar las cifras nuevas del registro (`revision_humana`) y hacer `git push` | 2-3 nov |
+| Revisar y aprobar las calculadoras de pensiones e IA antes de enlazarlas | 2-3 nov |
+| Nombre o asociación como responsable de datos | Ya: la lista de email está abierta |
+| Consulta con un abogado | Antes de enviar la matriz (8 nov) |
+| Abrir TikTok y grabar el primer vídeo de la calculadora | Esta semana |
+| Revisar todas las celdas de la matriz | 12 nov |
+| Decidir qué es Democracia Real y si se mantiene el nombre | Enero |
 
 ---
 

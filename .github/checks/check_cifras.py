@@ -6,6 +6,9 @@ Errores (salida 1):
   - una cifra "verificado" sin URL o sin fragmento
   - el texto declarado en texto_en no aparece en el fichero (alguien cambió la
     cifra en la web sin pasar por el registro)
+  - una página usa data-cifra="id" y ese id no está en el registro
+  - en la portada, una tarjeta de datos sin data-cifra o con una cifra que no
+    está verificada (la portada solo admite cifras verificadas)
 
 Avisos (no rompen):
   - fecha de revisión vencida (con --strict pasa a error)
@@ -19,6 +22,7 @@ Uso:
 
 import argparse
 import json
+import re
 import sys
 import urllib.request
 from datetime import date
@@ -27,6 +31,10 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 REGISTRO = REPO / "web" / "data" / "cifras.json"
 CAMPOS = ["id", "afirmacion", "valor", "fuente", "consultado", "estado", "revisar_en", "texto_en"]
+# Páginas en las que cada tarjeta de datos debe apuntar a una cifra verificada
+SOLO_VERIFICADAS = ["web/index.html"]
+RE_CIFRA = re.compile(r'data-cifra="([^"]+)"')
+RE_TARJETA = re.compile(r'<div class="data-card"([^>]*)>')
 
 
 def comprobar_url(url):
@@ -83,6 +91,21 @@ def main():
             estado = comprobar_url(c["url"])
             if estado != 200:
                 avisos.append(f"{cid}: la URL responde {estado}")
+
+    # Las páginas solo pueden citar cifras que existen en el registro
+    por_id = {c.get("id"): c for c in datos["cifras"]}
+    for fichero in sorted((REPO / "web").rglob("*.html")):
+        ruta = fichero.relative_to(REPO).as_posix()
+        html = fichero.read_text(encoding="utf-8")
+        for cid in RE_CIFRA.findall(html):
+            if cid not in por_id:
+                errores.append(f"{ruta}: data-cifra=\"{cid}\" no está en el registro")
+            elif ruta in SOLO_VERIFICADAS and por_id[cid].get("estado") != "verificado":
+                errores.append(f"{ruta}: la cifra {cid} no está verificada y esta página solo admite verificadas")
+        if ruta in SOLO_VERIFICADAS:
+            for atributos in RE_TARJETA.findall(html):
+                if "data-cifra=" not in atributos:
+                    errores.append(f"{ruta}: hay una tarjeta de datos sin data-cifra")
 
     verificadas = sum(1 for c in datos["cifras"] if c.get("estado") == "verificado")
     print(f"Registro: {len(datos['cifras'])} cifras, {verificadas} verificadas")

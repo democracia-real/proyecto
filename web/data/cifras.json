@@ -4,6 +4,26 @@
   "estados": ["verificado", "pendiente", "discutido", "obsoleto"],
   "cifras": [
     {
+      "id": "listas-cerradas-congreso",
+      "afirmacion": "En las elecciones al Congreso se vota una lista cerrada y bloqueada: no se puede elegir a ningún diputado por su nombre, y tachar o reordenar nombres anula el voto",
+      "valor": "0 de 350",
+      "periodo": "LOREG vigente",
+      "fuente": "Ley Orgánica 5/1985 del Régimen Electoral General, artículo 96.2 (texto consolidado, BOE)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+      "fragmento": "Serán también nulos en todos los procesos electorales los votos emitidos en papeletas en las que se hubieren modificado, [...] o alterado su orden de colocación",
+      "calculo": "Los 350 diputados se eligen por listas; el votante no puede marcar, tachar ni reordenar candidatos, así que no elige a ninguno por su nombre",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "El texto de la tarjeta («votas la lista del jefe del partido») es una interpretación: las listas las aprueba cada partido según sus estatutos. En el Senado sí se vota a personas.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-11-01",
+      "texto_en": {
+        "web/index.html": "data-count=\"0\" data-suffix=\" de 350\"",
+        "web/docs/radiografia.html": "0 de 350"
+      }
+    },
+    {
       "id": "decretos-ley-proporcion",
       "afirmacion": "Alrededor de la mitad de las normas con rango de ley aprobadas entre 2019 y 2026 fueron reales decretos-ley",
       "valor": "~50%",
@@ -105,7 +125,8 @@
         "web/docs/radiografia.html": "55 / 100",
         "web/docs/03-propuestas/index.html": "55/100 (2025)",
         "01_diagnostico_del_sistema/README.md": "**55/100**",
-        "01_diagnostico_del_sistema/indicadores_potencia_nacional.md": "| 55 | 62 | 89 (Dinamarca)"
+        "01_diagnostico_del_sistema/indicadores_potencia_nacional.md": "| 55 | 62 | 89 (Dinamarca)",
+        "web/index.html": "data-count=\"55\""
       }
     },
     {
@@ -116,13 +137,429 @@
       "url": null,
       "fragmento": null,
       "consultado": "2026-10-11",
-      "estado": "pendiente",
-      "nota": "No se encuentra el estudio citado. Posible confusión con la estimación de la CNMC (2015) del sobrecoste de la contratación pública sin competencia. No usar en redes hasta resolverlo.",
+      "estado": "obsoleto",
+      "nota": "Retirada el 1 nov 2026. La cifra mezclaba estudios distintos: el sobrecoste de contratación de la CNMC (2015) y los 120.000 M€ que la Comisión Europea (2014) estimó para toda la UE. No hay cifra oficial para España. Sustituida en la Radiografía por sobrecoste-contratacion-cnmc.",
       "verificado_por": [],
       "revision_humana": null,
-      "revisar_en": "2026-10-25",
+      "revisar_en": "2027-11-01",
+      "texto_en": {}
+    },
+    {
+      "id": "deuda-por-habitante",
+      "afirmacion": "La deuda de las Administraciones Públicas era de 1,75 billones de euros en agosto de 2026 (99,7% del PIB), unos 35.100 € por habitante",
+      "valor": "35.100 €",
+      "periodo": "Agosto de 2026 (avance mensual del Protocolo de Déficit Excesivo)",
+      "fuente": "Banco de España, nota sobre la deuda de las AAPP (21 oct 2026), e INE, Estadística Continua de Población (6 ago 2026)",
+      "url": "https://www.bde.es/f/webbe/GAP/Secciones/SalaPrensa/NotasInformativas/26/presbe2026-97.pdf",
+      "fragmento": "el saldo de deuda ascendió a 1.750 miles de millones (mm) de euros en agosto de 2026",
+      "calculo": "1.750.000 M€ / 49.801.559 habitantes = 35.140 €",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Dato mensual de avance, revisable. Población: «se situó en 49.801.559 habitantes a 1 de julio de 2026» (https://www.ine.es/dyngs/Prensa/ECP2T26.htm). Se dice «por habitante», no «por español». Sustituye a «31.000 € por español».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-31",
       "texto_en": {
-        "web/docs/radiografia.html": "50.000 M&euro;"
+        "web/index.html": "data-count=\"35100\"",
+        "web/docs/radiografia.html": "35.100 &euro;",
+        "web/pensiones.html": "var DEBT_PER_PERSON = 35100;"
+      }
+    },
+    {
+      "id": "intereses-deuda",
+      "afirmacion": "En 2024 las Administraciones Públicas pagaron 39.644 M€ en intereses de la deuda, el 5,5% de todo el gasto público",
+      "valor": "39.644 M€",
+      "periodo": "2024 (provisional)",
+      "fuente": "IGAE, clasificación funcional del gasto de las AAPP 2020-2024, y Eurostat (gov_10a_exp)",
+      "url": "https://www.igae.pap.hacienda.gob.es/sitios/igae/es-ES/Contabilidad/ContabilidadNacional/Publicaciones/Documents/AAPP_A/Funcional%202020-2024.pdf",
+      "fragmento": "01.7 Operaciones de deuda pública … 39.644",
+      "calculo": "39.644 / 725.001 M€ de gasto total = 5,5%",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-04-30",
+      "texto_en": {
+        "web/index.html": "data-count=\"39644\"",
+        "web/docs/radiografia.html": "39.644 M&euro;",
+        "web/js/nomina-modelo.js": "gastoIntereses: 0.055",
+        "web/nomina.html": "sharePct: 5.5"
+      }
+    },
+    {
+      "id": "gasto-pensiones",
+      "afirmacion": "La función de vejez y supervivencia (sobre todo pensiones) supuso el 27,7% del gasto de las Administraciones Públicas en 2024",
+      "valor": "27,7%",
+      "periodo": "2024",
+      "fuente": "Eurostat, gasto de las AAPP por funciones (gov_10a_exp, COFOG)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?geo=ES&sector=S13&na_item=TE&unit=PC_TOT",
+      "fragmento": "GF1002 Old age 22.8; GF1003 Survivors 4.9",
+      "calculo": "22,8 + 4,9 = 27,7% del gasto total",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Las calculadoras reparten lo que pagas como el gasto total: es una convención, no el destino real de cada euro. La IGAE da 206.130 M€ en pensiones en 2024 (28,4% del gasto) porque incluye las de incapacidad. El resto de filas de la tabla de la nómina salen de la misma consulta.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-04-30",
+      "texto_en": {
+        "web/index.html": "data-count=\"27.7\"",
+        "web/js/nomina-modelo.js": "gastoPensiones: 0.277",
+        "web/nomina.html": "sharePct: 27.7",
+        "web/pensiones.html": "27,7 de cada 100"
+      }
+    },
+    {
+      "id": "paro-juvenil",
+      "afirmacion": "El paro de los menores de 25 años era del 22,8% en España en septiembre de 2026, frente al 15,5% de la UE (unas 1,5 veces)",
+      "valor": "22,8%",
+      "periodo": "Septiembre de 2026, desestacionalizado",
+      "fuente": "Eurostat, euroindicador de desempleo (30 oct 2026)",
+      "url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-30102026-bp",
+      "fragmento": "In September 2026, the youth unemployment rate was 15.5% in the EU, up from 15.4% in the previous month",
+      "calculo": "22,8 / 15,5 = 1,47",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "La EPA del tercer trimestre de 2026 da 23,3% (INE, tabla 65334). Se comparan datos de una sola fuente. Sustituye a «26,6%, el doble que en Europa».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/index.html": "data-count=\"22.8\"",
+        "web/docs/radiografia.html": "22,8%"
+      }
+    },
+    {
+      "id": "afiliados-por-pension",
+      "afirmacion": "Hay 2,1 afiliados a la Seguridad Social por cada pensión, frente a 2,7 en 1980; por pensionista son 2,3, y la Comisión Europea proyecta 1,5 en 2050",
+      "valor": "2,1",
+      "periodo": "1980, 1995 y septiembre-octubre de 2026; proyección a 2050",
+      "fuente": "Banco de España (Documento Ocasional 1701), Seguridad Social y Comisión Europea (Ageing Report 2024)",
+      "url": "https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/17/Fich/do1701.pdf",
+      "fragmento": "disminuyó desde 2,7 hasta 2,1",
+      "calculo": "22.437.553 afiliados (sep 2026) / 10.565.782 pensiones (oct 2026) = 2,12; / 9,6 millones de pensionistas = 2,34",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Afiliados: «son 22.437.553 afiliados en la serie original» (La Moncloa, 2 oct 2026). Pensiones: «ha abonado 10.565.782 pensiones a cerca de 9,6 millones de personas» (Seguridad Social, 27 oct 2026). Proyección: Ageing Report 2024, tabla II.1.84, cotizantes por pensionista (1,81 en 2040 y 1,46 en 2050). Son dos medidas distintas y se dibujan por separado. Sustituye a «4,5 en 1980 y 1,3 en 2050».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-01-31",
+      "texto_en": {
+        "web/index.html": "data-count=\"2.1\"",
+        "web/pensiones.html": "{ year: 1980, ratio: 2.7 }"
+      }
+    },
+    {
+      "id": "leyes-educacion",
+      "afirmacion": "Desde 1980 se han aprobado 8 leyes orgánicas generales de educación: LOECE, LODE, LOGSE, LOPEG, LOCE, LOE, LOMCE y LOMLOE",
+      "valor": "8",
+      "periodo": "1980-2020",
+      "fuente": "BOE, textos de las leyes orgánicas de educación",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899",
+      "fragmento": "Quedan derogadas las siguientes Leyes: a) Ley 14/1970, de 4 de agosto, General de Educación",
+      "calculo": "LO 5/1980, LO 8/1985, LO 1/1990, LO 9/1995, LO 10/2002, LO 2/2006, LO 8/2013 y LO 3/2020. Son 9 si se cuenta la Ley General de Educación de 1970, que no es orgánica",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "La LOMCE y la LOMLOE modifican la LOE en vez de sustituirla, y la LODE de 1985 sigue en vigor, así que «ninguna duró» no es correcto. Sustituye a «9 leyes en 40 años».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-11-01",
+      "texto_en": {
+        "web/index.html": "data-count=\"8\" data-suffix=\" leyes\"",
+        "web/docs/radiografia.html": "8 leyes"
+      }
+    },
+    {
+      "id": "confianza-partidos",
+      "afirmacion": "El 21% de los españoles confía en los partidos políticos, frente al 26% de media en la OCDE",
+      "valor": "21%",
+      "periodo": "Trabajo de campo de sep-nov 2025, publicado en jun 2026",
+      "fuente": "OCDE, encuesta sobre los determinantes de la confianza en las instituciones públicas 2026, tabla 1.3",
+      "url": "https://doi.org/10.1787/9eb63fec-en",
+      "fragmento": "Spain 37% 43% 41% 43% 44% 48% 34% 37% 18% 21%",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Leído de una copia del PDF oficial (mismo DOI) porque oecd.org devolvía 403: comprobar en la fuente al revisar. Gobierno 43% (OCDE 40%) y Parlamento 37% (OCDE 37%). No es la más baja de Europa: Francia y Grecia, 15%. Sustituye a «21% de confianza en las instituciones, la más baja de Europa occidental».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-06-30",
+      "texto_en": {
+        "web/index.html": "data-count=\"21\"",
+        "web/docs/radiografia.html": "Conf&iacute;a en los partidos pol&iacute;ticos"
+      }
+    },
+    {
+      "id": "sobrecoste-contratacion-cnmc",
+      "afirmacion": "La CNMC estimó en 2015 que la falta de competencia en la contratación pública podía suponer un sobrecoste de hasta el 4,6% del PIB, unos 47.500 M€ al año",
+      "valor": "hasta 47.500 M€",
+      "periodo": "Estimación de 2015 sobre el PIB de 2013",
+      "fuente": "CNMC, Análisis de la contratación pública en España (PRO/CNMC/001/15)",
+      "url": "https://cnmc.es/file/123729/download",
+      "fragmento": "En España, a nivel agregado, esto podría implicar hasta un 4,6% del PIB anual, aproximadamente 47.500 millones de euros/año.",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Es un máximo y mide la falta de competencia, no la corrupción. No existe una cifra oficial del coste de la corrupción en España.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-11-01",
+      "texto_en": {
+        "web/docs/radiografia.html": "47.500 M&euro;"
+      }
+    },
+    {
+      "id": "presion-fiscal",
+      "afirmacion": "Los impuestos y cotizaciones sociales supusieron el 38,1% del PIB en España en 2025, frente al 40,7% de la UE",
+      "valor": "38,1%",
+      "periodo": "2025",
+      "fuente": "Eurostat, noticia del 29 oct 2026 (gov_10a_taxag)",
+      "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20261029-3",
+      "fragmento": "stood at 40.7% in 2025, up from 40.2% in 2024",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "España: «Spain (from 37.2% to 38.1%)». Máximo, Francia (46,0%); mínimo, Irlanda (22,7%), con el PIB inflado por las multinacionales.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-10-31",
+      "texto_en": {
+        "web/docs/radiografia.html": "38,1%"
+      }
+    },
+    {
+      "id": "id-pib",
+      "afirmacion": "España gastó en I+D el 1,50% del PIB en 2024 (23.931 M€), frente al 2,26% de la UE y el 3,53% de Suecia",
+      "valor": "1,50%",
+      "periodo": "2024",
+      "fuente": "INE, Estadística sobre actividades de I+D 2024 (20 nov 2025), y Eurostat (tsc00001)",
+      "url": "https://www.ine.es/dyngs/Prensa/IMASD2024.htm",
+      "fragmento": "alcanzó los 23.931 millones de euros, el 1,50% del PIB",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "La media de la UE (2,26%) es una estimación de Eurostat. Se quita «solo el 8,5% de las empresas hacen I+D», que no tenía fuente.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-30",
+      "texto_en": {
+        "web/docs/radiografia.html": "1,50%"
+      }
+    },
+    {
+      "id": "emigracion-titulados",
+      "afirmacion": "En 2021 emigraron 22.665 españoles de 25 o más años con título universitario",
+      "valor": "22.665",
+      "periodo": "2021 (último año con este detalle)",
+      "fuente": "INE, Estadística de Migraciones, tabla 49978",
+      "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=49978",
+      "fragmento": "Flujo de emigraciones con destino el extranjero. Española. Doctorado universitario.",
+      "calculo": "Grado 8.793 + licenciatura 8.297 + máster 3.832 + doctorado 1.743 = 22.665",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "El fragmento es el nombre de una de las cuatro series sumadas. Sustituye a «87.000 titulados al año», sin fuente: la prensa lo atribuye a un total 2007-2017 del CEPS.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-06-30",
+      "texto_en": {
+        "web/docs/radiografia.html": "22.665"
+      }
+    },
+    {
+      "id": "independencia-judicial",
+      "afirmacion": "El 40% de la población española considera buena o muy buena la independencia judicial en 2026; en Finlandia, el 85%",
+      "valor": "40%",
+      "periodo": "2026",
+      "fuente": "Comisión Europea, Informe sobre el Estado de Derecho 2026, capítulo de España (SWD(2026) 909)",
+      "url": "https://commission.europa.eu/document/download/82ce1391-cde5-49e9-9d1b-3f14f4975eb7_en",
+      "fragmento": "40% of the general population and 46% of companies perceive",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Finlandia: «85% of the general population and of companies» (SWD(2026) 926). Duración en primera instancia de los asuntos civiles y mercantiles: «decreased slightly from 444 days in 2023 to 423 days in 2024». Sustituye a «33% frente al 52% de la UE», que mezclaba indicadores y años.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-07-31",
+      "texto_en": {
+        "web/docs/radiografia.html": "Ve buena o muy buena la independencia judicial"
+      }
+    },
+    {
+      "id": "fibra-cobertura",
+      "afirmacion": "La fibra hasta el hogar cubría al 95,97% de la población española en 2025, frente al 74,13% de la UE",
+      "valor": "96%",
+      "periodo": "2025",
+      "fuente": "Comisión Europea, informe sobre el estado de la Década Digital 2026, España (SWD(2026) 155)",
+      "url": "https://ec.europa.eu/newsroom/dae/redirection/document/128662",
+      "fragmento": "Spain's FTTP coverage for the total population reached 95.97% in 2025, while the EU average stood at 74.13%",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Alta velocidad: «high-speed network in Spain increased from 1 244 km to 3 192 km» (Eurostat, Statistics Explained, líneas de 250 km/h o más, 2024). Se quitan «líder europeo», sin clasificación que lo respalde, y los 4.108 km.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-06-30",
+      "texto_en": {
+        "web/docs/radiografia.html": "cobertura de fibra hasta el hogar"
+      }
+    },
+    {
+      "id": "renovables-electricidad",
+      "afirmacion": "El 60,7% de la electricidad consumida en España en 2025 fue renovable, frente al 49,9% de la UE; la industria pagó 117,7 €/MWh frente a 155,9 de la UE en el primer semestre de 2026",
+      "valor": "60,7%",
+      "periodo": "2025 (provisional); precios del primer semestre de 2026",
+      "fuente": "Eurostat, nrg_ind_ren (actualizado el 15 sep 2026) y nrg_pc_205 (19 oct 2026)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_ren/default/table",
+      "fragmento": "EU27_2020 2025: 49.9 (p); ES 2025: 60.7 (p)",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Precios: consumo de 2.000 a 19.999 MWh, sin IVA ni impuestos recuperables (UE 0,1559 €/kWh, España 0,1177). Antes decíamos que la industria pagaba más que la media de la UE: era al revés. REE da un 55,5% de generación renovable en 2025, que mide otra cosa.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-03-31",
+      "texto_en": {
+        "web/docs/radiografia.html": "60,7%"
+      }
+    },
+    {
+      "id": "cotizaciones-2026",
+      "afirmacion": "En 2026 un contrato indefinido cotiza un 30,65% a cargo de la empresa (más accidentes de trabajo, 1,50% en oficina) y un 6,50% a cargo del trabajador, hasta una base máxima de 5.101,20 €/mes",
+      "valor": "32,15% + 6,50%",
+      "periodo": "2026",
+      "fuente": "Seguridad Social, bases y tipos de cotización 2026 (Orden PJC/297/2026) y LGSS, disposición transitoria 43.ª (MEI)",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+      "fragmento": "5.101,20 euros, con efectos 1 de enero 2026",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "MEI: «En el año 2026, será de 0,90 puntos porcentuales, de los que el 0,75 corresponderá a la empresa y el 0,15 al trabajador». Contingencias comunes: «Comunes 23,60 4,70 28,30». Los contratos temporales pagan un 6,70% de desempleo; no se modela la cotización de solidaridad.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-01-31",
+      "texto_en": {
+        "web/js/nomina-modelo.js": "baseMaxima: 61214.40",
+        "web/nomina.html": "empresa 32,15%"
+      }
+    },
+    {
+      "id": "cuna-fiscal-ocde",
+      "afirmacion": "La cuña fiscal de un trabajador soltero con el salario medio en España fue del 41,4% en 2025 (media de la OCDE: 35,1%)",
+      "valor": "41,4%",
+      "periodo": "2025",
+      "fuente": "OCDE, Taxing Wages 2026",
+      "url": "https://www.oecd.org/en/publications/taxing-wages-2026_3a5169ef-en/full-report/overview_d93131c3.html",
+      "fragmento": "Spain 41.4 13.1 5.0 23.4",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Columnas: cuña total, IRPF, cotización del trabajador y de la empresa. La OCDE no incluye el IVA. Con el salario medio del INE (29.540 €), la calculadora da 41,5%. Sustituye a la «cuña fiscal total» del 49,3%, que incluía un IVA estimado sin fuente.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-04-30",
+      "texto_en": {
+        "web/nomina.html": "la OCDE calcula 41,4%"
+      }
+    },
+    {
+      "id": "salarios-referencia",
+      "afirmacion": "El SMI de 2026 es de 1.221 €/mes en 14 pagas (17.094 €/año); en 2024 el salario mediano fue de 24.497,17 € y el medio, de 29.540,26 €",
+      "valor": "17.094 €; 24.497 €; 29.540 €",
+      "periodo": "SMI 2026; salarios de 2024",
+      "fuente": "BOE (real decreto del SMI de 2026) e INE, Encuesta Anual de Estructura Salarial 2024 (28 may 2026)",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-3815",
+      "fragmento": "1 221 euros/mes",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Mediano y medio: INE, https://www.ine.es/dyngs/Prensa/EAES2024.pdf. El salario más frecuente (modal) fue de 16.520,18 €.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-02-28",
+      "texto_en": {
+        "web/nomina.html": "17.094 &euro; (SMI 2026)"
+      }
+    },
+    {
+      "id": "adopcion-ia-empresas",
+      "afirmacion": "El 33,6% de las empresas de 10 o más empleados usaba inteligencia artificial en el primer trimestre de 2026",
+      "valor": "33,6%",
+      "periodo": "Primer trimestre de 2026",
+      "fuente": "INE, encuesta sobre el uso de TIC y del comercio electrónico en las empresas (22 oct 2026)",
+      "url": "https://ine.es/dyngs/Prensa/ETICCE20251T2026.pdf",
+      "fragmento": "El 33,6% de las empresas de 10 o más empleados utilizaron inteligencia artificial en el primer trimestre de 2026",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "El Plan IA360 (20 sep 2026) parte del 21,1% de 2025 y fija el 55% para 2030: «del 21,1% al 55% de empresas con IA en 2030».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-10-31",
+      "texto_en": {
+        "web/ia-empleo.html": "33,6%"
+      }
+    },
+    {
+      "id": "pension-media",
+      "afirmacion": "La pensión media del sistema fue de 1.376,14 € en octubre de 2026; la Seguridad Social pagó 10.565.782 pensiones a unos 9,6 millones de personas",
+      "valor": "1.376,14 €",
+      "periodo": "Octubre de 2026",
+      "fuente": "Seguridad Social, nota del 27 oct 2026",
+      "url": "https://revista.seg-social.es/-/la-pension-media-del-sistema-de-la-seguridad-social-alcanza-los-1.376-1-euros-en-octubre-un-4-6-mas-alta-que-hace-un-ano",
+      "fragmento": "La pensión media del sistema de la Seguridad Social es de 1.376,14 euros este mes",
+      "calculo": "1.376,14 € x 14 pagas = 19.266 €/año",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-01-31",
+      "texto_en": {
+        "web/ia-empleo.html": "var AVG_PENSION_YEAR = 19266;",
+        "web/pensiones.html": "var AVG_PENSION_YEAR = 19266;"
+      }
+    },
+    {
+      "id": "electores-por-edad",
+      "afirmacion": "De los 35.958.711 electores residentes en España para el 29N, el 20,8% tiene de 18 a 34 años, el 50,9% de 35 a 64 y el 28,3% 65 o más",
+      "valor": "28,3% vs. 20,8%",
+      "periodo": "Censo de las elecciones generales de 2026",
+      "fuente": "INE, Oficina del Censo Electoral, censo de consulta de las generales de 2026, tabla 9",
+      "url": "https://www.ine.es/oficina_censo/elecgen2026/Elecgral_2026_cc_tab9.xlsx",
+      "fragmento": "Número de electores españoles residentes en España por sexo y grupo de edad. Total nacional.",
+      "calculo": "18-34: 7.491.796; 35-64: 18.284.761; 65 o más: 10.182.154; total 35.958.711. 65+ / 18-34 = 1,36",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Los 2.769.645 electores del extranjero no vienen por edad. Sustituye a «el 40% del censo» y a «los mayores duplican en votos a los jóvenes».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-31",
+      "texto_en": {
+        "web/pensiones.html": "votePct: 28.3"
+      }
+    },
+    {
+      "id": "riqueza-por-edad",
+      "afirmacion": "Los hogares cuya persona de referencia tiene 65 años o más concentran el 41,1% de la riqueza neta; los de menos de 35, el 2,0%",
+      "valor": "41,1% vs. 2,0%",
+      "periodo": "Encuesta Financiera de las Familias 2024 (publicada el 16 abr 2026)",
+      "fuente": "Banco de España, Encuesta Financiera de las Familias 2024, cuadros 1.A y 1.B",
+      "url": "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/26/Fich/do2610.pdf",
+      "fragmento": "Menor de 35 años … 7,8 … 90,1",
+      "calculo": "% de hogares x riqueza media del tramo / 344,7 (media total): menos de 35, 2,04%; 35-64, 56,85%; 65 o más, 41,12%",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Cálculo propio. La EFF agrupa por la edad de la persona de referencia del hogar, no por personas, y no tiene tramo de 60 o más. Sustituye a «más del 53% para los mayores de 60».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2028-04-30",
+      "texto_en": {
+        "web/pensiones.html": "wealthPct: 41.1"
+      }
+    },
+    {
+      "id": "hueco-contributivo",
+      "afirmacion": "En 2025 el gasto en pensiones contributivas superó a las cotizaciones en 56.946 M€ (3,4% del PIB), según el Instituto Santalucía",
+      "valor": "56.946 M€",
+      "periodo": "2025",
+      "fuente": "Instituto Santalucía, nota de prensa del 18 jun 2026",
+      "url": "https://institutosantalucia.es/wp-content/uploads/2026/06/260618_NP-INSTITUTO-SANTALUCIA-El-sistema-publico-de-pensiones-necesito-56.946-millones-de-euros-del-Estado-para-cubrir-su-componente-contributivo-en-2025.pdf",
+      "fragmento": "el déficit contributivo agregado alcanzó en 2025 los 56.946 millones de euros, equivalente al 3,4% del PIB",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Incluye Seguridad Social y clases pasivas. Es un estudio de una fundación privada; Fedea, con otra definición, da 61.342 M€ de transferencias corrientes del Estado en 2025. Sustituye a «~50.000 M€ de déficit contributivo».",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada"],
+      "revision_humana": null,
+      "revisar_en": "2027-06-30",
+      "texto_en": {
+        "web/pensiones.html": "56.946 M&euro;"
       }
     }
   ]

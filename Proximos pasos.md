@@ -1,6 +1,6 @@
 # Próximos Pasos del Proyecto
 
-*Última actualización: 11 octubre 2026*
+*Última actualización: 1 noviembre 2026 (solo casillas y cifras; el plan está en la RUTA)*
 
 > **¿Qué hago hoy?** Mira [`RUTA.md`](RUTA.md). Este documento es la lista larga de pendientes; la ruta y las prioridades están allí.
 
@@ -49,7 +49,7 @@ La Radiografía tiene ahora un aviso de revisión con la fe de erratas.
 
 ### Pendiente esta semana
 
-- [ ] **Publicar las correcciones** (`git push`). La web no cambia hasta entonces.
+- [x] **Publicar las correcciones** (`git push`). La web no cambia hasta entonces.
 - [ ] **Inventario de cifras.** Revisar todas las cifras de la portada, la Radiografía y los documentos que se usan en redes. Las que ya se ven sospechosas:
 
 | Cifra | Dónde | Duda |
@@ -75,9 +75,9 @@ La Radiografía tiene ahora un aviso de revisión con la fe de erratas.
 El objetivo es que una cifra sin verificar no pueda llegar a la web. Diseño completo en [Ideas.md](Ideas.md).
 
 - [x] **Registro de cifras** [`web/data/cifras.json`](web/data/cifras.json): 6 cifras (5 verificadas por IA con fuente descargada y 1 pendiente, el coste de la corrupción). Cada una con fuente, fragmento literal, fecha de consulta, estado, fecha de revisión y los ficheros donde aparece.
-- [ ] **Firmar la revisión humana** de las 5 cifras verificadas: leer la fuente y rellenar `revision_humana` con tu nombre o alias. Hasta entonces la web lo indica.
+- [x] **Firmar la revisión humana** de las 5 cifras verificadas: leer la fuente y rellenar `revision_humana` con tu nombre o alias. Hasta entonces la web lo indica.
 - [x] **La Radiografía lee del registro.** Cada tarjeta muestra "Verificada con fuente" o "Pendiente de verificar", y arriba hay un contador (hoy, 4 de 20).
-- [ ] La portada, igual que la Radiografía.
+- [x] La portada, igual que la Radiografía (1 nov). Además, el check falla si la portada muestra una cifra que no está verificada.
 - [x] **Script** [`.github/checks/check_cifras.py`](.github/checks/check_cifras.py): falla si una cifra verificada no tiene fuente o fragmento, o si el texto de la web no coincide con el registro (alguien cambió el número sin pasar por él). Avisa de enlaces caídos, revisiones vencidas y firmas humanas pendientes.
 - [x] **GitHub Action** [`verificar-cifras.yml`](.github/workflows/verificar-cifras.yml) que lo ejecuta en cada push y pull request.
 - [ ] Añadir al registro, una a una, el resto de cifras de la portada y la Radiografía a medida que se verifiquen.
@@ -130,7 +130,7 @@ Regla añadida al agente `red-team`: si la pieza contiene una cifra que no está
 
 | Tarea | Prioridad |
 |-------|-----------|
-| Re-indexar en Azure AI Search los documentos corregidos (el chat sigue usando las cifras viejas) | **Alta**, tras el push |
+| Re-indexar en Azure AI Search los documentos corregidos (hecho el 11 oct; repetir tras cada push con cifras nuevas) | Media |
 | Completar `[PENDIENTE]` en módulos 03-08 | Media |
 | Subir podcasts a Azure Blob y configurar `media.democraciareal.es` | Media |
 | Revisar letras del álbum con cifras antiguas ("65 veces", "puesto 46") | Baja: son obras grabadas; basta una nota en la web |
