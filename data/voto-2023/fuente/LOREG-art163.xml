@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <bloque id="acientosesentaytres" tipo="precepto" titulo="Artículo ciento sesenta y tres">
+      <version id_norma="BOE-A-1985-11672" fecha_publicacion="19850620" fecha_vigencia="19850621">
+        <p class="articulo">Artículo ciento sesenta y tres</p>
+        <p class="parrafo">1. La atribución de los escaños en función de los resultados del escrutinio se realiza conforme a las siguientes reglas:</p>
+        <p class="parrafo_2">a) No se tienen en cuenta aquellas candidaturas que no hubieran obtenido, al menos, el 3 por 100 de los votos válidos emitidos en la circunscripción.</p>
+        <p class="parrafo">b) Se ordenan de mayor a menor, en una columna, las cifras de votos obtenidos por las restantes candidaturas.</p>
+        <p class="parrafo">c) Se divide el número de votos obtenidos por cada candidatura por 1, 2, 3, etcétera, hasta un número igual al de escaños correspondientes a la circunscripción, formándose un cuadro similar al que aparece en el ejemplo práctico. Los escaños se atribuyen a las candidaturas que obtengan los cocientes mayores en el cuadro, atendiendo a un orden decreciente.</p>
+        <p class="parrafo_2">Ejemplo práctico: 480.000 votos válidos emitidos en una circunscripción que elija ocho Diputados. Votación repartida entre seis candidaturas:</p>
+        <p class="centro_redonda">A(168.000 votos) B(104.000) C(72.000) D(64.000) E(40.000) F(32.000)</p>
+        <table class="tabla">
+          <tbody>
+            <tr>
+              <th>
+                <p class="cabeza_tabla">División</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">1</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">2</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">3</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">4</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">5</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">6</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">7</p>
+              </th>
+              <th>
+                <p class="cabeza_tabla">8</p>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <p class="cuerpo_tabla_centro">A</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">168.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">84.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">56.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">42.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">33.600</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">28.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">24.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">21.000</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="cuerpo_tabla_centro">B</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">104.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">52.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">34.666</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">26.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">20.800</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">17.333</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">14.857</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">13.000</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="cuerpo_tabla_centro">C</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">72.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">36.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">24.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">18.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">14.400</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">12.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">10.285</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">9.000</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="cuerpo_tabla_centro">D</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">64.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">32.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">21.333</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">16.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">12.800</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">10.666</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">9.142</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">8.000</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="cuerpo_tabla_centro">E</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">40.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">20.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">13.333</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">10.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">8.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">6.666</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">5.714</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">5.000</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="cuerpo_tabla_centro">F</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">32.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">16.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">10.666</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">8.000</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">6.400</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">5.333</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">4.571</p>
+              </td>
+              <td>
+                <p class="cuerpo_tabla_centro">4.000</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="parrafo_2">Por consiguiente: la candidatura A obtiene cuatro escaños. La candidatura B dos escaños y las candidaturas C y D un escaño cada una.</p>
+        <p class="parrafo_2">d) Cuando en la relación de cocientes coincidan dos correspondientes a distintas candidaturas, el escaño se atribuirá a la que mayor número total de votos hubiese obtenido. Si hubiera dos candidaturas con igual número total de votos, el primer empate se resolverá por sorteo y los sucesivos de forma alternativa.</p>
+        <p class="parrafo">e) Los escaños correspondientes a cada candidatura se adjudican a los candidatos incluidos en ella, por el orden de colocación en que aparezcan.</p>
+        <p class="parrafo_2">2. En las circunscripciones de Ceuta y Melilla será proclamado electo el candidato que mayor número de votos hubiese obtenido.</p>
+      </version>
+    </bloque>
+  </data>
+</response>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuántos votos hicieron falta por escaño en cada provincia en las generales de 2023 y cuántos votos no eligieron a nadie. Aritmética sobre los resultados oficiales, con el cálculo publicado para que lo compruebes.">
+    <title>Lo que vale tu voto: votos por escaño en cada provincia | Democracia Real</title>
+    <link rel="canonical" href="https://democraciareal.es/voto">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://democraciareal.es/voto">
+    <meta property="og:title" content="Lo que vale tu voto">
+    <meta property="og:description" content="Votos por escaño y votos que no eligieron a nadie, provincia a provincia, con los resultados oficiales de 2023.">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .vt-shell { max-width: 1040px; margin: 0 auto; padding: calc(64px + var(--space-2xl)) var(--space-md) var(--space-3xl); }
+        .vt-header { text-align: center; margin-bottom: var(--space-2xl); }
+        .vt-header h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+        .vt-header h1 span { color: var(--accent); }
+        .vt-lead { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; max-width: 720px; margin: var(--space-md) auto 0; }
+        .vt-lead strong { color: var(--text-primary); }
+
+        .vt-notice { max-width: 760px; margin: 0 auto var(--space-2xl); background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: var(--space-md) var(--space-lg); color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .vt-notice strong { color: var(--text-primary); }
+        .vt-notice a { color: var(--accent); }
+        .vt-review { display: inline-block; margin-top: var(--space-xs); font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); }
+        .vt-review.is-done { color: var(--accent); }
+
+        .rx-section { margin-bottom: var(--space-3xl); }
+        .rx-section-title { font-size: 1.05rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm); border-bottom: 1px solid var(--border); padding-bottom: var(--space-sm); }
+        .rx-section-icon { color: var(--accent); font-size: 1.2rem; }
+        .rx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); }
+        .rx-card { background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: var(--space-lg); transition: box-shadow var(--transition-normal); min-width: 0; }
+        .rx-card:hover { box-shadow: 0 0 20px var(--accent-glow); }
+        .rx-card-value { font-family: var(--font-mono); font-size: 1.7rem; font-weight: 700; color: var(--accent); line-height: 1.15; margin-bottom: var(--space-xs); overflow-wrap: anywhere; }
+        .rx-card-label { font-size: 0.92rem; color: var(--text-primary); font-weight: 500; margin-bottom: var(--space-sm); }
+        .rx-card-context { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; }
+        .rx-status { display: inline-block; font-size: 0.7rem; border-radius: 6px; padding: 2px 8px; margin-top: var(--space-sm); border: 1px solid var(--border); color: var(--text-muted); }
+        .rx-status.is-verified { border-color: var(--accent-dim); color: var(--accent); }
+
+        /* Buscador */
+        .vt-search { position: relative; max-width: 560px; }
+        .vt-search label { display: block; font-weight: 600; margin-bottom: var(--space-sm); }
+        .vt-input { width: 100%; font: inherit; font-size: 1.05rem; padding: 0.8rem 1rem; background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-light); border-radius: 10px; }
+        .vt-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+        .vt-suggest { list-style: none; margin: var(--space-sm) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+        .vt-chip { font: inherit; font-size: 0.88rem; padding: 0.4rem 0.8rem; border-radius: 999px; border: 1px solid var(--border-light); background: var(--bg-tertiary); color: var(--text-primary); cursor: pointer; }
+        .vt-chip:hover, .vt-chip:focus-visible { border-color: var(--accent); color: var(--accent); }
+        .vt-hint { font-size: 0.85rem; color: var(--text-muted); margin-top: var(--space-sm); }
+
+        /* Ficha */
+        .vt-ficha { scroll-margin-top: 80px; margin-top: var(--space-xl); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 14px; padding: var(--space-xl); }
+        .vt-ficha[hidden] { display: none; }
+        .vt-ficha-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-sm); border-bottom: 1px solid var(--border); padding-bottom: var(--space-md); margin-bottom: var(--space-lg); }
+        .vt-ficha-head h3 { font-size: 1.6rem; font-weight: 700; }
+        .vt-ficha-head p { color: var(--text-muted); font-size: 0.9rem; }
+        .vt-big { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-bottom: var(--space-lg); }
+        .vt-big-value { font-family: var(--font-mono); font-size: clamp(1.8rem, 6vw, 2.5rem); font-weight: 700; color: var(--accent); line-height: 1.1; }
+        .vt-big-label { font-size: 0.95rem; font-weight: 500; margin: var(--space-xs) 0; }
+        .vt-big p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.55; }
+        .vt-big strong { color: var(--text-primary); }
+        .vt-mini { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-sm); margin-bottom: var(--space-lg); }
+        .vt-mini div { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 10px; padding: var(--space-sm) var(--space-md); min-width: 0; }
+        .vt-mini b { display: block; font-family: var(--font-mono); font-size: 1.05rem; color: var(--text-primary); }
+        .vt-mini span { font-size: 0.76rem; color: var(--text-muted); line-height: 1.35; display: block; }
+        .vt-compare { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 10px; padding: var(--space-md) var(--space-lg); margin-bottom: var(--space-lg); }
+        .vt-compare label { font-size: 0.9rem; color: var(--text-secondary); margin-right: var(--space-sm); }
+        .vt-compare select { font: inherit; padding: 0.35rem 0.6rem; background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-light); border-radius: 8px; max-width: 100%; }
+        .vt-compare p { margin-top: var(--space-sm); color: var(--text-secondary); line-height: 1.6; }
+        .vt-compare strong { color: var(--accent); }
+        .vt-note26 { font-size: 0.86rem; color: var(--text-secondary); margin-bottom: var(--space-md); }
+        .vt-details summary { cursor: pointer; color: var(--accent); font-weight: 500; padding: var(--space-xs) 0; }
+        .vt-table-wrap { overflow-x: auto; margin-top: var(--space-sm); }
+        .vt-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+        .vt-table th, .vt-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; }
+        .vt-table th:first-child, .vt-table td:first-child { text-align: left; white-space: normal; }
+        .vt-table th { color: var(--text-muted); font-weight: 500; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .vt-table td { font-family: var(--font-mono); }
+        .vt-table td:first-child { font-family: var(--font-sans); }
+        .vt-table tr.is-out td { color: var(--text-muted); }
+        .vt-table-note { font-size: 0.78rem; color: var(--text-muted); margin-top: var(--space-sm); line-height: 1.5; }
+        .vt-actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
+        .vt-btn { font: inherit; font-size: 0.88rem; font-weight: 600; padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid var(--accent-dim); background: rgba(16, 185, 129, 0.1); color: var(--accent); cursor: pointer; }
+        .vt-btn:hover { background: rgba(16, 185, 129, 0.2); }
+        .vt-copied { font-size: 0.85rem; color: var(--text-muted); align-self: center; }
+
+        /* Ranking */
+        .vt-toggle { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-md); }
+        .vt-toggle button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: rgba(16, 185, 129, 0.1); }
+        .vt-rank { list-style: none; margin: 0; padding: 0; }
+        .vt-rank li { display: grid; grid-template-columns: minmax(110px, 190px) 1fr 84px; align-items: center; gap: var(--space-sm); padding: 3px 4px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+        .vt-rank li:hover, .vt-rank li:focus-visible { background: var(--bg-tertiary); outline: none; }
+        .vt-rank li.is-selected { background: rgba(16, 185, 129, 0.12); }
+        .vt-rank .vt-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-secondary); }
+        .vt-rank li.is-selected .vt-name { color: var(--text-primary); font-weight: 600; }
+        .vt-bar { height: 12px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; }
+        .vt-bar i { display: block; height: 100%; background: var(--accent-dim); border-radius: 4px; }
+        .vt-rank li.is-selected .vt-bar i { background: var(--accent); }
+        .vt-rank .vt-val { font-family: var(--font-mono); text-align: right; color: var(--text-primary); }
+        .vt-rank-note { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-md); line-height: 1.5; }
+
+        /* Soria */
+        .vt-box { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 12px; padding: var(--space-xl); }
+        .vt-box h3 { font-size: 1.25rem; margin-bottom: var(--space-md); }
+        .vt-box p { color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-md); }
+        .vt-box strong { color: var(--text-primary); }
+        .vt-box .vt-table td { font-size: 0.86rem; }
+        .vt-box .vt-table small { display: block; font-size: 0.74rem; color: var(--text-muted); }
+
+        /* Método */
+        .vt-steps { color: var(--text-secondary); line-height: 1.7; padding-left: 1.2rem; }
+        .vt-steps li { margin-bottom: var(--space-sm); }
+        .vt-steps strong { color: var(--text-primary); }
+        .vt-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--space-sm); margin-top: var(--space-lg); }
+        .vt-links a { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: var(--space-md); color: var(--text-primary); text-decoration: none; font-size: 0.9rem; }
+        .vt-links a:hover { border-color: var(--accent); }
+        .vt-links small { display: block; color: var(--text-muted); font-size: 0.78rem; margin-top: 2px; }
+        .vt-cta { text-align: center; max-width: 720px; margin: 0 auto; padding: var(--space-xl); border: 1px solid var(--border); border-radius: 12px; background: var(--bg-tertiary); }
+        .vt-cta h2 { font-size: 1.3rem; margin-bottom: var(--space-md); }
+        .vt-cta p { color: var(--text-secondary); line-height: 1.7; }
+        .vt-cta a { color: var(--accent); font-weight: 500; }
+
+        @media (max-width: 760px) {
+            .vt-big { grid-template-columns: 1fr; }
+            .vt-mini { grid-template-columns: 1fr 1fr; }
+            .vt-ficha { padding: var(--space-lg) var(--space-md); }
+            .vt-rank li { grid-template-columns: 96px 1fr 70px; font-size: 0.8rem; }
+            .vt-box { padding: var(--space-lg) var(--space-md); }
+            .vt-table th, .vt-table td { padding: 0.45rem 0.35rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async">
+                <span class="logo-text">Democracia Real</span>
+            </a>
+            <button class="nav-toggle" aria-label="Men&uacute;" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/#problema">El Problema</a></li>
+                <li><a href="/voto" class="active">Tu voto</a></li>
+                <li><a href="/nomina">Tu n&oacute;mina</a></li>
+                <li><a href="/docs/radiografia.html">Radiograf&iacute;a</a></li>
+                <li><a href="/docs/">Documentaci&oacute;n</a></li>
+                <li><a href="https://github.com/democracia-real/proyecto" class="nav-link-github" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="vt-shell">
+
+        <header class="vt-header">
+            <h1>Lo que vale <span>tu voto</span></h1>
+            <p class="vt-lead">En las elecciones al Congreso de 2023, cada provincia necesit&oacute; un n&uacute;mero distinto de votos para cada esca&ntilde;o, y muchos votos no eligieron a nadie. <strong>Elige tu provincia y mira cu&aacute;nto pes&oacute; tu voto.</strong> Es aritm&eacute;tica sobre los resultados oficiales: no es una encuesta ni una previsi&oacute;n, y no te decimos a qui&eacute;n votar.</p>
+        </header>
+
+        <div class="vt-notice">
+            <strong>C&aacute;lculo hecho con IA</strong> (Claude) a partir de los ficheros oficiales del Ministerio del Interior y del BOE, con un <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/calcular.py" target="_blank" rel="noopener">script</a> que cualquiera puede ejecutar. <strong>Lo revisa una persona</strong> contra el dato oficial antes de darlo por bueno.<br>
+            <span class="vt-review" id="vtReview">Revisi&oacute;n humana: pendiente</span>
+        </div>
+
+        <!-- ESPAÑA -->
+        <section class="rx-section" aria-labelledby="tituloEspana">
+            <h2 class="rx-section-title" id="tituloEspana"><span class="rx-section-icon">&#9878;</span> Espa&ntilde;a, generales de 2023</h2>
+            <div class="rx-grid">
+                <div class="rx-card" data-cifra="voto-2023-votos-por-escano">
+                    <div class="rx-card-value">70.537</div>
+                    <div class="rx-card-label">Votos por esca&ntilde;o de media</div>
+                    <div class="rx-card-context">24.688.087 votos v&aacute;lidos para 350 diputados.</div>
+                </div>
+                <div class="rx-card" data-cifra="voto-2023-rango-votos-por-escano">
+                    <div class="rx-card-value">25.304 &rarr; 97.532</div>
+                    <div class="rx-card-label">De Teruel a Madrid</div>
+                    <div class="rx-card-context">Votos por esca&ntilde;o en la provincia que menos necesit&oacute; y en la que m&aacute;s: casi cuatro veces m&aacute;s.</div>
+                </div>
+                <div class="rx-card" data-cifra="voto-2023-votos-sin-escano">
+                    <div class="rx-card-value">1.930.424</div>
+                    <div class="rx-card-label">Votos que no eligieron a nadie</div>
+                    <div class="rx-card-context">Votos a candidaturas que no sacaron esca&ntilde;o en su provincia: el 7,8% de los v&aacute;lidos. Aparte, 200.673 votos en blanco.</div>
+                </div>
+                <div class="rx-card" data-cifra="voto-2023-reparto-reproducido">
+                    <div class="rx-card-value">350 de 350</div>
+                    <div class="rx-card-label">Esca&ntilde;os que reproduce nuestro c&aacute;lculo</div>
+                    <div class="rx-card-context">Con la regla de la ley (barrera del 3% y D'Hondt), en las 52 circunscripciones.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TU PROVINCIA -->
+        <section class="rx-section" aria-labelledby="tituloProvincia">
+            <h2 class="rx-section-title" id="tituloProvincia"><span class="rx-section-icon">&#9906;</span> Tu provincia</h2>
+            <div class="vt-search">
+                <label for="vtInput">&iquest;D&oacute;nde votas?</label>
+                <input type="search" id="vtInput" class="vt-input" placeholder="Escribe tu provincia, por ejemplo Soria" autocomplete="off" aria-describedby="vtHint" aria-controls="vtSuggest">
+                <ul class="vt-suggest" id="vtSuggest" aria-label="Provincias"></ul>
+                <p class="vt-hint" id="vtHint">Las 52 circunscripciones del Congreso: 50 provincias, Ceuta y Melilla. Si votas desde el extranjero (CERA), tu voto cuenta en tu provincia de inscripci&oacute;n.</p>
+            </div>
+
+            <article class="vt-ficha" id="vtFicha" hidden aria-live="polite">
+                <div class="vt-ficha-head">
+                    <h3 id="fNombre"></h3>
+                    <p id="fSub"></p>
+                </div>
+                <div class="vt-big">
+                    <div>
+                        <div class="vt-big-value" id="fVpe"></div>
+                        <div class="vt-big-label">votos por esca&ntilde;o</div>
+                        <p id="fVpeTxt"></p>
+                    </div>
+                    <div>
+                        <div class="vt-big-value" id="fSin"></div>
+                        <div class="vt-big-label">votos que no eligieron a nadie</div>
+                        <p id="fSinTxt"></p>
+                    </div>
+                </div>
+                <div class="vt-mini">
+                    <div><b id="fElec"></b><span>electores por esca&ntilde;o (censo, incluido el extranjero)</span></div>
+                    <div><b id="fHab"></b><span>habitantes por esca&ntilde;o (padr&oacute;n de 2022)</span></div>
+                    <div><b id="fPart"></b><span>participaci&oacute;n</span></div>
+                    <div><b id="fBarrera"></b><span id="fBarreraTxt">votos para llegar al 3% (barrera legal)</span></div>
+                </div>
+                <div class="vt-compare">
+                    <label for="vtCompare">Comp&aacute;rala con</label>
+                    <select id="vtCompare"></select>
+                    <p id="fCompare"></p>
+                </div>
+                <p class="vt-note26" id="fNote26"></p>
+                <details class="vt-details">
+                    <summary>Ver el reparto oficial de 2023 en esta provincia</summary>
+                    <div class="vt-table-wrap">
+                        <table class="vt-table">
+                            <thead><tr><th>Candidatura</th><th>Votos</th><th>% v&aacute;lidos</th><th>Esca&ntilde;os</th></tr></thead>
+                            <tbody id="fTabla"></tbody>
+                        </table>
+                    </div>
+                    <p class="vt-table-note" id="fTablaNota"></p>
+                </details>
+                <div class="vt-actions">
+                    <button type="button" class="vt-btn" id="vtCopy">Copiar para WhatsApp</button>
+                    <span class="vt-copied" id="vtCopied" role="status"></span>
+                </div>
+            </article>
+        </section>
+
+        <!-- RANKING -->
+        <section class="rx-section" aria-labelledby="tituloRanking">
+            <h2 class="rx-section-title" id="tituloRanking"><span class="rx-section-icon">&#9776;</span> Las 52 circunscripciones</h2>
+            <div class="vt-toggle" role="group" aria-label="Qu&eacute; ordenar">
+                <button type="button" class="vt-chip" data-medida="vpe" aria-pressed="true">Votos por esca&ntilde;o</button>
+                <button type="button" class="vt-chip" data-medida="sin" aria-pressed="false">% de votos sin esca&ntilde;o</button>
+            </div>
+            <ol class="vt-rank" id="vtRank" aria-label="Circunscripciones ordenadas"></ol>
+            <p class="vt-rank-note" id="vtRankNote">Pulsa una provincia para ver su ficha.</p>
+        </section>
+
+        <!-- SORIA -->
+        <section class="rx-section" aria-labelledby="tituloSoria">
+            <h2 class="rx-section-title" id="tituloSoria"><span class="rx-section-icon">&#10003;</span> Corregimos una cifra nuestra</h2>
+            <div class="vt-box" data-cifra="voto-2023-soria-madrid">
+                <h3>&iquest;Vale un voto de Soria 6 de Madrid? No: casi 4</h3>
+                <p>En nuestra documentaci&oacute;n dec&iacute;amos que un voto en Soria &laquo;vale casi 6 veces m&aacute;s&raquo; que uno en Madrid. Con los datos oficiales de 2023, <strong>un voto en Soria pes&oacute; 3,8 veces uno de Madrid</strong>. Sale parecido se mida como se mida:</p>
+                <div class="vt-table-wrap">
+                    <table class="vt-table">
+                        <thead><tr><th>Por esca&ntilde;o</th><th>Soria</th><th>Madrid</th><th>Veces</th></tr></thead>
+                        <tbody>
+                            <tr><td>Votos v&aacute;lidos<small>lo que pas&oacute; en 2023</small></td><td>25.385</td><td>97.532</td><td>3,84</td></tr>
+                            <tr><td>Electores<small>el peso antes de votar</small></td><td>37.884</td><td>141.204</td><td>3,73</td></tr>
+                            <tr><td>Habitantes<small>c&oacute;mo reparte la ley</small></td><td>44.189</td><td>182.442</td><td>4,13</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top: var(--space-md);">El &laquo;6&raquo; sal&iacute;a de mezclar dos cosas: los votos de las dos candidaturas que sacaron esca&ntilde;o en Soria (unos 15.000 y 19.000) frente a los votos por esca&ntilde;o de todo Madrid. Ya est&aacute; corregido en el <a href="/docs/viewer.html?doc=01_diagnostico_del_sistema/sistema_electoral.md" style="color: var(--accent);">diagn&oacute;stico del sistema electoral</a>. Y Soria ni siquiera fue la que menos votos necesit&oacute;: fue Teruel, por muy poco.</p>
+            </div>
+        </section>
+
+        <!-- 2026 -->
+        <section class="rx-section" aria-labelledby="titulo2026">
+            <h2 class="rx-section-title" id="titulo2026"><span class="rx-section-icon">&#9873;</span> Y el 29 de noviembre</h2>
+            <div class="rx-grid">
+                <div class="rx-card" data-cifra="escanos-2026-cambios">
+                    <div class="rx-card-value">Madrid 38 &middot; C&aacute;diz 8</div>
+                    <div class="rx-card-label">Los dos cambios de esca&ntilde;os para 2026</div>
+                    <div class="rx-card-context">Madrid gana un diputado (37 en 2023) y C&aacute;diz pierde uno (9 en 2023). Las otras 50 circunscripciones eligen los mismos que en 2023. Fuente: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742" target="_blank" rel="noopener" style="color: var(--accent-dim);">Real Decreto 806/2026</a>. Con los resultados del 29N recalcularemos todo con el mismo m&eacute;todo.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÉTODO -->
+        <section class="rx-section" aria-labelledby="tituloMetodo">
+            <h2 class="rx-section-title" id="tituloMetodo"><span class="rx-section-icon">&#9881;</span> C&oacute;mo se calcula</h2>
+            <ol class="vt-steps">
+                <li><strong>Datos:</strong> resultados oficiales del Congreso de 2023 por provincia del Ministerio del Interior, contrastados cifra a cifra con la publicaci&oacute;n de la Junta Electoral Central en el BOE.</li>
+                <li><strong>Reparto:</strong> se recalcula con la regla de la ley electoral (LOREG, art. 163): fuera las candidaturas con menos del 3% de los votos v&aacute;lidos de la provincia y D'Hondt con el resto; en Ceuta y Melilla, un esca&ntilde;o para la m&aacute;s votada. Da los mismos diputados que el resultado oficial en las 52 circunscripciones.</li>
+                <li><strong>Votos por esca&ntilde;o:</strong> votos v&aacute;lidos (a candidaturas y en blanco) entre los esca&ntilde;os de la provincia en 2023.</li>
+                <li><strong>Votos que no eligieron a nadie:</strong> votos a candidaturas que no sacaron ning&uacute;n esca&ntilde;o en esa provincia. No incluye blancos ni nulos. Esos votos s&iacute; cuentan para otras cosas (la barrera, la financiaci&oacute;n, el mensaje pol&iacute;tico): lo que no hicieron es elegir a nadie.</li>
+                <li><strong>&laquo;Pes&oacute; X veces&raquo;</strong> compara solo eso: cu&aacute;ntos votos hicieron falta por esca&ntilde;o. No mide la influencia de un voto en qui&eacute;n gobierna.</li>
+            </ol>
+            <div class="vt-links">
+                <a href="/data/voto-2023.csv" download>Datos por provincia (CSV)<small>52 filas, todas las medidas</small></a>
+                <a href="/data/voto-2023-candidaturas.csv" download>Datos por candidatura (CSV)<small>Votos y esca&ntilde;os oficiales y calculados</small></a>
+                <a href="/data/voto-2023.json">Todo en JSON<small>Con definiciones y fuentes</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/METODOLOGIA.md" target="_blank" rel="noopener">Metodolog&iacute;a<small>Qu&eacute; mide cada cifra y sus l&iacute;mites</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/calcular.py" target="_blank" rel="noopener">El script<small>Python, sin dependencias: rep&iacute;telo</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/REVISION_HUMANA.md" target="_blank" rel="noopener">Revisi&oacute;n humana<small>5 provincias contra el BOE, a mano</small></a>
+                <a href="https://infoelectoral.interior.gob.es/estaticos/docxl/PROV_02_202307_1.zip" target="_blank" rel="noopener">Fuente: Ministerio del Interior<small>Excel oficial por circunscripci&oacute;n</small></a>
+                <a href="https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf" target="_blank" rel="noopener">Fuente: Junta Electoral Central<small>Resultados en el BOE, 1 sep 2023</small></a>
+            </div>
+            <p class="vt-rank-note">Si encuentras un error, <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener" style="color: var(--accent);">abre un issue</a>: lo corregimos y lo decimos. Datos con licencia CC BY-SA 4.0.</p>
+        </section>
+
+        <div class="vt-cta">
+            <h2>No pedimos tu voto. Te ense&ntilde;amos lo que vale.</h2>
+            <p>Que un voto pese distinto seg&uacute;n la provincia es una decisi&oacute;n de dise&ntilde;o de la ley electoral, no un accidente. Esto es lo que <a href="/docs/viewer.html?doc=03_propuestas_institucionales/reforma_electoral.md">proponemos cambiar</a>, abierto a cr&iacute;tica. Si quieres que te avisemos de lo siguiente, <a href="/#masa-critica">ap&uacute;ntate</a>.</p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async">
+                    <span>Democracia Real</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/docs/">Documentaci&oacute;n</a>
+                    <a href="https://github.com/democracia-real/proyecto" target="_blank" rel="noopener">GitHub</a>
+                </div>
+                <div class="footer-license">
+                    <p>Licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        // Alias para encontrar la provincia como la escribe la gente
+        var ALIAS = {
+            3: 'alicante', 7: 'baleares islas baleares mallorca menorca ibiza', 12: 'castellon', 15: 'la coruna coruna',
+            1: 'alava', 20: 'guipuzcoa', 48: 'vizcaya bilbao', 17: 'gerona', 25: 'lerida', 32: 'orense',
+            35: 'gran canaria lanzarote fuerteventura', 38: 'tenerife la palma la gomera el hierro', 46: 'valencia',
+            26: 'rioja logrono', 31: 'pamplona', 33: 'oviedo gijon', 39: 'santander', 30: 'region de murcia'
+        };
+
+        var datos = null, porCodigo = {}, actual = null, medida = 'vpe', comparaElegida = false;
+        var $ = function (id) { return document.getElementById(id); };
+
+        // Miles con punto siempre (Intl no agrupa los números de 4 cifras en español)
+        function fmt(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+        function dec(x, d) { var f = Math.pow(10, d); return (Math.round(x * f) / f).toFixed(d).replace('.', ','); }
+        function norm(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+        function slug(p) { return norm(p.provincia).replace(/ /g, '-'); }
+        function vpe(p) { return p.votos_validos / p.escanos_2023; }
+        function pctSin(p) { return 100 * p.votos_sin_escano / p.votos_validos; }
+        function mediaVpe() { return datos.nacional.votos_validos / datos.nacional.escanos; }
+        function esc(n) { return n === 1 ? '1 diputado' : n + ' diputados'; }
+        function el(tag, text, cls) { var e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
+
+        function buscar(q) {
+            q = norm(q);
+            if (!q) return [];
+            return datos.circunscripciones.filter(function (p) {
+                // Coincide si alguna palabra del nombre o de sus alias empieza por lo escrito
+                return (' ' + norm(p.provincia) + ' ' + (ALIAS[p.codigo] || '')).indexOf(' ' + q) >= 0;
+            });
+        }
+
+        function pintarSugerencias(lista) {
+            var ul = $('vtSuggest');
+            ul.textContent = '';
+            lista.slice(0, 8).forEach(function (p) {
+                var li = el('li');
+                var b = el('button', p.provincia, 'vt-chip');
+                b.type = 'button';
+                b.addEventListener('click', function () { elegir(p, true); });
+                li.appendChild(b);
+                ul.appendChild(li);
+            });
+        }
+
+        function comparacion(a, b) {
+            if (a.codigo === b.codigo) return '';
+            var va = vpe(a), vb = vpe(b);
+            var ligero = va <= vb ? a : b, pesado = va <= vb ? b : a;
+            var r = vpe(pesado) / vpe(ligero);
+            return 'En ' + a.provincia + ' hicieron falta ' + fmt(va) + ' votos por escaño; en ' + b.provincia + ', ' + fmt(vb) + '. ' +
+                (r < 1.005 ? 'Un voto pesó prácticamente lo mismo en las dos.' :
+                'Un voto en <strong>' + ligero.provincia + '</strong> pesó <strong>' + dec(r, 2) + ' veces</strong> uno de ' + pesado.provincia + '.');
+        }
+
+        function textoCompartir(p) {
+            var peso = mediaVpe() / vpe(p);
+            return 'Lo que valió mi voto en ' + p.provincia + ' (generales 2023): ' + fmt(vpe(p)) + ' votos por escaño, frente a ' +
+                fmt(mediaVpe()) + ' de media en España (' + (peso >= 1 ? dec(peso, 2) + ' veces la media' : 'el ' + Math.round(peso * 100) + '% de la media') + '). ' +
+                fmt(p.votos_sin_escano) + ' votos (' + dec(pctSin(p), 1) + '%) no eligieron a nadie. Datos oficiales y cálculo abierto: https://democraciareal.es/voto#' + slug(p);
+        }
+
+        function elegir(p, desplazar) {
+            actual = p;
+            var media = mediaVpe(), peso = media / vpe(p);
+            $('vtFicha').hidden = false;
+            $('vtInput').value = p.provincia;
+            $('vtSuggest').textContent = '';
+            $('fNombre').textContent = p.provincia;
+            $('fSub').textContent = p.comunidad + ' · ' + esc(p.escanos_2023) + ' en 2023';
+            $('fVpe').textContent = fmt(vpe(p));
+            $('fVpeTxt').innerHTML = fmt(p.votos_validos) + ' votos válidos para ' + esc(p.escanos_2023) + '. ' +
+                (peso >= 1 ? 'Un voto aquí pesó <strong>' + dec(peso, 2) + ' veces</strong> el voto medio de España'
+                           : 'Un voto aquí pesó <strong>el ' + Math.round(peso * 100) + '%</strong> del voto medio de España') +
+                ' (' + fmt(media) + ' votos por escaño).';
+            $('fSin').textContent = fmt(p.votos_sin_escano);
+            var sinCand = p.candidaturas - p.candidaturas_con_escano;
+            $('fSinTxt').innerHTML = '<strong>' + dec(pctSin(p), 1) + '%</strong> de los votos válidos fue a candidaturas que no sacaron escaño aquí: ' +
+                sinCand + ' de ' + p.candidaturas + '. Aparte, ' + fmt(p.votos_blanco) + ' votos en blanco.' +
+                (p.escanos_2023 === 1 ? ' Con un solo escaño gana la candidatura más votada y el resto de votos no elige a nadie.' : '');
+            $('fElec').textContent = fmt(p.censo / p.escanos_2023);
+            $('fHab').textContent = fmt(p.poblacion / p.escanos_2023);
+            $('fPart').textContent = dec(100 * p.votantes / p.censo, 1) + '%';
+            if (p.barrera_3pct_votos) {
+                $('fBarrera').textContent = fmt(p.barrera_3pct_votos);
+                $('fBarreraTxt').textContent = 'votos para llegar al 3% (barrera legal)';
+            } else {
+                $('fBarrera').textContent = '—';
+                $('fBarreraTxt').textContent = 'sin barrera: un escaño, gana la más votada';
+            }
+
+            var sel = $('vtCompare');
+            if (!comparaElegida || +sel.value === p.codigo) {
+                var defecto = p.provincia === 'Madrid' ? 'Soria' : 'Madrid';
+                sel.value = datos.circunscripciones.filter(function (x) { return x.provincia === defecto; })[0].codigo;
+            }
+            $('fCompare').innerHTML = comparacion(p, porCodigo[sel.value]);
+
+            var cambio = p.escanos_2026 - p.escanos_2023;
+            $('fNote26').textContent = 'El 29 de noviembre de 2026, ' + p.provincia + ' elige ' + esc(p.escanos_2026) +
+                (cambio > 0 ? ', uno más que en 2023.' : cambio < 0 ? ', uno menos que en 2023.' : ', los mismos que en 2023.');
+
+            var tbody = $('fTabla');
+            tbody.textContent = '';
+            p.reparto.forEach(function (c) {
+                var tr = el('tr', null, c.escanos_oficiales ? '' : 'is-out');
+                tr.appendChild(el('td', c.siglas));
+                tr.appendChild(el('td', fmt(c.votos)));
+                tr.appendChild(el('td', dec(100 * c.votos / p.votos_validos, 2)));
+                tr.appendChild(el('td', String(c.escanos_oficiales)));
+                tbody.appendChild(tr);
+            });
+            $('fTablaNota').textContent = 'Resultado oficial (Ministerio del Interior y Junta Electoral Central). Nuestro cálculo con la barrera del 3% y D\'Hondt da los mismos escaños' +
+                (p.escanos_2023 > 1 ? '. Cociente del último escaño: ' + fmt(p.cociente_ultimo_escano) + '.' : '.') +
+                ' Siglas tal como las publica el Ministerio.';
+
+            $('vtCopied').textContent = '';
+            pintarRanking();
+            if (history.replaceState) history.replaceState(null, '', '#' + slug(p));
+            if (desplazar) $('vtFicha').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function pintarRanking() {
+            var lista = datos.circunscripciones.slice();
+            var valor = medida === 'vpe' ? vpe : pctSin;
+            lista.sort(function (a, b) { return valor(b) - valor(a); });
+            var max = valor(lista[0]);
+            var ol = $('vtRank');
+            ol.textContent = '';
+            lista.forEach(function (p) {
+                var li = el('li', null, actual && actual.codigo === p.codigo ? 'is-selected' : '');
+                li.tabIndex = 0;
+                li.setAttribute('role', 'button');
+                var v = valor(p);
+                var etiqueta = medida === 'vpe' ? fmt(v) : dec(v, 1) + '%';
+                li.setAttribute('aria-label', p.provincia + ': ' + etiqueta);
+                li.appendChild(el('span', p.provincia, 'vt-name'));
+                var bar = el('span', null, 'vt-bar'), i = el('i');
+                i.style.width = (100 * v / max).toFixed(1) + '%';
+                bar.appendChild(i);
+                li.appendChild(bar);
+                li.appendChild(el('span', etiqueta, 'vt-val'));
+                li.addEventListener('click', function () { elegir(p, true); });
+                li.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); elegir(p, true); } });
+                ol.appendChild(li);
+            });
+            $('vtRankNote').textContent = medida === 'vpe'
+                ? 'Votos válidos por escaño en 2023, de más a menos. Media de España: ' + fmt(mediaVpe()) + '. Pulsa una provincia para ver su ficha.'
+                : 'Porcentaje de los votos válidos que fue a candidaturas sin escaño en esa provincia. Donde se elige un solo escaño (' +
+                  datos.circunscripciones.filter(function (p) { return p.escanos_2023 === 1; }).map(function (p) { return p.provincia + ', ' + dec(pctSin(p), 1) + '%'; }).join('; ') +
+                  ') gana la más votada y el resto no elige a nadie. España: ' + dec(100 * datos.nacional.votos_sin_escano / datos.nacional.votos_validos, 1) + '%.';
+        }
+
+        function iniciar(d) {
+            datos = d;
+            var sel = $('vtCompare');
+            datos.circunscripciones.forEach(function (p) {
+                porCodigo[p.codigo] = p;
+                var o = el('option', p.provincia);
+                o.value = p.codigo;
+                sel.appendChild(o);
+            });
+            sel.addEventListener('change', function () {
+                comparaElegida = true;
+                if (actual) $('fCompare').innerHTML = comparacion(actual, porCodigo[sel.value]);
+            });
+
+            var input = $('vtInput');
+            input.addEventListener('input', function () { pintarSugerencias(buscar(input.value)); });
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    var r = buscar(input.value);
+                    if (r.length) { e.preventDefault(); elegir(r[0], true); }
+                }
+            });
+            pintarSugerencias(['Soria', 'Madrid', 'Barcelona', 'Teruel', 'Ceuta'].map(function (n) {
+                return datos.circunscripciones.filter(function (p) { return p.provincia === n; })[0];
+            }));
+
+            document.querySelectorAll('.vt-toggle button').forEach(function (b) {
+                b.addEventListener('click', function () {
+                    medida = b.getAttribute('data-medida');
+                    document.querySelectorAll('.vt-toggle button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+                    pintarRanking();
+                });
+            });
+
+            $('vtCopy').addEventListener('click', function () {
+                if (!actual) return;
+                var texto = textoCompartir(actual);
+                function hecho() { $('vtCopied').textContent = 'Copiado.'; }
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(texto).then(hecho, function () { window.prompt('Copia el texto:', texto); });
+                } else {
+                    window.prompt('Copia el texto:', texto);
+                }
+            });
+
+            var hash = decodeURIComponent(location.hash.replace('#', ''));
+            var inicial = hash && (datos.circunscripciones.filter(function (p) { return slug(p) === hash; })[0] || buscar(hash.replace(/-/g, ' '))[0]);
+            if (inicial) elegir(inicial, true);
+            else pintarRanking();
+        }
+
+        fetch('/data/voto-2023.json', { cache: 'no-cache' })
+            .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(iniciar)
+            .catch(function () {
+                $('vtHint').innerHTML = 'No se pudieron cargar los datos. Puedes descargarlos en <a href="/data/voto-2023.csv" style="color: var(--accent);">CSV</a>.';
+            });
+
+        // Estado de cada cifra en el registro (como en la Radiografía)
+        fetch('/data/cifras.json', { cache: 'no-store' })
+            .then(function (r) { return r.json(); })
+            .then(function (registro) {
+                var porId = {};
+                (registro.cifras || []).forEach(function (c) { porId[c.id] = c; });
+                var firmas = [];
+                document.querySelectorAll('[data-cifra]').forEach(function (card) {
+                    var c = porId[card.getAttribute('data-cifra')];
+                    var badge = el('span', null, 'rx-status');
+                    if (c && c.estado === 'verificado') {
+                        badge.className += ' is-verified';
+                        var fecha = new Date(c.consultado).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+                        badge.textContent = 'Verificada con fuente · ' + fecha + (c.revision_humana ? ' · revisada por ' + c.revision_humana : ' · revisión humana pendiente');
+                        if (c.revision_humana) firmas.push(c.revision_humana);
+                    } else {
+                        badge.textContent = 'Pendiente de verificar';
+                    }
+                    card.appendChild(badge);
+                });
+                var total = document.querySelectorAll('[data-cifra]').length;
+                if (firmas.length === total) {
+                    $('vtReview').textContent = 'Revisado por ' + firmas[0];
+                    $('vtReview').className += ' is-done';
+                }
+            })
+            .catch(function () {});
+    })();
+    </script>
+</body>
+</html>

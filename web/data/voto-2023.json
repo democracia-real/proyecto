@@ -1,0 +1,6646 @@
+{
+ "meta": {
+  "titulo": "Lo que vale tu voto: votos por escaño y votos sin escaño, elecciones al Congreso de 23 de julio de 2023",
+  "fuente": "Ministerio del Interior, resultados del Congreso de julio de 2023 por circunscripción (Excel provincial)",
+  "url_fuente": "https://infoelectoral.interior.gob.es/estaticos/docxl/PROV_02_202307_1.zip",
+  "sha256_fuente": "b2eeed9c63527aec4fb7ffbc1896e935b6628eb6f21b00954762e62a3ed720a0",
+  "consultado": "2026-11-01",
+  "escanos_2023": "Real Decreto 400/2023, anexo",
+  "url_escanos_2023": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-12663",
+  "escanos_2026": "Real Decreto 806/2026, anexo",
+  "url_escanos_2026": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742",
+  "regla_reparto": "LOREG, art. 163 (barrera del 3% de los votos válidos y D'Hondt; mayoría en Ceuta y Melilla)",
+  "url_regla": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+  "contrastes": [
+   {
+    "fuente": "Junta Electoral Central, resumen de resultados (BOE-A-2023-18907), cuadros I, II y III",
+    "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+    "que": "votos y escaños de cada candidatura; censo, votantes, válidos, a candidaturas, en blanco y nulos de cada provincia y del total"
+   },
+   {
+    "fuente": "Real Decreto 400/2023, anexo",
+    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-12663",
+    "que": "escaños de cada provincia en 2023"
+   },
+   {
+    "fuente": "Real Decreto 1037/2022, anexo I",
+    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-21724",
+    "que": "población oficial de cada provincia a 1 de enero de 2022"
+   }
+  ],
+  "metodologia": "https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/METODOLOGIA.md",
+  "script": "https://github.com/democracia-real/proyecto/blob/main/data/voto-2023/calcular.py",
+  "calculo": "Hecho con IA (Claude, Claude Code) y un script reproducible. Revisión humana pendiente.",
+  "licencia": "CC BY-SA 4.0",
+  "definiciones": {
+   "votos_por_escano": "votos válidos (a candidaturas + en blanco) / escaños de la circunscripción en 2023",
+   "electores_por_escano": "censo electoral total, residentes y CERA / escaños",
+   "habitantes_por_escano": "población que trae el fichero del Ministerio / escaños",
+   "votos_sin_escano": "votos a candidaturas que no obtuvieron ningún escaño en esa circunscripción (no incluye blancos ni nulos)",
+   "pct_sin_escano": "votos_sin_escano / votos válidos x 100",
+   "peso_frente_media": "votos por escaño de España (votos válidos / 350) dividido entre los votos por escaño de la provincia",
+   "cociente_ultimo_escano": "cociente D'Hondt con el que se adjudicó el último escaño de la circunscripción"
+  }
+ },
+ "nacional": {
+  "escanos": 350,
+  "poblacion": 47475420,
+  "censo": 37469458,
+  "votantes": 24952447,
+  "votos_validos": 24688087,
+  "votos_candidaturas": 24487414,
+  "votos_blanco": 200673,
+  "votos_nulos": 264360,
+  "votos_sin_escano": 1930424,
+  "pct_sin_escano": 7.82,
+  "votos_por_escano": 70537.4,
+  "electores_por_escano": 107055.6,
+  "habitantes_por_escano": 135644.1,
+  "menos_votos_por_escano": "Teruel",
+  "mas_votos_por_escano": "Madrid",
+  "circunscripciones_reproducidas": 52,
+  "escanos_que_cambiaria_sin_barrera": 0,
+  "cambios_escanos_2026": [
+   {
+    "provincia": "Cádiz",
+    "escanos_2023": 9,
+    "escanos_2026": 8
+   },
+   {
+    "provincia": "Madrid",
+    "escanos_2023": 37,
+    "escanos_2026": 38
+   }
+  ]
+ },
+ "soria_madrid": {
+  "votos_por_escano": 3.84,
+  "electores_por_escano": 3.73,
+  "habitantes_por_escano": 4.13,
+  "cociente_ultimo_escano": 6.11
+ },
+ "circunscripciones": [
+  {
+   "codigo": 15,
+   "provincia": "A Coruña",
+   "comunidad": "Galicia",
+   "escanos_2023": 8,
+   "escanos_2026": 8,
+   "poblacion": 1119180,
+   "censo": 1085673,
+   "censo_cer": 922306,
+   "censo_cera": 163367,
+   "votantes": 683187,
+   "participacion_pct": 62.93,
+   "votos_validos": 677702,
+   "votos_candidaturas": 672505,
+   "votos_blanco": 5197,
+   "votos_nulos": 5485,
+   "barrera_3pct_votos": 20332,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 39065,
+   "pct_sin_escano": 5.76,
+   "votos_por_escano": 84712.8,
+   "electores_por_escano": 135709.1,
+   "habitantes_por_escano": 139897.5,
+   "cociente_ultimo_escano": 67653.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 292272,
+     "escanos_oficiales": 4,
+     "escanos_calculados": 4,
+     "supera_barrera": true,
+     "pct_validos": 43.13
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 190897,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 28.17
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 82618,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 12.19
+    },
+    {
+     "siglas": "B.N.G.",
+     "nombre": "BLOQUE NACIONALISTA GALEGO",
+     "votos": 67653,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 9.98
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 34410,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.08
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 3096,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.46
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1011,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 548,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 0.83
+  },
+  {
+   "codigo": 3,
+   "provincia": "Alacant/Alicante",
+   "comunidad": "Comunitat Valenciana",
+   "escanos_2023": 12,
+   "escanos_2026": 12,
+   "poblacion": 1901594,
+   "censo": 1306311,
+   "censo_cer": 1261010,
+   "censo_cera": 45301,
+   "votantes": 908842,
+   "participacion_pct": 69.57,
+   "votos_validos": 899192,
+   "votos_candidaturas": 892617,
+   "votos_blanco": 6575,
+   "votos_nulos": 9650,
+   "barrera_3pct_votos": 26976,
+   "candidaturas": 9,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 12667,
+   "pct_sin_escano": 1.41,
+   "votos_por_escano": 74932.7,
+   "electores_por_escano": 108859.3,
+   "habitantes_por_escano": 158466.2,
+   "cociente_ultimo_escano": 66058.6,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 330293,
+     "escanos_oficiales": 5,
+     "escanos_calculados": 5,
+     "supera_barrera": true,
+     "pct_validos": 36.73
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 287737,
+     "escanos_oficiales": 4,
+     "escanos_calculados": 4,
+     "supera_barrera": true,
+     "pct_validos": 32.0
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 146133,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 16.25
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 115787,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 12.88
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 7335,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.82
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1724,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.19
+    },
+    {
+     "siglas": "PARTIDO AUTÓNOMOS",
+     "nombre": "PARTIDO AUTÓNOMOS",
+     "votos": 1446,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 1135,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 1027,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    }
+   ],
+   "peso_frente_media": 0.94
+  },
+  {
+   "codigo": 2,
+   "provincia": "Albacete",
+   "comunidad": "Castilla - La Mancha",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 385727,
+   "censo": 307988,
+   "censo_cer": 299924,
+   "censo_cera": 8064,
+   "votantes": 223917,
+   "participacion_pct": 72.7,
+   "votos_validos": 221191,
+   "votos_candidaturas": 219357,
+   "votos_blanco": 1834,
+   "votos_nulos": 2726,
+   "barrera_3pct_votos": 6636,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 54736,
+   "pct_sin_escano": 24.75,
+   "votos_por_escano": 55297.8,
+   "electores_por_escano": 76997.0,
+   "habitantes_por_escano": 96431.8,
+   "cociente_ultimo_escano": 38161.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 88299,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 39.92
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 76322,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 34.51
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 36750,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 16.61
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 15834,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 7.16
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1261,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.57
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 381,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 325,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 185,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 1.28
+  },
+  {
+   "codigo": 4,
+   "provincia": "Almería",
+   "comunidad": "Andalucía",
+   "escanos_2023": 6,
+   "escanos_2026": 6,
+   "poblacion": 740534,
+   "censo": 516114,
+   "censo_cer": 471427,
+   "censo_cera": 44687,
+   "votantes": 324405,
+   "participacion_pct": 62.86,
+   "votos_validos": 321242,
+   "votos_candidaturas": 318778,
+   "votos_blanco": 2464,
+   "votos_nulos": 3163,
+   "barrera_3pct_votos": 9638,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 25608,
+   "pct_sin_escano": 7.97,
+   "votos_por_escano": 53540.3,
+   "electores_por_escano": 86019.0,
+   "habitantes_por_escano": 123422.3,
+   "cociente_ultimo_escano": 43841.3,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 131524,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 40.94
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 93282,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 29.04
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 68364,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 21.28
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 21485,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.69
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1962,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.61
+    },
+    {
+     "siglas": "ALM",
+     "nombre": "ALMERIENSES - REGIONALISTAS PRO ALMERÍA",
+     "votos": 874,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.27
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 500,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 371,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "LB",
+     "nombre": "LIBRES",
+     "votos": 210,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 206,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    }
+   ],
+   "peso_frente_media": 1.32
+  },
+  {
+   "codigo": 1,
+   "provincia": "Araba/Álava",
+   "comunidad": "País Vasco",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 334412,
+   "censo": 260214,
+   "censo_cer": 252058,
+   "censo_cera": 8156,
+   "votantes": 170538,
+   "participacion_pct": 65.54,
+   "votos_validos": 169107,
+   "votos_candidaturas": 168385,
+   "votos_blanco": 722,
+   "votos_nulos": 1431,
+   "barrera_3pct_votos": 5074,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 30336,
+   "pct_sin_escano": 17.94,
+   "votos_por_escano": 42276.8,
+   "electores_por_escano": 65053.5,
+   "habitantes_por_escano": 83603.0,
+   "cociente_ultimo_escano": 28075.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 46775,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 27.66
+    },
+    {
+     "siglas": "EH Bildu",
+     "nombre": "EUSKAL HERRIA BILDU",
+     "votos": 32987,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 19.51
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 30212,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 17.87
+    },
+    {
+     "siglas": "EAJ-PNV",
+     "nombre": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO",
+     "votos": 28075,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 16.6
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 21561,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 12.75
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 6573,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 3.89
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 773,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.46
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 619,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.37
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 354,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.21
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 185,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 165,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 106,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    }
+   ],
+   "peso_frente_media": 1.67
+  },
+  {
+   "codigo": 33,
+   "provincia": "Asturias",
+   "comunidad": "Principado de Asturias",
+   "escanos_2023": 7,
+   "escanos_2026": 7,
+   "poblacion": 1004686,
+   "censo": 959023,
+   "censo_cer": 835593,
+   "censo_cera": 123430,
+   "votantes": 603183,
+   "participacion_pct": 62.9,
+   "votos_validos": 597032,
+   "votos_candidaturas": 590953,
+   "votos_blanco": 6079,
+   "votos_nulos": 6151,
+   "barrera_3pct_votos": 17911,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 9887,
+   "pct_sin_escano": 1.66,
+   "votos_por_escano": 85290.3,
+   "electores_por_escano": 137003.3,
+   "habitantes_por_escano": 143526.6,
+   "cociente_ultimo_escano": 70938.7,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 212816,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 35.65
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 205049,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 34.34
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 88630,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 14.85
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 74571,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 12.49
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 3167,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.53
+    },
+    {
+     "siglas": "ASTURIAS EXISTE EV",
+     "nombre": "ASTURIAS EXISTE-ESPAÑA VACIADA",
+     "votos": 2314,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.39
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 1598,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.27
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1176,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.2
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 773,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 590,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PUEDE",
+     "nombre": "PARTIDO UNIONISTA ESTADO DE ESPAÑA",
+     "votos": 269,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 0.83
+  },
+  {
+   "codigo": 5,
+   "provincia": "Ávila",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 158140,
+   "censo": 136669,
+   "censo_cer": 128300,
+   "censo_cera": 8369,
+   "votantes": 99120,
+   "participacion_pct": 72.53,
+   "votos_validos": 97956,
+   "votos_candidaturas": 97324,
+   "votos_blanco": 632,
+   "votos_nulos": 1164,
+   "barrera_3pct_votos": 2939,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 28127,
+   "pct_sin_escano": 28.71,
+   "votos_por_escano": 32652.0,
+   "electores_por_escano": 45556.3,
+   "habitantes_por_escano": 52713.3,
+   "cociente_ultimo_escano": 21184.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 42369,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 43.25
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 26828,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 27.39
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 15068,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 15.38
+    },
+    {
+     "siglas": "XAV",
+     "nombre": "POR ÁVILA",
+     "votos": 7362,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 7.52
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 5027,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.13
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 275,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.28
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 100,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 91,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 85,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 77,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 42,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.04
+    }
+   ],
+   "peso_frente_media": 2.16
+  },
+  {
+   "codigo": 6,
+   "provincia": "Badajoz",
+   "comunidad": "Extremadura",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 666971,
+   "censo": 550702,
+   "censo_cer": 538574,
+   "censo_cera": 12128,
+   "votantes": 398233,
+   "participacion_pct": 72.31,
+   "votos_validos": 391461,
+   "votos_candidaturas": 388236,
+   "votos_blanco": 3225,
+   "votos_nulos": 6772,
+   "barrera_3pct_votos": 11744,
+   "candidaturas": 9,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 33203,
+   "pct_sin_escano": 8.48,
+   "votos_por_escano": 78292.2,
+   "electores_por_escano": 110140.4,
+   "habitantes_por_escano": 133394.2,
+   "cociente_ultimo_escano": 53492.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 153473,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 39.21
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 148068,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 37.82
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 53492,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 13.66
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 26778,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.84
+    },
+    {
+     "siglas": "BQEX",
+     "nombre": "BLOQUE EXTREMEÑO",
+     "votos": 3885,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.99
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1395,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.36
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 477,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 464,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 204,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 0.9
+  },
+  {
+   "codigo": 8,
+   "provincia": "Barcelona",
+   "comunidad": "Cataluña",
+   "escanos_2023": 32,
+   "escanos_2026": 32,
+   "poblacion": 5727615,
+   "censo": 4243500,
+   "censo_cer": 4025818,
+   "censo_cera": 217682,
+   "votantes": 2688720,
+   "participacion_pct": 63.36,
+   "votos_validos": 2667478,
+   "votos_candidaturas": 2646419,
+   "votos_blanco": 21059,
+   "votos_nulos": 21242,
+   "barrera_3pct_votos": 80025,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 6,
+   "votos_sin_escano": 131929,
+   "pct_sin_escano": 4.95,
+   "votos_por_escano": 83358.7,
+   "electores_por_escano": 132609.4,
+   "habitantes_por_escano": 178988.0,
+   "cociente_ultimo_escano": 73257.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 952347,
+     "escanos_oficiales": 13,
+     "escanos_calculados": 13,
+     "supera_barrera": true,
+     "pct_validos": 35.7
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 405993,
+     "escanos_oficiales": 5,
+     "escanos_calculados": 5,
+     "supera_barrera": true,
+     "pct_validos": 15.22
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 367519,
+     "escanos_oficiales": 5,
+     "escanos_calculados": 5,
+     "supera_barrera": true,
+     "pct_validos": 13.78
+    },
+    {
+     "siglas": "ERC",
+     "nombre": "ESQUERRA REPUBLICANA DE CATALUNYA",
+     "votos": 328697,
+     "escanos_oficiales": 4,
+     "escanos_calculados": 4,
+     "supera_barrera": true,
+     "pct_validos": 12.32
+    },
+    {
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "JUNTS PER CATALUNYA - JUNTS",
+     "votos": 258159,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 9.68
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 201775,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 7.56
+    },
+    {
+     "siglas": "CUP-PR",
+     "nombre": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+     "votos": 67266,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 2.52
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 28201,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.06
+    },
+    {
+     "siglas": "PDeCAT-E-CiU",
+     "nombre": "PARTIT DEMÒCRATA EUROPEU CATALÀ-ESPAI CIU",
+     "votos": 24452,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.92
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 6048,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.23
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 3104,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 2858,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    }
+   ],
+   "peso_frente_media": 0.85
+  },
+  {
+   "codigo": 48,
+   "provincia": "Bizkaia",
+   "comunidad": "País Vasco",
+   "escanos_2023": 8,
+   "escanos_2026": 8,
+   "poblacion": 1149344,
+   "censo": 942983,
+   "censo_cer": 900563,
+   "censo_cera": 42420,
+   "votantes": 614944,
+   "participacion_pct": 65.21,
+   "votos_validos": 609693,
+   "votos_candidaturas": 606302,
+   "votos_blanco": 3391,
+   "votos_nulos": 5251,
+   "barrera_3pct_votos": 18291,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 5,
+   "votos_sin_escano": 21674,
+   "pct_sin_escano": 3.55,
+   "votos_por_escano": 76211.6,
+   "electores_por_escano": 117872.9,
+   "habitantes_por_escano": 143668.0,
+   "cociente_ultimo_escano": 62933.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "EAJ-PNV",
+     "nombre": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO",
+     "votos": 164188,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 26.93
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 157448,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 25.82
+    },
+    {
+     "siglas": "EH Bildu",
+     "nombre": "EUSKAL HERRIA BILDU",
+     "votos": 125867,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 20.64
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 70533,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 11.57
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 66592,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 10.92
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 16069,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 2.64
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 2729,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.45
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 929,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 804,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 618,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 525,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    }
+   ],
+   "peso_frente_media": 0.93
+  },
+  {
+   "codigo": 9,
+   "provincia": "Burgos",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 355045,
+   "censo": 296401,
+   "censo_cer": 277537,
+   "censo_cera": 18864,
+   "votantes": 204886,
+   "participacion_pct": 69.12,
+   "votos_validos": 202569,
+   "votos_candidaturas": 200718,
+   "votos_blanco": 1851,
+   "votos_nulos": 2317,
+   "barrera_3pct_votos": 6078,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 48614,
+   "pct_sin_escano": 24.0,
+   "votos_por_escano": 50642.3,
+   "electores_por_escano": 74100.3,
+   "habitantes_por_escano": 88761.3,
+   "cociente_ultimo_escano": 34887.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 82329,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 40.64
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 69775,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 34.45
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 25858,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 12.77
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 17508,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.64
+    },
+    {
+     "siglas": "VB",
+     "nombre": "VÍA BURGALESA",
+     "votos": 1774,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.88
+    },
+    {
+     "siglas": "EV-PCAS-TC",
+     "nombre": "ESPAÑA VACIADA-PARTIDO CASTELLANO-TIERRA COMUNERA",
+     "votos": 1184,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.58
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 943,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.47
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 490,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.24
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 354,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 349,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 154,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 1.39
+  },
+  {
+   "codigo": 10,
+   "provincia": "Cáceres",
+   "comunidad": "Extremadura",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 387805,
+   "censo": 339491,
+   "censo_cer": 322765,
+   "censo_cera": 16726,
+   "votantes": 239747,
+   "participacion_pct": 70.62,
+   "votos_validos": 235851,
+   "votos_candidaturas": 234130,
+   "votos_blanco": 1721,
+   "votos_nulos": 3896,
+   "barrera_3pct_votos": 7076,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 52805,
+   "pct_sin_escano": 22.39,
+   "votos_por_escano": 58962.8,
+   "electores_por_escano": 84872.8,
+   "habitantes_por_escano": 96951.3,
+   "cociente_ultimo_escano": 44816.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 91692,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 38.88
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 89633,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 38.0
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 32076,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 13.6
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 16354,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.93
+    },
+    {
+     "siglas": "BQEX",
+     "nombre": "BLOQUE EXTREMEÑO",
+     "votos": 1922,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.81
+    },
+    {
+     "siglas": "Somos Cc",
+     "nombre": "SOMOS CÁCERES",
+     "votos": 963,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.41
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 814,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.35
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 316,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 249,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 111,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 1.2
+  },
+  {
+   "codigo": 11,
+   "provincia": "Cádiz",
+   "comunidad": "Andalucía",
+   "escanos_2023": 9,
+   "escanos_2026": 8,
+   "poblacion": 1246781,
+   "censo": 1017958,
+   "censo_cer": 986857,
+   "censo_cera": 31101,
+   "votantes": 644801,
+   "participacion_pct": 63.34,
+   "votos_validos": 637098,
+   "votos_candidaturas": 629995,
+   "votos_blanco": 7103,
+   "votos_nulos": 7703,
+   "barrera_3pct_votos": 19113,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 18257,
+   "pct_sin_escano": 2.87,
+   "votos_por_escano": 70788.7,
+   "electores_por_escano": 113106.4,
+   "habitantes_por_escano": 138531.2,
+   "cociente_ultimo_escano": 55425.8,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 221703,
+     "escanos_oficiales": 4,
+     "escanos_calculados": 4,
+     "supera_barrera": true,
+     "pct_validos": 34.8
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 211200,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 33.15
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 96720,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 15.18
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 82115,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 12.89
+    },
+    {
+     "siglas": "ADELANTE ANDALUCÍA",
+     "nombre": "ADELANTE ANDALUCÍA",
+     "votos": 9191,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.44
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 5937,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.93
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1225,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.19
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 745,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 673,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 486,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 1.0
+  },
+  {
+   "codigo": 39,
+   "provincia": "Cantabria",
+   "comunidad": "Cantabria",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 585402,
+   "censo": 507818,
+   "censo_cer": 466589,
+   "censo_cera": 41229,
+   "votantes": 355145,
+   "participacion_pct": 69.94,
+   "votos_validos": 350150,
+   "votos_candidaturas": 346888,
+   "votos_blanco": 3262,
+   "votos_nulos": 4995,
+   "barrera_3pct_votos": 10505,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 33723,
+   "pct_sin_escano": 9.63,
+   "votos_por_escano": 70030.0,
+   "electores_por_escano": 101563.6,
+   "habitantes_por_escano": 117080.4,
+   "cociente_ultimo_escano": 49243.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 147326,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 42.08
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 116596,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 33.3
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 49243,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 14.06
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 29713,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.49
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 2089,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.6
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 790,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.23
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 598,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 533,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    }
+   ],
+   "peso_frente_media": 1.01
+  },
+  {
+   "codigo": 12,
+   "provincia": "Castelló/Castellón",
+   "comunidad": "Comunitat Valenciana",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 590616,
+   "censo": 430830,
+   "censo_cer": 419903,
+   "censo_cera": 10927,
+   "votantes": 311581,
+   "participacion_pct": 72.32,
+   "votos_validos": 307930,
+   "votos_candidaturas": 305275,
+   "votos_blanco": 2655,
+   "votos_nulos": 3651,
+   "barrera_3pct_votos": 9238,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 47530,
+   "pct_sin_escano": 15.44,
+   "votos_por_escano": 61586.0,
+   "electores_por_escano": 86166.0,
+   "habitantes_por_escano": 118123.2,
+   "cociente_ultimo_escano": 48913.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 108302,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 35.17
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 100530,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 32.65
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 48913,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 15.88
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 44187,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 14.35
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1968,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.64
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 721,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.23
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 493,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 161,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 1.15
+  },
+  {
+   "codigo": 51,
+   "provincia": "Ceuta",
+   "comunidad": "Ciudad de Ceuta",
+   "escanos_2023": 1,
+   "escanos_2026": 1,
+   "poblacion": 83117,
+   "censo": 63310,
+   "censo_cer": 60335,
+   "censo_cera": 2975,
+   "votantes": 33674,
+   "participacion_pct": 53.19,
+   "votos_validos": 33321,
+   "votos_candidaturas": 32993,
+   "votos_blanco": 328,
+   "votos_nulos": 353,
+   "barrera_3pct_votos": null,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 1,
+   "votos_sin_escano": 20075,
+   "pct_sin_escano": 60.25,
+   "votos_por_escano": 33321.0,
+   "electores_por_escano": 63310.0,
+   "habitantes_por_escano": 83117.0,
+   "cociente_ultimo_escano": 12918.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 12918,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 38.77
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 11332,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 34.01
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 7752,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 23.26
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 821,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 2.46
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 53,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "LB",
+     "nombre": "LIBRES",
+     "votos": 53,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 33,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 31,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 0.09
+    }
+   ],
+   "peso_frente_media": 2.12
+  },
+  {
+   "codigo": 13,
+   "provincia": "Ciudad Real",
+   "comunidad": "Castilla - La Mancha",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 490806,
+   "censo": 391495,
+   "censo_cer": 384479,
+   "censo_cera": 7016,
+   "votantes": 286895,
+   "participacion_pct": 73.28,
+   "votos_validos": 282979,
+   "votos_candidaturas": 280626,
+   "votos_blanco": 2353,
+   "votos_nulos": 3916,
+   "barrera_3pct_votos": 8490,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 19769,
+   "pct_sin_escano": 6.99,
+   "votos_por_escano": 56595.8,
+   "electores_por_escano": 78299.0,
+   "habitantes_por_escano": 98161.2,
+   "cociente_ultimo_escano": 46046.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 114709,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 40.54
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 100102,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 35.37
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 46046,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 16.27
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 17405,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.15
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1319,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.47
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 447,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 365,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 233,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 1.25
+  },
+  {
+   "codigo": 14,
+   "provincia": "Córdoba",
+   "comunidad": "Andalucía",
+   "escanos_2023": 6,
+   "escanos_2026": 6,
+   "poblacion": 772464,
+   "censo": 645288,
+   "censo_cer": 626123,
+   "censo_cera": 19165,
+   "votantes": 455564,
+   "participacion_pct": 70.6,
+   "votos_validos": 448602,
+   "votos_candidaturas": 444254,
+   "votos_blanco": 4348,
+   "votos_nulos": 6962,
+   "barrera_3pct_votos": 13459,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 6078,
+   "pct_sin_escano": 1.35,
+   "votos_por_escano": 74767.0,
+   "electores_por_escano": 107548.0,
+   "habitantes_por_escano": 128744.0,
+   "cociente_ultimo_escano": 61594.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 169976,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 37.89
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 144080,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 32.12
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 62526,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 13.94
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 61594,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 13.73
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 2699,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.6
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 942,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.21
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 746,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 701,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 598,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 392,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    }
+   ],
+   "peso_frente_media": 0.94
+  },
+  {
+   "codigo": 16,
+   "provincia": "Cuenca",
+   "comunidad": "Castilla - La Mancha",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 195215,
+   "censo": 152694,
+   "censo_cer": 149438,
+   "censo_cera": 3256,
+   "votantes": 115280,
+   "participacion_pct": 75.5,
+   "votos_validos": 113808,
+   "votos_candidaturas": 112839,
+   "votos_blanco": 969,
+   "votos_nulos": 1472,
+   "barrera_3pct_votos": 3415,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 25056,
+   "pct_sin_escano": 22.02,
+   "votos_por_escano": 37936.0,
+   "electores_por_escano": 50898.0,
+   "habitantes_por_escano": 65071.7,
+   "cociente_ultimo_escano": 22627.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 45255,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 39.76
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 42528,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 37.37
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 17700,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 15.55
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 6325,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.56
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 387,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.34
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 207,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 168,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 111,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 100,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 58,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 1.86
+  },
+  {
+   "codigo": 20,
+   "provincia": "Gipuzkoa",
+   "comunidad": "País Vasco",
+   "escanos_2023": 6,
+   "escanos_2026": 6,
+   "poblacion": 724418,
+   "censo": 585873,
+   "censo_cer": 556075,
+   "censo_cera": 29798,
+   "votantes": 378965,
+   "participacion_pct": 64.68,
+   "votos_validos": 376621,
+   "votos_candidaturas": 374616,
+   "votos_blanco": 2005,
+   "votos_nulos": 2344,
+   "barrera_3pct_votos": 11299,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 84560,
+   "pct_sin_escano": 22.45,
+   "votos_por_escano": 62770.2,
+   "electores_por_escano": 97645.5,
+   "habitantes_por_escano": 120736.3,
+   "cociente_ultimo_escano": 42513.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "EH Bildu",
+     "nombre": "EUSKAL HERRIA BILDU",
+     "votos": 117321,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 31.15
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 87709,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 23.29
+    },
+    {
+     "siglas": "EAJ-PNV",
+     "nombre": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO",
+     "votos": 85026,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 22.58
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 40081,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 10.64
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 32721,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.69
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 7877,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 2.09
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1568,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.42
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 933,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.25
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 530,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 442,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 259,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 149,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.04
+    }
+   ],
+   "peso_frente_media": 1.12
+  },
+  {
+   "codigo": 17,
+   "provincia": "Girona",
+   "comunidad": "Cataluña",
+   "escanos_2023": 6,
+   "escanos_2026": 6,
+   "poblacion": 793478,
+   "censo": 546370,
+   "censo_cer": 522354,
+   "censo_cera": 24016,
+   "votantes": 327159,
+   "participacion_pct": 59.88,
+   "votos_validos": 322988,
+   "votos_candidaturas": 320007,
+   "votos_blanco": 2981,
+   "votos_nulos": 4171,
+   "barrera_3pct_votos": 9690,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 80433,
+   "pct_sin_escano": 24.9,
+   "votos_por_escano": 53831.3,
+   "electores_por_escano": 91061.7,
+   "habitantes_por_escano": 132246.3,
+   "cociente_ultimo_escano": 31625.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 93448,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 28.93
+    },
+    {
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "JUNTS PER CATALUNYA - JUNTS",
+     "votos": 63251,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 19.58
+    },
+    {
+     "siglas": "ERC",
+     "nombre": "ESQUERRA REPUBLICANA DE CATALUNYA",
+     "votos": 47531,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 14.72
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 35344,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 10.94
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 31341,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 9.7
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 22706,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 7.03
+    },
+    {
+     "siglas": "CUP-PR",
+     "nombre": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+     "votos": 18229,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.64
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 3531,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.09
+    },
+    {
+     "siglas": "PDeCAT-E-CiU",
+     "nombre": "PARTIT DEMÒCRATA EUROPEU CATALÀ-ESPAI CIU",
+     "votos": 3388,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.05
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 570,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 420,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 248,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 1.31
+  },
+  {
+   "codigo": 18,
+   "provincia": "Granada",
+   "comunidad": "Andalucía",
+   "escanos_2023": 7,
+   "escanos_2026": 7,
+   "poblacion": 921987,
+   "censo": 765478,
+   "censo_cer": 712178,
+   "censo_cera": 53300,
+   "votantes": 509486,
+   "participacion_pct": 66.56,
+   "votos_validos": 502845,
+   "votos_candidaturas": 498788,
+   "votos_blanco": 4057,
+   "votos_nulos": 6641,
+   "barrera_3pct_votos": 15086,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 7283,
+   "pct_sin_escano": 1.45,
+   "votos_por_escano": 71835.0,
+   "electores_por_escano": 109354.0,
+   "habitantes_por_escano": 131712.4,
+   "cociente_ultimo_escano": 58567.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 185996,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 36.99
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 165862,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 32.98
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 81080,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 16.12
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 58567,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 11.65
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 3143,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.63
+    },
+    {
+     "siglas": "JxG",
+     "nombre": "JUNTOS POR GRANADA",
+     "votos": 1218,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.24
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 765,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 695,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 658,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 461,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 343,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 0.98
+  },
+  {
+   "codigo": 19,
+   "provincia": "Guadalajara",
+   "comunidad": "Castilla - La Mancha",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 268127,
+   "censo": 196983,
+   "censo_cer": 191796,
+   "censo_cera": 5187,
+   "votantes": 142744,
+   "participacion_pct": 72.47,
+   "votos_validos": 140913,
+   "votos_candidaturas": 139770,
+   "votos_blanco": 1143,
+   "votos_nulos": 1831,
+   "barrera_3pct_votos": 4228,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 14970,
+   "pct_sin_escano": 10.62,
+   "votos_por_escano": 46971.0,
+   "electores_por_escano": 65661.0,
+   "habitantes_por_escano": 89375.7,
+   "cociente_ultimo_escano": 27126.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 51195,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 36.33
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 46479,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 32.98
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 27126,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 19.25
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 12907,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 9.16
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1039,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.74
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 304,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.22
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 249,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 191,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 162,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 118,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 1.5
+  },
+  {
+   "codigo": 21,
+   "provincia": "Huelva",
+   "comunidad": "Andalucía",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 528763,
+   "censo": 402504,
+   "censo_cer": 394310,
+   "censo_cera": 8194,
+   "votantes": 260861,
+   "participacion_pct": 64.81,
+   "votos_validos": 256804,
+   "votos_candidaturas": 254394,
+   "votos_blanco": 2410,
+   "votos_nulos": 4057,
+   "barrera_3pct_votos": 7705,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 30931,
+   "pct_sin_escano": 12.04,
+   "votos_por_escano": 51360.8,
+   "electores_por_escano": 80500.8,
+   "habitantes_por_escano": 105752.6,
+   "cociente_ultimo_escano": 37572.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 93565,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 36.43
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 92326,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 35.95
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 37572,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 14.63
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 26752,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 10.42
+    },
+    {
+     "siglas": "XH",
+     "nombre": "POR HUELVA",
+     "votos": 1931,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.75
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1663,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.65
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 368,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 217,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 1.37
+  },
+  {
+   "codigo": 22,
+   "provincia": "Huesca",
+   "comunidad": "Aragón",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 225456,
+   "censo": 173391,
+   "censo_cer": 165249,
+   "censo_cera": 8142,
+   "votantes": 121148,
+   "participacion_pct": 69.87,
+   "votos_validos": 119895,
+   "votos_candidaturas": 118678,
+   "votos_blanco": 1217,
+   "votos_nulos": 1253,
+   "barrera_3pct_votos": 3597,
+   "candidaturas": 13,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 32588,
+   "pct_sin_escano": 27.18,
+   "votos_por_escano": 39965.0,
+   "electores_por_escano": 57797.0,
+   "habitantes_por_escano": 75152.0,
+   "cociente_ultimo_escano": 22891.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 45783,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 38.19
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 40307,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 33.62
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 15155,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 12.64
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 13774,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 11.49
+    },
+    {
+     "siglas": "EXISTE",
+     "nombre": "ARAGÓN EXISTE - COALICIÓN EXISTE",
+     "votos": 1312,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.09
+    },
+    {
+     "siglas": "PAR",
+     "nombre": "PARTIDO ARAGONÉS",
+     "votos": 717,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.6
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 498,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.42
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 475,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.4
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 258,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.22
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 137,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 114,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "F.I.A.",
+     "nombre": "FEDERACIÓN DE LOS INDEPENDIENTES DE ARAGÓN",
+     "votos": 84,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 64,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 1.76
+  },
+  {
+   "codigo": 7,
+   "provincia": "Illes Balears",
+   "comunidad": "Illes Balears",
+   "escanos_2023": 8,
+   "escanos_2026": 8,
+   "poblacion": 1176659,
+   "censo": 828755,
+   "censo_cer": 795915,
+   "censo_cera": 32840,
+   "votantes": 508233,
+   "participacion_pct": 61.32,
+   "votos_validos": 503280,
+   "votos_candidaturas": 498576,
+   "votos_blanco": 4704,
+   "votos_nulos": 4953,
+   "barrera_3pct_votos": 15099,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 7453,
+   "pct_sin_escano": 1.48,
+   "votos_por_escano": 62910.0,
+   "electores_por_escano": 103594.4,
+   "habitantes_por_escano": 147082.4,
+   "cociente_ultimo_escano": 50595.3,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 179303,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 35.63
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 151786,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 30.16
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 83487,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 16.59
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 76547,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 15.21
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 4969,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.99
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1039,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.21
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 726,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 719,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    }
+   ],
+   "peso_frente_media": 1.12
+  },
+  {
+   "codigo": 23,
+   "provincia": "Jaén",
+   "comunidad": "Andalucía",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 623761,
+   "censo": 518371,
+   "censo_cer": 504825,
+   "censo_cera": 13546,
+   "votantes": 373657,
+   "participacion_pct": 72.08,
+   "votos_validos": 368731,
+   "votos_candidaturas": 366234,
+   "votos_blanco": 2497,
+   "votos_nulos": 4926,
+   "barrera_3pct_votos": 11062,
+   "candidaturas": 9,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 40398,
+   "pct_sin_escano": 10.96,
+   "votos_por_escano": 73746.2,
+   "electores_por_escano": 103674.2,
+   "habitantes_por_escano": 124752.2,
+   "cociente_ultimo_escano": 54400.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 137617,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 37.32
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 133819,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 36.29
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 54400,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 14.75
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 29461,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 7.99
+    },
+    {
+     "siglas": "JM+",
+     "nombre": "JAÉN MERECE MÁS",
+     "votos": 8293,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 2.25
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1671,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.45
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 410,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 360,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 203,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    }
+   ],
+   "peso_frente_media": 0.96
+  },
+  {
+   "codigo": 26,
+   "provincia": "La Rioja",
+   "comunidad": "La Rioja",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 319892,
+   "censo": 252091,
+   "censo_cer": 234383,
+   "censo_cera": 17708,
+   "votantes": 176945,
+   "participacion_pct": 70.19,
+   "votos_validos": 174663,
+   "votos_candidaturas": 173055,
+   "votos_blanco": 1608,
+   "votos_nulos": 2282,
+   "barrera_3pct_votos": 5240,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 31018,
+   "pct_sin_escano": 17.76,
+   "votos_por_escano": 43665.8,
+   "electores_por_escano": 63022.8,
+   "habitantes_por_escano": 79973.0,
+   "cociente_ultimo_escano": 31161.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 79715,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 45.64
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 62322,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 35.68
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 17056,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 9.77
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 11470,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.57
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 723,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.41
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 608,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.35
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 295,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "3e",
+     "nombre": "TERCERA EDAD EN ACCIÓN",
+     "votos": 286,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 232,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 224,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 124,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 1.62
+  },
+  {
+   "codigo": 35,
+   "provincia": "Las Palmas",
+   "comunidad": "Canarias",
+   "escanos_2023": 8,
+   "escanos_2026": 8,
+   "poblacion": 1129395,
+   "censo": 898882,
+   "censo_cer": 843241,
+   "censo_cera": 55641,
+   "votantes": 534912,
+   "participacion_pct": 59.51,
+   "votos_validos": 529337,
+   "votos_candidaturas": 526275,
+   "votos_blanco": 3062,
+   "votos_nulos": 5575,
+   "barrera_3pct_votos": 15881,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 82035,
+   "pct_sin_escano": 15.5,
+   "votos_por_escano": 66167.1,
+   "electores_por_escano": 112360.3,
+   "habitantes_por_escano": 141174.4,
+   "cociente_ultimo_escano": 45619.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 175671,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 33.19
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 136857,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 25.85
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 77343,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 14.61
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 54369,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 10.27
+    },
+    {
+     "siglas": "NC-bc",
+     "nombre": "NUEVA CANARIAS - BLOQUE CANARISTA",
+     "votos": 42430,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.02
+    },
+    {
+     "siglas": "CCa",
+     "nombre": "COALICIÓN CANARIA",
+     "votos": 33558,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.34
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 3570,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.67
+    },
+    {
+     "siglas": "AHORA CANARIAS-PCPC",
+     "nombre": "AHORA CANARIAS-PARTIDO COMUNISTA DEL PUEBLO CANARIO",
+     "votos": 883,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 635,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 563,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 396,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 1.07
+  },
+  {
+   "codigo": 24,
+   "provincia": "León",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 448179,
+   "censo": 422917,
+   "censo_cer": 374272,
+   "censo_cera": 48645,
+   "votantes": 277726,
+   "participacion_pct": 65.67,
+   "votos_validos": 275240,
+   "votos_candidaturas": 273663,
+   "votos_blanco": 1577,
+   "votos_nulos": 2486,
+   "barrera_3pct_votos": 8258,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 79480,
+   "pct_sin_escano": 28.88,
+   "votos_por_escano": 68810.0,
+   "electores_por_escano": 105729.3,
+   "habitantes_por_escano": 112044.8,
+   "cociente_ultimo_escano": 46289.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 101605,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 36.92
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 92578,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 33.64
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 35451,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 12.88
+    },
+    {
+     "siglas": "U.P.L.",
+     "nombre": "UNIÓN DEL PUEBLO LEONÉS",
+     "votos": 22675,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.24
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 18577,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.75
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 895,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.33
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 541,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.2
+    },
+    {
+     "siglas": "ESPAÑA VACIADA",
+     "nombre": "ESPAÑA VACIADA",
+     "votos": 486,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 319,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PREPAL",
+     "nombre": "PARTIDO REGIONALISTA DEL PAÍS LEONÉS",
+     "votos": 309,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 155,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 72,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.03
+    }
+   ],
+   "peso_frente_media": 1.03
+  },
+  {
+   "codigo": 25,
+   "provincia": "Lleida",
+   "comunidad": "Cataluña",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 441443,
+   "censo": 317225,
+   "censo_cer": 298948,
+   "censo_cera": 18277,
+   "votantes": 186929,
+   "participacion_pct": 58.93,
+   "votos_validos": 184539,
+   "votos_candidaturas": 182480,
+   "votos_blanco": 2059,
+   "votos_nulos": 2390,
+   "barrera_3pct_votos": 5537,
+   "candidaturas": 13,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 60507,
+   "pct_sin_escano": 32.79,
+   "votos_por_escano": 46134.8,
+   "electores_por_escano": 79306.3,
+   "habitantes_por_escano": 110360.8,
+   "cociente_ultimo_escano": 27207.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 54414,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 29.49
+    },
+    {
+     "siglas": "ERC",
+     "nombre": "ESQUERRA REPUBLICANA DE CATALUNYA",
+     "votos": 34331,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 18.6
+    },
+    {
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "JUNTS PER CATALUNYA - JUNTS",
+     "votos": 33228,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 18.01
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 23699,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 12.84
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 14561,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 7.89
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 12560,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.81
+    },
+    {
+     "siglas": "CUP-PR",
+     "nombre": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+     "votos": 5449,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 2.95
+    },
+    {
+     "siglas": "PDeCAT-E-CiU",
+     "nombre": "PARTIT DEMÒCRATA EUROPEU CATALÀ-ESPAI CIU",
+     "votos": 1865,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.01
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1352,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.73
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 462,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.25
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 247,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 192,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 120,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 1.53
+  },
+  {
+   "codigo": 27,
+   "provincia": "Lugo",
+   "comunidad": "Galicia",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 323989,
+   "censo": 337755,
+   "censo_cer": 268657,
+   "censo_cera": 69098,
+   "votantes": 200709,
+   "participacion_pct": 59.42,
+   "votos_validos": 198566,
+   "votos_candidaturas": 197315,
+   "votos_blanco": 1251,
+   "votos_nulos": 2143,
+   "barrera_3pct_votos": 5957,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 37383,
+   "pct_sin_escano": 18.83,
+   "votos_por_escano": 49641.5,
+   "electores_por_escano": 84438.8,
+   "habitantes_por_escano": 80997.3,
+   "cociente_ultimo_escano": 33256.3,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 99769,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 50.24
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 60163,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 30.3
+    },
+    {
+     "siglas": "B.N.G.",
+     "nombre": "BLOQUE NACIONALISTA GALEGO",
+     "votos": 17197,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.66
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 10287,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.18
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 8643,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 4.35
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 645,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.32
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 233,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 149,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 116,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 113,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    }
+   ],
+   "peso_frente_media": 1.42
+  },
+  {
+   "codigo": 28,
+   "provincia": "Madrid",
+   "comunidad": "Comunidad de Madrid",
+   "escanos_2023": 37,
+   "escanos_2026": 38,
+   "poblacion": 6750336,
+   "censo": 5224561,
+   "censo_cer": 4848057,
+   "censo_cera": 376504,
+   "votantes": 3639500,
+   "participacion_pct": 69.66,
+   "votos_validos": 3608673,
+   "votos_candidaturas": 3579713,
+   "votos_blanco": 28960,
+   "votos_nulos": 30827,
+   "barrera_3pct_votos": 108261,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 47987,
+   "pct_sin_escano": 1.33,
+   "votos_por_escano": 97531.7,
+   "electores_por_escano": 141204.4,
+   "habitantes_por_escano": 182441.5,
+   "cociente_ultimo_escano": 91448.9,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 1463183,
+     "escanos_oficiales": 16,
+     "escanos_calculados": 16,
+     "supera_barrera": true,
+     "pct_validos": 40.55
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 1004599,
+     "escanos_oficiales": 10,
+     "escanos_calculados": 10,
+     "supera_barrera": true,
+     "pct_validos": 27.84
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 557780,
+     "escanos_oficiales": 6,
+     "escanos_calculados": 6,
+     "supera_barrera": true,
+     "pct_validos": 15.46
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 506164,
+     "escanos_oficiales": 5,
+     "escanos_calculados": 5,
+     "supera_barrera": true,
+     "pct_validos": 14.03
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 21742,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.6
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 7652,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.21
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 6749,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.19
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 3784,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 3407,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "PH",
+     "nombre": "PARTIDO HUMANISTA",
+     "votos": 2902,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 1751,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 0.72
+  },
+  {
+   "codigo": 29,
+   "provincia": "Málaga",
+   "comunidad": "Andalucía",
+   "escanos_2023": 11,
+   "escanos_2026": 11,
+   "poblacion": 1717504,
+   "censo": 1239846,
+   "censo_cer": 1178993,
+   "censo_cera": 60853,
+   "votantes": 798557,
+   "participacion_pct": 64.41,
+   "votos_validos": 788338,
+   "votos_candidaturas": 780829,
+   "votos_blanco": 7509,
+   "votos_nulos": 10219,
+   "barrera_3pct_votos": 23651,
+   "candidaturas": 9,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 13247,
+   "pct_sin_escano": 1.68,
+   "votos_por_escano": 71667.1,
+   "electores_por_escano": 112713.3,
+   "habitantes_por_escano": 156136.7,
+   "cociente_ultimo_escano": 60400.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 302000,
+     "escanos_oficiales": 5,
+     "escanos_calculados": 5,
+     "supera_barrera": true,
+     "pct_validos": 38.31
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 239172,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 30.34
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 129758,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 16.46
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 96652,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 12.26
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 8487,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.08
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1662,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.21
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 1519,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.19
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 888,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 691,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    }
+   ],
+   "peso_frente_media": 0.98
+  },
+  {
+   "codigo": 52,
+   "provincia": "Melilla",
+   "comunidad": "Ciudad de Melilla",
+   "escanos_2023": 1,
+   "escanos_2026": 1,
+   "poblacion": 85170,
+   "censo": 61118,
+   "censo_cer": 55150,
+   "censo_cera": 5968,
+   "votantes": 27649,
+   "participacion_pct": 45.24,
+   "votos_validos": 27349,
+   "votos_candidaturas": 27096,
+   "votos_blanco": 253,
+   "votos_nulos": 300,
+   "barrera_3pct_votos": null,
+   "candidaturas": 8,
+   "candidaturas_con_escano": 1,
+   "votos_sin_escano": 13650,
+   "pct_sin_escano": 49.91,
+   "votos_por_escano": 27349.0,
+   "electores_por_escano": 61118.0,
+   "habitantes_por_escano": 85170.0,
+   "cociente_ultimo_escano": 13446.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 13446,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 49.16
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 6943,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 25.39
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 4359,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 15.94
+    },
+    {
+     "siglas": "CpM",
+     "nombre": "COALICIÓN POR MELILLA",
+     "votos": 1298,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 4.75
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 827,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 3.02
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 160,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 0.59
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 40,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 23,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 2.58
+  },
+  {
+   "codigo": 30,
+   "provincia": "Murcia",
+   "comunidad": "Región de Murcia",
+   "escanos_2023": 10,
+   "escanos_2026": 10,
+   "poblacion": 1531878,
+   "censo": 1099703,
+   "censo_cer": 1061943,
+   "censo_cera": 37760,
+   "votantes": 755255,
+   "participacion_pct": 68.68,
+   "votos_validos": 747797,
+   "votos_candidaturas": 742763,
+   "votos_blanco": 5034,
+   "votos_nulos": 7458,
+   "barrera_3pct_votos": 22434,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 10879,
+   "pct_sin_escano": 1.45,
+   "votos_por_escano": 74779.7,
+   "electores_por_escano": 109970.3,
+   "habitantes_por_escano": 153187.8,
+   "cociente_ultimo_escano": 63070.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 307972,
+     "escanos_oficiales": 4,
+     "escanos_calculados": 4,
+     "supera_barrera": true,
+     "pct_validos": 41.18
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 189210,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 25.3
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 163124,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 21.81
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 71578,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 9.57
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 5063,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.68
+    },
+    {
+     "siglas": "POR MI REGIÓN",
+     "nombre": "POR MI REGIÓN",
+     "votos": 1698,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.23
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 1377,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1201,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 546,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 453,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 376,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    },
+    {
+     "siglas": "+RDS+",
+     "nombre": "REFERÉNDUM SISTEMA DINERO",
+     "votos": 165,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.02
+    }
+   ],
+   "peso_frente_media": 0.94
+  },
+  {
+   "codigo": 31,
+   "provincia": "Navarra",
+   "comunidad": "Comunidad Foral de Navarra",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 664117,
+   "censo": 519918,
+   "censo_cer": 489978,
+   "censo_cera": 29940,
+   "votantes": 345095,
+   "participacion_pct": 66.37,
+   "votos_validos": 341844,
+   "votos_candidaturas": 338954,
+   "votos_blanco": 2890,
+   "votos_nulos": 3251,
+   "barrera_3pct_votos": 10256,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 77125,
+   "pct_sin_escano": 22.56,
+   "votos_por_escano": 68368.8,
+   "electores_por_escano": 103983.6,
+   "habitantes_por_escano": 132823.4,
+   "cociente_ultimo_escano": 46776.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 93553,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 27.37
+    },
+    {
+     "siglas": "EH Bildu",
+     "nombre": "EUSKAL HERRIA BILDU",
+     "votos": 58954,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 17.25
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 57134,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 16.71
+    },
+    {
+     "siglas": "U.P.N.",
+     "nombre": "UNION DEL PUEBLO NAVARRO",
+     "votos": 52188,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 15.27
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 43922,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 12.85
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 19491,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.7
+    },
+    {
+     "siglas": "GBAI",
+     "nombre": "GEROA BAI",
+     "votos": 9938,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 2.91
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1530,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.45
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 1002,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.29
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 679,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.2
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 311,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 252,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 1.03
+  },
+  {
+   "codigo": 32,
+   "provincia": "Ourense",
+   "comunidad": "Galicia",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 304280,
+   "censo": 355765,
+   "censo_cer": 252827,
+   "censo_cera": 102938,
+   "votantes": 188065,
+   "participacion_pct": 52.86,
+   "votos_validos": 186271,
+   "votos_candidaturas": 185162,
+   "votos_blanco": 1109,
+   "votos_nulos": 1794,
+   "barrera_3pct_votos": 5589,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 35945,
+   "pct_sin_escano": 19.3,
+   "votos_por_escano": 46567.8,
+   "electores_por_escano": 88941.3,
+   "habitantes_por_escano": 76070.0,
+   "cociente_ultimo_escano": 31060.7,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 93182,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 50.02
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 56035,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 30.08
+    },
+    {
+     "siglas": "B.N.G.",
+     "nombre": "BLOQUE NACIONALISTA GALEGO",
+     "votos": 15317,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.22
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 10171,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.46
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 9080,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 4.87
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 700,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.38
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 182,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "CCD",
+     "nombre": "COALICIÓN DE CENTRO DEMOCRÁTICO",
+     "votos": 153,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 144,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 101,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 97,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 1.51
+  },
+  {
+   "codigo": 34,
+   "provincia": "Palencia",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 158008,
+   "censo": 137642,
+   "censo_cer": 130129,
+   "censo_cera": 7513,
+   "votantes": 98079,
+   "participacion_pct": 71.26,
+   "votos_validos": 96962,
+   "votos_candidaturas": 96129,
+   "votos_blanco": 833,
+   "votos_nulos": 1117,
+   "barrera_3pct_votos": 2909,
+   "candidaturas": 14,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 21807,
+   "pct_sin_escano": 22.49,
+   "votos_por_escano": 32320.7,
+   "electores_por_escano": 45880.7,
+   "habitantes_por_escano": 52669.3,
+   "cociente_ultimo_escano": 20354.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 40709,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 41.98
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 33613,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 34.67
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 12504,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 12.9
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 5877,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 6.06
+    },
+    {
+     "siglas": "VP",
+     "nombre": "VAMOS PALENCIA",
+     "votos": 1917,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.98
+    },
+    {
+     "siglas": "ESPAÑA VACIADA",
+     "nombre": "ESPAÑA VACIADA",
+     "votos": 384,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.4
+    },
+    {
+     "siglas": "GITV",
+     "nombre": "GRUPO INDEPENDIENTE PALENCIA TIERRA VIVA",
+     "votos": 366,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.38
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 295,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.3
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 139,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 99,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 80,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 71,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 42,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.04
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 33,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.03
+    }
+   ],
+   "peso_frente_media": 2.18
+  },
+  {
+   "codigo": 36,
+   "provincia": "Pontevedra",
+   "comunidad": "Galicia",
+   "escanos_2023": 7,
+   "escanos_2026": 7,
+   "poblacion": 943015,
+   "censo": 909434,
+   "censo_cer": 772695,
+   "censo_cera": 136739,
+   "votantes": 579125,
+   "participacion_pct": 63.68,
+   "votos_validos": 573124,
+   "votos_candidaturas": 569259,
+   "votos_blanco": 3865,
+   "votos_nulos": 6001,
+   "barrera_3pct_votos": 17194,
+   "candidaturas": 9,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 86249,
+   "pct_sin_escano": 15.05,
+   "votos_por_escano": 81874.9,
+   "electores_por_escano": 129919.1,
+   "habitantes_por_escano": 134716.4,
+   "cociente_ultimo_escano": 59912.3,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 227658,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 39.72
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 179737,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 31.36
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 75615,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 13.19
+    },
+    {
+     "siglas": "B.N.G.",
+     "nombre": "BLOQUE NACIONALISTA GALEGO",
+     "votos": 53828,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 9.39
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 27539,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 4.81
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 3003,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.52
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 884,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 510,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 485,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    }
+   ],
+   "peso_frente_media": 0.86
+  },
+  {
+   "codigo": 37,
+   "provincia": "Salamanca",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 4,
+   "escanos_2026": 4,
+   "poblacion": 325898,
+   "censo": 300506,
+   "censo_cer": 268868,
+   "censo_cera": 31638,
+   "votantes": 201419,
+   "participacion_pct": 67.03,
+   "votos_validos": 199110,
+   "votos_candidaturas": 197461,
+   "votos_blanco": 1649,
+   "votos_nulos": 2309,
+   "barrera_3pct_votos": 5974,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 43425,
+   "pct_sin_escano": 21.81,
+   "votos_por_escano": 49777.5,
+   "electores_por_escano": 75126.5,
+   "habitantes_por_escano": 81474.5,
+   "cociente_ultimo_escano": 31106.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 93318,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 46.87
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 60718,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 30.49
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 29203,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 14.67
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 11012,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.53
+    },
+    {
+     "siglas": "ESPAÑA VACIADA",
+     "nombre": "ESPAÑA VACIADA",
+     "votos": 1062,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.53
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 631,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.32
+    },
+    {
+     "siglas": "PREPAL",
+     "nombre": "PARTIDO REGIONALISTA DEL PAÍS LEONÉS",
+     "votos": 489,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.25
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 325,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 278,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 205,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 140,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 80,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.04
+    }
+   ],
+   "peso_frente_media": 1.42
+  },
+  {
+   "codigo": 38,
+   "provincia": "Santa Cruz de Tenerife",
+   "comunidad": "Canarias",
+   "escanos_2023": 7,
+   "escanos_2026": 7,
+   "poblacion": 1048306,
+   "censo": 881217,
+   "censo_cer": 774004,
+   "censo_cera": 107213,
+   "votantes": 500777,
+   "participacion_pct": 56.83,
+   "votos_validos": 494373,
+   "votos_candidaturas": 489285,
+   "votos_blanco": 5088,
+   "votos_nulos": 6404,
+   "barrera_3pct_votos": 14832,
+   "candidaturas": 9,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 66120,
+   "pct_sin_escano": 13.37,
+   "votos_por_escano": 70624.7,
+   "electores_por_escano": 125888.1,
+   "habitantes_por_escano": 149758.0,
+   "cociente_ultimo_escano": 55196.7,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 174770,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 35.35
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 165590,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 33.49
+    },
+    {
+     "siglas": "CCa",
+     "nombre": "COALICIÓN CANARIA",
+     "votos": 82805,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 16.75
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 53632,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 10.85
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 6147,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.24
+    },
+    {
+     "siglas": "NC-bc",
+     "nombre": "NUEVA CANARIAS - BLOQUE CANARISTA",
+     "votos": 3165,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.64
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1619,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.33
+    },
+    {
+     "siglas": "AHORA CANARIAS-PCPC",
+     "nombre": "AHORA CANARIAS-PARTIDO COMUNISTA DEL PUEBLO CANARIO",
+     "votos": 791,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 766,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    }
+   ],
+   "peso_frente_media": 1.0
+  },
+  {
+   "codigo": 40,
+   "provincia": "Segovia",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 153803,
+   "censo": 119454,
+   "censo_cer": 115809,
+   "censo_cera": 3645,
+   "votantes": 89945,
+   "participacion_pct": 75.3,
+   "votos_validos": 88613,
+   "votos_candidaturas": 87738,
+   "votos_blanco": 875,
+   "votos_nulos": 1332,
+   "barrera_3pct_votos": 2659,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 20731,
+   "pct_sin_escano": 23.39,
+   "votos_por_escano": 29537.7,
+   "electores_por_escano": 39818.0,
+   "habitantes_por_escano": 51267.7,
+   "cociente_ultimo_escano": 19947.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 39894,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 45.02
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 27113,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 30.6
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 12510,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 14.12
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 7137,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.05
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 307,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.35
+    },
+    {
+     "siglas": "3e",
+     "nombre": "TERCERA EDAD EN ACCIÓN",
+     "votos": 198,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.22
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 183,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.21
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 136,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 102,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 94,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 64,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 2.39
+  },
+  {
+   "codigo": 41,
+   "provincia": "Sevilla",
+   "comunidad": "Andalucía",
+   "escanos_2023": 12,
+   "escanos_2026": 12,
+   "poblacion": 1948393,
+   "censo": 1564082,
+   "censo_cer": 1525548,
+   "censo_cera": 38534,
+   "votantes": 1075133,
+   "participacion_pct": 68.74,
+   "votos_validos": 1059358,
+   "votos_candidaturas": 1048407,
+   "votos_blanco": 10951,
+   "votos_nulos": 15775,
+   "barrera_3pct_votos": 31781,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 17152,
+   "pct_sin_escano": 1.62,
+   "votos_por_escano": 88279.8,
+   "electores_por_escano": 130340.2,
+   "habitantes_por_escano": 162366.1,
+   "cociente_ultimo_escano": 74372.5,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 387760,
+     "escanos_oficiales": 5,
+     "escanos_calculados": 5,
+     "supera_barrera": true,
+     "pct_validos": 36.6
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 353663,
+     "escanos_oficiales": 4,
+     "escanos_calculados": 4,
+     "supera_barrera": true,
+     "pct_validos": 33.38
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 148745,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 14.04
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 141087,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 13.32
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 9288,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.88
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1950,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 1765,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.17
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 1522,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.14
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 1034,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 912,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.09
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 681,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    }
+   ],
+   "peso_frente_media": 0.8
+  },
+  {
+   "codigo": 42,
+   "provincia": "Soria",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 2,
+   "escanos_2026": 2,
+   "poblacion": 88377,
+   "censo": 75768,
+   "censo_cer": 68463,
+   "censo_cera": 7305,
+   "votantes": 51157,
+   "participacion_pct": 67.52,
+   "votos_validos": 50769,
+   "votos_candidaturas": 50484,
+   "votos_blanco": 285,
+   "votos_nulos": 388,
+   "barrera_3pct_votos": 1524,
+   "candidaturas": 10,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 16623,
+   "pct_sin_escano": 32.74,
+   "votos_por_escano": 25384.5,
+   "electores_por_escano": 37884.0,
+   "habitantes_por_escano": 44188.5,
+   "cociente_ultimo_escano": 14966.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 18895,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 37.22
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 14966,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 29.48
+    },
+    {
+     "siglas": "SY",
+     "nombre": "SORIA ¡YA!",
+     "votos": 9697,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 19.1
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 4978,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 9.81
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 1711,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 3.37
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 94,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.19
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 68,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 43,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 23,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 9,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.02
+    }
+   ],
+   "peso_frente_media": 2.78
+  },
+  {
+   "codigo": 43,
+   "provincia": "Tarragona",
+   "comunidad": "Cataluña",
+   "escanos_2023": 6,
+   "escanos_2026": 6,
+   "poblacion": 830075,
+   "censo": 596689,
+   "censo_cer": 575113,
+   "censo_cera": 21576,
+   "votantes": 372426,
+   "participacion_pct": 62.42,
+   "votos_validos": 368024,
+   "votos_candidaturas": 364856,
+   "votos_blanco": 3168,
+   "votos_nulos": 4402,
+   "barrera_3pct_votos": 11041,
+   "candidaturas": 14,
+   "candidaturas_con_escano": 5,
+   "votos_sin_escano": 54698,
+   "pct_sin_escano": 14.86,
+   "votos_por_escano": 61337.3,
+   "electores_por_escano": 99448.2,
+   "habitantes_por_escano": 138345.8,
+   "cociente_ultimo_escano": 40791.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 121126,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 32.91
+    },
+    {
+     "siglas": "ERC",
+     "nombre": "ESQUERRA REPUBLICANA DE CATALUNYA",
+     "votos": 55461,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 15.07
+    },
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 51061,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 13.87
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 41719,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 11.34
+    },
+    {
+     "siglas": "JxCAT - JUNTS",
+     "nombre": "JUNTS PER CATALUNYA - JUNTS",
+     "votos": 40791,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 11.08
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 38039,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 10.34
+    },
+    {
+     "siglas": "CUP-PR",
+     "nombre": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+     "votos": 8700,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 2.36
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 3797,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.03
+    },
+    {
+     "siglas": "PDeCAT-E-CiU",
+     "nombre": "PARTIT DEMÒCRATA EUROPEU CATALÀ-ESPAI CIU",
+     "votos": 2311,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.63
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 661,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 405,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 267,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "EVC",
+     "nombre": "ENTRE VEÏNS CATALUNYA",
+     "votos": 265,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "UNIDOS SI",
+     "nombre": "UNIDOS POR LA SOLIDARIDAD INTERNACIONAL",
+     "votos": 253,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 1.15
+  },
+  {
+   "codigo": 44,
+   "provincia": "Teruel",
+   "comunidad": "Aragón",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 134421,
+   "censo": 106352,
+   "censo_cer": 101249,
+   "censo_cera": 5103,
+   "votantes": 76561,
+   "participacion_pct": 71.99,
+   "votos_validos": 75913,
+   "votos_candidaturas": 75503,
+   "votos_blanco": 410,
+   "votos_nulos": 648,
+   "barrera_3pct_votos": 2278,
+   "candidaturas": 13,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 26691,
+   "pct_sin_escano": 35.16,
+   "votos_por_escano": 25304.3,
+   "electores_por_escano": 35450.7,
+   "habitantes_por_escano": 44807.0,
+   "cociente_ultimo_escano": 13293.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 26586,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 35.02
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 22226,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 29.28
+    },
+    {
+     "siglas": "EXISTE",
+     "nombre": "ARAGÓN EXISTE - COALICIÓN EXISTE",
+     "votos": 11348,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 14.95
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 9932,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 13.08
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 4126,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.44
+    },
+    {
+     "siglas": "PAR",
+     "nombre": "PARTIDO ARAGONÉS",
+     "votos": 711,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.94
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 172,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.23
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 135,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 94,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 60,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 49,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 36,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    },
+    {
+     "siglas": "F.I.A.",
+     "nombre": "FEDERACIÓN DE LOS INDEPENDIENTES DE ARAGÓN",
+     "votos": 28,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.04
+    }
+   ],
+   "peso_frente_media": 2.79
+  },
+  {
+   "codigo": 45,
+   "provincia": "Toledo",
+   "comunidad": "Castilla - La Mancha",
+   "escanos_2023": 6,
+   "escanos_2026": 6,
+   "poblacion": 713453,
+   "censo": 542567,
+   "censo_cer": 529311,
+   "censo_cera": 13256,
+   "votantes": 392988,
+   "participacion_pct": 72.43,
+   "votos_validos": 387200,
+   "votos_candidaturas": 384589,
+   "votos_blanco": 2611,
+   "votos_nulos": 5788,
+   "barrera_3pct_votos": 11616,
+   "candidaturas": 9,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 35940,
+   "pct_sin_escano": 9.28,
+   "votos_por_escano": 64533.3,
+   "electores_por_escano": 90427.8,
+   "habitantes_por_escano": 118908.8,
+   "cociente_ultimo_escano": 48844.3,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 146533,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 37.84
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 126072,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 32.56
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 76044,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 19.64
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 31876,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.23
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 2024,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.52
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 985,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.25
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 499,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.13
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 281,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 275,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    }
+   ],
+   "peso_frente_media": 1.09
+  },
+  {
+   "codigo": 46,
+   "provincia": "València/Valencia",
+   "comunidad": "Comunitat Valenciana",
+   "escanos_2023": 16,
+   "escanos_2026": 16,
+   "poblacion": 2605757,
+   "censo": 1999340,
+   "censo_cer": 1928949,
+   "censo_cera": 70391,
+   "votantes": 1451187,
+   "participacion_pct": 72.58,
+   "votos_validos": 1437161,
+   "votos_candidaturas": 1426351,
+   "votos_blanco": 10810,
+   "votos_nulos": 14026,
+   "barrera_3pct_votos": 43115,
+   "candidaturas": 11,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 20033,
+   "pct_sin_escano": 1.39,
+   "votos_por_escano": 89822.6,
+   "electores_por_escano": 124958.8,
+   "habitantes_por_escano": 162859.8,
+   "cociente_ultimo_escano": 80578.2,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 483469,
+     "escanos_oficiales": 6,
+     "escanos_calculados": 6,
+     "supera_barrera": true,
+     "pct_validos": 33.64
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 461353,
+     "escanos_oficiales": 5,
+     "escanos_calculados": 5,
+     "supera_barrera": true,
+     "pct_validos": 32.1
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 242839,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 16.9
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 218657,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 15.21
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 10334,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.72
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 2919,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.2
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 1778,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 1773,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "EVB",
+     "nombre": "ESTAT VALENCIÀ DEL BENESTAR",
+     "votos": 1442,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "CJ",
+     "nombre": "CAMINANDO JUNTOS",
+     "votos": 1056,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.07
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 731,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 0.79
+  },
+  {
+   "codigo": 47,
+   "provincia": "Valladolid",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 5,
+   "escanos_2026": 5,
+   "poblacion": 517975,
+   "censo": 431381,
+   "censo_cer": 416646,
+   "censo_cera": 14735,
+   "votantes": 319312,
+   "participacion_pct": 74.02,
+   "votos_validos": 316309,
+   "votos_candidaturas": 313890,
+   "votos_blanco": 2419,
+   "votos_nulos": 3003,
+   "barrera_3pct_votos": 9490,
+   "candidaturas": 14,
+   "candidaturas_con_escano": 3,
+   "votos_sin_escano": 33176,
+   "pct_sin_escano": 10.49,
+   "votos_por_escano": 63261.8,
+   "electores_por_escano": 86276.2,
+   "habitantes_por_escano": 103595.0,
+   "cociente_ultimo_escano": 47948.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 129170,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 40.84
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 103596,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 32.75
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 47948,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 15.16
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 28049,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 8.87
+    },
+    {
+     "siglas": "ESPAÑA VACIADA",
+     "nombre": "ESPAÑA VACIADA",
+     "votos": 1226,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.39
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 1105,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.35
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 601,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.19
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 583,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.18
+    },
+    {
+     "siglas": "Ud.Ca",
+     "nombre": "UNIDAD CASTELLANA",
+     "votos": 463,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.15
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 376,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 335,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 164,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 159,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    },
+    {
+     "siglas": "FUERZA CÍVICA",
+     "nombre": "FUERZA CÍVICA",
+     "votos": 115,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.04
+    }
+   ],
+   "peso_frente_media": 1.12
+  },
+  {
+   "codigo": 49,
+   "provincia": "Zamora",
+   "comunidad": "Castilla y León",
+   "escanos_2023": 3,
+   "escanos_2026": 3,
+   "poblacion": 167215,
+   "censo": 162998,
+   "censo_cer": 142159,
+   "censo_cera": 20839,
+   "votantes": 104671,
+   "participacion_pct": 64.22,
+   "votos_validos": 103410,
+   "votos_candidaturas": 102488,
+   "votos_blanco": 922,
+   "votos_nulos": 1261,
+   "barrera_3pct_votos": 3103,
+   "candidaturas": 12,
+   "candidaturas_con_escano": 2,
+   "votos_sin_escano": 22691,
+   "pct_sin_escano": 21.94,
+   "votos_por_escano": 34470.0,
+   "electores_por_escano": 54332.7,
+   "habitantes_por_escano": 55738.3,
+   "cociente_ultimo_escano": 23098.0,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 46196,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 44.67
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 33601,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 32.49
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 13652,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 13.2
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 5839,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": true,
+     "pct_validos": 5.65
+    },
+    {
+     "siglas": "Zsi",
+     "nombre": "ZAMORA SÍ",
+     "votos": 1843,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.78
+    },
+    {
+     "siglas": "U.P.L.",
+     "nombre": "UNIÓN DEL PUEBLO LEONÉS",
+     "votos": 526,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.51
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 313,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.3
+    },
+    {
+     "siglas": "PREPAL",
+     "nombre": "PARTIDO REGIONALISTA DEL PAÍS LEONÉS",
+     "votos": 166,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.16
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 121,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.12
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 100,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.1
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 81,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 50,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 2.05
+  },
+  {
+   "codigo": 50,
+   "provincia": "Zaragoza",
+   "comunidad": "Aragón",
+   "escanos_2023": 7,
+   "escanos_2026": 7,
+   "poblacion": 966438,
+   "censo": 740060,
+   "censo_cer": 713505,
+   "censo_cera": 26555,
+   "votantes": 523410,
+   "participacion_pct": 70.73,
+   "votos_validos": 518705,
+   "votos_candidaturas": 514012,
+   "votos_blanco": 4693,
+   "votos_nulos": 4705,
+   "barrera_3pct_votos": 15562,
+   "candidaturas": 14,
+   "candidaturas_con_escano": 4,
+   "votos_sin_escano": 18077,
+   "pct_sin_escano": 3.49,
+   "votos_por_escano": 74100.7,
+   "electores_por_escano": 105722.9,
+   "habitantes_por_escano": 138062.6,
+   "cociente_ultimo_escano": 62258.7,
+   "escanos_que_cambiaria_sin_barrera": 0,
+   "reparto_reproducido": true,
+   "reparto": [
+    {
+     "siglas": "PP",
+     "nombre": "PARTIDO POPULAR",
+     "votos": 186776,
+     "escanos_oficiales": 3,
+     "escanos_calculados": 3,
+     "supera_barrera": true,
+     "pct_validos": 36.01
+    },
+    {
+     "siglas": "PSOE",
+     "nombre": "PARTIDO SOCIALISTA OBRERO ESPAÑOL",
+     "votos": 159858,
+     "escanos_oficiales": 2,
+     "escanos_calculados": 2,
+     "supera_barrera": true,
+     "pct_validos": 30.82
+    },
+    {
+     "siglas": "VOX",
+     "nombre": "VOX",
+     "votos": 79376,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 15.3
+    },
+    {
+     "siglas": "SUMAR",
+     "nombre": "SUMAR",
+     "votos": 69925,
+     "escanos_oficiales": 1,
+     "escanos_calculados": 1,
+     "supera_barrera": true,
+     "pct_validos": 13.48
+    },
+    {
+     "siglas": "EXISTE",
+     "nombre": "ARAGÓN EXISTE - COALICIÓN EXISTE",
+     "votos": 7780,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 1.5
+    },
+    {
+     "siglas": "PAR",
+     "nombre": "PARTIDO ARAGONÉS",
+     "votos": 2745,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.53
+    },
+    {
+     "siglas": "PACMA",
+     "nombre": "PARTIDO ANIMALISTA CON EL MEDIO AMBIENTE",
+     "votos": 2428,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.47
+    },
+    {
+     "siglas": "ESCAÑOS EN BLANCO",
+     "nombre": "ESCAÑOS EN BLANCO PARA DEJAR ESCAÑOS VACÍOS",
+     "votos": 2146,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.41
+    },
+    {
+     "siglas": "FO",
+     "nombre": "FRENTE OBRERO",
+     "votos": 1026,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.2
+    },
+    {
+     "siglas": "PCTE",
+     "nombre": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPAÑA",
+     "votos": 561,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.11
+    },
+    {
+     "siglas": "PUM+J",
+     "nombre": "POR UN MUNDO MÁS JUSTO",
+     "votos": 419,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "F.I.A.",
+     "nombre": "FEDERACIÓN DE LOS INDEPENDIENTES DE ARAGÓN",
+     "votos": 394,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.08
+    },
+    {
+     "siglas": "RECORTES CERO",
+     "nombre": "RECORTES CERO",
+     "votos": 306,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.06
+    },
+    {
+     "siglas": "FE de las JONS",
+     "nombre": "FALANGE ESPAÑOLA DE LAS J.O.N.S.",
+     "votos": 272,
+     "escanos_oficiales": 0,
+     "escanos_calculados": 0,
+     "supera_barrera": false,
+     "pct_validos": 0.05
+    }
+   ],
+   "peso_frente_media": 0.95
+  }
+ ]
+}

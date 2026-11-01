@@ -94,6 +94,10 @@
       "rewrite": "/pensiones.html"
     },
     {
+      "route": "/voto",
+      "rewrite": "/voto.html"
+    },
+    {
       "route": "/docs/nomina.html",
       "redirect": "/nomina",
       "statusCode": 301

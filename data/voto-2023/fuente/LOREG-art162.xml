@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <bloque id="acientosesentaydos" tipo="precepto" titulo="Artículo ciento sesenta y dos">
+      <version id_norma="BOE-A-1985-11672" fecha_publicacion="19850620" fecha_vigencia="19850621">
+        <p class="articulo">Artículo ciento sesenta y dos</p>
+        <p class="parrafo">1. El Congreso está formado por trescientos cincuenta Diputados.</p>
+        <p class="parrafo">2. A cada provincia le corresponde un mínimo inicial de dos Diputados. Las poblaciones de Ceuta y Melilla están representadas cada una de ellas por un Diputado.</p>
+        <p class="parrafo">3. Los doscientos cuarenta y ocho Diputados restantes se distribuyen entre las provincias en proporción a su población, conforme al siguiente procedimiento:</p>
+        <p class="parrafo_2">a) Se obtiene una cuota de reparto resultante de dividir por doscientos cuarenta y ocho la cifra total de la población de derecho de las provincias peninsulares e insulares.</p>
+        <p class="parrafo">b) Se adjudican a cada provincia tantos Diputados como resulten, en números enteros, de dividir la población de derecho provincial por la cuota de reparto.</p>
+        <p class="parrafo">c) Los Diputados restantes se distribuyen asignando uno a cada una de las provincias cuyo cociente, obtenido conforme al apartado anterior, tenga una fracción decimal mayor.</p>
+        <p class="parrafo_2">4. El Decreto de convocatoria debe especificar el número de Diputados a elegir en cada circunscripción, de acuerdo con lo dispuesto en este artículo.</p>
+      </version>
+    </bloque>
+  </data>
+</response>

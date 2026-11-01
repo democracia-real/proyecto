@@ -561,6 +561,124 @@
       "texto_en": {
         "web/pensiones.html": "56.946 M&euro;"
       }
+    },
+    {
+      "id": "voto-2023-votos-por-escano",
+      "afirmacion": "En las elecciones al Congreso de 2023 hubo de media 70.537 votos válidos por escaño: 24.688.087 votos válidos para 350 diputados",
+      "valor": "70.537",
+      "periodo": "Elecciones al Congreso del 23 de julio de 2023",
+      "fuente": "Junta Electoral Central, resumen de resultados de las generales de 2023 (BOE-A-2023-18907, 1 sep 2023); los mismos datos en el Excel provincial del Ministerio del Interior. Cálculo en data/voto-2023/calcular.py",
+      "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+      "fragmento": "Cuadro I, Total estatal: Electores 37.469.458 · Votantes 24.952.447 · Votos Válidos 24.688.087 · Votos a Candidaturas 24.487.414 · Votos en Blanco 200.673 · Votos Nulos 264.360",
+      "calculo": "24.688.087 / 350 = 70.537,4",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/voto.html": "<div class=\"rx-card-value\">70.537</div>",
+        "web/data/voto-2023.json": "\"votos_por_escano\": 70537.4"
+      }
+    },
+    {
+      "id": "voto-2023-rango-votos-por-escano",
+      "afirmacion": "En 2023 la circunscripción con menos votos válidos por escaño fue Teruel (25.304) y la que más, Madrid (97.532): 3,85 veces más",
+      "valor": "25.304 → 97.532",
+      "periodo": "Elecciones al Congreso del 23 de julio de 2023",
+      "fuente": "Junta Electoral Central, resumen de resultados de las generales de 2023 (BOE-A-2023-18907, 1 sep 2023); los mismos datos en el Excel provincial del Ministerio del Interior. Cálculo en data/voto-2023/calcular.py",
+      "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+      "fragmento": "Cuadro I (votos válidos, tercera columna): Teruel 106.352 76.561 75.913 75.503 410 648; Madrid 5.224.561 3.639.500 3.608.673 3.579.713 28.960 30.827. Cuadro II: Teruel 3 escaños, Madrid 37",
+      "calculo": "Teruel 75.913 / 3 = 25.304,3; Madrid 3.608.673 / 37 = 97.531,7; Madrid / Teruel = 3,85. Las 52 ordenadas en web/data/voto-2023.csv",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/voto.html": "25.304 &rarr; 97.532",
+        "web/data/voto-2023.json": "\"mas_votos_por_escano\": \"Madrid\""
+      }
+    },
+    {
+      "id": "voto-2023-votos-sin-escano",
+      "afirmacion": "En 2023, 1.930.424 votos (el 7,8% de los válidos) fueron a candidaturas que no obtuvieron ningún escaño en su circunscripción; aparte hubo 200.673 votos en blanco",
+      "valor": "1.930.424 (7,8%)",
+      "periodo": "Elecciones al Congreso del 23 de julio de 2023",
+      "fuente": "Junta Electoral Central, resumen de resultados de las generales de 2023 (BOE-A-2023-18907, 1 sep 2023); los mismos datos en el Excel provincial del Ministerio del Interior. Cálculo en data/voto-2023/calcular.py",
+      "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+      "fragmento": "Cuadro III. Relación de votos correspondientes a cada uno de los partidos, federaciones, coaliciones o agrupaciones de electores que no han obtenido escaño",
+      "calculo": "En cada una de las 52 circunscripciones, suma de los votos de las candidaturas con 0 escaños allí (las del cuadro II con 0 escaños en esa provincia y todas las del cuadro III) = 1.930.424 en total; / 24.688.087 votos válidos = 7,82%",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "No son «votos perdidos» en sentido estricto: cuentan para la barrera del 3%, la financiación y como expresión política. Lo que no hicieron es elegir a nadie en su provincia.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/voto.html": "1.930.424",
+        "web/data/voto-2023.json": "\"votos_sin_escano\": 1930424"
+      }
+    },
+    {
+      "id": "voto-2023-soria-madrid",
+      "afirmacion": "En 2023 un voto en Soria pesó 3,8 veces uno de Madrid en votos válidos por escaño (3,7 en electores y 4,1 en habitantes por escaño), no «casi 6»",
+      "valor": "3,84",
+      "periodo": "Elecciones al Congreso del 23 de julio de 2023",
+      "fuente": "Junta Electoral Central, resumen de resultados de las generales de 2023 (BOE-A-2023-18907, 1 sep 2023); los mismos datos en el Excel provincial del Ministerio del Interior. Cálculo en data/voto-2023/calcular.py; población: Real Decreto 1037/2022 (BOE-A-2022-21724)",
+      "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+      "fragmento": "Cuadro I: Soria 75.768 51.157 50.769 50.484 285 388; Madrid 5.224.561 3.639.500 3.608.673 3.579.713 28.960 30.827. Cuadro II: Soria 2 escaños, Madrid 37. RD 1037/2022, anexo I: Soria. 88.377; Madrid. 6.750.336",
+      "calculo": "Votos válidos por escaño: Soria 50.769 / 2 = 25.384,5; Madrid 3.608.673 / 37 = 97.531,7; cociente 3,84. Electores: 75.768 / 2 = 37.884; 5.224.561 / 37 = 141.204,4; 3,73. Habitantes: 88.377 / 2 = 44.188,5; 6.750.336 / 37 = 182.441,5; 4,13",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Sustituye a «Soria vale casi 6 veces Madrid» de sistema_electoral.md, que comparaba los votos de las dos candidaturas elegidas en Soria (14.966 y 18.895) con los votos por escaño de todo Madrid. El cociente D'Hondt del último escaño da 6,11 (91.448,9 / 14.966), pero depende de cómo se repartan los votos entre candidaturas y no mide el peso del voto.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/voto.html": "un voto en Soria pes&oacute; 3,8 veces uno de Madrid",
+        "01_diagnostico_del_sistema/sistema_electoral.md": "| **Madrid / Soria** | | **3,84** | **3,73** | **4,13** |",
+        "web/data/voto-2023.json": "\"votos_por_escano\": 3.84"
+      }
+    },
+    {
+      "id": "voto-2023-reparto-reproducido",
+      "afirmacion": "Aplicando la LOREG (barrera del 3% y D'Hondt; mayoría en Ceuta y Melilla) a los votos oficiales de 2023 salen los 350 escaños oficiales, en las 52 circunscripciones",
+      "valor": "350 de 350",
+      "periodo": "Elecciones al Congreso del 23 de julio de 2023",
+      "fuente": "LOREG, art. 163, y Junta Electoral Central (BOE-A-2023-18907, cuadro II)",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672",
+      "fragmento": "No se tienen en cuenta aquellas candidaturas que no hubieran obtenido, al menos, el 3 por 100 de los votos válidos emitidos en la circunscripción.",
+      "calculo": "python -I data/voto-2023/calcular.py → «Reparto reproducido en 52 de 52 circunscripciones (350 escaños)». El script se para si una sola candidatura no coincide, y antes contrasta votos y escaños de las 550 candidaturas-provincia con el BOE",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "En 2023 la barrera del 3% no cambió ningún escaño: sin ella el reparto habría sido el mismo.",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/voto.html": "350 de 350",
+        "web/data/voto-2023.json": "\"circunscripciones_reproducidas\": 52"
+      }
+    },
+    {
+      "id": "escanos-2026-cambios",
+      "afirmacion": "El 29 de noviembre de 2026 Madrid elige 38 diputados (37 en 2023) y Cádiz 8 (9 en 2023); las otras 50 circunscripciones, los mismos que en 2023",
+      "valor": "Madrid 38 · Cádiz 8",
+      "periodo": "Elecciones generales del 29 de noviembre de 2026",
+      "fuente": "Real Decreto 806/2026, de 5 de octubre, de convocatoria (BOE-A-2026-20742), anexo; comparado con el del Real Decreto 400/2023 (BOE-A-2023-12663)",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742",
+      "fragmento": "Cádiz. Ocho. [...] Madrid. Treinta y ocho.",
+      "calculo": "Anexo del RD 806/2026 frente al del RD 400/2023 (Cádiz 9, Madrid 37), circunscripción a circunscripción en data/voto-2023/calcular.py: solo cambian esas dos",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude (Claude Code), con fuente descargada y script reproducible (data/voto-2023/calcular.py)"],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/voto.html": "Madrid 38 &middot; C&aacute;diz 8",
+        "web/data/voto-2023.json": "\"escanos_2026\": 38"
+      }
     }
   ]
 }

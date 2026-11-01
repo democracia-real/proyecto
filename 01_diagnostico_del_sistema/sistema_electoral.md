@@ -71,14 +71,17 @@ Total: 350 diputados
 - Las provincias menos pobladas tienen más escaños per cápita
 - El voto en provincias pequeñas "vale más"
 
-**Ejemplo (datos 2023):**
+**Ejemplo (elecciones al Congreso de 2023, datos oficiales):**
 
-| Provincia | Votos por escaño (aprox.) | Efecto |
-|-----------|---------------------------|--------|
-| Soria | 14.700 – 18.600 votos | Un escaño "cuesta" muchos menos votos |
-| Madrid | ~95.000 votos por escaño | Un escaño requiere muchos más votos |
+| Provincia | Escaños | Votos válidos por escaño | Electores por escaño | Habitantes por escaño |
+|-----------|---------|--------------------------|----------------------|-----------------------|
+| Soria | 2 | 25.385 | 37.884 | 44.189 |
+| Madrid | 37 | 97.532 | 141.204 | 182.442 |
+| **Madrid / Soria** | | **3,84** | **3,73** | **4,13** |
 
-**Conclusión**: El voto de un ciudadano en Soria "vale" **casi 6 veces más** que el de uno en Madrid en términos de representación directa.
+**Conclusión**: en 2023, un voto en Soria pesó **casi 4 veces** (3,8) uno de Madrid: allí bastaron unos 25.000 votos por escaño y en Madrid hicieron falta unos 97.500. La provincia con menos votos por escaño fue Teruel (25.304).
+
+> **Corrección (1 nov 2026).** Aquí decíamos «casi 6 veces», con Soria a «14.700 – 18.600 votos» por escaño. Esas cifras se parecen a los votos de las dos candidaturas que sacaron escaño en Soria, no a los votos por escaño de la provincia, y se comparaban con la media de Madrid. Cálculo, fuentes y las 52 provincias: [Lo que vale tu voto](https://democraciareal.es/voto) y su [metodología](../data/voto-2023/METODOLOGIA.md).
 
 ### 4. Barrera del 3% Inefectiva
 
