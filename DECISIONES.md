@@ -6,6 +6,17 @@
 
 ---
 
+## 2 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Primera revisión semanal: ninguna cifra con la revisión vencida (la primera vence el 30 nov). Las dos URL de la OCDE que dan error 403 al check responden con un navegador; se volvió a descargar *Taxing Wages 2026* y sigue diciendo 41,4% para España | El servidor de la OCDE rechaza al programa del check, no la página. No cambia ninguna cifra | IA |
+| Marcar *Lo que vale tu voto* como publicada el 1 nov en la RUTA | Estaba en línea desde el 1 nov y la ruta decía «falta publicarla» | IA |
+| Vídeo de pensiones del 7 nov con los tres tramos de edad del censo, no solo los extremos | La mitad del censo tiene de 35 a 64 años; enseñar solo los extremos volvía al enfoque generacional que se quitó el 1 nov | IA |
+| La imagen del SMI del 6 nov solo usa el bruto, la cotización de la empresa y el coste total; ni IRPF ni neto | El IRPF de la calculadora es una estimación y para el SMI no se ha comprobado aparte | IA |
+
+---
+
 ## 1 noviembre 2026
 
 | Decisión | Motivo | Quién |
@@ -51,3 +62,4 @@
 | Semana | Errores sin corregir en 24 h | Fechas cumplidas | Visitas | Seguidores | Citas | Horas humanas | Gasto |
 |--------|------------------------------|------------------|---------|------------|-------|---------------|-------|
 | 26 oct-1 nov (punto de partida) | 0 tras la revisión | 0 de 4 productos en fecha | Sin medir | 2 en X | 0 | — | 0 € |
+| 2 nov (primera revisión semanal) | 0 (ningún aviso abierto en GitHub) | 1 de 1 vencidas; 2 adelantadas (*Lo que vale tu voto* y la réplica) | La persona | La persona | 0 | — | 0 € |

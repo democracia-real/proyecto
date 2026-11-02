@@ -1,8 +1,14 @@
 # Ruta
 
-*Actualizada: 1 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
+*Actualizada: 2 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
 
 ---
+
+## Revisión del 2 de noviembre (primera semanal)
+
+- *Lo que vale tu voto* está publicada desde el 1 nov (democraciareal.es/voto), una semana antes de lo previsto. La ruta seguía diciendo «falta publicarla»: corregido.
+- No va nada tarde: lo siguiente con fecha es mover la calculadora de la nómina (3-4 nov), que depende de la persona.
+- Sin cambios de fechas para las dos próximas semanas. Piezas del 6 y el 7 nov listas en `internal/semana_2026-11-02/`.
 
 ## Revisión del 1 de noviembre: dónde estamos
 
@@ -35,7 +41,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 | # | Producto | Fecha | Estado |
 |---|----------|-------|--------|
 | 1 | **Calculadora de la nómina** | Publicada el 1 nov | Cifras con dos comprobaciones de IA. Falta moverla (vídeo, Reddit) |
-| 2 | **Lo que vale tu voto** (calculadora por provincia) | 8 nov, antes de la campaña | Hecha y comprobada contra el BOE el 1 nov, en su rama. Falta publicarla |
+| 2 | **Lo que vale tu voto** (calculadora por provincia) | Publicada el 1 nov | Comprobada contra el BOE por dos IA. Falta moverla: vídeo listo para el 5 nov |
 | 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 13 nov | Hecha el 1 nov con dos lecturas de IA. Criterios publicados; réplica a los partidos hasta el 10 nov |
 | 4 | **Calculadora de pensiones** | Publicada el 1 nov | Reescrita sin el enfoque generacional; cifras con dos comprobaciones |
 | 5 | **Simulador de IA y empleo** | Publicado el 1 nov | Rehecho como escenario, no como predicción |
@@ -52,7 +58,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 - [x] Segunda comprobación independiente de las cifras nuevas (sustituye a la firma humana, que no se inventa) y `git push`
 - [x] Publicar la calculadora de la nómina
 - [ ] Moverla: vídeo en Shorts y Reels y post en r/spain (ver [Distribución](#distribución-dónde-está-la-gente)); textos en `internal/lanzamiento_calculadoras/`
-- [ ] **Lo que vale tu voto** como calculadora: hecha y comprobada; falta publicarla
+- [x] **Lo que vale tu voto** como calculadora: publicada el 1 nov
 - [x] Privacidad: lista de email cerrada (tenía 0 inscritos) hasta que haya un responsable con nombre
 - [x] Análisis legal de la matriz (1 nov): no hace falta abogado previo si se cumplen las seis condiciones de `DECISIONES.md`; solo si un partido amenaza con acciones legales
 - [x] Descargar estatutos y códigos éticos, construir la matriz y publicar sus criterios (1 nov)
