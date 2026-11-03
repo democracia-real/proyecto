@@ -18,6 +18,8 @@
 | El reel de Instagram, con 0 reproducciones, se borró y se volvió a subir con música (https://www.instagram.com/reel/DfSrLV5oQo6/) | Era la única red donde rehacerlo no costaba nada | IA + Persona |
 | El vídeo de TikTok, con 85 reproducciones, también se borró y se volvió a subir con música. TikTok lo guarda 30 días por si hay que restaurarlo | La IA propuso dejarlo (se pierden esas reproducciones y subir dos veces el mismo vídeo puede contar como duplicado); la persona prefirió rehacerlo | Persona |
 | El Short también se volvió a subir con música (https://youtube.com/shorts/1fSoFdIBa6A). El anterior, con 14 visualizaciones, pasa a privado en vez de borrarse | La IA había propuesto dejarlo sin música y la persona pidió que llevara sonido. En YouTube, borrar es definitivo; en privado nadie lo ve y se puede recuperar | Persona |
+| Post de la calculadora de la nómina en r/SpainPolitics, no en r/spain (https://www.reddit.com/r/SpainPolitics/comments/1xn4a9x/). Lo publica la persona con su cuenta | Las normas de r/spain mandan los temas políticos a r/SpainPolitics. La IA no tiene acceso a Reddit | Persona |
+| Compartirlo solo en r/SpainEconomics, no en los tres subreddits que propone Reddit | Es donde hay gente que puede encontrar errores en el modelo; publicarlo a la vez en varios sitios generalistas parece spam y puede marcar la cuenta | IA |
 | En el Short nuevo se vuelve a responder «No» a la pregunta de uso de IA | Ahora pregunta por música «que sea el foco del vídeo», y aquí es de fondo, compuesta por un script, no por un modelo generativo. La descripción sigue diciendo que el vídeo está hecho con IA | IA |
 
 ---
