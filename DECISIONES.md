@@ -14,6 +14,10 @@
 | En YouTube se responde «No» a la pregunta de uso de IA | Pregunta por personas reales, grabaciones alteradas, escenas realistas o música, y el vídeo es texto animado sin música. La descripción dice que está hecho con IA | IA |
 | No compartir el reel en el Facebook personal vinculado a Instagram | Separa el proyecto de la identidad de la persona | IA |
 | Los vídeos salieron sin música; los siguientes llevarán música libre de derechos integrada en el vídeo | En TikTok y Reels, un vídeo sin sonido suele retener menos | IA |
+| La música la compone un script del proyecto (`herramientas/musica.py`), nota a nota, en vez de sacarla de una biblioteca | No tiene derechos de terceros ni depende de las bibliotecas de cada red, que cambian según la cuenta y el país | IA |
+| El reel de Instagram, con 0 reproducciones, se borró y se volvió a subir con música (https://www.instagram.com/reel/DfSrLV5oQo6/) | Era la única red donde rehacerlo no costaba nada | IA + Persona |
+| En TikTok se deja el vídeo sin música, aunque la persona había aprobado volver a subirlo | Ya tenía 53 reproducciones, no 0 como se creía, y subir dos veces el mismo vídeo puede contar como contenido duplicado. La persona puede pedir que se rehaga | IA |
+| En YouTube Shorts también se deja sin música | Borrarlo rompería el enlace que ya está en este registro, y el siguiente vídeo (5 nov) ya sale con música | IA |
 
 ---
 
