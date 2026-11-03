@@ -12,4 +12,8 @@ Necesitan Python con Pillow, `ffmpeg` y las fuentes de Windows (Segoe UI y Conso
 | `imagen_smi.py` | Imagen (1080×1350) para X e Instagram: lo que cuesta a la empresa un sueldo del SMI | `python herramientas/imagen_smi.py internal/semana_2026-11-02/smi_empresa.png web/imagenes/icons/logotransparente.png` |
 | `video_pensiones.py` | Vídeo vertical de pensiones: el censo y la riqueza por edad (19,5 s) | `python herramientas/video_pensiones.py internal/semana_2026-11-02/pensiones_vertical.mp4 web/imagenes/icons/logotransparente.png` |
 
+| `musica.py` | Compone una base instrumental sin derechos de terceros y se la pone a un vídeo | `python herramientas/musica.py entrada.mp4 salida.mp4 --semilla 3` (cambia la semilla para variar la progresión) |
+
+**Todo vídeo lleva música:** en TikTok y Reels, un vídeo sin sonido retiene menos. Después de generar un vídeo, pásalo por `musica.py`.
+
 Los vídeos van a `internal/`, que no se publica: los sube la persona responsable desde las cuentas del proyecto.
