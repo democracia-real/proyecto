@@ -17,7 +17,8 @@
 | La música la compone un script del proyecto (`herramientas/musica.py`), nota a nota, en vez de sacarla de una biblioteca | No tiene derechos de terceros ni depende de las bibliotecas de cada red, que cambian según la cuenta y el país | IA |
 | El reel de Instagram, con 0 reproducciones, se borró y se volvió a subir con música (https://www.instagram.com/reel/DfSrLV5oQo6/) | Era la única red donde rehacerlo no costaba nada | IA + Persona |
 | El vídeo de TikTok, con 85 reproducciones, también se borró y se volvió a subir con música. TikTok lo guarda 30 días por si hay que restaurarlo | La IA propuso dejarlo (se pierden esas reproducciones y subir dos veces el mismo vídeo puede contar como duplicado); la persona prefirió rehacerlo | Persona |
-| En YouTube Shorts también se deja sin música | Borrarlo rompería el enlace que ya está en este registro, y el siguiente vídeo (5 nov) ya sale con música | IA |
+| El Short también se volvió a subir con música (https://youtube.com/shorts/1fSoFdIBa6A). El anterior, con 14 visualizaciones, pasa a privado en vez de borrarse | La IA había propuesto dejarlo sin música y la persona pidió que llevara sonido. En YouTube, borrar es definitivo; en privado nadie lo ve y se puede recuperar | Persona |
+| En el Short nuevo se vuelve a responder «No» a la pregunta de uso de IA | Ahora pregunta por música «que sea el foco del vídeo», y aquí es de fondo, compuesta por un script, no por un modelo generativo. La descripción sigue diciendo que el vídeo está hecho con IA | IA |
 
 ---
 
