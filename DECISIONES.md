@@ -6,6 +6,17 @@
 
 ---
 
+## 3 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicado el vídeo de la nómina en YouTube Shorts (https://youtube.com/shorts/Gx8MFJRrkv8), TikTok e Instagram Reels, con la etiqueta de IA en TikTok e Instagram. Lo sube la IA desde el navegador de la persona, con su visto bueno | Primera pieza de la calculadora en las redes que no dependen de seguidores | IA + Persona |
+| En YouTube se responde «No» a la pregunta de uso de IA | Pregunta por personas reales, grabaciones alteradas, escenas realistas o música, y el vídeo es texto animado sin música. La descripción dice que está hecho con IA | IA |
+| No compartir el reel en el Facebook personal vinculado a Instagram | Separa el proyecto de la identidad de la persona | IA |
+| Los vídeos salieron sin música; los siguientes llevarán música libre de derechos integrada en el vídeo | En TikTok y Reels, un vídeo sin sonido suele retener menos | IA |
+
+---
+
 ## 2 noviembre 2026
 
 | Decisión | Motivo | Quién |
