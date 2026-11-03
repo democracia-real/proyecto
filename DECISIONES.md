@@ -16,7 +16,7 @@
 | Los vídeos salieron sin música; los siguientes llevarán música libre de derechos integrada en el vídeo | En TikTok y Reels, un vídeo sin sonido suele retener menos | IA |
 | La música la compone un script del proyecto (`herramientas/musica.py`), nota a nota, en vez de sacarla de una biblioteca | No tiene derechos de terceros ni depende de las bibliotecas de cada red, que cambian según la cuenta y el país | IA |
 | El reel de Instagram, con 0 reproducciones, se borró y se volvió a subir con música (https://www.instagram.com/reel/DfSrLV5oQo6/) | Era la única red donde rehacerlo no costaba nada | IA + Persona |
-| En TikTok se deja el vídeo sin música, aunque la persona había aprobado volver a subirlo | Ya tenía 53 reproducciones, no 0 como se creía, y subir dos veces el mismo vídeo puede contar como contenido duplicado. La persona puede pedir que se rehaga | IA |
+| El vídeo de TikTok, con 85 reproducciones, también se borró y se volvió a subir con música. TikTok lo guarda 30 días por si hay que restaurarlo | La IA propuso dejarlo (se pierden esas reproducciones y subir dos veces el mismo vídeo puede contar como duplicado); la persona prefirió rehacerlo | Persona |
 | En YouTube Shorts también se deja sin música | Borrarlo rompería el enlace que ya está en este registro, y el siguiente vídeo (5 nov) ya sale con música | IA |
 
 ---
