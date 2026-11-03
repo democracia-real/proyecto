@@ -205,7 +205,7 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 
 **Cómo saber si sirve:** a las cuatro semanas, qué clips tuvieron más visualizaciones, seguidores nuevos y visitas a la web (Cloudflare). Se repite lo que funciona y se deja lo demás.
 
-**Pendiente:** abrir cuenta de TikTok (la única que falta) y confirmar si las canciones se pueden publicar tal cual según las condiciones de la herramienta con que se generaron.
+**Hecho:** la cuenta de TikTok está abierta (@democraciareal26) y las canciones se pueden publicar: se generaron con la cuenta de pago de Suno, que da la propiedad de las canciones a quien las crea (3 nov).
 
 ---
 
