@@ -13,6 +13,9 @@
 | Reddit sale de los canales. Los moderadores de r/SpainPolitics retiraron el post de la nómina y vetaron la cuenta de la persona para siempre. De los tres comentarios, dos lo llamaron «AI slop» y «post de vibecoders»; el tercero, «Buena propuesta» | La IA propuso Reddit sin medir lo mal que se recibe ahí un enlace propio hecho con IA. Ha costado la cuenta personal de la persona en ese subreddit | IA |
 | No contestar a los comentarios ni discutir el veto | El post está cerrado y la cuenta no puede comentar. Discutir no recupera nada y deja peor al proyecto | IA |
 | Menéame, en pausa | Mismo riesgo que Reddit: cuenta nueva que solo sube lo suyo | IA |
+| Publicado el clip de *La Factura* en TikTok, Instagram Reels (https://www.instagram.com/reel/DfVLk_RILFG/) y YouTube Shorts (https://youtube.com/shorts/iRfl0BcQTdE), con la etiqueta de IA en los tres. Lo sube la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario; los tres se comprobaron publicados y con sonido | IA + Persona |
+| En YouTube, esta vez se responde «Sí» a la pregunta de uso de IA | Pregunta por música hecha con IA «que sea el foco del vídeo», y en este clip lo es | IA |
+| El vídeo de la nómina con música llega a 265 reproducciones en TikTok en un día; el anterior, sin música, se quedó en 85 | Primer dato de qué funciona: el sonido cuenta | IA |
 
 ---
 
