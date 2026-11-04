@@ -40,7 +40,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 
 | # | Producto | Fecha | Estado |
 |---|----------|-------|--------|
-| 1 | **Calculadora de la nómina** | Publicada el 1 nov | Cifras con dos comprobaciones de IA. Falta moverla (vídeo, Reddit) |
+| 1 | **Calculadora de la nómina** | Publicada el 1 nov | Cifras con dos comprobaciones de IA. Vídeo en Shorts, TikTok y Reels desde el 3 nov |
 | 2 | **Lo que vale tu voto** (calculadora por provincia) | Publicada el 1 nov | Comprobada contra el BOE por dos IA. Falta moverla: vídeo listo para el 5 nov |
 | 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 13 nov | Hecha el 1 nov con dos lecturas de IA. Criterios publicados; réplica a los partidos hasta el 10 nov |
 | 4 | **Calculadora de pensiones** | Publicada el 1 nov | Reescrita sin el enfoque generacional; cifras con dos comprobaciones |
@@ -57,7 +57,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 
 - [x] Segunda comprobación independiente de las cifras nuevas (sustituye a la firma humana, que no se inventa) y `git push`
 - [x] Publicar la calculadora de la nómina
-- [ ] Moverla: vídeo en Shorts y Reels y post en r/spain (ver [Distribución](#distribución-dónde-está-la-gente)); textos en `internal/lanzamiento_calculadoras/`
+- [x] Moverla: vídeo en Shorts, TikTok y Reels (3 nov). El post de Reddit lo retiraron los moderadores (ver [Distribución](#distribución-dónde-está-la-gente))
 - [x] **Lo que vale tu voto** como calculadora: publicada el 1 nov
 - [x] Privacidad: lista de email cerrada (tenía 0 inscritos) hasta que haya un responsable con nombre
 - [x] Análisis legal de la matriz (1 nov): no hace falta abogado previo si se cumplen las seis condiciones de `DECISIONES.md`; solo si un partido amenaza con acciones legales
@@ -169,8 +169,8 @@ Con 2 seguidores, lo que publicamos en nuestras cuentas no lo ve nadie. El alcan
 | Canal | Qué llevar | Cómo |
 |-------|------------|------|
 | **TikTok, Shorts, Reels** | Grabación de pantalla de una calculadora con un caso concreto: «Cobro 28.000 €. Esto es lo que cuesto a mi empresa» | El algoritmo reparte por interés, no por seguidores. Es el canal con más potencial partiendo de cero |
-| **Menéame** | Una herramienta por envío, con titular descriptivo y sin adjetivos | Participar también en envíos ajenos: quien solo sube lo suyo acaba marcado como spam |
-| **Reddit** (r/spain, r/SpainEconomics) | Post de texto que explique el método y pida que busquen errores | Leer antes las normas de autopromoción de cada subreddit |
+| **Menéame** (en pausa) | Una herramienta por envío, con titular descriptivo y sin adjetivos | Mismo riesgo que Reddit con una cuenta nueva que solo sube lo suyo. Solo si alguien con historial lo envía por su cuenta |
+| ~~Reddit~~ | **Descartado el 4 nov.** r/SpainPolitics retiró el post de la nómina y vetó la cuenta para siempre; dos comentarios lo llamaron «AI slop» y «post de vibecoders» | En los foros españoles de política, enlazar lo propio y decir que está hecho con IA se castiga. No se vuelve a publicar ahí; si alguien enlaza la web por su cuenta, bien |
 | **X** | Tu resultado como respuesta a hilos sobre sueldos, impuestos o pensiones, no solo a políticos | El enlace en la respuesta o en la biografía. Los tuits con enlace externo suelen llegar a menos gente |
 | **Prensa local** | *Lo que vale tu voto*: el dato de su provincia | 5-10 correos escritos a mano |
 | **WhatsApp** | El botón «Copiar» de cada calculadora | Ya existe |
@@ -213,8 +213,6 @@ Sin audiencia, la auditoría no sirve de nada. Esto es lo que da a conocer el pr
 
 | Tarea | Cuándo |
 |-------|--------|
-| Subir el vídeo de la nómina a YouTube Shorts e Instagram Reels (vídeo y textos listos) | 3-4 nov |
-| Publicar el post de r/spain con tu cuenta (texto listo) | 3-4 nov |
 | Publicar cada día la pieza del calendario (`internal/calendario_29N.md`), unos 5 minutos | Desde el 2 nov |
 | Si un partido responde a la réplica de la matriz con una amenaza legal, consultar con un abogado antes de publicar | Si ocurre |
 | Decidir qué es Democracia Real y si se mantiene el nombre | Enero |

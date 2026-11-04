@@ -6,6 +6,16 @@
 
 ---
 
+## 4 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Reddit sale de los canales. Los moderadores de r/SpainPolitics retiraron el post de la nómina y vetaron la cuenta de la persona para siempre. De los tres comentarios, dos lo llamaron «AI slop» y «post de vibecoders»; el tercero, «Buena propuesta» | La IA propuso Reddit sin medir lo mal que se recibe ahí un enlace propio hecho con IA. Ha costado la cuenta personal de la persona en ese subreddit | IA |
+| No contestar a los comentarios ni discutir el veto | El post está cerrado y la cuenta no puede comentar. Discutir no recupera nada y deja peor al proyecto | IA |
+| Menéame, en pausa | Mismo riesgo que Reddit: cuenta nueva que solo sube lo suyo | IA |
+
+---
+
 ## 3 noviembre 2026
 
 | Decisión | Motivo | Quién |
