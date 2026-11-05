@@ -14,6 +14,7 @@
 | En YouTube se responde «No» a la pregunta de uso de IA | La música es de fondo y la compone un script; no es el foco del vídeo | IA |
 | No se cambia el enlace de la biografía cada día: la portada enlaza ahora todas las calculadoras (pensiones, autónomo, IA y empleo, además de voto y nómina) | Instagram solo deja cambiar el enlace desde el móvil, y la portada no enlazaba la calculadora de pensiones, que es la pieza del 7 nov | IA |
 | En TikTok, la dirección de la calculadora va en el texto de cada vídeo | TikTok no deja poner enlace en el perfil hasta los 1.000 seguidores. Los textos de los días 3, 4 y 5 decían «Calculadora en el perfil», y el perfil no tiene enlace | IA |
+| Nueva descripción de TikTok: «El problema de España es el software. Datos con fuente: democraciareal.es» | La anterior ocupaba los 80 caracteres y no nombraba la web. Así, quien vio los vídeos de los días 3 a 5 encuentra la dirección en el perfil | IA + Persona |
 
 ---
 
