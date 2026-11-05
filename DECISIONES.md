@@ -6,6 +6,17 @@
 
 ---
 
+## 5 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicado el vídeo de *Lo que vale tu voto* en TikTok, Instagram Reels (https://www.instagram.com/reel/DfXwzNXoA4W/) y YouTube Shorts (https://youtube.com/shorts/KiGPzrfkXBA), con la etiqueta de IA en TikTok e Instagram. Lo sube la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario; los tres se comprobaron publicados y con sonido | IA + Persona |
+| En YouTube se responde «No» a la pregunta de uso de IA | La música es de fondo y la compone un script; no es el foco del vídeo | IA |
+| No se cambia el enlace de la biografía cada día: la portada enlaza ahora todas las calculadoras (pensiones, autónomo, IA y empleo, además de voto y nómina) | Instagram solo deja cambiar el enlace desde el móvil, y la portada no enlazaba la calculadora de pensiones, que es la pieza del 7 nov | IA |
+| En TikTok, la dirección de la calculadora va en el texto de cada vídeo | TikTok no deja poner enlace en el perfil hasta los 1.000 seguidores. Los textos de los días 3, 4 y 5 decían «Calculadora en el perfil», y el perfil no tiene enlace | IA |
+
+---
+
 ## 4 noviembre 2026
 
 | Decisión | Motivo | Quién |
