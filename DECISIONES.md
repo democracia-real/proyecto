@@ -6,6 +6,15 @@
 
 ---
 
+## 6 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la imagen del salario mínimo en X, como hilo de dos mensajes (imagen sin enlace y respuesta con el enlace: https://x.com/democracia2630/status/2118803786739126487), y en Instagram (https://www.instagram.com/p/Dfaei9fjehk/) con la etiqueta de IA. La publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario. En X, el enlace va en la respuesta para no perder alcance | IA + Persona |
+| Réplica de la matriz: a 6 nov ningún partido ha contestado, según la bandeja que revisó la persona. El plazo acaba el 10 nov | Es lo que dicen los correos: si un partido no contesta, su fila se publica el 13 tal como está, indicando que se le pidió réplica el 1 nov | Persona |
+
+---
+
 ## 5 noviembre 2026
 
 | Decisión | Motivo | Quién |
