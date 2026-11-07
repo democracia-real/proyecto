@@ -12,6 +12,9 @@
 |----------|--------|-------|
 | Publicado el vídeo de pensiones (censo y riqueza por edad) en TikTok, Instagram Reels (https://www.instagram.com/reel/DfcBmtNIGDN/) y YouTube Shorts (https://youtube.com/shorts/GEUgUeQkJzE), con la etiqueta de IA en TikTok e Instagram. Lo sube la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario; los tres se comprobaron publicados y con sonido. Cifras `electores-por-edad` y `riqueza-por-edad`, verificadas | IA + Persona |
 | Portada: el fotograma del censo con los tres tramos, no el título | Enseña los datos y el tramo más grande (la mitad tiene de 35 a 64 años), que es el matiz del vídeo | IA |
+| No hacer ahora una calculadora de interés compuesto | Esa búsqueda la copan bancos y webs de finanzas con años de ventaja, atrae a gente que busca invertir y no a la que le interesa el proyecto, y quedan tres semanas para el 29N. Si se hace, después y ligada al proyecto (los intereses de la deuda pública) | IA |
+| SEO de las calculadoras: títulos y descripciones con lo que la gente busca («sueldo neto 2026», «cuota de autónomos 2026», «votos por escaño») y datos estructurados de aplicación web | Las búsquedas de sueldo, cuota y voto tienen volumen y encajan con lo que ya hay; los títulos no las usaban. Sin cifras nuevas: las descripciones no llevan números | IA + Persona |
+| Las direcciones que no existen dan error 404 en vez de mostrar la portada | Google trata una portada servida en cualquier dirección como página duplicada («soft 404») | IA |
 
 ---
 

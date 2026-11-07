@@ -1,8 +1,4 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/css/*", "/js/*", "/images/*", "/i18n/*", "/*.ico", "/*.png", "/*.svg", "/*.xml", "/*.txt", "/*.json"]
-  },
   "routes": [
     {
       "route": "/docs",
