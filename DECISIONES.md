@@ -6,6 +6,15 @@
 
 ---
 
+## 7 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicado el vídeo de pensiones (censo y riqueza por edad) en TikTok, Instagram Reels (https://www.instagram.com/reel/DfcBmtNIGDN/) y YouTube Shorts (https://youtube.com/shorts/GEUgUeQkJzE), con la etiqueta de IA en TikTok e Instagram. Lo sube la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario; los tres se comprobaron publicados y con sonido. Cifras `electores-por-edad` y `riqueza-por-edad`, verificadas | IA + Persona |
+| Portada: el fotograma del censo con los tres tramos, no el título | Enseña los datos y el tramo más grande (la mitad tiene de 35 a 64 años), que es el matiz del vídeo | IA |
+
+---
+
 ## 6 noviembre 2026
 
 | Decisión | Motivo | Quién |
