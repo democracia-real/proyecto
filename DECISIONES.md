@@ -6,6 +6,16 @@
 
 ---
 
+## 8 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Web dada de alta en Google Search Console con la cuenta de Google del proyecto (propiedad de dominio, verificada por DNS) | Saber qué se busca y avisar a Google de las páginas nuevas | Persona |
+| Enviado el sitemap (Google lo leyó bien: 18 páginas) y pedido a Google que vuelva a rastrear la portada y las cinco calculadoras | Las seis ya estaban indexadas, pero con los títulos y descripciones de antes del 7 nov | IA |
+| No se asocia nada a mano para el aviso de «contenido de Instagram, TikTok, X y YouTube en la Búsqueda» | No hay ajuste que tocar: el informe aparece solo cuando Google relaciona los perfiles con la web, y la portada ya los enlaza (`sameAs`) | IA |
+
+---
+
 ## 7 noviembre 2026
 
 | Decisión | Motivo | Quién |
