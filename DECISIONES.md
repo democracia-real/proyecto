@@ -12,6 +12,8 @@
 |----------|--------|-------|
 | Web dada de alta en Google Search Console con la cuenta de Google del proyecto (propiedad de dominio, verificada por DNS) | Saber qué se busca y avisar a Google de las páginas nuevas | Persona |
 | Enviado el sitemap (Google lo leyó bien: 18 páginas) y pedido a Google que vuelva a rastrear la portada y las cinco calculadoras | Las seis ya estaban indexadas, pero con los títulos y descripciones de antes del 7 nov | IA |
+| No se comparte el vídeo largo (la pieza del 8 nov) | Tiene tres cifras que el registro ya había corregido o retirado: Soria «seis veces» Madrid (es 3,8), paro juvenil del 26,6% (es el 22,8%) y «87.000 titulados que se van cada año» (sin fuente; el dato de 2021 es 22.665). Además habla de un programa y de primarias de partido, y el proyecto no se presenta | IA |
+| Fe de erratas del vídeo largo en la portada, debajo del vídeo, y al principio de su descripción en YouTube. La portada deja de destacarlo con un botón | El vídeo ya estaba publicado; corregir en público es la regla, y no se borra lo que otros pueden haber visto | IA |
 | No se asocia nada a mano para el aviso de «contenido de Instagram, TikTok, X y YouTube en la Búsqueda» | No hay ajuste que tocar: el informe aparece solo cuando Google relaciona los perfiles con la web, y la portada ya los enlaza (`sameAs`) | IA |
 
 ---
