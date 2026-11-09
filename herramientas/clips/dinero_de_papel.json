@@ -1,0 +1,42 @@
+{
+  "cancion": "youtube_exports/02-problemas_estructurales/13 - Dinero de Papel.mp4",
+  "titulo": "Dinero de Papel",
+  "inicio": 28.9,
+  "fin": 71.0,
+  "nota": "Tiempos sacados de los subtítulos automáticos de YouTube (vídeo 8-oIuSdb0w0), con medio segundo de margen",
+  "bloques": [
+    {"desde": 28.9, "hasta": 34.0, "lineas": [
+      [29.3, "Emití la factura"],
+      [30.4, "con la fecha del día,"],
+      [31.6, "pero el banco me muestra"],
+      [32.6, "una cuenta vacía."]
+    ]},
+    {"desde": 34.0, "hasta": 45.2, "lineas": [
+      [34.1, "Llega el trimestre,"],
+      [35.4, "el fisco no espera,"],
+      [36.6, "me pide el IVA"],
+      [37.6, "de una caja de madera."],
+      [39.2, "Dinero que no tengo,"],
+      [40.4, "que el cliente no pagó,"],
+      [41.8, "pero el Estado dice"],
+      [43.2, "que el dueño soy yo."]
+    ]},
+    {"desde": 45.2, "hasta": 55.4, "lineas": [
+      [45.6, "Es dinero de papel,"],
+      [47.4, "una deuda en el viento,"],
+      [50.6, "pagando por un oro"],
+      [52.4, "que todavía no siento."]
+    ]},
+    {"desde": 55.4, "hasta": 68.6, "lineas": [
+      [55.8, "IVA devengado,"],
+      [57.3, "pero no ingresado,"],
+      [59.6, "el autónomo siempre"],
+      [60.8, "sale trasquilado."],
+      [62.4, "Solo quiero pagar"],
+      [63.6, "por lo que he cobrado,"],
+      [65.1, "que el impuesto sea real,"],
+      [66.6, "no un dibujo inventado."]
+    ]}
+  ],
+  "cierre": ["¿Cuánto paga un autónomo?", "democraciareal.es/autonomo"]
+}

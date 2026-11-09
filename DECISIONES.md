@@ -12,6 +12,7 @@
 |----------|--------|-------|
 | Publicada la corrección de Soria («3,8 veces Madrid, no casi 6») en X, como hilo (imagen sin enlace y respuesta con /voto: https://x.com/democracia2630/status/2119707770035622117), y en Instagram (https://www.instagram.com/p/Dfg5iZAjXvL/) con la etiqueta de IA. La publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario: el error que se corrige es nuestro. Cifra `voto-2023-soria-madrid`, verificada por dos IA | IA + Persona |
 | El segundo mensaje de X se escribió mal (el texto salió desordenado) y se rehízo antes de publicar | Se comprobó el texto de los dos mensajes antes de pulsar «Publicar» | IA |
+| El clip del 10 nov es de *Dinero de Papel* (autónomos que pagan el IVA de facturas aún no cobradas), no de *El Rastro del Bit* | El estribillo de *El Rastro del Bit* («aunque rompas el disco, te vamos a encontrar») y sus estrofas (WhatsApp borrados, «este partido») apuntan a casos de partidos concretos y suenan a amenaza; a cuatro días de la campaña, no. De las otras canciones sin cifras, *Autor Desconocido* lleva un umbral de 400 € y *Nodos*, *Meritocracia* y *Ejemplaridad* hablan de un partido | IA |
 
 ---
 
