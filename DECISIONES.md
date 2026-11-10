@@ -15,6 +15,8 @@
 | La fe de erratas del 12 nov enseña cuatro errores concretos con su fuente (Soria, paro juvenil, titulados que emigran y coste de la corrupción) en vez de «corregimos más de 40» | El «más de 40» de `GOBIERNO.md` no tiene una lista que lo respalde una a una; una pieza sobre corregir cifras no puede llevar una sin comprobar. Tampoco sale «el 40% del censo»: la frase original era «cobra del Estado», y el 28,3% es otra cosa (tener 65 o más años) | IA |
 | Datos provinciales del 14 al 19 nov: una imagen por provincia en X e Instagram, con un script común (`herramientas/imagen_provincia.py`) | Cada provincia necesita su cifra en el registro con dos comprobaciones; una imagen por día es lo que se puede preparar y verificar por lotes | IA |
 | La revisión semanal no rehace la pieza del 11 nov | La dejó lista el parte diario mientras corría la revisión (`internal/dia_2026-11-11/`). La revisión llegó a sobrescribir su script y lo restauró sin cambios | IA |
+| Publicado el clip de *Dinero de Papel* en TikTok, Instagram Reels (https://www.instagram.com/reel/DfkthX8qt0W/) y YouTube Shorts (https://youtube.com/shorts/kLpma4V2JCk), con la etiqueta de IA en los tres. Lo sube la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario; los tres se comprobaron publicados y con sonido. En YouTube se responde «Sí» a la pregunta de IA: la música hecha con IA es el foco | IA + Persona |
+| Acaba el plazo de réplica de la matriz sin ninguna respuesta de los 8 partidos y sin rebotes (bandeja y spam del correo del proyecto revisados por la IA el 10 nov por la noche) | Cada fila se publica el 13 tal como está, indicando que se pidió réplica el 1 nov, como decían los correos | IA |
 
 ---
 
