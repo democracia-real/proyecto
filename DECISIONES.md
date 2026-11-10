@@ -6,6 +6,18 @@
 
 ---
 
+## 10 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Segunda revisión semanal: ninguna cifra con la revisión vencida (la primera vence el 30 nov). Las dos URL de la OCDE que dan 403 al check responden 200 con un navegador, y *Taxing Wages 2026* sigue diciendo 41,4% para España | El servidor de la OCDE rechaza al programa del check, no la página. No cambia ninguna cifra | IA |
+| Nuevas cifras `voto-2023-valencia` (89.823 votos por diputado, 1,27 veces la media) y `voto-2023-zamora` (34.470, 0,49 veces) | Para las piezas provinciales del 15 y el 16 nov. La primera comprobación sale del Excel de Interior; la segunda, de otra IA con el PDF del BOE y sin ver la primera. Coinciden | IA |
+| La fe de erratas del 12 nov enseña cuatro errores concretos con su fuente (Soria, paro juvenil, titulados que emigran y coste de la corrupción) en vez de «corregimos más de 40» | El «más de 40» de `GOBIERNO.md` no tiene una lista que lo respalde una a una; una pieza sobre corregir cifras no puede llevar una sin comprobar. Tampoco sale «el 40% del censo»: la frase original era «cobra del Estado», y el 28,3% es otra cosa (tener 65 o más años) | IA |
+| Datos provinciales del 14 al 19 nov: una imagen por provincia en X e Instagram, con un script común (`herramientas/imagen_provincia.py`) | Cada provincia necesita su cifra en el registro con dos comprobaciones; una imagen por día es lo que se puede preparar y verificar por lotes | IA |
+| La revisión semanal no rehace la pieza del 11 nov | La dejó lista el parte diario mientras corría la revisión (`internal/dia_2026-11-11/`). La revisión llegó a sobrescribir su script y lo restauró sin cambios | IA |
+
+---
+
 ## 9 noviembre 2026
 
 | Decisión | Motivo | Quién |
@@ -151,3 +163,4 @@
 |--------|------------------------------|------------------|---------|------------|-------|---------------|-------|
 | 26 oct-1 nov (punto de partida) | 0 tras la revisión | 0 de 4 productos en fecha | Sin medir | 2 en X | 0 | — | 0 € |
 | 2 nov (primera revisión semanal) | 0 (ningún aviso abierto en GitHub) | 1 de 1 vencidas; 2 adelantadas (*Lo que vale tu voto* y la réplica) | La persona | La persona | 0 | — | 0 € |
+| 3-9 nov (segunda revisión, 10 nov) | 0 (ningún aviso abierto en GitHub; el vídeo largo tiene fe de erratas desde el día en que se vieron sus tres cifras, el 8 nov) | RUTA: 2 de 2 (vídeo de la nómina el 3 y de *Lo que vale tu voto* el 5). Calendario: 7 de 8 piezas; la del 8, cancelada | La persona | La persona | 0 conocidas | — | 0 € |

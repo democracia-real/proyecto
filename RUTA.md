@@ -1,8 +1,16 @@
 # Ruta
 
-*Actualizada: 2 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
+*Actualizada: 10 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
 
 ---
+
+## Revisión del 10 de noviembre (segunda semanal)
+
+- Hecho: las piezas del 3 al 9 nov salieron en su día, menos el vídeo largo del 8, cancelado porque tenía tres cifras ya corregidas (fe de erratas en la portada y en YouTube). Web dada de alta en Search Console.
+- No va nada tarde. Hoy acaba el plazo de réplica de la matriz; incorporar las respuestas (11-12 nov) depende de que la persona mire la bandeja del proyecto.
+- Sin cambios de fechas para las dos próximas semanas. Dos ajustes de piezas: la fe de erratas del 12 enseña cuatro errores con su fuente en vez de «más de 40», que no tiene lista que lo respalde; y los datos provinciales salen como imagen en X e Instagram, una provincia por pieza con su cifra en el registro.
+- La prueba de X Premium (13-27 nov) es gasto: sin el visto bueno de la persona antes del 13, no se hace.
+- Piezas del 12, 14, 15 y 16 nov listas en `internal/semana_2026-11-09/`; las del 10 y el 11, en `internal/dia_2026-11-10/` y `internal/dia_2026-11-11/`.
 
 ## Revisión del 2 de noviembre (primera semanal)
 

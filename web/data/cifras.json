@@ -683,6 +683,48 @@
       }
     },
     {
+      "id": "voto-2023-valencia",
+      "afirmacion": "En las elecciones al Congreso de 2023, Valencia eligió un diputado por cada 89.823 votos válidos (1.437.161 votos válidos para 16 escaños), 1,27 veces la media de España (70.537)",
+      "valor": "89.823",
+      "periodo": "Elecciones al Congreso de 23 de julio de 2023",
+      "fuente": "Junta Electoral Central, resultados de las elecciones al Congreso de 2023 (BOE-A-2023-18907), cuadros I y II",
+      "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+      "fragmento": "Cuadro I: 1.999.340 1.451.187 1.437.161 1.426.351 10.810 14.026 Valencia/València. Cuadro II: Valencia/València. 16",
+      "calculo": "1.437.161 / 16; cociente sobre 24.688.087 / 350 = 70.537,4",
+      "consultado": "2026-11-10",
+      "estado": "verificado",
+      "verificado_por": [
+        "ia:claude-opus-5-5 (Claude Code), calculado de web/data/voto-2023.json, que reproduce el Excel provincial del Ministerio del Interior (data/voto-2023/calcular.py)",
+        "ia:claude-sonnet-5-5, segunda comprobación independiente sin ver la primera (2026-11-10), con el PDF del BOE descargado: mismos votos válidos, escaños y cociente"
+      ],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/data/voto-2023.json": "\"votos_por_escano\": 89822.6"
+      }
+    },
+    {
+      "id": "voto-2023-zamora",
+      "afirmacion": "En las elecciones al Congreso de 2023, Zamora eligió un diputado por cada 34.470 votos válidos (103.410 votos válidos para 3 escaños), 0,49 veces la media de España (70.537): un voto allí pesó unas dos veces la media",
+      "valor": "34.470",
+      "periodo": "Elecciones al Congreso de 23 de julio de 2023",
+      "fuente": "Junta Electoral Central, resultados de las elecciones al Congreso de 2023 (BOE-A-2023-18907), cuadros I y II",
+      "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+      "fragmento": "Cuadro I: 162.998 104.671 103.410 102.488 922 1.261 Zamora. Cuadro II: Zamora. 3",
+      "calculo": "103.410 / 3; cociente sobre 24.688.087 / 350 = 70.537,4",
+      "consultado": "2026-11-10",
+      "estado": "verificado",
+      "verificado_por": [
+        "ia:claude-opus-5-5 (Claude Code), calculado de web/data/voto-2023.json, que reproduce el Excel provincial del Ministerio del Interior (data/voto-2023/calcular.py)",
+        "ia:claude-sonnet-5-5, segunda comprobación independiente sin ver la primera (2026-11-10), con el PDF del BOE descargado: mismos votos válidos, escaños y cociente"
+      ],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/data/voto-2023.json": "\"votos_por_escano\": 34470.0"
+      }
+    },
+    {
       "id": "cuota-autonomos-2026",
       "afirmacion": "En 2026 los autónomos cotizan por tramos de rendimientos netos: la base mínima va de 653,59 €/mes (tramo 1 de la tabla reducida) a 1.928,10 €/mes (tramo 12 de la general), y el tipo total es del 31,50% (contingencias comunes 28,30, profesionales 1,30, cese de actividad 0,90, formación profesional 0,10 y MEI 0,90)",
       "valor": "653,59 a 1.928,10 €/mes de base mínima; 31,50%",
