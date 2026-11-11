@@ -2,7 +2,7 @@
 
 *1 noviembre 2026 · Versión reducida: 6 estándares. Hecha y comprobada por IA.*
 
-> **Estado:** se publican primero estos criterios, antes que cualquier resultado. Cada partido recibe su fila por correo con 7 días para responder. La matriz completa, con las respuestas y la verificación, se publica el **13 de noviembre de 2026**.
+> **Estado:** estos criterios se publicaron el 1 de noviembre, antes que los resultados. Ese día cada partido recibió su fila por correo, con plazo hasta el 10 de noviembre; ninguno respondió. La matriz se publicó el **13 de noviembre de 2026** ([/reglas](https://democraciareal.es/reglas)).
 
 ---
 
@@ -138,11 +138,11 @@ Se mira el órgano estatal que resuelve los expedientes disciplinarios. Si hay v
 
 ## Cómo se comprueba
 
-1. **Primera extracción** (Claude Opus 5.5): lee los documentos y, para cada celda, anota documento, página del PDF, artículo, cita literal, valor y un texto corto. Un script (`construir.py`, se publica con los resultados) comprueba que cada cita aparece tal cual en el texto del PDF y calcula su página. En Junts, EH Bildu y EAJ-PNV la hizo un subagente Claude Opus 5.5 nuevo, porque quien coordinaba ya había visto la segunda lectura de esos partidos (detalle en `VERIFICACION.md`, que se publica con los resultados).
+1. **Primera extracción** (Claude Opus 5.5): lee los documentos y, para cada celda, anota documento, página del PDF, artículo, cita literal, valor y un texto corto. Un script ([`construir.py`](construir.py)) comprueba que cada cita aparece tal cual en el texto del PDF y calcula su página. En Junts, EH Bildu y EAJ-PNV la hizo un subagente Claude Opus 5.5 nuevo, porque quien coordinaba ya había visto la segunda lectura de esos partidos (detalle en [`VERIFICACION.md`](VERIFICACION.md)).
 2. **Segunda comprobación** (Claude Sonnet 5.5, otra IA): lee los mismos PDF **sin ver la primera extracción** y con estos mismos criterios, y hace su propia matriz.
-3. **Si no coinciden en el valor, la celda queda «no consta»** y se anota la discrepancia. El resultado se publica con la matriz, en `VERIFICACION.md`.
+3. **Si no coinciden en el valor, la celda queda «no consta»** y se anota la discrepancia. Resultado en [`VERIFICACION.md`](VERIFICACION.md).
 4. **Ninguna persona ha revisado las celdas.** No se escribe una firma humana que no existe.
-5. **Réplica:** antes de publicar, cada partido recibirá su fila con 7 días para responder. Si contesta, se publica su respuesta literal; si señala un error, se corrige y se dice. El envío lo aprueba la persona responsable.
+5. **Réplica:** el 1 de noviembre cada partido recibió su fila por correo, con plazo hasta el 10 de noviembre (el envío lo aprobó la persona responsable). Ninguno respondió. Si un partido contesta después, se publica su respuesta literal; si señala un error, se corrige y se dice.
 
 ## Páginas y citas
 

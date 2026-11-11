@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 01 Nov 2026 17:47:57 GMT
+Content-Type: application/pdf
+Content-Length: 8589314
+Connection: keep-alive
+x-archive-orig-date: Sat, 17 Oct 2026 04:11:07 GMT
+x-archive-orig-server: Apache
+x-archive-orig-last-modified: Tue, 14 Jul 2026 11:24:42 GMT
+x-archive-orig-accept-ranges: bytes
+x-archive-orig-content-length: 8589314
+x-archive-orig-vary: Accept-Encoding
+x-archive-orig-cache-control: max-age=3600, public
+x-archive-orig-connection: close
+x-archive-orig-x-cdn: Imperva
+x-archive-orig-x-iinfo: 7-10387982-10387986 NNNN CT(163 341 0) RT(1792210267056 78) q(0 0 5 1) r(6 6) U18
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Sat, 17 Oct 2026 04:11:07 GMT
+link: <https://www.psoe.es/media-content/2023/03/PSOEcodigo_Etico.pdf>; rel="original", <https://web.archive.org/web/timemap/link/https://www.psoe.es/media-content/2023/03/PSOEcodigo_Etico.pdf>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://www.psoe.es/media-content/2023/03/PSOEcodigo_Etico.pdf>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-app-server: wwwb-app249-dc8
+x-ts: 200
+x-tr: 2942
+cache-control: private
+X-RL: 0
+X-NA: 0
+X-Page-Cache: BYPASS
+Server-Timing: BYPASS
+X-NID: Telefonica De Espana S.a.u.
+Referrer-Policy: no-referrer-when-downgrade
+Permissions-Policy: interest-cohort=()
+X-sd: 0
+X-location: _pdf
+

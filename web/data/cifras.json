@@ -893,6 +893,199 @@
         "web/autonomo.html": "us&oacute; inteligencia artificial en el primer trimestre de 2026, frente al 33,6%"
       },
       "nota": "El 21,4% es sobre las empresas de menos de 10 empleados con conexión a Internet (nota 1 de su tabla). El 33,6% es la misma cifra que adopcion-ia-empresas; en la tabla por comunidades el INE la da también sobre las empresas con conexión a Internet. En el PDF, la tabla de las microempresas sale desplazada una fila al extraer el texto; vale la frase."
+    },
+    {
+      "id": "reglas-democracia-real-mandatos",
+      "afirmacion": "Democracia Real, límite de mandatos: 2 mandatos; 3 legislaturas (Democracia interna de Democracia Real (borrador), Límites de Mandato, línea 142)",
+      "valor": "2 mandatos; 3 legislaturas",
+      "periodo": "Borrador del repositorio, leído el 1 de noviembre de 2026",
+      "fuente": "Democracia interna de Democracia Real (borrador)",
+      "url": "https://github.com/democracia-real/proyecto/blob/main/04_modelo_organizativo_partido/democracia_interna.md",
+      "fragmento": "Cargos electos | 3 legislaturas máximo",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"2 mandatos; 3 legislaturas\""
+      }
+    },
+    {
+      "id": "reglas-democracia-real-revocacion",
+      "afirmacion": "Democracia Real, revocación: 20% de afiliados (Democracia interna de Democracia Real (borrador), Revocación de Cargos, línea 125)",
+      "valor": "20% de afiliados",
+      "periodo": "Borrador del repositorio, leído el 1 de noviembre de 2026",
+      "fuente": "Democracia interna de Democracia Real (borrador)",
+      "url": "https://github.com/democracia-real/proyecto/blob/main/04_modelo_organizativo_partido/democracia_interna.md",
+      "fragmento": "Portavoz | 20% de afiliados del ámbito nacional | 6 meses desde la elección",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"20% de afiliados\"",
+        "web/reglas.html": "otro documento dice el 20%"
+      }
+    },
+    {
+      "id": "reglas-ehbildu-revocacion",
+      "afirmacion": "EH Bildu, revocación: la decide la Asamblea General (2/3) (Estatutos de la federación Euskal Herria Bildu, Art. 17.6.k.III, página 24 del PDF)",
+      "valor": "la decide la Asamblea General (2/3)",
+      "periodo": "Documento vigente descargado el 1 de noviembre de 2026",
+      "fuente": "Estatutos de la federación Euskal Herria Bildu",
+      "url": "https://ehbildu.eus/dokumentuak/gardentasuna/Estatutos.pdf",
+      "fragmento": "III. La resolución de solicitudes de revocación presentadas formalmente contra miembros de dichos órganos. […] En todos estos casos, será necesario el voto favorable de al menos dos tercios (2/3) de los miembros de la Asamblea General",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"la decide la Asamblea General (2/3)\""
+      }
+    },
+    {
+      "id": "reglas-junts-revocacion",
+      "afirmacion": "Junts, revocación: moción de censura, 20% de militantes (Estatuts de Junts per Catalunya (text consolidat, congrés d'octubre 2024; no ferms segons el mateix document), Art. 99, página 48 del PDF)",
+      "valor": "moción de censura, 20% de militantes",
+      "periodo": "Documento vigente descargado el 1 de noviembre de 2026",
+      "fuente": "Estatuts de Junts per Catalunya (text consolidat, congrés d'octubre 2024; no ferms segons el mateix document)",
+      "url": "https://junts.cat/wp-content/uploads/2026/10/Estatuts-2024-1.pdf",
+      "fragmento": "Més del 20 % (si són més de 100) i més del 30 % (si són menys de 100) dels militants adscrits a l’àmbit de la presidència contra la qual es presenta la moció. […] La moció de censura haurà de superar el 50% dels vots emesos en la votació.",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"moción de censura, 20% de militantes\""
+      }
+    },
+    {
+      "id": "reglas-psoe-mandatos",
+      "afirmacion": "PSOE, límite de mandatos: 3 mandatos, con excepciones (Estatutos Federales del PSOE (41 Congreso, diciembre 2024), Art. 3.9, página 7 del PDF)",
+      "valor": "3 mandatos, con excepciones",
+      "periodo": "Documento vigente descargado el 1 de noviembre de 2026",
+      "fuente": "Estatutos Federales del PSOE (41 Congreso, diciembre 2024)",
+      "url": "https://www.psoe.es/media-content/2024/12/Estatutos-Federales-41%C2%BA-CF.pdf",
+      "fragmento": "Ningún cargo orgánico ejecutivo podrá ser ocupado por la misma persona durante más de tres mandatos consecutivos, salvo en el caso de la Secretaría General cuando su titular ejerza la Presidencia del Gobierno de España",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"3 mandatos, con excepciones\""
+      }
+    },
+    {
+      "id": "reglas-sumar-revocacion",
+      "afirmacion": "Sumar, revocación: 35% de las personas afiliadas (Estatutos de Movimiento Sumar tras la Asamblea de 2025, Art. 21.4, página 23 del PDF)",
+      "valor": "35% de las personas afiliadas",
+      "periodo": "Documento vigente descargado el 1 de noviembre de 2026",
+      "fuente": "Estatutos de Movimiento Sumar tras la Asamblea de 2025",
+      "url": "https://movimientosumar.es/transparencia/wp-content/uploads/sites/6/2025/07/Estatutos-tras-Asamblea-2025_DEF.pdf",
+      "fragmento": "Convocatoria de Asamblea General Extraordinaria, solicitada por al menos el 35% de las personas miembros, con un único punto a abordar que será la revocación de la Coordinación General mediante votación por mayoría absoluta.",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"35% de las personas afiliadas\""
+      }
+    },
+    {
+      "id": "reglas-vox-revocacion",
+      "afirmacion": "Vox, revocación: moción con aval de 2/3 (Estatutos de VOX (subsanación de 24 jun 2023), Art. 27, página 14 del PDF)",
+      "valor": "moción con aval de 2/3",
+      "periodo": "Documento vigente descargado el 1 de noviembre de 2026",
+      "fuente": "Estatutos de VOX (subsanación de 24 jun 2023)",
+      "url": "https://www.voxespana.es/wp-content/uploads/2025/02/2.10.2023-SUBSANACION-24.06.2023-Estatutos-VOX1.pdf",
+      "fragmento": "debiendo acompañarla con el aval de las 2/3 partes de los afiliados de pleno derecho del ámbito territorial en que ejerza sus funciones el Comité cuestionado.",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"moción con aval de 2/3\""
+      }
+    },
+    {
+      "id": "reglas-erc-mandatos",
+      "afirmacion": "ERC, límite de mandatos: 12 años, con excepción (Estatuts d'Esquerra Republicana (febrer 2026), Art. 73, página 39 del PDF)",
+      "valor": "12 años, con excepción",
+      "periodo": "Documento vigente descargado el 1 de noviembre de 2026",
+      "fuente": "Estatuts d'Esquerra Republicana (febrer 2026)",
+      "url": "https://static.esquerra.cat/arxius/textosbasics/estatuts_2026.pdf",
+      "fragmento": "La Presidència pot ser reelegida ininterrompudament fins a un màxim de dotze anys, si bé sempre pot acabar el mandat.",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Las dos lecturas citan la misma cláusula y la misma cifra («dotze anys»), pero no coinciden en el valor (parcial / sí): la celda queda «no consta» y la página enseña las dos lecturas.",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): misma cláusula y misma cifra, otro valor. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"12 años, con excepción\""
+      }
+    },
+    {
+      "id": "reglas-erc-revocacion",
+      "afirmacion": "ERC, revocación: 1/5 de afiliados fuerza nueva elección (Estatuts d'Esquerra Republicana (febrer 2026), Art. 65, página 35 del PDF)",
+      "valor": "1/5 de afiliados fuerza nueva elección",
+      "periodo": "Documento vigente descargado el 1 de noviembre de 2026",
+      "fuente": "Estatuts d'Esquerra Republicana (febrer 2026)",
+      "url": "https://static.esquerra.cat/arxius/textosbasics/estatuts_2026.pdf",
+      "fragmento": "Per petició motivada, adreçada a l’Executiva Nacional, d’una cinquena part de les persones afiliades de ple dret d’Esquerra Republicana.",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "nota": "Las dos lecturas citan la misma cláusula y la misma cifra («una cinquena part»), pero no coinciden en el valor (sí / parcial): la celda queda «no consta» y la página enseña las dos lecturas.",
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): misma cláusula y misma cifra, otro valor. Detalle en data/reglas/VERIFICACION.md"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"etiqueta\": \"1/5 de afiliados fuerza nueva elección\""
+      }
+    },
+    {
+      "id": "reglas-matriz-resumen",
+      "afirmacion": "La matriz reducida tiene 54 celdas: 6 estándares para 9 filas (8 partidos con grupo propio en la XV legislatura y Democracia Real)",
+      "valor": "54 celdas · 9 filas",
+      "periodo": "Versión del 1 de noviembre de 2026",
+      "fuente": "Matriz propia, construida por data/reglas/construir.py a partir de los documentos de data/reglas/fuente/",
+      "url": "https://github.com/democracia-real/proyecto/blob/main/web/data/reglas.json",
+      "fragmento": "\"celdas\": 54",
+      "calculo": "6 estándares × 9 filas; el script falla si falta alguna celda o alguna de las dos lecturas",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["script: data/reglas/construir.py (cuenta las celdas y exige las dos lecturas en cada una)"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/reglas.html": "54 celdas &middot; 9 filas",
+        "web/data/reglas.json": "\"celdas\": 54"
+      }
+    },
+    {
+      "id": "reglas-matriz-valores",
+      "afirmacion": "Valores finales de la matriz reducida: sí 16, parcial 23, no 3, no consta 12; en 4 celdas las dos lecturas no coinciden y quedan «no consta»",
+      "valor": "sí 16 · parcial 23 · no 3 · no consta 12 (4 discrepancias)",
+      "periodo": "Versión del 1 de noviembre de 2026",
+      "fuente": "Matriz propia, construida por data/reglas/construir.py a partir de las dos lecturas (data/reglas/primera.json y segunda.json)",
+      "url": "https://github.com/democracia-real/proyecto/blob/main/web/data/reglas.json",
+      "fragmento": "\"discrepancias\": 4",
+      "calculo": "Recuento de las 54 celdas por valor final; la página lo pinta desde web/data/reglas.json",
+      "consultado": "2026-11-01",
+      "estado": "verificado",
+      "verificado_por": ["script: data/reglas/construir.py (compara las dos lecturas celda a celda y cuenta los valores)"],
+      "revision_humana": null,
+      "revisar_en": "2026-11-20",
+      "texto_en": {
+        "web/data/reglas.json": "\"discrepancias\": 4"
+      }
     }
   ]
 }

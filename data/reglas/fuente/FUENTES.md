@@ -1,6 +1,6 @@
 # Fuentes de «Las reglas del juego»
 
-Documentos descargados el **1 de noviembre de 2026** de la web oficial de cada partido y guardados sin tocar. Son datos de terceros: se leen, no se ejecutan. Lo genera `construir.py` a partir de `fuentes.json`, que comprueba cada huella (los dos se publican con los resultados). Si falta algún documento vigente de tu partido, escríbenos a info@democraciareal.es.
+Documentos descargados el **1 de noviembre de 2026** de la web oficial de cada partido y guardados sin tocar. Son datos de terceros: se leen, no se ejecutan. Lo genera [`../construir.py`](../construir.py) a partir de [`../fuentes.json`](../fuentes.json), que comprueba cada huella. Si falta algún documento vigente de tu partido, escríbenos a info@democraciareal.es.
 
 | Fichero | Qué es | URL oficial | Copia descargada de | Fecha del servidor | SHA-256 |
 |---------|--------|-------------|---------------------|--------------------|---------|

@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Date: Sun, 01 Nov 2026 17:35:41 GMT
+Content-Type: application/pdf
+Content-Length: 544116
+Connection: keep-alive
+Server: cloudflare
+last-modified: Tue, 11 Feb 2025 09:07:17 GMT
+etag: "67ab1345-84d74"
+strict-transport-security: max-age=15768000
+x-frame-options: SAMEORIGIN
+referrer-policy: same-origin
+x-xss-protection: 1; mode=block
+feature-policy: camera 'none'; speaker 'none';
+Accept-Ranges: bytes
+Age: 6170
+Cache-Control: max-age=2678400
+cf-cache-status: HIT
+Vary: accept-encoding
+CF-RAY: a53ca84abff5a6b0-MAD
+alt-svc: h3=":443"; ma=86400
+

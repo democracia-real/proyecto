@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 01 Nov 2026 17:37:19 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-archive-orig-date: Wed, 16 Sep 2026 23:52:33 GMT
+x-archive-orig-server: Apache
+x-archive-orig-access-control-allow-origin: *
+x-archive-orig-access-control-allow-headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method
+x-archive-orig-access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE
+x-archive-orig-allow: GET, POST, OPTIONS, PUT, DELETE
+x-archive-orig-cache-control: no-cache, must-revalidate
+x-archive-orig-vary: Accept-Encoding
+content-encoding: gzip
+x-archive-orig-connection: close
+x-archive-orig-x-cdn: Imperva
+x-archive-orig-transfer-encoding: chunked
+x-archive-orig-x-iinfo: 18-222851937-222851943 NNNN CT(171 374 0) RT(1789602753033 9) q(0 0 5 6) r(30 30) U12
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Wed, 16 Sep 2026 23:52:33 GMT
+link: <https://www.psoe.es/transparencia/informacion-politica-organizativa/estatutos-y-reglamentos-federales/>; rel="original", <https://web.archive.org/web/timemap/link/https://www.psoe.es/transparencia/informacion-politica-organizativa/estatutos-y-reglamentos-federales/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://www.psoe.es/transparencia/informacion-politica-organizativa/estatutos-y-reglamentos-federales/>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-app-server: wwwb-app244-dc8
+x-ts: 200
+x-tr: 1130
+cache-control: private
+X-location: All
+X-AS: 3352
+X-RL: 0
+X-NA: 0
+X-Page-Cache: MISS
+Server-Timing: MISS
+X-NID: Telefonica De Espana S.a.u.
+Referrer-Policy: no-referrer-when-downgrade
+Permissions-Policy: interest-cohort=()
+X-sd: 0
+

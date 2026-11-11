@@ -1,0 +1,6 @@
+# Ficheros tal como se descargaron: sin conversión de finales de línea,
+# para que su SHA-256 coincida con el de FUENTES.md
+* -text
+*.pdf binary
+FUENTES.md text
+.gitattributes text

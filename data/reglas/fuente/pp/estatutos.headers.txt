@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Date: Sun, 01 Nov 2026 17:35:30 GMT
+Content-Type: application/pdf
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: cloudflare
+Last-Modified: Sat, 05 Jul 2025 15:13:46 GMT
+cf-cache-status: HIT
+Vary: Accept-Encoding
+ETag: W/"1fd7b3-639300e99a6aa-gzip"
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Content-Security-Policy: object-src 'none'
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer-when-downgrade
+X-Content-Type-Options: nosniff
+Age: 4293
+Cache-Control: max-age=28800
+CF-RAY: a53ca809599eec9d-MAD
+

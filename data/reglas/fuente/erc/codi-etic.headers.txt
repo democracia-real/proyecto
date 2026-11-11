@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Content-Type: application/pdf
+Content-Length: 108811
+Connection: keep-alive
+Accept-Ranges: bytes
+Date: Sun, 01 Nov 2026 17:32:14 GMT
+Server: AmazonS3
+Last-Modified: Mon, 01 Dec 2025 11:49:35 GMT
+ETag: "dc34cb612e7e88d6427256068da3cd43"
+x-amz-meta-origin-date-iso8601: 2025-11-26T10:54:34.674Z
+x-amz-version-id: GMsieadpGyz4oTjTjAOqE4158HBKRYue
+x-amz-server-side-encryption: AES256
+X-Cache: Hit from cloudfront
+Via: 1.1 bbbae8f25d000ff980a3cc231b1dc0fc.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: MAD56-P5
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: A_hvKXmEVq6OGw2NqScSdEURguCiRnbxvNzUKThvW_hZcuNqG1HHew==
+Age: 209
+

@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 01 Nov 2026 17:35:44 GMT
+Content-Type: application/pdf
+Content-Length: 289756
+Last-Modified: Fri, 26 Sep 2025 08:00:33 GMT
+Connection: keep-alive
+ETag: "68d64821-46bdc"
+X-Powered-By: PleskLin
+Accept-Ranges: bytes
+

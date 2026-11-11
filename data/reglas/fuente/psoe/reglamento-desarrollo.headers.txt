@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 01 Nov 2026 17:37:44 GMT
+Content-Type: application/pdf
+Content-Length: 2387320
+Connection: keep-alive
+x-archive-orig-date: Fri, 23 Oct 2026 13:40:37 GMT
+x-archive-orig-server: Apache
+x-archive-orig-last-modified: Wed, 01 Jul 2026 11:32:02 GMT
+x-archive-orig-accept-ranges: bytes
+x-archive-orig-content-length: 2387320
+x-archive-orig-vary: Accept-Encoding
+x-archive-orig-cache-control: max-age=3600, public
+x-archive-orig-connection: close
+x-archive-orig-x-cdn: Imperva
+x-archive-orig-x-iinfo: 9-9819702-9819703 NNNN CT(158 328 0) RT(1792762836464 9) q(0 0 5 0) r(7 7) U18
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Fri, 23 Oct 2026 13:40:36 GMT
+link: <https://www.psoe.es/media-content/2026/07/RFDE-41CF.pdf>; rel="original", <https://web.archive.org/web/timemap/link/https://www.psoe.es/media-content/2026/07/RFDE-41CF.pdf>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://www.psoe.es/media-content/2026/07/RFDE-41CF.pdf>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-app-server: wwwb-app244-dc8
+x-ts: 200
+x-tr: 1301
+cache-control: private
+X-RL: 0
+X-NA: 0
+X-Page-Cache: BYPASS
+Server-Timing: BYPASS
+X-NID: Telefonica De Espana S.a.u.
+Referrer-Policy: no-referrer-when-downgrade
+Permissions-Policy: interest-cohort=()
+X-sd: 0
+X-location: _pdf
+

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seis reglas internas de los partidos con grupo propio en el Congreso, cláusula a cláusula y empezando por Democracia Real: límite de mandatos, revocación, investigados y más. Hecho y comprobado por dos IA.">
+    <title>Las reglas del juego: estatutos de los partidos, cláusula a cláusula | Democracia Real</title>
+    <link rel="canonical" href="https://democraciareal.es/reglas">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://democraciareal.es/reglas">
+    <meta property="og:title" content="Las reglas del juego, partido a partido">
+    <meta property="og:description" content="Seis reglas internas de cada partido con grupo propio en el Congreso, con la cláusula literal y su página. Empezando por las nuestras.">
+    <meta property="og:image" content="https://democraciareal.es/imagenes/og/portada.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .vt-shell { max-width: 1120px; margin: 0 auto; padding: calc(64px + var(--space-2xl)) var(--space-md) var(--space-3xl); }
+        .vt-header { text-align: center; margin-bottom: var(--space-2xl); }
+        .vt-header h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
+        .vt-header h1 span { color: var(--accent); }
+        .vt-lead { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; max-width: 740px; margin: var(--space-md) auto 0; }
+        .vt-lead strong { color: var(--text-primary); }
+
+        .vt-draft { max-width: 760px; margin: 0 auto var(--space-md); border: 1px dashed var(--border-light); border-radius: 12px; padding: var(--space-sm) var(--space-lg); color: var(--text-primary); font-size: 0.9rem; line-height: 1.6; text-align: center; }
+        .vt-notice { max-width: 760px; margin: 0 auto var(--space-2xl); background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: var(--space-md) var(--space-lg); color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .vt-notice strong { color: var(--text-primary); }
+        .vt-notice a { color: var(--accent); }
+        .vt-review { display: inline-block; margin-top: var(--space-xs); font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); }
+
+        .rx-section { margin-bottom: var(--space-3xl); }
+        .rx-section-title { font-size: 1.05rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-secondary); margin-bottom: var(--space-lg); display: flex; align-items: center; gap: var(--space-sm); border-bottom: 1px solid var(--border); padding-bottom: var(--space-sm); }
+        .rx-section-icon { color: var(--accent); font-size: 1.2rem; }
+        .rx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl); }
+        .rx-card { background: var(--bg-tertiary); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: var(--space-lg); min-width: 0; }
+        .rx-card-value { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--accent); line-height: 1.15; margin-bottom: var(--space-xs); overflow-wrap: anywhere; }
+        .rx-card-label { font-size: 0.92rem; color: var(--text-primary); font-weight: 500; margin-bottom: var(--space-sm); }
+        .rx-card-context { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; }
+        .rx-status { display: inline-block; font-size: 0.7rem; border-radius: 6px; padding: 2px 8px; margin-top: var(--space-sm); border: 1px solid var(--border); color: var(--text-muted); }
+        .rx-status.is-verified { border-color: var(--accent-dim); color: var(--accent); }
+
+        /* Leyenda */
+        .mx-legend { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); margin-bottom: var(--space-md); font-size: 0.85rem; color: var(--text-secondary); }
+        .mx-legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+        /* Matriz */
+        .mx-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+        .mx { width: 100%; border-collapse: collapse; min-width: 880px; font-size: 0.84rem; }
+        .mx th, .mx td { border-bottom: 1px solid var(--border); padding: 6px; vertical-align: top; }
+        .mx thead th { color: var(--text-muted); font-weight: 500; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; text-align: left; padding: 10px 6px; }
+        .mx tbody th { text-align: left; font-weight: 600; color: var(--text-primary); width: 120px; position: sticky; left: 0; background: var(--bg-secondary); z-index: 1; }
+        .mx tbody th small { display: block; font-weight: 400; color: var(--text-muted); font-size: 0.72rem; margin-top: 2px; }
+        .mx tr.is-own th, .mx tr.is-own td { background: rgba(16, 185, 129, 0.05); }
+        .mx-cell { display: block; width: 100%; min-height: 64px; text-align: left; font: inherit; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; cursor: pointer; }
+        .mx-cell:hover, .mx-cell:focus-visible { border-color: var(--accent); outline: none; }
+        .mx-cell[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+        .mx-val { display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; margin-bottom: 3px; }
+        .mx-tag { display: block; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.35; }
+        .mx-mark { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--text-secondary); flex: none; }
+        .v-si .mx-mark { background: var(--text-primary); border-color: var(--text-primary); }
+        .v-parcial .mx-mark { background: linear-gradient(90deg, var(--text-primary) 50%, transparent 50%); border-color: var(--text-primary); }
+        .v-no .mx-mark { background: transparent; border-color: var(--text-primary); }
+        .v-nc .mx-mark { border-style: dashed; border-color: var(--text-muted); }
+        .v-nc { color: var(--text-muted); }
+        .mx-split, .mx-ref { font-size: 0.68rem; color: var(--text-muted); margin-top: 3px; display: block; }
+        .mx-ref { font-family: var(--font-mono); }
+
+        /* Criterios */
+        .vt-fix { border-left-color: var(--text-secondary); margin-top: calc(var(--space-md) - var(--space-2xl)); }
+        .cr-lead { color: var(--text-secondary); line-height: 1.7; max-width: 820px; margin-bottom: var(--space-lg); }
+        .cr-lead strong { color: var(--text-primary); }
+        .cr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md); }
+        .cr-card { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 12px; padding: var(--space-md) var(--space-lg); min-width: 0; }
+        .cr-card h3 { font-size: 1rem; margin-bottom: 2px; }
+        .cr-card > p { font-size: 0.84rem; color: var(--text-muted); margin-bottom: var(--space-sm); }
+        .cr-card ul { list-style: none; padding: 0; margin: 0; }
+        .cr-card li { display: flex; gap: 8px; font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 6px; }
+        .cr-card li .mx-mark { margin-top: 4px; }
+        .cr-card li b { color: var(--text-primary); font-weight: 600; }
+        .cr-card li.cr-note { color: var(--text-muted); font-size: 0.78rem; }
+        .mx-note { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-sm); line-height: 1.5; }
+
+        /* Ficha de celda */
+        .vt-ficha { scroll-margin-top: 80px; margin-top: var(--space-lg); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 14px; padding: var(--space-xl); }
+        .vt-ficha[hidden] { display: none; }
+        .vt-ficha-head { border-bottom: 1px solid var(--border); padding-bottom: var(--space-md); margin-bottom: var(--space-lg); }
+        .vt-ficha-head h3 { font-size: 1.35rem; font-weight: 700; }
+        .vt-ficha-head p { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
+        .fx-val { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; margin-bottom: var(--space-sm); }
+        .fx-val .mx-mark { width: 16px; height: 16px; }
+        .fx-tag { color: var(--text-secondary); margin-bottom: var(--space-md); }
+        .fx-quote { border-left: 3px solid var(--accent); background: var(--bg-tertiary); padding: var(--space-md) var(--space-lg); border-radius: 0 10px 10px 0; color: var(--text-primary); line-height: 1.65; margin: var(--space-md) 0; white-space: pre-line; }
+        .fx-trad { font-size: 0.86rem; color: var(--text-secondary); margin: calc(-1 * var(--space-sm)) 0 var(--space-md); }
+        .fx-meta { display: grid; grid-template-columns: max-content 1fr; gap: 4px var(--space-md); font-size: 0.86rem; color: var(--text-secondary); }
+        .fx-meta dt { color: var(--text-muted); }
+        .fx-meta dd { margin: 0; overflow-wrap: anywhere; }
+        .fx-meta a, .fx-links a, .vt-ficha p a { color: var(--accent); }
+        .fx-reason { color: var(--text-secondary); line-height: 1.6; margin: var(--space-md) 0; }
+        .fx-disc { background: var(--bg-tertiary); border: 1px dashed var(--border-light); border-radius: 10px; padding: var(--space-md) var(--space-lg); margin: var(--space-md) 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; }
+        .fx-disc > div { margin-top: var(--space-md); }
+        .fx-disc h4 { color: var(--text-primary); font-size: 0.95rem; margin-bottom: var(--space-xs); }
+        .fx-disc blockquote { margin: 4px 0 var(--space-sm); padding-left: var(--space-md); border-left: 2px solid var(--border-light); white-space: pre-line; }
+        .fx-links { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-lg); font-size: 0.88rem; }
+
+        /* Cajas */
+        .vt-box { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 12px; padding: var(--space-xl); }
+        .vt-box h3 { font-size: 1.2rem; margin-bottom: var(--space-md); }
+        .vt-box p, .vt-box li { color: var(--text-secondary); line-height: 1.7; }
+        .vt-box ul { padding-left: 1.2rem; margin-bottom: var(--space-md); }
+        .vt-box strong { color: var(--text-primary); }
+        .vt-box a { color: var(--accent); }
+
+        .vt-steps { color: var(--text-secondary); line-height: 1.7; padding-left: 1.2rem; }
+        .vt-steps li { margin-bottom: var(--space-sm); }
+        .vt-steps strong { color: var(--text-primary); }
+        .vt-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--space-sm); margin-top: var(--space-lg); }
+        .vt-links a { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: var(--space-md); color: var(--text-primary); text-decoration: none; font-size: 0.9rem; }
+        .vt-links a:hover { border-color: var(--accent); }
+        .vt-links small { display: block; color: var(--text-muted); font-size: 0.78rem; margin-top: 2px; }
+        .vt-small { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-md); line-height: 1.5; }
+        .vt-small a { color: var(--accent); }
+        .vt-cta { text-align: center; max-width: 720px; margin: 0 auto; padding: var(--space-xl); border: 1px solid var(--border); border-radius: 12px; background: var(--bg-tertiary); }
+        .vt-cta h2 { font-size: 1.3rem; margin-bottom: var(--space-md); }
+        .vt-cta p { color: var(--text-secondary); line-height: 1.7; }
+        .vt-cta a { color: var(--accent); font-weight: 500; }
+
+        @media (max-width: 760px) {
+            .vt-ficha { padding: var(--space-lg) var(--space-md); }
+            .vt-box { padding: var(--space-lg) var(--space-md); }
+            .fx-meta { grid-template-columns: 1fr; }
+            .fx-meta dt { margin-top: 6px; }
+            .mx tbody th { width: 96px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async">
+                <span class="logo-text">Democracia Real</span>
+            </a>
+            <button class="nav-toggle" aria-label="Men&uacute;" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/#problema">El Problema</a></li>
+                <li><a href="/voto">Tu voto</a></li>
+                <li><a href="/nomina">Tu n&oacute;mina</a></li>
+                <li><a href="/docs/radiografia.html">Radiograf&iacute;a</a></li>
+                <li><a href="/docs/">Documentaci&oacute;n</a></li>
+                <li><a href="https://github.com/democracia-real/proyecto" class="nav-link-github" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="vt-shell">
+
+        <header class="vt-header">
+            <h1>Las reglas <span>del juego</span>, partido a partido</h1>
+            <p class="vt-lead">Seis reglas internas de los partidos que tuvieron grupo propio en el Congreso entre 2023 y 2026, medidas con la misma vara y <strong>empezando por las nuestras</strong>. Cada celda es una cl&aacute;usula de sus estatutos o de su c&oacute;digo &eacute;tico: p&uacute;lsala y lee el texto literal, con su art&iacute;culo y su p&aacute;gina. Comprueba t&uacute; la cl&aacute;usula. No te decimos a qui&eacute;n votar.</p>
+        </header>
+
+        <p class="vt-draft"><strong>Publicada el 13 de noviembre de 2026.</strong> El 1 de noviembre enviamos a cada partido su fila, con plazo hasta el 10 de noviembre para responder. Ninguno contest&oacute;. Si un partido responde ahora, publicaremos su respuesta literal y lo anotaremos <a href="#tituloCorrecciones">al final de esta p&aacute;gina</a>.</p>
+
+        <div class="vt-notice">
+            <strong>Lo han hecho y comprobado dos IA, no una persona.</strong> Una IA (Claude Opus) ley&oacute; los documentos y extrajo cada cl&aacute;usula. Otra IA (Claude Sonnet) los ley&oacute; por su cuenta, sin ver la primera lectura y con los mismos criterios. Un script comprueba que cada cita aparece tal cual en el PDF. <strong>Donde las dos lecturas no coinciden, la celda queda &laquo;no consta&raquo;</strong> y se ense&ntilde;an las dos. Si encuentras un error, <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener">abre un issue</a>: lo corregimos y lo decimos.<br>
+            <span class="vt-review">Extracci&oacute;n: IA &middot; Segunda lectura independiente: otra IA &middot; Revisi&oacute;n humana: no hecha</span>
+        </div>
+
+        <div class="vt-notice vt-fix">
+            <strong>Correcciones en menos de 24 horas.</strong> Si encuentras un error en una celda, <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener">d&iacute;noslo</a>: lo corregimos en p&uacute;blico en menos de 24 horas y lo anotamos <a href="#tituloCorrecciones">al final de esta p&aacute;gina</a>, con la fecha y lo que cambi&oacute;.
+        </div>
+
+        <!-- CRITERIOS -->
+        <section class="rx-section" aria-labelledby="tituloCriterios">
+            <h2 class="rx-section-title" id="tituloCriterios"><span class="rx-section-icon">&#9878;</span> Primero, los criterios</h2>
+            <p class="cr-lead">Esto es lo que cuenta como &laquo;s&iacute;&raquo;, &laquo;parcial&raquo; o &laquo;no&raquo; en cada regla, escrito antes de leer ning&uacute;n documento y aplicado igual a todos, empezando por Democracia Real. <strong>Sin cl&aacute;usula literal no hay color: &laquo;no consta&raquo;</strong>. Y &laquo;no consta&raquo; no es &laquo;no&raquo;: quiere decir que no aparece en los documentos descargados, o que las dos lecturas no coinciden.</p>
+            <div class="cr-grid" id="crGrid"></div>
+        </section>
+
+        <!-- MATRIZ -->
+        <section class="rx-section" aria-labelledby="tituloMatriz">
+            <h2 class="rx-section-title" id="tituloMatriz"><span class="rx-section-icon">&#9638;</span> La matriz</h2>
+            <div class="rx-grid">
+                <div class="rx-card" data-cifra="reglas-matriz-resumen">
+                    <div class="rx-card-value">54 celdas &middot; 9 filas</div>
+                    <div class="rx-card-label">8 partidos con grupo propio y Democracia Real</div>
+                    <div class="rx-card-context" id="mxResumen">Cada valor sale de una cl&aacute;usula literal. &laquo;No consta&raquo; no es &laquo;no&raquo;: quiere decir que no aparece en los documentos descargados o que las dos lecturas no coinciden.</div>
+                </div>
+            </div>
+            <div class="mx-legend" aria-label="Leyenda">
+                <span class="v-si"><i class="mx-mark"></i> s&iacute;: hay cl&aacute;usula que lo cumple</span>
+                <span class="v-parcial"><i class="mx-mark"></i> parcial: con excepciones o sin concretar</span>
+                <span class="v-no"><i class="mx-mark"></i> no: una cl&aacute;usula dice lo contrario</span>
+                <span class="v-nc"><i class="mx-mark"></i> no consta</span>
+            </div>
+            <div class="mx-wrap">
+                <table class="mx" id="mx">
+                    <caption class="sr-only">Seis reglas internas por partido. Pulsa una celda para ver la cl&aacute;usula.</caption>
+                    <thead><tr id="mxHead"><th scope="col">Partido</th></tr></thead>
+                    <tbody id="mxBody"><tr><td colspan="7" class="mx-note">Cargando los datos&hellip;</td></tr></tbody>
+                </table>
+            </div>
+            <p class="mx-note">Los partidos van por orden alfab&eacute;tico de sus siglas, despu&eacute;s de Democracia Real. En m&oacute;vil, desliza la tabla hacia los lados.</p>
+
+            <article class="vt-ficha" id="fx" hidden aria-live="polite">
+                <div class="vt-ficha-head">
+                    <h3 id="fxTitulo"></h3>
+                    <p id="fxPregunta"></p>
+                </div>
+                <div class="fx-val" id="fxValor"></div>
+                <div class="fx-tag" id="fxEtiqueta"></div>
+                <blockquote class="fx-quote" id="fxCita" hidden></blockquote>
+                <p class="fx-trad" id="fxTrad" hidden></p>
+                <dl class="fx-meta" id="fxMeta"></dl>
+                <p class="fx-reason" id="fxMotivo"></p>
+                <div class="fx-disc" id="fxDisc" hidden></div>
+                <p class="fx-reason" id="fxNota" hidden></p>
+                <div class="fx-links">
+                    <a href="https://github.com/democracia-real/proyecto/issues" target="_blank" rel="noopener">&iquest;Somos injustos? Pide una rectificaci&oacute;n</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- DEMOCRACIA REAL -->
+        <section class="rx-section" aria-labelledby="tituloPropia">
+            <h2 class="rx-section-title" id="tituloPropia"><span class="rx-section-icon">&#10003;</span> Primero, nuestros fallos</h2>
+            <div class="vt-box">
+                <h3>Democracia Real va en la primera fila, con la misma vara</h3>
+                <p>No somos un partido: no tenemos afiliados, ni asamblea, ni &oacute;rganos. Nuestras reglas son <a href="https://github.com/democracia-real/proyecto/tree/main/04_modelo_organizativo_partido" target="_blank" rel="noopener">borradores</a> que no ha aprobado nadie, y se miden igual que las de los dem&aacute;s. Fuera de estas seis columnas, esto es lo que falla:</p>
+                <ul>
+                    <li>El tope salarial dice &laquo;X veces el SMI&raquo; y las puertas giratorias, &laquo;X a&ntilde;os&raquo;: sin cifra.</li>
+                    <li>El resumen del modelo organizativo pide un &laquo;X% de afiliados&raquo; para revocar un cargo, mientras otro documento dice el 20%.</li>
+                    <li>La dimisi&oacute;n &laquo;si imputaci&oacute;n&raquo; usa una palabra que la ley procesal ya no usa: hoy dice &laquo;investigado&raquo;.</li>
+                    <li>No dice qui&eacute;n elige la Comisi&oacute;n de Garant&iacute;as, que resolver&iacute;a los recursos. Por eso esa celda no coincide entre las dos lecturas.</li>
+                    <li>No hay ninguna persona responsable con nombre.</li>
+                </ul>
+                <p>Que nuestra fila tenga m&aacute;s &laquo;s&iacute;&raquo; que otras no dice nada a nuestro favor: son reglas en papel que nadie ha tenido que cumplir, ni aprobar. Ense&ntilde;ar d&oacute;nde fallamos es lo que hace cre&iacute;ble todo lo dem&aacute;s.</p>
+            </div>
+        </section>
+
+        <!-- MÉTODO -->
+        <section class="rx-section" aria-labelledby="tituloMetodo">
+            <h2 class="rx-section-title" id="tituloMetodo"><span class="rx-section-icon">&#9881;</span> C&oacute;mo se ha hecho</h2>
+            <ol class="vt-steps">
+                <li><strong>Documentos:</strong> estatutos y c&oacute;digos &eacute;ticos descargados de la web oficial de cada partido el 1 de noviembre de 2026, guardados con su huella. El Registro de Partidos del Ministerio del Interior no los publica en l&iacute;nea.</li>
+                <li><strong>Por qu&eacute; seis reglas de doce:</strong> son las que se pueden decidir leyendo una cl&aacute;usula, sin datos externos y con una regla escrita de antemano. Las otras (tope salarial, puertas giratorias, cuentas, disciplina de voto, cr&iacute;tica interna, qui&eacute;n aprueba qu&eacute;) exigen datos fuera de los estatutos o interpretar.</li>
+                <li><strong>Escala:</strong> &laquo;s&iacute;&raquo;, &laquo;parcial&raquo;, &laquo;no&raquo; o &laquo;no consta&raquo;, con una definici&oacute;n para cada regla. Sin cita literal, &laquo;no consta&raquo;.</li>
+                <li><strong>Dos lecturas:</strong> dos IA leen los mismos documentos por separado. Si no coinciden en el valor, la celda queda &laquo;no consta&raquo; y se ense&ntilde;an las dos lecturas.</li>
+                <li><strong>R&eacute;plica:</strong> el 1 de noviembre cada partido recibi&oacute; su fila por correo, con plazo hasta el 10 de noviembre. Ninguno respondi&oacute;.</li>
+            </ol>
+            <div class="vt-links">
+                <a href="/data/reglas.csv" download>Datos (CSV)<small>Una fila por celda, con la cita</small></a>
+                <a href="/data/reglas.json">Todo en JSON<small>Con las dos lecturas y los documentos</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/reglas/METODOLOGIA.md" target="_blank" rel="noopener">Metodolog&iacute;a<small>Qu&eacute; significa cada valor</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/reglas/VERIFICACION.md" target="_blank" rel="noopener">Verificaci&oacute;n<small>D&oacute;nde no coinciden las dos lecturas</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/reglas/fuente/FUENTES.md" target="_blank" rel="noopener">Fuentes<small>URL, fecha y huella de cada documento</small></a>
+                <a href="https://github.com/democracia-real/proyecto/blob/main/data/reglas/construir.py" target="_blank" rel="noopener">El script<small>Comprueba las citas y construye la matriz</small></a>
+            </div>
+            <p class="vt-small">Mide lo que dicen las reglas escritas, no si se cumplen, ni a ninguna persona. Datos con licencia CC BY-SA 4.0.</p>
+        </section>
+
+        <!-- CORRECCIONES -->
+        <section class="rx-section" aria-labelledby="tituloCorrecciones">
+            <h2 class="rx-section-title" id="tituloCorrecciones"><span class="rx-section-icon">&#9998;</span> Correcciones</h2>
+            <p class="cr-lead" id="crPolitica">Si encuentras un error, lo corregimos en p&uacute;blico en menos de 24 horas y lo anotamos aqu&iacute;, con la fecha y lo que cambi&oacute;.</p>
+            <ul class="vt-steps" id="crLista"><li>Ninguna por ahora.</li></ul>
+        </section>
+
+        <div class="vt-cta">
+            <h2>Antes de votar, mira las reglas internas.</h2>
+            <p>Esta es la cl&aacute;usula. Compru&eacute;bala t&uacute;. No pedimos el voto para nadie: ense&ntilde;amos lo que est&aacute; escrito y d&oacute;nde.</p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="logo-icon logo-icon-image" src="/imagenes/icons/icon.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async">
+                    <span>Democracia Real</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/docs/">Documentaci&oacute;n</a>
+                    <a href="https://github.com/democracia-real/proyecto" target="_blank" rel="noopener">GitHub</a>
+                </div>
+                <div class="footer-license">
+                    <p>Licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+    (function () {
+        'use strict';
+
+        var REPO = 'https://github.com/democracia-real/proyecto/blob/main/';
+        var CLASE = { 'sí': 'v-si', 'parcial': 'v-parcial', 'no': 'v-no', 'no consta': 'v-nc' };
+        var datos = null, activa = null;
+        var $ = function (id) { return document.getElementById(id); };
+        function el(tag, text, cls) { var e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
+        function marca(valor) { var s = el('span', null, CLASE[valor]); s.appendChild(el('i', null, 'mx-mark')); return s; }
+        function porId(lista, id) { return lista.filter(function (x) { return x.id === id; })[0]; }
+        function doc(ruta) { return datos.documentos.filter(function (d) { return d.documento === ruta; })[0]; }
+        function enlace(texto, href) { var a = el('a', texto); a.href = href; a.target = '_blank'; a.rel = 'noopener'; return a; }
+
+        function lugar(c, l) {
+            if (!l) return '';
+            return (c.documento || '').slice(-3) === '.md' ? 'línea ' + l : 'página ' + l + ' del PDF';
+        }
+
+        function meta(dl, termino, valor) {
+            dl.appendChild(el('dt', termino));
+            var dd = el('dd');
+            if (typeof valor === 'string') dd.textContent = valor; else dd.appendChild(valor);
+            dl.appendChild(dd);
+        }
+
+        function lectura(titulo, l) {
+            var box = el('div');
+            box.appendChild(el('h4', titulo + ': «' + l.valor + '» · ' + l.etiqueta));
+            if (l.cita) {
+                box.appendChild(el('blockquote', l.cita));
+                box.appendChild(el('div', [l.articulo, l.documento ? l.documento.replace('fuente/', '') : '', lugar(l, l.lugar)].filter(Boolean).join(' · ')));
+            }
+            if (l.motivo) box.appendChild(el('p', l.motivo));
+            return box;
+        }
+
+        function abrir(c, boton, alCargar) {
+            var p = porId(datos.partidos, c.partido), e = porId(datos.estandares, c.estandar);
+            if (activa) activa.setAttribute('aria-pressed', 'false');
+            activa = boton; boton.setAttribute('aria-pressed', 'true');
+            $('fx').hidden = false;
+            $('fxTitulo').textContent = p.siglas + ' · ' + e.nombre;
+            $('fxPregunta').textContent = e.pregunta;
+            var v = $('fxValor'); v.textContent = ''; v.className = 'fx-val ' + CLASE[c.valor];
+            v.appendChild(el('i', null, 'mx-mark')); v.appendChild(el('span', c.valor));
+            $('fxEtiqueta').textContent = c.etiqueta;
+            $('fxCita').hidden = !c.cita; $('fxCita').textContent = c.cita ? '«' + c.cita + '»' : '';
+            $('fxTrad').hidden = !c.traduccion; $('fxTrad').textContent = c.traduccion ? 'Traducción orientativa, no del partido: «' + c.traduccion + '»' : '';
+            var dl = $('fxMeta'); dl.textContent = '';
+            if (c.cita) {
+                var d = doc(c.documento) || {};
+                if (c.articulo) meta(dl, 'Artículo', c.articulo);
+                meta(dl, 'Documento', d.titulo || c.documento);
+                if (c.pagina) meta(dl, 'Página', c.pagina + ' del PDF');
+                if (c.linea) meta(dl, 'Línea', String(c.linea));
+                var ver = el('span');
+                ver.appendChild(enlace(c.pagina ? 'PDF oficial, página ' + c.pagina : 'documento', c.enlace || d.url));
+                if (d.url_descarga) { ver.appendChild(document.createTextNode(' · ')); ver.appendChild(enlace('copia archivada', d.url_descarga)); }
+                if (c.documento.indexOf('fuente/') === 0) { ver.appendChild(document.createTextNode(' · ')); ver.appendChild(enlace('nuestra copia', REPO + 'data/reglas/' + c.documento)); }
+                meta(dl, 'Compruébalo', ver);
+                if (d.sha256) meta(dl, 'Huella SHA-256', d.sha256);
+            }
+            meta(dl, 'Consultado', new Date(c.consultado + 'T12:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }));
+            meta(dl, 'Comprobado por', c.coinciden ? 'dos IA por separado (Claude Opus y Claude Sonnet), que coinciden' : 'dos IA por separado, que no coinciden');
+            meta(dl, 'Revisión humana', 'no hecha');
+            $('fxMotivo').textContent = c.motivo || '';
+            var disc = $('fxDisc'); disc.textContent = '';
+            disc.hidden = c.coinciden;
+            if (!c.coinciden) {
+                disc.appendChild(el('p', 'Las dos lecturas no coinciden, así que la celda queda «no consta». Estas son las dos:'));
+                disc.appendChild(lectura('Primera lectura', c.primera));
+                disc.appendChild(lectura('Segunda lectura', c.segunda));
+            }
+            $('fxNota').hidden = !p.nota; $('fxNota').textContent = p.nota ? 'Sobre ' + p.siglas + ': ' + p.nota : '';
+            if (history.replaceState) history.replaceState(null, '', '#' + c.partido + '-' + c.estandar);
+            $('fx').scrollIntoView({ behavior: alCargar ? 'auto' : 'smooth', block: 'start' });
+        }
+
+        function pintarCriterios(d) {
+            var grid = $('crGrid');
+            d.estandares.forEach(function (e) {
+                var card = el('div', null, 'cr-card');
+                card.appendChild(el('h3', e.id + '. ' + e.nombre));
+                card.appendChild(el('p', e.pregunta));
+                var ul = el('ul');
+                e.criterios.forEach(function (r) {
+                    var li = el('li', null, r.valor ? CLASE[r.valor] : 'cr-note');
+                    if (r.valor) { li.appendChild(el('i', null, 'mx-mark')); }
+                    var t = el('span');
+                    if (r.valor) t.appendChild(el('b', r.valor + ': '));
+                    t.appendChild(document.createTextNode(r.texto));
+                    li.appendChild(t);
+                    ul.appendChild(li);
+                });
+                var nc = el('li', null, 'v-nc'); nc.appendChild(el('i', null, 'mx-mark'));
+                var tn = el('span'); tn.appendChild(el('b', 'no consta: ')); tn.appendChild(document.createTextNode(d.escala['no consta']));
+                nc.appendChild(tn); ul.appendChild(nc);
+                card.appendChild(ul);
+                grid.appendChild(card);
+            });
+        }
+
+        function pintarCorrecciones(d) {
+            if (d.politica_correcciones) $('crPolitica').textContent = d.politica_correcciones;
+            if (!d.correcciones || !d.correcciones.length) return;
+            var ul = $('crLista'); ul.textContent = '';
+            d.correcciones.forEach(function (c) { ul.appendChild(el('li', c.fecha + ': ' + c.texto)); });
+        }
+
+        function ref(c) {
+            if (!c.cita) return '';
+            return [c.articulo, c.pagina ? 'p. ' + c.pagina : (c.linea ? 'l. ' + c.linea : '')].filter(Boolean).join(' · ');
+        }
+
+        function pintar(d) {
+            datos = d;
+            pintarCriterios(d);
+            pintarCorrecciones(d);
+            var head = $('mxHead');
+            d.estandares.forEach(function (e) { var th = el('th', e.nombre); th.scope = 'col'; th.title = e.pregunta; head.appendChild(th); });
+            var body = $('mxBody'); body.textContent = '';
+            var botones = {};
+            d.partidos.forEach(function (p) {
+                var tr = el('tr', null, p.id === 'democracia-real' ? 'is-own' : '');
+                var th = el('th', p.siglas); th.scope = 'row';
+                th.appendChild(el('small', p.id === 'democracia-real' ? 'borrador, sin partido' : p.nombre));
+                tr.appendChild(th);
+                d.estandares.forEach(function (e) {
+                    var c = d.celdas.filter(function (x) { return x.partido === p.id && x.estandar === e.id; })[0];
+                    var td = el('td');
+                    var b = el('button', null, 'mx-cell ' + CLASE[c.valor]);
+                    b.type = 'button';
+                    b.setAttribute('aria-pressed', 'false');
+                    b.setAttribute('aria-label', p.siglas + ', ' + e.nombre + ': ' + c.valor + '. ' + c.etiqueta);
+                    var v = el('span', null, 'mx-val'); v.appendChild(el('i', null, 'mx-mark')); v.appendChild(el('span', c.valor));
+                    b.appendChild(v);
+                    b.appendChild(el('span', c.etiqueta, 'mx-tag'));
+                    if (ref(c)) b.appendChild(el('span', ref(c), 'mx-ref'));
+                    if (!c.coinciden) b.appendChild(el('span', 'ver las dos lecturas', 'mx-split'));
+                    b.addEventListener('click', function () { abrir(c, b); });
+                    botones[p.id + '-' + e.id] = [c, b];
+                    td.appendChild(b);
+                    tr.appendChild(td);
+                });
+                body.appendChild(tr);
+            });
+            var r = d.resumen;
+            $('mxResumen').textContent = 'Sí: ' + r['sí'] + ' · parcial: ' + r.parcial + ' · no: ' + r.no + ' · no consta: ' + r['no consta'] +
+                ' (de ellas, ' + r.discrepancias + ' porque las dos lecturas no coinciden). «No consta» no es «no».';
+            var h = location.hash.replace('#', '');
+            if (botones[h]) abrir(botones[h][0], botones[h][1], true);
+        }
+
+        fetch('/data/reglas.json', { cache: 'no-cache' })
+            .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(pintar)
+            .catch(function () {
+                $('mxBody').innerHTML = '<tr><td colspan="7" class="mx-note">No se pudieron cargar los datos. Puedes descargarlos en <a href="/data/reglas.csv" style="color: var(--accent);">CSV</a>.</td></tr>';
+            });
+
+        // Estado de la cifra de la tarjeta en el registro (como en Lo que vale tu voto)
+        fetch('/data/cifras.json', { cache: 'no-store' })
+            .then(function (r) { return r.json(); })
+            .then(function (registro) {
+                var porIdc = {};
+                (registro.cifras || []).forEach(function (c) { porIdc[c.id] = c; });
+                document.querySelectorAll('[data-cifra]').forEach(function (card) {
+                    var c = porIdc[card.getAttribute('data-cifra')];
+                    var badge = el('span', null, 'rx-status');
+                    if (c && c.estado === 'verificado') {
+                        badge.className += ' is-verified';
+                        badge.textContent = 'En el registro de cifras · ' + (c.revision_humana ? 'revisada por ' + c.revision_humana : 'sin revisión humana');
+                    } else {
+                        badge.textContent = 'Pendiente de verificar';
+                    }
+                    card.appendChild(badge);
+                });
+            })
+            .catch(function () {});
+    })();
+    </script>
+</body>
+</html>

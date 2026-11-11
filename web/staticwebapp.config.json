@@ -98,6 +98,10 @@
       "rewrite": "/autonomo.html"
     },
     {
+      "route": "/reglas",
+      "rewrite": "/reglas.html"
+    },
+    {
       "route": "/docs/nomina.html",
       "redirect": "/nomina",
       "statusCode": 301

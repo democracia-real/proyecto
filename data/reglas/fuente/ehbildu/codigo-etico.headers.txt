@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 01 Nov 2026 17:40:25 GMT
+Content-Type: application/pdf
+Content-Length: 116506
+Connection: keep-alive
+x-archive-orig-server: nginx
+x-archive-orig-date: Thu, 14 May 2026 01:39:34 GMT
+x-archive-orig-content-length: 116506
+x-archive-orig-last-modified: Thu, 20 Jun 2024 07:19:01 GMT
+x-archive-orig-etag: "6673d7e5-1c71a"
+x-archive-orig-x-powered-by: PleskLin
+x-archive-orig-accept-ranges: bytes
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Thu, 14 May 2026 01:39:34 GMT
+link: <https://ehbildu.eus/dokumentuak/albisteak/ES_1718867941.pdf>; rel="original", <https://web.archive.org/web/timemap/link/https://ehbildu.eus/dokumentuak/albisteak/ES_1718867941.pdf>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://ehbildu.eus/dokumentuak/albisteak/ES_1718867941.pdf>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-app-server: wwwb-app219-dc8
+x-ts: 200
+x-tr: 2527
+cache-control: private
+X-RL: 0
+X-NA: 0
+X-Page-Cache: BYPASS
+Server-Timing: BYPASS
+X-NID: Telefonica De Espana S.a.u.
+Referrer-Policy: no-referrer-when-downgrade
+Permissions-Policy: interest-cohort=()
+X-sd: 0
+X-location: _pdf
+

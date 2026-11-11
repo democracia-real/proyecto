@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Date: Sun, 01 Nov 2026 17:35:42 GMT
+Content-Type: application/pdf
+Content-Length: 730356
+Connection: keep-alive
+Server: cloudflare
+strict-transport-security: max-age=31536000
+last-modified: Thu, 21 Aug 2025 11:00:00 GMT
+etag: "68a6fc30-b24f4"
+expires: Wed, 01 Sep 2027 15:02:07 GMT
+Cache-Control: max-age=31536000
+access-control-allow-origin: *
+access-control-allow-methods: GET, HEAD
+x-ac: 28.mad _atomic_ams HIT
+Accept-Ranges: bytes
+alt-svc: h3=":443"; ma=86400
+Age: 4617207
+cf-cache-status: HIT
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Bm%2BJTMtYxlhl%2BXakBOzMwNX2gs2c%2BxUH5BJeTLaD8kWQCVTUEqBdaZ6ENMRZLCsGVQRB9SSEAMWoj%2BeVFRSdl7EUQYHeeojF8xfvip3TbYrGe9U5KF5lfgIEP4L7BeA4ZJBamwY%3D"}]}
+CF-RAY: a53ca851bd0bfdd3-MAD
+
