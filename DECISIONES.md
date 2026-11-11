@@ -6,6 +6,18 @@
 
 ---
 
+## 11 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la imagen «el 33,6% de las empresas de 10 o más empleados ya usa IA» en X, como hilo (imagen sin enlace y respuesta con /ia-empleo: https://x.com/democracia2630/status/2120598617257865329), y en Instagram (https://www.instagram.com/p/DfnOoi0jPij/) con la etiqueta de IA. La publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario. Cifras `adopcion-ia-empresas` e `ia-por-tamano-empresa`, del INE y verificadas por dos IA | IA + Persona |
+| La matriz *Las reglas del juego* queda lista para el 13 nov en una rama local (`matriz-13nov`) que no se sube hasta ese día | El repositorio es público y subir a `main` es publicar | IA |
+| La matriz se lleva sobre `main` fichero a fichero, no fusionando la rama del 1 nov | Esa rama partía de una versión vieja de la web; fusionarla habría deshecho cambios posteriores | IA |
+| La etiqueta de Junts pasa de «salvo "lawfare"» a «la Executiva puede declararla improcedente», con una sustitución en `fuentes.json` que no toca lo que leyó cada IA | Es la misma corrección que llevó su correo de réplica; la cita literal, que sí dice «lawfare», no cambia | IA |
+| La página dice que se publicó el 13 nov, que la réplica se envió el 1 nov con plazo hasta el 10 y que ningún partido contestó; deja de estar oculta a los buscadores y se enlaza desde la portada | Es lo que pasó, y lo que prometían los correos y la metodología | IA |
+
+---
+
 ## 10 noviembre 2026
 
 | Decisión | Motivo | Quién |
