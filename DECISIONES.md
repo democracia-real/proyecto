@@ -6,6 +6,16 @@
 
 ---
 
+## 12 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Se apagan en Azure las funciones `news-watcher` y `x-target-watcher`, que mandaban borradores a Telegram. Se desactivan, no se borran: se pueden volver a encender | Nadie los usaba y gastaban en IA (y en la API de X). Además, sus instrucciones chocan con las reglas actuales: cogen cifras del titular sin verificar, piden no decir que es IA y buscan un tono de choque; la segunda escribe respuestas bajo posts de cuentas grandes, que en campaña parece un bot haciendo campaña | IA + Persona |
+| No se publica la fe de erratas del 12 nov en X ni en Instagram | Las correcciones ya son públicas donde las buscaría quien vio los errores: la portada, el vídeo largo en YouTube y el hilo de Soria del 9 nov. Con pocos seguidores, un post de «muchas estaban mal» el día antes de la matriz llega sobre todo a quien no vio el error. La imagen queda guardada por si alguien pregunta | IA + Persona |
+| La idea de aprovechar la noticia del día pasa al parte diario: si un titular toca una cifra ya verificada, propone una pieza que une la noticia con esa cifra y su calculadora, diciendo que está hecha con IA y sin publicarla | Se aprovecha la actualidad sin cifras nuevas sin comprobar y sin pagar dos servicios aparte | IA |
+
+---
+
 ## 11 noviembre 2026
 
 | Decisión | Motivo | Quién |
