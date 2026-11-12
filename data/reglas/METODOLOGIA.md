@@ -2,7 +2,7 @@
 
 *1 noviembre 2026 · Versión reducida: 6 estándares. Hecha y comprobada por IA.*
 
-> **Estado:** estos criterios se publicaron el 1 de noviembre, antes que los resultados. Ese día cada partido recibió su fila por correo, con plazo hasta el 10 de noviembre; ninguno respondió. La matriz se publicó el **13 de noviembre de 2026** ([/reglas](https://democraciareal.es/reglas)).
+> **Estado:** estos criterios se publicaron el 1 de noviembre, antes que los resultados. Ese día cada partido recibió su fila por correo, con plazo hasta el 10 de noviembre; ninguno respondió. La matriz se publicó el **12 de noviembre de 2026**, un día antes de lo anunciado ([/reglas](https://democraciareal.es/reglas)).
 
 ---
 

@@ -2,7 +2,7 @@
  "titulo": "Las reglas del juego, partido a partido",
  "version": "1.0-reducida",
  "fecha": "2026-11-01",
- "estado": "Publicada el 13 de noviembre de 2026. El 1 de noviembre se envió a cada partido su fila, con plazo hasta el 10 de noviembre para responder; ninguno contestó. Si un partido responde después, se publicará su respuesta literal y se anotará en las correcciones.",
+ "estado": "Publicada el 12 de noviembre de 2026, un día antes de lo anunciado a los partidos. El 1 de noviembre se envió a cada partido su fila, con plazo hasta el 10 de noviembre para responder; ninguno contestó. Si un partido responde después, se publicará su respuesta literal y se anotará en las correcciones.",
  "aviso": "Lo han hecho y comprobado dos IA, no una persona. Mide lo que dicen los estatutos y códigos éticos publicados, no si se cumplen ni a ninguna persona. «No consta» no es «no».",
  "metodologia": "https://github.com/democracia-real/proyecto/blob/main/data/reglas/METODOLOGIA.md",
  "escala": {

@@ -50,7 +50,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 |---|----------|-------|--------|
 | 1 | **Calculadora de la nómina** | Publicada el 1 nov | Cifras con dos comprobaciones de IA. Vídeo en Shorts, TikTok y Reels desde el 3 nov |
 | 2 | **Lo que vale tu voto** (calculadora por provincia) | Publicada el 1 nov | Comprobada contra el BOE por dos IA. Falta moverla: vídeo listo para el 5 nov |
-| 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 13 nov | Hecha el 1 nov con dos lecturas de IA. Criterios publicados; réplica a los partidos hasta el 10 nov |
+| 3 | **Las reglas del juego, reducida**: 6 estándares × partidos con grupo propio | 13 nov | **Publicada el 12 nov** en /reglas, un día antes de lo anunciado. Hecha el 1 nov con dos lecturas de IA; réplica hasta el 10 nov, sin respuestas |
 | 4 | **Calculadora de pensiones** | Publicada el 1 nov | Reescrita sin el enfoque generacional; cifras con dos comprobaciones |
 | 5 | **Simulador de IA y empleo** | Publicado el 1 nov | Rehecho como escenario, no como predicción |
 | 6 | **Calculadora del autónomo** | Publicada el 1 nov | Cuota de 2026, IRPF y comparación con un asalariado; coincide con el simulador de la Seguridad Social |
@@ -76,7 +76,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 
 - [x] Extraer las 6 cláusulas por partido con dos lecturas independientes. Sin cita literal, «no consta»
 - [ ] 11-12 nov: incorporar las respuestas literales y corregir lo que señalen
-- [ ] **13 nov: publicar la matriz**, el día que empieza la campaña, y escribir a periodistas de datos
+- [x] **Publicar la matriz**: publicada el 12 nov, la víspera de la campaña. Correos a verificadores y Civio, el mismo día
 - [ ] Desde el 13 nov, una pieza al día: un resultado de la calculadora de una provincia, una celda de la matriz
 
 ### Fase C · 21-29 nov — Cierre de campaña
