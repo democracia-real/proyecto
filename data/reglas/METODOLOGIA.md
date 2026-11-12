@@ -27,7 +27,7 @@ Los ocho partidos que encabezaron un grupo parlamentario propio en el Congreso e
 | Popular | Partido Popular (PP) |
 | Socialista | Partido Socialista Obrero Español (PSOE), documentos federales |
 | VOX | VOX |
-| Plurinacional SUMAR | Movimiento Sumar. El grupo era una coalición; se miden los documentos del partido que le dio nombre |
+| Plurinacional SUMAR | Movimiento Sumar. El grupo era una coalición; se miden los documentos del partido que le dio nombre. El 29N, Movimiento Sumar se presenta dentro de la coalición electoral Frente Amplio, cuyas otras organizaciones tienen sus propios estatutos y no se miden aquí |
 | Republicano | Esquerra Republicana de Catalunya (ERC) |
 | Junts per Catalunya | Junts per Catalunya |
 | Euskal Herria Bildu | EH Bildu (federación de partidos) |

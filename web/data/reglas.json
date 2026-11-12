@@ -12,7 +12,12 @@
   "no consta": "No aparece en los documentos descargados, o las dos lecturas no coinciden"
  },
  "politica_correcciones": "Si encuentras un error, lo corregimos en público en menos de 24 horas y lo anotamos en esta página, con la fecha y lo que cambió.",
- "correcciones": [],
+ "correcciones": [
+  {
+   "fecha": "12 nov 2026",
+   "texto": "La fila de Sumar aclara que mide a Movimiento Sumar y que este partido se presenta el 29N dentro de la coalición Frente Amplio. Faltaba ese aviso; no cambia ninguna celda."
+  }
+ ],
  "verificacion": {
   "primera": "ia:claude-opus-5-5 (Claude Code); Junts, EH Bildu y EAJ-PNV, por un subagente Claude Opus 5.5 sin ver ninguna otra lectura, el 1 nov 2026",
   "segunda": "ia:claude-sonnet-5-5, tres subagentes (A: PP, PSOE, VOX; B: Sumar, ERC, Junts; C: EH Bildu, PNV, Democracia Real), sin ver la primera lectura, el 1 nov 2026",
@@ -217,7 +222,8 @@
    "nombre": "Movimiento Sumar",
    "siglas": "Sumar",
    "grupo": "Grupo Parlamentario Plurinacional SUMAR",
-   "nota": "El grupo parlamentario era una coalición; se miden los documentos del partido que le dio nombre.",
+   "candidatura_29n": "Frente Amplio",
+   "nota": "El grupo parlamentario de 2023 a 2026 era una coalición; se miden los documentos del partido que le dio nombre, Movimiento Sumar. El 29 de noviembre, Movimiento Sumar se presenta al Congreso dentro de Frente Amplio, una coalición electoral con otras organizaciones (entre ellas Izquierda Unida, Catalunya en Comú y Más Madrid) que tienen sus propios estatutos y no se miden aquí.",
    "contacto": "administracion@movimientosumar.es",
    "contacto_fuente": "sus estatutos"
   },

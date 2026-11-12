@@ -110,7 +110,8 @@
    "nombre": "Movimiento Sumar",
    "siglas": "Sumar",
    "grupo": "Grupo Parlamentario Plurinacional SUMAR",
-   "nota": "El grupo parlamentario era una coalición; se miden los documentos del partido que le dio nombre.",
+   "candidatura_29n": "Frente Amplio",
+   "nota": "El grupo parlamentario de 2023 a 2026 era una coalición; se miden los documentos del partido que le dio nombre, Movimiento Sumar. El 29 de noviembre, Movimiento Sumar se presenta al Congreso dentro de Frente Amplio, una coalición electoral con otras organizaciones (entre ellas Izquierda Unida, Catalunya en Comú y Más Madrid) que tienen sus propios estatutos y no se miden aquí.",
    "contacto": "administracion@movimientosumar.es",
    "contacto_fuente": "sus estatutos"
   },
@@ -368,7 +369,12 @@
   "Los criterios se escribieron antes de leer los documentos y no se han cambiado después, aunque tienen un hueco (estándar 5, caso del PP): queda entre las celdas dudosas.",
   "Edición de estilo: en un motivo de la segunda lectura (VOX, revocación) se cambió «el umbral de 2/3 es muy alto» por «el umbral es de 2/3», para no calificar. No cambia ningún valor ni cita."
  ],
- "correcciones": [],
+ "correcciones": [
+  {
+   "fecha": "12 nov 2026",
+   "texto": "La fila de Sumar aclara que mide a Movimiento Sumar y que este partido se presenta el 29N dentro de la coalición Frente Amplio. Faltaba ese aviso; no cambia ninguna celda."
+  }
+ ],
  "politica_correcciones": "Si encuentras un error, lo corregimos en público en menos de 24 horas y lo anotamos en esta página, con la fecha y lo que cambió.",
  "etiquetas": {
   "junts-3": "juicio oral, corrupción; la Executiva puede declararla improcedente"

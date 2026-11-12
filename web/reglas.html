@@ -424,7 +424,7 @@
             d.partidos.forEach(function (p) {
                 var tr = el('tr', null, p.id === 'democracia-real' ? 'is-own' : '');
                 var th = el('th', p.siglas); th.scope = 'row';
-                th.appendChild(el('small', p.id === 'democracia-real' ? 'borrador, sin partido' : p.nombre));
+                th.appendChild(el('small', p.id === 'democracia-real' ? 'borrador, sin partido' : p.nombre + (p.candidatura_29n ? ' · el 29N, en ' + p.candidatura_29n : '')));
                 tr.appendChild(th);
                 d.estandares.forEach(function (e) {
                     var c = d.celdas.filter(function (x) { return x.partido === p.id && x.estandar === e.id; })[0];
