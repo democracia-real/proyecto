@@ -6,6 +6,17 @@
 
 ---
 
+## 14 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicado el anuncio de *Las reglas del juego*: vídeo en TikTok (https://www.tiktok.com/@democraciareal26/video/7707955005181005078), Instagram Reels (https://www.instagram.com/reel/Dft4Pc5obfU/) y YouTube Shorts (https://youtube.com/shorts/yS-hVYV1Gpw), y hilo en X con la imagen (https://x.com/democracia2630/status/2121535741268222441). Etiqueta de IA en TikTok e Instagram; en YouTube, «sin contenido alterado», como en los otros vídeos de datos. Lo publica la IA desde el navegador de la persona, con su visto bueno | Era la pieza del vie 13, que no salió porque la persona no estuvo. Los cuatro se comprobaron públicos | IA + Persona |
+| En Instagram sale solo el reel, con el texto largo (las seis preguntas y el método), y no además la imagen | Dos publicaciones del mismo tema el mismo día en la misma red se pisan | IA |
+| Teruel pasa del sábado 14 al lunes 16 por la noche; Valencia, al martes 17; Zamora, al miércoles 18 | Una pieza al día: el sábado lo ocupa el anuncio de la matriz, y el domingo la persona no está | IA |
+| YouTube avisó de que aún estaba comprobando el vídeo y se publicó sin esperar | La música es de `musica.py` y no hay contenido de terceros | IA |
+
+---
+
 ## 12 noviembre 2026
 
 | Decisión | Motivo | Quién |
