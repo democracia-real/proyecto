@@ -1,8 +1,17 @@
 # Ruta
 
-*Actualizada: 10 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
+*Actualizada: 16 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
 
 ---
+
+## Revisión del 16 de noviembre (tercera semanal)
+
+- Hecho: la matriz *Las reglas del juego*, publicada el 12 nov, un día antes de lo previsto, con correos a Civio y cinco verificadores. Piezas del 10, el 11 y Teruel publicadas; el anuncio de la matriz salió el 14 en vez del 13.
+- Va tarde: las piezas que dependen de que la persona esté. El anuncio de la matriz salió un día tarde y Teruel dos. No es un problema de preparación: todas estaban listas a tiempo.
+- No se incorporaron respuestas de los partidos (11-12 nov) porque no hubo ninguna: se marca como hecho.
+- Cambios del plan: no sale la pieza de pensiones en los programas del 17 (comparar programas es el Promesómetro, aplazado al 30N). El jue 19 sale Cádiz. Las fechas de las dos próximas semanas no cambian.
+- Pendiente con fecha: las 11 cifras de la matriz vencen el 20 nov y hay que revisarlas antes.
+- Piezas del 19 al 22 nov listas en `internal/semana_2026-11-16/`; las del 17 y el 18, en `internal/semana_2026-11-09/`.
 
 ## Revisión del 10 de noviembre (segunda semanal)
 
@@ -75,9 +84,10 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 ### Fase B · 9-20 nov — Matriz y campaña
 
 - [x] Extraer las 6 cláusulas por partido con dos lecturas independientes. Sin cita literal, «no consta»
-- [ ] 11-12 nov: incorporar las respuestas literales y corregir lo que señalen
+- [x] 11-12 nov: incorporar las respuestas literales y corregir lo que señalen (no hubo ninguna)
 - [x] **Publicar la matriz**: publicada el 12 nov, la víspera de la campaña. Correos a verificadores y Civio, el mismo día
-- [ ] Desde el 13 nov, una pieza al día: un resultado de la calculadora de una provincia, una celda de la matriz
+- [ ] Desde el 13 nov, una pieza al día: un resultado de la calculadora de una provincia, una celda de la matriz (en marcha: anuncio de la matriz el 14, Teruel el 16; del 17 al 22, listas)
+- [ ] Antes del 20 nov: revisar las 11 cifras de la matriz, que vencen ese día
 
 ### Fase C · 21-29 nov — Cierre de campaña
 

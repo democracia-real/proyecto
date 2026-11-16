@@ -725,6 +725,27 @@
       }
     },
     {
+      "id": "voto-2023-cadiz",
+      "afirmacion": "En las elecciones al Congreso de 2023, Cádiz eligió un diputado por cada 70.789 votos válidos (637.098 votos válidos para 9 escaños), 1,00 veces la media de España (70.537)",
+      "valor": "70.789",
+      "periodo": "Elecciones al Congreso de 23 de julio de 2023",
+      "fuente": "Junta Electoral Central, resultados de las elecciones al Congreso de 2023 (BOE-A-2023-18907), cuadros I y II",
+      "url": "https://www.boe.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+      "fragmento": "Cuadro I: 1.017.958 644.801 637.098 629.995 7.103 7.703 Cádiz. Cuadro II: Cádiz. 9",
+      "calculo": "637.098 / 9 = 70.788,7; cociente sobre 24.688.087 / 350 = 70.537,4",
+      "consultado": "2026-11-16",
+      "estado": "verificado",
+      "verificado_por": [
+        "ia:claude-opus-5-5 (Claude Code), calculado de web/data/voto-2023.json, que reproduce el Excel provincial del Ministerio del Interior (data/voto-2023/calcular.py)",
+        "ia:claude-sonnet-5-5, segunda comprobación independiente sin ver la primera (2026-11-16), con el PDF del BOE descargado: mismos votos válidos, escaños y cociente; las 52 filas del cuadro I suman el total estatal"
+      ],
+      "revision_humana": null,
+      "revisar_en": "2026-12-15",
+      "texto_en": {
+        "web/data/voto-2023.json": "\"votos_por_escano\": 70788.7"
+      }
+    },
+    {
       "id": "cuota-autonomos-2026",
       "afirmacion": "En 2026 los autónomos cotizan por tramos de rendimientos netos: la base mínima va de 653,59 €/mes (tramo 1 de la tabla reducida) a 1.928,10 €/mes (tramo 12 de la general), y el tipo total es del 31,50% (contingencias comunes 28,30, profesionales 1,30, cese de actividad 0,90, formación profesional 0,10 y MEI 0,90)",
       "valor": "653,59 a 1.928,10 €/mes de base mínima; 31,50%",
