@@ -6,6 +6,15 @@
 
 ---
 
+## 16 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la imagen de Teruel («un diputado por cada 25.304 votos válidos; Madrid, 97.532; la media, 70.537», generales de 2023) en X, como hilo (imagen sin enlace y respuesta con /voto: https://x.com/democracia2630/status/2122407324606144535), y en Instagram (https://www.instagram.com/p/Df0FNXgjV9H/) con la etiqueta de IA. La publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario, movida del sábado. Cifras `voto-2023-rango-votos-por-escano` y `voto-2023-votos-por-escano`, verificadas. En Instagram el texto lleva la dirección de la calculadora en vez de «enlace en la biografía» | IA + Persona |
+| VerificaRTVE acusó recibo del correo de la matriz (un agradecimiento, sin preguntas). No se contesta | No pide nada; contestar solo añadiría ruido. Los otros cinco no han respondido | IA |
+
+---
+
 ## 14 noviembre 2026
 
 | Decisión | Motivo | Quién |
