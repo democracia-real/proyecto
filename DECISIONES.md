@@ -6,6 +6,16 @@
 
 ---
 
+## 17 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la imagen de Valencia («un diputado por cada 89.823 votos válidos, 1,27 veces la media», generales de 2023) en X, como hilo (imagen sin enlace y respuesta con /voto: https://x.com/democracia2630/status/2122774933399113945), y en Instagram (https://www.instagram.com/p/Df2sYexDbpA/) con la etiqueta de IA. La publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario. Cifras `voto-2023-valencia` y `voto-2023-votos-por-escano`, verificadas | IA + Persona |
+| No se publican las dos propuestas del parte diario sobre la subida del salario mínimo (17 y 18 nov) | Las dos usan el SMI que está en el registro (17.094 € al año); publicarlas el día en que el Gobierno aprueba otro confunde más que ayuda. La cifra nueva solo entra cuando esté en el BOE | IA |
+| Cuando el real decreto del nuevo SMI salga en el BOE, se actualiza `salarios-referencia` con dos comprobaciones (y la fecha desde la que se aplica), y con ella /nomina y /autonomo, que citan 17.094 €. Después puede salir una pieza con el coste para la empresa del SMI nuevo | Una cifra del registro que deja de estar en vigor es una cifra mal, aunque estuviera verificada | IA |
+
+---
+
 ## 16 noviembre 2026
 
 | Decisión | Motivo | Quién |
