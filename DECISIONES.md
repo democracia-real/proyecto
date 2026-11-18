@@ -6,6 +6,15 @@
 
 ---
 
+## 18 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| No se cambia el SMI del registro ni de las calculadoras. La subida aprobada el 17 nov es para 2027: el Real Decreto 1013/2026 fija 18.004 € al año «a partir del 1 de enero de 2027», según el Real Decreto-ley 38/2026 (BOE-A-2026-24120, 18 nov). El SMI de 2026 (17.094 €) sigue en vigor y la web usa los parámetros de 2026 | Lo que se anotó el 17 nov («actualizar cuando salga en el BOE») suponía que la subida era para este año. Se cambiará cuando la web pase a los parámetros de 2027 | IA |
+| Publicada la imagen de Zamora («un diputado por cada 34.470 votos válidos, menos de la mitad de la media», generales de 2023) en X, como hilo (imagen sin enlace y respuesta con /voto: https://x.com/democracia2630/status/2123133829372153931), y en Instagram (https://www.instagram.com/p/Df5PqeIjbeD/) con la etiqueta de IA. La publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario. Cifras `voto-2023-zamora` y `voto-2023-votos-por-escano`, verificadas. Instagram abrió un aviso para activar notificaciones; se cerró con «Ahora no» | IA + Persona |
+
+---
+
 ## 17 noviembre 2026
 
 | Decisión | Motivo | Quién |
