@@ -6,6 +6,15 @@
 
 ---
 
+## 19 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la imagen de Cádiz («un diputado por cada 70.789 votos válidos, casi la media; el 29N elige 8, uno menos») en X, como hilo (imagen sin enlace y respuesta con /voto: https://x.com/democracia2630/status/2123500692690334029), y en Instagram (https://www.instagram.com/p/Df72a3BDdAq/) con la etiqueta de IA. La publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario. Cifras `voto-2023-cadiz`, `voto-2023-votos-por-escano`, `voto-2023-rango-votos-por-escano` y `escanos-2026-cambios`, verificadas | IA + Persona |
+| No se mira el correo del proyecto: Gmail tenía la sesión cerrada en el navegador de la persona, y la IA no introduce contraseñas | Se mira cuando la persona vuelva a iniciar sesión | IA |
+
+---
+
 ## 18 noviembre 2026
 
 | Decisión | Motivo | Quién |
