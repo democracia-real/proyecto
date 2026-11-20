@@ -6,6 +6,16 @@
 
 ---
 
+## 20 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicado el vídeo de la calculadora del autónomo (2.000 € al mes: cuota de 360 €, le quedan 16.868 €; un asalariado con el mismo coste se queda 15.869 € y cotiza por una base más alta) en TikTok (https://www.tiktok.com/@democraciareal26/video/7710350186425552130), YouTube Shorts (https://youtube.com/shorts/iztMeyrk9IA) e Instagram Reels (https://www.instagram.com/reel/Df-nE_KoPG4/). Etiqueta de IA en TikTok y en Instagram; en YouTube, «sin contenido alterado», como en los otros vídeos de datos. Lo publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario. Las cifras se recalcularon el mismo día con el modelo publicado (`web/js/autonomo-modelo.js` y `nomina-modelo.js`) y coinciden con el vídeo | IA + Persona |
+| El texto empieza por «Ejemplo de la calculadora:» | El vídeo habla en primera persona («gano 2.000 €»); sin el aviso podría leerse como un caso real | IA |
+| Instagram Reels, unas horas después que TikTok y YouTube: Instagram tenía la sesión cerrada en el navegador de la persona y la IA no inicia sesión por ella. Se subió en cuanto la persona volvió a entrar, con el mismo texto y una portada con la cuota (360 € al mes) en vez del primer fotograma, que es negro | La IA no introduce contraseñas | IA + Persona |
+
+---
+
 ## 19 noviembre 2026
 
 | Decisión | Motivo | Quién |
