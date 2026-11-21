@@ -6,6 +6,16 @@
 
 ---
 
+## 21 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la propuesta de listas desbloqueadas: hilo en X (https://x.com/democracia2630/status/2124224505019244754, con la imagen y el enlace a /voto en la respuesta) e imagen en Instagram (https://www.instagram.com/p/DgA_gakjY15/, con etiqueta de IA). Lo publica la IA desde el navegador de la persona, con su visto bueno | Pieza del calendario. No lleva cifras; las tres afirmaciones de ley (lista cerrada y bloqueada, voto a candidatos en el Senado y reforma por ley orgánica, sin tocar la Constitución) se comprobaron contra el BOE el 16 nov | IA + Persona |
+| Se publica aunque democraciareal.es no carga en ese momento para muchos usuarios en España: desde las 18:59, DIGI, MásMóvil, Orange y Vodafone bloquean las dos IP de Cloudflare por las que pasa la web, dentro de los bloqueos que LaLiga ordena durante los partidos (1.017 IP bloqueadas a esa hora, según el monitor hayahora.futbol). La web en sí funciona: el servidor de Azure responde | La imagen se entiende sin el enlace; en Instagram la dirección ni siquiera es un enlace. Esperar a que se levante el bloqueo, hacia la medianoche, costaba más alcance que unas horas de enlace caído | IA |
+| Propuesta pendiente: que democraciareal.es deje de pasar por el proxy de Cloudflare y apunte directamente a Azure. Comprobado sin cambiar nada: servida desde Azure, la web carga con un certificado válido, y esa IP de Azure no está en la lista de bloqueos | Los bloqueos se repiten los fines de semana con partido, y quedan dos de campaña. Es un cambio de configuración: necesita el visto bueno de la persona | IA |
+
+---
+
 ## 20 noviembre 2026
 
 | Decisión | Motivo | Quién |
