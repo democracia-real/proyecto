@@ -6,6 +6,17 @@
 
 ---
 
+## 23 noviembre 2026 (revisión semanal)
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Revisadas las 11 cifras `reglas-*` de la matriz, vencidas el 20 nov: se volvieron a descargar los documentos de EH Bildu, Junts, Sumar, Vox y ERC y todas las citas siguen literales; las dos de Democracia Real, en el borrador del repositorio; y el recuento (54 celdas; sí 16, parcial 23, no 3, no consta 12; 4 discrepancias) coincide con `web/data/reglas.json`. Ninguna cifra cambia; la próxima revisión, el 21 dic | La revisión llegó tres días tarde: la dejó para hoy la decisión del 16 nov. El PDF de Junts es otro fichero que el del 1 nov (otro SHA-256) pero con las mismas citas | IA |
+| La cifra `reglas-psoe-mandatos` se queda como verificada, con revisión el 30 nov, sin repetir la descarga oficial: psoe.es bloquea al programa y también al navegador del proyecto (desafío anti-bots, que no se salta). La copia más reciente de la Wayback Machine es la misma del 1 nov (mismo SHA-256) y la cita sigue literal | Ninguna señal de que los estatutos hayan cambiado, pero no se ha podido mirar la web viva: queda dicho en el registro. Si el 30 nov sigue bloqueado, pasa a «pendiente» | IA |
+| Esta semana, dos celdas más de nuestra propia fila (qué pasa si te investigan, el 24; revocación, el 26), cinco cifras públicas con su fuente (el 25) y el cierre (el 27). El 25 no dice «que no salen en los debates» | Seguir midiendo primero lo nuestro es coherente y no nombra partidos. «Que no salen en los debates» afirma algo que no hemos medido. Ninguna es un sondeo | IA |
+| La pieza del 30 nov (*Lo que vale tu voto* con 2026) no se deja lista hoy | Depende de los resultados oficiales de la noche del 29 | IA |
+
+---
+
 ## 23 noviembre 2026
 
 | Decisión | Motivo | Quién |
@@ -280,4 +291,4 @@
 | 2 nov (primera revisión semanal) | 0 (ningún aviso abierto en GitHub) | 1 de 1 vencidas; 2 adelantadas (*Lo que vale tu voto* y la réplica) | La persona | La persona | 0 | — | 0 € |
 | 3-9 nov (segunda revisión, 10 nov) | 0 (ningún aviso abierto en GitHub; el vídeo largo tiene fe de erratas desde el día en que se vieron sus tres cifras, el 8 nov) | RUTA: 2 de 2 (vídeo de la nómina el 3 y de *Lo que vale tu voto* el 5). Calendario: 7 de 8 piezas; la del 8, cancelada | La persona | La persona | 0 conocidas | — | 0 € |
 | 10-16 nov (tercera revisión, 16 nov) | 0 (ningún aviso abierto en GitHub; nadie ha señalado un error de la matriz) | RUTA: 1 de 1 (la matriz, el 12, un día antes del 13). Calendario: 5 piezas publicadas de 7 días: 3 en su día (10, 11 y la matriz), el anuncio de la matriz un día tarde (14) y Teruel dos días tarde (16); la fe de erratas del 12, cancelada; el 15, sin pieza porque la persona no estaba | La persona | La persona | 0 conocidas (VerificaRTVE acusó recibo, sin publicar nada) | — | 0 € |
-| 17-23 nov (medido por la IA el 23 nov) | 0 (nadie ha señalado un error) | Calendario: el autónomo (20) y las listas (21) en su día; el presupuesto (22), un día tarde, el 23 | Web: 80 visitas y 90 páginas vistas en los últimos 30 días (Cloudflare Web Analytics, sin bots; cuenta por muestreo, de 10 en 10), la mitad directas, que incluyen las comprobaciones de la IA y la persona. Google: 9 clics y 2.310 impresiones del 7 al 21 nov, casi todas por «partitocracia». Chat: 0 usos desde el 13 nov. TikTok: unas 250 visualizaciones por vídeo (8 vídeos). YouTube: 1.600 visualizaciones en 28 días. X: de 1 a 9 visualizaciones por mensaje | X 2, Instagram 0, TikTok 0, YouTube 7 | 0 (6 correos a verificadores el 12 nov; un acuse, ninguna publicación) | — | 0 € |
+| 17-23 nov (cuarta revisión y medido por la IA el 23 nov) | 0 (nadie ha señalado un error) | Calendario: Valencia, Zamora y Cádiz (17-19), el autónomo (20) y las listas (21) en su día; el presupuesto (22), un día tarde, el 23. RUTA: la revisión de las 11 cifras de la matriz, tres días tarde (23) | Web: 80 visitas y 90 páginas vistas en los últimos 30 días (Cloudflare Web Analytics, sin bots; cuenta por muestreo, de 10 en 10), la mitad directas, que incluyen las comprobaciones de la IA y la persona. Google: 9 clics y 2.310 impresiones del 7 al 21 nov, casi todas por «partitocracia». Chat: 0 usos desde el 13 nov. TikTok: unas 250 visualizaciones por vídeo (8 vídeos). YouTube: 1.600 visualizaciones en 28 días. X: de 1 a 9 visualizaciones por mensaje | X 2, Instagram 0, TikTok 0, YouTube 7 | 0 (6 correos a verificadores el 12 nov; un acuse, ninguna publicación) | — | 0 € |

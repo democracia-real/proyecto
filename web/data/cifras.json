@@ -923,11 +923,11 @@
       "fuente": "Democracia interna de Democracia Real (borrador)",
       "url": "https://github.com/democracia-real/proyecto/blob/main/04_modelo_organizativo_partido/democracia_interna.md",
       "fragmento": "Cargos electos | 3 legislaturas máximo",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: la cita sigue literal en el borrador del repositorio, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"2 mandatos; 3 legislaturas\""
       }
@@ -940,11 +940,11 @@
       "fuente": "Democracia interna de Democracia Real (borrador)",
       "url": "https://github.com/democracia-real/proyecto/blob/main/04_modelo_organizativo_partido/democracia_interna.md",
       "fragmento": "Portavoz | 20% de afiliados del ámbito nacional | 6 meses desde la elección",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: la cita sigue literal en el borrador del repositorio, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"20% de afiliados\"",
         "web/reglas.html": "otro documento dice el 20%"
@@ -958,11 +958,11 @@
       "fuente": "Estatutos de la federación Euskal Herria Bildu",
       "url": "https://ehbildu.eus/dokumentuak/gardentasuna/Estatutos.pdf",
       "fragmento": "III. La resolución de solicitudes de revocación presentadas formalmente contra miembros de dichos órganos. […] En todos estos casos, será necesario el voto favorable de al menos dos tercios (2/3) de los miembros de la Asamblea General",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: volvió a descargar el documento oficial y la cita sigue literal, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"la decide la Asamblea General (2/3)\""
       }
@@ -975,11 +975,11 @@
       "fuente": "Estatuts de Junts per Catalunya (text consolidat, congrés d'octubre 2024; no ferms segons el mateix document)",
       "url": "https://junts.cat/wp-content/uploads/2026/10/Estatuts-2024-1.pdf",
       "fragmento": "Més del 20 % (si són més de 100) i més del 30 % (si són menys de 100) dels militants adscrits a l’àmbit de la presidència contra la qual es presenta la moció. […] La moció de censura haurà de superar el 50% dels vots emesos en la votació.",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: volvió a descargar el documento oficial y la cita sigue literal, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"moción de censura, 20% de militantes\""
       }
@@ -994,9 +994,9 @@
       "fragmento": "Ningún cargo orgánico ejecutivo podrá ser ocupado por la misma persona durante más de tres mandatos consecutivos, salvo en el caso de la Secretaría General cuando su titular ejerza la Presidencia del Gobierno de España",
       "consultado": "2026-11-01",
       "estado": "verificado",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: psoe.es bloquea la descarga (anti-bots), también desde el navegador; la copia más reciente de la Wayback Machine es la misma del 1 nov (mismo SHA-256) y la cita sigue literal en ella. Se reintenta el 30 nov"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-11-30",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"3 mandatos, con excepciones\""
       }
@@ -1009,11 +1009,11 @@
       "fuente": "Estatutos de Movimiento Sumar tras la Asamblea de 2025",
       "url": "https://movimientosumar.es/transparencia/wp-content/uploads/sites/6/2025/07/Estatutos-tras-Asamblea-2025_DEF.pdf",
       "fragmento": "Convocatoria de Asamblea General Extraordinaria, solicitada por al menos el 35% de las personas miembros, con un único punto a abordar que será la revocación de la Coordinación General mediante votación por mayoría absoluta.",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: volvió a descargar el documento oficial y la cita sigue literal, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"35% de las personas afiliadas\""
       }
@@ -1026,11 +1026,11 @@
       "fuente": "Estatutos de VOX (subsanación de 24 jun 2023)",
       "url": "https://www.voxespana.es/wp-content/uploads/2025/02/2.10.2023-SUBSANACION-24.06.2023-Estatutos-VOX1.pdf",
       "fragmento": "debiendo acompañarla con el aval de las 2/3 partes de los afiliados de pleno derecho del ámbito territorial en que ejerza sus funciones el Comité cuestionado.",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): mismo valor y misma cifra. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: volvió a descargar el documento oficial y la cita sigue literal, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"moción con aval de 2/3\""
       }
@@ -1043,12 +1043,12 @@
       "fuente": "Estatuts d'Esquerra Republicana (febrer 2026)",
       "url": "https://static.esquerra.cat/arxius/textosbasics/estatuts_2026.pdf",
       "fragmento": "La Presidència pot ser reelegida ininterrompudament fins a un màxim de dotze anys, si bé sempre pot acabar el mandat.",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
       "nota": "Las dos lecturas citan la misma cláusula y la misma cifra («dotze anys»), pero no coinciden en el valor (parcial / sí): la celda queda «no consta» y la página enseña las dos lecturas.",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): misma cláusula y misma cifra, otro valor. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): misma cláusula y misma cifra, otro valor. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: volvió a descargar el documento oficial y la cita sigue literal, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"12 años, con excepción\""
       }
@@ -1061,12 +1061,12 @@
       "fuente": "Estatuts d'Esquerra Republicana (febrer 2026)",
       "url": "https://static.esquerra.cat/arxius/textosbasics/estatuts_2026.pdf",
       "fragmento": "Per petició motivada, adreçada a l’Executiva Nacional, d’una cinquena part de les persones afiliades de ple dret d’Esquerra Republicana.",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
       "nota": "Las dos lecturas citan la misma cláusula y la misma cifra («una cinquena part»), pero no coinciden en el valor (sí / parcial): la celda queda «no consta» y la página enseña las dos lecturas.",
-      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): misma cláusula y misma cifra, otro valor. Detalle en data/reglas/VERIFICACION.md"],
+      "verificado_por": ["ia:claude-opus-5-5 (Claude Code), primera lectura con cita literal comprobada por script en el documento descargado (data/reglas/construir.py)", "ia:claude-sonnet-5-5, segunda lectura independiente sin ver la primera (2026-11-01): misma cláusula y misma cifra, otro valor. Detalle en data/reglas/VERIFICACION.md", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: volvió a descargar el documento oficial y la cita sigue literal, sin cambios"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"etiqueta\": \"1/5 de afiliados fuerza nueva elección\""
       }
@@ -1080,11 +1080,11 @@
       "url": "https://github.com/democracia-real/proyecto/blob/main/web/data/reglas.json",
       "fragmento": "\"celdas\": 54",
       "calculo": "6 estándares × 9 filas; el script falla si falta alguna celda o alguna de las dos lecturas",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["script: data/reglas/construir.py (cuenta las celdas y exige las dos lecturas en cada una)"],
+      "verificado_por": ["script: data/reglas/construir.py (cuenta las celdas y exige las dos lecturas en cada una)", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: recontó las celdas en web/data/reglas.json y coinciden"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/reglas.html": "54 celdas &middot; 9 filas",
         "web/data/reglas.json": "\"celdas\": 54"
@@ -1099,11 +1099,11 @@
       "url": "https://github.com/democracia-real/proyecto/blob/main/web/data/reglas.json",
       "fragmento": "\"discrepancias\": 4",
       "calculo": "Recuento de las 54 celdas por valor final; la página lo pinta desde web/data/reglas.json",
-      "consultado": "2026-11-01",
+      "consultado": "2026-11-23",
       "estado": "verificado",
-      "verificado_por": ["script: data/reglas/construir.py (compara las dos lecturas celda a celda y cuenta los valores)"],
+      "verificado_por": ["script: data/reglas/construir.py (compara las dos lecturas celda a celda y cuenta los valores)", "ia:claude-sonnet-5-5 (Claude Code), revisión semanal 2026-11-23: recontó las celdas en web/data/reglas.json y coinciden"],
       "revision_humana": null,
-      "revisar_en": "2026-11-20",
+      "revisar_en": "2026-12-21",
       "texto_en": {
         "web/data/reglas.json": "\"discrepancias\": 4"
       }

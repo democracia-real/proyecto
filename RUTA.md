@@ -1,8 +1,15 @@
 # Ruta
 
-*Actualizada: 16 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
+*Actualizada: 23 noviembre 2026 · Es el único documento que dice **qué hacer y en qué orden**. Los demás son detalle.*
 
 ---
+
+## Revisión del 23 de noviembre (cuarta semanal)
+
+- Hecho: Valencia (17), Zamora (18) y Cádiz (19) en su día; el autónomo (20) y las listas desbloqueadas (21) en su día; el presupuesto trazable, un día tarde (23); la primera celda de la matriz (23). El 17 no salió la pieza de pensiones, como se decidió.
+- Va tarde: la revisión de las 11 cifras de la matriz, que vencían el 20 y se hizo hoy, tres días tarde. Las citas de cinco partidos (EH Bildu, Junts, Sumar, Vox y ERC) siguen literales en los documentos descargados hoy, igual que las dos nuestras y el recuento de la matriz; la del PSOE no se pudo repetir (psoe.es bloquea la descarga) y se reintenta el 30 nov.
+- Cambios del plan: los 24-27 salen dos celdas de nuestra propia fila (24 y 26), cinco cifras públicas (25) y el cierre (27). La pieza del 25 ya no dice «que no salen en los debates», porque no lo hemos medido. El 28 y el 29, nada. La del 30 (*Lo que vale tu voto* con los resultados) depende de los resultados y se prepara la noche del 29.
+- Piezas del 24 al 27 listas en `internal/semana_2026-11-23/`.
 
 ## Revisión del 16 de noviembre (tercera semanal)
 
@@ -86,8 +93,8 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 - [x] Extraer las 6 cláusulas por partido con dos lecturas independientes. Sin cita literal, «no consta»
 - [x] 11-12 nov: incorporar las respuestas literales y corregir lo que señalen (no hubo ninguna)
 - [x] **Publicar la matriz**: publicada el 12 nov, la víspera de la campaña. Correos a verificadores y Civio, el mismo día
-- [ ] Desde el 13 nov, una pieza al día: un resultado de la calculadora de una provincia, una celda de la matriz (en marcha: anuncio de la matriz el 14, Teruel el 16; del 17 al 22, listas)
-- [ ] Antes del 20 nov: revisar las 11 cifras de la matriz, que vencen ese día
+- [x] Desde el 13 nov, una pieza al día: provincias (16-19), autónomo, listas y presupuesto (20-23); una celda de la matriz el 23. Del 24 al 27, listas
+- [x] Revisar las 11 cifras de la matriz, que vencían el 20 nov: hecho el 23 (la del PSOE, pendiente de repetir el 30)
 
 ### Fase C · 21-29 nov — Cierre de campaña
 
