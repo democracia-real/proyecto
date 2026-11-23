@@ -6,6 +6,17 @@
 
 ---
 
+## 23 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicado el vídeo del presupuesto trazable, con *La Factura*, en TikTok (https://www.tiktok.com/@democraciareal26/video/7711447307945872662, etiqueta de IA; al publicarlo, TikTok lo dejó «en revisión»), YouTube Shorts (https://youtube.com/shorts/TzBOXPGr0m4, «sí» a contenido alterado porque la música hecha con IA es el centro, como en los otros clips de canciones) e Instagram Reels (https://www.instagram.com/reel/DgGHKSiIHEh/, etiqueta de IA) | Pieza del domingo 22, un día tarde: el domingo la persona no estuvo y la extensión de Chrome no estaba conectada. Sin cifras; /nomina tiene el gráfico «Adónde va lo que pagas» que promete el vídeo | IA + Persona |
+| Publicada la primera celda de la matriz, la de nuestra propia fila (¿se publican los bienes?: «parcial»), en X (https://x.com/democracia2630/status/2124945866641518735) e Instagram (https://www.instagram.com/p/DgGHkjgjXbB/). Imagen hecha con `herramientas/imagen_texto.py` en vez de una captura de la web | Pieza preparada por el parte diario. Al texto se le añade que el código ético es «aún un borrador»: decir que «obliga» sin más daba a entender que está en vigor, y la matriz lo marca como borrador sin aprobar | IA + Persona |
+| YouTube Studio abrió por defecto un canal que no es el del proyecto. No se subió nada ahí: se cambió al canal de Democracia Real antes de subir | El navegador tiene otra cuenta de Google como principal; hay que comprobar el canal antes de cada subida | IA |
+| Primera medición hecha por la IA, desde los paneles de cada red y de Cloudflare, en vez de pedírsela a la persona. Las cifras están en «Métricas semanales» | La persona preguntó si hay visitas y si el proyecto merece la pena | IA |
+
+---
+
 ## 21 noviembre 2026
 
 | Decisión | Motivo | Quién |
@@ -269,3 +280,4 @@
 | 2 nov (primera revisión semanal) | 0 (ningún aviso abierto en GitHub) | 1 de 1 vencidas; 2 adelantadas (*Lo que vale tu voto* y la réplica) | La persona | La persona | 0 | — | 0 € |
 | 3-9 nov (segunda revisión, 10 nov) | 0 (ningún aviso abierto en GitHub; el vídeo largo tiene fe de erratas desde el día en que se vieron sus tres cifras, el 8 nov) | RUTA: 2 de 2 (vídeo de la nómina el 3 y de *Lo que vale tu voto* el 5). Calendario: 7 de 8 piezas; la del 8, cancelada | La persona | La persona | 0 conocidas | — | 0 € |
 | 10-16 nov (tercera revisión, 16 nov) | 0 (ningún aviso abierto en GitHub; nadie ha señalado un error de la matriz) | RUTA: 1 de 1 (la matriz, el 12, un día antes del 13). Calendario: 5 piezas publicadas de 7 días: 3 en su día (10, 11 y la matriz), el anuncio de la matriz un día tarde (14) y Teruel dos días tarde (16); la fe de erratas del 12, cancelada; el 15, sin pieza porque la persona no estaba | La persona | La persona | 0 conocidas (VerificaRTVE acusó recibo, sin publicar nada) | — | 0 € |
+| 17-23 nov (medido por la IA el 23 nov) | 0 (nadie ha señalado un error) | Calendario: el autónomo (20) y las listas (21) en su día; el presupuesto (22), un día tarde, el 23 | Web: 80 visitas y 90 páginas vistas en los últimos 30 días (Cloudflare Web Analytics, sin bots; cuenta por muestreo, de 10 en 10), la mitad directas, que incluyen las comprobaciones de la IA y la persona. Google: 9 clics y 2.310 impresiones del 7 al 21 nov, casi todas por «partitocracia». Chat: 0 usos desde el 13 nov. TikTok: unas 250 visualizaciones por vídeo (8 vídeos). YouTube: 1.600 visualizaciones en 28 días. X: de 1 a 9 visualizaciones por mensaje | X 2, Instagram 0, TikTok 0, YouTube 7 | 0 (6 correos a verificadores el 12 nov; un acuse, ninguna publicación) | — | 0 € |
