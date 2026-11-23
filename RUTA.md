@@ -10,6 +10,7 @@
 - Va tarde: la revisión de las 11 cifras de la matriz, que vencían el 20 y se hizo hoy, tres días tarde. Las citas de cinco partidos (EH Bildu, Junts, Sumar, Vox y ERC) siguen literales en los documentos descargados hoy, igual que las dos nuestras y el recuento de la matriz; la del PSOE no se pudo repetir (psoe.es bloquea la descarga) y se reintenta el 30 nov.
 - Cambios del plan: los 24-27 salen dos celdas de nuestra propia fila (24 y 26), cinco cifras públicas (25) y el cierre (27). La pieza del 25 ya no dice «que no salen en los debates», porque no lo hemos medido. El 28 y el 29, nada. La del 30 (*Lo que vale tu voto* con los resultados) depende de los resultados y se prepara la noche del 29.
 - Piezas del 24 al 27 listas en `internal/semana_2026-11-23/`.
+- Decidido con la persona (23 nov), tras la primera medición: el calendario sigue hasta el 29N y el 30N cambia el modelo (ver Fase D).
 
 ## Revisión del 16 de noviembre (tercera semanal)
 
@@ -103,6 +104,7 @@ Hasta enero hay un solo objetivo: **que la gente descubra el proyecto con herram
 
 ### Fase D · 30 nov-enero — Después
 
+- **30 nov: se deja la pieza diaria en todas las redes.** En tres semanas trajo unas 80 visitas a la web en 30 días y casi ningún seguidor. Se mantienen la web y las cifras al día y se elige una sola vía de difusión con los datos de la campaña (candidatas: llevar la matriz a periodistas, o YouTube). Criterio: si a final de diciembre la web no llega a 100 visitas reales por semana, se cierra la difusión y se publica un informe final del experimento
 - 30 nov: compromisos de quienes obtengan escaño (Promesómetro reducido)
 - Diciembre: Decretómetro, fichas de medida, piloto de contrapropuesta con un tema (vivienda)
 - **Enero: decidir** con datos qué es Democracia Real, y si el nombre se mantiene (se confunde con Democracia Real Ya)
