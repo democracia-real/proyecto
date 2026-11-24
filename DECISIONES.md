@@ -6,6 +6,15 @@
 
 ---
 
+## 24 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la segunda celda de nuestra propia fila de la matriz (qué pasa si te investigan: «sí»), en X (https://x.com/democracia2630/status/2125307735231066408) e Instagram (https://www.instagram.com/p/DgIsMH3DdGs/, con etiqueta de IA) | Pieza preparada por la revisión semanal. Datos comprobados el mismo día en `web/data/reglas.json`: «sí», las dos IA coinciden, cita de la línea 79 del código ético (borrador sin aprobar) | IA + Persona |
+| En el texto y en la imagen, «nuestro hecho está sin definir» pasa a «no queda claro cuándo habría que dimitir» | La primera frase no se entendía. Dice lo mismo que la matriz: la ley ya no dice «imputado», sino «investigado» (Ley Orgánica 13/2015) | IA |
+
+---
+
 ## 23 noviembre 2026 (revisión semanal)
 
 | Decisión | Motivo | Quién |
