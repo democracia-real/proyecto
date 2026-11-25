@@ -6,6 +6,16 @@
 
 ---
 
+## 25 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicadas cinco cifras públicas con su fuente (deuda por habitante, intereses de la deuda, gasto en vejez y supervivencia, I+D y presión fiscal) en X (https://x.com/democracia2630/status/2125671318230310978) e Instagram (https://www.instagram.com/p/DgLRbo_DUWk/, con etiqueta de IA) | Pieza preparada por la revisión semanal. Las cinco, y sus comparaciones con la UE, comprobadas el mismo día en el registro: verificadas y sin caducar (`id-pib` vence el 30 nov) | IA + Persona |
+| La respuesta de X dice «en el registro abierto, enlazado desde la portada» en vez de «en el registro abierto: democraciareal.es» | En la portada solo salen tres de las cinco; la I+D y la presión fiscal están solo en el registro | IA |
+| X llevó la sesión a una oferta de Premium («paga un mes, llévate otro gratis»). Se cerró sin contratar nada | El gasto necesita el visto bueno de la persona | IA |
+
+---
+
 ## 24 noviembre 2026
 
 | Decisión | Motivo | Quién |
