@@ -6,6 +6,15 @@
 
 ---
 
+## 26 noviembre 2026
+
+| Decisión | Motivo | Quién |
+|----------|--------|-------|
+| Publicada la tercera y última celda de nuestra propia fila de esta semana (revocación: «sí», con el «X% de afiliados» sin cifra que queda en otro documento), en X (https://x.com/democracia2630/status/2126033826916999649) e Instagram (https://www.instagram.com/p/DgN2Tktjdc7/, con etiqueta de IA) | Pieza preparada por la revisión semanal. Comprobado el mismo día: «sí» en `web/data/reglas.json`, las dos IA coinciden, cita de la línea 125 de `democracia_interna.md` y cifra `reglas-democracia-real-revocacion` verificada hasta el 21 dic. El «X%» está en el README del módulo y también en la tabla general del mismo documento, justo encima de la de porcentajes | IA + Persona |
+| El primer mensaje de X se acorta de 306 a 279 caracteres: «quienes la eligen» pasa a «los afiliados» y se quita «Misma vara para todos», que ya está en la imagen | No cabía en el límite de 280 | IA |
+
+---
+
 ## 25 noviembre 2026
 
 | Decisión | Motivo | Quién |
